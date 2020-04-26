@@ -20,6 +20,7 @@ def get_external_html_urls(file_name, combined_list_file):
 
 def main(html_files_list, combined_list_file):
     g4h_urls = set()
+    total_replacement_count = 0
     with open(html_files_list) as fp:
         for file_name in fp:
             file_name = file_name.strip()
@@ -32,6 +33,7 @@ def main(html_files_list, combined_list_file):
 
             with open(full_path) as fh:
                 data = fh.read()
+                replacement_count = 0
                 for external_url in all_external_urls:
                     url_part = external_url.replace('"../external.html?link=', '"')
 
@@ -45,13 +47,19 @@ def main(html_files_list, combined_list_file):
                         replacement_url = '"#"'
 
                     data = data.replace(external_url, replacement_url)
+                    replacement_count += 1
 
+                print(f"[+] Replacements made: {replacement_count}.")
                 with open(full_path, "w") as out:
                     out.write(data)
+
+            total_replacement_count += replacement_count
 
     print("Writing unique g4h URLs in file.")
     with open("external_html_g4h_urls.txt", "w") as fp:
         fp.write("\n".join(g4h_urls))
+
+    print(f"[+] Total replacememts made: {total_replacement_count}")
 
 
 if __name__ == "__main__":
