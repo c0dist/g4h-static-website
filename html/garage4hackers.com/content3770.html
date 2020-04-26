@@ -678,24 +678,24 @@ Check out previous blog :<a href="entryc64f.html?b=2830" target="_blank">http://
 Hacking Your Cable TV Networks : HITB Security Conference Part 0. <br/>
 <br/>
 <br/>
-We did two presentations on the security issues in Digital Cable TV network back in February at Nullcon[Goa] and another at HITB [Amsterdam ] . We disclosed few of the many security issues we reported to a large cable network operator in India. The main highlight of the talk was that we [<a href="../external.html?link=https://twitter.com/fb1h2s" target="_blank">Me</a> &amp; <a href="../external.html?link=https://twitter.com/skeptic_fx" target="_blank">Ahamed Nafeez</a> ] did the presentations wearing a traditional dress[lungi,mundu] used by the locals in <a href="../external.html?link=http://www.youtube.com/watch?v=SLQmQwvJU78" target="_blank">Kerala</a> . This was to appreciate all the help the natives did while conducting the research. <br/>
+We did two presentations on the security issues in Digital Cable TV network back in February at Nullcon[Goa] and another at HITB [Amsterdam ] . We disclosed few of the many security issues we reported to a large cable network operator in India. The main highlight of the talk was that we [<a href="https://twitter.com/fb1h2s" target="_blank">Me</a> &amp; <a href="https://twitter.com/skeptic_fx" target="_blank">Ahamed Nafeez</a> ] did the presentations wearing a traditional dress[lungi,mundu] used by the locals in <a href="http://www.youtube.com/watch?v=SLQmQwvJU78" target="_blank">Kerala</a> . This was to appreciate all the help the natives did while conducting the research. <br/>
 <br/>
 <img alt="" border="0" src="attachment7018.jpg?attachmentid=759&amp;d=1409019738" style="float: CONFIG"/><br/>
 <b><u><br/>
 Presentation material:<br/>
 </u></b><br/>
-The slides are available here: <a href="../external.html?link=http://haxpo.nl/wp-content/uploads/2014/02/D1T1-Hacking-Your-Cable-TV-Network-Die-Hard-Style.pptx" target="_blank">http://haxpo.nl/wp-content/uploads/2...ard-Style.pptx</a>.<br/>
+The slides are available here: <a href="http://haxpo.nl/wp-content/uploads/2014/02/D1T1-Hacking-Your-Cable-TV-Network-Die-Hard-Style.pptx" target="_blank">http://haxpo.nl/wp-content/uploads/2...ard-Style.pptx</a>.<br/>
 But I would be writing a series of blogs and would explain the bugs in detail here. <br/>
 <br/>
 Instead of following the same pattern I used for my talk [Just explaining the bugs]. I think it would be fun to share with you the adventures we had while doing the research. If you are only interested in the bugs just head to bug section, else read on. <br/>
 <br/>
-It is hard to find any Hands on cable TV security materials on the internet. This is mainly because the infrastructure used by the cable operators are not easily available for every researcher. In our case we were lucky . From November 2013 I was working with one of the largest Cable TV networks in India who provides service to nearly 1 Million users. I agreed to a contract where we would do free security audits for the Cable operators infrastructure and in return they would allow me to publish my finds in any conference of my choice  . And that was a sweet deal for me . I come from an <a href="../external.html?link=http://in.linkedin.com/in/fb1h2s" target="_blank">application security background</a>. And I had no clue about Digital cable networks an year back. So in the first blog post I would explain how  I cracked the deal with the Cable Operators to audit their Infrastructure.<br/>
+It is hard to find any Hands on cable TV security materials on the internet. This is mainly because the infrastructure used by the cable operators are not easily available for every researcher. In our case we were lucky . From November 2013 I was working with one of the largest Cable TV networks in India who provides service to nearly 1 Million users. I agreed to a contract where we would do free security audits for the Cable operators infrastructure and in return they would allow me to publish my finds in any conference of my choice  . And that was a sweet deal for me . I come from an <a href="http://in.linkedin.com/in/fb1h2s" target="_blank">application security background</a>. And I had no clue about Digital cable networks an year back. So in the first blog post I would explain how  I cracked the deal with the Cable Operators to audit their Infrastructure.<br/>
 <br/>
 <br/>
 <u><b>Cracking the Deal:Meeting with the Chief Technical Officer of the Cable Company<br/>
 </b></u><br/>
 Unlike Internet where information is viewed with suspicion and misinformation can be quickly vetted through other sources, television is a one-to-many medium where there’s no quick way to identify a false broadcast. If someone hacks into a TV news stream and publishes a news stating that a riot has happened in the nearby city, then that could create a lot of panic in a country like India. <br/>
-Example Source:  <a href="../external.html?link=http://www.politico.com/morningcybersecurity/0814/morningcybersecurity14888.html" target="_blank">Hackers took control of TV feeds in Wenzhou China and streamed anti-communist slogans to millions of viewers.</a> .<br/>
+Example Source:  <a href="http://www.politico.com/morningcybersecurity/0814/morningcybersecurity14888.html" target="_blank">Hackers took control of TV feeds in Wenzhou China and streamed anti-communist slogans to millions of viewers.</a> .<br/>
 <br/>
 This was the main punch line I used when trying to convince the CTO why to do a Penetration testing for their infrastructure. Since he has not seen any real world attacks on his infrastructure , he was not that convinced to give me the project. But in the end he asked me if I could find any issues from outside, sort of like a black box testing. And If I could find something serious in 2 week he would consider giving me an opportunity. <br/>
 <br/>
@@ -785,10 +785,10 @@ But, checkAdmin() returns false and the attack would not work.But attacker can b
 <br/>
 We can host this code cross domain and make "String.prototype.match" , javascript .match() function to always return the value we specify . Any way if a local cable TV operator visits our page then we could now steal his API code hidden in the JS and then could use that to shut down all users in his locality . Remember the shutdown button I mentioned about in the previous bug. We used that shutdown feature to create a working POC. Check out the demo. Now any users cable access could be remotely shut down by an attacker. <br/>
 
-<iframe class="restrain" frameborder="0" height="390" src="../external.html?link=http://www.youtube.com/embed/LGiF46Ycg4k?wmode=opaque" title="YouTube video player" width="640"></iframe>
+<iframe class="restrain" frameborder="0" height="390" src="http://www.youtube.com/embed/LGiF46Ycg4k?wmode=opaque" title="YouTube video player" width="640"></iframe>
 <br/>
 <br/>
-Imagine some attackers doing this shutdown hack at the time of World Cup, that would result in pandemonium. Any way these many low hanging bugs were enough to convince the CTO to give us the project.  And woot woot we were given access to their infrastructure <img alt="" border="0" class="inlineimg" src="images/smilies/smile.png" title="Smile"/> and a small garage to work . I would write about more bugs in the coming days . Just keep yourself updated via my twitter page <a href="../external.html?link=http://twitter.com/fb1h2s" target="_blank">http://twitter.com/fb1h2s</a> or Grage fb page <a href="../external.html?link=https://www.facebook.com/Garage4Hackers" target="_blank">https://www.facebook.com/Garage4Hackers</a> .<br/>
+Imagine some attackers doing this shutdown hack at the time of World Cup, that would result in pandemonium. Any way these many low hanging bugs were enough to convince the CTO to give us the project.  And woot woot we were given access to their infrastructure <img alt="" border="0" class="inlineimg" src="images/smilies/smile.png" title="Smile"/> and a small garage to work . I would write about more bugs in the coming days . Just keep yourself updated via my twitter page <a href="http://twitter.com/fb1h2s" target="_blank">http://twitter.com/fb1h2s</a> or Grage fb page <a href="https://www.facebook.com/Garage4Hackers" target="_blank">https://www.facebook.com/Garage4Hackers</a> .<br/>
 <br/>
 Regards. <br/>
 Rahul Sasi<br/>
@@ -865,7 +865,7 @@ Rahul Sasi<br/>
 		<h3><img alt="" src="images/site_icons/html.png"/> G4H Twitter</h3>
 		</div>
 		<div class="cms_widget_content widget_content">
-		<a class="twitter-timeline" data-widget-id="387207513831010305" href="../external.html?link=https://twitter.com/garage4hackers">Tweets by @garage4hackers</a>
+		<a class="twitter-timeline" data-widget-id="387207513831010305" href="https://twitter.com/garage4hackers">Tweets by @garage4hackers</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 	</div>
@@ -954,7 +954,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="content1716.html?r=175-Low-hanging-Web-Application-bugs-in-Digital-Cable-Hacking-Cable-TV-Networks-Part-1#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -979,7 +979,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">

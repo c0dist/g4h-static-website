@@ -43,7 +43,7 @@
 	<div class="content">
 		<blockquote class="restore">Hi All,<br/>
 <br/>
-We have recently seen WordPress User name enumeration Vulnerability disclosure here <a href="../external.html?link=http://seclists.org/fulldisclosure/2011/May/493" target="_blank">http://seclists.org/fulldisclosure/2011/May/493</a><br/>
+We have recently seen WordPress User name enumeration Vulnerability disclosure here <a href="http://seclists.org/fulldisclosure/2011/May/493" target="_blank">http://seclists.org/fulldisclosure/2011/May/493</a><br/>
 <br/>
 Versions Effected are : 2.6, 3.1, 3.1.1, 3.1.3<br/>
 <br/>
@@ -51,9 +51,9 @@ Ohk so lets see what this vulnerability is all about.<br/>
 <br/>
 Wordpress by default allows a simple redirection <br/>
 <br/>
-<a href="../external.html?link=http://site_name/?author=1" target="_blank">http://site_name/?author=1</a><br/>
+<a href="http://site_name/?author=1" target="_blank">http://site_name/?author=1</a><br/>
 will redirect to <br/>
-<a href="../external.html?link=http://site_name/author/user_name_author" target="_blank">http://site_name/author/user_name_author</a><br/>
+<a href="http://site_name/author/user_name_author" target="_blank">http://site_name/author/user_name_author</a><br/>
 and this redirection is a 301 redirect.<br/>
 <br/>
 now you get the user page either userpage or a list of user posts.<br/>
@@ -101,14 +101,14 @@ then<br/>
 echo "Either this site is not vulnerable or is not using wordpress hosted"<br/>
 fi<br/>
 fi</code><hr/>
-</div>Originally Posted : <a href="../external.html?link=http://blog.anantshri.info/wordpress-user-enumeration-poc-shell-script/" target="_blank">http://blog.anantshri.info/wordpress...-shell-script/</a><br/>
+</div>Originally Posted : <a href="http://blog.anantshri.info/wordpress-user-enumeration-poc-shell-script/" target="_blank">http://blog.anantshri.info/wordpress...-shell-script/</a><br/>
 <br/>
 after creating the PoC my own site was also susceptible to this attack and hence i was looking for a fix and found a old friend of mine to the rescue.<br/>
 <br/>
 So here is the way how you can patch it<br/>
 <br/>
 I am right now using a wordpress plugin : Redirections<br/>
-<a href="../external.html?link=https://wordpress.org/extend/plugins/redirection/" target="_blank">https://wordpress.org/extend/plugins/redirection/</a><br/>
+<a href="https://wordpress.org/extend/plugins/redirection/" target="_blank">https://wordpress.org/extend/plugins/redirection/</a><br/>
 <br/>
 Inside the plugin page which comes under : tools -&gt; redirections<br/>
 <br/>
@@ -137,7 +137,7 @@ now this url will be redirected back to your main page effectively nullifying th
 	
 	<div class="content">
 		<blockquote class="restore">Could you please tell me how to write a bash or python script to implement the wordpress 4.5.2 redirect bypass vulnerability. <br/>
-   Link : <a href="../external.html?link=https://wpvulndb.com/vulnerabilities/8522" target="_blank">https://wpvulndb.com/vulnerabilities/8522</a><br/>
+   Link : <a href="https://wpvulndb.com/vulnerabilities/8522" target="_blank">https://wpvulndb.com/vulnerabilities/8522</a><br/>
     <br/>
 <br/>
   Thank You.</blockquote>
@@ -152,7 +152,7 @@ now this url will be redirected back to your main page effectively nullifying th
 
 <div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="footer_morecopyright" id="footer_morecopyright">

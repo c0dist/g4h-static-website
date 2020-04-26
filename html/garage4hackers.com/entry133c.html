@@ -552,8 +552,8 @@ google_ad_height = 90;
 		<div class="blogbody postcontainer">
 			<div id="entry_text_394">
 				<blockquote class="blogcontent restore floatcontainer">
-					<img alt="" border="0" src="../external.html?link=http://www.is-ra.org/c0c0n/404"/><br/>
-This would be part-1 one of my <a href="../external.html?link=http://is-ra.org/c0c0n/speakers.html" target="_blank">C0C0n</a> talk , where I demonstrated few PHP 0-days, Local and Remote . The entire concept of the talk was demonstrating attacks on WebApplications via scripting engines.<br/>
+					<img alt="" border="0" src="http://www.is-ra.org/c0c0n/404"/><br/>
+This would be part-1 one of my <a href="http://is-ra.org/c0c0n/speakers.html" target="_blank">C0C0n</a> talk , where I demonstrated few PHP 0-days, Local and Remote . The entire concept of the talk was demonstrating attacks on WebApplications via scripting engines.<br/>
 <br/>
 In a common Webapp test we manipulates Input , that a common end user controls and check for responses from the app. But since these data passed are processed by the PHP,ASP engines that are used to build these apps. We were fuzzing and trying to figure out issues in these engines that could be attacked by common user. My talk had two parts Local Attacks and Remote Attacks. Local attacks I demonstrated ways to do privilege escalation exploiting PHP and in Remote Attacks we mapped PHP functions that took arguments from remote users like File processing and Image Processing functions and demonstrated ways to exploit them.The entire presentation concentrated on PHP core Bugs.  <br/>
 <br/>
@@ -612,13 +612,13 @@ Size:  22.8 KB" border="0" src="attachment91f6.jpg?attachmentid=479&amp;d=134540
 3)  _php_stream_scandir<br/>
 4)CVE-2011-3268 [crypt function]<br/>
 5) PHP XSLT Injection <br/>
-<a href="../external.html?link=http://xhe.myxwiki.org/xwiki/bin/view/XSLT/Application_PHP5" target="_blank">http://xhe.myxwiki.org/xwiki/bin/vie...plication_PHP5</a><br/>
+<a href="http://xhe.myxwiki.org/xwiki/bin/view/XSLT/Application_PHP5" target="_blank">http://xhe.myxwiki.org/xwiki/bin/vie...plication_PHP5</a><br/>
 <br/>
-The best of PHP bug hunts were done by <a href="../external.html?link=http://developers.slashdot.org/story/10/06/04/1540241/month-of-php-security-finds-60-bugs" target="_blank">i0nic and team </a> for there "Month of PHP Security" in <a href="../external.html?link=http://php-security.org/MOPB/index.html" target="_blank">2007</a> and <a href="../external.html?link=http://www.php-security.org/" target="_blank">2010  </a>. About 60 security issues were identified and few POCs were released. <br/>
+The best of PHP bug hunts were done by <a href="http://developers.slashdot.org/story/10/06/04/1540241/month-of-php-security-finds-60-bugs" target="_blank">i0nic and team </a> for there "Month of PHP Security" in <a href="http://php-security.org/MOPB/index.html" target="_blank">2007</a> and <a href="http://www.php-security.org/" target="_blank">2010  </a>. About 60 security issues were identified and few POCs were released. <br/>
 <br/>
-Or you coud Browse this well organized archive . <a href="../external.html?link=http://www.cvedetails.com/vendor/74/PHP.html" target="_blank">PHP : Products and vulnerabilities</a><br/>
+Or you coud Browse this well organized archive . <a href="http://www.cvedetails.com/vendor/74/PHP.html" target="_blank">PHP : Products and vulnerabilities</a><br/>
 <br/>
-In April 2012 I found few local security issues , that were added to CoCon CFP , which later was identified by <a href="../external.html?link=http://cond.psychodela.pl/" target="_blank">condis</a> <a href="../external.html?link=http://cxsecurity.com/issue/WLB-2012050163" target="_blank">PHP &lt;= 5.4.3 (com_event_sink) Code Execution Proof of Concept - CXSecurity WLB</a> independently . Now that this issue is <a href="../external.html?link=https://bugs.php.net/bug.php?id=62474" target="_blank">Public</a> , I will put down my analysis notes on getting code execution on this bug. Current bug only affect PHP Windows. <br/>
+In April 2012 I found few local security issues , that were added to CoCon CFP , which later was identified by <a href="http://cond.psychodela.pl/" target="_blank">condis</a> <a href="http://cxsecurity.com/issue/WLB-2012050163" target="_blank">PHP &lt;= 5.4.3 (com_event_sink) Code Execution Proof of Concept - CXSecurity WLB</a> independently . Now that this issue is <a href="https://bugs.php.net/bug.php?id=62474" target="_blank">Public</a> , I will put down my analysis notes on getting code execution on this bug. Current bug only affect PHP Windows. <br/>
 <br/>
 <u><b>PHP 5.4.3 Com_event_sink 0-day:<br/>
 </b></u><br/>
@@ -630,7 +630,7 @@ PHP Provides a module to interact with COM and .Net (Windows). In that com_event
 It allows users to call a COM instance , in current case [IE] and interact with it. <br/>
 Note: This feature is handy if the server you have access has disallowed other mechanism to download files to it like .<br/>
 <br/>
-The following code will open an IE instance and download the webpage <a href="../external.html?link=http://www.google.com/" target="_blank">Google</a>. The function com_event_sink takes three arguments.<br/>
+The following code will open an IE instance and download the webpage <a href="http://www.google.com/" target="_blank">Google</a>. The function com_event_sink takes three arguments.<br/>
 <br/>
 1)  --&gt; $ie = new COM("InternetExplorer.Application");<br/>
 <br/>
@@ -880,7 +880,7 @@ cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00010246
 &gt; !load byakugan<br/>
 &gt;!jutsu searchOpcode jmp edi <br/>
 <br/>
-Code with a simple "Message Box " shellcode form our friend <a href="../external.html?link=http://www.shell-storm.org/shellcode/files/shellcode-526.php" target="_blank">Atul </a><br/>
+Code with a simple "Message Box " shellcode form our friend <a href="http://www.shell-storm.org/shellcode/files/shellcode-526.php" target="_blank">Atul </a><br/>
 <br/>
 <img alt="Name:  phpexp.JPG
 Views: 3996
@@ -1334,7 +1334,7 @@ ps: where can i download your paper from? can't find it on the cOcOn website.
 <br/>
 If you are not bypassing ASLR &amp; DEP why do we need to spray?<br/>
 <br/>
-<img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/><br/>
+<img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/><br/>
 <br/>
 Cheers!
 			</blockquote>
@@ -1478,7 +1478,7 @@ com_event_sink($vVar, $vVar2 , $buffer ); <br/>
 </i><br/>
 <br/>
 
-<iframe class="restrain" frameborder="0" height="390" src="../external.html?link=http://www.youtube.com/embed/QE8sebIwIno?wmode=opaque" title="YouTube video player" width="640"></iframe>
+<iframe class="restrain" frameborder="0" height="390" src="http://www.youtube.com/embed/QE8sebIwIno?wmode=opaque" title="YouTube video player" width="640"></iframe>
 
 			</blockquote>
 		</div>
@@ -2595,7 +2595,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="entry133c.html?b=394#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -2620,7 +2620,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">

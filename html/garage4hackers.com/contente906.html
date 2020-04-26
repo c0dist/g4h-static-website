@@ -649,43 +649,43 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 <br/>
 3)    To check what happened, this time i open the debugger “immunity debugger “ and attach the debugger to the process “Alltomp3” as shown below:<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/683/attachtoprocess2.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/683/attachtoprocess2.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 4)    Afer attaching the debugger to the process, now run the program and then open the created file “exploit_seh.wav” with “PDf all to mp3 converter”, this time you find that the program crashes and eip is overwritten with 41414141 (AAAA) as shown in the below figure. <br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/853/alltomp3.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/853/alltomp3.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/836/openfile4.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/836/openfile4.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/190/aaaaaa5.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/190/aaaaaa5.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 5)    Since we have control over eip, we can write a classic stack based buffer overflow exploit but since we want to write a reliable exploit,  let us see if we can write a seh based exploit. After looking into the seh chain i find that our seh handler is also overwritten with 41414141 (AAAA) as shown below. This means we now have control over seh handler.<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/101/sehandler6.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/101/sehandler6.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 After following the seh chain in the stack, we find that pointer to the next seh record and address of the seh handler is also overwritten with 41414141 (AAAA). As shown below (see the lower right corner)…so now we have control over pointer to the next seh record and also the seh handler.<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/189/sehandleroverwrite7.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/189/sehandleroverwrite7.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <b><u><br/>
 Finding offset to the seh handler</u></b><br/>
 <br/>
 1)    Now to write an seh based exploit, we have to know where exactly our seh handler is located. To find the exact offset, let us create a pattern of 5000 characters using metasploit and replace the 5000 A’s in our perl script with this pattern as shown below:<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/690/offset8.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/690/offset8.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 Perl script with a pattern of 5000 characters is shown below:<br/>
 <br/>
@@ -698,19 +698,19 @@ open OUTPUT, "&gt;", "$file";
 print OUTPUT $junk;</pre>
 </div>2)    After running the script “exploit_seh.wav” file is created, now attach the debugger to the process and after opening the exploit_seh.wav file with “PDF All to mp3 converter” we find that seh handler contains the pattern 39684638, because of the little endian format you will have to read it as 38 46 68 39 which stands for 8Fh9<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/707/sehandleroverwrite9.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/707/sehandleroverwrite9.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/89/sehandleroverwrite10.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/89/sehandleroverwrite10.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 3)    Now let us give this value to the pattern_offset.rb (ruby script in metasploit), after giving this value to the metasploit i found that the offset to the seh handler is 4136, which means the offset of the pointer to the next seh record is 4136-4 = 4132<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/153/offset11.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/153/offset11.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 4)    Now let us modify our script to contain 4132 A’s followed by break (“\xcc\xcc\xcc\xcc”) instruction then seh handler would contain address of pop pop ret instruction and then a pattern (this will be replaced with our shellcode). <br/>
 <br/>
@@ -720,17 +720,17 @@ Finding the address of POP POP RET</u></b><br/>
 <br/>
 5)     Before we modify the script, Lets us find the address of pop pop ret in the application dll and also we should make sure that the dll doesn’t use the safeseh protection (i.e compiled with safeseh)…to find the application dll’s that are not safeseh compiled, we can use a immunity debugger plugin called pvefindaddr, this plugin will display the dll’s which are not safeseh complied (displayed in red) and then we can use the address of POP POP RET instruction from the non safeseh compiled Dll or EXE. The below figure shows pvefindaddr plugin showing the non safeseh dll’s and EXE’s in red.<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/545/poppopret12.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/545/poppopret12.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 6)    From the above figure we see that there are 4 application dll’s and EXE’s which are not compiled with safeseh protection (shown in red in the above figure)....i have chosen the application EXE “Alltomp3.exe” to find the address of POP POP RET.<br/>
 <br/>
 7)    To find the address of POP POP RET from the EXE, we can use another ruby script in metasploit (msfpescan) as shown below.<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/571/poppopret13.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/571/poppopret13.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 8)    I will use the last address 0x005d6a91 (address of pop pop ret instruction)….now the modified script is shown below, now if the exploit works the application should pause at the break instruction (\xcc\xcc\xcc\xcc). If this works then we will replace the shellcode with real shellcode.<br/>
 <br/>
@@ -753,15 +753,15 @@ open OUTPUT, "&gt;", "$file";
 print OUTPUT $junk.$nseh.$seh.$shellcode;</pre>
 </div>9)    Now I open the Alltomp3.exe using immunity debugger and run it and then open the file “exploit_seh.wav” created from the above script, now the exception occurs as shown in the figure below (left bottom corner)<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/231/debuggersehoverwrite14.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/231/debuggersehoverwrite14.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 After pressing shift+F9, the exception is passed to exception handler you will see that the application breaks at \XCC as expected…and also in the memory dump (lower left pane) you will see our shellcode (which is at plus 6 bytes)….it looks like everything is working fine.<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/199/debuggerseh15.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/199/debuggerseh15.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 10)    Now since our shellcode is at plus 6 bytes, instead of break instruction (\xcc\xcc\xcc\xcc) we will use jmp + 6 bytes, so when the application runs it will jump to our shellcode and execute it, the opcode for jmp + 6 bytes is (\xeb\x06\x90\x90) and we will also replace our shellcode with real shellcode (shellcode to pop a calculator)….The modified script looks like this.<br/>
 If everthing works well, it should pop a calculator<br/>
@@ -800,9 +800,9 @@ open OUTPUT, "&gt;", "$file";
 print OUTPUT $junk.$nseh.$seh.$shellcode;</pre>
 </div>11)     After running the script “exploit_seh.wav” file is created and after opening the file with the PDF All to mp3 converter, the calculator application is run as shown below.<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/824/calc17.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/824/calc17.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 Now we have a working SEH based exploit (you can replace the shellcode to pop calculator with the shellcode to do anything that you want the application to do)<br/>
 <br/>
@@ -813,7 +813,7 @@ Hopefully this post will provide you with a basic understanding of SEH overflow 
 <br/>
 <b><u>References</u></b><br/>
 <br/>
-<a href="../external.html?link=https://www.corelan.be/index.php/category/security/exploit-writing-tutorials/" target="_blank">https://www.corelan.be/index.php/cat...ing-tutorials/</a></div>
+<a href="https://www.corelan.be/index.php/category/security/exploit-writing-tutorials/" target="_blank">https://www.corelan.be/index.php/cat...ing-tutorials/</a></div>
 
 	
 
@@ -885,7 +885,7 @@ Hopefully this post will provide you with a basic understanding of SEH overflow 
 		<h3><img alt="" src="images/site_icons/html.png"/> G4H Twitter</h3>
 		</div>
 		<div class="cms_widget_content widget_content">
-		<a class="twitter-timeline" data-widget-id="387207513831010305" href="../external.html?link=https://twitter.com/garage4hackers">Tweets by @garage4hackers</a>
+		<a class="twitter-timeline" data-widget-id="387207513831010305" href="https://twitter.com/garage4hackers">Tweets by @garage4hackers</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 	</div>
@@ -974,7 +974,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="contente906.html?r=89-SEH-Overflow-exploit-POC-Part-2#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -999,7 +999,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">

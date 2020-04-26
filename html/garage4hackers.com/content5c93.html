@@ -596,35 +596,35 @@ Analysis<br/>
 <br/>
 Now we know the structure of the pdf document, lets analyze the malicious pdf sample. When i was look through my spam folder in my personal mail id, i got this sample, after submitting this sample to virustotal i found that this is a malicious sample. The virustotal report for the sample is shown below: The operating sytem used for the analysis is BackTrack 5 which is built on ubuntu linux.<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/838/vt1g.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/838/vt1g.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 Now that i knew that malicious pdf file is malicious, i decided to analyze this sample.<br/>
 First step was to look for the keywords in the malicious pdf document, to do that i used  pdfid.py, The below screenshot shows the output of pdfid. Looking at the output you can see that pdf document contains only 1 page (marked by /Page tag) , 2 javascript tags (marked by /JavaScript tag) and 1 javascript content (marked by /JS)<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/12/pdfid2.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/12/pdfid2.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 javascript is mostly used to exploit vulnerabilites in the pdf document, and also the javascript interpreter (modified version of spidermonkey) used by pdf itself was to know to have multiple vulnerabilities. Now that there is presence of javascript tag in the pdf document, i decided to search for the javascript object using the tool “pdf-parser.py”, this tool can parse PDF constructs used in malicious pdf files.  The search for javascript using pdf-parser returned two objects as show in the below screenshot<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/827/20214007.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/827/20214007.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 From the above screenshot you can see that object 3 references object 5 (marked by /JavasScript 5 0 R) which is a javascript object and object 6 references object 111611 which is also javascript object (marked by /JS 111611).<br/>
 In this case the relation ship between both the objects are not clear. So i looked at object 5 using pdf-parser, looking at the output below you can see that object 5 refernces object 6 (which in turn referenced object 111611) in the above screenshot.<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/707/79755128.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/707/79755128.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 Looking at object 111611 shows that this object contains data stream (indicated by stream keyword) and the data stream is zlib compressed indicated by (/FlatDecode), this indicates that this is the object which contains javascript code.<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/823/11981039.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/823/11981039.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 Now the relationship between the objects are clear. Obj 3 references obj 5 which in turn references obj 6 which references object 111611, this is a technique used to confuse the security researchers.<br/>
 <br/>
@@ -717,7 +717,7 @@ Continued<br/>
 		<h3><img alt="" src="images/site_icons/html.png"/> G4H Twitter</h3>
 		</div>
 		<div class="cms_widget_content widget_content">
-		<a class="twitter-timeline" data-widget-id="387207513831010305" href="../external.html?link=https://twitter.com/garage4hackers">Tweets by @garage4hackers</a>
+		<a class="twitter-timeline" data-widget-id="387207513831010305" href="https://twitter.com/garage4hackers">Tweets by @garage4hackers</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 	</div>
@@ -806,7 +806,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="content5c93.html?r=83-Malicious-PDF-analysis#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -831,7 +831,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">

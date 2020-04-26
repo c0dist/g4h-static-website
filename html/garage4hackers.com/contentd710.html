@@ -653,7 +653,7 @@ SMS spoofing attack vector can be used to spoof and send SMS to one or more vict
 <b>Wireless Access Point Attack Vector</b><br/>
 Can be used to set up a rouge wireless access point, Spoof DNS and redirect all traffic to attacker <br/>
 <b>Third Party Modules</b><br/>
-This attack vector consists of Third party module - RATTE (Remote Administration Tool Tommy Edition) which is a HTTP tunneling payload.  This can be used in the same way as website attack vectors but with an added advantage of beating security mechanisms like local Firewall and IPS.</div><b>Attack Scenario</b><div style="margin-left:40px">Attacker creates a malicious link of cloned <a href="../external.html?link=https://gmail.com/" target="_blank">https://gmail.com</a> which is stored locally on server. Victim browses the link and the replica of gmail.com is opened. This triggers the java applet payload which is delivered on the victim’s browser. Victim is asked to accept the java applet’s warning. After, victim's acceptance the payload is executed. Payload opens a connection back to attacker’s IP address and port. Attacker has set up a listener to receive the payload connection. Now attacker can remotely capture keystrokes, upload backdoor and open command shell.</div><b>Demo</b><div style="margin-left:40px"><b>Step 1: </b>Attacker crafts a malicious link with following specification using the following features of SET:<br/>
+This attack vector consists of Third party module - RATTE (Remote Administration Tool Tommy Edition) which is a HTTP tunneling payload.  This can be used in the same way as website attack vectors but with an added advantage of beating security mechanisms like local Firewall and IPS.</div><b>Attack Scenario</b><div style="margin-left:40px">Attacker creates a malicious link of cloned <a href="https://gmail.com/" target="_blank">https://gmail.com</a> which is stored locally on server. Victim browses the link and the replica of gmail.com is opened. This triggers the java applet payload which is delivered on the victim’s browser. Victim is asked to accept the java applet’s warning. After, victim's acceptance the payload is executed. Payload opens a connection back to attacker’s IP address and port. Attacker has set up a listener to receive the payload connection. Now attacker can remotely capture keystrokes, upload backdoor and open command shell.</div><b>Demo</b><div style="margin-left:40px"><b>Step 1: </b>Attacker crafts a malicious link with following specification using the following features of SET:<br/>
 <ul><li style="">Web site phishing attack vector</li><li style="">Java Applet method for payload execution</li><li style="">SET custom shell with reverse TCP connection</li><li style="">Gmail as cloned web site</li></ul></div><div style="margin-left:40px"><b>Step 2</b>:    Attacker entices the victim to browse the malicious link. This link will load the cloned web site (Gmail).</div><div style="margin-left:40px"><b>Step 3:    </b>Victim browses the link. The opened website is replica of Gmail.com (but with IP address of attacker in URL). This triggers to send payload on victim's browser (in form of Java applet).</div><div style="margin-left:40px"><b>Step 4:</b> Attacker has already started the listener on its machine to receive connection when victim browses and runs the payload.</div><div style="margin-left:40px"><b>Step5:</b> Victim accepts and runs the payload. Payload creates a connection back to attacker's machine. Attacker is embraced with a SET custom shell. As soon as the victim enters the credentials, the site is redirected to the original web site (i.e. gmail.com). A bunch of activities can be performed on victim:<br/>
 <ul><li style="">Keylogging</li><li style="">Uploading backdoor</li><li style="">Download file</li><li style="">Command Shell</li><li style="">reboot</li><li style="">Kill process</li><li style="">Grab system</li><li style="">Run persistent backdoor</li></ul><br/>
 )</div><div style="margin-left:40px"><b>Step 6:</b> Attacker runs the persistence command on victim’s machine. This command will initialize and start a random service and creates a backdoor on victim’s machine. Attacker can specify the IP address and port number on which the random service (started on victim’s machine) would try to connect back.</div><div style="margin-left:40px">Persistence feature is very useful in scenario where attacker wants to connect to victim’s machine from some different IP address. Started service (on victim’s machine) will send a connect request to the attacker’s IP address every 30 min. This way attacker will have all time access to victim’s machine.<br/>
@@ -966,7 +966,7 @@ Thanks for your welcome. I will continuously try add value to garage....
 		<h3><img alt="" src="images/site_icons/html.png"/> G4H Twitter</h3>
 		</div>
 		<div class="cms_widget_content widget_content">
-		<a class="twitter-timeline" data-widget-id="387207513831010305" href="../external.html?link=https://twitter.com/garage4hackers">Tweets by @garage4hackers</a>
+		<a class="twitter-timeline" data-widget-id="387207513831010305" href="https://twitter.com/garage4hackers">Tweets by @garage4hackers</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 	</div>
@@ -1055,7 +1055,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="contentd710.html?r=80-Social-Engineering-with-SET#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -1080,7 +1080,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">

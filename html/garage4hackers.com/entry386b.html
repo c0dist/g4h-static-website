@@ -553,19 +553,19 @@ This my first blog. So, i must begin with <img alt="" border="0" class="inlineim
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
 	<pre class="bbcode_code" style="height:36px;">echo "H3llo H4ck3r5!"</pre>
-</div>Well, i had  been searching a tool, last year, that took IPs and plotted them on a map but, i couldn't find any opensource one. <a href="../external.html?link=https://github.com/fw42/honeymap" target="_blank">Honeymap</a> was the best closest map that i was able to find. It takes live feeds over websocks/<a href="../external.html?link=https://github.com/rep/hpfeeds" target="_blank">hpfeeds</a> and requires one to embed the GPS coordinates in the data  being fed.  I did a bit of JS editing in this project and it was simple to create small IP to Map tool. This worked but, i was not happy, and lost my code the next day, as my HDD crashed in a power-failure.  LOL.<img alt="" border="0" class="inlineimg" src="images/smilies/biggrin.png" title="Big Grin"/>. <br/>
+</div>Well, i had  been searching a tool, last year, that took IPs and plotted them on a map but, i couldn't find any opensource one. <a href="https://github.com/fw42/honeymap" target="_blank">Honeymap</a> was the best closest map that i was able to find. It takes live feeds over websocks/<a href="https://github.com/rep/hpfeeds" target="_blank">hpfeeds</a> and requires one to embed the GPS coordinates in the data  being fed.  I did a bit of JS editing in this project and it was simple to create small IP to Map tool. This worked but, i was not happy, and lost my code the next day, as my HDD crashed in a power-failure.  LOL.<img alt="" border="0" class="inlineimg" src="images/smilies/biggrin.png" title="Big Grin"/>. <br/>
 <br/>
 Recently, fb1h2s pinged me to checkout if i still had that script for one of his recent <a href="entry8c96.html?b=3069" target="_blank">research</a>, but unfortunately the script was gone. <br/>
 <br/>
-Fortunately, my present research involved working on <a href="../external.html?link=http://www.elasticsearch.org/" target="_blank">ElasticSearch</a> and its when i encountered <a href="../external.html?link=http://www.elasticsearch.org/overview/kibana/" target="_blank">Kibana</a>. Well, for those who are less/not aware about ElasticSearch &amp; Kibana, ElasticSearch is a sweet indexing engine, where you can store/index JSON data of any schema and have it looked up easily and very very quicky. Its useful for making your own personal search engine <img alt="" border="0" class="inlineimg" src="images/smilies/wink.png" title="Wink"/>. <br/>
+Fortunately, my present research involved working on <a href="http://www.elasticsearch.org/" target="_blank">ElasticSearch</a> and its when i encountered <a href="http://www.elasticsearch.org/overview/kibana/" target="_blank">Kibana</a>. Well, for those who are less/not aware about ElasticSearch &amp; Kibana, ElasticSearch is a sweet indexing engine, where you can store/index JSON data of any schema and have it looked up easily and very very quicky. Its useful for making your own personal search engine <img alt="" border="0" class="inlineimg" src="images/smilies/wink.png" title="Wink"/>. <br/>
 <br/>
 Kibana is a an addon tool by ElasticSearch guys, its  supercool. <img alt="" border="0" class="inlineimg" src="images/smilies/cool.png" title="Cool"/> . It  gives you an awesome interface with plenty of plugins to customize your search interface for ElasticSearch and give stats of the indexed data as per our requirement.  <br/>
 <br/>
-One of the awesome plugin  in Kibana is "<a href="../external.html?link=http://www.elasticsearch.org/guide/en/kibana/current/_bettermap.html" target="_blank">bettermap</a>" and it really goes by its name. You need to index your data with a column, that has longitude and latitude in a JSON list format string. i.e. [long, lat] e.g.  [12.3, 34.2] and configure the plugin to map the geo coordinate field.<br/>
+One of the awesome plugin  in Kibana is "<a href="http://www.elasticsearch.org/guide/en/kibana/current/_bettermap.html" target="_blank">bettermap</a>" and it really goes by its name. You need to index your data with a column, that has longitude and latitude in a JSON list format string. i.e. [long, lat] e.g.  [12.3, 34.2] and configure the plugin to map the geo coordinate field.<br/>
 <br/>
 So, this gave me an idea to make a script that reads CSV files that has bulk data with one of the columns having IP address, and use Kibana and ElasticSearch to plot the IPs on a map. What best came out was that, you can search for a specific keyword and the map gets regenerated as per your search query. <br/>
 <br/>
-The script is available  for  download from my GIT repo : <a href="../external.html?link=https://github.com/5pld3y/ip2map" target="_blank">ip2map</a>.  I have tested it on Debian &amp; Mint. If you have your repos correctly set, it will setup most of the dependencies and install this tool at <b>/opt/ip2map</b> folder.<br/>
+The script is available  for  download from my GIT repo : <a href="https://github.com/5pld3y/ip2map" target="_blank">ip2map</a>.  I have tested it on Debian &amp; Mint. If you have your repos correctly set, it will setup most of the dependencies and install this tool at <b>/opt/ip2map</b> folder.<br/>
 <br/>
 <font size="5"><b>Setup Instructions</b></font><br/>
 To Setup on Debian versions:<br/>
@@ -584,7 +584,7 @@ python-dev gzip
 openjdk-7-jre 
 curl 
 libcurl4-openssl-dev</pre>
-</div>Once setup, the tool will invoke the ElasticSearch in a Xterm, its needed to put and fetch info. When you are done with your work you can close it. Please be careful with ElasticSearch <a href="../external.html?link=http://bouk.co/blog/elasticsearch-rce/" target="_blank">vulnerabilities</a> and make sure to patch it if you plan to keep the ElasticSearch service running. ElasticSearch is located within <b>/opt/ip2map/elasticsearch</b><br/>
+</div>Once setup, the tool will invoke the ElasticSearch in a Xterm, its needed to put and fetch info. When you are done with your work you can close it. Please be careful with ElasticSearch <a href="http://bouk.co/blog/elasticsearch-rce/" target="_blank">vulnerabilities</a> and make sure to patch it if you plan to keep the ElasticSearch service running. ElasticSearch is located within <b>/opt/ip2map/elasticsearch</b><br/>
 <br/>
 <br/>
 <font size="5"><b>Usage:</b></font><br/>
@@ -637,7 +637,7 @@ My ip2map script is just a PoC to comfort my research work. You can modify Kiban
 <br/>
 Have a nice day. <img alt="" border="0" class="inlineimg" src="images/smilies/smile.png" title="Smile"/><br/>
 <br/>
-<a href="../external.html?link=https://twitter.com/5pld3y" target="_blank">https://twitter.com/5pld3y</a>
+<a href="https://twitter.com/5pld3y" target="_blank">https://twitter.com/5pld3y</a>
 
 					
 				</blockquote>
@@ -1386,7 +1386,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="entry386b.html?b=3071#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -1411,7 +1411,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">

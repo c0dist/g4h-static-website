@@ -523,7 +523,7 @@ google_ad_height = 90;
 		
 		
 		<li class="left">
-			<a class="siteicon_homepage" href="../external.html?link=http://labofapenetrationtester.blogspot.com/">
+			<a class="siteicon_homepage" href="http://labofapenetrationtester.blogspot.com/">
 				Visit Homepage
 			</a>
 		</li>
@@ -553,20 +553,20 @@ google_ad_height = 90;
 <br/>
 This is my first post to Garage, please bear with mistakes. I will write a series of posts which will also be posted on my blog.<br/>
 <br/>
-My first blog post after two back to back awesome conferences <a href="../external.html?link=https://www.blackhat.com/html/bh-eu-12/bh-eu-12-briefings.html#mittal2" target="_blank">Black Hat Europe</a> and <a href="../external.html?link=http://www.troopers.de/troopers12/agenda/more-fun-using-kautilya-or-is-it-a-thumb-drive-is-it-a-toy-no-itâ€™s-a-keyboard/" target="_blank">Troopers</a>. At Black Hat Europe I conducted a workshop called Teensy Programming for Everyone. The workshop was well recieved by most of the participants. But I found that many of them found it difficult to setup Arduino for usage with Teensy and other basic stuff. So keeping in mind my upcoming trainings at <a href="../external.html?link=http://shakacon.org/" target="_blank">Shakacon</a> and <a href="../external.html?link=http://grrcon.org/events-training/training/teensy/" target="_blank">GrrCON</a> I am starting this series of blog posts which during initial posts will detail the basics of Teensyduino installation, structure of sketches and usage of Teensy. In later posts, I will cover <a href="../external.html?link=http://code.google.com/p/kautilya/" target="_blank">Kautilya</a> and its usage. So let's get started.<br/>
+My first blog post after two back to back awesome conferences <a href="../external.html?link=https://www.blackhat.com/html/bh-eu-12/bh-eu-12-briefings.html#mittal2" target="_blank">Black Hat Europe</a> and <a href="../external.html?link=http://www.troopers.de/troopers12/agenda/more-fun-using-kautilya-or-is-it-a-thumb-drive-is-it-a-toy-no-itâ€™s-a-keyboard/" target="_blank">Troopers</a>. At Black Hat Europe I conducted a workshop called Teensy Programming for Everyone. The workshop was well recieved by most of the participants. But I found that many of them found it difficult to setup Arduino for usage with Teensy and other basic stuff. So keeping in mind my upcoming trainings at <a href="http://shakacon.org/" target="_blank">Shakacon</a> and <a href="http://grrcon.org/events-training/training/teensy/" target="_blank">GrrCON</a> I am starting this series of blog posts which during initial posts will detail the basics of Teensyduino installation, structure of sketches and usage of Teensy. In later posts, I will cover <a href="http://code.google.com/p/kautilya/" target="_blank">Kautilya</a> and its usage. So let's get started.<br/>
 <br/>
-<a href="../external.html?link=http://www.pjrc.com/teensy/" target="_blank">Teensy</a> is a programmable USB HID from nice guys at pjrc.com. I use Teensy++ (which is an improved version of Teensy) in Penetration Tests for its ability to be used as a programmable keyboard. To start with, this is how you can install Arduino with Teensyduino:<br/>
+<a href="http://www.pjrc.com/teensy/" target="_blank">Teensy</a> is a programmable USB HID from nice guys at pjrc.com. I use Teensy++ (which is an improved version of Teensy) in Penetration Tests for its ability to be used as a programmable keyboard. To start with, this is how you can install Arduino with Teensyduino:<br/>
 <br/>
 <br/>
 For Windows (Tested on Windows 7 and XP) as an Adminsitrator<br/>
 <br/>
-1. Download <a href="../external.html?link=http://arduino.cc/hu/Main/Software" target="_blank">Arduino</a> for Windows.<br/>
+1. Download <a href="http://arduino.cc/hu/Main/Software" target="_blank">Arduino</a> for Windows.<br/>
 <br/>
 2. Extract the zip archive.<br/>
 <br/>
-3. Download <a href="../external.html?link=http://www.pjrc.com/teensy/td_107/teensyduino.exe" target="_blank">Teensyduino for Windows</a> which is a plugin for Arduino. We require this to add support for Teensy in Arduino.<br/>
+3. Download <a href="http://www.pjrc.com/teensy/td_107/teensyduino.exe" target="_blank">Teensyduino for Windows</a> which is a plugin for Arduino. We require this to add support for Teensy in Arduino.<br/>
 <br/>
-4. Download <a href="../external.html?link=http://www.pjrc.com/teensy/serial_install.exe" target="_blank">Windows Serial Installer</a><br/>
+4. Download <a href="http://www.pjrc.com/teensy/serial_install.exe" target="_blank">Windows Serial Installer</a><br/>
 <br/>
 5. Run the the downloaded Serial Installer. You will get a warning as the driver is not signed by Microsoft. Accept it and continue with the installation.<br/>
 <br/>
@@ -597,13 +597,13 @@ Size:  18.6 KB" border="0" src="attachment7e72.jpg?attachmentid=320&amp;d=133348
 For Linux (Tested on Backtrack 5)<br/>
 <br/>
 <br/>
-1. Download <a href="../external.html?link=http://arduino.cc/hu/Main/Software" target="_blank">Arduino</a> for Linux.<br/>
+1. Download <a href="http://arduino.cc/hu/Main/Software" target="_blank">Arduino</a> for Linux.<br/>
 <br/>
 2. Extract the zip archive.<br/>
 <br/>
-3. Download  <a href="../external.html?link=http://www.pjrc.com/teensy/td_107/teensyduino.32bit" target="_blank">Teensyduino 32bit</a> or <a href="../external.html?link=http://www.pjrc.com/teensy/td_107/teensyduino.64bit" target="_blank">Teensyduino 64bit</a> depending on your OS. We require this to add support for Teensy in Arduino.<br/>
+3. Download  <a href="http://www.pjrc.com/teensy/td_107/teensyduino.32bit" target="_blank">Teensyduino 32bit</a> or <a href="http://www.pjrc.com/teensy/td_107/teensyduino.64bit" target="_blank">Teensyduino 64bit</a> depending on your OS. We require this to add support for Teensy in Arduino.<br/>
 <br/>
-4. Download <a href="../external.html?link=http://www.pjrc.com/teensy/49-teensy.rules" target="_blank">udev rules</a>. This is required to use Teensy as non root user.<br/>
+4. Download <a href="http://www.pjrc.com/teensy/49-teensy.rules" target="_blank">udev rules</a>. This is required to use Teensy as non root user.<br/>
 <br/>
 5. Install udev rules<br/>
 <br/>
@@ -1566,7 +1566,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="bloge12c.html?b=318&amp;goto=prev#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -1591,7 +1591,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">

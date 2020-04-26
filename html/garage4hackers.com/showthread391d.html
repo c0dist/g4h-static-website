@@ -440,7 +440,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 	<h1>
 		Thread: <span class="threadtitle"><a href="showthread391d.html?t=2402" title="Reload this Page">How to pentest Joomla, Drupal and WordPress</a></span>
 
-<a class="a2a_dd" href="../external.html?link=http://www.addtoany.com/share_save"><img alt="Share/Save - My123World.Com!" border="0" height="16" src="../static.addtoany.com/buttons/share_save_171_16.png" width="171"/></a><script type="text/javascript">a2a_show_title=1;a2a_num_services=14;</script><script src="../static.addtoany.com/menu/page.js" type="text/javascript"></script>
+<a class="a2a_dd" href="http://www.addtoany.com/share_save"><img alt="Share/Save - My123World.Com!" border="0" height="16" src="../static.addtoany.com/buttons/share_save_171_16.png" width="171"/></a><script type="text/javascript">a2a_show_title=1;a2a_num_services=14;</script><script src="../static.addtoany.com/menu/page.js" type="text/javascript"></script>
 
 		
 			
@@ -734,7 +734,7 @@ By tools<br/>
 If you want to save time to classify a website, we can use some tools to classify it. So in this article, we will use CMS-Explorer and Wappalyzer to classify them.<br/>
 <br/>
 CMS Explorer<br/>
-CMS Explorer is a tool to check and search all plugins, modules, component and themes that was used in a website. But in this article, we will use it to identify the CMS only. The official website of CMS-Explorer is <a href="../external.html?link=http://code.google.com/p/cms-explorer/" target="_blank">http://code.google.com/p/cms-explorer/</a>. The syntax of CMS Explorer is: <br/>
+CMS Explorer is a tool to check and search all plugins, modules, component and themes that was used in a website. But in this article, we will use it to identify the CMS only. The official website of CMS-Explorer is <a href="http://code.google.com/p/cms-explorer/" target="_blank">http://code.google.com/p/cms-explorer/</a>. The syntax of CMS Explorer is: <br/>
 <br/>
 $ ./cms-explorer.pl –url &lt;target-website&gt; -type &lt;cms-type&gt; Example, Identify a website to be Joomla or<br/>
 <br/>
@@ -743,10 +743,10 @@ not<br/>
 $ ./cms-explorer.pl –url &lt;target-website&gt; -type joomla<br/>
 <br/>
 Wappalyzer<br/>
-Wappalyzer is a browser extension in Firefox and Chrome that is used to uncover the technologies of a website. We will see the information of the website like type of CMS, web server information, Javascript frameworks, etc. You can download and install wappalyzer from <a href="../external.html?link=http://wappalyzer.com/download" target="_blank">http://wappalyzer.com/download</a>. Pentest the CMS After we know what the CMS is, you can use some tools to find the vulnerabilities of a website by the category of CMS.<br/>
+Wappalyzer is a browser extension in Firefox and Chrome that is used to uncover the technologies of a website. We will see the information of the website like type of CMS, web server information, Javascript frameworks, etc. You can download and install wappalyzer from <a href="http://wappalyzer.com/download" target="_blank">http://wappalyzer.com/download</a>. Pentest the CMS After we know what the CMS is, you can use some tools to find the vulnerabilities of a website by the category of CMS.<br/>
 <br/>
 Joomscan <br/>
-Joomscan (OWASP Joomla Security Scanner) is one of OWASP’s tools. Joomscan will detect a web server, check Joomla version, every modules that used in website. When the tools get the module list, then it will test all modules with many different types of attacks like SQL Injection, File Inclusion, and Command Execution. The Official website of  Joomscan is <a href="../external.html?link=http://sourceforge.net/projects/joomscan/" target="_blank">http://sourceforge.net/projects/joomscan/</a>.  <br/>
+Joomscan (OWASP Joomla Security Scanner) is one of OWASP’s tools. Joomscan will detect a web server, check Joomla version, every modules that used in website. When the tools get the module list, then it will test all modules with many different types of attacks like SQL Injection, File Inclusion, and Command Execution. The Official website of  Joomscan is <a href="http://sourceforge.net/projects/joomscan/" target="_blank">http://sourceforge.net/projects/joomscan/</a>.  <br/>
 <br/>
 Example of Joomscan’s Usage<br/>
 <br/>
@@ -754,23 +754,23 @@ Update Joomscan<br/>
 <br/>
 $ ./joomscan.pl update<br/>
 <br/>
-Use Joomscan scan <a href="../external.html?link=http://www.example.com/" target="_blank">www.example.com</a><br/>
+Use Joomscan scan <a href="http://www.example.com/" target="_blank">www.example.com</a><br/>
 <br/>
-$ ./joomscan.pl -u <a href="../external.html?link=http://www.example.com/" target="_blank">www.example.com</a><br/>
+$ ./joomscan.pl -u <a href="http://www.example.com/" target="_blank">www.example.com</a><br/>
 <br/>
-Use Joomscan scan <a href="../external.html?link=http://www.example.com/" target="_blank">www.example.com</a> via proxy: 117.121.222.222:3128<br/>
+Use Joomscan scan <a href="http://www.example.com/" target="_blank">www.example.com</a> via proxy: 117.121.222.222:3128<br/>
 <br/>
-$ ./joomscan.pl -u <a href="../external.html?link=http://www.example.com/" target="_blank">www.example.com</a> -x 117.121.222.222:3128<br/>
+$ ./joomscan.pl -u <a href="http://www.example.com/" target="_blank">www.example.com</a> -x 117.121.222.222:3128<br/>
 <br/>
-Use joomscan scan <a href="../external.html?link=http://www.example.com/" target="_blank">www.example.com</a> with user agent “Mozilla/5.0 (Windows NT 6.1; rv:6.0.1) Gecko/20110101 Firefox/11.0.1”<br/>
+Use joomscan scan <a href="http://www.example.com/" target="_blank">www.example.com</a> with user agent “Mozilla/5.0 (Windows NT 6.1; rv:6.0.1) Gecko/20110101 Firefox/11.0.1”<br/>
 <br/>
-$ ./joomscan.pl -u <a href="../external.html?link=http://www.example.com/" target="_blank">www.example.com</a> -g “Mozilla/5.0<br/>
+$ ./joomscan.pl -u <a href="http://www.example.com/" target="_blank">www.example.com</a> -g “Mozilla/5.0<br/>
 <br/>
 (Windows NT 6.1; rv:6.0.1) Gecko/20110101 Firefox/11.0.1”<br/>
 <br/>
 WPscan<br/>
 <br/>
-WPScan (Wordpress Security Scanner) is a tool used to test and scan for vulnerabilities in Wordpress. WPscan can do many security tests like search for a user from a website,  Brute Force the administrator’s page, check version of Wordpress and etc. The official website of wpscan is <a href="../external.html?link=http://code.google.com/p/wpscan/" target="_blank">http://code.google.com/p/wpscan/</a>.<br/>
+WPScan (Wordpress Security Scanner) is a tool used to test and scan for vulnerabilities in Wordpress. WPscan can do many security tests like search for a user from a website,  Brute Force the administrator’s page, check version of Wordpress and etc. The official website of wpscan is <a href="http://code.google.com/p/wpscan/" target="_blank">http://code.google.com/p/wpscan/</a>.<br/>
 <br/>
 Example of WPScan’s Usage<br/>
 <br/>
@@ -778,21 +778,21 @@ Update WPScan<br/>
 <br/>
 $ ./wpscan.rb --update<br/>
 <br/>
-Use WPScan scan <a href="../external.html?link=http://www.example.com/" target="_blank">www.example.com</a><br/>
+Use WPScan scan <a href="http://www.example.com/" target="_blank">www.example.com</a><br/>
 <br/>
-$ ./wpscan.rb --url <a href="../external.html?link=http://www.example.com/" target="_blank">www.example.com</a><br/>
+$ ./wpscan.rb --url <a href="http://www.example.com/" target="_blank">www.example.com</a><br/>
 <br/>
-Use WPScan scan <a href="../external.html?link=http://www.example.com/" target="_blank">www.example.com</a> via proxy: 117.121.222.222:3128<br/>
+Use WPScan scan <a href="http://www.example.com/" target="_blank">www.example.com</a> via proxy: 117.121.222.222:3128<br/>
 <br/>
-$ ./wpscan.rb --url <a href="../external.html?link=http://www.example.com/" target="_blank">www.example.com</a> --proxy 117.121.222.222:3128<br/>
+$ ./wpscan.rb --url <a href="http://www.example.com/" target="_blank">www.example.com</a> --proxy 117.121.222.222:3128<br/>
 <br/>
-Use wpscan search a list of user and check version of Wordpress of <a href="../external.html?link=http://www.example.com/" target="_blank">www.example.com</a><br/>
+Use wpscan search a list of user and check version of Wordpress of <a href="http://www.example.com/" target="_blank">www.example.com</a><br/>
 <br/>
-$ ./wpscan.rb --enumerate uv --url “<a href="../external.html?link=http://www.example.xn--com-9o0a/" target="_blank">www.example.com”</a><br/>
+$ ./wpscan.rb --enumerate uv --url “<a href="http://www.example.xn--com-9o0a/" target="_blank">www.example.com”</a><br/>
 <br/>
 <br/>
 -----------<br/>
-Source: <a href="../external.html?link=http://pentestmag.com/subscribe/free-account/" target="_blank">www.pentestmag.com</a>. <font size="1">Register for the version with pictures and 15 other free tutorials and arts</font>
+Source: <a href="http://pentestmag.com/subscribe/free-account/" target="_blank">www.pentestmag.com</a>. <font size="1">Register for the version with pictures and 15 other free tutorials and arts</font>
 						</blockquote>
 					</div>
 
@@ -1316,7 +1316,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="showthread391d.html?t=2402#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -1341,7 +1341,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">

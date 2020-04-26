@@ -439,7 +439,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 	<h1>
 		Thread: <span class="threadtitle"><a href="showthread0dc5.html?t=4497" title="Reload this Page">Crack passwords using John the Ripper (JTR) using multiple CPU cores</a></span>
 
-<a class="a2a_dd" href="../external.html?link=http://www.addtoany.com/share_save"><img alt="Share/Save - My123World.Com!" border="0" height="16" src="../static.addtoany.com/buttons/share_save_171_16.png" width="171"/></a><script type="text/javascript">a2a_show_title=1;a2a_num_services=14;</script><script src="../static.addtoany.com/menu/page.js" type="text/javascript"></script>
+<a class="a2a_dd" href="http://www.addtoany.com/share_save"><img alt="Share/Save - My123World.Com!" border="0" height="16" src="../static.addtoany.com/buttons/share_save_171_16.png" width="171"/></a><script type="text/javascript">a2a_show_title=1;a2a_num_services=14;</script><script src="../static.addtoany.com/menu/page.js" type="text/javascript"></script>
 
 		
 			
@@ -648,16 +648,16 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 <br/>
 Earlier, what I was aware of till date, was MPI patch for JTR for the same purpose. But with the latest releases of JTR, it has got built-in feature for it.<br/>
 <br/>
-Following snippet is the work around taken from <a href="../external.html?link=http://blog.thireus.com/crack-passwords-using-john-the-ripper-with-multiple-cpu-cores-openmp" target="_blank">Crack Passwords using John the Ripper with Multiple CPU Cores (OpenMP) « Thireus' Bl0g</a><br/>
+Following snippet is the work around taken from <a href="http://blog.thireus.com/crack-passwords-using-john-the-ripper-with-multiple-cpu-cores-openmp" target="_blank">Crack Passwords using John the Ripper with Multiple CPU Cores (OpenMP) « Thireus' Bl0g</a><br/>
 <br/>
 <div class="bbcode_container">
 	<div class="bbcode_quote">
 		<div class="quote_container">
 			<div class="bbcode_quote_container"></div>
 			
-				<b>John</b><span style="font-family: trebuchet ms">can break many password hashes, but one of the primary missing feature was the <u>CPU multiple core support</u>. But today, </span><b><a href="../external.html?link=https://www.openwall.com/john/" target="_blank">John the Ripper 1.7.9</a></b><span style="font-family: trebuchet ms"> supports <u><a href="../external.html?link=http://openmp.org/wp/" target="_blank">OpenMP</a></u> which brings Multi-Processing. Of course this feature was present on some patched versions of John, but since the 1.7.9 version it is <u>officially integrated</u>.<i>One of the best platform where you should use John the Ripper is UNIX, I personally prefer using john on Debian x86_64.</i></span><b>Let’s try some simple steps to enable and illustrate the new feature <img alt="" border="0" src="../external.html?link=https://blog.thireus.com/wp-includes/images/smilies/icon_wink.png/?018cff"/></b><br/>
+				<b>John</b><span style="font-family: trebuchet ms">can break many password hashes, but one of the primary missing feature was the <u>CPU multiple core support</u>. But today, </span><b><a href="https://www.openwall.com/john/" target="_blank">John the Ripper 1.7.9</a></b><span style="font-family: trebuchet ms"> supports <u><a href="http://openmp.org/wp/" target="_blank">OpenMP</a></u> which brings Multi-Processing. Of course this feature was present on some patched versions of John, but since the 1.7.9 version it is <u>officially integrated</u>.<i>One of the best platform where you should use John the Ripper is UNIX, I personally prefer using john on Debian x86_64.</i></span><b>Let’s try some simple steps to enable and illustrate the new feature <img alt="" border="0" src="https://blog.thireus.com/wp-includes/images/smilies/icon_wink.png/?018cff"/></b><br/>
 <br/>
-<ul><li style="">First go to <a href="../external.html?link=http://www.openwall.com/john/" target="_blank">John the Ripper password cracker</a>, and download the latest version. When I write this article the latest stable release was 1.7.9.</li></ul><span style="font-family: trebuchet ms"><span style="font-family: Consolas"><div class="cms_table"><table class="cms_table" width="925"><tbody><tr class="cms_table_tr" valign="top"><td class="cms_table_code">$ wget <a href="../external.html?link=https://www.openwall.com/john/" target="_blank">http://www.openwall.com/john/g/john-1.7.9.tar.gz</a><br/>
+<ul><li style="">First go to <a href="http://www.openwall.com/john/" target="_blank">John the Ripper password cracker</a>, and download the latest version. When I write this article the latest stable release was 1.7.9.</li></ul><span style="font-family: trebuchet ms"><span style="font-family: Consolas"><div class="cms_table"><table class="cms_table" width="925"><tbody><tr class="cms_table_tr" valign="top"><td class="cms_table_code">$ wget <a href="https://www.openwall.com/john/" target="_blank">http://www.openwall.com/john/g/john-1.7.9.tar.gz</a><br/>
 $ tar -xvzf john-1.7.9.tar.gz</td>
 </tr>
 </tbody></table></div>
@@ -707,7 +707,7 @@ john-1.7.9/run$ ./john --test</td>
 <br/>
 </span><br/>
 </span><br/>
-<span style="font-family: trebuchet ms"><i>Some benches should appear… <img alt="" border="0" src="../external.html?link=https://blog.thireus.com/wp-includes/images/smilies/icon_cool.png/?018cff"/></i><span style="font-family: Consolas"><div class="cms_table"><table class="cms_table" width="925"><tbody><tr class="cms_table_tr" valign="top"><td class="cms_table_code">Benchmarking: Traditional DES [128/128 BS SSE2-16]... DONE<br/>
+<span style="font-family: trebuchet ms"><i>Some benches should appear… <img alt="" border="0" src="https://blog.thireus.com/wp-includes/images/smilies/icon_cool.png/?018cff"/></i><span style="font-family: Consolas"><div class="cms_table"><table class="cms_table" width="925"><tbody><tr class="cms_table_tr" valign="top"><td class="cms_table_code">Benchmarking: Traditional DES [128/128 BS SSE2-16]... DONE<br/>
 Many salts: 7651K c/s real, 3872K c/s virtual<br/>
 Only one salt:  6876K c/s real, 3487K c/s virtual</td>
 </tr>
@@ -929,7 +929,7 @@ Only one salt:  3770K c/s real, 3770K c/s virtual</td>
 					<div id="post_message_11416">
 						<blockquote class="postcontent restore">
 							Another good article by same author on password cracking using JTR + MPI. Thanks to him for his good work and sharing.<br/>
-<a href="../external.html?link=http://blog.thireus.com/john-the-ripped-steak-and-french-fries-with-salt-and-pepper-sauce-for-hungry-password-crackers" target="_blank">John the Ripped</a>
+<a href="http://blog.thireus.com/john-the-ripped-steak-and-french-fries-with-salt-and-pepper-sauce-for-hungry-password-crackers" target="_blank">John the Ripped</a>
 						</blockquote>
 					</div>
 
@@ -1108,7 +1108,7 @@ Only one salt:  3770K c/s real, 3770K c/s virtual</td>
 							Hi,<br/>
 <br/>
 Is it only me or others are also not able to read the text of first post??<br/>
-For me, it looks something like -&gt; <a href="../external.html?link=http://imgur.com/J6vjFn7" target="_blank">http://i.imgur.com/J6vjFn7.png</a><br/>
+For me, it looks something like -&gt; <a href="http://imgur.com/J6vjFn7" target="_blank">http://i.imgur.com/J6vjFn7.png</a><br/>
 <br/>
 Thanks.
 						</blockquote>
@@ -1307,7 +1307,7 @@ keeps learning stays young. The greatest thing in life is to keep your mind youn
 				<div class="message">Hi,<br/>
 <br/>
 Is it only me or others are also not able to read the text of first post??<br/>
-For me, it looks something like -&gt; <a href="../external.html?link=http://imgur.com/J6vjFn7" target="_blank">http://i.imgur.com/J6vjFn7.png</a><br/>
+For me, it looks something like -&gt; <a href="http://imgur.com/J6vjFn7" target="_blank">http://i.imgur.com/J6vjFn7.png</a><br/>
 <br/>
 Thanks.</div>
 			
@@ -1852,7 +1852,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="showthread0dc5.html?t=4497#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -1877,7 +1877,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">

@@ -566,7 +566,7 @@ Few weeks back I had to design a solution for a challenging web application issu
 A secure Web Application has a Secret Access token . This token needs to be shared with a Desktop client application. And based on receiving the secure-token the desktop application performs few critical tasks. The secret-token is in the form of an application cookie. So for passing the cookie to the desktop app, application uses a javascript code  that reads the cookie and sent a GET request using it to the localhost Desktop App.<br/>
 <br/>
 1) Java Script -- &gt; Reads Cookies [ document cookie ]<br/>
-2) Cookies Sent to Desktop client via an xmlhttp GET request to Desktop client [ <a href="../external.html?link=http://127.0.0.1/?Secure_cookie=2121212" target="_blank">http://127.0.0.1/?Secure_cookie=2121212</a> .  <br/>
+2) Cookies Sent to Desktop client via an xmlhttp GET request to Desktop client [ <a href="http://127.0.0.1/?Secure_cookie=2121212" target="_blank">http://127.0.0.1/?Secure_cookie=2121212</a> .  <br/>
 <br/>
 <br/>
 Now the issues is I need to protect the Secret-token no matter what. So even if there is an XSS in the app the secret cookie should not be lost. Well for preventing cookie read via JS we can mark the cookie HTTP-ONLY but then it would halt the entire implementation . As the legitimate JS would not be able to read the cookies and sent to Desktop App. <br/>
@@ -574,7 +574,7 @@ Now the issues is I need to protect the Secret-token no matter what. So even if 
 One solution here was to use a 302 redirects and mark the cookie http-only. So our application uses POST method requesting the Secret-token .And on receiving the post request the application does a 302 redirect to the localhost and a url variable will have the secret-cookie.  <br/>
 <br/>
 1) An http POST method is used to request the secret-token from a Secret token[cookie] page page in a new tab.<br/>
-2) The secret token page 302 redirects to [<a href="../external.html?link=http://127.0.0.1/?secure_cookie=2121212" target="_blank">http://127.0.0.1/?secure_cookie=2121212</a> ]<br/>
+2) The secret token page 302 redirects to [<a href="http://127.0.0.1/?secure_cookie=2121212" target="_blank">http://127.0.0.1/?secure_cookie=2121212</a> ]<br/>
 <br/>
 <br/>
 The security of this implementation is based on the fact that an XHR request cannot access response headers. So even if we have an XSS in the app, a malicious xml-http-request would not be able fake a post request to read the response headers.<br/>
@@ -587,7 +587,7 @@ The security of this implementation is based on the fact that an XHR request can
 		<div class="quote_container">
 			<div class="bbcode_quote_container"></div>
 			
-				<a href="../external.html?link=http://www.w3.org/TR/XMLHttpRequest/" target="_blank">http://www.w3.org/TR/XMLHttpRequest/</a><br/>
+				<a href="http://www.w3.org/TR/XMLHttpRequest/" target="_blank">http://www.w3.org/TR/XMLHttpRequest/</a><br/>
 <br/>
 <br/>
 "If the redirect violates infinite loop precautions this is a network error.<br/>
@@ -611,7 +611,7 @@ Error:<br/>
 			<div class="bbcode_quote_container"></div>
 			
 				"<br/>
-XMLHttpRequest cannot load <a href="../external.html?link=http://exploit-analysis.com/302/ajax.php" target="_blank">http://exploit-analysis.com/302/ajax.php</a>. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://172.16.139.145' is therefore not allowed access. <br/>
+XMLHttpRequest cannot load <a href="http://exploit-analysis.com/302/ajax.php" target="_blank">http://exploit-analysis.com/302/ajax.php</a>. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://172.16.139.145' is therefore not allowed access. <br/>
 "
 			
 		</div>
@@ -622,13 +622,13 @@ This cross origin error error will contain the 302 location url, but is not acce
 <br/>
 So my secure implementation was based on these browser security features.<br/>
 <u><br/>
-You can check out the implementation over here:</u> <b><u><a href="../external.html?link=http://exploit-analysis.com/302/index.php?xss=sas" target="_blank">http://exploit-analysis.com/302/index.php?xss=sas</a> .</u></b><br/>
+You can check out the implementation over here:</u> <b><u><a href="http://exploit-analysis.com/302/index.php?xss=sas" target="_blank">http://exploit-analysis.com/302/index.php?xss=sas</a> .</u></b><br/>
 <br/>
-But soon this proposal was challenged by <a href="../external.html?link=https://twitter.com/skeptic_fx" target="_blank">https://twitter.com/skeptic_fx</a> . <br/>
+But soon this proposal was challenged by <a href="https://twitter.com/skeptic_fx" target="_blank">https://twitter.com/skeptic_fx</a> . <br/>
 <br/>
 His cool bypass method was using the CSP violation reports. <br/>
 <br/>
- <a href="../external.html?link=https://developer.mozilla.org/en-US/docs/Security/CSP/Using_CSP_violation_reports" target="_blank">https://developer.mozilla.org/en-US/...lation_reports</a><br/>
+ <a href="https://developer.mozilla.org/en-US/docs/Security/CSP/Using_CSP_violation_reports" target="_blank">https://developer.mozilla.org/en-US/...lation_reports</a><br/>
 <br/>
 He simply collected the CSP log reports on the server. And this logs will contain the violated domains. <br/>
 <br/>
@@ -658,7 +658,7 @@ Connection: keep-alive
 <br/>
 Remember in our implementation we  do a 302 redirect with .<br/>
 <br/>
-<a href="../external.html?link=http://127.0.0.1/secret_key.php?key=56787653567898876" target="_blank">http://127.0.0.1/secret_key.php?key=56787653567898876</a><br/>
+<a href="http://127.0.0.1/secret_key.php?key=56787653567898876" target="_blank">http://127.0.0.1/secret_key.php?key=56787653567898876</a><br/>
 <br/>
 Here even if you leak the domain[127.0.0.1[ name its of no use, as the objective is to leak the entire url to reveal the secret key.<br/>
 <br/>
@@ -682,17 +682,17 @@ Here blocked-uri is the one that leaks the url. <br/>
 <br/>
 1) In chrome it does not sent the entire URI.<br/>
 2) In firefox it does not sent entire URI.<br/>
-<a href="../external.html?link=https://developer.mozilla.org/en-US/docs/Security/CSP/Using_CSP_violation_reports" target="_blank">https://developer.mozilla.org/en-US/...lation_reports</a><br/>
+<a href="https://developer.mozilla.org/en-US/docs/Security/CSP/Using_CSP_violation_reports" target="_blank">https://developer.mozilla.org/en-US/...lation_reports</a><br/>
 3) Webkit Also seems to implement this correctly.<br/>
 <br/>
-Here is the list of other CSP supported browser versions. <a href="../external.html?link=http://caniuse.com/contentsecuritypolicy" target="_blank">http://caniuse.com/contentsecuritypolicy</a><br/>
+Here is the list of other CSP supported browser versions. <a href="http://caniuse.com/contentsecuritypolicy" target="_blank">http://caniuse.com/contentsecuritypolicy</a><br/>
 <br/>
 <br/>
 So CSP  follows the same origin policy and blocks the entire url from being revealed. I have seen a lot of people complaining about CSP not able to capture the entire cross origin request . So thought this article would be useful for highlighting security issues concerning CSP features. <br/>
 <br/>
 While I was writing this blog homakov published an article explaining few privacy violations issues regarding CSP.  <br/>
 <br/>
-Take a look. <a href="../external.html?link=http://homakov.blogspot.in/2014/01/using-content-security-policy-for-evil.html" target="_blank">http://homakov.blogspot.in/2014/01/u...-for-evil.html</a>.<br/>
+Take a look. <a href="http://homakov.blogspot.in/2014/01/using-content-security-policy-for-evil.html" target="_blank">http://homakov.blogspot.in/2014/01/u...-for-evil.html</a>.<br/>
 <br/>
 I am looking for more suggestions on how much I can trust 302 redirects for such a secure implementation . Or any potential bypass that could circumvent this secure implementation. <br/>
 <br/>
@@ -719,7 +719,7 @@ Views: 1710
 Size:  23.3 KB" border="0" src="attachment2c0b.jpg?attachmentid=646&amp;d=1390198439" style="float: CONFIG"/><br/>
 <br/>
 Regards.<br/>
-<a href="../external.html?link=http://www.linkedin.com/profile/view?id=51036445" target="_blank">Rahul Sasi</a>
+<a href="http://www.linkedin.com/profile/view?id=51036445" target="_blank">Rahul Sasi</a>
 
 					
 				</blockquote>
@@ -1567,7 +1567,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="entryd541.html?b=1468#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -1592,7 +1592,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">

@@ -596,33 +596,33 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 <br/>
 To extract javascript for object first we need to decompress the zlib compressed data, only then the javascript would make sense. Pdf-parser.py was used to decompress  and extract the javascript code. The below screenshots show the pdf-parser otuput.<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/196/80839886.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/196/80839886.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 The below screenshot shows just the extracted javascript code. But again this code is obfuscated.<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/97/92034501.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/97/92034501.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 After beautifying the data, the output looks little better , but still obfuscated as show in the below screenshot, the obfuscation technique is used to confuse the analyts and to prevent the security devices from detecting.<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/684/50453750.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/684/50453750.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 When you look at the javascript code above you will find that all the text in blue (marked by /* and */) is a multiline comment in javascript, removing that will not affect the javascript code in anyway, this is just there to confuse the analysts. After deleting all the multiline comment you will find that the javascript now makes sense as shown in the below screenshost<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/193/31283776.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/193/31283776.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 now we have the javascript, executing this code with spidermonkey gives an error, as shown below: The reason for this is javascript is trying to access  “this.creator” which is adobe specific object, In this case the attacker has split the javascript across multiple objects (multi stage), this is again another technique used to confuse the analysts, this.creator references the creator object (marked by /Creator tag in the pdf document). This /Creator tag usually contains the string which identifies the creator of the pdf document.<br/>
 <br/>
-<a href="../external.html?link=http://imageshack.us/photo/my-images/163/39401306.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<a href="http://imageshack.us/photo/my-images/163/39401306.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+Uploaded with <a href="http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
 <br/>
 Continued<br/>
 <a href="../external.html?link=http://www.garage4hackers.com/content/82-malicious-pdf-analysis.html" target="_blank">Malicious PDF analysis Tutorial Part 1</a><br/>
@@ -708,7 +708,7 @@ Continued<br/>
 		<h3><img alt="" src="images/site_icons/html.png"/> G4H Twitter</h3>
 		</div>
 		<div class="cms_widget_content widget_content">
-		<a class="twitter-timeline" data-widget-id="387207513831010305" href="../external.html?link=https://twitter.com/garage4hackers">Tweets by @garage4hackers</a>
+		<a class="twitter-timeline" data-widget-id="387207513831010305" href="https://twitter.com/garage4hackers">Tweets by @garage4hackers</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 	</div>
@@ -797,7 +797,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="contentd1ef.html?r=84-Malicious-PDF-analysis#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -822,7 +822,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">

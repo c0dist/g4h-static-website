@@ -546,9 +546,9 @@ google_ad_height = 90;
 		<div class="blogbody postcontainer">
 			<div id="entry_text_3127">
 				<blockquote class="blogcontent restore floatcontainer">
-					When security researchers and hackers want to setup a self blog, the biggest stress on their head is what to do to secure their server(s) and site(s). what if someone come and naughty their server(s) ? what if server get <a href="../external.html?link=http://en.wikipedia.org/wiki/Denial-of-service_attack" target="_blank">DOS</a>/<a href="../external.html?link=http://www.techopedia.com/definition/10261/distributed-denial-of-service-ddos" target="_blank">DDOS </a>attack when they don’t have access to fix up their server(s) and they are travelling or go for business or something and they can’t access their server(s) for some reason. After some years that I spent my life on information security I release that nothing can’t be secure 100% , But We shouldn’t give up and let others naughty our server and deface our website or maybe make us a botnet zombie for DOS/DDOS Attack. In past year I decided to do something to remove this stress for myself or make it less and I start to make a mini firewall or something like Robot for secure my server and sure I don’t trust other firewalls. 99% of firewalls bypass easy and it’s really ridicule that firewalls from big companies mostly skip checking the packets on POST requests. So that’s first reason I decided to secure my server by my own scripts, and if you want to know more , keep reading.<br/>
+					When security researchers and hackers want to setup a self blog, the biggest stress on their head is what to do to secure their server(s) and site(s). what if someone come and naughty their server(s) ? what if server get <a href="http://en.wikipedia.org/wiki/Denial-of-service_attack" target="_blank">DOS</a>/<a href="http://www.techopedia.com/definition/10261/distributed-denial-of-service-ddos" target="_blank">DDOS </a>attack when they don’t have access to fix up their server(s) and they are travelling or go for business or something and they can’t access their server(s) for some reason. After some years that I spent my life on information security I release that nothing can’t be secure 100% , But We shouldn’t give up and let others naughty our server and deface our website or maybe make us a botnet zombie for DOS/DDOS Attack. In past year I decided to do something to remove this stress for myself or make it less and I start to make a mini firewall or something like Robot for secure my server and sure I don’t trust other firewalls. 99% of firewalls bypass easy and it’s really ridicule that firewalls from big companies mostly skip checking the packets on POST requests. So that’s first reason I decided to secure my server by my own scripts, and if you want to know more , keep reading.<br/>
 <br/>
-At first We need to know , what do we have and what do we want? my first decision to secure my website is that I build my website on my own VPS and don’t share VPS with anyone else, so don’t use a share hosting for your site if it’s important for you not to be damaged by anyone, and by the way this method I want to talk about can’t be used to share hosting and it will take you in trouble if you share your VPS with someone else. Second decision is choose a operation system and a website platform for yourself, I choose CentOS for my Server OS and WordPress for my blogging. Notice , you can choose anything , But after you read this article you must know how to edit source codes and match them with other websites platform or OS. By the way I get a VPS that have a Console Access [Hardware Access + Emergency SSH or Emergency VNC] and I install a Panel [ For Example <a href="../external.html?link=http://cpanel.net/" target="_blank">CPanel X (WHM/CPANEL)</a> ] and panel installer will automatically install anything that needs to be install on Server. That was first Step for lazy guys and if you like , you can install anything you need with terminal on SSH or anyway you like. Just setup your website and after That install your Wordpress [or anything you want]. Okay Here we go. Now what you need to Secure:<br/>
+At first We need to know , what do we have and what do we want? my first decision to secure my website is that I build my website on my own VPS and don’t share VPS with anyone else, so don’t use a share hosting for your site if it’s important for you not to be damaged by anyone, and by the way this method I want to talk about can’t be used to share hosting and it will take you in trouble if you share your VPS with someone else. Second decision is choose a operation system and a website platform for yourself, I choose CentOS for my Server OS and WordPress for my blogging. Notice , you can choose anything , But after you read this article you must know how to edit source codes and match them with other websites platform or OS. By the way I get a VPS that have a Console Access [Hardware Access + Emergency SSH or Emergency VNC] and I install a Panel [ For Example <a href="http://cpanel.net/" target="_blank">CPanel X (WHM/CPANEL)</a> ] and panel installer will automatically install anything that needs to be install on Server. That was first Step for lazy guys and if you like , you can install anything you need with terminal on SSH or anyway you like. Just setup your website and after That install your Wordpress [or anything you want]. Okay Here we go. Now what you need to Secure:<br/>
 <br/>
 1- WebServer<br/>
 2- Your Blogging(or maybe forum or …) Platform<br/>
@@ -557,7 +557,7 @@ At first We need to know , what do we have and what do we want? my first decisio
 5- Make a Mini Robot And a mini WAF<br/>
 6- Other Service if you use [For Example SSH , I will explain it at the end of this article]<br/>
 <br/>
-I don’t want to teach from the beginning of securing or config server so you most have a little knowledge while you reading this article. To protect your webserver from DOS/DDOS attack, if you use Apache [httpd] [Apache webserver is just an example] you really need to install <a href="../external.html?link=http://blog.secaserver.com/2011/08/protect-apache-slowloris-attack/" target="_blank">Anti Slowloris</a> first. Maybe you hear <a href="../external.html?link=http://ha.ckers.org/slowloris/slowloris.pl" target="_blank">Slowloris </a>before it’s a <a href="../external.html?link=http://ha.ckers.org/slowloris/slowloris.pl" target="_blank">DOS/DDOS Script</a> to attack on Apache webserver and easily can take down the Apache webserver [I don’t want to talk about how this script works so don’t need to explain more about it]. So now how to install it?<br/>
+I don’t want to teach from the beginning of securing or config server so you most have a little knowledge while you reading this article. To protect your webserver from DOS/DDOS attack, if you use Apache [httpd] [Apache webserver is just an example] you really need to install <a href="http://blog.secaserver.com/2011/08/protect-apache-slowloris-attack/" target="_blank">Anti Slowloris</a> first. Maybe you hear <a href="http://ha.ckers.org/slowloris/slowloris.pl" target="_blank">Slowloris </a>before it’s a <a href="http://ha.ckers.org/slowloris/slowloris.pl" target="_blank">DOS/DDOS Script</a> to attack on Apache webserver and easily can take down the Apache webserver [I don’t want to talk about how this script works so don’t need to explain more about it]. So now how to install it?<br/>
 Fallow these commands:<br/>
 <br/>
 <br/>
@@ -588,11 +588,11 @@ Fallow these commands:<br/>
 <br/></span>
 </span>
 </code></code></div>
-</div>And again if it shows you any error of php-devel or httpd-devel don’t give up and install these from rpm packages From <a href="../external.html?link=http://vault.centos.org/5.3/updates/x86_64/RPMS/" target="_blank">vault.centos.org</a>.<br/>
+</div>And again if it shows you any error of php-devel or httpd-devel don’t give up and install these from rpm packages From <a href="http://vault.centos.org/5.3/updates/x86_64/RPMS/" target="_blank">vault.centos.org</a>.<br/>
 <br/>
 The next step for config your webserver ,You need to off the webserver signature to don’t get others much information about webserver modules. so find the httpd.conf and then open it and search the “ServerSignature On” , replace with “ServerSignature Off” and add “ServerTokens Prod” or “ServerTokens Email” [Webmaster or Admin Email].<br/>
 <br/>
-Next step is disable the CGI and directory listing and you need to Add “Options -Indexes -ExecCGI …” , If you do it before you know how to do these things and if not , Beginners can learn from this <a href="../external.html?link=http://www.petefreitag.com/item/505.cfm" target="_blank">URL</a>.<br/>
+Next step is disable the CGI and directory listing and you need to Add “Options -Indexes -ExecCGI …” , If you do it before you know how to do these things and if not , Beginners can learn from this <a href="http://www.petefreitag.com/item/505.cfm" target="_blank">URL</a>.<br/>
 <br/>
 Notice: In that url, which I shared for beginners, said about “mod_security” ,I suggest you not to install or active it, sometimes it’s not good for poor servers and in DDOS attacks it gona help to make website going offline [Effect on crash or use much system processing].<br/>
 <br/>
@@ -606,7 +606,7 @@ And now PHP config time, all you need is set some disable functions and turn on 
 <br/></span>
 </span>
 </code></code></div>
-</div>and beginners can check <a href="../external.html?link=http://www.madirish.net/199" target="_blank">HERE </a>for help and learn how to do these things.<br/>
+</div>and beginners can check <a href="http://www.madirish.net/199" target="_blank">HERE </a>for help and learn how to do these things.<br/>
 <br/>
 All I said was simple and there were not any special things and maybe easy to bypass, but do NOT hurry. Let me explain more and then we shall be to continue. By that disable functions and php config we disabled the RCE vulnerabilities and something more that you know they appear with those functions, so copy this python script in your public_html folder and run it. It will change file and folder permissions [remove write permission]. After you setup your website and finish, you must close “write permission” on every folder and files in public_html. On this way anyone can’t upload anything on your website and if you want to upload anything, you have to upload on database, or if you want to upload in the public_html folder you must open permission for the second time and upload your files and close it again, Now We know that uploading and file writing begin to disable on our server in a simple way.<br/>
 <br/>
@@ -1560,13 +1560,13 @@ And last thing about other services same cpanel,ssh and … , you must set IP li
 <br/>
 until now we protected our website from 0Day vulnerabilities and protected our server with a simple ways for DOS/DDOS and deface or uploading. We didn’t config any IDS or IPS professional mode But be sure with doing these on your server be sure you protected so much.<br/>
 <br/>
-But at last if you are same me and very stressful , get a domain , install octopress blogging on your system and upload your site on<a href="../external.html?link=http://pages.github.com/" target="_blank"> github pages</a>, or use <a href="../external.html?link=http://blogger.com/" target="_blank">blogger.com</a>.<br/>
+But at last if you are same me and very stressful , get a domain , install octopress blogging on your system and upload your site on<a href="http://pages.github.com/" target="_blank"> github pages</a>, or use <a href="http://blogger.com/" target="_blank">blogger.com</a>.<br/>
 <br/>
 <font size="3"><b> References</b></font><br/>
 <br/>
 1- Sites that I shared URLs<br/>
-2- Bash Code on <a href="../external.html?link=http://google.com/" target="_blank">Google</a><br/>
-3- <a href="../external.html?link=http://z3r0d4y.com/" target="_blank">ZCR ZeroDay Cyber Research</a><br/>
+2- Bash Code on <a href="http://google.com/" target="_blank">Google</a><br/>
+3- <a href="http://z3r0d4y.com/" target="_blank">ZCR ZeroDay Cyber Research</a><br/>
 <br/>
 <b>Ali Razmjoo</b>
 
@@ -2308,7 +2308,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="entry45fd.html?b=3127#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -2333,7 +2333,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">

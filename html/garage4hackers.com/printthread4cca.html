@@ -87,7 +87,7 @@ TCp Port : 80 Open</code><hr/>
 <br/>
 For confirming I uploaded a command line port-scanner, not nmap as I am not having interactive command prompt and configuring namp+wincap on non interactive setup is hard so dint wanted to take that pain.  <br/>
 <br/>
-I uploded Found ScanLine v1.01 <a href="../external.html?link=http://www.foundstone.com/us/resources/proddesc/scanline.htm" target="_blank">http://www.foundstone.com/us/resourc...c/scanline.htm</a> and did banner garbing on the device which is doing the Nating<br/>
+I uploded Found ScanLine v1.01 <a href="http://www.foundstone.com/us/resources/proddesc/scanline.htm" target="_blank">http://www.foundstone.com/us/resourc...c/scanline.htm</a> and did banner garbing on the device which is doing the Nating<br/>
 <br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
@@ -112,7 +112,7 @@ TCP ports: 23 80 1720</code><hr/>
 	<div class="bbcode_quote printable">
 		<hr/>
 		
-			Before starting I dumped the admin/user hashes using <a href="../external.html?link=http://www.foofus.net/~fizzgig/fgdump/fgdump-usage.htm" target="_blank">http://www.foofus.net/~fizzgig/fgdump/fgdump-usage.htm</a>  and cracked online using <a href="../external.html?link=https://www.objectif-securite.ch/en/products.php" target="_blank">https://www.objectif-securite.ch/en/products.php</a><br/>
+			Before starting I dumped the admin/user hashes using <a href="../external.html?link=http://www.foofus.net/~fizzgig/fgdump/fgdump-usage.htm" target="_blank">http://www.foofus.net/~fizzgig/fgdump/fgdump-usage.htm</a>  and cracked online using <a href="https://www.objectif-securite.ch/en/products.php" target="_blank">https://www.objectif-securite.ch/en/products.php</a><br/>
 Which by the way was Admin@internal-ip-last-octet seems like I might have more chance for similar passwords :D<br/>
 			
 		<hr/>
@@ -253,7 +253,7 @@ I typed on my browser the mail Domain name exch.mytarget.com and yuhu targets Mi
 Fiar enough so now this is would be the target to hack. A quick looking up also revealed that target mail server was also there Domain controller :D how stupid is that. And what the point in putting a firewall in front off web server and not doing anything to this Mail/Domain server, Sad but good for me.<br/>
 <br/>
 Nmaps Smb bruter module gives good results. So that if I could crack an account then I could use it to excute commands using Pstools<br/>
-<a href="../external.html?link=http://technet.microsoft.com/en-us/sysinternals/bb896649.aspx" target="_blank">http://technet.microsoft.com/en-us/s.../bb896649.aspx</a>  <br/>
+<a href="http://technet.microsoft.com/en-us/sysinternals/bb896649.aspx" target="_blank">http://technet.microsoft.com/en-us/s.../bb896649.aspx</a>  <br/>
 <br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
@@ -287,7 +287,7 @@ I did little more pocking around with the mail server found out the snmb communi
 --&gt; allows connection on port 80 <br/>
 access-list 101 deny tcp any host 171.16.23.1 eq any<br/>
 --&gt; deny any other connections on any other port</code><hr/>
-</div>You could read a good doc abt ACLs here <a href="../external.html?link=http://www.cisco.com/en/US/tech/tk648/tk361/technologies_configuration_example09186a0080100548.shtml" target="_blank">http://www.cisco.com/en/US/tech/tk64...80100548.shtml</a><br/>
+</div>You could read a good doc abt ACLs here <a href="http://www.cisco.com/en/US/tech/tk648/tk361/technologies_configuration_example09186a0080100548.shtml" target="_blank">http://www.cisco.com/en/US/tech/tk64...80100548.shtml</a><br/>
 <br/>
 [-]So connections to port 80 would be accepted and forwarded to internal computer. As the Webserevr running Apache is using port 80 we cant bind a port on the 'inused' port .<br/>
 <div class="bbcode_container">
@@ -425,7 +425,7 @@ Uploaded programs to server and triggered callwinexec.exe<br/>
 Result was:<br/>
 <a href="../farm6.static.flickr.com/5136/5493260717_b4c1e118a7_z.jpg" target="_blank">http://farm6.static.flickr.com/5136/...c1e118a7_z.jpg</a><br/>
 <br/>
-So command prompt is achieved, and a quick bruteforce on the routers telnet was done remember I have mentioned the admin password of the webserver was Admin@ip-adress-last-octect so same stuff worked on the router to. That was quick :D.  And I modified acesslist enabled any to any on the router. I used the <a href="../external.html?link=http://www.cisco.com/en/US/tech/tk648/tk361/technologies_configuration_example09186a0080100548.shtml" target="_blank">http://www.cisco.com/en/US/tech/tk64...80100548.shtml</a><br/>
+So command prompt is achieved, and a quick bruteforce on the routers telnet was done remember I have mentioned the admin password of the webserver was Admin@ip-adress-last-octect so same stuff worked on the router to. That was quick :D.  And I modified acesslist enabled any to any on the router. I used the <a href="http://www.cisco.com/en/US/tech/tk648/tk361/technologies_configuration_example09186a0080100548.shtml" target="_blank">http://www.cisco.com/en/US/tech/tk64...80100548.shtml</a><br/>
 <br/>
 And used google to do most of the stuffs.<br/>
 <br/>
@@ -434,7 +434,7 @@ So any to any acess is granted and rdp also was available.<div class="bbcode_con
 	<div class="bbcode_quote printable">
 		<hr/>
 		
-			 I had issues with logging in, as the webadmin had left a rdp session unclosed so had to use this tutorial to get past it <a href="../external.html?link=http://retrohack.com/killing-rdp-sessions-at-the-cmd-line/" target="_blank">http://retrohack.com/killing-rdp-ses...-the-cmd-line/</a>
+			 I had issues with logging in, as the webadmin had left a rdp session unclosed so had to use this tutorial to get past it <a href="http://retrohack.com/killing-rdp-sessions-at-the-cmd-line/" target="_blank">http://retrohack.com/killing-rdp-ses...-the-cmd-line/</a>
 			
 		<hr/>
 	</div>
@@ -561,7 +561,7 @@ You fall under the category of "determined hackers" and it is just next to impos
 
 <div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="footer_morecopyright" id="footer_morecopyright">

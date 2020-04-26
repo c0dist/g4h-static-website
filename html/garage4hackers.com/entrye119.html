@@ -599,7 +599,7 @@ ssh user@host "$(declare -pf importantfunction); importantfunction"</pre>
 <br/>
 The vulnerability occurs because bash does not stop after processing the function definition. It continues to parse and execute shell commands following the function definition.<br/>
 <br/>
-Reference: <a href="../external.html?link=http://seclists.org/oss-sec/2014/q3/650" target="_blank">http://seclists.org/oss-sec/2014/q3/650</a><br/>
+Reference: <a href="http://seclists.org/oss-sec/2014/q3/650" target="_blank">http://seclists.org/oss-sec/2014/q3/650</a><br/>
 <br/>
 Example:<br/>
 <br/>
@@ -630,7 +630,7 @@ There are a number of places this could be exploited .<br/>
 <br/>
 CGI parses certain HTTP paramaters as environment variables.<br/>
 <br/>
-ref:<a href="../external.html?link=http://www.cgi101.com/book/ch3/text.html" target="_blank">http://www.cgi101.com/book/ch3/text.html</a><br/>
+ref:<a href="http://www.cgi101.com/book/ch3/text.html" target="_blank">http://www.cgi101.com/book/ch3/text.html</a><br/>
 <br/>
 For example ,<br/>
 HTTP_COOKIE	The visitor's cookie, if one is set<br/>
@@ -670,7 +670,7 @@ Size:  21.7 KB" border="0" src="attachment9cfb.jpg?attachmentid=791&amp;d=141160
 <u><b>Payload:<br/>
 </b></u><br/>
 Now attackers can utilise a Bind shell payload as put-up here:<br/>
-ref:<a href="../external.html?link=http://pastebin.com/dEYQndKG" target="_blank">http://pastebin.com/dEYQndKG</a><br/>
+ref:<a href="http://pastebin.com/dEYQndKG" target="_blank">http://pastebin.com/dEYQndKG</a><br/>
 <br/>
 <br/>
 <div class="bbcode_container">
@@ -680,7 +680,7 @@ ref:<a href="../external.html?link=http://pastebin.com/dEYQndKG" target="_blank"
 <u><b>Current Patch:<br/>
 </b></u><br/>
 Current patch is broken:<br/>
-<a href="../external.html?link=https://twitter.com/taviso/status/514887394294652929" target="_blank">https://twitter.com/taviso/status/514887394294652929</a><br/>
+<a href="https://twitter.com/taviso/status/514887394294652929" target="_blank">https://twitter.com/taviso/status/514887394294652929</a><br/>
 <br/>
 We were able to test a bypass for the patch and it worked <br/>
 <br/>
@@ -693,19 +693,19 @@ We were able to test a bypass for the patch and it worked <br/>
 </b></u><br/>
 <br/>
 If an attacker does not have an SSH account this exploit would not work. That is the reason why I categorized this as less vulnerable. But certain environments it is possible to have a shell user to have bypass shell restrictions. One good example is over here, Gitlab-shell is affected by Bash CVE-2014-6271<br/>
-<a href="../external.html?link=https://about.gitlab.com/2014/09/24/gitlab-shell-and-bash-cve-2014-6271/" target="_blank">https://about.gitlab.com/2014/09/24/...cve-2014-6271/</a><br/>
+<a href="https://about.gitlab.com/2014/09/24/gitlab-shell-and-bash-cve-2014-6271/" target="_blank">https://about.gitlab.com/2014/09/24/...cve-2014-6271/</a><br/>
 <br/>
 It is possible to inject shell parameters into an SSH session.<br/>
 <br/>
 <br/>
 <br/>
 <b><u>Few reference: <br/>
-</u></b><font size="4">Bash bug write-up with Snort and Suricata signatures <a href="../external.html?link=http://t.co/dGnevpgU4S" target="_blank">http://t.co/dGnevpgU4S</a> by @stevenadair @Volexity #DFIR<br/>
-Fix Bash remote vulnerability CVE-2014-6271 on your Mac - <a href="../external.html?link=http://t.co/bYQCdiTXJd" target="_blank">http://t.co/bYQCdiTXJd</a><br/>
-How do I recompile Bash to avoid the remote exploit CVE-2014-6271 and CVE-2014-7169? <a href="../external.html?link=http://t.co/ozJG0SpVB2" target="_blank">http://t.co/ozJG0SpVB2</a><br/>
-CVE-2014-6271 / Shellshock &amp; How to handle all the shells! <img alt="" border="0" class="inlineimg" src="images/smilies/wink.png" title="Wink"/> <a href="../external.html?link=http://www.clevcode.org/cve-2014-6271-shellshock/" target="_blank">http://www.clevcode.org/cve-2014-6271-shellshock/</a><br/>
-Updating CVE-2014-6271 on OSX and Linux <a href="../external.html?link=http://qiita.com/syui/items/809c1cd8ed57c8cdb055" target="_blank">http://qiita.com/syui/items/809c1cd8ed57c8cdb055</a><br/>
-Busybox also vulnerable to CVE-2014-6271 in Android Terminal Emulator &gt;<img alt="" border="0" class="inlineimg" src="images/smilies/frown.png" title="Frown"/> (CM11 shown) <a href="../external.html?link=https://twitter.com/tehowe/status/514859890662440961/photo/1" target="_blank">https://twitter.com/tehowe/status/51...440961/photo/1</a><br/>
+</u></b><font size="4">Bash bug write-up with Snort and Suricata signatures <a href="http://t.co/dGnevpgU4S" target="_blank">http://t.co/dGnevpgU4S</a> by @stevenadair @Volexity #DFIR<br/>
+Fix Bash remote vulnerability CVE-2014-6271 on your Mac - <a href="http://t.co/bYQCdiTXJd" target="_blank">http://t.co/bYQCdiTXJd</a><br/>
+How do I recompile Bash to avoid the remote exploit CVE-2014-6271 and CVE-2014-7169? <a href="http://t.co/ozJG0SpVB2" target="_blank">http://t.co/ozJG0SpVB2</a><br/>
+CVE-2014-6271 / Shellshock &amp; How to handle all the shells! <img alt="" border="0" class="inlineimg" src="images/smilies/wink.png" title="Wink"/> <a href="http://www.clevcode.org/cve-2014-6271-shellshock/" target="_blank">http://www.clevcode.org/cve-2014-6271-shellshock/</a><br/>
+Updating CVE-2014-6271 on OSX and Linux <a href="http://qiita.com/syui/items/809c1cd8ed57c8cdb055" target="_blank">http://qiita.com/syui/items/809c1cd8ed57c8cdb055</a><br/>
+Busybox also vulnerable to CVE-2014-6271 in Android Terminal Emulator &gt;<img alt="" border="0" class="inlineimg" src="images/smilies/frown.png" title="Frown"/> (CM11 shown) <a href="https://twitter.com/tehowe/status/514859890662440961/photo/1" target="_blank">https://twitter.com/tehowe/status/51...440961/photo/1</a><br/>
 <br/>
 </font><br/>
 </div>
@@ -848,7 +848,7 @@ Busybox also vulnerable to CVE-2014-6271 in Android Terminal Emulator &gt;<img a
 	<div class="content">
 		<div id="comment_text_3180">
 			<blockquote class="posttext restore">
-				POC for DHCP : <a href="../external.html?link=https://www.trustedsec.com/september-2014/shellshock-dhcp-rce-proof-concept/" target="_blank">https://www.trustedsec.com/september...proof-concept/</a>
+				POC for DHCP : <a href="https://www.trustedsec.com/september-2014/shellshock-dhcp-rce-proof-concept/" target="_blank">https://www.trustedsec.com/september...proof-concept/</a>
 			</blockquote>
 		</div>
 		<div class="commentfoot floatcontainer">
@@ -1717,7 +1717,7 @@ google_ad_height = 90;
 		
 		
 		<li><a href="archive/index.html">Archive</a></li>
-		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		<li><a href="#" target="_blank">Web Hosting</a></li>
 		
 		
 		<li><a href="entrye119.html?b=3087&amp;bt=3182#top" onclick="document.location.hash='top'; return false;">Top</a></li>
@@ -1742,7 +1742,7 @@ google_ad_height = 90;
 
 <div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
 <div class="shade footer_morecopyright" id="footer_morecopyright">
