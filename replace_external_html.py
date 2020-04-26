@@ -11,7 +11,7 @@ BASE_DIR = "/home/c0dist/dev/g4h-website-work/html/garage4hackers.com"
 
 
 def get_external_html_urls(file_name, combined_list_file):
-    grep_pattern = f"^{file_name.strip()}:"
+    grep_pattern = f"^{file_name}:"
     print(grep_pattern)
     output = subprocess.check_output(["grep", grep_pattern, combined_list_file])
     if output:
@@ -22,6 +22,7 @@ def main(html_files_list, combined_list_file):
     g4h_urls = set()
     with open(html_files_list) as fp:
         for file_name in fp:
+            file_name = file_name.strip()
             full_path = os.path.join(BASE_DIR, file_name)
             print(f"[+] Processing {full_path}")
             all_external_urls = get_external_html_urls(
