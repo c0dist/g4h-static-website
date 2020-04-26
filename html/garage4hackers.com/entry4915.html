@@ -40,8 +40,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -558,17 +558,17 @@ For more info , visit : <a href="https://www.owasp.org/index.php/Open_redirect" 
 <br/>
 Ok. Now to the issue, we came across a link from FlipKart which is :<br/>
 <br/>
- <a href="../external.html?link=http://www.flipkart.com/ol?link=http://blog.flipkart.com" target="_blank">http://www.flipkart.com/ol?link=http...g.flipkart.com</a> <br/>
+ <a href="http://www.flipkart.com/ol?link=http://blog.flipkart.com" target="_blank">http://www.flipkart.com/ol?link=http...g.flipkart.com</a> <br/>
 <br/>
 where the parameter actually meant to redirect the users to FlipKart's Blog (blog.flipkart.com). So we tried replacing the parameter with <a href="http://fake.com/" target="_blank">FAKE LANDSCAPES - the artificial plant company</a> which then becomes:<br/>
 <br/>
-<a href="../external.html?link=http://www.flipkart.com/ol?link=http://fake.com" target="_blank">www.flipkart.com/ol?link=http://fake.com</a><br/>
+<a href="http://www.flipkart.com/ol?link=http://fake.com" target="_blank">www.flipkart.com/ol?link=http://fake.com</a><br/>
 <br/>
 But Flipkart prevented the attack by taking the victim correctly to <a href="http://flipkart.com/" target="_blank">Online Shopping India - Buy Books, Mobile Phones, Digital Cameras, Laptops, Watches &amp; Other Products @ FlipKart</a>. Epic fail.!! <br/>
 <br/>
 Wait!! It's not over. We continued with changing the parameters. This time, we threw some thing that looked meaningful. Now the parameter is <a href="http://fakeflipkart.com/" target="_blank">http://fakeflipkart.com</a> which then becomes:<br/>
 <br/>
-<a href="../external.html?link=http://www.flipkart.com/ol?link=http://fakeflipkart.com" target="_blank">www.flipkart.com/ol?link=http://fakeflipkart.com</a><br/>
+<a href="http://www.flipkart.com/ol?link=http://fakeflipkart.com" target="_blank">www.flipkart.com/ol?link=http://fakeflipkart.com</a><br/>
 <br/>
 Whoolaa.!! Bypassed the system.!! It was because of generic regular expression match functioned by Flipkart. The victim is so redirected to <a href="http://fakeflipkart.com/" target="_blank">http://fakeflipkart.com</a> (Note: At the time of writing this, there was no such domain registered with that domain name. It's totally for a POC).<br/>
 <br/>

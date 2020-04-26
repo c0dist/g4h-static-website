@@ -39,8 +39,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -715,7 +715,7 @@ if(!$ARGV[2])
 {
 print "\n\n[+] SQL Injection bruteforce By Bl4k3 -[+]-\n=========================================";
 print "\n\nUse: perl $0 [WEBSITE] [COLUMNS] [FILE] [COMMENT] [-T] [-C] [-NOCHECK]\n";
-print "\n[WEBSITE]: <a href="../external.html?link=http://www.web.com/index.php?id=\n" target="_blank">http://www.web.com/index.php?id=\n</a>[COLUMNS]: Limit of columns to check\n[FILE]: File where save the results\n[COMMENT]: '/*' o '--' (Without '') (Optional)\n[-T]: Try to brute force tables (Optional)\n[-C]: Try to brute force columns (Optional)\n[-NOCHECK]: Skip the initial check (Optional)\n\n";
+print "\n[WEBSITE]: <a href="http://www.web.com/index.php?id=\n" target="_blank">http://www.web.com/index.php?id=\n</a>[COLUMNS]: Limit of columns to check\n[FILE]: File where save the results\n[COMMENT]: '/*' o '--' (Without '') (Optional)\n[-T]: Try to brute force tables (Optional)\n[-C]: Try to brute force columns (Optional)\n[-NOCHECK]: Skip the initial check (Optional)\n\n";
 exit (0);
 }
 @nombretabla=('admin','tblUsers','tblAdmin','user','users','username','usernames','usuario',

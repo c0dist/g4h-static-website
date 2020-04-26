@@ -39,8 +39,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -707,11 +707,11 @@ According to OWASP:<br/>
 <br/>
 Now one fine day while browsing the Facebook mobile website I noticed someone had uploaded a video on Facebook so I tried to view it by clicking the video thumbnail and a download pop-up appeared.On careful examination the link Facebook used to generate the URL was like this:<br/>
 <br/>
-<a href="../external.html?link=http://m.facebook.com/video_redirect/?src=[LINK_TO_VIDEO]" target="_blank">m.facebook.com/video_redirect/?src=[LINK_TO_VIDEO]</a><br/>
+<a href="http://m.facebook.com/video_redirect/?src=[LINK_TO_VIDEO]" target="_blank">m.facebook.com/video_redirect/?src=[LINK_TO_VIDEO]</a><br/>
 <br/>
 So I manipulated the 'src' parameter to something like<a href="http://www.google.com/" target="_blank"> http://www.google.com</a>, so the link became:<br/>
 <br/>
-<a href="../external.html?link=http://m.facebook.com/video_redirect/?src=http://www.google.com" target="_blank">m.facebook.com/video_redirect/?src=http://www.google.com</a><br/>
+<a href="http://m.facebook.com/video_redirect/?src=http://www.google.com" target="_blank">m.facebook.com/video_redirect/?src=http://www.google.com</a><br/>
 <br/>
 Whoa! It successfully redirected to <a href="http://www.google.com/" target="_blank">http://www.google.com</a>, so this was the issue.<br/>
 <br/>

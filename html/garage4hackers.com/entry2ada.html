@@ -40,8 +40,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -571,7 +571,7 @@ The vulnerability lies in the implementation of TLS Heartbeat extension. There i
 in an established ssl session to maintain the connection for a longer time.  The HeartBeat protocol extension is added to TLS for this reason. The HTTP keep-alive feature does the same but HB protocol allows a client to perform this action in much higher rate. <br/>
 <br/>
 The client can send a Heart-Beat request message and the server has to respond back with a HearBeat response .<br/>
-<a href="../external.html?link=https://tools.ietf.org/html/rfc6520#page-2" target="_blank">https://tools.ietf.org/html/rfc6520#page-2</a><br/>
+<a href="https://tools.ietf.org/html/rfc6520#page-2" target="_blank">https://tools.ietf.org/html/rfc6520#page-2</a><br/>
 <br/>
 So in short the Heartbeat Protocol is simple and has a request and response module. <br/>
 <br/>
@@ -639,7 +639,7 @@ So the entire heartbeat protocol is an addon for openssl . This following is the
             0x01 // Mode: Peer allows to send requests
 };</pre>
 </div><br/>
-The bugg code was an insecure malloc <a href="../external.html?link=https://github.com/openssl/openssl/commit/96db9023b881d7cd9f379b0c154650d6c108e9a3#diff-2" target="_blank">https://github.com/openssl/openssl/c...108e9a3#diff-2</a><br/>
+The bugg code was an insecure malloc <a href="https://github.com/openssl/openssl/commit/96db9023b881d7cd9f379b0c154650d6c108e9a3#diff-2" target="_blank">https://github.com/openssl/openssl/c...108e9a3#diff-2</a><br/>
 <br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
@@ -843,7 +843,7 @@ Size:  7.1 KB" border="0" src="attachment96d2.png?attachmentid=675&amp;d=1396999
 Reference:<br/>
 <br/>
 <a href="http://blog.bjrn.se/2012/07/fun-with-tls-handshake.html" target="_blank">http://blog.bjrn.se/2012/07/fun-with-tls-handshake.html</a><br/>
-<a href="../external.html?link=https://github.com/openssl/openssl/commit/96db9023b881d7cd9f379b0c154650d6c108e9a3#diff-2" target="_blank">https://github.com/openssl/openssl/c...108e9a3#diff-2</a><br/>
+<a href="https://github.com/openssl/openssl/commit/96db9023b881d7cd9f379b0c154650d6c108e9a3#diff-2" target="_blank">https://github.com/openssl/openssl/c...108e9a3#diff-2</a><br/>
 <a href="https://bitbucket.org/fb1h2s/cve-2014-0160/src/2b1fff1a62e29397ff60586557c96989c7b64662/Heartbeat_scanner.py?at=master" target="_blank">https://bitbucket.org/fb1h2s/cve-201...r.py?at=master</a>
 
 					

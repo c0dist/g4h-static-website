@@ -39,8 +39,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -700,7 +700,7 @@ Most of the code is self-explanatory, <b>Rlo</b> is the vulnerable variable whic
 <br/>
 Now, looks difficult to make it an one click exploit, as we would need the cookie with our vector to be set already and another thing is <b>Rm</b> cookie, which will push <b>Rlo</b> to reach the sink. For exploitation here comes the real trick, we can set a root domain cookie (i.e, <b>.rediff.com</b>) which will be accessible (according to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Same_origin_policy_for_JavaScript" target="_blank">same-origin policy</a>) from all subdomains of rediff.com<br/>
 <br/>
-To achieve this goal, I found another XSS, this time Flash-based XSS on <b>imworld.rediff.com</b> , vulnerable file was in this case <i>swfupload.swf</i> (See <a href="../external.html?link=http://seclists.org/fulldisclosure/2012/Nov/121)" target="_blank">SecLists.Org Security Mailing List Archive</a>. Achievement unlocked! I can now set cookies for .rediff.com . I quickly wrote a PHP one-liner that redirects the user to the vulnerable Flash-file, with XSS vector set to write the required cookies for .rediff.com . See the PHP source code:<br/>
+To achieve this goal, I found another XSS, this time Flash-based XSS on <b>imworld.rediff.com</b> , vulnerable file was in this case <i>swfupload.swf</i> (See <a href="http://seclists.org/fulldisclosure/2012/Nov/121)" target="_blank">SecLists.Org Security Mailing List Archive</a>. Achievement unlocked! I can now set cookies for .rediff.com . I quickly wrote a PHP one-liner that redirects the user to the vulnerable Flash-file, with XSS vector set to write the required cookies for .rediff.com . See the PHP source code:<br/>
 <br/>
 <div style="text-align: center;"><img alt="Name:  one-liner.jpg
 Views: 212

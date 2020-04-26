@@ -40,8 +40,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -664,7 +664,7 @@ Here even if you leak the domain[127.0.0.1[ name its of no use, as the objective
 <br/>
 But with  CSP reports one can only leak the domain name not the entire url. I tested it on multiple browser and it does not work because CSP strictly follows same origin in newer browsers.  <br/>
 <br/>
-Actual Specification for CSP: <a href="../external.html?link=http://www.w3.org/TR/CSP/#violation-reports" target="_blank">http://www.w3.org/TR/CSP/#violation-reports</a><br/>
+Actual Specification for CSP: <a href="http://www.w3.org/TR/CSP/#violation-reports" target="_blank">http://www.w3.org/TR/CSP/#violation-reports</a><br/>
 <br/>
 Here blocked-uri is the one that leaks the url. <br/>
 <div class="bbcode_container">
@@ -709,7 +709,7 @@ And we dint get any solution that could leak the entire url except the domain na
 <br/>
 Here is the solution for the bypass. Nishant Das Patnaik broke the challenge. <br/>
 <br/>
-<a href="../external.html?link=http://test.skepticfx.com/challenge/2014/1/?xss=123%3Ciframe%20src=%22http://skepticfx.com/test/challenge/2014/1/wvmb0blemg/csp.php%22%3E%3C/iframe%3E" target="_blank">http://test.skepticfx.com/challenge/...E%3C/iframe%3E</a><br/>
+<a href="http://test.skepticfx.com/challenge/2014/1/?xss=123%3Ciframe%20src=%22http://skepticfx.com/test/challenge/2014/1/wvmb0blemg/csp.php%22%3E%3C/iframe%3E" target="_blank">http://test.skepticfx.com/challenge/...E%3C/iframe%3E</a><br/>
 <br/>
 The solution uses a parent and child Iframe . Set the parent iframe to report CSP errors to server. Make child frame to do a 302 redirect. Since the redirected domain is different, this will cause an CSP error . This error report will have the redirected domain. <br/>
 <br/>

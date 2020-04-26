@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
-# Command used to find external.html URLs:
+# Commands used to find external.html URLs:
 # grep -irEo '"\.\./external\.html\?link=(http|https)://[a-zA-Z0-9./?=_-]*"'
+# rg -o '\.\./external\.html\?link=(http|https)://[a-zA-Z0-9./?=_-]*' .  |  rg -v "http://garage4hackers.com"
 
 import os
 import subprocess

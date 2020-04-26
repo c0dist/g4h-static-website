@@ -39,8 +39,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -647,7 +647,7 @@ Now that both the issues have been fixed, here's a finer look at the vulnerabili
 <br/>
 1. XSS in the Cisco Developer Network (developer.cisco.com)<br/>
 The following pages accept client side input via the '_153_keywords' parameter and render it back to the browser without sanitization.<br/>
-<ul><li style=""><a href="../external.html?link=http://developer.cisco.com/group/control_panel/manage?p_p_id=153&amp;p_p_lifecycle=0&amp;p_p_state=maximized&amp;p_p_mode=view" target="_blank">http://developer.cisco.com/group/con...&amp;p_p_mode=view</a></li><li style=""><a href="../external.html?link=http://developer.cisco.com/group/control_panel/manage?p_p_id=153&amp;p_p_lifecycle=0&amp;p_p_state=maximized&amp;p_p_mode=view&amp;_153_tabs1=completed" target="_blank">http://developer.cisco.com/group/con...abs1=completed</a></li></ul><br/>
+<ul><li style=""><a href="http://developer.cisco.com/group/control_panel/manage?p_p_id=153&amp;p_p_lifecycle=0&amp;p_p_state=maximized&amp;p_p_mode=view" target="_blank">http://developer.cisco.com/group/con...&amp;p_p_mode=view</a></li><li style=""><a href="http://developer.cisco.com/group/control_panel/manage?p_p_id=153&amp;p_p_lifecycle=0&amp;p_p_state=maximized&amp;p_p_mode=view&amp;_153_tabs1=completed" target="_blank">http://developer.cisco.com/group/con...abs1=completed</a></li></ul><br/>
 <br/>
 This was a POST based XSS, hence to craft an attack vector, an attacker would need to create a page that autosubmits a form on page/body. <br/>
 <br/>
@@ -668,7 +668,7 @@ Some examples were: <br/>
 Views: 1108
 Size:  23.0 KB" border="0" src="attachment7fbb.jpg?attachmentid=436&amp;d=1340192960" style="float: CONFIG"/></div><br/>
 An advanced Google search, like the following, can get a list of modules that were vulnerable:<br/>
-<a href="../external.html?link=https://www.google.co.in/search?q=site:developer.cisco.com/web/%20inurl:admin%20|%20inurl:administration" target="_blank">https://www.google.co.in/search?q=si...administration</a></li></ul><br/>
+<a href="https://www.google.co.in/search?q=site:developer.cisco.com/web/%20inurl:admin%20|%20inurl:administration" target="_blank">https://www.google.co.in/search?q=si...administration</a></li></ul><br/>
 <br/>
 More details, on my blog: <a href="http://www.riyazwalikar.com/2012/06/multiple-vulnerabilities-with-cisco.html" target="_blank">http://www.riyazwalikar.com/2012/06/...ith-cisco.html</a>
 						</blockquote>

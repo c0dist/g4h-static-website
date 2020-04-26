@@ -39,8 +39,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -721,7 +721,7 @@ my query is, Whether it is completely safe or do we still have injection's in it
 MY UNDERSTANDING and background check:<br/>
 <br/>
 <a href="https://www.owasp.org/index.php/Avoiding_SQL_Injection" target="_blank">https://www.owasp.org/index.php/Avoiding_SQL_Injection</a> &lt;- per this parametrized queries are the way to go.<br/>
-<a href="../external.html?link=https://www.owasp.org/index.php/Guide_to_SQL_Injection#Parameterized_Queries_with_Bound_Parameters" target="_blank">https://www.owasp.org/index.php/Guid...und_Parameters</a> &lt;- suggest one case which is susceptible.<br/>
+<a href="https://www.owasp.org/index.php/Guide_to_SQL_Injection#Parameterized_Queries_with_Bound_Parameters" target="_blank">https://www.owasp.org/index.php/Guid...und_Parameters</a> &lt;- suggest one case which is susceptible.<br/>
 <br/>
 <br/>
 Is there any other vector which should also be considered in case when i am suggesting parametrized query or stored procedure usage.<br/>

@@ -39,8 +39,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -731,14 +731,14 @@ In some cases, the same parameter with different values, get piled up into a com
 In java based technologies the values get packed up into array. Whereas in some cases, the last parameter gets used.<br/>
 for example we can consider the following example:<br/>
 <br/>
-<a href="../external.html?link=http://search.excite.it/image/?q=esculenta&amp;page=2%26%71%3d%77%69%66%65%20%66%75%63%6b%65%64" target="_blank">http://search.excite.it/image/?q=esc...75%63%6b%65%64</a><br/>
+<a href="http://search.excite.it/image/?q=esculenta&amp;page=2%26%71%3d%77%69%66%65%20%66%75%63%6b%65%64" target="_blank">http://search.excite.it/image/?q=esc...75%63%6b%65%64</a><br/>
 <br/>
 And click on any image returned as a result of search.<br/>
 <br/>
 The above URL is has a hexadecimal string appended to it. I have just packed<br/>
 "&amp;q=somevalue" into hex string and appended it to the URL <br/>
 <br/>
-<a href="../external.html?link=http://search.excite.it/image/?q=esculenta&amp;page=2" target="_blank">http://search.excite.it/image/?q=esculenta&amp;page=2</a><br/>
+<a href="http://search.excite.it/image/?q=esculenta&amp;page=2" target="_blank">http://search.excite.it/image/?q=esculenta&amp;page=2</a><br/>
 <br/>
 U can use following script to pack string into hexadecimal:<br/>
 <br/>

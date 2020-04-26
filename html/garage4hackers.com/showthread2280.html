@@ -39,8 +39,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -650,7 +650,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 						<blockquote class="postcontent restore">
 							I have seen developers relying on using HTTP referer header as a method of mitigating CSRF. One of the reason is that it is proposed in the OWASP <br/>
 CSRF mitigation techniques. Even though the article clearly says that trusting reffer is not the right idea to mitigate this issue. <br/>
-<a href="../external.html?link=https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet#Checking_The_Referer_Header" target="_blank">https://www.owasp.org/index.php/Cros...Referer_Header</a>. Also I have seen using orgin header to detect CSRF . <br/>
+<a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet#Checking_The_Referer_Header" target="_blank">https://www.owasp.org/index.php/Cros...Referer_Header</a>. Also I have seen using orgin header to detect CSRF . <br/>
 <br/>
 Note: Http referer header would be removed when request is made from https site to http and vise verse. <br/>
 <br/>

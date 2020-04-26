@@ -40,8 +40,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -563,7 +563,7 @@ Current bug is discovered and reported to Oracle by Vulnerability Research Team 
 The vulnerability was similar to  Tavis Ormandy and Ruben Santamarta's disclosures CVE: 2010-0886.<br/>
 <br/>
 <a href="http://seclists.org/fulldisclosure/2010/Apr/119" target="_blank">Full Disclosure: Java Deployment Toolkit Performs Insufficient Validation of Parameters</a><br/>
-<a href="../external.html?link=http://www.reversemode.com/index.php?option=com_content&amp;task=view&amp;id=67&amp;Itemid=1" target="_blank">Reverse Mode - [0DAY] JAVA Web Start Arbitrary command-line injection - "-XXaltjvm" arbitrary dll loading</a> research which they both discovered independently.  <br/>
+<a href="http://www.reversemode.com/index.php?option=com_content&amp;task=view&amp;id=67&amp;Itemid=1" target="_blank">Reverse Mode - [0DAY] JAVA Web Start Arbitrary command-line injection - "-XXaltjvm" arbitrary dll loading</a> research which they both discovered independently.  <br/>
 <br/>
  The exploit is a simple argument injection via Java <a href="http://java.sun.com/javase/6/docs/technotes/guides/jweb/deployment_advice.html" target="_blank">JNPL protocol</a>, and Ruben and Tavis, both demonstrated independent ways to achieve reliable code execution on Windows [IE and Firefox]. <br/>
 <br/>
@@ -583,7 +583,7 @@ Even though linux version of java were vulnerable as mentioned by ruben on his b
 	</div>
 </div>I will document another reliable way to execute code on Linux and windows as well.<br/>
 <br/>
-I will explain whats new and later continue with the rest of the binary analysis and exploit code. <a href="../external.html?link=http://java.sun.com/javase/technologies/desktop/javawebstart/download.jsp?os_select=Linux&amp;platform_select=unix" target="_blank">Java Web Start Download</a><br/>
+I will explain whats new and later continue with the rest of the binary analysis and exploit code. <a href="http://java.sun.com/javase/technologies/desktop/javawebstart/download.jsp?os_select=Linux&amp;platform_select=unix" target="_blank">Java Web Start Download</a><br/>
 <br/>
 Both Ruben and Taviso used the  -J option that is used to pass extra argument to JVM, so that way  <br/>
 <br/>

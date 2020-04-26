@@ -40,8 +40,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -609,9 +609,9 @@ Attack<br/>
 Step 1<br/>
 Verify the site is vulnerable<br/>
 .find something +something <br/>
-Ex: <a href="../external.html?link=http://www.xxxx.com/id=1,page=3,catid=5" target="_blank">www.XXXX.com/../../id=1,page=3,catid=5</a><br/>
+Ex: <a href="http://www.xxxx.com/id=1,page=3,catid=5" target="_blank">www.XXXX.com/../../id=1,page=3,catid=5</a><br/>
 Apply a sn on the end of the line, this is to generate error as shown below <br/>
-<a href="../external.html?link=http://www.xxxx.com/id=1,page=3,catid=5Â’" target="_blank">www.XXXX.com/../../id=1,page=3,catid=5’</a><br/>
+<a href="http://www.xxxx.com/id=1,page=3,catid=5Â’" target="_blank">www.XXXX.com/../../id=1,page=3,catid=5’</a><br/>
 If u see a missing page, an error, blank page anything irregular after applying Sn <br/>
 wola its vulnerable .<br/>
 y the error generated bcoz for the value part we passed an sn with it  so it generated error <br/>

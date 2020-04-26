@@ -40,8 +40,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -662,7 +662,7 @@ Now one fine day while browsing the Facebook mobile website I noticed someone ha
 <br/>
 So I manipulated the 'src' parameter to something like<a href="http://www.google.com/" target="_blank"> http://www.google.com</a>, so the link became:<br/>
 <br/>
-<a href="../external.html?link=http://m.facebook.com/video_redirect/?src=http://www.google.com" target="_blank">m.facebook.com/video_redirect/?src=http://www.google.com</a><br/>
+<a href="http://m.facebook.com/video_redirect/?src=http://www.google.com" target="_blank">m.facebook.com/video_redirect/?src=http://www.google.com</a><br/>
 <br/>
 Whoa! It successfully redirected to <a href="http://www.google.com/" target="_blank">http://www.google.com</a>, so this was the issue.<br/>
 <br/>

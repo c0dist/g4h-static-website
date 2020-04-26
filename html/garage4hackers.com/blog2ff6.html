@@ -40,8 +40,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -648,7 +648,7 @@ Size:  12.3 KB" border="0" src="attachment75da.jpg?attachmentid=547&amp;d=135254
 <br/>
 • All shared libraries and dynamically loaded modules in a process could access the heap. This same reason why you can do heap spraying on a browser using any loaded modules example: flash,java script ,vbs etc. <br/>
 <br/>
-<a href="../external.html?link=http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap/1213360#1213360" target="_blank">memory management - What and where are the stack and heap? - Stack Overflow</a><br/>
+<a href="http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap/1213360#1213360" target="_blank">memory management - What and where are the stack and heap? - Stack Overflow</a><br/>
 <br/>
 <b><u>Example Program Demonstrating memory allocations. <br/>
 </u></b><div class="bbcode_container">
@@ -733,7 +733,7 @@ For demonstration a good and easy to understand bug would be the CVE-2009-1379 O
 <img alt="Name:  opuaf-tiff (2).jpg
 Views: 6601
 Size:  91.2 KB" border="0" src="attachment5cde.jpg?attachmentid=552&amp;d=1352655045" style="float: CONFIG"/><br/>
-</u><a href="../external.html?link=https://bugzilla.redhat.com/attachment.cgi?id=344671&amp;action=diff" target="_blank">https://bugzilla.redhat.com/attachme...71&amp;action=diff</a><br/>
+</u><a href="https://bugzilla.redhat.com/attachment.cgi?id=344671&amp;action=diff" target="_blank">https://bugzilla.redhat.com/attachme...71&amp;action=diff</a><br/>
 <u><font color="#0000ff">The Bug:<br/>
 </font></u><br/>
 al is initilized at line 424 to &amp;frag-&gt;msg_header and at line 533 it's freed using dtls1_hm_fragment_free(frag); and at line 536  if the following condition satisfies "(if al=0)" then program will try to access "frag" line 539 which was freed at line 533. So this will cause an invalid read operation , possibly crashing the app, and if we are some how able to control the adress that its reading form [heap spray!! or what ever], then we would be able to achieve code execution. <br/>
@@ -812,7 +812,7 @@ Example Program:<br/>
 </span>
 </code></code></div>
 </div><a href="http://www.go4expert.com/forums/showthread.php?t=5495" target="_blank">Virtual Functions in C++</a><br/>
-<a href="../external.html?link=http://publib.boulder.ibm.com/infocenter/lnxpcomp/v8v101/index.jsp?topic=%2Fcom.ibm.xlcpp8l.doc%2Flanguage%2Fref%2Fcplr139.htm" target="_blank">IBM Linux Compilers</a><br/>
+<a href="http://publib.boulder.ibm.com/infocenter/lnxpcomp/v8v101/index.jsp?topic=%2Fcom.ibm.xlcpp8l.doc%2Flanguage%2Fref%2Fcplr139.htm" target="_blank">IBM Linux Compilers</a><br/>
 <br/>
 The above program will have the following vftable structure. <br/>
 <div class="bbcode_container">
@@ -1318,7 +1318,7 @@ Cheers. <br/>
 <a href="http://code.google.com/p/gperftools/?redir=1" target="_blank">gperftools - Fast, multi-threaded malloc() and nifty performance analysis tools - Google Project Hosting</a><br/>
 <a href="http://www.h-online.com/security/features/A-Heap-of-Risk-747220.html" target="_blank">A Heap of Risk - The H Security: News and Features</a><br/>
 <a href="http://x9090.blogspot.in/2010/03/tutorial-exploit-writting-tutorial-from.html" target="_blank">http://x9090.blogspot.in/2010/03/tut...rial-from.html</a><br/>
-<a href="../external.html?link=http://en.wikibooks.org/wiki/C_Programming/C_Reference/stdlib.h/malloc#Use_after_free" target="_blank">http://en.wikibooks.org/wiki/C_Progr...Use_after_free</a><br/>
+<a href="http://en.wikibooks.org/wiki/C_Programming/C_Reference/stdlib.h/malloc#Use_after_free" target="_blank">http://en.wikibooks.org/wiki/C_Progr...Use_after_free</a><br/>
 <a href="http://www.quora.com/Why-is-dynamic-memory-allocation-called-heap-memory-allocation" target="_blank">http://www.quora.com/Why-is-dynamic-...ory-allocation</a><br/>
 <a href="http://eli.thegreenplace.net/2011/09/06/stack-frame-layout-on-x86-64/" target="_blank">http://eli.thegreenplace.net/2011/09...out-on-x86-64/</a><br/>
 <br/>
@@ -1331,7 +1331,7 @@ Exploitation References :<br/>
 <a href="http://www.phreedom.org/research/heap-feng-shui/heap-feng-shui.html" target="_blank">http://www.phreedom.org/research/hea...feng-shui.html</a><br/>
 <a href="http://www.thegreycorner.com/2010/01/heap-spray-exploit-tutorial-internet.html" target="_blank">http://www.thegreycorner.com/2010/01...-internet.html</a><br/>
 <a href="../www.owasp.org/images/0/01/OWASL_IL_2010_Jan_-_Moshe_Ben_Abu_-_Advanced_Heapspray.pdf" target="_blank">https://www.owasp.org/images/0/01/OW..._Heapspray.pdf</a><br/>
-<a href="../external.html?link=https://www.corelan.be/index.php/2011/12/31/exploit-writing-tutorial-part-11-heap-spraying-demystified/#Visualizing_the_heap_spray_8211_IE6" target="_blank">https://www.corelan.be/index.php/201...spray_8211_IE6</a><br/>
+<a href="https://www.corelan.be/index.php/2011/12/31/exploit-writing-tutorial-part-11-heap-spraying-demystified/#Visualizing_the_heap_spray_8211_IE6" target="_blank">https://www.corelan.be/index.php/201...spray_8211_IE6</a><br/>
 <a href="../www.blackhat.com/presentations/bh-usa-07/Afek/Whitepaper/bh-usa-07-afek-WP.pdf" target="_blank">http://www.blackhat.com/presentation...07-afek-WP.pdf</a><br/>
 <a href="../www.blackhat.com/presentations/bh-europe-07/Sotirov/Presentation/bh-eu-07-sotirov-apr19.pdf" target="_blank">http://www.blackhat.com/presentation...irov-apr19.pdf</a><br/>
 <a href="http://www.exploit-monday.com/2011/07/post-mortem-analysis-of-use-after-free_07.html" target="_blank">http://www.exploit-monday.com/2011/0...r-free_07.html</a><br/>

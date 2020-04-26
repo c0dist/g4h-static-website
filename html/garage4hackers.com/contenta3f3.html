@@ -40,8 +40,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -645,7 +645,7 @@ Data Base security has become more critical as Databases have become more open. 
  It’s an insecure practice to keep your sensitive data like Password, Credit Card no etc unencrypted in you database.  And this paper will cover the various Cryptography options available and do and don’ts of them.  <br/>
 Even if you have encrypted your data that doesn’t mean that your data’s are fully secured, and this paper will be covered in an Attacker perspective. <br/>
 Slat Cryptography.<br/>
-<a href="../external.html?link=http://en.wikipedia.org/wiki/Salt_(cryptography" target="_blank">http://en.wikipedia.org/wiki/Salt_(cryptography</a>)<br/>
+<a href="http://en.wikipedia.org/wiki/Salt_(cryptography" target="_blank">http://en.wikipedia.org/wiki/Salt_(cryptography</a>)<br/>
 Assume a user’s hashed password is stolen and he is known to use one of 200,000 English words as his password. The system uses a 32-bit salt. The salted key is now the original password appended to this random 32-bit salt. Because of this salt, the attacker’s pre-calculated hashes are of no value (Rainbow table fails). He must calculate the hash of each word with each of 232  (4,294,967,296) possible salts appended until a match is found. The total number of possible inputs can be obtained by multiplying the number of words in the dictionary with the number of possible salts:<br/>
 2^{32} \times 200 000 = 8.58993459 \times 10^{14}<br/>
 To complete a brute-force attack, the attacker must now compute almost 900 trillion hashes, instead of only 200,000. Even though the password itself is known to be simple, the secret salt makes breaking the password increasingly difficult. <br/>

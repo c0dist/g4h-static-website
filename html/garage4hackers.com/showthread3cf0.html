@@ -39,8 +39,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -706,7 +706,7 @@ The next stage is a little more complex, you take a list of open DNS servers and
 From that point, you take a real botnet, or at least a few machines, and spoof a few packets. Those spoofs are a simple DNS query for the record that you cached earlier, and the spoofed return address is the victim. Repeat on a massive scale, and the victim is flooded with huge DNS traffic.<br/>
 <br/>
 With the overhead of TCP sucking up CPU time, and an amplification factor of tens to hundreds, you can take a few meg of traffic and turn it into gigs. The victim is flooded into the ground, and there is squat all they can do other than sit it out and wait. DNS amplification attacks are quite effective and fairly easy to pull off, just what we all need for a safe and happy internet.<br/>
-<a href="../external.html?link=http://news.com.com/DNS+servers+do+hackers+dirty+work/2100-7349_3-6053468.html?tag=cd.top" target="_blank">http://news.com.com/DNS+servers+do+h...tml?tag=cd.top</a><br/>
+<a href="http://news.com.com/DNS+servers+do+hackers+dirty+work/2100-7349_3-6053468.html?tag=cd.top" target="_blank">http://news.com.com/DNS+servers+do+h...tml?tag=cd.top</a><br/>
 <br/>
 <a href="../www.isotf.org/news/DNS-Amplification-Attacks.html" target="_blank">http://www.isotf.org/news/DNS-Amplification-Attacks.pdf</a><br/>
 <br/>

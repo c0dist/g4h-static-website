@@ -39,8 +39,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -682,7 +682,7 @@ pu[238] = "[s]";
 				<div class="content">
 					<div id="post_message_7760">
 						<blockquote class="postcontent restore">
-							I disclosed a <a href="../external.html?link=https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)" target="_blank">CSRF vulnerability</a> with Twitter, that could allow a malicious attacker to wipe the address book of an unsuspecting user. I reported the vulnerability in the beginning of March and they fixed it on the 22nd! I wouldn't want to comment on the process and internal business logic that they follow, but honestly that was a a pretty long period for them to come up with a fix.<br/>
+							I disclosed a <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)" target="_blank">CSRF vulnerability</a> with Twitter, that could allow a malicious attacker to wipe the address book of an unsuspecting user. I reported the vulnerability in the beginning of March and they fixed it on the 22nd! I wouldn't want to comment on the process and internal business logic that they follow, but honestly that was a a pretty long period for them to come up with a fix.<br/>
 <br/>
 Anyways, getting to the vulnerability, the issue was that a user could delete his own address book with a single click URL, which is alright as long as the user wishes to do so himself. However, with the server not verifying whether the request was sent by the user himself or was the user was tricked into sending the request, the application allowed an attacker to generate a request on behalf of a logged in user from the user's browser and perform the action (deletion of the address book).<br/>
 <br/>

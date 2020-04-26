@@ -83,7 +83,7 @@ Adb logcat | grep &amp;lt; app specific keyword&amp;gt; in linux<br/>
 App specific keyword can be its name or uniquely identified in logs<br/>
 ·         Run the application and verify the logs and its behaviour<br/>
 ·         Now we have to set the proxy for the emulator use following command<br/>
-Emulator –avd “name of virtual device” –http-proxy <a href="../external.html?link=http://127.0.0.1:8080/" target="_blank">SiteGround Web Hosting Server Default Page</a><br/>
+Emulator –avd “name of virtual device” –http-proxy <a href="http://127.0.0.1:8080/" target="_blank">SiteGround Web Hosting Server Default Page</a><br/>
                 Run burpsuite on port 8080.<br/>
 ·         Check the proxy by launching the android browser. It should be intercepted.<br/>
 ·         Again run logcat to view the behaviour of the application when it is proxied. If you encounter https connection then the application may not send request to server and it will throw error in the logs that can be verified<br/>
@@ -134,7 +134,7 @@ We have to build the application using apktool. Use following command<br/>
 Apktool b “application directory”<br/>
 Install the application on emulator using following command<br/>
 “Adb install ”<br/>
-Again restart the emulator by setting the proxy ( emulator –avd “virtual device name” –http-proxy <a href="../external.html?link=http://127.0.0.1:8080/" target="_blank">SiteGround Web Hosting Server Default Page</a> )<br/>
+Again restart the emulator by setting the proxy ( emulator –avd “virtual device name” –http-proxy <a href="http://127.0.0.1:8080/" target="_blank">SiteGround Web Hosting Server Default Page</a> )<br/>
 Now start the application. BURP suite will definitely intercept the connection .......   J<br/>
 <br/>
 ...HAPKING...</blockquote>

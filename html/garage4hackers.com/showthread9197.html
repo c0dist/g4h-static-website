@@ -39,8 +39,8 @@
 	}
 	else	// Load Rest of YUI remotely (where possible)
 	{
-		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
-		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var yuipath = 'http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = 'http://yui.yahooapis.com/combo';
 		var remoteyui = true;
 		if (!yuicombopath)
 		{
@@ -706,9 +706,9 @@ Alias /var/www/scripts/ /var/code/scripts
 </div>What sethandler does when placed into an .htaccess file or a &lt;Directory&gt; or &lt;Location&gt; section is, this directive forces all matching files to be parsed through the handler given by handler-name. So in our case the handler will make any files kept in the script directory to be parsed as perl. In that case rahul.jpeg, sasi.txt or sasi.pl.tx will all be treated as a perl script.  This bug could be combined with any file write vulnerability to have a code execution.<br/>
 <br/>
 <br/>
-<a href="../external.html?link=http://httpd.apache.org/docs/2.2/mod/core.html#sethandler" target="_blank">http://httpd.apache.org/docs/2.2/mod...tml#sethandler</a><br/>
+<a href="http://httpd.apache.org/docs/2.2/mod/core.html#sethandler" target="_blank">http://httpd.apache.org/docs/2.2/mod...tml#sethandler</a><br/>
 <br/>
-The right configuration should be Addhandler, and explicitly specifying what file extension should be treated as perl code. <a href="../external.html?link=http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addhandler" target="_blank">http://httpd.apache.org/docs/2.2/mod...tml#addhandler</a><br/>
+The right configuration should be Addhandler, and explicitly specifying what file extension should be treated as perl code. <a href="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addhandler" target="_blank">http://httpd.apache.org/docs/2.2/mod...tml#addhandler</a><br/>
 <br/>
 AddHandler  perl-script .pl<br/>
 <br/>
