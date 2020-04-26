@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6121&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:02:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Just Some Python Things</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread60f8.html?t=6121">Just Some Python Things</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">11-06-2014, 04:47 PM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+		<div class="title">Just Some Python Things</div>
+	
+	<div class="content">
+		<blockquote class="restore">Hello,<br />
+<br />
+This post is here so people can share their Python tips, tricks, hacks and best practices. This post follows the footsteps of bash cheat sheet here - <a href="showthread1ca9.html?t=3100" target="_blank">http://garage4hackers.com/showthread.php?t=3100</a><br />
+So, all the Pythonistas, share your tips, tricks and whatever you think is awesome about python. :D<br />
+<br />
+Regards, <br />
+c0dist</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">11-06-2014, 04:53 PM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+		<div class="title">Quick Web Server</div>
+	
+	<div class="content">
+		<blockquote class="restore">Hi, <br />
+<br />
+Want to share files between PCs? Want to test your html page? Need a quick simple http server? Call python. :D<br />
+<br />
+Here's the one liner that will start serving a web server on port 8000<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">batman@gothamcity ~ $ python -m SimpleHTTPServer</code><hr />
+</div>Want to serve on a different port? Here's how<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">batman@gothamcity ~ $ python -m SimpleHTTPServer &lt;port_number&gt;</code><hr />
+</div>Yup, that's all you need to do. Just open your browser and use it. ;)<br />
+Hope this will help you.<br />
+Note: Tested on a Linux machine. Should work on Windows too.<br />
+<br />
+Regards,<br />
+c0dist</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">11-06-2014, 05:35 PM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+		<div class="title">Reversing a String</div>
+	
+	<div class="content">
+		<blockquote class="restore">In Python, you can reverse a string simply by using this syntax,<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">&gt;&gt;&gt; string = &quot;Garage4Hackers&quot;<br />
+&gt;&gt;&gt; print string[::-1]<br />
+srekcaH4egaraG</code><hr />
+</div>The way this works is by using something known as &quot;slicing&quot;. In above example above, we ask Python to print the string, using the negative step. This is explained in a better way here - <a href="../external.html?link=http://stackoverflow.com/a/509295" target="_blank">http://stackoverflow.com/a/509295</a><br />
+<br />
+Fun Thing:<br />
+<br />
+Remember writing code to check if a string is a palindrome or not? Here's how to do, Python's way. ;)<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">&gt;&gt;&gt; string = &quot;radar&quot;<br />
+&gt;&gt;&gt; string == string[::-1]<br />
+True</code><hr />
+</div>Simple, right? ;)<br />
+<br />
+Regards,<br />
+c0dist</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">01-30-2015, 07:00 PM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+		<div class="title">Handy Python Cheat Sheet</div>
+	
+	<div class="content">
+		<blockquote class="restore">Just came across a handy Python cheat sheet via @Punter. Posting this here so others could benefit from it and also so that I don't forget. :D<br />
+<br />
+Here it is - <a href="../external.html?link=http://overapi.com/python/" target="_blank">http://overapi.com/python/</a><br />
+Enjoy. :)<br />
+<br />
+Regards,<br />
+c0dist</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">09-05-2015, 09:01 PM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+		<div class="title">File Handling Using &quot;with&quot; Statement</div>
+	
+	<div class="content">
+		<blockquote class="restore">In Python, if you want to read/write from a file, you might call &quot;open()&quot; first, and then read() or write() accordingly and then finally a close() to close that file handle.<br />
+<br />
+For example, one way to read from a local file is,<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">#!/usr/bin/env python<br />
+<br />
+f = open(&quot;/etc/passwd&quot;)<br />
+print f.read()<br />
+f.close()</code><hr />
+</div>This code will simply output the content of file. However, downside with this code is if some error occurs between open and close call, the file handle might stay open and in some cases, the file might get corrupted too. A better way to handle files is using the &quot;with&quot; statement in Python. According to the official page <a href="../external.html?link=https://www.python.org/dev/peps/pep-0343/" target="_blank">https://www.python.org/dev/peps/pep-0343/</a>, we see that<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			This PEP adds a new statement &quot;with&quot; to the Python language to make<br />
+    it possible to factor out standard uses of try/finally statements.<br />
+<br />
+    In this PEP, context managers provide __enter__() and __exit__()<br />
+    methods that are invoked on entry to and exit from the body of the<br />
+    with statement.
+			
+		<hr />
+	</div>
+</div>What this means in simple words is, if you open a file using &quot;with&quot; and some error occurs, the __exit__() i.e. close() in this case will be called before the program goes out of this block.<br />
+Another good definition/advantage is defined here <a href="../external.html?link=http://preshing.com/20110920/the-python-with-statement-by-example/" target="_blank">http://preshing.com/20110920/the-pyt...nt-by-example/</a> - <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			The advantage of using a with statement is that it is guaranteed to close the file no matter how the nested block exits. If an exception occurs before the end of the block, it will close the file before the exception is caught by an outer exception handler. If the nested block were to contain a return statement, or a continue or break statement, the with statement would automatically close the file in those cases, too.
+			
+		<hr />
+	</div>
+</div>The syntax for using &quot;with&quot; statement from official standard is,<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			with EXPR as VAR:<br />
+    BLOCK<br />
+<br />
+    Here, 'with' and 'as' are new keywords; EXPR is an arbitrary<br />
+    expression (but not an expression-list) and VAR is a single<br />
+    assignment target.  It can *not* be a comma-separated sequence of<br />
+    variables, but it *can* be a *parenthesized* comma-separated<br />
+    sequence of variables.
+			
+		<hr />
+	</div>
+</div><br />
+An example of reading and writing a file using &quot;with&quot; statement,<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">#!/usr/bin/env python<br />
+<br />
+with open(&quot;/etc/passwd&quot;, &quot;r&quot;) as fin:<br />
+&nbsp; &nbsp; content = fin.read()<br />
+&nbsp; &nbsp; if &quot;root&quot; in content:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; print &quot;root word found inside file&quot;<br />
+<br />
+with open(&quot;/tmp/test.txt&quot;, &quot;w&quot;) as fout:<br />
+&nbsp; &nbsp; fout.write(&quot;I wrote this using 'with' in Python&quot;)</code><hr />
+</div>I hope this helps.<br />
+<br />
+Cheers,<br />
+c0dist</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">09-05-2015, 10:27 PM</div>
+		<span class="username">Anant Shrivastava</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Couple of entries from my side<br />
+<br />
+Python simple server in version 3<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			python -m http.server 8000
+			
+		<hr />
+	</div>
+</div>Make python os independent.<br />
+1. Avoid using os specific modules.<br />
+1. use os.pathsep to seperate path's in path's<br />
+<br />
+<br />
+Some helpful python modules that are life savers<br />
+<br />
+1. argparse : useful for taking commandline arguments from commandline.<br />
+1. beautifulsoup : html parsing and processing module.<br />
+<br />
+<br />
+<br />
+Note: I will keep editing this same post to add more details in it.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_7">
+	<div class="header">
+		<div class="datetime">09-06-2015, 08:54 PM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+		<div class="title">Parsing configuration files in Python</div>
+	
+	<div class="content">
+		<blockquote class="restore">There are various situations where instead of keeping configurations in the python script, we might need to keep an external config file. The advantage of keeping a config file is that then multiple scripts can access and use that conf file. The way Python provides this facility is via a library &quot;<a href="../external.html?link=https://docs.python.org/2/library/configparser.html" target="_blank">ConfigParser</a>&quot;. This library provides all the methods necessary to parse your config file.A great tutorial for the library can be found here - <a href="../external.html?link=https://docs.python.org/2/library/configparser.html" target="_blank">https://docs.python.org/2/library/configparser.html</a> and here - <a href="../external.html?link=https://pymotw.com/2/ConfigParser/" target="_blank">https://pymotw.com/2/ConfigParser/</a>. In this post, I'll show a basic usage case of ConfigParser.<br />
+<br />
+Example of config file (example.conf):<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">[global]<br />
+path = /tmp/files/<br />
+time = 90<br />
+<br />
+[app]<br />
+restart = True</code><hr />
+</div>The above config file contains two sections, global and app. We'll see how to parse this in following py scripts.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">#!/usr/bin/env python<br />
+<br />
+import ConfigParser<br />
+<br />
+conf_parser = ConfigParser.ConfigParser() # Making a ConfigParser object<br />
+conf_parser.read(&quot;example.conf&quot;) # The config file to parse<br />
+<br />
+path = conf_parser.get(&quot;global&quot;, &quot;path&quot;) # Getting `path` setting from `global` section<br />
+app_time = conf_parser.getint(&quot;global&quot;, &quot;time&quot;) # Getting integer value<br />
+restart = conf_parser.getboolean(&quot;app&quot;, &quot;restart&quot;) # Getting boolean value<br />
+<br />
+print path, app_time, restart # Prints the config values</code><hr />
+</div>That's it, pretty simple. For more detailed explanations and examples, please check out the mentioned resources. Hope this helps.<br />
+<br />
+Cheers,<br />
+c0dist</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_8">
+	<div class="header">
+		<div class="datetime">01-20-2017, 07:53 PM</div>
+		<span class="username">&quot;vinnu&quot;</span>
+	</div>
+	
+	
+		<div class="title">convert string to integer without using struct module</div>
+	
+	<div class="content">
+		<blockquote class="restore">A simple trick to save the script form loading &quot;struct&quot; module and converting string or binary data to number is as :<br />
+<br />
+num = int(data[:4][::-1].encode(&quot;hex&quot;),16)<br />
+<br />
+and vice-versa would be :<br />
+<br />
+data = str(('%08X' % num).decode(&quot;hex&quot;)[::-1])<br />
+<br />
+...&quot;vinnu&quot;</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">04:04 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6121&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:02:37 GMT -->
+</html>

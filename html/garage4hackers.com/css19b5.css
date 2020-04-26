@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+#forumrules {
+	background-color:rgb(255, 255, 255);
+	height:75px;
+	overflow:auto;
+	padding:10px;
+	border:solid 1px #6b91ab;
+}
+
+#dst_label {
+	padding-top:4em;
+}
+
+/* ***** red and green boxes for username verification used during registration ***** */
+div.greenbox {
+	border: 1px solid #337733;
+	background: #bbffbb;
+	color: #337733;
+	padding: 3px;
+}
+
+div.redbox {
+	border:1px solid #773333;
+	background: #ffbbbb;
+	color: #773333;
+	padding: 3px;
+}
+
+input.greenbox {
+	background:url(images/misc/tick.html) right center no-repeat;
+}
+
+input.redbox {
+	background:url(images/misc/cross.html) right center no-repeat;
+}
+.blockbody.formcontrols .blockrow .rightcol .description { margin-left: 0; }

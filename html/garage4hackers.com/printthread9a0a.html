@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=5186&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:23:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Oracle user in passwd with JTR</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread3b57.html?t=5186">Oracle user in passwd with JTR</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">07-05-2013, 08:59 PM</div>
+		<span class="username">patate49</span>
+	</div>
+	
+	
+		<div class="title">Oracle user in passwd with JTR</div>
+	
+	<div class="content">
+		<blockquote class="restore">Hi!<br />
+<br />
+I have a concern about recovering the password of a certain user in the passwd file on a redhat server. The concern user is 'oracle' and he is the owner of the database hosted on the machine. I was able to collect both the passwd and shadow file. After an execution of 'unshadow', I get this line in the produced file:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">oracle:$1$Ab1dEfG2$0A1b2C3d4E5f6G7h8I9j0K:12345:0:99999:7:::<br />
+// These are not the exact characters but the format hasn't changed</code><hr />
+</div>Unfortunatly, John the Ripper has been working for about 2 days with the trivial call &quot;./john unshadowFile&quot;. I suspect that is it not the standard format so I tried executing it again with the flag format &quot;--format=DES&quot; (which should be the hashing algorithm for oracle 10) and it did not give me better results. I also tried with &quot;--format=oracle&quot; but JTR outputs &quot;No password hashes loaded (see FAQ)&quot;.<br />
+<br />
+Is there something wrong with these calls? Shouldn't JTR find the password faster than 2 days of brute forcing?<br />
+<br />
+Thank you!</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">07-07-2013, 08:51 PM</div>
+		<span class="username">41.w4r10r</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">i have seen JTR taking more that 1week for cracking hashes it is not only about JTR but also capability of your hardware. here you already mentioned you got that username and hash from shadow and passwd then no need of using &quot;--format=oracle&quot; as it is used to cracked users which are created by oracle for oracle DB not for OS users.<br />
+<br />
+rest give some more time to your JTR ;)</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:05 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=5186&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:23:05 GMT -->
+</html>

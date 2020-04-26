@@ -1,0 +1,1036 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en">
+
+<!-- Mirrored from garage4hackers.com/content.php?r=175-Low-hanging-Web-Application-bugs-in-Digital-Cable-Hacking-Cable-TV-Networks-Part-1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 10:24:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+		<meta name="keywords" content="cable,operator,application,security,operators" />
+		<meta name="description" content="Hacking your cable TV Networks: Low Hanging Web Application bugs in Digital Cable TV.
+
+
+Check out previous blog :http://www.garage4hackers.com/entry.php?b=2830
+Hacking Your Cable TV Networks : HITB Security Conference Part 0. 
+
+
+We did two presentations on the security issues in Digital Cable TV network back in February at Nullcon[Goa] and another at HITB [Amsterdam ] . We disclosed few of the many security issues we reported to a large cable network operator in India. The main highlight of the talk was that we [Me (https://twitter.com/fb1h2s) &amp; Ahamed Nafeez (https://twitter.com/skeptic_fx) ] did the presentations wearing a traditional dress[lungi,mundu] used by the locals in Kerala (http://www.youtube.com/watch?v=SLQmQwvJU78) . This was to appreciate all the help the natives did while conducting the research. 
+
+759
+
+Presentation material:
+
+The slides are available here: http://haxpo.nl/wp-content/uploads/2014/02/D1T1-Hacking-Your-Cable-TV-Network-Die-Hard-Style.pptx.
+But I would be writing a series of blogs and would explain the bugs in detail here. 
+
+Instead of following the same pattern I used for my talk" />
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="Hacking your cable TV Networks: Low Hanging Web Application bugs in Digital Cable TV.
+
+
+Check out previous blog :http://www.garage4hackers.com/entry.php?b=2830
+Hacking Your Cable TV Networks : HITB Security Conference Part 0. 
+
+
+We did two presentations on the security issues in Digital Cable TV network back in February at Nullcon[Goa] and another at HITB [Amsterdam ] . We disclosed few of the many security issues we reported to a large cable network operator in India. The main highlight of the talk was that we [Me (https://twitter.com/fb1h2s) &amp; Ahamed Nafeez (https://twitter.com/skeptic_fx) ] did the presentations wearing a traditional dress[lungi,mundu] used by the locals in Kerala (http://www.youtube.com/watch?v=SLQmQwvJU78) . This was to appreciate all the help the natives did while conducting the research. 
+
+759
+
+Presentation material:
+
+The slides are available here: http://haxpo.nl/wp-content/uploads/2014/02/D1T1-Hacking-Your-Cable-TV-Network-Die-Hard-Style.pptx.
+But I would be writing a series of blogs and would explain the bugs in detail here. 
+
+Instead of following the same pattern I used for my talk" />
+<meta property="og:url" content="content1716.html?r=175-Low-hanging-Web-Application-bugs-in-Digital-Cable-Hacking-Cable-TV-Networks-Part-1" />
+<meta property="og:type" content="article" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "vbcms";
+	var RELPATH = "content1716.html?r=175-Low-hanging-Web-Application-bugs-in-Digital-Cable-Hacking-Cable-TV-Networks-Part-1";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+    
+        <link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - CMS RSS Feed" href="externalbc09.php?do=rss&amp;type=newcontent&amp;sectionid=1&amp;days=120&amp;count=10" />
+    
+    <title>Garage4hackers Forum - Low hanging Web Application bugs in Digital Cable :Hacking Cable TV Networks Part 1</title>
+	
+		<link rel="stylesheet" type="text/css" href="css6862.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=widgets.css,vbcms.css,postbit-lite.css,postlist.css,lightbox.css,overlay.css,tagcloud.css," />
+	
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=vbcms-ie.css,postbit-lite-ie.css,postlist-ie.css" />
+    <![endif]-->
+    <!--[if lt IE 7]>
+	<script type="text/javascript">
+		window.LESS_THAN_IE7 = true;
+	</script>
+    <![endif]-->
+	<script type="text/javascript" src="clientscript/vbulletin_overlay6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_cms6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_ajax_htmlloader6719.js?v=421">
+    </script>
+    <link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body style="text-align:left">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id=""><a href="content5ee7.html?r=1-home">Home</a></li>
+						
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="content.html">Home</a></li>
+
+		
+	<li class="navbit lastnavbit"><span>Low hanging Web Application bugs in Digital Cable :Hacking Cable TV Networks Part 1</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/content.php?r=175-Low-hanging-Web-Application-bugs-in-Digital-Cable-Hacking-Cable-TV-Networks-Part-1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 10:24:58 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+<div class="vbcms_content">
+<div id="doc3" class="yui-tvb-r3">
+	<div id="bd">
+		<div id="yui-main">
+			<div class="yui-b">
+				<div class="yui-gf">
+					<div class="yui-u first yui-panel">
+						<ul class="list_no_decoration widget_list" id="widgetlist_column1">
+<li><script type="text/javascript">
+<!--
+	var IMGDIR_MISC = "images/misc";
+	var vb_disable_ajax = parseInt("0", 10);
+
+        /* Start Sections Widget Configuration */
+        vbGlobal_SHOW_ALL_TREE_ELEMENTS_THRESHOLD = parseInt("5");
+        /* End Seections Widget Configuration */
+// -->
+</script>
+<script type="text/javascript">
+<!--
+	document.write('<script type="text/javascript" src="' + yuipath + '/treeview/treeview-min.js"></script>');
+	loadVbCss(yuipath + '/treeview/assets/skins/sam/treeview.css');
+//-->
+</script>
+<!-- end treeview css -->
+
+<!-- custom treeview styles defined at template: headinclude -->
+
+<!-- END VB Tree-Menu Implementation of YUI TreeView -->
+<div class="cms_widget">
+	<div class="block">
+		<div class="cms_widget_header">
+			<h3><img src="images/cms/sections.html" alt="" /> Menu</h3>
+		</div>
+		<div class="cms_widget_content widget_content">
+			<div class="vb-tree-menu">
+				<ul >
+<li><a href="contentfbb6.html?r=5-g4h-tutorial-and-research-papers" title="G4H Tutorial and Papers">G4H Tutorial and Papers</a>
+</li>
+<li><a href="content842d.html?r=4-g4h-tools-and-scripts" title="G4H Tools and Scripts">G4H Tools and Scripts</a>
+</li>
+<li><a href="content8f5d.html?r=2-garage4hackers-exploits" title="G4H Exploits">G4H Exploits</a>
+</li>
+<li><a href="content7820.html?r=107-ctf-amp-meet-writeups" title="CTF &amp; Meet Writeups">CTF &amp; Meet Writeups</a>
+</li>
+<li><a href="content0b4f.html?r=128-google-vulnerabilities" title="Google Hall of Fame">Google Hall of Fame</a>
+</li>
+<li><a href="contentf20a.html?r=134-teensy" title="Teensy">Teensy</a>
+</li>
+<li><a href="content93b9.html?r=136-webapp-exploits" title="Bug Bounty Listing">Bug Bounty Listing</a>
+</li>
+<li><a href="contentdb2e.html?r=151-web-application-security" title="Web Application Security">Web Application Security</a>
+</li>
+<li><a href="contentc520.html?r=163-exploitation-techniques" title="Exploitation Techniques">Exploitation Techniques</a>
+</li>
+<li><a href="content90cc.html?r=172-ranchoddas-webcast-recording" title="RWS Webcast Recording">RWS Webcast Recording</a>
+</li>
+<li><a href="contente989.html?r=179-blogs" title="Blogs">Blogs</a>
+</li></ul>
+ 
+			</div>
+				<noscript>
+					<div class="cms_widget_sectionnav">
+						<div class="cms_widget_sectionnav_page">
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="contentfbb6.html?r=5-g4h-tutorial-and-research-papers">G4H Tutorial and Papers</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content842d.html?r=4-g4h-tools-and-scripts">G4H Tools and Scripts</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content8f5d.html?r=2-garage4hackers-exploits">G4H Exploits</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content7820.html?r=107-ctf-amp-meet-writeups">CTF &amp; Meet Writeups</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content0b4f.html?r=128-google-vulnerabilities">Google Hall of Fame</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="contentf20a.html?r=134-teensy">Teensy</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content93b9.html?r=136-webapp-exploits">Bug Bounty Listing</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="contentdb2e.html?r=151-web-application-security">Web Application Security</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="contentc520.html?r=163-exploitation-techniques">Exploitation Techniques</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content90cc.html?r=172-ranchoddas-webcast-recording">RWS Webcast Recording</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="contente989.html?r=179-blogs">Blogs</a></div>
+							
+						</div>
+					</div>
+				</noscript>			
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	initVbTreeMenus(false);
+</script></li>
+</ul>
+					</div>
+					<div class="yui-u yui-panel">
+						<ul class="list_no_decoration widget_list" id="widgetlist_column2">
+<li><!-- styles defined in template: headinclude -->
+
+
+
+<div class="article_width" id="article_content">
+	<div class="title">
+                <h1 class="article_title cms_article_title"><span>Low hanging Web Application bugs in Digital Cable :Hacking Cable TV Networks Part 1</span>
+                        
+		</h1>
+	</div>
+	<div class="article_author_date_comment_container">
+                
+		<div class="fullwidth">
+			
+				<div>
+<fb:like href="content1716.html?r=175-Low-hanging-Web-Application-bugs-in-Digital-Cable-Hacking-Cable-TV-Networks-Part-1" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like></div>
+			
+			
+				<div class="article_username_container">
+					by <div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="membere81f.html?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="membere81f.html?u=8" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9898.html?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatedce0.html?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="bloge81f.html?u=8" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<a href="index.html" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="list2c25.html?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				</div>
+			
+                        
+                                <div class="article_rating_container">
+                                        <div class="popupmenu cmsratingmenu" id="cmsrating">
+                                                <h6><a class="popupctrl" href="javascript://" id="cmsrating_current">Rate this article</a></h6>
+                                                <form action="../external.html?link=http://garage4hackers.com/content.php?175/rate" method="post" id='cms_cmsrate_form'>
+                                                        <ul class="popupbody popuphover">
+                                                                
+                                                                        <li><label for="r5"><span class="rating5 cmsrating right">
+                                                                                <input type="radio" name="vote" value="5" id="r5"  tabindex="1" /> Excellent
+                                                                        </span></label></li>
+                                                                        <li><label for="r4"><span class="rating4 cmsrating right">
+                                                                                <input type="radio" name="vote" value="4" id="r4"  tabindex="1" /> Good
+                                                                        </span></label></li>
+                                                                        <li><label for="r3"><span class="rating3 cmsrating right">
+                                                                                <input type="radio" name="vote" value="3" id="r3"  tabindex="1" /> Average
+                                                                        </span></label></li>
+                                                                        <li><label for="r2"><span class="rating2 cmsrating right">
+                                                                                <input type="radio" name="vote" value="2" id="r2"  tabindex="1" /> Bad
+                                                                        </span></label></li>
+                                                                        <li><label for="r1"><span class="rating1 cmsrating right">
+                                                                                <input type="radio" name="vote" value="1" id="r1"  tabindex="1" /> Terrible
+                                                                        </span></label></li>
+                                                                        <li class="formsubmit"><input type="submit" class="button" value="Vote Now" tabindex="1" /></li>
+                                                                
+                                                        </ul>
+                                                        <input type="hidden" name="s" value="" />
+                                                        <input type="hidden" name="securitytoken" value="guest" />
+                                                </form>
+                                                <script type="text/javascript" src="clientscript/cms_ajax_rate6719.html?v=421"></script>
+                                                <script type="text/javascript">
+                                                <!--
+                                                        var nodeid = 175;
+                                                        vB_AJAX_CMSRate_Init('cms_cmsrate_form');
+                                                //-->
+                                                </script>
+                                        </div>
+                                </div>
+                        
+                        <div class="cms_clear"></div>
+                        
+				<div class=" article_username_container ">
+					
+						
+							Published on 08-26-2014  07:52 AM
+						
+					
+					
+						&nbsp;
+						&nbsp;
+					
+					
+						&nbsp;Number of Views: 11743
+						&nbsp;
+					
+				</div>
+			
+                       
+                        <div class="article_rating_container">
+                            	<a href="content1716.html?r=175-Low-hanging-Web-Application-bugs-in-Digital-Cable-Hacking-Cable-TV-Networks-Part-1#comments"  rel="nofollow"><span id="comments_top_count">0</span> <span id="comments_top_text"> Comments</span></a>
+				<img src="images/misc/comment.html" alt="Comments" border="0" />
+                        </div>
+                       
+		</div>
+	</div>
+    
+    <div class="clear"></div>
+	<div class="article cms_clear restore postcontainer"><b><u>Hacking your cable TV Networks: Low Hanging Web Application bugs in Digital Cable TV.<br />
+</u></b><br />
+<br />
+Check out previous blog :<a href="entryc64f.html?b=2830" target="_blank">http://www.garage4hackers.com/entry.php?b=2830</a><br />
+Hacking Your Cable TV Networks : HITB Security Conference Part 0. <br />
+<br />
+<br />
+We did two presentations on the security issues in Digital Cable TV network back in February at Nullcon[Goa] and another at HITB [Amsterdam ] . We disclosed few of the many security issues we reported to a large cable network operator in India. The main highlight of the talk was that we [<a href="../external.html?link=https://twitter.com/fb1h2s" target="_blank">Me</a> &amp; <a href="../external.html?link=https://twitter.com/skeptic_fx" target="_blank">Ahamed Nafeez</a> ] did the presentations wearing a traditional dress[lungi,mundu] used by the locals in <a href="../external.html?link=http://www.youtube.com/watch?v=SLQmQwvJU78" target="_blank">Kerala</a> . This was to appreciate all the help the natives did while conducting the research. <br />
+<br />
+<img src="attachment7018.jpg?attachmentid=759&amp;d=1409019738" border="0" alt=""  style="float: CONFIG" /><br />
+<b><u><br />
+Presentation material:<br />
+</u></b><br />
+The slides are available here: <a href="../external.html?link=http://haxpo.nl/wp-content/uploads/2014/02/D1T1-Hacking-Your-Cable-TV-Network-Die-Hard-Style.pptx" target="_blank">http://haxpo.nl/wp-content/uploads/2...ard-Style.pptx</a>.<br />
+But I would be writing a series of blogs and would explain the bugs in detail here. <br />
+<br />
+Instead of following the same pattern I used for my talk [Just explaining the bugs]. I think it would be fun to share with you the adventures we had while doing the research. If you are only interested in the bugs just head to bug section, else read on. <br />
+<br />
+It is hard to find any Hands on cable TV security materials on the internet. This is mainly because the infrastructure used by the cable operators are not easily available for every researcher. In our case we were lucky . From November 2013 I was working with one of the largest Cable TV networks in India who provides service to nearly 1 Million users. I agreed to a contract where we would do free security audits for the Cable operators infrastructure and in return they would allow me to publish my finds in any conference of my choice  . And that was a sweet deal for me . I come from an <a href="../external.html?link=http://in.linkedin.com/in/fb1h2s" target="_blank">application security background</a>. And I had no clue about Digital cable networks an year back. So in the first blog post I would explain how  I cracked the deal with the Cable Operators to audit their Infrastructure.<br />
+<br />
+<br />
+<u><b>Cracking the Deal:Meeting with the Chief Technical Officer of the Cable Company<br />
+</b></u><br />
+Unlike Internet where information is viewed with suspicion and misinformation can be quickly vetted through other sources, television is a one-to-many medium where there’s no quick way to identify a false broadcast. If someone hacks into a TV news stream and publishes a news stating that a riot has happened in the nearby city, then that could create a lot of panic in a country like India. <br />
+Example Source:  <a href="../external.html?link=http://www.politico.com/morningcybersecurity/0814/morningcybersecurity14888.html" target="_blank">Hackers took control of TV feeds in Wenzhou China and streamed anti-communist slogans to millions of viewers.</a> .<br />
+<br />
+This was the main punch line I used when trying to convince the CTO why to do a Penetration testing for their infrastructure. Since he has not seen any real world attacks on his infrastructure , he was not that convinced to give me the project. But in the end he asked me if I could find any issues from outside, sort of like a black box testing. And If I could find something serious in 2 week he would consider giving me an opportunity. <br />
+<br />
+<b><u>Web Application bugs in Digital Cable TV :<br />
+</u></b><br />
+<br />
+I have two weeks time and I need to find something quick. I started doing my homework and I learned one thing. There are nearly 1 million users for this service provider. And there are about 2000-3000 local cable operators, the local vendors who distributes the service to individual localities. All these 2000+ cable operators need to have some sort of application where they register their locality users, manages their billing operations etc. And there need to be some sort of centralized application to perform this operation. With some awesome google hacking techniques we were able to locate their centralized billing application aka Middleware server on the Internet  [Woot Woot].<br />
+<br />
+<u><b>Bug 1: Code execution on Billing Server<br />
+</b></u><br />
+In not much time I was able to Hijack the Middleware server <img src="images/smilies/smile.html" border="0" alt="" title="Smile" class="inlineimg" />. A small misconfiguration on their webserver lead to this hijack[ I am not allowed to talk about it]. What you see listed in the screenshot are all the connected Setup-box users who are clients to a particular local cable operator. If you notice those red buttons on left. Those could be used to remotely shutdown users cable service in case of a missing payment or something .  This was more than enough to explain the criticality but I wanted to find more bugs so that it would be convincing. <br />
+<br />
+<img src="attachment8bd6.jpg?attachmentid=758&amp;d=1409019738" border="0" alt=""  style="float: CONFIG" /><br />
+<br />
+<u><b>Bug 2 :Setup Box Hijack [STB]<br />
+</b></u><br />
+The above web application allowed one operator to transfer STB to another operator. So for example if a user rahul from city Delhi relocates to city Agra. Then user rahul could get his STB unregistered from the local operator [D] at Delhi and get it reassigned to operator [A ] at Agra and continue using the STB and cable service. <br />
+ <br />
+In the web application there is an option that lists all Existing local operators .Now the transfer takes place on basis of an access key. Operator A need to notify Operator B about the transfer and share his access key to operator B. This Access key implementation was flawed. <br />
+<br />
+<u>The pseudo code was some what similar:<br />
+</u><br />
+<div class="bbcode_container">
+	<div class="bbcode_description">PHP Code:</div>
+	<div class="bbcode_code"style="height:144px;"><code><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">$<br /></span><span style="color: #0000BB">$apikey&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"select&nbsp;api_key&nbsp;from&nbsp;apis&nbsp;where&nbsp;username=.'mysql_escape(</span><span style="color: #0000BB">$username</span><span style="color: #DD0000">)'"</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$authenticated&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">strcmp</span><span style="color: #007700">(</span><span style="color: #0000BB">$apikey</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$_GET</span><span style="color: #007700">&#91;</span><span style="color: #DD0000">'key'</span><span style="color: #007700">&#93;);<br />if&nbsp;(</span><span style="color: #0000BB">$authenticated&nbsp;</span><span style="color: #007700">==&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">)&nbsp;{<br />print&nbsp;</span><span style="color: #DD0000">"Logged&nbsp;IN&nbsp;!"</span><span style="color: #007700">;<br />}&nbsp;else&nbsp;{<br />print&nbsp;</span><span style="color: #DD0000">"wrong&nbsp;API!"</span><span style="color: #007700">;<br />}<br /></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></code></div>
+</div><u><b>Old bug PHP &lt; 5.3.* : Passing an array will bypass the check. <br />
+</b></u><br />
+<img src="attachment5b21.jpg?attachmentid=760&amp;d=1409019738" border="0" alt=""  style="float: CONFIG" /><br />
+<br />
+Php version older than 5.3 strcmp() implementation does not do a strict type checking. And if the input to strcmp function is an array then it returns a Null + warning. So simply enter an array instead of Access-key string.   localhost/program.php?key=hacked[] and were able to bypass the key check. Now with this bug any local operator would be able to hijack any other operators STB s with out having a valid access key. <br />
+<br />
+<img src="attachmentaccc.jpg?attachmentid=761&amp;d=1409019738" border="0" alt=""  style="float: CONFIG" /><br />
+<br />
+<u><b>Bug 3: Cable TV Remote shutdown: CSRF bypass. <br />
+</b></u><br />
+<br />
+<img src="attachment651d.jpg?attachmentid=762&amp;d=1409019738" border="0" alt=""  style="float: CONFIG" /><br />
+<br />
+Cable TV Operators control Clients via unique key [Chip ID] as seen in the screenshot.<br />
+This is accomplished via API Keys specific to the logged in admin.The implementation was flawed. <br />
+The bug allowed a remote cable operator visiting a malicious webpage to remotely shutdown all Digital Tv instances.<br />
+<br />
+<u><b>API Key Implementation<br />
+</b></u><br />
+<br />
+<u>They had a super secret JS file, which gets dynamically loaded for a given admin.<br />
+</u><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">PHP Code:</div>
+	<div class="bbcode_code"style="height:48px;"><code><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">&lt;</span><span style="color: #0000BB">script&nbsp;src</span><span style="color: #007700">=</span><span style="color: #0000BB">“load_secrets</span><span style="color: #007700">.</span><span style="color: #0000BB">js”</span><span style="color: #007700">&gt;</span><span style="color: #0000BB">&lt;/script&gt;<br /></span>They&nbsp;had&nbsp;some&nbsp;pretty&nbsp;cool&nbsp;anti-stealing&nbsp;code&nbsp;as&nbsp;well.&nbsp;<br /></span>
+</code></code></div>
+</div><div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:168px;">function checkUrl()
+{
+  var url = get_current_url();
+  return url.match(url+'$') == 'flappybirds.com';
+}
+if(checkUrl())
+{
+  var api_key = &quot;77d11aea20ff61c6d1e23f044&quot;;alert(api_key);
+  populateFormFields(super_secret); // Injects this token into the hidden input fields
+} else{
+  alert('Bad Domain !');
+}</pre>
+</div><u><b>The Bypass:<br />
+</b></u><br />
+<br />
+Attacker can load,  &lt;script src=“load_secrets.js”&gt;&lt;/script&gt;<br />
+But, checkAdmin() returns false and the attack would not work.But attacker can bypass this using,<br />
+<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">PHP Code:</div>
+	<div class="bbcode_code"style="height:120px;"><code><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #FF8000">//&nbsp;From&nbsp;attacker.com<br /></span><span style="color: #007700">&lt;</span><span style="color: #0000BB">script</span><span style="color: #007700">&gt;<br /></span><span style="color: #0000BB">String</span><span style="color: #007700">.</span><span style="color: #0000BB">prototype</span><span style="color: #007700">.</span><span style="color: #0000BB">match&nbsp;</span><span style="color: #007700">=&nbsp;function()<br />{<br />&nbsp;&nbsp;return&nbsp;&#91;</span><span style="color: #DD0000">"flappybirds.com"</span><span style="color: #007700">&#93;;<br />}<br /></span><span style="color: #0000BB">&lt;/script&gt;<br /></span>&lt;script&nbsp;src=“http://cable-tv.com/api_keys/load_secrets.js”&gt;&lt;/script&gt;&nbsp;<br /></span>
+</code></code></div>
+</div>You should check out ahamed nafeez's slides from HITB to learn more cool similar js bugs.<br />
+<a href="../haxpo.nl/wp-content/uploads/2014/02/D2T3-Using-Javascript-Security-Features-to-Kill-Itself.html" target="_blank">http://haxpo.nl/wp-content/uploads/2...ill-Itself.pdf</a><br />
+<br />
+We can host this code cross domain and make &quot;String.prototype.match&quot; , javascript .match() function to always return the value we specify . Any way if a local cable TV operator visits our page then we could now steal his API code hidden in the JS and then could use that to shut down all users in his locality . Remember the shutdown button I mentioned about in the previous bug. We used that shutdown feature to create a working POC. Check out the demo. Now any users cable access could be remotely shut down by an attacker. <br />
+
+<iframe class="restrain" title="YouTube video player" width="640" height="390" src="../external.html?link=http://www.youtube.com/embed/LGiF46Ycg4k?wmode=opaque" frameborder="0"></iframe>
+<br />
+<br />
+Imagine some attackers doing this shutdown hack at the time of World Cup, that would result in pandemonium. Any way these many low hanging bugs were enough to convince the CTO to give us the project.  And woot woot we were given access to their infrastructure <img src="images/smilies/smile.html" border="0" alt="" title="Smile" class="inlineimg" /> and a small garage to work . I would write about more bugs in the coming days . Just keep yourself updated via my twitter page <a href="../external.html?link=http://twitter.com/fb1h2s" target="_blank">http://twitter.com/fb1h2s</a> or Grage fb page <a href="../external.html?link=https://www.facebook.com/Garage4Hackers" target="_blank">https://www.facebook.com/Garage4Hackers</a> .<br />
+<br />
+Regards. <br />
+Rahul Sasi<br />
+<br />
+<img src="attachment08c4.jpg?attachmentid=763&amp;d=1409019738" border="0" alt=""  style="float: CONFIG" /></div>
+
+	
+
+	
+		<script type="text/javascript" src="clientscript/vbulletin_lightbox6719.html?v=421"></script>
+		<script type="text/javascript">
+		<!--
+		vBulletin.register_control("vB_Lightbox_Container", "article_content", 1);
+		//-->
+		</script>
+	
+
+	
+
+	
+		<sub class="article_promoted_text">
+			This article was originally published in blog:
+			<a href="bloge81f.html?u=8">Low hanging Web Application bugs in Digital Cable :Hacking Cable TV Networks Part 1</a>
+			started by
+			<a href="membere81f.html?u=8">fb1h2s</a>
+		</sub>
+	
+	<div class="cmslinks">
+
+		
+	
+	</div>
+
+    
+	<script type="text/javascript">
+	var THREADID = 6076;
+	var THIS_URL = "content1716.html?r=175-Low-hanging-Web-Application-bugs-in-Digital-Cable-Hacking-Cable-TV-Networks-Part-1";
+	var MIN_CHARS = 30;
+	vbphrase['comment'] = "Comment";
+	vbphrase['comments'] = "Comments";
+</script>
+<div id="comments" class="cms_comments_page">
+	<a name="comments_start"></a>
+	
+	<script type="text/javascript" src="clientscript/vbulletin-editor6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_quick_edit6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.html?v=421"></script>
+	<div id="node_comments_hide"></div>
+	<!-- EDITOR IS BREAKING THE PAGE -->
+	
+</div>
+
+
+</div></li>
+</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="yui-b yui-sidebar">
+			<ul class="list_no_decoration widget_list" id="widgetlist_column3">
+<li><div class="cms_widget">
+	<div class="block">
+		<div class="cms_widget_header">
+		<h3><img src="images/site_icons/html.html" alt="" /> G4H Facebook</h3>
+		</div>
+		<div class="cms_widget_content widget_content">
+		<div class="fb-like-box" data-href="https://www.facebook.com/pages/Garage4Hackers/138904662794635" data-width="300" data-height="250" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+		</div>
+	</div>
+</div></li><li><div class="cms_widget">
+	<div class="block">
+		<div class="cms_widget_header">
+		<h3><img src="images/site_icons/html.html" alt="" /> G4H Twitter</h3>
+		</div>
+		<div class="cms_widget_content widget_content">
+		<a class="twitter-timeline"  href="../external.html?link=https://twitter.com/garage4hackers"  data-widget-id="387207513831010305">Tweets by @garage4hackers</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+	</div>
+</div></li>
+</ul>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="content1716.html?r=175-Low-hanging-Web-Application-bugs-in-Digital-Cable-Hacking-Cable-TV-Networks-Part-1#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">03:50 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	<img src="cron32dd.gif?rand=1584872456" alt="" width="1" height="1" border="0" />
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

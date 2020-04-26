@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=88&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:22:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Dns amplification attack</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread5d9d.html?t=88">Dns amplification attack</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">07-08-2010, 08:54 PM</div>
+		<span class="username">s1ayer</span>
+	</div>
+	
+	
+		<div class="title">Dns amplification attack</div>
+	
+	<div class="content">
+		<blockquote class="restore"><b><font color="blue">&lt;&lt;Eberly&gt;&gt;</font></b><br />
+YOU MAY HAVE heard about a class of attacks called DNS amplification attacks recently, they are a real nasty and subtle class of DDOS attack. Like ping flooding and smurfing they depend on sending large amounts of data across a pipe and drowning out any legit data.<br />
+<br />
+You may notice he amplification part in the name, and that is the key here. What it does is turn a few bytes of data into a stream many times as large. In the case of the one discussed at Defcon, it took a 20 byte packet and turned it into 8.5K, with this ratio, you can take a cable modem and turn it into gigs a second of traffic. Toss a botnet into this, and you can crush the life out of any target you want.<br />
+<br />
+The mechanism it works on is pretty simple. There is a DNS query of a type called 'any', and in the real world, it is pretty useless. If you send that query to an authoritative DNS server, it will return anything it has, which is everything. If you send it to a non-authoritative source, it simply returns what it has, usually little or nothing.<br />
+<br />
+One other thing to note is that DNS as was originally specified has a 512 byte maximum message size. This was later extended so that if you needed more, it could do that. If your server didn't like the extended size, it would stop using UDP and set up a TCP connection, hugely expensive in computational terms, to send the data.<br />
+<br />
+What the amp attacks do is hack an authoritative server and put in a large text field on a record, not large in the MS Word sense, but a few K of text. One person in the audience said he scans DNS servers, and on one he found large chunks of the book of revelations in a record. This probably is not RFC compliant, but the text with the four horsemen used as a DDOS is more than mildly ironic.<br />
+The next stage is a little more complex, you take a list of open DNS servers and query them for the record you hacked. They dutifully go out and look it up, download a few K of text, answer the query, and cache the answer. It isn't hard to find a few thousand of these, so you effectively have a botnet.<br />
+<br />
+From that point, you take a real botnet, or at least a few machines, and spoof a few packets. Those spoofs are a simple DNS query for the record that you cached earlier, and the spoofed return address is the victim. Repeat on a massive scale, and the victim is flooded with huge DNS traffic.<br />
+<br />
+With the overhead of TCP sucking up CPU time, and an amplification factor of tens to hundreds, you can take a few meg of traffic and turn it into gigs. The victim is flooded into the ground, and there is squat all they can do other than sit it out and wait. DNS amplification attacks are quite effective and fairly easy to pull off, just what we all need for a safe and happy internet.<br />
+<a href="../external.html?link=http://news.com.com/DNS+servers+do+hackers+dirty+work/2100-7349_3-6053468.html?tag=cd.top" target="_blank">http://news.com.com/DNS+servers+do+h...tml?tag=cd.top</a><br />
+<br />
+<a href="../www.isotf.org/news/DNS-Amplification-Attacks.html" target="_blank">http://www.isotf.org/news/DNS-Amplification-Attacks.pdf</a><br />
+<br />
+<br />
+Will b happy if somebody posts more info on this</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">07-08-2010, 08:55 PM</div>
+		<span class="username">s1ayer</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b><font color="blue">&lt;&lt;Wireless Punter&gt;&gt;</font></b><br />
+here is example how much effect is DNS Amplification attack<br />
+<br />
+Blue Security Kicked While It's Down<br />
+<br />
+Hours after anti-spam company Blue Security pulled the plug on its spam-fighting Blue Frog software and service, the spammers whose attack caused the company to wave the white flag have escalated their assault, knocking Blue Security's farewell message and thousands more Web sites offline.<br />
+<br />
+Just before midnight ET, Blue Security posted a notice on its home page that it was bowing out of the anti-spam business due to concerted attacks against its Web site that took millions of other sites and blogs with it. Within minutes of that online posting, bluesecurity.com went down and remains inaccessible at the time of this writing.<br />
+<br />
+According to information obtained by Security Fix, the reason is that the attackers were hellbent on taking down Blue Security's site again, but had trouble because the company had signed up with Prolexic, which specializes in protecting Web sites from &quot;distributed denial-of-service&quot; (DDoS) attacks.<br />
+<br />
+These massive assaults harness the power of thousands of hacked PCs to swamp sites with so much bogus traffic that they can no longer accommodate legitimate visitors. Prolexic built its business catering to the sites most frequently targeted by DDoS extortion attacks -- chiefly, online gambling and betting houses. But the company also serves thousands of other businesses, including banks, insurance companies and online payment processors.<br />
+<br />
+For the past nine hours, however, most of Prolexic's customers have been knocked offline by an attack that flanked its defenses. Turns out the attackers decided not to attack Prolexic, but rather UltraDNS, its main provider of domain name system (DNS) services. (DNS is what helps direct Internet traffic to its destination by translating human-readable domain names like &quot;www.example.com&quot; into numeric Internet addresses that are easier for computers to understand.)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">07-08-2010, 08:56 PM</div>
+		<span class="username">s1ayer</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">UltraDNS is the authoritative DNS provider for all Web sites ending in &quot;.org&quot; and also markets its &quot;DNS Shield&quot; service designed to help sites defend against another, increasingly common type of DDoS -- one that targets weaknesses inherent in the DNS system. (Incidentally, UltraDNS was recently acquired by Neustar, which in turn is responsible for handling all &quot;.biz&quot; domain registrations, and for overseeing the nation's authoritative directory of telephone numbers.)<br />
+<br />
+In this case, at least, it does not appear that the DNS Shield service worked as advertised. Earlier today, I spoke with Prolexic founder Barrett G. Lyon, who told me the attack on UltraDNS had knocked about 80 percent of his company's clients offline, or roughly 2,000 or so Web businesses. Most of those businesses also remain offline as of this writing.<br />
+<br />
+According to Lyon, the unknown attackers hit a key portion of UltraDNS's network with a flood of spoofed DNS requests at a rate of around 4 to 5 gigabits per second, which is enough traffic to make just about any Web site on the Internet fall over (many Internet routers can handle only a few hundred megabits of traffic before they start to fail). But this was no normal DDoS attack-- it was a kind of DDoS on the DNS system that security experts say has become alarmingly more common over the past six to eight months. <br />
+<br />
+Known as DNS amplification attacks or &quot;reflected DNS attacks,&quot; these kinds of DDoS assaults increase the traffic hurled at a victim by orders of magnitude. In a nutshell, the attackers find a whole bunch of poorly configured DNS servers and use them to create and send spoofed DNS requests from systems they control to the DNS servers they want to cripple. Because the DNS requests appear to be coming from other trusted DNS servers, the target servers have trouble distinguishing regular, legitimate DNS lookups from ones sent by the attackers. Sustained for long enough, the attack eventually overloads the victim's DNS servers with queries and knocks them out of commission.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">11-15-2012, 04:22 PM</div>
+		<span class="username">abhaythehero</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Deep Inside a DNS Amplification DDoS Attack &gt;&gt; <a href="../external.html?link=http://blog.cloudflare.com/deep-inside-a-dns-amplification-ddos-attack" target="_blank">Deep Inside a DNS Amplification DDoS Attack - CloudFlare blog</a></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">07-14-2014, 05:45 PM</div>
+		<span class="username">dotcppfile</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">NTP Amplification DoS Attack - by dotcppfile and Red Dragon - Python Script:<br />
+<a href="../external.html?link=http://dotcppfile.wordpress.com/2014/06/26/ntp-amplification-dos-attack-by-dotcppfile-and-red-dragon-python-script/" target="_blank">http://dotcppfile.wordpress.com/2014...python-script/</a></blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:05 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=88&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:22:44 GMT -->
+</html>

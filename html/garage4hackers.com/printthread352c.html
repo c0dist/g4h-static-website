@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=5265&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:36:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Unpacking UPX</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadd916.html?t=5265">Unpacking UPX</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">10-20-2013, 08:21 AM</div>
+		<span class="username">mahdi</span>
+	</div>
+	
+	
+		<div class="title">Unpacking UPX</div>
+	
+	<div class="content">
+		<blockquote class="restore">hello everyone ..<br />
+<br />
+i have a exe file that it packed via UPX ..<br />
+but i think its modified some after packing with UPX ..<br />
+i know about &quot;-d&quot; switch in upx packed for unpack it ..<br />
+i used it.. after unpacking i catching a message box on start of application that says &quot;Range check error.&quot;<br />
+<br />
+i think the unpacked file MUST be same as packed file on running .. do u think so ?!?<br />
+<br />
+then i tried manual unpacking..<br />
+i saw this tutorial (<a href="../external.html?link=http://www.youtube.com/watch?v=42bgdnCvQMI" target="_blank">UPX Easily Unpacked All Versions - YouTube</a>)..<br />
+it use PUSHAD &amp; POPAD technique.. i've done it and finaly i made a 600KB dumped file ! <br />
+when i tried unpacking with upx itself , i got 2.96mb file !<br />
+<br />
+again i was unsuccessful <br />
+<br />
+can anyone say any tips for me ?</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">10-20-2013, 12:33 PM</div>
+		<span class="username">41.w4r10r</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">if you can share sample with us we can check it and help you to unpack it ;)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">10-20-2013, 07:58 PM</div>
+		<span class="username">mahdi</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">i think the unpacked file MUST be same as packed file on running .. do u think so ?!?</code><hr />
+</div>sry but i cant do it now :(<br />
+maybe i upload it later ..<br />
+<br />
+can u answer to this question first ?<br />
+my file i think got damaged after unpacking with -d switch ...<br />
+<br />
+do u remember anything with this tip?<br />
+it's like UPX , but after unpacking some part of app got damaged ..<br />
+and DiE (PE Scanner) shows &quot;UPX Modified&quot; :(<br />
+<br />
+how can i unpack it ? :(</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">10-20-2013, 08:32 PM</div>
+		<span class="username">mahdi</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">i opend packed file with ExeinFo PE scanner..<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">UPX 0.89 - 3.xx -&gt; Markus &amp; Laszlo ver. [ 3.04 ] &lt;- info from file. ( <b>sign like UPX packer</b> )&nbsp; , <br />
+&nbsp; &nbsp; <b> Overlay : 1E506F</b>... Nothing discovered</code><hr />
+</div>what is that section ?<br />
+Overlay !?</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">10-21-2013, 02:17 AM</div>
+		<span class="username">mahdi</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Here U R..<br />
+this is my file <br />
+<br />
+<a href="../external.html?link=http://5.56.134.17/pg.rar" target="_blank">Download</a><br />
+<br />
+please help me :(</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:52 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=5265&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:36:27 GMT -->
+</html>

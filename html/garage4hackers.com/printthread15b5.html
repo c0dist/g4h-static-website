@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=2185&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:49:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> LinkedIn Mobile Apps Bad Security Architecture: A Case Study</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadfade.html?t=2185">LinkedIn Mobile Apps Bad Security Architecture: A Case Study</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">04-12-2012, 02:45 PM</div>
+		<span class="username">nishant</span>
+	</div>
+	
+	
+		<div class="title">LinkedIn Mobile Apps Bad Security Architecture: A Case Study</div>
+	
+	<div class="content">
+		<blockquote class="restore"><b>Breaking News: 1990's programming mistakes repeated in 2012.</b><br />
+<br />
+<br />
+<b><i>Introduction</i></b><br />
+<br />
+Well the title of the post is self explanatory. It is really sad to see the obvious programming mistakes of the 90's are being repeated, by industry giants like LinkedIn, in 2012 when we have so much documented guidelines for secure programming. Do we still call this lack of awareness?<br />
+<br />
+<br />
+<b><i>Responsible Disclosure Timeline</i></b><br />
+<br />
+Vendor Notified: 25th November 2011<br />
+Vendor Response: 28th November 2011<br />
+Conclusion: Not fixed till today (11 April 2012). No further communication from either side.<br />
+<br />
+<b><i>Details</i></b><br />
+<br />
+Device Model: iPhone 4S<br />
+Platform: Apple&#8217;s iOS 5.0<br />
+LinkedIn App Version: &lt;= 4.3.3 (05 April 2012) <br />
+Note: All LinkedIn apps or sites based on touch.<a href="../external.html?link=http://www.linkedin.com/" target="_blank">World's Largest Professional Network | LinkedIn</a> are probably vulnerable. <br />
+<br />
+<br />
+<br />
+<b><u>1.  Session cookie transported over HTTP</u></b><br />
+<br />
+Severity: Medium<br />
+<br />
+Description: Session cookie &#8220;lim_auth&#8221; is transported over HTTP in clear text. This is the only authentication  parameter for  <a href="../external.html?link=http://touch.www.linkedin.com/" target="_blank">LinkedIn</a>  services.  It  is highly  susceptible to  be sniffed, by an attacker, with a network packet capture tool like Wireshark.<br />
+<br />
+<br />
+<b><u>2.  Session cookie doesn&#8217;t expire</u></b><br />
+<br />
+Severity: High<br />
+<br />
+Description: The session cookie &#8220;lim_auth&#8221; doesn&#8217;t expire for a &quot;long&quot; i.e. until the user logs out of the mobile app and just to remind you I never log out of my mobile apps because that would mean no push notification and the annoyance of re-logging every time on a small keypad, which implies that once an attacker has successfully gain access to a user&#8217;s valid session he can use it for over a long period of time until the user has not &#8220;Singed Out&#8221; of the LinkedIn mobile application. An attacker may write an AJAX based custom frontend to easily leverage the JSON based services of <a href="../external.html?link=http://touch.www.linkedin.com/" target="_blank">LinkedIn</a>.  The attacker can, then, route his service calls through a desktop proxy server that supports URL Rewrite feature, where it can append headers to the HTTP requests made to the  <a href="../external.html?link=http://touch.www.linkedin.com/" target="_blank">LinkedIn</a> can easily access the services. I have also implemented this scenario for my testing using Charles Web Debugging Proxy.<br />
+<br />
+<br />
+<b><u>3.  CSRF on &#8220;Status Share&#8221; Feature</u></b><br />
+<br />
+Severity: Critical<br />
+<br />
+Description: The below HTTP POST request is made whenever the user tries to &#8220;Share Status&#8221; from the LinkedIn mobile app. Since there is no token/crumb bound to this request the attacker can submit this request as many times as he wants to successfully post arbitrary messages to the vitcim&#8217;s LinkedIn profile without his knowledge.<br />
+<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code"><span style="font-family: courier new">POST /li/v1/updates HTTP/1.1<br />
+Host: touch.www.linkedin.com<br />
+User-Agent: iphone3_1<br />
+Accept: application/json<br />
+X-UDID: xxx3ac8b568xxxxx1ab238531xxxxx18b0axxxx<br />
+X-System-Version: 5.0<br />
+X-System-Name: iPhone OS<br />
+X-Device-Model: iPhone<br />
+Cookie: lim_auth=60d3xxxx-10xx-xxd1-bxxd-xxxa3df4bxxx<br />
+X-LI-Track: {&quot;clientVersion&quot;:&quot;4.0.3&quot;,&quot;sessionId&quot;:&quot;1326235830768&quot;,&quot;carrier&quot;:&quot;Vodafone India&quot;,&quot;osVersion&quot;:&quot;5.0&quot;,&quot;locale&quot;:&quot;en_US&quot;,&quot;osName&quot;:&quot;iPhone OS&quot;,&quot;language&quot;:&quot;en&quot;,&quot;model&quot;:&quot;iphone4_1&quot;}<br />
+X-App-Version: 4.0.3<br />
+X-User-Language: en<br />
+X-User-Locale: en_US Accept-Language: en-us<br />
+Accept-Encoding: gzip, deflate<br />
+Pragma: no-cache<br />
+Connection: keep-alive<br />
+Content-Type: application/x-www-form-urlencoded<br />
+Content-Length: 71<br />
+<br />
+twitter=false&amp;nc=1326235830768&amp;comment=%21%21%21&amp;visibility=connections</span></code><hr />
+</div><br />
+<br />
+<b><u>4.  CSRF on &#8220;New Message&#8221; Feature</u></b><br />
+<br />
+Severity: Critical<br />
+<br />
+Description: The below HTTP POST request is made whenever the user tries to send a &#8220;New Message&#8221; to any of his/her connections from the LinkedIn mobile app. Since there is no token/crumb bound to this request the attacker can submit this request as many times as he wants to successfully send arbitrary and potentially abusive messages to the vitcim&#8217;s connections or may use to do Social Engineering.<br />
+<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code"><span style="font-family: courier new">POST /li/v1/messages HTTP/1.1<br />
+Host: touch.www.linkedin.com<br />
+User-Agent: iphone3_1<br />
+Content-Length: 60<br />
+Accept: application/json<br />
+X-UDID: xxx3ac8b568xxxxx1ab238531xxxxx18b0axxxx<br />
+X-System-Version: 5.0<br />
+X-System-Name: iPhone OS X-Device-Model: iPhone<br />
+Cookie: lim_auth=60d3xxxx-10xx-xxd1-bxxd-xxxa3df4bxxx<br />
+X-LI-Track: {&quot;clientVersion&quot;:&quot;4.0.3&quot;,&quot;sessionId&quot;:&quot;1326661672150&quot;,&quot;carrier&quot;:&quot;Vodafone India&quot;,&quot;osVersion&quot;:&quot;5.0&quot;,&quot;locale&quot;:&quot;en_US&quot;,&quot;osName&quot;:&quot;iPhone OS&quot;,&quot;language&quot;:&quot;en&quot;,&quot;model&quot;:&quot;iphone4_1&quot;}<br />
+X-App-Version: 4.0.3<br />
+X-User-Language: en<br />
+X-User-Locale: en_US<br />
+Content-Type: application/x-www-form-urlencoded<br />
+Accept-Language: en-us<br />
+Accept-Encoding: gzip, deflate<br />
+Pragma: no-cache<br />
+Connection: keep-alive<br />
+<br />
+<br />
+type=msg&amp;subject=Hello&amp;to=27565348&amp;body=Hii&amp;nc=1326661672150</span></code><hr />
+</div><br />
+<br />
+<b><u>5.  CSRF on &#8220;New Discussion&#8221; in Groups Feature</u></b><br />
+<br />
+Severity: Critical<br />
+<br />
+Description: The below HTTP POST request is made whenever the user tries to start a &#8220;New Discussion&#8221; in a Group he is already associated with from the LinkedIn mobile app. Since there is no token/crumb bound to this request the attacker can submit this request as many times as he wants to successfully<br />
+<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code"><span style="font-family: courier new">POST /li/v1/groups/1772050/posts HTTP/1.1<br />
+Host: touch.www.linkedin.com<br />
+User-Agent: iphone3_1<br />
+Content-Length: 36<br />
+Accept: application/json<br />
+X-UDID: xxx3ac8b568xxxxx1ab238531xxxxx18b0axxxx<br />
+X-System-Version: 5.0<br />
+X-System-Name: iPhone OS X-Device-Model: iPhone<br />
+Cookie: lim_auth=60d3xxxx-10xx-xxd1-bxxd-xxxa3df4bxxx<br />
+X-LI-Track: {&quot;clientVersion&quot;:&quot;4.0.3&quot;,&quot;sessionId&quot;:&quot;1326661672150&quot;,&quot;carrier&quot;:&quot;Vodafone India&quot;,&quot;osVersion&quot;:&quot;5.0&quot;,&quot;locale&quot;:&quot;en_US&quot;,&quot;osName&quot;:&quot;iPhone OS&quot;,&quot;language&quot;:&quot;en&quot;,&quot;model&quot;:&quot;iphone4_1&quot;}<br />
+X-App-Version: 4.0.3<br />
+X-User-Language: en<br />
+X-User-Locale: en_US<br />
+Content-Type: application/x-www-form-urlencoded<br />
+Accept-Language: en-us<br />
+Accept-Encoding: gzip, deflate<br />
+Pragma: no-cache<br />
+Connection: keep-alive<br />
+<br />
+<br />
+summary=..&amp;title=..&amp;nc=1326661672150</span></code><hr />
+</div><br />
+<br />
+<b><u>6.  CSRF on &#8220;Send/Accept&#8221; in Invitations</u></b><br />
+<br />
+Severity: Critical<br />
+<br />
+Description: Similar to above explained exploits.<br />
+<br />
+Do share your concerns/thoughts through the posts below.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">04-13-2012, 01:48 PM</div>
+		<span class="username">Anant Shrivastava</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">did you tried <br />
+<br />
+<span style="font-family: courier new">twitter=true<br />
+<br />
+to see if updates floats to twitter to (in case its linked)<br />
+<br />
+also did you tried checking the android app.<br />
+I will download and check if android app also has simmilar flaw.<br />
+<br />
+</span></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">05-04-2012, 11:38 AM</div>
+		<span class="username">nishant</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>Anant Shrivastava</strong>
+				<a href="showthreade1c9.html?p=7540#post7540" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">did you tried <br />
+<br />
+<span style="font-family: courier new">twitter=true<br />
+<br />
+to see if updates floats to twitter to (in case its linked)<br />
+<br />
+also did you tried checking the android app.<br />
+I will download and check if android app also has simmilar flaw.<br />
+<br />
+</span></div>
+			
+		<hr />
+	</div>
+</div>Hi Anant,<br />
+<br />
+Sorry for such a late reply. Yes, the twitter options shares the content on twitter, however, it has to be granted access by the user, though.<br />
+<br />
+Next, as I said, LinkedIn mobile apps are 95% HTML5 -&gt; a mobile website wrapped in a thin native client. And all its mobile apps use the <a href="../external.html?link=http://www.touch.linkedin.com/" target="_blank">www.touch.linkedin.com</a> as the webservice endpoint which just implies all are vulnerable. Having that said, they released their 1st iPad client 1-2 days back, which at first look seems to be slight differently. I have installed it, will check ASAP and write my findings here.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">12-05-2012, 07:03 AM</div>
+		<span class="username">satishb3</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">hmmm nice. In addition to that, logout rellay does not expire the session cookies. It just removes from the phone. So if we grab old cookie file, we can log into linkedin. I have reported this to Linkedin 6 months ago. Complete details are @ - <a href="../external.html?link=http://www.securitylearn.net/2012/08/04/linkedin-iphone-application-session-expiration-vulnerability/" target="_blank">LinkedIn iPhone app does not expire session on logout</a></blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:25 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=2185&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:49:14 GMT -->
+</html>

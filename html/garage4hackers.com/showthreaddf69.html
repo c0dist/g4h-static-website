@@ -1,0 +1,3587 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=370 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:41:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="Garage4Hackers(G4H) is an open security community for Information Security enthusiasts, gurus and aspirants.Members of the team dedicate time and resources towards helping other information security aspirants, sharing knowledge,spreading security awareness and promoting research." />
+<meta property="og:url" content="showthreaddf69.html?t=370" />
+<meta property="og:type" content="article" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthreaddf69.html?t=370";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - Assembly - RSS Feed" href="external828e.php?type=RSS2&amp;forumids=35" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	<meta name="keywords" content="assembly for hackers, assembly programming, linux assembly, addressing, movl, mode, %eax, register, address, instruction, memory, %index, data, _start, modes, load, %offset, datasize, mode”, .section, baseaddress, number, intarray, making, direct, pointer, copy, %ebx, move, code, indirect, base, stack, statement, 1002, sign, location, .globl, %esp, assembly, %edi, .text, “immediate, .data, intvalue, array, represented, access, equation, registers" />
+	<meta name="description" content="Dear All, 
+ 
+Following is an attempt to provide some supplements to those who are new to assembly language programming and finding it hard to start the venture of shell coding and/or exploitation techniques: 
+ 
+The readers of this document would be broadly categorized into two categories per the prerequisites: 
+ 
+1.	Those who understand the basics of assembly and are familiar with assembly instructions, memory layout etc. 
+2.	Those who are totally new to this subject. 
+ 
+For those who fall into" />
+
+	<title> Assembly for Hackers</title>
+	<link rel="canonical" href="showthreaddf69.html?t=370" />
+	
+	<script type="text/javascript" src="clientscript/vbulletin_textedit6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.html?v=421"></script>
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="css8d9b.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=postlist.css,showthread.css,postbit.css,attachment.css,poll.css,lightbox.css" />
+	
+
+<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a href="search8427.html?do=getnew&amp;contenttype=vBForum_Post">New Posts</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_faq"><a href="faq.html">FAQ</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="calendar.html">Calendar</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Community</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_members"><a href="memberlist.html">Member List</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Forum Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a href="forum.html?do=markread&amp;markreadhash=guest">Mark Forums Read</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_qlinks">
+							<a href="javascript://" class="popupctrl">Quick Links</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbqlink_posts"><a href="search2791.html?do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+								
+									<li id="vbqlink_leaders"><a href="showgroups.html">View Site Leaders</a></li>
+								
+							</ul>
+						</li>
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="forum.html">Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplay9780.html?f=14">General Security Discussions</a></li>
+
+	<li class="navbit"><a href="forumdisplay9df8.html?f=31">Programming</a></li>
+
+	<li class="navbit"><a href="forumdisplay65b9.html?f=35">Assembly</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> Assembly for Hackers</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=370 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:41:19 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+
+		<div id="pagination_top" class="pagination_top">
+		
+			<form action="../external.html?link=http://garage4hackers.com/showthread.php?t=370&amp;page=2" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="370" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 11">1</a></span><span><a href="showthreadb025.html?t=370&amp;page=2" title="Show results 11 to 11 of 11">2</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="showthreadb025.html?t=370&amp;page=2" title="Next Page - Results 11 to 11 of 11"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="showthreadb025.html?t=370&amp;page=2" title="Last Page - Results 11 to 11 of 11">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Results 1 to 10 of 11
+			</div>
+		</div>
+	</div>
+<div id="pagetitle" class="pagetitle">
+	<h1>
+		Thread: <span class="threadtitle"><a href="showthreaddf69.html?t=370" title="Reload this Page">Assembly for Hackers</a></span>
+
+<a class="a2a_dd" href="../external.html?link=http://www.addtoany.com/share_save"><img src="../static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share/Save - My123World.Com!"/></a><script type="text/javascript">a2a_show_title=1;a2a_num_services=14;</script><script type="text/javascript" src="../static.addtoany.com/menu/page.js"></script>
+
+		
+			
+<fb:like href="showthreaddf69.html?t=370" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like>
+		
+	</h1>
+</div>
+	<div id="thread_controls" class="thread_controls">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread10a4.html?t=370&amp;pp=10&amp;page=1" accesskey="3" 
+						rel="nofollow">Show Printable Version</a></li>
+					<li><a href="sendmessagefb04.html?do=sendtofriend&amp;t=370"
+						rel="nofollow">Email this Page&hellip;</a></li>
+					<li>
+						
+							<a href="subscriptione504.html?do=addsubscription&amp;t=370" 
+								rel="nofollow">Subscribe to this Thread&hellip;</a>
+											
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+				<li class="popupmenu searchthread" id="searchthread">
+					<h6><a class="popupctrl" href="javascript://">Search Thread</a></h6>
+					<form action="../external.html?link=http://garage4hackers.com/search.php" method="post">
+						<ul class="popupbody popuphover">
+							<li>
+								<input type="text" name="query" class="searchbox" value="Search..." tabindex="13" />
+								<input type="submit" class="button" value="Search" tabindex="14" />
+							</li>
+							<li class="formsubmit">
+								<div><a class="advancedsearchlink" href="searchc7f1.html?search_type=1&amp;searchthreadid=370&amp;contenttype=vBForum_Post">Advanced Search</a></div>
+							</li>
+						</ul>
+						<input type="hidden" name="s" value="" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="process" />
+						<input type="hidden" name="searchthreadid" value="370" />
+						<input type="hidden" name="search_type" value="1" />
+						<input type="hidden" name="contenttype" value="vBForum_Post" />
+
+					</form>
+				</li>
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Display</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Linear Mode</label></li>
+						<li><a href="showthreadbbcf-2.html?t=370&amp;mode=hybrid"> Switch to Hybrid Mode</a></li>
+						<li><a href="showthread3656.html?t=370&amp;p=1169&amp;mode=threaded#post1169"> Switch to Threaded Mode</a></li>
+					</ul>
+				</li>
+			
+
+			
+		</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_1169">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">10-07-2010,&nbsp;<span class="time">12:50 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1169" href="showthreadb6f4.html?t=370&amp;p=1169&amp;viewfull=1#post1169" class="postcounter">#1</a><a id="postcount1169" name="1"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member5626.html?u=2" title="b0nd is offline"><strong>b0nd</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member5626.html?u=2" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9847.html?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatee111.html?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog5626.html?u=2" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listf90b.html?r=author/2-b0nd" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="b0nd is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				... I am no Expert b0nd.g4h@gmail.com
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_1169_2" title="b0nd is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="member5626.html?u=2" title="b0nd is offline">
+				<img src="BondLogobda9.jpg?u=2&amp;dateline=1278296558" alt="b0nd's Avatar" title="b0nd's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>irc.freenode.net #g4h</dd>
+					
+					<dt>Posts</dt> <dd>744</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<h2 class="title icon">
+					Assembly for Hackers
+				</h2>
+				
+
+
+						
+							
+							
+						
+						
+				<div class="content">
+					<div id="post_message_1169">
+						<blockquote class="postcontent restore ">
+							Dear All,<br />
+<br />
+Following is an attempt to provide some supplements to those who are new to assembly language programming and finding it hard to start the venture of shell coding and/or exploitation techniques:<br />
+<br />
+The readers of this document would be broadly categorized into two categories per the prerequisites:<br />
+<br />
+1.	Those who understand the basics of assembly and are familiar with assembly instructions, memory layout etc.<br />
+2.	Those who are totally new to this subject.<br />
+<br />
+For those who fall into category 2, it&#8217;s strongly suggested to grab the video series &#8220;Assembly Primer for Hackers&#8221; by Vivek Ramachandran. He has done an awesome job by creating such a simple to understand video tutorials on assembly programming. There are 11 video, each of 10-30 minutes time duration. That would give a kick start in understanding the basics of assembly programming language, the memory layout, registers and stack.<br />
+<br />
+Our attempt is to present couple of programs (10-15) which would help beginners to learn and practice. Few things might not be clear as its gonna be quick manual. So dig more on google or shoot your query.<br />
+<br />
+So lets start....
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+					
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><i>[*] To follow the path: look to the master, follow the master,  walk with the master, see through the master,<br />
+               ------>  become the master!!! <------<br />
+[*] Everyone has a will to WIN but very few have the will to prepare to WIN<br />
+[*] Invest yourself in everything you do, there's fun in being serious</i></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1169" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_1169" class="newreply" href="newreply8a0e.html?do=newreply&amp;p=1169" rel="nofollow" title="Reply With Quote"><img id="quoteimg_1169" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_1171">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">10-07-2010,&nbsp;<span class="time">12:59 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1171" href="showthread68da.html?t=370&amp;p=1171&amp;viewfull=1#post1171" class="postcounter">#2</a><a id="postcount1171" name="2"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member5626.html?u=2" title="b0nd is offline"><strong>b0nd</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member5626.html?u=2" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9847.html?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatee111.html?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog5626.html?u=2" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listf90b.html?r=author/2-b0nd" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="b0nd is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				... I am no Expert b0nd.g4h@gmail.com
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_1171_2" title="b0nd is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="member5626.html?u=2" title="b0nd is offline">
+				<img src="BondLogobda9.jpg?u=2&amp;dateline=1278296558" alt="b0nd's Avatar" title="b0nd's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>irc.freenode.net #g4h</dd>
+					
+					<dt>Posts</dt> <dd>744</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<h2 class="title icon">
+					Assembly for Hackers - Basics
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_1171">
+						<blockquote class="postcontent restore ">
+							Development Platform: Linux<br />
+Assembler: GAS (The GNU Assembler)<br />
+Linker: ld<br />
+Compiler: GCC<br />
+Debugger: GDB<br />
+Operation on 32-bit registers on Intel architecture<br />
+<br />
+Some one-liners to refresh your concepts:<br />
+<br />
+<b>1.	GAS terminology: movl source, destination</b><br />
+<br />
+addl S, D		--&gt; 	Add source to destination and store in destination<br />
+subl S, D		--&gt; 	Subtract source from destination and store in destination<br />
+imull S, D	--&gt; 	Multiply source by the destination and store in destination<br />
+idivl number	--&gt;	Dividend has to be in register eax, “number” is the divisor, quotient is then transferred to eax and the remainder to eds. The divisor can be any register or memory location.<br />
+<br />
+<b>2.	Moving the values between registers:</b><br />
+movl %eax, %ebx	--&gt; 	Moving a double-word value (4 bytes) from the register eax into register ebx. The value in eax remains the same<br />
+movw %ax, %bx	--&gt; 	Moving a word value (2 bytes) from the register ax into register bx<br />
+movb %ah, %bh	--&gt; 	Moving a byte value (1 byte) from the register ah into register bh<br />
+<br />
+Hence you can perform operations on either of the following:<br />
+•	The whole 32 bit register, as we did in the first mov statement by appending the character ‘l’ (small L) and fetching 32-bit registers, or<br />
+•	The lower 16 bits of the register, as we did in the second mov statement by appending the character ‘w’ (word) and fetching 16-bit registers, or<br />
+•	Either of the lowest 8-bits by addressing them as ah and al using movb (b ~ byte) instruction.<br />
+Please note that just for the sake of example the register “eax” has been taken. It could have been ebx or ecx or edx.<br />
+<br />
+Word = 2 bytes<br />
+Dword = 4 bytes<br />
+Short = 16 bit<br />
+Int = 32 bit<br />
+<br />
+The mov instruction is useful for transferring data along any of the following paths:<br />
+•	To a register from memory<br />
+•	To memory from a register<br />
+•	Between general registers<br />
+•	Immediate data to a register<br />
+•	Immediate data to a memory<br />
+<br />
+The mov instruction cannot move from memory to memory. Memory-to-memory moves can be performed, however, by the string move instruction MOVSx series discussed later in the document.<br />
+<br />
+<b>3.	Some Jump instructions:</b><br />
+<br />
+cmpl %eax, %ebx<br />
+<br />
+je			--&gt; Jump if the values under comparison are equal<br />
+jg			--&gt; Jump if the 2nd value is greater than the 1st value<br />
+jge			--&gt; Jump if the 2nd value is greater than equal to the 1st value<br />
+jl			--&gt; Jump if the 2nd value is less than the 1st value<br />
+jle			--&gt; Jump if the 2nd value is less than equal to the 1st value<br />
+jmp			--&gt; Unconditional jump<br />
+<br />
+<br />
+<b>4.</b>	The difference between “call” and “jmp” is that “call” also pushes the return address onto the stack so that the function can return from where it was been called, while the “jmp” does not. This would be clearer with the examples in the later part of the document.<br />
+<br />
+<b>5.</b>	A specific integer value is associated with each syscall; this value must be placed into the register eax. <br />
+There are six registers that are used for the arguments that the system call takes. The first argument goes in EBX, the second in ECX, then EDX, ESI, EDI, and finally EBP, if there are so many. If there are more than six arguments, EBX must contain the memory location where the list of argument is stored – but don’t worry about this because it’s unlikely that you’ll use a syscall with more than six arguments.<br />
+<br />
+<b>to be contd...</b>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><i>[*] To follow the path: look to the master, follow the master,  walk with the master, see through the master,<br />
+               ------>  become the master!!! <------<br />
+[*] Everyone has a will to WIN but very few have the will to prepare to WIN<br />
+[*] Invest yourself in everything you do, there's fun in being serious</i></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1171" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_1171" class="newreply" href="newreply3891.html?do=newreply&amp;p=1171" rel="nofollow" title="Reply With Quote"><img id="quoteimg_1171" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_1177">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">10-08-2010,&nbsp;<span class="time">07:21 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1177" href="showthread39a7.html?t=370&amp;p=1177&amp;viewfull=1#post1177" class="postcounter">#3</a><a id="postcount1177" name="3"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member5626.html?u=2" title="b0nd is offline"><strong>b0nd</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member5626.html?u=2" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9847.html?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatee111.html?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog5626.html?u=2" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listf90b.html?r=author/2-b0nd" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="b0nd is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				... I am no Expert b0nd.g4h@gmail.com
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_1177_2" title="b0nd is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="member5626.html?u=2" title="b0nd is offline">
+				<img src="BondLogobda9.jpg?u=2&amp;dateline=1278296558" alt="b0nd's Avatar" title="b0nd's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>irc.freenode.net #g4h</dd>
+					
+					<dt>Posts</dt> <dd>744</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<h2 class="title icon">
+					Assembly for Hackers - Basics
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_1177">
+						<blockquote class="postcontent restore ">
+							<b>6.	Moving Strings from one memory location to another (MOVSx series)</b><br />
+<br />
+movsb		--&gt;	move a byte (8 bits)<br />
+movsw		--&gt;	move a word (16 bits)<br />
+movsl		--&gt;	move a double word (32 bits)<br />
+<br />
+Source 		--&gt;	ESI points to memory location<br />
+Destination	--&gt;	EDI points to memory location<br />
+<br />
+Interestingly, whenever any of the movsx series instruction is executed, the ESI and EDI are automatically incremented or decremented according to the Direction Flag (DF).<br />
+<br />
+If DF (part of EFLAGS registers) is set i.e. has a value ‘1’, ESI and EDI registers are decremented.<br />
+If DF is cleared i.e. has a value ‘0’, ESI and EDI registers are incremented.<br />
+<br />
+We can set DF using the STD instruction and it can be cleared using the CLD instruction.<br />
+<br />
+<br />
+<b>7.	Moving Strings from memory location into registers (LODSx series)</b><br />
+<br />
+lodsb		--&gt;	load a byte from memory location into AL<br />
+lodsw		--&gt;	load a word from memory location into AX<br />
+lodsl		       --&gt;	load a double word from memory location into EAX<br />
+<br />
+The loading is always done into EAX register and the source string has to be pointed to by ESI.<br />
+<br />
+The register ESI would be automatically incremented or decremented based on DF flag after the LODSx instruction executes.<br />
+<br />
+<br />
+<b>8.	Storing Strings from registers into memory location (STOSx series)</b><br />
+<br />
+stosb		--&gt;	store a byte from AL into memory location<br />
+stosw		--&gt;	store a word from AX into memory location<br />
+stosl		--&gt;	stores a double word from EAX into memory location<br />
+<br />
+The storing is always done from EAX register and the EDI points to the destination memory.<br />
+<br />
+The register EDI would be automatically incremented or decremented based on DF flat after the STOSx instruction executes.<br />
+<br />
+<b>9.	Comparing Strings (CMPSx series to compare various strings)</b><br />
+<br />
+cmpsb		--&gt;	compares a byte value<br />
+cmpsw		--&gt;	compares a word value<br />
+cmpsl		--&gt; 	compares a double word value<br />
+<br />
+For comparison, the ESI should point to the source string and EDI should point to the destination string.<br />
+<br />
+The register ESI and EDI would automatically incremented or decremented based on the DF flag after the CMPSx instruction executes.<br />
+When CMPSx instruction executes, it subtracts the destination string from the source string and appropriately sets the Zero Flag (ZF) in EFLAGS register. When the comparison matches, ZF is set to ‘0’, else it is set to ‘1’.<br />
+<br />
+*Remember that when ZF or DF are ‘set’, they have a numeral value of ‘1’ and when they are ‘not set’, the have a numeral value of ‘0’.<br />
+<br />
+CLD		--&gt;	clear the DF (DF = 0). ESI and EDI would get incremented<br />
+STD		--&gt;	set the DF (DF = 1). ESI and EDI would get decremented<br />
+CMPSx	--&gt;	When both of the strings are same, the subtraction of destination from source comes out to be ‘0’ and ZF gets set i.e. it gets a value of ‘1’<br />
+CMPSx		--&gt;	When both the strings are different, ZF gets a value of ‘0’ and is not set.<br />
+<br />
+(gdb) info registers		--&gt;	 would show only the ‘set’ components of EFLAGS<br />
+<br />
+GDB would be covered in detail in later part.<br />
+<br />
+<b>to be contd...</b>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><i>[*] To follow the path: look to the master, follow the master,  walk with the master, see through the master,<br />
+               ------>  become the master!!! <------<br />
+[*] Everyone has a will to WIN but very few have the will to prepare to WIN<br />
+[*] Invest yourself in everything you do, there's fun in being serious</i></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1177" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_1177" class="newreply" href="newreply485d.html?do=newreply&amp;p=1177" rel="nofollow" title="Reply With Quote"><img id="quoteimg_1177" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_1193">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">10-10-2010,&nbsp;<span class="time">07:03 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1193" href="showthreadd50a.html?t=370&amp;p=1193&amp;viewfull=1#post1193" class="postcounter">#4</a><a id="postcount1193" name="4"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member5626.html?u=2" title="b0nd is offline"><strong>b0nd</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member5626.html?u=2" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9847.html?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatee111.html?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog5626.html?u=2" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listf90b.html?r=author/2-b0nd" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="b0nd is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				... I am no Expert b0nd.g4h@gmail.com
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_1193_2" title="b0nd is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="member5626.html?u=2" title="b0nd is offline">
+				<img src="BondLogobda9.jpg?u=2&amp;dateline=1278296558" alt="b0nd's Avatar" title="b0nd's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>irc.freenode.net #g4h</dd>
+					
+					<dt>Posts</dt> <dd>744</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<h2 class="title icon">
+					Assembly for Hackers - Data Accessing Modes
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_1193">
+						<blockquote class="postcontent restore ">
+							<b>Data Accessing Modes</b><br />
+<br />
+Data accessing modes or methods are different ways a processor can adopt to access data. This section will deal with how those addressing modes are represented in assembly language instructions.<br />
+<br />
+The general form of memory address references is following:<br />
+<br />
+<b>BaseAddress( %Offset, %Index, DataSize)</b><br />
+<br />
+Perform the following calculation to calculate the address:<br />
+<br />
+<b>Final_address = BaseAddress + %Offset + (DataSize x %Index)</b><br />
+<br />
+BaseAddress and DataSize must both be constants, while the other two, i.e. %Offset and %Index, must be registers. If any of the pieces is left out, it is just substituted with zero in the equation.<br />
+<br />
+All of the following discussed addressing modes except immediate addressing mode can be represented in this fashion.<br />
+<br />
+If you are new to this stuff, you might not be able to digest and understand it properly. So just go through them once and do keep referring them while programming.<br />
+<br />
+<b>1.	Immediate Addressing Mode</b><br />
+<br />
+Instruction --&gt; movl $10, %eax<br />
+<br />
+It says; load the value 10 into the register eax. This mode is used to load direct values into registers or memory location. Please pay attention to the $ sign. It’s the $ sign which is making it “Immediate Addressing Mode”. Without it, the instruction would instruct to load the ‘value’ present at the memory location 10 into eax rather than the number 10 itself and thus making it “Direct Addressing Mode” instead of “Immediate Addressing Mode”.<br />
+<br />
+<b>2.	Direct Addressing Mode</b><br />
+<br />
+Instruction --&gt; movl ADDRESS, %eax<br />
+<br />
+Hence, this is done by only using the BaseAddress portion, and rests of the fields have been substituted with zero in the equation.<br />
+<br />
+It says; load the value at the ADDRESS into the register eax. This terminology should be quite clear to the readers acquainted with pointers in programming languages.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				.section .data<br />
+	IntValue:<br />
+<div style="margin-left:40px">		.int 16</div>.section .text<br />
+	<div style="margin-left:40px">.globl _start<br />
+	_start:<br />
+	movl IntValue, %eax</div>
+			
+		</div>
+	</div>
+</div>The above code will pass the value 16 into register eax. Please do not worry about the code if you are not comfortable with it at the current moment. They would be clearer as you proceed with the document.<br />
+<br />
+Another example could be:<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				movl 1002, %eax.
+			
+		</div>
+	</div>
+</div>It is Direct Addressing Mode considering 1002 as some memory address containing some value. <br />
+<br />
+<b>3.	Indirect Addressing Mode</b><br />
+<br />
+Instruction --&gt; movl (%eax), %ebx<br />
+<br />
+It says; eax is holding some address, and we want to move the value at that address into register ebx. Hence, the “Indirect Addressing Mode” loads a value from the address indicated by a register.<br />
+<br />
+A very nice example of this addressing mode is to obtain the top of the stack without popping out the top value:<br />
+<br />
+movl (%esp), %eax<br />
+<br />
+<br />
+<b>4.	Indexed Addressing Mode</b><br />
+<br />
+Instruction --&gt; movl BaseAddress(%Offset , %Index, DataSize), %DestinationRegister<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				.section .data<br />
+	<div style="margin-left:40px">IntArray:<br />
+		.long 1, 2, 3, 4, 5</div>.section .text<br />
+<div style="margin-left:40px">.globl _start<br />
+_start:<br />
+movl $0, %esi<br />
+movl $0, %edi<br />
+movl IntArray(%esi,  %edi, 4), %eax </div>
+			
+		</div>
+	</div>
+</div>This will move the value “1” from the initialized array into the register eax. <br />
+Actually the above statement says, “start at the beginning of IntArray as the %Offset is zero, and take the first item number (because %Index is 0 and the counting of array starts from 0 itself).<br />
+Also remember that each number takes up four storage locations (because data type is ‘long’ i.e. 4 bytes).”<br />
+<br />
+If edi is incremented to 1 i.e. if the %Index holds numeral value 1, the last code statement would move the number ‘2’ from IntArray into eax.<br />
+<br />
+<br />
+<b>5.	Base Pointer Addressing Mode</b><br />
+<br />
+Instruction --&gt; movl 4(%eax), %ebx<br />
+<br />
+Base-pointer addressing is similar to indirect addressing, except that it adds a constant value to the address in the register.<br />
+<br />
+movl (%esp), %eax	 --&gt; Indirect addressing mode. It would copy the value on the top of the stack into eax<br />
+<br />
+movl 4(%esp), %eax	 --&gt; Base pointer addressing mode to access the 2nd top value on a stack<br />
+<br />
+movl $9, 4(%edi) 	--&gt; copy the value 9 in the memory pointed out by (edi + 4)<br />
+<br />
+movl $9, -2(%edi) 	--&gt; copy the value 9 in the memory pointed out by (edi – 2)<br />
+<br />
+We would be using base pointer addressing mode very frequently while making programs in this guide.<br />
+<br />
+<br />
+<b>6.	Register Addressing Mode</b><br />
+<br />
+Instruction --&gt; movl %eax, %ebx<br />
+<br />
+Register mode simply moves data in or out of a register.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><i>[*] To follow the path: look to the master, follow the master,  walk with the master, see through the master,<br />
+               ------>  become the master!!! <------<br />
+[*] Everyone has a will to WIN but very few have the will to prepare to WIN<br />
+[*] Invest yourself in everything you do, there's fun in being serious</i></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1193" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_1193" class="newreply" href="newreply4b7b.html?do=newreply&amp;p=1193" rel="nofollow" title="Reply With Quote"><img id="quoteimg_1193" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_1194">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">10-10-2010,&nbsp;<span class="time">07:14 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1194" href="showthread8b5e-2.html?t=370&amp;p=1194&amp;viewfull=1#post1194" class="postcounter">#5</a><a id="postcount1194" name="5"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member5626.html?u=2" title="b0nd is offline"><strong>b0nd</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member5626.html?u=2" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9847.html?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatee111.html?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog5626.html?u=2" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listf90b.html?r=author/2-b0nd" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="b0nd is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				... I am no Expert b0nd.g4h@gmail.com
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_1194_2" title="b0nd is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="member5626.html?u=2" title="b0nd is offline">
+				<img src="BondLogobda9.jpg?u=2&amp;dateline=1278296558" alt="b0nd's Avatar" title="b0nd's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>irc.freenode.net #g4h</dd>
+					
+					<dt>Posts</dt> <dd>744</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<h2 class="title icon">
+					Assembly for Hackers - Data Accessing Modes
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_1194">
+						<blockquote class="postcontent restore ">
+							<b>Few examples</b><br />
+<br />
+Being said the above terminology; let us play moving some values in and out of memory/registers for practice.<br />
+<br />
+Instead of taking examples one-by-one at this stage, let us pen down what generally arouses in mind of a newbie programmer.<br />
+<br />
+Before that, we need to declare some memory locations and keep in mind that while “moving” the data from “source” to “destination” does not actually change the value at source. It is simply copied into the destination contrary to the word “move”.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				.section .data<br />
+     <div style="margin-left:40px">mem_location:<br />
+.int 10<br />
+IntegerArray:<br />
+            .int 10, 20, 30, 40, 50</div>
+			
+		</div>
+	</div>
+</div>	<br />
+<b>1.	How to move a value 15 in register?</b><br />
+movl $15, %eax		--&gt; 	Immediate Addressing Mode<br />
+<br />
+<b>2.	How to move a value 15 in the location?</b><br />
+movl $15, mem_location		--&gt; This would change the value in mem_location from 10 to 15<br />
+<br />
+<b>3.	How to move the value in the mem_location in a register and vice versa?</b><br />
+movl mem_location, %eax<br />
+movl %eax, mem_location<br />
+<br />
+<b>4.	What if I need to copy the address of mem_location in a register?</b> i.e. the value stored in the register would be the addess of the mem_location<br />
+<br />
+movl $mem_location, %eax	--&gt; 	Notice the prepended “$” dollar to memory location<br />
+<br />
+print &amp;mem_location = print /x $eax (Some GDB terminology you would come across later)<br />
+	Similarly, movl $mem_location, another_location, will load the address of mem_location to another_location.<br />
+<br />
+<b>5.	What if I need to copy something from one register to another?</b><br />
+<br />
+movl %eax, %ebx	--&gt; 	To move a 32 bit value<br />
+movw %ax, %bx		--&gt; 	To move a 16 bit value<br />
+movb %ah, %bh		--&gt;	To move a 8 bit value.<br />
+<br />
+Bottom line is that both, the source and destination, should be of same size.<br />
+<br />
+<b>6.	How to access value in an array?</b><br />
+<br />
+BaseAddress(Offset, Index, Data_Size)<br />
+Here the trap is, the “Offset” and “Index” needs to be mentioned in registers. “Data_Size” would be an integer value and it’s basically the size of the data type under operation.<br />
+Let us say you want to change the 4th variable of array to 44, following would be the instructions:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				movl $0, %eax<br />
+movl $3, %ebx<br />
+movl $44, IntegerArray(%eax, %ebx, 4)
+			
+		</div>
+	</div>
+</div><b>7.	How to do indirectly (Indirect Addressing Mode)?</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				movl $mem_location, %eax	--&gt; move the address of label mem_location into register eax<br />
+<br />
+movl (%eax), %ebx	--&gt; move the value at the address stored in register eax into register ebx i.e. mov the value of label mem_location into register ebx<br />
+<br />
+movl $35, (%eax)	--&gt; move the value 35 at the location pointed by the address stored in register eax i.e. here in the current case, the current value of label mem_location would be over written with integer value 35
+			
+		</div>
+	</div>
+</div>to be contd...
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><i>[*] To follow the path: look to the master, follow the master,  walk with the master, see through the master,<br />
+               ------>  become the master!!! <------<br />
+[*] Everyone has a will to WIN but very few have the will to prepare to WIN<br />
+[*] Invest yourself in everything you do, there's fun in being serious</i></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1194" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_1194" class="newreply" href="newreply39ab.html?do=newreply&amp;p=1194" rel="nofollow" title="Reply With Quote"><img id="quoteimg_1194" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_1198">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">10-11-2010,&nbsp;<span class="time">01:58 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1198" href="showthread4677.html?t=370&amp;p=1198&amp;viewfull=1#post1198" class="postcounter">#6</a><a id="postcount1198" name="6"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member5626.html?u=2" title="b0nd is offline"><strong>b0nd</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member5626.html?u=2" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9847.html?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatee111.html?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog5626.html?u=2" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listf90b.html?r=author/2-b0nd" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="b0nd is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				... I am no Expert b0nd.g4h@gmail.com
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_1198_2" title="b0nd is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="member5626.html?u=2" title="b0nd is offline">
+				<img src="BondLogobda9.jpg?u=2&amp;dateline=1278296558" alt="b0nd's Avatar" title="b0nd's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>irc.freenode.net #g4h</dd>
+					
+					<dt>Posts</dt> <dd>744</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<h2 class="title icon">
+					Assembly for Hackers - Structure of Assembly Language Program
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_1198">
+						<blockquote class="postcontent restore ">
+							<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				# Start of Program.<br />
+# Anything after the symbol “#”is a comment alike many other programming languages.<br />
+# Any assembly program has following three sections and structure:<br />
+<br />
+<b>.section .data</b><br />
+<div style="margin-left:40px"><b>}</b> All initialized data goes here</div><br />
+<b>.section .bss</b><br />
+<div style="margin-left:40px"><b>}</b> All uninitialized data goes here</div><br />
+<b>.section .text<br />
+	<div style="margin-left:40px">.globl _start<br />
+	_start:</div></b><br />
+		<div style="margin-left:40px"><div style="margin-left:40px">Program Instructions<br />
+		More Instructions<br />
+		Some more Instructions</div></div># End of Program
+			
+		</div>
+	</div>
+</div><br />
+<b>.section .data</b><br />
+	<br />
+Under this section you initialize your data. The initialized data will consume memory and would contribute in the size of executable file. The space is reserved during compile time only. Some examples of declaration could be:<br />
+<br />
+.ascii			--&gt; 	A non-NULL terminated string<br />
+.asciz			--&gt;	A NULL terminated string<br />
+.byte			--&gt; 	1 byte value<br />
+.short			--&gt; 	16 bit integer<br />
+.int			--&gt;	32 bit integer<br />
+.long 10			--&gt;	What about it?<br />
+.float			--&gt; 	Single precision floating point number<br />
+.double			--&gt;	Double precision floating point number<br />
+.int 10, 20, 30, 40, 50 	--&gt; 	Declaration of Integer Array<br />
+db ‘/bin/bash’	--&gt; 	The DB, or define byte directive (it’s not technically an instruction), allows us to set aside space in memory for a string<br />
+<br />
+<b>.section .bss</b><br />
+<br />
+All uninitialized data is stored here. Anything declared in this segment is created at run time. Hence, whatever you declare here is not going to occupy any space inside the executable. Only when the program is loaded into memory, the space actually will be created. Following could be the declaration examples:<br />
+<br />
+<div style="margin-left:40px">.comm buffer, 1000	--&gt;	declares a ‘buffer’ of 1000 bytes. ‘buffer’ would be the Label_name i.e. it would refer to the location that follows it.<br />
+<br />
+	 .comm	 		--&gt; 	declares common memory area<br />
+	 .lcomm			--&gt; 	declares local common memory area</div><br />
+This section can reserve storage, but it can not initialize it. This section is primarily useful for buffers because we do not need to initialize them anyway; we just need to reserve storage.<br />
+<br />
+<b>.section .text</b><br />
+<br />
+This section comprises of program instructions.<br />
+<br />
+<div style="margin-left:40px">.globl _start<br />
+_start:</div><br />
+ This is somewhat like the “main()” function of ‘C’ programming language, i.e. assembler would hunt for it to be treated as the start of the program.<br />
+<br />
+We are free to include only that section of program which has some data or significance in our program. For example, if we do not have any uninitialized data in our program, we can exclude the .bss section from our program without any harm.<br />
+<br />
+to be contd...
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><i>[*] To follow the path: look to the master, follow the master,  walk with the master, see through the master,<br />
+               ------>  become the master!!! <------<br />
+[*] Everyone has a will to WIN but very few have the will to prepare to WIN<br />
+[*] Invest yourself in everything you do, there's fun in being serious</i></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1198" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_1198" class="newreply" href="newreply33de.html?do=newreply&amp;p=1198" rel="nofollow" title="Reply With Quote"><img id="quoteimg_1198" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_1201">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">10-11-2010,&nbsp;<span class="time">10:31 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1201" href="showthread01aa.html?t=370&amp;p=1201&amp;viewfull=1#post1201" class="postcounter">#7</a><a id="postcount1201" name="7"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberad86.html?u=30" title="pseud0cod3r is offline"><strong>pseud0cod3r</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberad86.html?u=30" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search5214.html?do=finduser&amp;userid=30&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privateb122.html?do=newpm&amp;u=30" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogad86.html?u=30" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<a href="../external.html?link=http://m47r1x.co.cc/" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="list19cb.html?r=author/30-pseud0cod3r" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="pseud0cod3r is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Garage Newcomer
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_1201_30" title="pseud0cod3r is on a distinguished road">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>/dev/random</dd>
+					
+					<dt>Posts</dt> <dd>19</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_1201">
+						<blockquote class="postcontent restore ">
+							And yes grab the book Professional Assembly Language and start reading a good book for starters.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1201" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_1201" class="newreply" href="newreply049e-2.html?do=newreply&amp;p=1201" rel="nofollow" title="Reply With Quote"><img id="quoteimg_1201" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_1290">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">10-25-2010,&nbsp;<span class="time">08:56 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1290" href="showthread6085.html?t=370&amp;p=1290&amp;viewfull=1#post1290" class="postcounter">#8</a><a id="postcount1290" name="8"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member5626.html?u=2" title="b0nd is offline"><strong>b0nd</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member5626.html?u=2" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9847.html?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatee111.html?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog5626.html?u=2" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listf90b.html?r=author/2-b0nd" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="b0nd is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				... I am no Expert b0nd.g4h@gmail.com
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_1290_2" title="b0nd is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="member5626.html?u=2" title="b0nd is offline">
+				<img src="BondLogobda9.jpg?u=2&amp;dateline=1278296558" alt="b0nd's Avatar" title="b0nd's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>irc.freenode.net #g4h</dd>
+					
+					<dt>Posts</dt> <dd>744</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<h2 class="title icon">
+					Essential GDB basics to analyze the code – Essential for debugging
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_1290">
+						<blockquote class="postcontent restore ">
+							Learn your debugger well to debug the code efficiently. This section comprises of some tricks/commands/short-cuts to use GDB efficiently. To cut it short, it’s a cheat sheet for GDB<br />
+<br />
+<b>1.</b>	If intending to open compiled ‘C’ programs using GDB, you need to tell your compiler to compile your code with symbolic debugging information included. E.g.<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				# gcc –g –o hello hello.c<br />
+# gcc –ggdb –o hello hello.c<br />
+# g++ -g –o hello hello.c
+			
+		</div>
+	</div>
+</div><b>2.</b>	To run the program in GDB, do either of the following:<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				# gdb ./&lt;binary&gt; [Return Key] 	--&gt; This will open up the binary in GDB<br />
+# gdb [Return Key] 	--&gt; This will open up the debugger without loading any program. On the gdb prompt, pass the command “file &lt;binary_name&gt;” and that will cause the executable to be loaded up:<br />
+(gdb) file &lt;binary_name&gt; [Return Key]<br />
+# gdb –tui ./&lt;binary&gt; [Return Key] 	--&gt; For console-cum-GUI GDB
+			
+		</div>
+	</div>
+</div><b>3.</b>	If arguments as well have to be passed to the program to be loaded into GDB, following options can be opted:<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				# gdb &lt;binary&gt; --args arg1 arg2 arg3 …. argN [Return Key]<br />
+Or<br />
+# gdb &lt;binary&gt; [Return Key]<br />
+(gdb) run arg1 arg2 arg3 ….. argN
+			
+		</div>
+	</div>
+</div><b>4.</b>	Hitting the ‘RETURN’ at gdb prompt will repeat the last command entered.<br />
+<br />
+<b>5.</b>	Break Points<br />
+Use the “break” or “b” command at gdb prompt to specify a location which could be a function name, a line number or a source file and line number.<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				Set Break Point<br />
+	break main, 		to set a break point at the function “main” 			<br />
+	break 5, 		to set a break point at the code line number 5<br />
+	break hello.c:5, 		to set a break point at code line number 5 of imported file hello<br />
+	break *_start+1, 	Include “nop” on the next line.
+			
+		</div>
+	</div>
+</div>Check Break Point<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				&#61672;	info breakpoints, 	to list the current break points ( type ‘i b’ without quotes for shortcut)<br />
+<br />
+Clear Break Point<br />
+&#61672;	clear main		to clear the break point set at particular function<br />
+&#61672;	delete &lt;breakpoint number&gt;	Check it out
+			
+		</div>
+	</div>
+</div>&#61672;	If the program has already been “run” but you forget to set breakpoints, hit CTRL-C and that will stop the program where ever it happens to be and return you to the gdb prompt. At that point, you can set up a proper breakpoint somewhere and ‘continue’ to that break point.<br />
+<br />
+<b>6.</b>	‘next’, and ‘step’ (s for shortcut) to proceed step by step after you have hit the breakpoint. ‘continue’ (c) to continue until next breakpoint or end of program.<br />
+One shortcut could be just hitting RETURN as it repeats the last command entered. This will save you typing ‘next’ or’s’ over and over again.<br />
+<br />
+<b>7.</b>	Following and the next point (8) are gdb commands which you would use very frequently while debugging your program:<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				(gdb) list				To list the source code of executable loaded<br />
+(gdb) disassemble &lt;function_name&gt;	To dump the assembly code of function referred<br />
+(gdb) help &lt;keyword&gt;		gdb help pages<br />
+(gdb) info registers			To see the content and state of all registers<br />
+(gdb) info variables			To see all variables and their respective addresses
+			
+		</div>
+	</div>
+</div><br />
+<b>8.</b>	Examine command<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				 (gdb) print variable_name		To see the value of a variable in decimal<br />
+(gdb) print /x variable_name		To see the value of a variable in hex<br />
+(gdb) print /c variable_name		To see the value of a variable in ASCII<br />
+(gdb) print &amp;Label_name		To see the address of Label_name<br />
+(gdb) print /x &amp;Label_name		To see the address of Lable_name in better format<br />
+(gdb) x/FMT &amp;Label_name		To see the value of variable (useful in case of integers)<br />
+(gdb) x/1s &amp;Label_name		To see the whole string in single-shot (useful in case of strings)<br />
+(gdb) x/1s $register			To see the whole string in single-shot located at the address stored in register<br />
+(gdb) x/1s 0x080000 i.e address	To see the whole string in single-shot at a particular address<br />
+(gdb) print /c $eax			To see the value in register in ASCII<br />
+(gdb) print /d $eax			To see the value in register in Decimal<br />
+(gdb) print /x $eax			To see the value in register in HEX<br />
+(gdb) x/FMT Address			Address could be something like 0x08.. or ‘&amp;Label_name’
+			
+		</div>
+	</div>
+</div>&#61664; If there is not Label_name, take the address and fetch to examine command
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><i>[*] To follow the path: look to the master, follow the master,  walk with the master, see through the master,<br />
+               ------>  become the master!!! <------<br />
+[*] Everyone has a will to WIN but very few have the will to prepare to WIN<br />
+[*] Invest yourself in everything you do, there's fun in being serious</i></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1290" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_1290" class="newreply" href="newreply09a9.html?do=newreply&amp;p=1290" rel="nofollow" title="Reply With Quote"><img id="quoteimg_1290" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_1348">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">10-29-2010,&nbsp;<span class="time">08:02 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1348" href="showthreaddf45.html?t=370&amp;p=1348&amp;viewfull=1#post1348" class="postcounter">#9</a><a id="postcount1348" name="9"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member5626.html?u=2" title="b0nd is offline"><strong>b0nd</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member5626.html?u=2" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9847.html?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatee111.html?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog5626.html?u=2" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listf90b.html?r=author/2-b0nd" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="b0nd is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				... I am no Expert b0nd.g4h@gmail.com
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_1348_2" title="b0nd is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="member5626.html?u=2" title="b0nd is offline">
+				<img src="BondLogobda9.jpg?u=2&amp;dateline=1278296558" alt="b0nd's Avatar" title="b0nd's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>irc.freenode.net #g4h</dd>
+					
+					<dt>Posts</dt> <dd>744</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<h2 class="title icon">
+					Program 1 - The Exit call
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_1348">
+						<blockquote class="postcontent restore ">
+							Purpose	To exit the program “cleanly” and pass the exit code to the Linux kernel<br />
+Input	Nothing<br />
+Program Flow	<br />
+<div style="margin-left:40px">•	Call the “exit()” function and exit out of program<br />
+•	Check the return code at console</div>Output	Nothing. Just check the exit code.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				# Program to explain the way to exit() from a Linux Assembly Program<br />
+<br />
+.section .data<br />
+<br />
+.section .bss<br />
+<br />
+.section .text<br />
+<div style="margin-left:40px">.globl _start<br />
+	<br />
+_start:<br />
+movl $1, %eax<br />
+movl $0, %ebx<br />
+int $0x80</div># End of program
+			
+		</div>
+	</div>
+</div><br />
+<b>Let’s dissect the program</b><br />
+<br />
+We have not initialized anything in .data or .bss section as we are only interested in exiting from the program successfully. Hence just for the sake of completeness they have been included; else they can be dropped as well from the program code.<br />
+<br />
+The ‘C’ programming terminology for exit is: <br />
+exit(integer-status)<br />
+e.g. exit(0) or exit(1)<br />
+<br />
+As a programmer, we generally pass the integer value ‘0’ on success and integer value ‘1’ on failure. So the program logic is, call the exit function and pass the relevant integer value to it as an exit integer-status.<br />
+<br />
+Following are the steps we need to follow in Assembly language programs.<br />
+•	Load the system call for relevant function (i.e. call the exit function in current program)<br />
+•	Load it’s parameters (i.e. pass the integer value to it)<br />
+•	Call Linux kernel interrupt to run the command (i.e. execute the exit function in current program)<br />
+<br />
+The system call is always loaded into the register eax with the instruction:<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">movl $System_Call_Number, %eax</pre>
+</div>In the current case of exit, the System_Call_Number is ‘1’, hence the instruction would be:<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">movl $1, %eax</pre>
+</div>The numbers of parameters required for the successful function call are fetched sequentially into ebx, ecx, edx and so on.<br />
+<br />
+In the current case of exit, only one parameter is required which is either 0 (success status) or 1 (failure status), hence just ebx needs to be loaded:<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">movl $0, %ebx</pre>
+</div>(In the example of read() or write() function call we will see how other parameters are loaded into registers)<br />
+<br />
+Finally the control is handed over to Linux kernel by calling the interrupt int $0x80 to run the exit command.<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">int $0x80</pre>
+</div>So the following three instructions in assembly language are equivalent to the exit(0) function call in ‘C’ programming language:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:60px;">movl $1, %eax
+movl $0, %ebx
+int $0x80</pre>
+</div>For all such calls we need to follow the same pattern i.e. load the system call number into the register eax and start loading the required parameters into ebx, ecx, edx and so on. Finally call the Linux kernel interrupt with the instruction int $0x80 and run the desired command.<br />
+<br />
+EAX --&gt; System Call number<br />
+EBX --&gt; First argument<br />
+ECX --&gt; Second argument<br />
+EDX --&gt; Third argument<br />
+ESI   --&gt; Fourth argument<br />
+EDI  --&gt; Fifth argument<br />
+<br />
+For system calls which require more than 5 arguments, we go ahead and pass a pointer to structures containing those arguments.<br />
+<br />
+<br />
+<b>Execution</b><br />
+<br />
+Name the program          --&gt; exit.s<br />
+Assemble the program   --&gt; $ as –gstabs –o exit.o exit.s<br />
+Link the program             --&gt; $ ld –o exit exit.o<br />
+Execute the program      --&gt; $ ./exit<br />
+Check the output             --&gt; $ echo $?<br />
+You must get ‘0’ at the console as output.<br />
+<br />
+If any of the above commands report error(s), do spell check for the source code and commands. After correcting the source code, you have to re-run all the commands.<br />
+<br />
+You must always re-assemble and re-link assembly programs after the source code file has been modified
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><i>[*] To follow the path: look to the master, follow the master,  walk with the master, see through the master,<br />
+               ------>  become the master!!! <------<br />
+[*] Everyone has a will to WIN but very few have the will to prepare to WIN<br />
+[*] Invest yourself in everything you do, there's fun in being serious</i></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1348" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_1348" class="newreply" href="newreplye4d3.html?do=newreply&amp;p=1348" rel="nofollow" title="Reply With Quote"><img id="quoteimg_1348" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_1624">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">11-16-2010,&nbsp;<span class="time">10:37 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1624" href="showthread2c6e.html?t=370&amp;p=1624&amp;viewfull=1#post1624" class="postcounter">#10</a><a id="postcount1624" name="10"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberc1f0.html?u=18" title="prashant_uniyal is offline"><strong>prashant_uniyal</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberc1f0.html?u=18" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchae80.html?do=finduser&amp;userid=18&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privateb48e.html?do=newpm&amp;u=18" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogc1f0.html?u=18" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<a href="../external.html?link=http://hackingethics.wordpress.com/" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="list5954.html?r=author/18-prashant_uniyal" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="prashant_uniyal is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Security Analyst
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_1624_18" title="prashant_uniyal has a spectacular aura about">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="memberc1f0.html?u=18" title="prashant_uniyal is offline">
+				<img src="parasf2b13.jpg?u=18&amp;dateline=1393305256" alt="prashant_uniyal's Avatar" title="prashant_uniyal's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>localhost</dd>
+					
+					<dt>Posts</dt> <dd>505</dd>	
+					<dt>Blog Entries</dt><dd><a href="blogc1f0.html?u=18">8</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+							
+						
+				<div class="content">
+					<div id="post_message_1624">
+						<blockquote class="postcontent restore ">
+							Assembly is really essential to step into exploitation and hacking ..Thanks a million b0nd bro for the wonderful effort.. <img src="images/smilies/smile.html" border="0" alt="" title="Smile" class="inlineimg" />
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><i><b>The three great essentials to achieve anything worth while are: Hard work, Stick-to-itiveness, and Common sense.</b></i> - <b>Thomas A. Edison</b><br />
+__________________________________________________  _____________________</div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1624" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_1624" class="newreply" href="newreplyddd4.html?do=newreply&amp;p=1624" rel="nofollow" title="Reply With Quote"><img id="quoteimg_1624" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+		</ol>
+                <div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<form action="../external.html?link=http://garage4hackers.com/showthread.php?t=370&amp;page=2" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="370" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 11">1</a></span><span><a href="showthreadb025.html?t=370&amp;page=2" title="Show results 11 to 11 of 11">2</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="showthreadb025.html?t=370&amp;page=2" title="Next Page - Results 11 to 11 of 11"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="showthreadb025.html?t=370&amp;page=2" title="Last Page - Results 11 to 11 of 11">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+	
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="showthreaddf69.html?t=370" class="popupctrl"><span class="ctrlcontainer">Assembly</span></a>
+		<a href="showthreaddf69.html?t=370#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.html">Settings</a></li>
+		<li><a href="private.html">Private Messages</a></li>
+		<li><a href="subscription.html">Subscriptions</a></li>
+		<li><a href="online.html">Who's Online</a></li>
+		<li><a href="search.html">Search Forums</a></li>
+		<li><a href="forum.html">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forumdisplay58da.html?f=1">Garage Network</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay12a3.html?f=2">Garage Announcements</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaye57d.html?f=58">Bravo - Null 2012</a></li>
+			
+		
+			
+				<li><a href="forumdisplay0756.html?f=59">Garage Local Chapter Meets</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay31e6.html?f=4">Garage Rules</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye774.html?f=5">Feedback &amp; Suggestions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayd42b.html?f=7">Introduce Your Self</a></li>
+			
+		
+			
+				<li><a href="forumdisplay2b89.html?f=38">Shout-box</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplaycf19.html?f=6">Garage Lounge</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay5579.html?f=30">Hacking for Beginners</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay6ac3.html?f=57">Did You Know?</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay957d.html?f=8">Security &amp; Hacking News Thread</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3215.html?f=36">Career in InfoSec</a></li>
+			
+		
+			
+				<li><a href="forumdisplay814c.html?f=29">Request Zone</a></li>
+			
+		
+			
+				<li><a href="forumdisplay13b6.html?f=27">Noobs Corner</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayfdc5.html?f=9">Hacking and Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplayfac0.html?f=55">Tip | Trick of the Day</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4a6.html?f=66">ICS / SCADA Security</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6111.html?f=67">Internet of Things - IoT</a></li>
+			
+		
+			
+				<li><a href="forumdisplay15ca.html?f=10">Network Vulnerabiltity Assessment &amp; Penetration Testing</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaya05c.html?f=56">Post Exploitation</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay8a83.html?f=11">Web Application Penetration Testing</a></li>
+			
+		
+			
+				<li><a href="forumdisplay01c9.html?f=12">Wireless and Bluetooth Hacking</a></li>
+			
+		
+			
+				<li><a href="forumdisplay48ab.html?f=17">Computer Forensics and Incident Handling</a></li>
+			
+		
+			
+				<li><a href="forumdisplay218b.html?f=19">Physical Security and Social Engineering</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb09f.html?f=15">General Security &amp; Best Practices</a></li>
+			
+		
+			
+				<li><a href="forumdisplay907f.html?f=42">Security and Hacking Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplay9e0d.html?f=54">Mobile Security</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay9780.html?f=14">General Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay9df8.html?f=31">Programming</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay65b9.html?f=35">Assembly</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4f1.html?f=32">C/C++</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb0a0.html?f=34">Perl</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb8c1.html?f=60">PHP</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6c4e.html?f=33">Python</a></li>
+			
+		
+			
+				<li><a href="forumdisplay208f.html?f=51">Linux Shell / Bash Programming</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3238.html?f=47">Windows Batch Programming</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayce40.html?f=28">BackTrack and Other Linux Distributions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf2fa.html?f=16">Networks &amp; Networking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya213.html?f=18">Cloud Computing</a></li>
+			
+		
+			
+				<li><a href="forumdisplaydfa4.html?f=39">Security Podcast and Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya3f5.html?f=40">Miscellanous Thread</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay30ac.html?f=49">Brush Up Your Skills</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayffeb.html?f=20">Experts Forum</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplaycdba.html?f=48">My Meanest Hacks</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf6ac.html?f=37">Hacking &amp; Security Books and Tutorials</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8011.html?f=23">Tools &amp; Scripts</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8941.html?f=22">Exploitation Techniques</a></li>
+			
+		
+			
+				<li><a href="forumdisplay345c.html?f=24">Reverse Engineering and Application Cracking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye8b3.html?f=25">Botnets, Malwares &amp; Rootkits Analysis</a></li>
+			
+		
+			
+				<li><a href="forumdisplay107e.html?f=43">Garage4hackers Exploits</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye5f3.html?f=64">Browser Fuzzing</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+<div class="navlinks">
+	
+	<strong>&laquo;</strong>
+	<a href="showthreada788.html?t=370&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+	|
+	<a href="showthreadc209.html?t=370&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+	<strong>&raquo;</strong>
+	
+</div>
+<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info">
+	
+	
+	
+	
+	<h4 class="threadinfohead"><span class="optiontitle">Tags for this Thread</span></h4>
+	<div id="thread_tags_list" class="thread_info_block">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				
+		
+			<a href="tagsdf28.html?tag=assembly+for+hackers">assembly for hackers</a>, 
+		
+			<a href="tagse0b3.html?tag=assembly+programming">assembly programming</a>, 
+		
+			<a href="tags7c1c.html?tag=linux+assembly">linux assembly</a>
+		
+
+<img src="images/misc/11x11progress.html" id="tag_form_progress" class="inlineimg hidden" alt="" />
+			</div>
+			<p>
+				<a href="tags.html">View Tag Cloud</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+		<div class="options_block">
+			<h4 class="collapse">
+				<a class="collapse" id="collapse_posting_rules" href="showthreaddf69.html?t=370#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				<span class="optiontitle">Posting Permissions</span>
+			</h4>
+			<div id="posting_rules" class="thread_info_block">
+				
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+		<li>&nbsp;</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="miscaff0.html?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc9712.html?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#videocode" target="_blank">[VIDEO]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="misc17ec.html?do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="showthreaddf69.html?t=370#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">04:11 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

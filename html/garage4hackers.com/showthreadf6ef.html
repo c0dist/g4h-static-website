@@ -1,0 +1,1351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=2499&p=8263 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 14:18:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="Garage4Hackers(G4H) is an open security community for Information Security enthusiasts, gurus and aspirants.Members of the team dedicate time and resources towards helping other information security aspirants, sharing knowledge,spreading security awareness and promoting research." />
+<meta property="og:url" content="showthread9df6.html?t=2499" />
+<meta property="og:type" content="article" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthreadf6ef.html?t=2499&amp;p=8263";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - Exploitation Techniques - RSS Feed" href="externalb77f.php?type=RSS2&amp;forumids=22" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	<meta name="keywords" content="upload, http://www.garage4hackers.com/f30/recreation-class-329.htmlpost946, vennu, denied, question, overflow, intresting, access, buffer" />
+	<meta name="description" content="Hello all 
+First of all nice site :) 
+I'm reading vinnu's access denied book and I'm at the buffer overflow section (Rocket &amp; Missile Theories &amp; Manufacturing) 
+The problem is that I can't make overflow.exe program (the first program example) to overwrite eip with an address. I've identified the address I want to make it go and I think I input the correct string to make the buffer overflow and go to address 00401039, which I believe is this part of the program (from my assembly analysis): 
+cout" />
+
+	<title> Buffer Overflow question</title>
+	<link rel="canonical" href="showthread9df6.html?t=2499" />
+	
+	<script type="text/javascript" src="clientscript/vbulletin_textedit6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.html?v=421"></script>
+	
+	
+	
+	
+	
+	
+		<script type="text/javascript" src="clientscript/vbulletin_lightbox6719.html?v=421"></script>
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="css8d9b.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=postlist.css,showthread.css,postbit.css,attachment.css,poll.css,lightbox.css" />
+	
+
+<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a href="search8427.html?do=getnew&amp;contenttype=vBForum_Post">New Posts</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_faq"><a href="faq.html">FAQ</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="calendar.html">Calendar</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Community</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_members"><a href="memberlist.html">Member List</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Forum Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a href="forum.html?do=markread&amp;markreadhash=guest">Mark Forums Read</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_qlinks">
+							<a href="javascript://" class="popupctrl">Quick Links</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbqlink_posts"><a href="search2791.html?do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+								
+									<li id="vbqlink_leaders"><a href="showgroups.html">View Site Leaders</a></li>
+								
+							</ul>
+						</li>
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="forum.html">Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplayffeb.html?f=20">Experts Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplay8941.html?f=22">Exploitation Techniques</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> Buffer Overflow question</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=2499&p=8263 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 14:18:28 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Results 1 to 10 of 14
+			</div>
+		</div>
+	</div>
+<div id="pagetitle" class="pagetitle">
+	<h1>
+		Thread: <span class="threadtitle"><a href="showthread9df6.html?t=2499" title="Reload this Page">Buffer Overflow question</a></span>
+
+<a class="a2a_dd" href="../external.html?link=http://www.addtoany.com/share_save"><img src="../static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share/Save - My123World.Com!"/></a><script type="text/javascript">a2a_show_title=1;a2a_num_services=14;</script><script type="text/javascript" src="../static.addtoany.com/menu/page.js"></script>
+
+		
+			
+<fb:like href="showthread9df6.html?t=2499" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like>
+		
+	</h1>
+</div>
+	<div id="thread_controls" class="thread_controls">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthreadbe5e.html?t=2499&amp;pp=10&amp;page=1" accesskey="3" 
+						rel="nofollow">Show Printable Version</a></li>
+					<li><a href="sendmessagea7ad.html?do=sendtofriend&amp;t=2499"
+						rel="nofollow">Email this Page&hellip;</a></li>
+					<li>
+						
+							<a href="subscriptionbdda.html?do=addsubscription&amp;t=2499" 
+								rel="nofollow">Subscribe to this Thread&hellip;</a>
+											
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+				<li class="popupmenu searchthread" id="searchthread">
+					<h6><a class="popupctrl" href="javascript://">Search Thread</a></h6>
+					<form action="../external.html?link=http://garage4hackers.com/search.php" method="post">
+						<ul class="popupbody popuphover">
+							<li>
+								<input type="text" name="query" class="searchbox" value="Search..." tabindex="13" />
+								<input type="submit" class="button" value="Search" tabindex="14" />
+							</li>
+							<li class="formsubmit">
+								<div><a class="advancedsearchlink" href="searcha71a.html?search_type=1&amp;searchthreadid=2499&amp;contenttype=vBForum_Post">Advanced Search</a></div>
+							</li>
+						</ul>
+						<input type="hidden" name="s" value="" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="process" />
+						<input type="hidden" name="searchthreadid" value="2499" />
+						<input type="hidden" name="search_type" value="1" />
+						<input type="hidden" name="contenttype" value="vBForum_Post" />
+
+					</form>
+				</li>
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Display</a></h6>
+					<ul class="popupbody popuphover">
+						<li><a href="showthread39aa.html?t=2499&amp;p=8263&amp;mode=linear#post8263"> Switch to Linear Mode</a></li>
+						<li><a href="showthread04b5.html?t=2499&amp;mode=hybrid"> Switch to Hybrid Mode</a></li>
+						<li><label>Threaded Mode</label></li>
+					</ul>
+				</li>
+			
+
+			
+		</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+		<script type="text/javascript">
+<!--
+var imgdir_statusicon = "images/statusicon";
+var imgdir_misc = "images/misc";
+var cleargifurl = "clear.gif";
+var guestphrase = "Guest";
+var morephrase = "More replies below current depth...";
+var highlightwords = "";
+//-->
+</script>
+
+<script type="text/javascript" src="clientscript/vbulletin_thrdpostlist6719.html?v=421"></script>
+
+<script type="text/javascript">
+<!--
+// initialize some variables
+var curpostid = 8263;
+var quickreply = false;
+
+// cached posts (no page reload required to view)
+pd[8239] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8239">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">07-18-2012,&nbsp;<span class="time">02:25 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8239" href="showthread.php?t=2499&amp;p=8239&amp;viewfull=1#post8239" class="postcounter">#1</a><a id="postcount8239" name="1"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=3093" title="zazza is offline"><strong>zazza</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=3093" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=3093&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=3093" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=3093" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/3093-zazza" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="zazza is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Newcomer\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8239_3093" title="zazza is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2012</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>5</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n				<h2 class="title icon">\r\n					Buffer Overflow question\r\n				</h2>\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8239">\r\n						<blockquote class="postcontent restore ">\r\n							Hello all<br />\r\nFirst of all nice site <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\r\nI\'m reading vinnu\'s access denied book and I\'m at the buffer overflow section (Rocket &amp; Missile Theories &amp; Manufacturing)<br />\r\nThe problem is that I can\'t make overflow.exe program (the first program example) to overwrite eip with an address. I\'ve identified the address I want to make it go and I think I input the correct string to make the buffer overflow and go to address 00401039, which I believe is this part of the program (from my assembly analysis):<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:96px;">cout &lt;&lt; &quot;This is a buffer overflow example.&quot; &lt;&lt; endl;\r\ncout &lt;&lt; &quot;If string buffer will exceed 15 bytes, it will cause an\r\noverflow.&quot; &lt;&lt; endl;\r\nstrcpy (name, argv[1]);\r\nsystem(&quot;PAUSE&quot;);\r\nreturn EXIT_SUCCESS;</pre>\r\n</div>The string I input is this:<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				AAAAAAAAAAAAAAAAAAAAAAAA9^P@\r\n			\r\n		</div>\r\n	</div>\r\n</div>I attached cheat engine to the program (as it\'s the only \'debugger\' I know how to use) and verified that the return address is overwritten with my address but still it doesn\'t work (see image attachment)<br />\r\n<br />\r\nThe program crashes after the pause, it doesn\'t re-execute the code at address 00401039 so I think it doesn\'t make it to eip. <br />\r\n<br />\r\nI\'m doing it on windows xp.<br />\r\n<br />\r\nCan anybody help me please?<br />\r\n<br />\r\nThank you\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n						<div class="attachments">\r\n\r\n						\r\n\r\n						\r\n							<fieldset class="postcontent">\r\n								<legend><img src="images/misc/paperclip.png" class="inlineimg" alt="Attached Images" /> Attached Images</legend>\r\n								<img class="attach" src="attachment.php?attachmentid=455&amp;stc=1&amp;d=1342558231" alt="" />&nbsp;\r\n							</fieldset>\r\n						\r\n\r\n						\r\n\r\n						\r\n\r\n						\r\n\r\n						</div>\r\n					<!-' + '- / attachments -' + '->\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8239" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8239" class="newreply" href="newreply.php?do=newreply&amp;p=8239" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8239" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8240] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8240">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">07-18-2012,&nbsp;<span class="time">04:18 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8240" href="showthread.php?t=2499&amp;p=8240&amp;viewfull=1#post8240" class="postcounter">#2</a><a id="postcount8240" name="2"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=2412" title="revsec is offline"><strong>revsec</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=2412" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=2412&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=2412" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=2412" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/2412-revsec" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="revsec is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Newcomer\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8240_2412" title="revsec is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Mar 2012</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>2</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8240">\r\n						<blockquote class="postcontent restore ">\r\n							im intresting in access denied &quot;vennu &quot; book. can u upload it<br />\r\n<br />\r\nTIA\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8240" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8240" class="newreply" href="newreply.php?do=newreply&amp;p=8240" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8240" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8783] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8783">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">09-11-2012,&nbsp;<span class="time">04:12 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8783" href="showthread.php?t=2499&amp;p=8783&amp;viewfull=1#post8783" class="postcounter">#3</a><a id="postcount8783" name="3"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=191" title="abhaythehero is offline"><strong>abhaythehero</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=191" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=191&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=191" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=191" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="https://twitter.com/#!/abhaythehero" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/191-abhaythehero" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="abhaythehero is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Super Commando Dhruv\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8783_191" title="abhaythehero has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=191" title="abhaythehero is offline">\r\n				<img src="image.php?u=191&amp;dateline=1330713871" alt="abhaythehero\'s Avatar" title="abhaythehero\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Sep 2010</dd>\r\n					<dt>Location</dt> <dd>Lucknow/Pune,India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>466</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=191">2</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8783">\r\n						<blockquote class="postcontent restore ">\r\n							<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				<div class="bbcode_postedby">\r\n					<img src="images/misc/quote_icon.png" alt="Quote" /> Originally Posted by <strong>revsec</strong>\r\n					<a href="showthread.php?p=8240#post8240" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost-right.png" alt="View Post" /></a>\r\n				</div>\r\n				<div class="message">im intresting in access denied &quot;vennu &quot; book. can u upload it<br />\n<br />\nTIA</div>\r\n			\r\n		</div>\r\n	</div>\r\n</div><a href="http://www.garage4hackers.com/f30/recreation-class-329.html#post946" target="_blank">http://www.garage4hackers.com/f30/re...9.html#post946</a>\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer"><b><i>In the world of 0s and 1s, are you a zero or The One !</i></b></div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8783" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8783" class="newreply" href="newreply.php?do=newreply&amp;p=8783" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8783" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8241] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8241">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">07-18-2012,&nbsp;<span class="time">12:28 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8241" href="showthread.php?t=2499&amp;p=8241&amp;viewfull=1#post8241" class="postcounter">#4</a><a id="postcount8241" name="4"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=174" title="sebas_phoenix is offline"><strong>sebas_phoenix</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=174" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=174&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=174" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=174" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/174-sebas_phoenix" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="sebas_phoenix is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Member\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8241_174" title="sebas_phoenix will become famous soon enough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Sep 2010</dd>\r\n					<dt>Location</dt> <dd>Chennai</dd>\r\n					\r\n					<dt>Posts</dt> <dd>83</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=174">1</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8241">\r\n						<blockquote class="postcontent restore ">\r\n							<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				<div class="bbcode_postedby">\r\n					<img src="images/misc/quote_icon.png" alt="Quote" /> Originally Posted by <strong>zazza</strong>\r\n					<a href="showthread.php?p=8239#post8239" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost-right.png" alt="View Post" /></a>\r\n				</div>\r\n				<div class="message">Hello all<br />\nFirst of all nice site <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\nI\'m reading vinnu\'s access denied book and I\'m at the buffer overflow section (Rocket &amp; Missile Theories &amp; Manufacturing)<br />\nThe problem is that I can\'t make overflow.exe program (the first program example) to overwrite eip with an address. I\'ve identified the address I want to make it go and I think I input the correct string to make the buffer overflow and go to address 00401039, which I believe is this part of the program (from my assembly analysis):<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:96px;">cout &lt;&lt; &quot;This is a buffer overflow example.&quot; &lt;&lt; endl;\ncout &lt;&lt; &quot;If string buffer will exceed 15 bytes, it will cause an\noverflow.&quot; &lt;&lt; endl;\nstrcpy (name, argv[1]);\nsystem(&quot;PAUSE&quot;);\nreturn EXIT_SUCCESS;</pre>\r\n</div>The string I input is this:<br />\n<br />\nI attached cheat engine to the program (as it\'s the only \'debugger\' I know how to use) and verified that the return address is overwritten with my address but still it doesn\'t work (see image attachment)<br />\n<br />\nThe program crashes after the pause, it doesn\'t re-execute the code at address 00401039 so I think it doesn\'t make it to eip. <br />\n<br />\nI\'m doing it on windows xp.<br />\n<br />\nCan anybody help me please?<br />\n<br />\nThank you</div>\r\n			\r\n		</div>\r\n	</div>\r\n</div>Hello, How do you expect &quot;AAAAAAAAAAAAAAAAAAAAAAAA9^P@&quot; to overwrite the saved EIP as \'0x00401039\' , as you can see, it contains 2 bytes that are non-printable 0x00 and 0x10, what you can do (assuming 0x00401039 points to the shellcode) is that , give this as the input : &lt;no of chars to overwrite EIP&gt;+&quot;\\x39\\x10\\x40&quot; (strcpy automatically adds a 0x00) at the end. Use perl or python from the command line to give the input. Also, one more thing is that you can never directly modify EIP, what you are actually modifying is the saved return address that is stored in the stack!\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8241" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8241" class="newreply" href="newreply.php?do=newreply&amp;p=8241" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8241" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8242] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8242">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">07-18-2012,&nbsp;<span class="time">04:26 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8242" href="showthread.php?t=2499&amp;p=8242&amp;viewfull=1#post8242" class="postcounter">#5</a><a id="postcount8242" name="5"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=3093" title="zazza is offline"><strong>zazza</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=3093" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=3093&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=3093" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=3093" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/3093-zazza" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="zazza is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Newcomer\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8242_3093" title="zazza is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2012</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>5</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8242">\r\n						<blockquote class="postcontent restore ">\r\n							Hello sebas_phoenix<br />\r\nThank you for the reply. <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /> I\'m a beginner in this field so sorry for my ignorance. I\'m not doubting what you said, just wondering.<br />\r\n<br />\r\nIn the access denied book, vinnu wants this address:0x0040107E and gives this input: &lt;AA...&gt;<b>~^P@</b> (^P is actually ctrl+P). The only unprintable character in my address (0x00401039) is 0x10 and as you said, strcpy automatically adds the first 0x00. So for 0x10 I used ctrl+P as vinnu did and watching the image I attached above (circled in red) it seems that the return address is overwritten with my address. Isn\'t that enough? But still the program crashes...<br />\r\nI want to do it from the command prompt as in the tutorial, not using python / perl command line.<br />\r\n<br />\r\nThank you\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8242" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8242" class="newreply" href="newreply.php?do=newreply&amp;p=8242" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8242" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8245] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8245">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">07-18-2012,&nbsp;<span class="time">10:51 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8245" href="showthread.php?t=2499&amp;p=8245&amp;viewfull=1#post8245" class="postcounter">#6</a><a id="postcount8245" name="6"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=174" title="sebas_phoenix is offline"><strong>sebas_phoenix</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=174" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=174&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=174" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=174" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/174-sebas_phoenix" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="sebas_phoenix is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Member\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8245_174" title="sebas_phoenix will become famous soon enough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Sep 2010</dd>\r\n					<dt>Location</dt> <dd>Chennai</dd>\r\n					\r\n					<dt>Posts</dt> <dd>83</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=174">1</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8245">\r\n						<blockquote class="postcontent restore ">\r\n							<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				<div class="bbcode_postedby">\r\n					<img src="images/misc/quote_icon.png" alt="Quote" /> Originally Posted by <strong>zazza</strong>\r\n					<a href="showthread.php?p=8242#post8242" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost-right.png" alt="View Post" /></a>\r\n				</div>\r\n				<div class="message">Hello sebas_phoenix<br />\nThank you for the reply. <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /> I\'m a beginner in this field so sorry for my ignorance. I\'m not doubting what you said, just wondering.<br />\n<br />\nIn the access denied book, vinnu wants this address:0x0040107E and gives this input: &lt;AA...&gt;<b>~^P@</b> (^P is actually ctrl+P). The only unprintable character in my address (0x00401039) is 0x10 and as you said, strcpy automatically adds the first 0x00. So for 0x10 I used ctrl+P as vinnu did and watching the image I attached above (circled in red) it seems that the return address is overwritten with my address. Isn\'t that enough? But still the program crashes...<br />\nI want to do it from the command prompt as in the tutorial, not using python / perl command line.<br />\n<br />\nThank you</div>\r\n			\r\n		</div>\r\n	</div>\r\n</div>First of all, no need to be sorry. Ok , what does 0x00401039 contain? I am guessing that address contain some other part of the code since typically 0x00401000 is where the loader loads the executable image.  Can you specify the &quot;entire&quot; code so that it might be easy for me to understand what the program does completely. As for as the command line part, it is better you get acquainted with perl/python , makes your life easier..\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8245" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8245" class="newreply" href="newreply.php?do=newreply&amp;p=8245" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8245" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8247] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8247">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">07-18-2012,&nbsp;<span class="time">11:21 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8247" href="showthread.php?t=2499&amp;p=8247&amp;viewfull=1#post8247" class="postcounter">#7</a><a id="postcount8247" name="7"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=3093" title="zazza is offline"><strong>zazza</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=3093" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=3093&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=3093" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=3093" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/3093-zazza" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="zazza is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Newcomer\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8247_3093" title="zazza is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2012</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>5</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8247">\r\n						<blockquote class="postcontent restore ">\r\n							Hello <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\r\nThanks for the reply<br />\r\nThis is the entire program:<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:264px;">/* overflow.cpp */\r\n#include &lt;iostream&gt;\r\nusing namespace std;\r\nint main (int argc, char* argv[])\r\n {\r\nchar name[15];\r\nif ( argc &lt; 2)\r\n {\r\nfprintf (stderr, &quot;Usage:\\n%s &lt;string&gt;&quot;, argv[0]);\r\nexit(-1);\r\n}\r\ncout &lt;&lt; &quot;This is a buffer overflow example.&quot; &lt;&lt; endl;\r\ncout &lt;&lt; &quot;If string buffer will exceed 15 bytes, it will cause an\r\noverflow.&quot; &lt;&lt; endl;\r\n//-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-buffer overflows section code-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-\r\nstrcpy (name, argv[1]);\r\n//-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-buffer overflow section end-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-\r\nsystem(&quot;PAUSE&quot;);\r\nreturn EXIT_SUCCESS;\r\n}</pre>\r\n</div>At address <b>0x00401010</b> this instruction resides: <b>cmp dword ptr [ebp+08],02</b> which  I can tell is the <b>if ( argc &lt; 2)</b> part, then at the next address this instruction resides: <b>jnl 00401039</b>, which is the jump to the \'main\' part of the program, so I decided to redirect it directly to that address.<br />\r\n<br />\r\nEven if I input the string that vinnu provided to redirect the execution back to ‘main’ function (address 0x0040107E), which is <b>AAAAAAAAAAAAAAAAAAAA~^P@</b> (^P is ctlr+P), it still crashes. Isn\'t that strange? I though that since xp doesn\'t have the aslr feature, an exploit code will work on every xp machine that runs that program...<img src="images/smilies/confused.png" border="0" alt="" title="Confused" class="inlineimg" />\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8247" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8247" class="newreply" href="newreply.php?do=newreply&amp;p=8247" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8247" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8256] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8256">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">07-19-2012,&nbsp;<span class="time">12:53 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8256" href="showthread.php?t=2499&amp;p=8256&amp;viewfull=1#post8256" class="postcounter">#8</a><a id="postcount8256" name="8"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=174" title="sebas_phoenix is offline"><strong>sebas_phoenix</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=174" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=174&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=174" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=174" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/174-sebas_phoenix" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="sebas_phoenix is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Member\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8256_174" title="sebas_phoenix will become famous soon enough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Sep 2010</dd>\r\n					<dt>Location</dt> <dd>Chennai</dd>\r\n					\r\n					<dt>Posts</dt> <dd>83</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=174">1</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8256">\r\n						<blockquote class="postcontent restore ">\r\n							<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				<div class="bbcode_postedby">\r\n					<img src="images/misc/quote_icon.png" alt="Quote" /> Originally Posted by <strong>zazza</strong>\r\n					<a href="showthread.php?p=8247#post8247" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost-right.png" alt="View Post" /></a>\r\n				</div>\r\n				<div class="message">Hello <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\nThanks for the reply<br />\nThis is the entire program:<br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:264px;">/* overflow.cpp */\n#include &lt;iostream&gt;\nusing namespace std;\nint main (int argc, char* argv[])\n {\nchar name[15];\nif ( argc &lt; 2)\n {\nfprintf (stderr, &quot;Usage:\\n%s &lt;string&gt;&quot;, argv[0]);\nexit(-1);\n}\ncout &lt;&lt; &quot;This is a buffer overflow example.&quot; &lt;&lt; endl;\ncout &lt;&lt; &quot;If string buffer will exceed 15 bytes, it will cause an\noverflow.&quot; &lt;&lt; endl;\n//-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-buffer overflows section code-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-\nstrcpy (name, argv[1]);\n//-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-buffer overflow section end-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-\nsystem(&quot;PAUSE&quot;);\nreturn EXIT_SUCCESS;\n}</pre>\r\n</div>At address <b>0x00401010</b> this instruction resides: <b>cmp dword ptr [ebp+08],02</b> which  I can tell is the <b>if ( argc &lt; 2)</b> part, then at the next address this instruction resides: <b>jnl 00401039</b>, which is the jump to the \'main\' part of the program, so I decided to redirect it directly to that address.<br />\n<br />\nEven if I input the string that vinnu provided to redirect the execution back to &#8216;main&#8217; function (address 0x0040107E), which is <b>AAAAAAAAAAAAAAAAAAAA~^P@</b> (^P is ctlr+P), it still crashes. Isn\'t that strange? I though that since xp doesn\'t have the aslr feature, an exploit code will work on every xp machine that runs that program...<img src="images/smilies/confused.png" border="0" alt="" title="Confused" class="inlineimg" /></div>\r\n			\r\n		</div>\r\n	</div>\r\n</div><br />\nWell, I guess the problem is because when overwriting the saved EIP, you overwrite the saved EBP too, and when redirecting code to the main function after the check to see if argc&lt;2, there exists a strcpy() which takes as one of its parameters the argv[1], this will be referenced as an offset with respect to ebp then going inside the pointer to pointer to get our argv[1]. Since ebp is corrupt coz of overflow, this might crash. Or i guess  CRTStartup() is the function that sets up stuff before calling main, so main returns to CRTStartup() in windows, there might be problem in the function epilogue of main. These are the two things I can think of now without seeing it in the debugger.<br />\n<br />\nHope it helps.\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8256" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8256" class="newreply" href="newreply.php?do=newreply&amp;p=8256" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8256" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8261] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8261">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">07-19-2012,&nbsp;<span class="time">08:10 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8261" href="showthread.php?t=2499&amp;p=8261&amp;viewfull=1#post8261" class="postcounter">#9</a><a id="postcount8261" name="9"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=3093" title="zazza is offline"><strong>zazza</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=3093" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=3093&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=3093" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=3093" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/3093-zazza" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="zazza is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Newcomer\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8261_3093" title="zazza is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2012</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>5</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8261">\r\n						<blockquote class="postcontent restore ">\r\n							Hello<br />\r\nHmm... So it would be worth trying to redirect it to this command <b>system(&quot;PAUSE&quot;);</b> to see if it the problem is a faulty ebp value right?<br />\r\n<br />\r\nI got another question, isn\'t there a way to overwrite only the saved eip value? I learned that this is how the stack of a function looks:<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				null termination<br />\r\ndata buffer<br />\r\nsaved ebp<br />\r\nsaved eip\r\n			\r\n		</div>\r\n	</div>\r\n</div>As eip is under ebp, shouldn\'t I be  able to overwrite eip only? I mean using a string whose length will just overwrite the saved eip value.<br />\r\n<br />\r\nThank you for your help! I really appreciate it <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8261" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8261" class="newreply" href="newreply.php?do=newreply&amp;p=8261" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8261" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8263] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8263">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">07-20-2012,&nbsp;<span class="time">02:02 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8263" href="showthread.php?t=2499&amp;p=8263&amp;viewfull=1#post8263" class="postcounter">#10</a><a id="postcount8263" name="10"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=174" title="sebas_phoenix is offline"><strong>sebas_phoenix</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=174" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=174&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=174" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=174" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/174-sebas_phoenix" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="sebas_phoenix is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Member\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8263_174" title="sebas_phoenix will become famous soon enough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Sep 2010</dd>\r\n					<dt>Location</dt> <dd>Chennai</dd>\r\n					\r\n					<dt>Posts</dt> <dd>83</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=174">1</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8263">\r\n						<blockquote class="postcontent restore ">\r\n							<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				<div class="bbcode_postedby">\r\n					<img src="images/misc/quote_icon.png" alt="Quote" /> Originally Posted by <strong>zazza</strong>\r\n					<a href="showthread.php?p=8261#post8261" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost-right.png" alt="View Post" /></a>\r\n				</div>\r\n				<div class="message">Hello<br />\nHmm... So it would be worth trying to redirect it to this command <b>system(&quot;PAUSE&quot;);</b> to see if it the problem is a faulty ebp value right?<br />\n<br />\nI got another question, isn\'t there a way to overwrite only the saved eip value? I learned that this is how the stack of a function looks:<br />\nAs eip is under ebp, shouldn\'t I be  able to overwrite eip only? I mean using a string whose length will just overwrite the saved eip value.<br />\n<br />\nThank you for your help! I really appreciate it <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /></div>\r\n			\r\n		</div>\r\n	</div>\r\n</div>Hmm, the stack grows from higher memory address to a lower memory address, which means that the saved ebp gets overwritten before the saved eip. There are ways you can overwrite just the saved eip, but that would require some pointer manipulation. Basically something like this,<br />\n<br />\nvoid dummy(char *str,char *str1) //assume this is user supplied<br />\n{<br />\nchar *ptr=NULL; //initially points to NULL<br />\nchar buf[256];<br />\nstrcpy(buf,str); //in here overwrite the pointer so that it points to the address where the saved EIP is stored in the stack<br />\nstrcpy(ptr,str1);//overwrite the saved eip with the value of your choice<br />\n}<br />\nNote that this is just a sample code to show you it is possible to overwrite saved eip without touching the saved ebp. This will also bypass the GS cookies compiler protection.<br />\n<br />\nAs Vinnu bro said, GS cookies might also be the reason why your code seg faults. And yeah try till system(&quot;PAUSE&quot;) and note the effects. Hope it helps\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8263" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8263" class="newreply" href="newreply.php?do=newreply&amp;p=8263" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8263" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8262] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8262">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">07-19-2012,&nbsp;<span class="time">09:06 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8262" href="showthread.php?t=2499&amp;p=8262&amp;viewfull=1#post8262" class="postcounter">#11</a><a id="postcount8262" name="11"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=61" title="&quot;vinnu&quot; is offline"><strong>&quot;vinnu&quot;</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=61" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=61&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=61" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=61" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/61-quot-vinnu-quot" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="&quot;vinnu&quot; is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8262_61" title="&quot;vinnu&quot; is a jewel in the rough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=61" title="&quot;vinnu&quot; is offline">\r\n				<img src="image.php?u=61&amp;dateline=1311230253" alt="&quot;vinnu&quot;\'s Avatar" title="&quot;vinnu&quot;\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>271</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=61">4</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8262">\r\n						<blockquote class="postcontent restore ">\r\n							Namast<br />\n<br />\nThis discussion is interestingly going on. The problem could be in stack validation routine if compiled default. This routine will not let the execution of the program if stack check will fail. This is also called /Gs protection<br />\nCompile the program using followi ng syntax to avoid the /Gs protection:<br />\nCL /gs overflow.cpp<br />\nRemember to build the project in IDE and compile via command console<br />\nVC gui doesnt by default apply this switch while compiling<br />\n<br />\nAlso provide the address of the first byte of the routine that you want to execute. pointing execution anywhere in mid of the routine will also fail the execution without achieving intended results....&quot;vinnu&quot;\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				<!-' + '- edit note -' + '->\r\n				<blockquote class="postcontent lastedited">\r\n					\r\n						Last edited by &quot;vinnu&quot;; 07-19-2012 at <span class="time">09:12 PM</span>.\r\n					\r\n					\r\n				</blockquote>\r\n				<!-' + '- / edit note -' + '->\r\n				\r\n				\r\n				\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8262" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8262" class="newreply" href="newreply.php?do=newreply&amp;p=8262" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8262" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8267] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8267">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">07-20-2012,&nbsp;<span class="time">04:51 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8267" href="showthread.php?t=2499&amp;p=8267&amp;viewfull=1#post8267" class="postcounter">#12</a><a id="postcount8267" name="12"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=3093" title="zazza is offline"><strong>zazza</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=3093" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=3093&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=3093" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=3093" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/3093-zazza" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="zazza is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Newcomer\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8267_3093" title="zazza is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2012</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>5</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8267">\r\n						<blockquote class="postcontent restore ">\r\n							Hmmm...Thank you both<img src="images/smilies/biggrin.png" border="0" alt="" title="Big Grin" class="inlineimg" /><img src="images/smilies/biggrin.png" border="0" alt="" title="Big Grin" class="inlineimg" /><img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\nProblem sovled!! It was indeed the Gs protection, but I have VS2010 and the syntax to disable the checks is this:<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				cl /GS- overflow.cpp\r\n			\r\n		</div>\r\n	</div>\r\n</div>without the minus sign it doesn\'t work, so my attempts were failing. With that syntax, I was able to redirect the execution to my address<img src="images/smilies/cool.png" border="0" alt="" title="Cool" class="inlineimg" /><br />\n<br />\nActually now I need to confirm something. Even though the data buffer is 15 bytes long, I need to provide this string to overwrite the saved eip with 00535353:<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_quote">\r\n		<div class="quote_container">\r\n			<div class="bbcode_quote_container"></div>\r\n			\r\n				AAAAAAAAAAAAAAAAAAAASSS\r\n			\r\n		</div>\r\n	</div>\r\n</div>(These are 20 A and 3 S). So the 14 As fill the buffer, 1 A overwrites the null termination of the buffer, 4 As overwrite the saved ebp and 1 A overwrites the null termination of saved ebp right? The part I\'m not sure is if saved ebp value has one byte for null termination.<br />\n<br />\nThank you <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8267" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8267" class="newreply" href="newreply.php?do=newreply&amp;p=8267" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8267" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8781] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8781">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">09-10-2012,&nbsp;<span class="time">10:39 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8781" href="showthread.php?t=2499&amp;p=8781&amp;viewfull=1#post8781" class="postcounter">#13</a><a id="postcount8781" name="13"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=3001" title="marc_kriss is offline"><strong>marc_kriss</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=3001" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=3001&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=3001" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=3001" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/3001-marc_kriss" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="marc_kriss is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Member\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8781_3001" title="marc_kriss will become famous soon enough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=3001" title="marc_kriss is offline">\r\n				<img src="image.php?u=3001&amp;dateline=1408861462" alt="marc_kriss\'s Avatar" title="marc_kriss\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2012</dd>\r\n					<dt>Location</dt> <dd>Kochi, Kerala</dd>\r\n					\r\n					<dt>Posts</dt> <dd>67</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8781">\r\n						<blockquote class="postcontent restore ">\r\n							If you are on Linux, You can remove gs protection by using  -fno-stack-protector  while compiling  your C program. Syntax:-<br />\n @ gcc -fno-stack-protector -o filename filename.c<br />\n<br />\nIt will disable GS segment value comparison for detecting overflow.\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8781" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8781" class="newreply" href="newreply.php?do=newreply&amp;p=8781" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8781" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8780] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8780">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">09-10-2012,&nbsp;<span class="time">10:33 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8780" href="showthread.php?t=2499&amp;p=8780&amp;viewfull=1#post8780" class="postcounter">#14</a><a id="postcount8780" name="14"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=3001" title="marc_kriss is offline"><strong>marc_kriss</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=3001" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=3001&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=3001" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=3001" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/3001-marc_kriss" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="marc_kriss is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Member\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8780_3001" title="marc_kriss will become famous soon enough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=3001" title="marc_kriss is offline">\r\n				<img src="image.php?u=3001&amp;dateline=1408861462" alt="marc_kriss\'s Avatar" title="marc_kriss\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2012</dd>\r\n					<dt>Location</dt> <dd>Kochi, Kerala</dd>\r\n					\r\n					<dt>Posts</dt> <dd>67</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8780">\r\n						<blockquote class="postcontent restore ">\r\n							hello zazza, I advice you to watch Vivek Ramachandran\'s buffer overflow primer series as well. It will help alot.\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8780" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8780" class="newreply" href="newreply.php?do=newreply&amp;p=8780" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8780" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+
+// next/previous post info
+pn[8239] = "8780,8240";
+pn[0] = ",8239";
+pn[8240] = "8239,8783";
+pn[8783] = "8240,8241";
+pn[8241] = "8783,8242";
+pn[8242] = "8241,8245";
+pn[8245] = "8242,8247";
+pn[8247] = "8245,8256";
+pn[8256] = "8247,8261";
+pn[8261] = "8256,8263";
+pn[8263] = "8261,8262";
+pn[8262] = "8263,8267";
+pn[8267] = "8262,8781";
+pn[8781] = "8267,8780";
+pn[8780] = "8781,8239";
+
+// cached usernames
+pu[0] = guestphrase;
+pu[3093] = "zazza";
+pu[2412] = "revsec";
+pu[174] = "sebas_phoenix";
+pu[61] = "&quot;vinnu&quot;";
+pu[3001] = "marc_kriss";
+pu[191] = "abhaythehero";
+
+// -->
+</script>
+
+
+<div id="threaded_view">
+	<h4>Threaded View</h4>
+
+	<div id="posttree">
+		<script type="text/javascript">
+		<!--
+			writeLink(8239, 0, 0, 3093, "", "Buffer Overflow question", "07-18-2012", "02:25 AM", 0, "showthread7524.html?t=2499&amp;p=8239#post8239");
+  writeLink(8240, 0, 0, 2412, "T", "<i>im intresting in access...</i>", "07-18-2012", "04:18 AM", 0, "showthreadf437.html?t=2499&amp;p=8240#post8240");
+    writeLink(8783, 0, 0, 191, "I,L", "<i>http://www.garage4hackers.com/...</i>", "09-11-2012", "04:12 PM", 0, "showthread7433.html?t=2499&amp;p=8783#post8783");
+  writeLink(8241, 0, 0, 174, "T", "<i>Hello, How do you expect...</i>", "07-18-2012", "12:28 PM", 0, "showthreadd940.html?t=2499&amp;p=8241#post8241");
+  writeLink(8242, 0, 0, 3093, "T", "<i>Hello sebas_phoenix \nThank...</i>", "07-18-2012", "04:26 PM", 0, "showthread3efe-2.html?t=2499&amp;p=8242#post8242");
+    writeLink(8245, 0, 0, 174, "I,L", "<i>First of all, no need to be...</i>", "07-18-2012", "10:51 PM", 0, "showthreadaa53-2.html?t=2499&amp;p=8245#post8245");
+  writeLink(8247, 0, 0, 3093, "T", "<i>Hello :) \nThanks for the...</i>", "07-18-2012", "11:21 PM", 0, "showthread0fdd.html?t=2499&amp;p=8247#post8247");
+    writeLink(8256, 0, 0, 174, "I,L", "<i>Well, I guess the problem is...</i>", "07-19-2012", "12:53 PM", 0, "showthreadcf73.html?t=2499&amp;p=8256#post8256");
+  writeLink(8261, 0, 0, 3093, "T", "<i>Hello \nHmm... So it would be...</i>", "07-19-2012", "08:10 PM", 0, "showthreadf0c3.html?t=2499&amp;p=8261#post8261");
+    writeLink(8263, 0, 0, 174, "I,L", "<i>Hmm, the stack grows from...</i>", "07-20-2012", "02:02 AM", 0, "showthreadf6ef.html?t=2499&amp;p=8263#post8263");
+  writeLink(8262, 0, 0, 61, "T", "<i>Namast \n \nThis discussion is...</i>", "07-19-2012", "09:06 PM", 0, "showthreadd1a4.html?t=2499&amp;p=8262#post8262");
+  writeLink(8267, 0, 0, 3093, "T", "<i>Hmmm...Thank you both:D:D:)...</i>", "07-20-2012", "04:51 PM", 0, "showthread982a-2.html?t=2499&amp;p=8267#post8267");
+    writeLink(8781, 0, 0, 3001, "I,L", "<i>If you are on Linux, You can...</i>", "09-10-2012", "10:39 PM", 0, "showthreaddc80.html?t=2499&amp;p=8781#post8781");
+  writeLink(8780, 0, 0, 3001, "L", "<i>hello zazza, I advice you to...</i>", "09-10-2012", "10:33 PM", 0, "showthread7bd5-2.html?t=2499&amp;p=8780#post8780");
+
+		//-->
+		</script>
+	</div>
+</div>
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_8263">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">07-20-2012,&nbsp;<span class="time">02:02 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post8263" href="showthread99b2.html?t=2499&amp;p=8263&amp;viewfull=1#post8263" class="postcounter">#10</a><a id="postcount8263" name="10"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member0d06.html?u=174" title="sebas_phoenix is offline"><strong>sebas_phoenix</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member0d06.html?u=174" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search8cab.html?do=finduser&amp;userid=174&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private0a04.html?do=newpm&amp;u=174" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog0d06.html?u=174" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list3dbb.html?r=author/174-sebas_phoenix" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="sebas_phoenix is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Garage Member
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_8263_174" title="sebas_phoenix will become famous soon enough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Sep 2010</dd>
+					<dt>Location</dt> <dd>Chennai</dd>
+					
+					<dt>Posts</dt> <dd>83</dd>	
+					<dt>Blog Entries</dt><dd><a href="blog0d06.html?u=174">1</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_8263">
+						<blockquote class="postcontent restore ">
+							<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img src="images/misc/quote_icon.html" alt="Quote" /> Originally Posted by <strong>zazza</strong>
+					<a href="showthread7b51-2.html?p=8261#post8261" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost-right.html" alt="View Post" /></a>
+				</div>
+				<div class="message">Hello<br />
+Hmm... So it would be worth trying to redirect it to this command <b>system(&quot;PAUSE&quot;);</b> to see if it the problem is a faulty ebp value right?<br />
+<br />
+I got another question, isn't there a way to overwrite only the saved eip value? I learned that this is how the stack of a function looks:<br />
+As eip is under ebp, shouldn't I be  able to overwrite eip only? I mean using a string whose length will just overwrite the saved eip value.<br />
+<br />
+Thank you for your help! I really appreciate it <img src="images/smilies/smile.html" border="0" alt="" title="Smile" class="inlineimg" /></div>
+			
+		</div>
+	</div>
+</div>Hmm, the stack grows from higher memory address to a lower memory address, which means that the saved ebp gets overwritten before the saved eip. There are ways you can overwrite just the saved eip, but that would require some pointer manipulation. Basically something like this,<br />
+<br />
+void dummy(char *str,char *str1) //assume this is user supplied<br />
+{<br />
+char *ptr=NULL; //initially points to NULL<br />
+char buf[256];<br />
+strcpy(buf,str); //in here overwrite the pointer so that it points to the address where the saved EIP is stored in the stack<br />
+strcpy(ptr,str1);//overwrite the saved eip with the value of your choice<br />
+}<br />
+Note that this is just a sample code to show you it is possible to overwrite saved eip without touching the saved ebp. This will also bypass the GS cookies compiler protection.<br />
+<br />
+As Vinnu bro said, GS cookies might also be the reason why your code seg faults. And yeah try till system(&quot;PAUSE&quot;) and note the effects. Hope it helps
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_8263" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_8263" class="newreply" href="newreplye14f.html?do=newreply&amp;p=8263" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8263" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+		</ol>
+                <div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="showthread9df6.html?t=2499" class="popupctrl"><span class="ctrlcontainer">Exploitation Techniques</span></a>
+		<a href="showthreadf6ef.html?t=2499&amp;p=8263#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.html">Settings</a></li>
+		<li><a href="private.html">Private Messages</a></li>
+		<li><a href="subscription.html">Subscriptions</a></li>
+		<li><a href="online.html">Who's Online</a></li>
+		<li><a href="search.html">Search Forums</a></li>
+		<li><a href="forum.html">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forumdisplay58da.html?f=1">Garage Network</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay12a3.html?f=2">Garage Announcements</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaye57d.html?f=58">Bravo - Null 2012</a></li>
+			
+		
+			
+				<li><a href="forumdisplay0756.html?f=59">Garage Local Chapter Meets</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay31e6.html?f=4">Garage Rules</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye774.html?f=5">Feedback &amp; Suggestions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayd42b.html?f=7">Introduce Your Self</a></li>
+			
+		
+			
+				<li><a href="forumdisplay2b89.html?f=38">Shout-box</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplaycf19.html?f=6">Garage Lounge</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay5579.html?f=30">Hacking for Beginners</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay6ac3.html?f=57">Did You Know?</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay957d.html?f=8">Security &amp; Hacking News Thread</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3215.html?f=36">Career in InfoSec</a></li>
+			
+		
+			
+				<li><a href="forumdisplay814c.html?f=29">Request Zone</a></li>
+			
+		
+			
+				<li><a href="forumdisplay13b6.html?f=27">Noobs Corner</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayfdc5.html?f=9">Hacking and Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplayfac0.html?f=55">Tip | Trick of the Day</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4a6.html?f=66">ICS / SCADA Security</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6111.html?f=67">Internet of Things - IoT</a></li>
+			
+		
+			
+				<li><a href="forumdisplay15ca.html?f=10">Network Vulnerabiltity Assessment &amp; Penetration Testing</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaya05c.html?f=56">Post Exploitation</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay8a83.html?f=11">Web Application Penetration Testing</a></li>
+			
+		
+			
+				<li><a href="forumdisplay01c9.html?f=12">Wireless and Bluetooth Hacking</a></li>
+			
+		
+			
+				<li><a href="forumdisplay48ab.html?f=17">Computer Forensics and Incident Handling</a></li>
+			
+		
+			
+				<li><a href="forumdisplay218b.html?f=19">Physical Security and Social Engineering</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb09f.html?f=15">General Security &amp; Best Practices</a></li>
+			
+		
+			
+				<li><a href="forumdisplay907f.html?f=42">Security and Hacking Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplay9e0d.html?f=54">Mobile Security</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay9780.html?f=14">General Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay9df8.html?f=31">Programming</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay65b9.html?f=35">Assembly</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4f1.html?f=32">C/C++</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb0a0.html?f=34">Perl</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb8c1.html?f=60">PHP</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6c4e.html?f=33">Python</a></li>
+			
+		
+			
+				<li><a href="forumdisplay208f.html?f=51">Linux Shell / Bash Programming</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3238.html?f=47">Windows Batch Programming</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayce40.html?f=28">BackTrack and Other Linux Distributions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf2fa.html?f=16">Networks &amp; Networking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya213.html?f=18">Cloud Computing</a></li>
+			
+		
+			
+				<li><a href="forumdisplaydfa4.html?f=39">Security Podcast and Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya3f5.html?f=40">Miscellanous Thread</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay30ac.html?f=49">Brush Up Your Skills</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayffeb.html?f=20">Experts Forum</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplaycdba.html?f=48">My Meanest Hacks</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf6ac.html?f=37">Hacking &amp; Security Books and Tutorials</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8011.html?f=23">Tools &amp; Scripts</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8941.html?f=22">Exploitation Techniques</a></li>
+			
+		
+			
+				<li><a href="forumdisplay345c.html?f=24">Reverse Engineering and Application Cracking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye8b3.html?f=25">Botnets, Malwares &amp; Rootkits Analysis</a></li>
+			
+		
+			
+				<li><a href="forumdisplay107e.html?f=43">Garage4hackers Exploits</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye5f3.html?f=64">Browser Fuzzing</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+<div class="navlinks">
+	
+	<strong>&laquo;</strong>
+	<a href="showthread9f47.html?t=2499&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+	|
+	<a href="showthread46e3-2.html?t=2499&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+	<strong>&raquo;</strong>
+	
+</div>
+<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info">
+	
+	
+	
+	
+	<div class="options_block_container">
+		
+		<div class="options_block">
+			<h4 class="collapse">
+				<a class="collapse" id="collapse_posting_rules" href="showthreadf6ef.html?t=2499&amp;p=8263#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				<span class="optiontitle">Posting Permissions</span>
+			</h4>
+			<div id="posting_rules" class="thread_info_block">
+				
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+		<li>&nbsp;</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="miscaff0.html?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc9712.html?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#videocode" target="_blank">[VIDEO]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="misc17ec.html?do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+<!-- lightbox scripts -->
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "posts", 1);
+	//-->
+	</script>
+<!-- / lightbox scripts -->
+
+
+
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="showthreadf6ef.html?t=2499&amp;p=8263#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">04:28 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	<img src="cronf2b5.gif?rand=1584874715" alt="" width="1" height="1" border="0" />
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

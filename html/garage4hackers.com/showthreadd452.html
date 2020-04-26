@@ -1,0 +1,3069 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=226 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:45:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="Garage4Hackers(G4H) is an open security community for Information Security enthusiasts, gurus and aspirants.Members of the team dedicate time and resources towards helping other information security aspirants, sharing knowledge,spreading security awareness and promoting research." />
+<meta property="og:url" content="showthreadd452.html?t=226" />
+<meta property="og:type" content="article" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthreadd452.html?t=226";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - Exploitation Techniques - RSS Feed" href="externalb77f.php?type=RSS2&amp;forumids=22" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	<meta name="keywords" content="&quot;assembly programming for hackers&quot;, &quot;assembly programming&quot;, &quot;exploitation techniques&quot;, &quot;learn exploitation techniques&quot;, &quot;learn hacking exploitation techniques&quot;, &quot;learn shellcoding&quot;, &quot;linux assembly programming&quot;, &quot;linux shellcoding&quot;, &quot;windows assembly programming&quot;, &quot;windows shellcoding&quot;, assembly, exploit, exploitation techniques, shellcoding, exploitation, stack, software, windows, vulnerabilities, class, techniques, covered, mitigations, safeseh, functions, specific, overflow, programming, crappy, bypass, exploits, analyze, vulnerability, discussed, overwriting, exploiting, cookies, topics, include, non-executable, function, students, execution, training, program, target, payload, arbitrary, execute, attacker" />
+	<meta name="description" content="Hello Everyone! 
+ 
+I believe the question been asked in the Subject falls under the same category when a newbie asks &quot;How Shall I learn Hacking Techniques?&quot;. 
+ 
+Here is an attempt to share with you all few tips and guidelines to begin the Exploitation venture. 
+* Possibility is high that many geeks here would not agree fully with me, but that's the beauty of hacking domain...everyone learns in his own way! 
+ 
+1. Do I need to know programming?: It's always good to have programming experience in" />
+
+	<title> How Shall I learn Exploitation Techniques?</title>
+	<link rel="canonical" href="showthreadd452.html?t=226" />
+	
+	<script type="text/javascript" src="clientscript/vbulletin_textedit6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.html?v=421"></script>
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="css8d9b.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=postlist.css,showthread.css,postbit.css,attachment.css,poll.css,lightbox.css" />
+	
+
+<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a href="search8427.html?do=getnew&amp;contenttype=vBForum_Post">New Posts</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_faq"><a href="faq.html">FAQ</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="calendar.html">Calendar</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Community</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_members"><a href="memberlist.html">Member List</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Forum Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a href="forum.html?do=markread&amp;markreadhash=guest">Mark Forums Read</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_qlinks">
+							<a href="javascript://" class="popupctrl">Quick Links</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbqlink_posts"><a href="search2791.html?do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+								
+									<li id="vbqlink_leaders"><a href="showgroups.html">View Site Leaders</a></li>
+								
+							</ul>
+						</li>
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="forum.html">Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplayffeb.html?f=20">Experts Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplay8941.html?f=22">Exploitation Techniques</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> How Shall I learn Exploitation Techniques?</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=226 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:45:14 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+
+		<div id="pagination_top" class="pagination_top">
+		
+			<form action="../external.html?link=http://garage4hackers.com/showthread.php?t=226&amp;page=2" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="226" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 19">1</a></span><span><a href="showthreadbf74.html?t=226&amp;page=2" title="Show results 11 to 19 of 19">2</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="showthreadbf74.html?t=226&amp;page=2" title="Next Page - Results 11 to 19 of 19"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="showthreadbf74.html?t=226&amp;page=2" title="Last Page - Results 11 to 19 of 19">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Results 1 to 10 of 19
+			</div>
+		</div>
+	</div>
+<div id="pagetitle" class="pagetitle">
+	<h1>
+		Thread: <span class="threadtitle"><a href="showthreadd452.html?t=226" title="Reload this Page">How Shall I learn Exploitation Techniques?</a></span>
+
+<a class="a2a_dd" href="../external.html?link=http://www.addtoany.com/share_save"><img src="../static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share/Save - My123World.Com!"/></a><script type="text/javascript">a2a_show_title=1;a2a_num_services=14;</script><script type="text/javascript" src="../static.addtoany.com/menu/page.js"></script>
+
+		
+			
+<fb:like href="showthreadd452.html?t=226" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like>
+		
+	</h1>
+</div>
+	<div id="thread_controls" class="thread_controls">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthreadaf8b.html?t=226&amp;pp=10&amp;page=1" accesskey="3" 
+						rel="nofollow">Show Printable Version</a></li>
+					<li><a href="sendmessage425e.html?do=sendtofriend&amp;t=226"
+						rel="nofollow">Email this Page&hellip;</a></li>
+					<li>
+						
+							<a href="subscriptionc3fa.html?do=addsubscription&amp;t=226" 
+								rel="nofollow">Subscribe to this Thread&hellip;</a>
+											
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+				<li class="popupmenu searchthread" id="searchthread">
+					<h6><a class="popupctrl" href="javascript://">Search Thread</a></h6>
+					<form action="../external.html?link=http://garage4hackers.com/search.php" method="post">
+						<ul class="popupbody popuphover">
+							<li>
+								<input type="text" name="query" class="searchbox" value="Search..." tabindex="13" />
+								<input type="submit" class="button" value="Search" tabindex="14" />
+							</li>
+							<li class="formsubmit">
+								<div><a class="advancedsearchlink" href="search5a3c.html?search_type=1&amp;searchthreadid=226&amp;contenttype=vBForum_Post">Advanced Search</a></div>
+							</li>
+						</ul>
+						<input type="hidden" name="s" value="" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="process" />
+						<input type="hidden" name="searchthreadid" value="226" />
+						<input type="hidden" name="search_type" value="1" />
+						<input type="hidden" name="contenttype" value="vBForum_Post" />
+
+					</form>
+				</li>
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Display</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Linear Mode</label></li>
+						<li><a href="showthread6cfe.html?t=226&amp;mode=hybrid"> Switch to Hybrid Mode</a></li>
+						<li><a href="showthread77da.html?t=226&amp;p=503&amp;mode=threaded#post503"> Switch to Threaded Mode</a></li>
+					</ul>
+				</li>
+			
+
+			
+		</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_503">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">08-13-2010,&nbsp;<span class="time">08:42 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post503" href="showthread8879.html?t=226&amp;p=503&amp;viewfull=1#post503" class="postcounter">#1</a><a id="postcount503" name="1"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member5626.html?u=2" title="b0nd is offline"><strong>b0nd</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member5626.html?u=2" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9847.html?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatee111.html?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog5626.html?u=2" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listf90b.html?r=author/2-b0nd" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="b0nd is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				... I am no Expert b0nd.g4h@gmail.com
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_503_2" title="b0nd is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="member5626.html?u=2" title="b0nd is offline">
+				<img src="BondLogobda9.jpg?u=2&amp;dateline=1278296558" alt="b0nd's Avatar" title="b0nd's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>irc.freenode.net #g4h</dd>
+					
+					<dt>Posts</dt> <dd>744</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<h2 class="title icon">
+					How Shall I learn Exploitation Techniques?
+				</h2>
+				
+
+
+						
+							
+							
+						
+						
+				<div class="content">
+					<div id="post_message_503">
+						<blockquote class="postcontent restore ">
+							Hello Everyone!<br />
+<br />
+I believe the question been asked in the Subject falls under the same category when a newbie asks &quot;How Shall I learn Hacking Techniques?&quot;.<br />
+<br />
+Here is an attempt to share with you all few tips and guidelines to begin the Exploitation venture.<br />
+* Possibility is high that many geeks here would not agree fully with me, but that's the beauty of hacking domain...everyone learns in his own way!<br />
+<br />
+<b>1. Do I need to know programming?:</b> It's always good to have programming experience in hacking domain. Same applies to exploitation techniques as well, but not mandatory.  Even without having programming experience you would be able to climb up few ladders.<br />
+<br />
+<div style="margin-left:40px">But to reach at a good level, you definitely need to learn programming.<br />
+Reason: Who will find the vulnerability for you at the first stage?<br />
+Answer: Fuzzing tools, Source code review, Reverse Engineering.</div><br />
+<div style="margin-left:40px">Out of above stated 3 techniques to find vulnerabilities, only Fuzzing using available tools is the option for those who can not code. Moreover later on you'll find that available fuzzing tools are not meeting your requirements and you need to code something of your own!</div><br />
+<div style="margin-left:40px"><b>Conclusion</b>: Programming skills are mandatory to become a good vulnerability researcher and exploit developer. Btw, now-a-days Python is hackers first choice. C, Perl are other few choices.</div><br />
+<b>2. OK, anyway I wish to taste the exploitation techniques:</b> <br />
+<div style="margin-left:40px">a) Do I need to know assembly? Oh man that scares me!!!</div><br />
+<div style="margin-left:40px">Here I would seriously suggest to learn basic 8086 Assembly programming if you wanna go a long way learning exploitation techniques. If you simple wish to somehow manage to list your name once on some exploit database site, don't learn assembly.<br />
+<br />
+Reason: Don't you consider &quot;shellcode&quot; to be a part of exploit? Yeah I agree that metasploit is the best to generate them but it's all shellcodes get detected by AV's. <br />
+Knowledge of assembly programming would help you in the following:<br />
+1. Coding your own shellcodes, be them the simple ones or polymorphic shellcodes.<br />
+2. Disassembling codes<br />
+3. Reverse Engineering<br />
+4. To get an inside view of how programs work, the state of registers, memory, stack, heap at the every step of flow of your program. And believe me, analyzing registers, stack, memory etc. is the most fascinating part.</div><br />
+Enough being said to justify the points, lets proceed with the resource you should grab and start with in sequence:<br />
+<div style="margin-left:40px"><b>1. Assembly for Hackers Primer Video Series by Vivek Ramachandran</b><br />
+<div style="margin-left:40px">The best series to start with to build up basics. It covers the following:<br />
+a) Basics of registers, stack, memory etc<br />
+b) Basics of using GDB (GNU DeBugger)<br />
+c) Basics of the program flow and how the program execution effects the state of registers, stack etc.<br />
+d) Basics of stack over flow exploits etc.<br />
+Grab it from security tube.</div><br />
+<b>2. Programming from the Ground Up - by Jonathan Bartlett</b><br />
+<div style="margin-left:40px">Reading first 100 pages serve the purpose and would be enough for a good start. Grab it for free on internet.<br />
+The best thing about this book is that it's not biased towards Win32 Assembly or Linux Assembly. Instead the way the author has presented the programs/codes in this book gives you a deeper understanding of the activities (state of stack, registers) going on behind the curtains.<br />
+Here I would like to mention that most of the tutorials you'll find on Win32 Assembly focuses on the development of GUI programs on windows and not on the internal state of various memory components</div><br />
+<b>3. 15 First Dates With Assembly Programming - by b0nd <img src="images/smilies/smile.html" border="0" alt="" title="Smile" class="inlineimg" /></b><br />
+<div style="margin-left:40px">Might be a good one for revising the concepts and practice more assembly coding.</div></div><br />
+<b>3. Being covered the first two steps, you can proceed either with developing shellcode techniques or exploitation techniques.</b><br />
+<br />
+<div style="margin-left:40px">For both of them you need to follow a deep rabbit hole. <br />
+<br />
+I would like to list down few good resources for them:<br />
+a) <u>Exploitation Techniques series by Peter Van Eeckhoutte</u>. An awesome series of tutorials which are easy to understand and practice with.<br />
+<a href="../external.html?link=http://www.corelan.be:8800/index.php/articles/" target="_blank">http://www.corelan.be:8800/index.php/articles/</a><br />
+<br />
+b) <u>The Art of Exploitation Part 1 and Part 2</u><br />
+<br />
+c) <u>The Shellcoders Handbook Part 1 and Part 2</u><br />
+<br />
+d)<u> Past, Present, Future of Windows Exploitation</u><br />
+ <a href="../external.html?link=http://www.abysssec.com/blog/2010/05/past-present-future-of-windows-exploitation/" target="_blank">http://www.abysssec.com/blog/2010/05...-exploitation/</a> is a good resource of all the famous/popular and good articles on exploitation.<br />
+<br />
+e) <u>From 0x90 to 0x4c454554, a journey into exploitation.</u><br />
+Awesome Resoucres from scratch to Dive Deeper in rabbit hole to Learn Exploitation (<b>Updated by Punter</b>).<br />
+<br />
+<a href="../external.html?link=http://myne-us.blogspot.com/2010/08/from-0x90-to-0x4c454554-journey-into.html" target="_blank">http://myne-us.blogspot.com/2010/08/...rney-into.html</a><br />
+<br />
+f) <u>Smashing the Stack in 2010</u> (<b>Updated by Punter</b>)<br />
+<a href="../external.html?link=http://5d4a.wordpress.com/2010/08/02...stack-in-2010/" target="_blank">http://5d4a.wordpress.com/2010/08/02...stack-in-2010/</a><br />
+</div><br />
+Few More Updates from (<b>Updated by Punter</b>)<br />
+<a href="../external.html?link=http://myne-us.blogspot.com/2010/08/from-0x90-to-0x4c454554-journey-into.html" target="_blank">http://myne-us.blogspot.com/2010/08/...rney-into.html</a><br />
+<br />
+<div style="margin-left:40px">g) <u>Getting a little deeper into BOF</u><br />
+  Parallel  Learning #4<img src="images/smilies/frown.html" border="0" alt="" title="Frown" class="inlineimg" />To the end of the course and beyond)<br />
+   Find  old exploits on <a href="../external.html?link=http://www.exploit-db.com/" target="_blank">Exploit-db</a>  download them, test them, rewrite them, understand them.<br />
+<br />
+   [video]<a href="../external.html?link=http://pentest.cryptocity.net/exploitation/" target="_blank">Exploitation  from cryptocity.net</a><br />
+<a href="../external.html?link=http://en.wikipedia.org/wiki/Buffer_overflow_protection" target="_blank">Buffer  overflow protection</a><br />
+<a href="../external.html?link=http://en.wikipedia.org/wiki/Executable_space_protection" target="_blank">Wikipedia  Executable space protextion</a><br />
+<a href="../external.html?link=http://en.wikipedia.org/wiki/Data_Execution_Prevention" target="_blank"> Wikipedia  DEP</a><br />
+<a href="../external.html?link=http://en.wikipedia.org/wiki/ASLR" target="_blank">Wikipedia ASLR</a><br />
+<a href="../www.cs.purdue.edu/homes/mkirkpat/papers/canbit.html" target="_blank">Purdue.edu:  Canary Bit</a><br />
+<a href="../external.html?link=http://www.corelan.be:8800/index.php/2009/09/21/exploit-writing-tutorial-part-6-bypassing-stack-cookies-safeseh-hw-dep-and-aslr/" target="_blank">Corelan  T6</a><br />
+<a href="../external.html?link=http://www.securestate.com/" target="_blank">Bypassing  Hardware based DEP</a><br />
+<a href="../external.html?link=http://www.corelan.be:8800/index.php/2009/11/06/exploit-writing-tutorial-part-7-unicode-from-0x00410041-to-calc/" target="_blank">Corelan  T7</a><br />
+<a href="../external.html?link=http://www.corelan.be:8800/index.php/2010/01/09/exploit-writing-tutorial-part-8-win32-egg-hunting/" target="_blank">Corelan  T8</a><br />
+<a href="../external.html?link=http://www.corelan.be:8800/index.php/2010/06/16/exploit-writing-tutorial-part-10-chaining-dep-with-rop-the-rubikstm-cube/" target="_blank">Corelan  T10</a><br />
+<a href="../external.html?link=http://www.youtube.com/watch?v=UIKy1Shxd6Q&amp;feature=related" target="_blank">Virtual  Worlds - Real Exploits</a><br />
+<br />
+  [GAME]<a href="../external.html?link=http://www.smashthestack.org/" target="_blank">Smash the stack wargaming network</a><br />
+<br />
+h) <u>Heap overflow</u><br />
+<a href="../external.html?link=http://pthreads.blogspot.com/2007/04/heap-overflow.html" target="_blank">rm  -rf / on heap overflow</a><br />
+<a href="../www.w00w00.org/files/articles/heaptut.txt" target="_blank">w00w00 on heap  overflow</a><br />
+  [book]<a href="../external.html?link=http://www.amazon.com/Shellcoders-Handbook-Discovering-Exploiting-Security/dp/047008023X/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1282450549&amp;sr=8-1" target="_blank">[Book]Shellcoder's  Handbook Ch4&amp;5</a><br />
+<a href="../external.html?link=http://www.h-online.com/security/features/A-Heap-of-Risk-747161.html" target="_blank">h-online  A heap of Risk</a><br />
+  [video]<a href="../external.html?link=http://video.google.com/videoplay?docid=1985155227368288256#" target="_blank">Defcon  15 remedial Heap Overflows</a><br />
+<a href="../external.html?link=http://www.thehackerslibrary.com/?p=872" target="_blank">heap overflow: ancient  art of unlink seduction</a><br />
+<a href="../advancedwindowsdebugging.com/ch06.html" target="_blank">Memory corruptions  part II -- heap</a><br />
+<br />
+  [book]<a href="../external.html?link=http://www.amazon.com/Shellcoders-Handbook-Discovering-Exploiting-Security/dp/047008023X/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1282450549&amp;sr=8-1" target="_blank">Read  the rest of Shellcoder's Handbook</a><br />
+<br />
+i) <u>Exploit listing sites</u><br />
+<a href="../external.html?link=http://www.exploit-db.com/" target="_blank">Exploit-DB</a><br />
+<a href="../external.html?link=http://inj3ct0r.com/" target="_blank">Injector</a><br />
+<a href="../external.html?link=http://www.cvedetails.com/" target="_blank">CVE Details</a><br />
+<a href="../external.html?link=http://www.packetstormsecurity.org/assess/exploits/" target="_blank">Packetstorm</a><br />
+<a href="../external.html?link=http://www.us-cert.gov/cas/techalerts/" target="_blank">CERT</a><br />
+<a href="../external.html?link=http://cve.mitre.org/cve/index.html" target="_blank">Mitre</a><br />
+<a href="../external.html?link=http://web.nvd.nist.gov/view/vuln/search?cid=3" target="_blank">National  Vulnerability Database</a><br />
+<br />
+  (bonus: site that lists types of  vulnerabilties and info)<br />
+<a href="../external.html?link=http://cwe.mitre.org/index.html" target="_blank">Common  Weakness Enumberation</a></div><br />
+The links and sources would never end and hence we would keep on adding them.<br />
+<br />
+So do you dare to exploit now! <img src="images/smilies/cool.html" border="0" alt="" title="Cool" class="inlineimg" /><br />
+<br />
+<u><i>Remember: &quot;Everyone Starts from Scratch&quot;</i></u>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+					
+						Last edited by b0nd; 08-23-2010 at <span class="time">08:17 AM</span>.
+					
+					
+						<span class="reason">Reason:</span> Merged Punter's updates on the same, keeping all links in single post
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+				
+				
+					
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><i>[*] To follow the path: look to the master, follow the master,  walk with the master, see through the master,<br />
+               ------>  become the master!!! <------<br />
+[*] Everyone has a will to WIN but very few have the will to prepare to WIN<br />
+[*] Invest yourself in everything you do, there's fun in being serious</i></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_503" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_503" class="newreply" href="newreply1d0d.html?do=newreply&amp;p=503" rel="nofollow" title="Reply With Quote"><img id="quoteimg_503" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_507">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">08-13-2010,&nbsp;<span class="time">12:42 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post507" href="showthreadba65.html?t=226&amp;p=507&amp;viewfull=1#post507" class="postcounter">#2</a><a id="postcount507" name="2"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="membere81f.html?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="membere81f.html?u=8" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9898.html?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatedce0.html?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="bloge81f.html?u=8" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<a href="index.html" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="list2c25.html?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="fb1h2s is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Security Researcher
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_507_8" title="fb1h2s has a spectacular aura about">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="membere81f.html?u=8" title="fb1h2s is offline">
+				<img src="20130721_18195935db.jpg?u=8&amp;dateline=1400680840" alt="fb1h2s's Avatar" title="fb1h2s's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>India</dd>
+					
+					<dt>Posts</dt> <dd>616</dd>	
+					<dt>Blog Entries</dt><dd><a href="bloge81f.html?u=8">32</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_507">
+						<blockquote class="postcontent restore ">
+							Good <img src="images/smilies/smile.html" border="0" alt="" title="Smile" class="inlineimg" />, bond why don't you make this little more big and write a e-book-&gt; &quot;Starting hacking form A-Z&quot;
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer">Hacking Is a Matter of Time Knowledge and Patience</div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_507" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_507" class="newreply" href="newreply3268-2.html?do=newreply&amp;p=507" rel="nofollow" title="Reply With Quote"><img id="quoteimg_507" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_523">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">08-13-2010,&nbsp;<span class="time">07:07 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post523" href="showthreadfac7.html?t=226&amp;p=523&amp;viewfull=1#post523" class="postcounter">#3</a><a id="postcount523" name="3"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member1912.html?u=3" title="AnArKI is offline"><strong>AnArKI</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member1912.html?u=3" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search2c45.html?do=finduser&amp;userid=3&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatecea5.html?do=newpm&amp;u=3" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog1912.html?u=3" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<a href="index.html" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="list6857.html?r=author/3-AnArKI" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="AnArKI is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Infosec Enthusiast
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_523_3" title="AnArKI has a spectacular aura about">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="member1912.html?u=3" title="AnArKI is offline">
+				<img src="ana1sn4e177.jpg?u=3&amp;dateline=1279052730" alt="AnArKI's Avatar" title="AnArKI's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>London</dd>
+					
+					<dt>Posts</dt> <dd>514</dd>	
+					<dt>Blog Entries</dt><dd><a href="blog1912.html?u=3">2</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_523">
+						<blockquote class="postcontent restore ">
+							gr8 post mate
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_523" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_523" class="newreply" href="newreplyb630.html?do=newreply&amp;p=523" rel="nofollow" title="Reply With Quote"><img id="quoteimg_523" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_561">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">08-16-2010,&nbsp;<span class="time">10:25 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post561" href="showthread12c4.html?t=226&amp;p=561&amp;viewfull=1#post561" class="postcounter">#4</a><a id="postcount561" name="4"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member3da9.html?u=22" title="the_empty is offline"><strong>the_empty</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member3da9.html?u=22" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search3b03.html?do=finduser&amp;userid=22&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatec872.html?do=newpm&amp;u=22" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog3da9.html?u=22" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listdb8e.html?r=author/22-the_empty" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="the_empty is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				InfoSec Consultant
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_561_22" title="the_empty will become famous soon enough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="member3da9.html?u=22" title="the_empty is offline">
+				<img src="Nuclear%20Blaste830.jpg?u=22&amp;dateline=1297259735" alt="the_empty's Avatar" title="the_empty's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>the blue no-where</dd>
+					
+					<dt>Posts</dt> <dd>155</dd>	
+					<dt>Blog Entries</dt><dd><a href="blog3da9.html?u=22">2</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_561">
+						<blockquote class="postcontent restore ">
+							that is something really beautiful. With a strong guideline like this we shall BOOST ourselves.... really nice share
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><b><span style="font-family: Verdana"><font color="Red">ACCESS</font> is <font color="Red">GOD</font></span></b></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_561" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_561" class="newreply" href="newreply4183.html?do=newreply&amp;p=561" rel="nofollow" title="Reply With Quote"><img id="quoteimg_561" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_636">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">08-23-2010,&nbsp;<span class="time">01:58 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post636" href="showthread6af3-2.html?t=226&amp;p=636&amp;viewfull=1#post636" class="postcounter">#5</a><a id="postcount636" name="5"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member735f.html?u=1" title="Punter is offline"><strong>Punter</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member735f.html?u=1" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search245f.html?do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private1715.html?do=newpm&amp;u=1" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog735f.html?u=1" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<a href="../external.html?link=http://punter-infosec.com/" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="list600d.html?r=author/1-Punter" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="Punter is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Administrator
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_636_1" title="Punter ">
+					
+						<img class="repimg" src="images/reputation/reputation_off.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="member735f.html?u=1" title="Punter is offline">
+				<img src="lols16d9.jpg?u=1&amp;dateline=1304491339" alt="Punter's Avatar" title="Punter's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>Above Sea level</dd>
+					
+					<dt>Posts</dt> <dd>163</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_636">
+						<blockquote class="postcontent restore ">
+							<b><a href="../external.html?link=http://www.corelan.be:8800/index.php/2010/08/22/exploit-notes-win32-eggs-to-omelet/" target="_blank">win32 eggs-to-omelet</a></b><br />
+<br />
+<br />
+<a href="../external.html?link=http://www.corelan.be:8800/index.php/2010/08/22/exploit-notes-win32-eggs-to-omelet/" target="_blank">http://www.corelan.be:8800/index.php...ggs-to-omelet/</a>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><br /><span class="smallfont"><i>To view links or images in signatures your post count must be 10 or greater. You currently have 0 posts.</i></span><br /><br />
+<br /><span class="smallfont"><i>To view links or images in signatures your post count must be 10 or greater. You currently have 0 posts.</i></span><br /><br />
+<br /><span class="smallfont"><i>To view links or images in signatures your post count must be 10 or greater. You currently have 0 posts.</i></span><br /><br />
+<br />
+Hire a Hacker by the <b>Night</b> and Hire a Chief Security Officer (CSO)  by the <b>Day</b>.</div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_636" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_636" class="newreply" href="newreplya7b2.html?do=newreply&amp;p=636" rel="nofollow" title="Reply With Quote"><img id="quoteimg_636" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_678">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">08-25-2010,&nbsp;<span class="time">01:15 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post678" href="showthreadc77a.html?t=226&amp;p=678&amp;viewfull=1#post678" class="postcounter">#6</a><a id="postcount678" name="6"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member54ae.html?u=11" title="silentph33r is offline"><strong>silentph33r</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member54ae.html?u=11" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchc4fb.html?do=finduser&amp;userid=11&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private7ebf.html?do=newpm&amp;u=11" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog54ae.html?u=11" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list492d.html?r=author/11-silentph33r" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="silentph33r is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Garage Member
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_678_11" title="silentph33r will become famous soon enough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					
+					
+					<dt>Posts</dt> <dd>53</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_678">
+						<blockquote class="postcontent restore ">
+							as usual great share b0nd bro <img src="images/smilies/smile.html" border="0" alt="" title="Smile" class="inlineimg" />
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_678" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_678" class="newreply" href="newreply7ae3.html?do=newreply&amp;p=678" rel="nofollow" title="Reply With Quote"><img id="quoteimg_678" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_787">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">09-01-2010,&nbsp;<span class="time">02:44 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post787" href="showthreadedf8-2.html?t=226&amp;p=787&amp;viewfull=1#post787" class="postcounter">#7</a><a id="postcount787" name="7"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="membera99e.html?u=10" title="sh0bhit is offline"><strong>sh0bhit</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="membera99e.html?u=10" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search63f9.html?do=finduser&amp;userid=10&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private4fd9.html?do=newpm&amp;u=10" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="bloga99e.html?u=10" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="liste1cf.html?r=author/10-sh0bhit" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="sh0bhit is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Garage Newcomer
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_787_10" title="sh0bhit is on a distinguished road">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					
+					
+					<dt>Posts</dt> <dd>25</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_787">
+						<blockquote class="postcontent restore ">
+							b0nd s post are always awesome <img src="images/smilies/smile.html" border="0" alt="" title="Smile" class="inlineimg" />
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_787" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_787" class="newreply" href="newreply5b18.html?do=newreply&amp;p=787" rel="nofollow" title="Reply With Quote"><img id="quoteimg_787" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_1016">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">09-19-2010,&nbsp;<span class="time">04:42 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1016" href="showthreaddd2b-2.html?t=226&amp;p=1016&amp;viewfull=1#post1016" class="postcounter">#8</a><a id="postcount1016" name="8"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="membere62c.html?u=191" title="abhaythehero is offline"><strong>abhaythehero</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="membere62c.html?u=191" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search4fd3.html?do=finduser&amp;userid=191&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private7748.html?do=newpm&amp;u=191" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="bloge62c.html?u=191" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<a href="../external.html?link=https://twitter.com/#!/abhaythehero" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="lista009.html?r=author/191-abhaythehero" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="abhaythehero is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Super Commando Dhruv
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_1016_191" title="abhaythehero has a spectacular aura about">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="membere62c.html?u=191" title="abhaythehero is offline">
+				<img src="1fe76.jpg?u=191&amp;dateline=1330713871" alt="abhaythehero's Avatar" title="abhaythehero's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Sep 2010</dd>
+					<dt>Location</dt> <dd>Lucknow/Pune,India</dd>
+					
+					<dt>Posts</dt> <dd>466</dd>	
+					<dt>Blog Entries</dt><dd><a href="bloge62c.html?u=191">2</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_1016">
+						<blockquote class="postcontent restore ">
+							exhaustive and excellent collection of links ... <br />
+thanx for this gr8 share !
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><b><i>In the world of 0s and 1s, are you a zero or The One !</i></b></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1016" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_1016" class="newreply" href="newreply6e8f.html?do=newreply&amp;p=1016" rel="nofollow" title="Reply With Quote"><img id="quoteimg_1016" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_1999">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">12-14-2010,&nbsp;<span class="time">05:13 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1999" href="showthreadcd11.html?t=226&amp;p=1999&amp;viewfull=1#post1999" class="postcounter">#9</a><a id="postcount1999" name="9"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="membere62c.html?u=191" title="abhaythehero is offline"><strong>abhaythehero</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="membere62c.html?u=191" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search4fd3.html?do=finduser&amp;userid=191&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private7748.html?do=newpm&amp;u=191" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="bloge62c.html?u=191" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<a href="../external.html?link=https://twitter.com/#!/abhaythehero" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="lista009.html?r=author/191-abhaythehero" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="abhaythehero is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Super Commando Dhruv
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_1999_191" title="abhaythehero has a spectacular aura about">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="membere62c.html?u=191" title="abhaythehero is offline">
+				<img src="1fe76.jpg?u=191&amp;dateline=1330713871" alt="abhaythehero's Avatar" title="abhaythehero's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Sep 2010</dd>
+					<dt>Location</dt> <dd>Lucknow/Pune,India</dd>
+					
+					<dt>Posts</dt> <dd>466</dd>	
+					<dt>Blog Entries</dt><dd><a href="bloge62c.html?u=191">2</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_1999">
+						<blockquote class="postcontent restore ">
+							A table of references &gt;&gt;<br />
+ <div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				References to vulnerability exploitation stuff.<br />
+<br />
+    * 1. How to use this wiki<br />
+          o 1.1. Required knowledge<br />
+          o 1.2. What to start with<br />
+          o 1.3. Actual vs outdated topics<br />
+          o 1.4. Types of references <br />
+    * 2. Exploiting vulnerabilities<br />
+          o 2.1. Stack overflow<br />
+          o 2.2. Heap exploitation<br />
+          o 2.3. Return oriented attacks<br />
+          o 2.4. Integer vulnerabilities<br />
+          o 2.5. Format strings<br />
+          o 2.6. Other cases <br />
+    * 3. Bypassing filters, mitigations and other limitations<br />
+    * 4. Shellcode writing<br />
+    * 5. Tools and projects<br />
+    * 6. Uncategorized<br />
+    * 7. Other collections, wiki's, etc.<br />
+    * 8. Posters and other graphics 
+			
+		</div>
+	</div>
+</div><a href="../external.html?link=http://code.google.com/p/it-sec-catalog/wiki/Exploitation" target="_blank">http://code.google.com/p/it-sec-cata...i/Exploitation</a>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><b><i>In the world of 0s and 1s, are you a zero or The One !</i></b></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1999" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_1999" class="newreply" href="newreply0717.html?do=newreply&amp;p=1999" rel="nofollow" title="Reply With Quote"><img id="quoteimg_1999" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_2148">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">12-19-2010,&nbsp;<span class="time">09:42 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post2148" href="showthread28c3.html?t=226&amp;p=2148&amp;viewfull=1#post2148" class="postcounter">#10</a><a id="postcount2148" name="10"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member0bfd.html?u=208" title="blackcobra is offline"><strong>blackcobra</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member0bfd.html?u=208" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search0eff.html?do=finduser&amp;userid=208&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private64be.html?do=newpm&amp;u=208" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog0bfd.html?u=208" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list7c2c.html?r=author/208-blackcobra" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="blackcobra is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Garage Newcomer
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_2148_208" title="blackcobra is on a distinguished road">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Oct 2010</dd>
+					
+					
+					<dt>Posts</dt> <dd>7</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+							
+						
+				<div class="content">
+					<div id="post_message_2148">
+						<blockquote class="postcontent restore ">
+							did anybody tried to look into Fuzzers? If not, then please start doing that. Its the best way to find an exploit in an application/...etc.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_2148" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_2148" class="newreply" href="newreplye08d.html?do=newreply&amp;p=2148" rel="nofollow" title="Reply With Quote"><img id="quoteimg_2148" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+		</ol>
+                <div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<form action="../external.html?link=http://garage4hackers.com/showthread.php?t=226&amp;page=2" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="226" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 19">1</a></span><span><a href="showthreadbf74.html?t=226&amp;page=2" title="Show results 11 to 19 of 19">2</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="showthreadbf74.html?t=226&amp;page=2" title="Next Page - Results 11 to 19 of 19"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="showthreadbf74.html?t=226&amp;page=2" title="Last Page - Results 11 to 19 of 19">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+	
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="showthreadd452.html?t=226" class="popupctrl"><span class="ctrlcontainer">Exploitation Techniques</span></a>
+		<a href="showthreadd452.html?t=226#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.html">Settings</a></li>
+		<li><a href="private.html">Private Messages</a></li>
+		<li><a href="subscription.html">Subscriptions</a></li>
+		<li><a href="online.html">Who's Online</a></li>
+		<li><a href="search.html">Search Forums</a></li>
+		<li><a href="forum.html">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forumdisplay58da.html?f=1">Garage Network</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay12a3.html?f=2">Garage Announcements</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaye57d.html?f=58">Bravo - Null 2012</a></li>
+			
+		
+			
+				<li><a href="forumdisplay0756.html?f=59">Garage Local Chapter Meets</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay31e6.html?f=4">Garage Rules</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye774.html?f=5">Feedback &amp; Suggestions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayd42b.html?f=7">Introduce Your Self</a></li>
+			
+		
+			
+				<li><a href="forumdisplay2b89.html?f=38">Shout-box</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplaycf19.html?f=6">Garage Lounge</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay5579.html?f=30">Hacking for Beginners</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay6ac3.html?f=57">Did You Know?</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay957d.html?f=8">Security &amp; Hacking News Thread</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3215.html?f=36">Career in InfoSec</a></li>
+			
+		
+			
+				<li><a href="forumdisplay814c.html?f=29">Request Zone</a></li>
+			
+		
+			
+				<li><a href="forumdisplay13b6.html?f=27">Noobs Corner</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayfdc5.html?f=9">Hacking and Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplayfac0.html?f=55">Tip | Trick of the Day</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4a6.html?f=66">ICS / SCADA Security</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6111.html?f=67">Internet of Things - IoT</a></li>
+			
+		
+			
+				<li><a href="forumdisplay15ca.html?f=10">Network Vulnerabiltity Assessment &amp; Penetration Testing</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaya05c.html?f=56">Post Exploitation</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay8a83.html?f=11">Web Application Penetration Testing</a></li>
+			
+		
+			
+				<li><a href="forumdisplay01c9.html?f=12">Wireless and Bluetooth Hacking</a></li>
+			
+		
+			
+				<li><a href="forumdisplay48ab.html?f=17">Computer Forensics and Incident Handling</a></li>
+			
+		
+			
+				<li><a href="forumdisplay218b.html?f=19">Physical Security and Social Engineering</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb09f.html?f=15">General Security &amp; Best Practices</a></li>
+			
+		
+			
+				<li><a href="forumdisplay907f.html?f=42">Security and Hacking Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplay9e0d.html?f=54">Mobile Security</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay9780.html?f=14">General Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay9df8.html?f=31">Programming</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay65b9.html?f=35">Assembly</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4f1.html?f=32">C/C++</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb0a0.html?f=34">Perl</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb8c1.html?f=60">PHP</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6c4e.html?f=33">Python</a></li>
+			
+		
+			
+				<li><a href="forumdisplay208f.html?f=51">Linux Shell / Bash Programming</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3238.html?f=47">Windows Batch Programming</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayce40.html?f=28">BackTrack and Other Linux Distributions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf2fa.html?f=16">Networks &amp; Networking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya213.html?f=18">Cloud Computing</a></li>
+			
+		
+			
+				<li><a href="forumdisplaydfa4.html?f=39">Security Podcast and Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya3f5.html?f=40">Miscellanous Thread</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay30ac.html?f=49">Brush Up Your Skills</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayffeb.html?f=20">Experts Forum</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplaycdba.html?f=48">My Meanest Hacks</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf6ac.html?f=37">Hacking &amp; Security Books and Tutorials</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8011.html?f=23">Tools &amp; Scripts</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8941.html?f=22">Exploitation Techniques</a></li>
+			
+		
+			
+				<li><a href="forumdisplay345c.html?f=24">Reverse Engineering and Application Cracking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye8b3.html?f=25">Botnets, Malwares &amp; Rootkits Analysis</a></li>
+			
+		
+			
+				<li><a href="forumdisplay107e.html?f=43">Garage4hackers Exploits</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye5f3.html?f=64">Browser Fuzzing</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+<div class="navlinks">
+	
+	<strong>&laquo;</strong>
+	<a href="showthread78e0.html?t=226&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+	|
+	<a href="showthread457c-2.html?t=226&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+	<strong>&raquo;</strong>
+	
+</div>
+<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info">
+	
+	
+	
+	
+	<h4 class="threadinfohead"><span class="optiontitle">Tags for this Thread</span></h4>
+	<div id="thread_tags_list" class="thread_info_block">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				
+		
+			<a href="tagsec72.html?tag=%22assembly+programming+for+hackers%22">&quot;assembly programming for hackers&quot;</a>, 
+		
+			<a href="tags0b60.html?tag=%22assembly+programming%22">&quot;assembly programming&quot;</a>, 
+		
+			<a href="tags26ec.html?tag=%22exploitation+techniques%22">&quot;exploitation techniques&quot;</a>, 
+		
+			<a href="tags4e44.html?tag=%22learn+exploitation+techniques%22">&quot;learn exploitation techniques&quot;</a>, 
+		
+			<a href="tags751d.html?tag=%22learn+hacking+exploitation+techniques%22">&quot;learn hacking exploitation techniques&quot;</a>, 
+		
+			<a href="tags4211.html?tag=%22learn+shellcoding%22">&quot;learn shellcoding&quot;</a>, 
+		
+			<a href="tags960a.html?tag=%22linux+assembly+programming%22">&quot;linux assembly programming&quot;</a>, 
+		
+			<a href="tags5729.html?tag=%22linux+shellcoding%22">&quot;linux shellcoding&quot;</a>, 
+		
+			<a href="tags2844-2.html?tag=%22windows+assembly+programming%22">&quot;windows assembly programming&quot;</a>, 
+		
+			<a href="tagsff96.html?tag=%22windows+shellcoding%22">&quot;windows shellcoding&quot;</a>, 
+		
+			<a href="tags0d3e.html?tag=assembly">assembly</a>, 
+		
+			<a href="tags6f6e.html?tag=exploit">exploit</a>, 
+		
+			<a href="tags6ac0.html?tag=exploitation+techniques">exploitation techniques</a>, 
+		
+			<a href="tags4fd6.html?tag=shellcoding">shellcoding</a>
+		
+
+<img src="images/misc/11x11progress.html" id="tag_form_progress" class="inlineimg hidden" alt="" />
+			</div>
+			<p>
+				<a href="tags.html">View Tag Cloud</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+		<div class="options_block">
+			<h4 class="collapse">
+				<a class="collapse" id="collapse_posting_rules" href="showthreadd452.html?t=226#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				<span class="optiontitle">Posting Permissions</span>
+			</h4>
+			<div id="posting_rules" class="thread_info_block">
+				
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+		<li>&nbsp;</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="miscaff0.html?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc9712.html?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#videocode" target="_blank">[VIDEO]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="misc17ec.html?do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="showthreadd452.html?t=226#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">04:11 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

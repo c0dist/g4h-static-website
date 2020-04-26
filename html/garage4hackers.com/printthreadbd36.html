@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=1667&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:55:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Stepping into networking</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreade64c-2.html?t=1667">Stepping into networking</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">10-29-2011, 10:17 PM</div>
+		<span class="username">prashant_uniyal</span>
+	</div>
+	
+	
+		<div class="title">Stepping into networking</div>
+	
+	<div class="content">
+		<blockquote class="restore">Networks and networking might have fascinated you, coz of it you are able to read my post! ;)<br />
+<br />
+Networking is a vast field. And to begin with, your self study is must along with certifications. To start of, people usually go with CompTIA N+, then move on to Cisco CCNA and further. To step in O'Reilly's TCP/IP Network Administration is a good book (you can google for it). It a good guide to catch and learn networking. Next when moving to routing and switching, Cisco packet tracer is a good choice to do virtual practicals and configure networks at your own.<br />
+<br />
+<a href="../external.html?link=https://postimg.cc/image/o0w6p8z8n/" target="_blank">http://s7.postimage.org/jf02gwdpl/pckt.png</a><br />
+<br />
+Further, you can move onto GNS3 simulator, try hands on a better environment. I am just about to begin my journey stoppage with GNS3! So networking will be a good journey and I hope to learn lots of new things. I hope many of you must be experienced and would like to do experimentation as I do a lot of times on networks, routers. Hoping for further inputs.<br />
+<br />
+Regards :)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">10-30-2011, 05:48 PM</div>
+		<span class="username">Anant Shrivastava</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">hey i have been asking this to many people. can you post a guide on how to configure virtualbox machines as clients inside gns3.<br />
+<br />
+actually i wanted to use a simple network 1-2 switch, 1 router, coupled with a victim machine and a BT machine. <br />
+<br />
+hope you are getting an idea.<br />
+<br />
+BT could be used to attack and demonstrate attack for both victim machine and switch or router with obsolute firmwares.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">10-30-2011, 09:13 PM</div>
+		<span class="username">prashant_uniyal</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Ok bro. I have just started gns3. It will take some time to get familiar. But I will try making this scenario for sure :)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">11-16-2011, 11:50 PM</div>
+		<span class="username">rishabhd</span>
+	</div>
+	
+	
+		<div class="title">:)</div>
+	
+	<div class="content">
+		<blockquote class="restore">Wow..now thats my type of question  <br />
+<br />
+Its easy sir, you can go either the hard way, the not so hard way..or the easy way.<br />
+<br />
+The hard way (its not so hard..but a comparison for difficulty wrt the other method) includes installing microsoft loopback adapter , integrating it into a cloud module into GNS3 and natting it, then connect it to a simple cisco router <i>(if you want to be easy on ssystem resources , since emulation chomps up a lot of memory then choose an ios with less memory requirements and then messing with ideal values till you spot the right one, and lastly using cpu/per process manipulation</i> (<i>note : manipulation not monitoring..cpulimit anyone ?</i> )<i> to control cpu usage to get the max juice out of system</i>)) . then the basic config begins,the simplest i can think of is this.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code"><br />
+!<br />
+!<br />
+version 12.4<br />
+service timestamps debug datetime msec<br />
+service timestamps log datetime msec<br />
+no service password-encryption<br />
+!<br />
+hostname Router<br />
+!<br />
+boot-start-marker<br />
+boot-end-marker<br />
+!<br />
+!<br />
+no aaa new-model<br />
+memory-size iomem 5<br />
+!<br />
+!<br />
+ip cef<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+interface Ethernet0/0<br />
+ip address 192.168.1.0 255.255.255.0<br />
+half-duplex<br />
+!<br />
+interface Ethernet0/1<br />
+no ip address<br />
+shutdown<br />
+half-duplex<br />
+!<br />
+interface Ethernet0/2<br />
+no ip address<br />
+shutdown<br />
+half-duplex<br />
+!<br />
+interface Ethernet0/3<br />
+no ip address<br />
+shutdown<br />
+half-duplex<br />
+!<br />
+!<br />
+ip http server<br />
+ip forward-protocol nd<br />
+ip route 0.0.0.0 255.255.255.0 192.168.137.1<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+control-plane<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+!<br />
+line con 0<br />
+line aux 0<br />
+line vty 0<br />
+password rdx<br />
+login<br />
+line vty 1 4<br />
+login<br />
+!<br />
+!<br />
+end</code><hr />
+</div><br />
+once done, your loopback adapter will be fully activated ,  setup your virtual box machine with backtrack/linux/any other OS and bridge the lan adapter of virtual box with loopback adapter you created, give it an ip of the same subnet you assigned to gateway (<i>i highly recommend including a third party hardway to create an internet sharing interface for maximum fun..like your android phone acting as a wireless router</i>).., add static routes and add routes according to your configuration in the machine (<i>for host machine </i>)<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">route ADD a.b.c.d MASK xxx.yyy.zzz.mmm&nbsp; k.l.m.n METRIC 3 IF 2</code><hr />
+</div>where a.b.c.d are ip address you want to reach and xxx.yyy.zzz.mmm is the mask and k.l.m.n is the next hop . And I do hope I dont need to elaborate that how to add routes in Linux ;) (<i>in windows..its a bit arcane as most users i encounter dont know they can be added..but Linux is a different behemoth</i>.) .. neverthless..you can setup a default route to virtual adapter gateway (<i>and make sure you know your iptables if you have messed with some already</i>)<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">route add default gw a.b.c.d&nbsp; eth0</code><hr />
+</div><br />
+Check if everything is pinging.<br />
+<br />
+Congrats :)) you have successfully linked all the machines..now go play. I actually messed with metasploit/sivus/sipscan on my vbox to test voip pentest in a simulated environment using this method as it was much closer to a real world scenario.<br />
+:)<br />
+<br />
+<br />
+the second method deals with bundled Qemu hosts..but I think I can cover a full blown tutorial to do the job (<i>the only problem is time</i> :| ), the easiest way in the mean time is to download Technoglov's GNS3 mod (0.8.1 ) with unofficial vitual box support which will save you from the major headache of configuring everything manually..except the router.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">11-18-2011, 01:02 PM</div>
+		<span class="username">rishabhd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">There..I actually made a simulation of an ISP and a real world user. There are 2 systems (<i>linux Tiny core and Windows XP</i>) and 1 server (<i>Linux DSL configured as webserver</i>) connected to an MPLS cloud (<i>vrf Rishabh</i>) which handles 3 locations, the windows user is located in remote location say Delhi, the Linux user is at Pune and the linux server is at Bangalore (<i>lets assume</i>), the ISP is say Airtel it has provided the connectivity to the end links using third party ISP routers (<i>lets say Spectranet which uses Maipu routers</i>) . The data from remote flows from ISP cloud, and in case the main links are down, secondary server link is provided using VRRP through ISP, which again in case goes down (<i>in case of an earthquake..2012 style </i>) then we have an onsite backup which uses 2 failover links configured over HSRP (<i>any other ISP..Tulip </i>? =) )<br />
+<br />
+<a href="../fbcdn-sphotos-a.akamaihd.net/hphotos-ak-snc7/382691_2355678090114_1195063945_32108096_1490551957_n.jpg" target="_blank">https://fbcdn-sphotos-a.akamaihd.net...90551957_n.jpg</a><br />
+<br />
+<br />
+The best part is :<br />
+<br />
+1. One can capture packets using the capture command in central dynamips console,dump them.. forge them (&lt;3 <i>ostinato</i>) , network packet fuzzers ahoy (<i>codenomicon anyone ? </i>:D )<br />
+2. Metasploit .. nuff said :) (<i>can be run on host machine and attacks can be done using the connected virtual adapter</i> (<i>think of the possibilities</i> :)) ) .<br />
+3. Digium asteriesk can be configured on Linux Server (<i>one is enough</i>) and then VOIP attacks can be studied using SiVus/SIPSCAN/sip_invite_spoof/invite forge/ostinato/&lt;insert your share of ideas&gt; here in a real simulated scenario :))<br />
+<br />
+Waiting for your inputs :)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">11-18-2011, 01:35 PM</div>
+		<span class="username">41.w4r10r</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Access Violation at location 0x41414141<br />
+OMG Knowledge Overflowing :D<br />
+<br />
+thats some awesome Networking stuff...<br />
+<br />
+rishabhd thanks for such elaborated post... <br />
+<br />
+keep them coming..</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_7">
+	<div class="header">
+		<div class="datetime">11-18-2011, 10:40 PM</div>
+		<span class="username">Punter</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b><a href="../external.html?link=http://www.garage4hackers.com/members/rishabhd/" target="_blank">rishabhd</a> thats the wonderful scenario and that will help many users who require to practice also before u work on simulators go to this site<br />
+<br />
+<a href="../external.html?link=http://www.firewall.cx/" target="_blank">The World's First Free Cisco Lab - Firewall.cx Cisco Networking, Security VPN, Routing &amp; VoIP CCME Portal</a> this is help to understand basic stuffs in network</b></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_8">
+	<div class="header">
+		<div class="datetime">11-21-2011, 05:28 PM</div>
+		<span class="username">neo</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Hey great post rishabd<br />
+By the way on what config you running this ? and which version of GNS ? Are the routers with real Cisco OS image ?<br />
+Cause last time more than a year ago I had tried such multiple routers with real cisco OS to simulate DNS vulnerability but it used to die on PC (P4-WinXp-512MB) where it was installed. More than 3-4 routers would crash GNS in that scenario.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_9">
+	<div class="header">
+		<div class="datetime">11-22-2011, 12:12 AM</div>
+		<span class="username">Hackuin</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">@neo:<br />
+For comfortability, 4GB RAM is required for that scenario.<br />
+2GB, May also work. Not sure. Didn't tried it.<br />
+And, 512MB is too low for 2+ router/Cisco IOS images.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_10">
+	<div class="header">
+		<div class="datetime">12-03-2011, 06:24 PM</div>
+		<span class="username">rishabhd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Contrary to popular belief, GNS is *not* RAM intensive, take this example, 3640 running on 64 MB RAM base ios X 6 = ~384 MB ram, with 3 VMs taking approx 256 MB ram (XP 100 + 100 DSL + 48 Tinycore) , it all wraps into a sound memory package. GNS is cpu intensive, thats where cpulimit/bes (along with router process optimization) comes in, and did i tell you I ran it on my mini netbook ? (hp dm3210-au) :)</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:36 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=1667&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:55:02 GMT -->
+</html>

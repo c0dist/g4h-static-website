@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=3694&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:17:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> /bin/rm: Argument list too long - deleting tons of files</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread38da.html?t=3694">/bin/rm: Argument list too long - deleting tons of files</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">04-17-2013, 03:55 PM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+		<div class="title">/bin/rm: Argument list too long - deleting tons of files</div>
+	
+	<div class="content">
+		<blockquote class="restore">You might confront issue deleting tons of files from a directory using command # rm *<br />
+Error Message: bash: /bin/rm: Argument list too long<br />
+<br />
+Following commands are the saviours, though few more surely be there:<br />
+<br />
+find . -type f -print -delete<br />
+find . -name &quot;*&quot; -print | xargs rm<br />
+<br />
+Cheers!</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">06-04-2013, 04:49 AM</div>
+		<span class="username">rebeccazoly</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">I have download Long Path Tool and it is the best solution of your problem.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">06-04-2013, 10:49 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>rebeccazoly</strong>
+				<a href="showthreaddea3.html?p=11829#post11829" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">I have download Long Path Tool and it is the best solution of your problem.</div>
+			
+		<hr />
+	</div>
+</div>Dude, the solution I posted is for *nix flavors. Your Long Path Tool is for windows (<br />
+<ul><li style="">No special system requirements. LONG PATH Tool works on any Windows version (NT/2000/XP/Vista/Windows 7/Windows 8).)</li></ul></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">07-03-2013, 04:52 PM</div>
+		<span class="username">jimmy</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">thanks for your information, but I have not encountered problem as it..<br />
+what causes so it appears like it?</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">08-19-2014, 11:39 AM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Something I stumbled across on Quora.<br />
+<br />
+$ mkdir empty_dir$ <br />
+$ rsync -a --delete empty_dir/    yourdirectory/<br />
+<br />
+Source - <a href="../external.html?link=http://qr.ae/uErOf" target="_blank">http://qr.ae/uErOf</a></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">08-20-2014, 12:53 PM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Also, since I can't edit my last reply, here's the interesting comparison of various methods,<br />
+<br />
+<a href="../external.html?link=http://g33kinfo.com/info/archives/5630" target="_blank">http://g33kinfo.com/info/archives/5630</a><br />
+<a href="../external.html?link=http://www.slashroot.in/which-is-the-fastest-method-to-delete-files-in-linux" target="_blank">http://www.slashroot.in/which-is-the...files-in-linux</a><br />
+<br />
+rsync does seem to be very fast.<br />
+<br />
+Hope this helps.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_7">
+	<div class="header">
+		<div class="datetime">04-30-2015, 05:14 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">rsync indeed is very fast and the best so far I've found for my usages. But it almost freezes your computer and shouldn't be used on any production server.<br />
+<br />
+Cheers!</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_8">
+	<div class="header">
+		<div class="datetime">04-30-2015, 01:01 PM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Oh, another thing. There's one more faster way, Perl. Here is the Perl syntax for doing that,<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">$ perl -e 'for(&lt;*&gt;){((stat)[9]&lt;(unlink))}'</code><hr />
+</div>OR<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">$ perl -e 'unlink &lt;*&gt;'</code><hr />
+</div>Source: <a href="../external.html?link=http://www.quora.com/Linux-why-stat+unlink-can-be-faster-than-a-single-unlink/answer/Kent-Fredric?__snids__=658761123&amp;__nsrc__=2#" target="_blank">http://www.quora.com/Linux-why-stat+...23&amp;__nsrc__=2#</a></blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:02 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=3694&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:17:54 GMT -->
+</html>

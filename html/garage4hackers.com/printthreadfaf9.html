@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=1032&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:54:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Linux HISTORY: How to avoid getting logged</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread7e85.html?t=1032">Linux HISTORY: How to avoid getting logged</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">06-19-2011, 08:30 PM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+		<div class="title">Linux HISTORY: How to avoid getting logged</div>
+	
+	<div class="content">
+		<blockquote class="restore">After having a healthy discussion over the topic in some other generic thread, I thought of creating a separate one for this topic.<br />
+<br />
+Few quick ways to avoid logging into linux history and if logged, ways to remove the entries:<br />
+<br />
+ 1. Do not get logged; use the space technique.<br />
+	<div style="margin-left:40px"># echo $HISTCONTROL<br />
+	if the output in not &quot;ignorespace&quot; (without quotes); do<br />
+	# export HISTCONTROL=ignorespace<br />
+	Now just give a space in front of any command and it would not be logged in history</div><br />
+    2. Another way of not getting logged:<br />
+	<div style="margin-left:40px"># history -d $((HISTCMD-1)) &amp;&amp; type_your_command_here_and_execute<br />
+	e.g # history -d $((HISTCMD-1)) &amp;&amp; whoami</div><br />
+    3. If the script has already been executed without taking precautions, either of the following can be done<br />
+      to remove the traces:<br />
+  <br />
+      <div style="margin-left:40px">a) # history -d $((HISTCMD-2)) &amp;&amp; history -d $((HISTCMD-1))<br />
+	The above command would remove the last entry from history.<br />
+	Executing it couple of times would delete couple of entries<br />
+<br />
+      b) # history<br />
+	Note down the command number and then execute:<br />
+	# history -d offset<br />
+	It would delete the respective entry from history<br />
+<br />
+      c) To delete a group of consecutive commands<br />
+	Let us assume there are 50 commands in history and you wish to delete commands from 30 to 50<br />
+	# for i in {51..30}; do history -d &quot;$i&quot;; done;  </div>Thanks to all who participated in the discussion.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">06-21-2011, 04:39 PM</div>
+		<span class="username">Hackuin</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">I was actually testing/experimenting/playing around with the bash #history, trying to figure out yet any other method for not getting logged. After couple of failures, and epic stupidity attempts. I realized/got one more method for avoiding getting logged. Applicable for Gnome terminal. Actually, its is more dramatic and very use-full, consider you don't want your commands get logged for particular session. You could actually simply do simple thing. After executing commands or using terminal just close it with <b>Alt+F4 </b>and all the commands you typed with that terminal will not be logged in the #history. Lulz.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">06-21-2011, 07:38 PM</div>
+		<span class="username">Anant Shrivastava</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">hey any thoughts on screen does screen commands get recorded in main history or screen.<br />
+<br />
+also hackuin that's actually coz the session is down without giving a signal of session termination.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">06-25-2011, 03:43 AM</div>
+		<span class="username">nop</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">You can also play with:<br />
+<br />
+unset HISTFILE<br />
+unset HISTSIZE<br />
+unset HISTORY<br />
+unset HISTSAVE<br />
+unset HISTFILESIZE</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:35 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=1032&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:54:03 GMT -->
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6013&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:03:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Linux Web Server Security....</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread5d51.html?t=6013">Linux Web Server Security....</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">05-01-2014, 10:07 PM</div>
+		<span class="username">sh3llc0d3r</span>
+	</div>
+	
+	
+		<div class="title">Linux Web Server Security....</div>
+	
+	<div class="content">
+		<blockquote class="restore">Hello guy,<br />
+<br />
+i implement LAMP server in test lab now setting up security i know only some basic things, so i want to know the thing which i should know while setting up any web server, <br />
+you can say security check list <br />
+<br />
+please shear you ideas so i can make secure web server...<br />
+<br />
+<br />
+Thanx</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">05-06-2014, 10:26 AM</div>
+		<span class="username">neo</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Here is compliation for you  <br />
+<br />
+<b>The L</b><br />
+There are lots of good guides available to help you out. This list may or may not help you depending on your distribution.<br />
+<br />
+<br />
+<a href="../external.html?link=http://benchmarks.cisecurity.org/en-us/?route=downloads.browse.category.benchmarks.os.linux" target="_blank">Center for Internet Security Benchmarks</a> - Distribution specific for the major flavors<br />
+<a href="../external.html?link=http://wiki.centos.org/HowTos/OS_Protection" target="_blank">CentOS Hardening HowTo</a> - Follows closely to the CIS RHEL5 guide, but is a much easier read<br />
+<a href="../external.html?link=https://csrc.nist.gov/publications/detail/sp/800-123/final" target="_blank">NIST SP800-123 - Guide to General Server Security</a><br />
+<a href="../external.html?link=http://www.nsa.gov/ia/mitigation_guidance/security_configuration_guides/fact_sheets.shtml" target="_blank">NSA Hardening Factsheets</a> - Not as recently updated as CIS, but still mostly applicable<br />
+<a href="../external.html?link=http://www.nongnu.org/tiger/" target="_blank">Tiger</a> - Live System Security Auditing Software<br />
+<br />
+<br />
+<b>The A</b><br />
+Apache can be fun to secure.  I find it easier to harden the OS and maintain usability than either Apache or PHP.<br />
+<br />
+<br />
+<a href="../external.html?link=http://security.stackexchange.com/questions/77/apache-server-hardening" target="_blank">Apache Server Hardening</a> - This question on the IT Security sister site has lots of good information.<br />
+<a href="../external.html?link=http://benchmarks.cisecurity.org/en-us/?route=downloads.browse.category.benchmarks.servers.web.apache" target="_blank">Center for Internet Security Benchmarks</a> - Again, Apache benchmarks.<br />
+<a href="../external.html?link=http://httpd.apache.org/docs/2.0/misc/security_tips.html" target="_blank">Apache Security Tips</a> - Straight from the Apache project, it looks like it covers the basics<br />
+<a href="../iase.disa.mil/stigs/downloads/zip/unclassified_web_srr_checklist_apache_v6r1-12_20100423.html" target="_blank">DISA Hardening Checklist</a> - Checklist from the DoD Information Assurance guys<br />
+<br />
+<br />
+<b>The M</b><br />
+<br />
+<br />
+<a href="../external.html?link=http://benchmarks.cisecurity.org/en-us/?route=downloads.browse.category.benchmarks.servers.database.mysql" target="_blank">Center for Internet Security Benchmarks</a> - Again, but for MySQL benchmarks<br />
+<a href="../external.html?link=http://www.owasp.org/index.php/OWASP_Backend_Security_Project_MySQL_Hardening" target="_blank">OWASP MySQL Hardening</a><br />
+<a href="../external.html?link=http://dev.mysql.com/doc/refman/5.0/en/security-guidelines.html" target="_blank">General Security Guidelines</a> - Basic checklist from the project devs<br />
+<br />
+<br />
+<b>The P</b><br />
+This runs headlong into the whole idea of Secure Programming Practices, which is an entire discipline of its own. SANS and OWASP have a ridiculous amount of information on the subject, so I won't try to replicate it here. I will focus on the runtime configuration and let your developers worry about the rest. Sometimes the 'P' in LAMP refers to Perl, but usually PHP. I am assuming the latter.<br />
+<br />
+<br />
+<a href="../external.html?link=http://security.stackexchange.com/questions/563/what-are-the-best-practices-for-hardening-a-php-ini-file" target="_blank">Hardening PHP</a> - Some minor discussion, also on IT Security SE site.<br />
+<a href="../external.html?link=http://www.hardened-php.net/" target="_blank">Hardened PHP Project</a> - Main project that produces <a href="../external.html?link=http://www.hardened-php.net/suhosin/index.html" target="_blank">Suhosin</a>, an attempt to patch the PHP application to project against certain types of attacks.<br />
+<a href="../external.html?link=http://www.phpfreaks.com/tutorial/hardening-php-with-suhosin" target="_blank">Hardening PHP With Suhosin</a> - A brief HowTo specifically for Suhosin<br />
+<a href="../external.html?link=http://www.madirish.net/?article=229" target="_blank">Hardening PHP from php.ini</a> - Short, but not bad discussion on some of the security related runtime options<br />
+<br />
+Thanks to Scott Pack from serverfaults for compilation</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">05-15-2014, 10:01 PM</div>
+		<span class="username">sh3llc0d3r</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">I hearty thanks :) for your valuable replay..<br />
+its bit long but surely help me lot...</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">04:54 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6013&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:03:24 GMT -->
+</html>

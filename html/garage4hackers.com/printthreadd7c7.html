@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6213&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:18:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Extracting URLs Out of PCAP File</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread7277.html?t=6213">Extracting URLs Out of PCAP File</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">03-12-2015, 10:51 PM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+		<div class="title">Extracting URLs Out of PCAP File</div>
+	
+	<div class="content">
+		<blockquote class="restore">Hello everyone, <br />
+<br />
+Just sharing something new that I learnt today, so that others can get the benefit out of it and also so that I'll know where to look when I forget. :p<br />
+I believe we all know what PCAP files are. Many times, we capture some network traffic and let's assume that was HTTP traffic and what if you need the URLs your PCAP has? <br />
+Fret not, Python comes to rescue. We can use &quot;<a href="../external.html?link=https://pypi.python.org/pypi/dpkt" target="_blank">dpkt</a>&quot;, a fast, simple packet creation / parsing library. While reading something today, I came across this blog post which wonderfully explains how to parse PCAP files using 'dpkt' library in Python - <a href="../external.html?link=https://jon.oberheide.org/blog/2008/...g-a-pcap-file/" target="_blank">https://jon.oberheide.org/blog/2008/...g-a-pcap-file/</a>.<br />
+<br />
+So, I took the liberty to edit code, added some things here and there and this is what it looks like now.<br />
+<b>Please note:</b> All the credits goes to the original author. Also, I take no liability of working of this code. Enough talk, here's your code.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">#!/usr/bin/env python<br />
+<br />
+import dpkt<br />
+import sys<br />
+<br />
+f = open(sys.argv[1], &quot;r&quot;)<br />
+pcap = dpkt.pcap.Reader(f)<br />
+<br />
+http_ports = [80, 8080] # Add other ports if you website on non-standard port.<br />
+urls = [ ]<br />
+<br />
+for timestamp, buf in pcap:<br />
+&nbsp; &nbsp; eth = dpkt.ethernet.Ethernet(buf)<br />
+&nbsp; &nbsp; ip = eth.data<br />
+&nbsp; &nbsp; tcp = ip.data<br />
+&nbsp; &nbsp; if tcp.__class__.__name__ == 'TCP':<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if tcp.dport in http_ports and len(tcp.data) &gt; 0:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; try:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; http = dpkt.http.Request(tcp.data)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; urls.append(http.headers['host'] + http.uri)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; except Exception as e:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Just in case we come across some stubborn kid.<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print &quot;[-] Some error occured. - %s&quot; % str(e)<br />
+f.close()<br />
+<br />
+print &quot;[+] URLs extracted from PCAP file are:\n&quot;<br />
+for url in urls:<br />
+&nbsp; &nbsp; print url</code><hr />
+</div><br />
+<b>Usage:</b><br />
+You'll need to install &quot;dpkt&quot; package by using pip/easy_install/whatever you want. On a Linux machine, it can be installed as<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">batman@gothamcity /tmp $ sudo pip install dpkt # Yup, that's all.</code><hr />
+</div>Just copy the code in a file, save it at &lt;filename&gt;.py. And run it as,<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">batman@gothamcity /tmp $ python pcap-url.py testing.pcap</code><hr />
+</div><br />
+<b>Example:</b><br />
+I downloaded a PCAP file from here - <a href="../external.html?link=http://malware-traffic-analysis.net/.../01/index.html" target="_blank">http://malware-traffic-analysis.net/.../01/index.html</a> and ran it against the script, here's the result:<br />
+<br />
+<a href="../external.html?link=http://imgur.com/ovciCLx" target="_blank">http://i.imgur.com/ovciCLx.png?1</a><br />
+<br />
+<br />
+Hope this helps. :)<br />
+Regards,<br />
+c0dist</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:03 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6213&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:18:00 GMT -->
+</html>

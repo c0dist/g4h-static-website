@@ -1,0 +1,649 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=594&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:49:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Basics of Batch File Programming</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadb9e5.html?t=594">Basics of Batch File Programming</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+	<div class="floatcontainer">
+		<a class="maxperpage" href="printthread1799.html?t=594&amp;pp=40">Show 40 post(s) from this thread on one page</a>
+		<div id="pagination_top">
+			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=594&amp;pp=10&amp;page=2" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="594" /><input type="hidden" name="pp" value="10" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 12">1</a></span><span><a href="printthread5fde.html?t=594&amp;pp=10&amp;page=2" title="Show results 11 to 12 of 12">2</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="printthread5fde.html?t=594&amp;pp=10&amp;page=2" title="Next Page - Results 11 to 12 of 12"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="printthread5fde.html?t=594&amp;pp=10&amp;page=2" title="Last Page - Results 11 to 12 of 12">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		</div>
+	</div>
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">12-18-2010, 02:22 PM</div>
+		<span class="username">ajaysinghnegi</span>
+	</div>
+	
+	
+		<div class="title">Basics of Batch File Programming</div>
+	
+	<div class="content">
+		<blockquote class="restore"><font size="4"><b>Basics of Batch File Programming</b></font><br />
+<br />
+Hi Everyone, just finished a tutorial on basics of batch programming language i hope it will helpful for every learner i am also still learning it :)<br />
+<br />
+<font color="Red">Please Note:</font> All the commands and batch file codes are for educational purpose only.Please keep a backup of files before attempting to use these codes.<br />
+<br />
+Well, they have extensions: <b>.bat</b>(dot bat)<br />
+<br />
+<br />
+Now,for learning batch file programming you need to know some commands that are necessary to know.<br />
+<br />
+You may try to go for help but that will give you a list of limited commands. Although to get started they are enough. As for good purposes like clearing temp files, deleting some special files, keeping a log file, creating files......<br />
+<br />
+<br />
+So to get started, lets start with echo command:<br />
+<br />
+<b>1. Echo:</b> This is the command used to print information, whether to the console(command prompt) or directed place.<br />
+<br />
+This command will print everything whether u give it any value or not . i.e it will also print the command u had typed in the batch file. So to stop this and enhance the look we always turn off auto echoing by:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			@echo off
+			
+		<hr />
+	</div>
+</div>Now it will print only those things which are passed to echo. Like a batch to delete all text files:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			@echo off<br />
+<br />
+echo Deleting text files.........<br />
+<br />
+del /f *.txt<br />
+<br />
+echo Deleted!!
+			
+		<hr />
+	</div>
+</div>Save this as deleter.bat and run it. Make sure to change the extension of any important text file u have in the folder because /f switch will force it to delete without asking for permission.<br />
+<br />
+<br />
+<b>2. Pause:</b> this single command pauses the operation , prints&quot; Press any key to continue...&quot; and waits for the user to press a key. This is usually important because batch files tend to close as soon as they complete without giving u a chance to read it. So at last its important to put pause or u will have to run batch file from console rather than just double clicking it.<br />
+<br />
+<br />
+<b>3. Rem:</b> This command is used to save comments for the other batch file reader i.e. used for commenting(as in programming rerms). It is also used to save info to config.sys file(No need to bother about this).<br />
+<br />
+<br />
+<b>4. Path:</b> path i.e. different variables set as path . Like to go to system drive just type cd /d %windir% and u will be in system directory from any drive. /d is used to change drive with the directory. They are important because not always the system drive will be c: it can be any other depending on systems, so using path variables proves useful since this frees us from the headache of knowing system dive to get the full list, just type set at command prompt.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">12-18-2010, 02:33 PM</div>
+		<span class="username">ajaysinghnegi</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b>5. Output and Input Redirection:</b> Generally in all programming languages there are 3 standard streams: standard Input Stream i.e. keyboard,Standard Output Stream i.e. monitor or console and Standard Error stream i.e. where error are displayed.But often we want to write to file and other places, for this we need to redirect output.<br />
+<br />
+In batch file programming, we can do that with '&gt;' operator(without Quotes). Single &gt; will erase everything and write. Double &gt; i.e. &gt;&gt; will add the text at last of the file.<br />
+<br />
+<br />
+Eg. you want to store the list of all files and folders(with list of all files within a folder and so on)<br />
+you can just type:<br />
+<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			dir /s &gt;&gt; new.txt
+			
+		<hr />
+	</div>
+</div>The /s switch compels dir command to show all files and folder, and all files within the folder, and if any folder then all contents of that folder and so on until the chain gets finished.<br />
+<br />
+<br />
+Similarly, if u want to copy one files content to another file, instead of using copy command u can do following:<br />
+<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			type file1.txt &gt;&gt; file2.txt -- this will copy the contents of text file1 at the end of file2.txt .
+			
+		<hr />
+	</div>
+</div>We use type command because it shows all the text at once unlike more command which shows page wise and needs pressing enter for other ones.<br />
+<br />
+<br />
+Echo command can also be used similarly.<br />
+<br />
+<br />
+Now for redirecting input from other commands we use piping '|'<br />
+This redirects the output of 1 command as input of other command. like:<br />
+<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			dir /s | more - since this command shows all the directory and its sub directories and its files ... we are only able to read
+			
+		<hr />
+	</div>
+</div>the last few folders, passing it with more will allow u read all the folders.<br />
+<br />
+<br />
+<br />
+<font color="Red">Note:</font><b>'|'</b> symbol can be obtained by pressing <b>(shift + \)</b><br />
+<br />
+The Redirection can also be done to other devices like Printers.<br />
+<br />
+<b>DEVICE NAME USED DEVICE<br />
+<br />
+AUX Auxiliary Device (COM1)<br />
+<br />
+CLOCK$ Real Time Clock<br />
+<br />
+COMn Serial Port(COM1, COM2, COM3,COM4)<br />
+<br />
+CON Console(Keyboard, Screen)<br />
+<br />
+LPTn Parallel Port(LPT1, LPT2, LPT3)<br />
+<br />
+NUL NUL Device(means Nothing)<br />
+<br />
+PRN Printer</b><br />
+<br />
+<br />
+Say for example, you want to print the results of directory listings,<br />
+then you can simply give the following command:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			c:\windows&gt;dir *.* &gt; prn
+			
+		<hr />
+	</div>
+</div>Now, nul device literally means nothing. You can direct the output of such commands which just shows work done to prevent it from showing to the user. Like coping command shows the number of file copied. If u don't want to show it or keep it just: <br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			copy x.xx y.yy &gt; nul
+			
+		<hr />
+	</div>
+</div>6. Parameters: We can also provide batch file, arguments at the run time. Like, passing file names for reading by user at run time.The Parameters can be obtained by using %number. <br />
+<br />
+The arguments are delimited or separated by space. So 1st parameter can be obtained by: %1<br />
+<br />
+2nd parameter can be obtained by: %2<br />
+3rd parameter can be obtained by: %3<br />
+.....<br />
+9th parameter can be obtained by: %9<br />
+And if we need parameters more than 9 then just use 'shift' keyword. This will replace parameters to left by 1 i.e. 2nd <br />
+<br />
+parameter will become 1 , 3rd will become 2nd ..... and the 9th is empty.<br />
+But the 1st parameter will be lost. So instead of using %2 and %3.<br />
+We can use shift each time we use the 1st Parameter.So the 2nd will become 1st and we can again use it.<br />
+<br />
+<br />
+7. Set command:<br />
+<br />
+the variable of batch files- Set command is used to create environmental variables.<br />
+This will enable u to do 2 things:<br />
+<br />
+<br />
+i) Lets you to store any text,command or path address in a variable which can be expanded to the value anytime.<br />
+<br />
+ii) Lets you store any text or address entered by the user at run-time. Like the choice of user.<br />
+<br />
+Use-age: set variable_name= text,command or path address.<br />
+<br />
+Note: for user input from keyboard use switch /P with set command and the message to display after the equals sign.<br />
+<br />
+<br />
+Like:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			@echo off<br />
+echo Welcome to deleter or hider.<br />
+echo type d for deleting and h for hiding.<br />
+set /P ch=Enter Choice:<br />
+if %ch%==d goto deleter<br />
+if %ch%==h goto hide<br />
+:deleter<br />
+echo enter file name with extensions to delete<br />
+set /P file=name:<br />
+del /f %file% &gt;&gt; echo<br />
+goto end<br />
+:hide<br />
+echo enter file name with extension to hide<br />
+set /P file=name:<br />
+attrib +h +s +r %file% &gt;&gt; echo<br />
+:end<br />
+pause
+			
+		<hr />
+	</div>
+</div>Here the text Enter Choice: and name: will be shown and user will be asked to enter the text.<br />
+<br />
+goto command takes the cmd to the label pointed by the goto. And we can create labels by putting a colon before Label name. <br />
+<br />
+Like :label_name<br />
+The switch /A lets u put an expression on the right hand side of variable. I.e. the value of variable will be value of expression.<br />
+<br />
+<br />
+8.for command: This command lets u run any command for a number of times or for a number of files. Just like looping. Syntax: for %variable in(sets of files like *.txt for all text files and address for other folders may also be give here) Do command to be executed for each fileHere %variable means declaring any variable name like %i or %l ..<br />
+<br />
+And for each loop %%i will contain the 1 file name among the set specified in the bracket.<br />
+<br />
+<br />
+For Eg, to rename all the .txt file to .virus just type:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			 for %%i in ( *.txt) do ren *.txt *.vir
+			
+		<hr />
+	</div>
+</div>Although here for command was not exactly needed because directly ' ren *.txt *.vir ' would have renamed all but changing contents of dll files or rather say for corrupting files this can prove useful.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">12-18-2010, 02:39 PM</div>
+		<span class="username">swatantra</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">informative! and well written ...</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">12-18-2010, 03:19 PM</div>
+		<span class="username">ajaysinghnegi</span>
+	</div>
+	
+		<div class="attachments">1 Attachment(s)</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b>9. If command:</b>This command is used to do comparisons or checking of parameters and user inputs and work accordingly. Moreover it can also check whether a file exists or not and also checking of variables or strings.<br />
+<br />
+For File checking: <b>if EXIST file_name command_to_perform_if_true</b><br />
+<br />
+like <div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			if EXIST c:\windows\notepad.exe EchoNotepad exists.
+			
+		<hr />
+	</div>
+</div>This command will print Notepad Exists if notepad is in directory windows.<br />
+<br />
+Note: this command cannot be used for directories. I will search for directories, but now work only on files.<br />
+<br />
+We can also use else with if but else has to be in the same line. And some commands need new lines at the end to work, like del command. So better use <b>()</b> brackets and write commands in bracket like:<br />
+<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			if exist C:\windows\notepad.exe (del /f notepad.exe) else (echo notepad doesn't exists)
+			
+		<hr />
+	</div>
+</div>For parameter checking:<br />
+<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			if %1==c goto cdrive<br />
+if %1==d goto ddrive<br />
+:cdrive<br />
+copy %2 c:<br />
+exit<br />
+:ddrive<br />
+copy %2 d:
+			
+		<hr />
+	</div>
+</div>We can also check if parameters are passed by: if %1==&quot;&quot; echo No Parameter, Similarly u can check any thing u want just keep sure u use double equals sign.<br />
+<br />
+<br />
+For both the usage of if we can also use the NOT clause as:<br />
+if not exist c:\test echo test not created yet.<br />
+<br />
+<br />
+10. Choice command: Before we learn how to make use of the CHOICE command, we need to what error levels really are. Now Error levels are generated by programs to inform about the way they finished or were forced to finish their execution. For example, when we end a program by pressing CTRL+C to end a program, the error level code evaluates to 3 and if the program closes normally,then the error level evaluates to 0. <br />
+<br />
+These numbers all by themselves are not useful but when used with the IF ERROR LEVEL and the CHOICE command, they become very useful. The CHOICE command takes a letter or key from the keyboard and returns the error level evaluated when the key is pressed. The general syntax of the CHOICE command is:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			CHOICE &quot;The message to user goes here &quot; [/C:keys][/S][/N][/T:key,secs]
+			
+		<hr />
+	</div>
+</div>The string part is nothing but the string to be displayed when the CHOICE command is run.<br />
+<br />
+The /C:keys defines the possible keys to be pressed. If options are not mentioned then the default Y/N keys are used instead.<br />
+For example the command:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			CHOICE /C:ABCD
+			
+		<hr />
+	</div>
+</div>Defines A, B, C and D as the possible keys. During execution if the user presses a undefined key, he will hear a beep sound and the program will continue as coded.<br />
+<br />
+The /S switch makes the possible keys defined by the CHOICE /c flag case sensitive. So it means that if the /S flag is present then A and a would be different.<br />
+<br />
+The /N switch, if present shows the possible keys in brackets when the program is executed. If the /N switch is missing then, the possible keys are not shown in brackets. Only the value contained in the double quotes is shown.<br />
+<br />
+/T:key,secs defines the key which is taken as the default after a certain amount of time has passed.<br />
+<br />
+<br />
+For Example:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			CHOICE &quot;Choose Option A or B&quot; /C:AB /T:B.5
+			
+		<hr />
+	</div>
+</div>The above command displays Choose Options and if no key is pressed for the next 5 seconds, then it chooses B. Now to truly combine the CHOICE command with the IF ERROR LEVEL command, you need to know what the CHOICE command returns.<br />
+The CHOICE command is designed to return an error level according to the pressed key and its position in the /C switch. To understand this better, consider the following example:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			CHOICE /C:XYZA
+			
+		<hr />
+	</div>
+</div>Now remember that the error level code value depends on the key pressed. This means that if the key X is pressed, then the error level is 1, if the key Y is pressed then the error level is 2, if Z is pressed then error level is 3 and if A is pressed then error level is 4.<br />
+<br />
+Now let us see how the IF ERROR LEVEL command works. The general syntax of this command is:<br />
+<br />
+<b>IF [NOT] ERRORLEVEL</b> number command to execute.<br />
+<br />
+This statement evaluates the current error level number. If the condition is true then the command is executed.<br />
+<br />
+For Example:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			IF ERRORLEVEL 3 ECHO Yes
+			
+		<hr />
+	</div>
+</div>The above statement prints Yes on the screen if the current error level is 3.<br />
+<br />
+The important thing to note in this statement is that the evaluation of an error level is true when the error level us equal or higher than the number compared.<br />
+<br />
+For Example, in the following statement:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			IF ERRORLEVEL 2 ECHO YES<br />
+The condition is true if the error level is &gt; or = 2.
+			
+		<hr />
+	</div>
+</div>Now that you know how to use the CHOICE and ERROR LEVEL IF command together, you can now easily create menu based programs.<br />
+<br />
+The following is an example of such a batch file which asks the User to choose a typing Pad:<br />
+<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			@echo off<br />
+echo .<br />
+echo .<br />
+echo Welcome to typing Pad selection<br />
+echo 1.Notepad<br />
+echo 2.WordPad<br />
+echo 3.Microsoft Word<br />
+echo 4.Command prompt word<br />
+CHOICE &quot;Choose Pad&quot; /C:1234 /N<br />
+if ERRORLEVEL 4 edit %1<br />
+if ERRORLEVEL 3 start c:\Program Files\..i.e. path of word.exe.. %1<br />
+if ERRORLEVEL 2 start wordpad %1<br />
+if ERRORLEVEL 1. notepad %1<br />
+:END
+			
+		<hr />
+	</div>
+</div>Note the order of if statements, since in errorlevel comparision it accepts the value for &gt;= so decreasing order was necessary.<br />
+<br />
+<b><br />
+<font color="Red">NOTES:</font></b><br />
+1. To Copy the batch file itself just use %0 as the source in the copy Command. This will enable you to copy the batch file to places like <b>startup, startmenu, desktop,my documents</b> etc.<br />
+<br />
+2. At many places you will find that computer is not taking the parameters, in that case use double <b>'%%'</b>, as in the batch file computer often computer often deletes one % and hence two is necessary for functioning. I guess at most places you will have to use double <b>%%</b>.<br />
+<br />
+3. Before starting to use batch files and commands I recommend you to at least read the help file of command by:  <b>Command_Name /? JUST ADD /?</b> after the command and it will open its help file which contains details of each switch available.<br />
+<br />
+4. Work on Commands like <b>NET, NBTSTAT, NETSTAT, SHUTDOWN, FORMAT, CALL</b> etc. These Commands are useful, like to create Users, Administrators use <b>NET USER</b> COMMAND. JUST TYPE: NET USER /? and read the whole help file. If you find that help files are <br />
+too long then just save it in a file by using the Command: <b>NET USER/? &gt; NET.TXT</b></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">12-18-2010, 08:55 PM</div>
+		<span class="username">prashant_uniyal</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Nice share..had posted abt it :)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">12-19-2010, 12:03 PM</div>
+		<span class="username">abhaythehero</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">nice tutorial ajay !! :D</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_7">
+	<div class="header">
+		<div class="datetime">12-19-2010, 06:35 PM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Hey that's a good one Ajay. Nice coverage and effort! Definitely would come handy sometimes.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_8">
+	<div class="header">
+		<div class="datetime">12-20-2010, 02:10 AM</div>
+		<span class="username">D4rk357</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Awesome  share bro ... learned  a lot from this thread .. thanks for sharing</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_9">
+	<div class="header">
+		<div class="datetime">12-20-2010, 07:08 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Btw Ajay, it would be better if you attach the document for easy download/copy :)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_10">
+	<div class="header">
+		<div class="datetime">12-20-2010, 12:01 PM</div>
+		<span class="username">d3c0d3r</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">really good tut bro</blockquote>
+	</div>
+</li>
+</ul>
+
+
+	<div class="floatcontainer">
+		<a class="maxperpage" href="printthread1799.html?t=594&amp;pp=40">Show 40 post(s) from this thread on one page</a>
+		<div id="pagination_bottom">
+			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=594&amp;pp=10&amp;page=2" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="594" /><input type="hidden" name="pp" value="10" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 12">1</a></span><span><a href="printthread5fde.html?t=594&amp;pp=10&amp;page=2" title="Show results 11 to 12 of 12">2</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="printthread5fde.html?t=594&amp;pp=10&amp;page=2" title="Next Page - Results 11 to 12 of 12"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="printthread5fde.html?t=594&amp;pp=10&amp;page=2" title="Last Page - Results 11 to 12 of 12">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		</div>
+	</div>
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:26 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=594&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:49:57 GMT -->
+</html>

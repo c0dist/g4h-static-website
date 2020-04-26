@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6945&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:22:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Nmap Network IP Scanning</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadd21a.html?t=6945">Nmap Network IP Scanning</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">12-10-2016, 12:22 PM</div>
+		<span class="username">r0B-O</span>
+	</div>
+	
+	
+		<div class="title">Nmap Network IP Scanning</div>
+	
+	<div class="content">
+		<blockquote class="restore">After scanning a remote IP with nmap, I've found that it was the IP of the router. What is to be done to find and scan specific systems connected to that router and set them as target in metasploit?<br />
+<br />
+Thank You</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">12-10-2016, 04:17 PM</div>
+		<span class="username">neo</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Short Answer : No, by default you can connect to system inside unless router has configured that way.<br />
+<br />
+Long Answer:<br />
+In normal scenario router wont give away directly the machine behind the router.<br />
+You are talking about a home router or business router ? <br />
+If it is home router by default all incoming connections will be blocked. Unless the user has set any port forwarding rule or setup a machine in DMZ network.<br />
+In case of some port fowarding is setup router wont let you know information to which inside IP the port is forwarded it would just show as open port of the public IP address of the router.<br />
+In this scenario you would can pass packets directly to the service running behing the port forward (any inside machine that is configured in portforward). But packets would be forwared to only that specific port.<br />
+<br />
+Hope this clears your doubt.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">12-12-2016, 01:39 AM</div>
+		<span class="username">r0B-O</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>neo</strong>
+				<a href="showthreadaa30.html?p=14815#post14815" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">Short Answer : No, by default you can connect to system inside unless router has configured that way.<br />
+<br />
+Long Answer:<br />
+In normal scenario router wont give away directly the machine behind the router.<br />
+You are talking about a home router or business router ? <br />
+If it is home router by default all incoming connections will be blocked. Unless the user has set any port forwarding rule or setup a machine in DMZ network.<br />
+In case of some port fowarding is setup router wont let you know information to which inside IP the port is forwarded it would just show as open port of the public IP address of the router.<br />
+In this scenario you would can pass packets directly to the service running behing the port forward (any inside machine that is configured in portforward). But packets would be forwared to only that specific port.<br />
+<br />
+Hope this clears your doubt.</div>
+			
+		<hr />
+	</div>
+</div>neo,<br />
+I've tried with TP-Link &amp; D-Link ADSL modem + routers, both are home routers and the IP used was of the ISP alloted one. Could that be a problem? Anyway, let me try if anything possible through that forwarded port, if any. Thank you neo.<br />
+<br />
+Regards,<br />
+r0B-O</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">12-12-2016, 11:08 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>r0B-O</strong>
+				<a href="showthreadae5b.html?p=14816#post14816" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">neo,<br />
+I've tried with TP-Link &amp; D-Link ADSL modem + routers, both are home routers and the IP used was of the ISP alloted one. Could that be a problem? <br />
+<br />
+Regards,<br />
+r0B-O</div>
+			
+		<hr />
+	</div>
+</div>There is no problem. It is meant to work like that. Please elaborate if you still have confusions.<br />
+<br />
+Cheers!</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:04 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6945&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:22:20 GMT -->
+</html>

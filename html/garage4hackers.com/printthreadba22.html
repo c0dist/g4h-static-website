@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6233&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:16:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> need a little help here</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadacf1.html?t=6233">need a little help here</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">04-15-2015, 12:13 AM</div>
+		<span class="username">yhi00</span>
+	</div>
+	
+	
+		<div class="title">need a little help here</div>
+	
+	<div class="content">
+		<blockquote class="restore">Error:<br />
+<br />
+<br />
+ Connection failed: Access denied for user 'uname'@'localhost' to database 'test_db'<br />
+<br />
+m using code from w3 school<br />
+<br />
+&lt;?php<br />
+$servername = &quot;localhost&quot;;<br />
+$username = &quot;username&quot;;<br />
+$password = &quot;password&quot;;<br />
+$dbname = &quot;myDB&quot;;<br />
+<br />
+// Create connection<br />
+$conn = new mysqli($servername, $username, $password, $dbname);<br />
+// Check connection<br />
+if ($conn-&gt;connect_error) {<br />
+    die(&quot;Connection failed: &quot; . $conn-&gt;connect_error);<br />
+}<br />
+<br />
+// sql to create table<br />
+$sql = &quot;CREATE TABLE MyGuests (<br />
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,<br />
+firstname VARCHAR(30) NOT NULL,<br />
+lastname VARCHAR(30) NOT NULL,<br />
+email VARCHAR(50),<br />
+reg_date TIMESTAMP<br />
+)&quot;;<br />
+<br />
+if ($conn-&gt;query($sql) === TRUE) {<br />
+    echo &quot;Table MyGuests created successfully&quot;;<br />
+} else {<br />
+    echo &quot;Error creating table: &quot; . $conn-&gt;error;<br />
+}<br />
+<br />
+$conn-&gt;close();<br />
+?&gt;<br />
+<br />
+ <br />
+i am not sure but i think i have to give privilege to user<br />
+<br />
+how to do it ????</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:01 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6233&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:16:17 GMT -->
+</html>

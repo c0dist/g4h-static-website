@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6014&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:09:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Maintaining Separate classes for all the tabs in a Java application.</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread050a.html?t=6014">Maintaining Separate classes for all the tabs in a Java application.</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">05-02-2014, 11:40 PM</div>
+		<span class="username">stmh</span>
+	</div>
+	
+	
+		<div class="title">Maintaining Separate classes for all the tabs in a Java application.</div>
+	
+	<div class="content">
+		<blockquote class="restore">Any Java Developers here.....:)....?<br />
+<br />
+I have a requirement of developing an application with the below mentioned features:<br />
+<br />
+1) The application should contains Tabs(i have used tabbedPane).<br />
+2) Each tab is independent and has its own layout and its functionality. And hence i wish to have a separate class for each tab's appearance and later a separate class which deals with the action event of that particular tab.<br />
+3) Lastly i wish to leave a feature to the users, which has the capability of adding new tabs to the application and the functionality they wish to have.(without the author updating the software to a new version)<br />
+<br />
+A simple example, that i wish to share is....lets consider that we wish to club our Calculator class/application(GUI), Distance Conversion class/application(GUI),Temperature Conversion class/application(GUI) into a generic application called Homeneeds which has tabs containing these applications.And later if someone wants to add their own application(ex: Stop Watch) to the Homeneeds application as a separate tab, they should be able to add it without any difficulty of changing the existing code written by the author.<br />
+<br />
+or just consider the Burp suite as an example.<br />
+<br />
+Wish to hear form u guys about the design approach and few code examples if possible.<br />
+<br />
+Thanks,<br />
+Stmh</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">05-07-2014, 04:18 PM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">So am curious how has Burpsuite done this ? Assuming you have already checked burpsuite code.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">05-07-2014, 10:27 PM</div>
+		<span class="username">&quot;vinnu&quot;</span>
+	</div>
+	
+	
+		<div class="title">Mediator/Intermediate Class</div>
+	
+	<div class="content">
+		<blockquote class="restore">Namaste<br />
+<br />
+This is done using the concept of &quot;Mediator&quot; or better known as &quot;Intermediate Class&quot;.<br />
+<br />
+The mediator/intermediate class has the knowledge of all the internally accessible objects+methods of all member classes.<br />
+<br />
+All the interaction of user interface is done via this intermediate class. The intermediate class or another class handling GUI can create GUI objects according to the objects presented to it via intermediate class.<br />
+<br />
+Actually in real life, intermediate class has instantiated objects of all the classes and those are the objects via whoe it interacts among different class methods/variables/members.<br />
+<br />
+I hope, this will help you in materializing ur concepts.<br />
+<br />
+...&quot;vinnu&quot;</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:49 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6014&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:09:17 GMT -->
+</html>

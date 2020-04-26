@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6175&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:49:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Measuring clock cycles in CPU</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadbe43.html?t=6175">Measuring clock cycles in CPU</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">01-08-2015, 09:51 PM</div>
+		<span class="username">c0d3m@st3r</span>
+	</div>
+	
+	
+		<div class="title">Measuring clock cycles in CPU</div>
+	
+	<div class="content">
+		<blockquote class="restore">I want to study the behavior of branch predictor in current CPUs. To be precise, I will control the branch predictor indirectly (by controlling the jumps, and thereby the pattern). The code for branch predictor stuff is given below:<br />
+<br />
+<b>For frequent failure of branch predictor</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">#include &lt;algorithm&gt;<br />
+#include &lt;ctime&gt;<br />
+#include &lt;iostream&gt;<br />
+<br />
+int main()<br />
+{<br />
+&nbsp; &nbsp; const unsigned arraySize = 32768;<br />
+&nbsp; &nbsp; int data[arraySize];<br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; for (unsigned c = 0; c &lt; arraySize; ++c)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; data[c] = std::rand() % 256;<br />
+<br />
+&nbsp; &nbsp; clock_t start = clock();<br />
+&nbsp; &nbsp; long long sum = 0;<br />
+<br />
+&nbsp; &nbsp; for (unsigned i = 0; i &lt; 100000; ++i)<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; for (unsigned c = 0; c &lt; arraySize; ++c)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (data[c] &gt;= 128)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sum += data[c];<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; }<br />
+<br />
+&nbsp; &nbsp; double elapsedTime = static_cast&lt;double&gt;(clock() - start) / CLOCKS_PER_SEC;<br />
+&nbsp; &nbsp; std::cout &lt;&lt; elapsedTime &lt;&lt; std::endl;<br />
+&nbsp; &nbsp; std::cout &lt;&lt; &quot;sum = &quot; &lt;&lt; sum &lt;&lt; std::endl;<br />
+&nbsp; &nbsp; return 0;<br />
+}</code><hr />
+</div><b>For maximum correct prediction</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">#include &lt;algorithm&gt;<br />
+#include &lt;ctime&gt;<br />
+#include &lt;iostream&gt;<br />
+<br />
+int main()<br />
+{<br />
+&nbsp; &nbsp; const unsigned arraySize = 32768;<br />
+&nbsp; &nbsp; int data[arraySize];<br />
+<br />
+&nbsp; &nbsp; for (unsigned c = 0; c &lt; arraySize; ++c)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; data[c] = std::rand() % 256;<br />
+<br />
+&nbsp; &nbsp; std::sort(data, data + arraySize);<br />
+&nbsp; &nbsp; clock_t start = clock();<br />
+&nbsp; &nbsp; long long sum = 0;<br />
+<br />
+&nbsp; &nbsp; for (unsigned i = 0; i &lt; 100000; ++i)<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; for (unsigned c = 0; c &lt; arraySize; ++c)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (data[c] &gt;= 128)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sum += data[c];<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; }<br />
+<br />
+&nbsp; &nbsp; double elapsedTime = static_cast&lt;double&gt;(clock() - start) / CLOCKS_PER_SEC;<br />
+&nbsp; &nbsp; std::cout &lt;&lt; elapsedTime &lt;&lt; std::endl;<br />
+&nbsp; &nbsp; std::cout &lt;&lt; &quot;sum = &quot; &lt;&lt; sum &lt;&lt; std::endl;<br />
+&nbsp; &nbsp; return 0;<br />
+}</code><hr />
+</div> I want to measure the clock cycles consumed during branch predictor operation (in both cases: when it is correct, as well as when it fails). How can I do that? I guess there will be inaccuracies because of context switching, out of order execution, SpeedStep, TurboBoost and no syncronization of TSCs between different cores (which can be solved by using cpu affinity type stuff). Is there a way:<br />
+<br />
+<ol class="decimal"><li style="">To prevent context switching on 1 CPU core, while leaving others under normal operation.</li><li style="">To prevent out-of-order execution and/or pipelining while the code to be profiled is being run</li><li style="">To lock one CPU core to a fixed frequency while leaving the other cores.</li></ol><br />
+<br />
+I don't mind if I have to play using assembly; or dive into kernel space. However kernel patching is not an option.<br />
+<br />
+In case it is relevant, I am using Fedora 21 x64 (Kernel 3.17) on Intel i5 M430.<br />
+<br />
+Any help is appreciated. Thanks in advance.</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:26 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6175&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:49:36 GMT -->
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=4088&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:18:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Python SSl connections.</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread10aa.html?t=4088">Python SSl connections.</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">05-10-2013, 11:36 AM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+		<div class="title">Python SSl connections.</div>
+	
+	<div class="content">
+		<blockquote class="restore">Last day we were stuck with an error in a python program of ours . The code was working fine on our dev environment, but when it was moved to production, we were getting the following error <a href="../external.html?link=http://www.garage4hackers.com/f55/how-copy-python-virtual-environment-duplicate-virtualenv-3714.html" target="_blank">[ even when we had the same python virtual environment as that of production ]</a> for a particular domain/server.<br />
+<br />
+Error:<br />
+<br />
+&lt;class 'socket.error'&gt;: [Errno 104] Connection reset by peer)<br />
+<br />
+A sample code to make a python Https request [something we used]. <br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">import httplib<br />
+&nbsp;h = httplib.HTTPSConnection(host, port)<br />
+&nbsp;headers = {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; 'User-Agent': 'trap',<br />
+&nbsp; &nbsp; &nbsp; &nbsp; 'Content-Type': content_type<br />
+&nbsp; &nbsp; }<br />
+h.request('POST', uri, body, headers)<br />
+res = h.getresponse()<br />
+return res.status, res.reason, res.read()</code><hr />
+</div>Python handles https communication by using Openssl lib [ Python openssl lib ] . Actually many apps out there use openssl libs for there https communication. <br />
+<br />
+Even Wget was failing<br />
+<br />
+So for debugging an htpps /ssl issue you can use the openssl client to directly connect to our target the following way.<br />
+<br />
+openssl s_client -connect <a href="../external.html?link=http://www.google.com:443/" target="_blank">Google</a> -verify -debug -ssl3<br />
+<br />
+And this should give back the server Cert, tokens and necessary info for the communication .<br />
+<br />
+But when we tried to connect to our faulting server we were getting .<br />
+<br />
+openssl s_client -connect target-server.com:443 -verify -debug -ssl3<br />
+verify depth is 0<br />
+CONNECTED(00000003)<br />
+52709:error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure:/SourceCache/OpenSSL098/OpenSSL098-47/src/ssl/s3_pkt.c:1102:SSL alert number 40<br />
+52709:error:1409E0E5:SSL routines:SSL3_WRITE_BYTES:ssl handshake failure:/SourceCache/OpenSSL098/OpenSSL098-47/src/ssl/s3_pkt.c:539:<br />
+<br />
+Based on Openssl documentation the faulting function is used to initiate the ssl connection |<a href="../external.html?link=http://en.wikipedia.org/wiki/Transport_Layer_Security" target="_blank">ssl handshake </a>http://www.openssl.org/docs/ssl/SSL_do_handshake.html  <br />
+<br />
+So from this it is clear that the ssl handshake failed and that's the reason why the server closed the connection. So I tried to changing from ssl3 to tls1<br />
+<br />
+openssl s_client -connect <a href="../external.html?link=http://www.google.com:443/" target="_blank">Google</a> -verify -debug -tls1<br />
+<br />
+and the connection was successful. So this solution was to force tls1 when making the request. And later I found that the current issue was a bug in openssl <a href="../external.html?link=https://bugs.launchpad.net/ubuntu/+source/openssl/+bug/965371" target="_blank">https://bugs.launchpad.net/ubuntu/+s...sl/+bug/965371</a> . And why it was working on dev server was it was running an updated version of openssl, and the production had an outdated openssl. <br />
+<br />
+Fix is you can upgrade openssl [fekd up thing to do ] or force tls1 on your programs when dealing with such servers.<br />
+<br />
+You can also patch <a href="../external.html?link=http://askubuntu.com/questions/116020/python-https-requests-urllib2-to-some-sites-fail-on-ubuntu-12-04-without-proxy/116059" target="_blank">httplib in python</a><br />
+<br />
+<br />
+Forcing TLSv1 on python:<br />
+<br />
+sock = socket.create_connection(host, port),<br />
+                                  self.timeout, self.source_address)<br />
+                                  <br />
+    self.sock = ssl.wrap_socket(sock, self.key_file, self.cert_file,<br />
+        ssl_version=ssl.PROTOCOL_TLSv1)<br />
+httplib.HTTPSConnection.connect = connect<br />
+<br />
+<br />
+<br />
+Forcing tls in perl:<br />
+<br />
+my $thing = whatever-&gt;new(<br />
+                ssl_opts =&gt; { SSL_version =&gt; 'TLSv1' },<br />
+        );<br />
+<br />
+Forcing TLS in Wget and Curl<br />
+<br />
+wget --secure-protocol=TLSv1 ...<br />
+<br />
+curl --tlsv1<br />
+<br />
+<br />
+Ref: <a href="../external.html?link=http://askubuntu.com/questions/116020/python-https-requests-urllib2-to-some-sites-fail-on-ubuntu-12-04-without-proxy/116059#116059" target="_blank">Python HTTPS requests (urllib2) to some sites fail on Ubuntu 12.04 without proxy - Ask Ubuntu</a><br />
+ <a href="../external.html?link=https://bugs.launchpad.net/ubuntu/+source/openssl/+bug/965371" target="_blank">https://bugs.launchpad.net/ubuntu/+s...sl/+bug/965371</a><br />
+<a href="../external.html?link=http://stackoverflow.com/questions/385634/is-there-a-difference-between-sslv3-and-tls1-0" target="_blank">ssl - Is there a difference between SSLv3 and TLS1.0? - Stack Overflow</a><br />
+<a href="../external.html?link=http://pyopenssl.sourceforge.net/" target="_blank">pyOpenSSL - Python interface to the OpenSSL library</a></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">05-11-2013, 11:36 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Thanks for the time and efforts you invested on the issue. Best thing is - you found the solution :) Good job buddy!<br />
+<br />
+Cheers!</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">02-03-2014, 09:58 PM</div>
+		<span class="username">steeve154</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">nice all post...........................</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:03 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=4088&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:18:06 GMT -->
+</html>

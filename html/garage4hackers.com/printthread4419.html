@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=281&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 13:21:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Story of a PoC - F5 BIG-IP Cookie Information Disclosure</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread789c.html?t=281">Story of a PoC - F5 BIG-IP Cookie Information Disclosure</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">08-26-2010, 06:58 PM</div>
+		<span class="username">the_empty</span>
+	</div>
+	
+	
+		<div class="title">Story of a PoC - F5 BIG-IP Cookie Information Disclosure</div>
+	
+	<div class="content">
+		<blockquote class="restore"><span style="font-family: Verdana">Curiosity is the biggest virtue of a hacker’s mindset. Only because curiosity people like me loose focus of the actual target and run behind the OTHER things. (Anyways, they are more interesting)<br />
+<br />
+Similar thing happened while I was Pen testing some Web servers which were running behind a load balancer. Nessus was showing some vulnerability associated with load balancer through which it was able to figure out the internal IP of the target server. I read about the vulnerability but was not able to manually test it. Now instead of completing the project in given time, I kept going deeper into the finding and had to stay in office up-to 2 AM just to complete the work. I want to share what ever I learnt, hope you find it useful and interesting.<br />
+<br />
+Little Bit of LOAD BALANCING<br />
+<br />
+Load balancing is a technique to distribute workload across number of servers, network links and other hardware resources in order to achieve optimal resource utilization and maximum throughput. It also serves the cause to avoid any overload and service outage.<br />
+<br />
+Server farms achieve high scalability and high availability through server load balancing, a technique that makes the server farm appear to clients as a single server. In general, server load balancing architectures are of two main types:<br />
+<br />
+1. Transport-level load balancing such as the DNS-based approach or TCP/IP-level load balancing which acts independently of the application payload.<br />
+<br />
+2. Application-level load balancing which uses the application payload to make load balancing decisions.<br />
+<br />
+Load balancing can further be classified into two types namely software-based and hardware based load balancers. Hardware based load balancers are used in transport level load balancing as they are faster than software based ones. On the other hands software based load balancers run on standard operating systems and hardware components (PCs).<br />
+<br />
+In this case we will look into a vulnerability associated with an application level load balancer named F5 Big IP. For balancing the load between the servers this load balancer uses a technique called &quot;Load Balancing using Cookie injection&quot;. The load balancer checks if the request contains a specific load balancing cookie. If the cookie is not found, a server is selected using a distribution algorithm such as round-robin. A load balancing session cookie is added to the response before the response is sent. When the browser receives the session cookie, the cookie is stored in temporary memory and is not retained after the browser is closed. The browser adds the cookie to all subsequent requests in that session, which are sent to the load balancer. By storing the server slot as cookie value, the load balancer can determine the server that is responsible for this request (in this browser session).<br />
+<br />
+Now to talk about F5 Big IP Load balancer, to maintain the session between the client and allotted server it encodes the internal IP and the port being used for the session, stores it into the cookie and injects that into the client browser.<br />
+<br />
+When scanned, Nessus reports the vulnerability with name &quot;F5 BIG-IP Cookie Information Disclosure&quot; and also gives the Internal IP and port that was used while Nessus ran its script. When I read bout the vulnerability, I was eager to verify it manually. So I connected to the target server and in response I received the cookie from the Big IP load balancer. Cookies contents were something like<br />
+<br />
+	Name: BIGipServerpool_reservations_80<br />
+	Content : 940968458.20480.0000<br />
+	Host : x.x.x.62<br />
+	Path : /<br />
+<br />
+When I read it, first thought that came to my mind was Nessus gave away a false positive. But then I observed that Nessus was not only detecting the vulnerability but also was able to find out the Internal IP which it was displaying in the result section.<br />
+<br />
+So, to go into little deeper I thought capturing the traffic at wire level while scanning might help somehow. So I started Wireshark and realized that running scan on an IP and analyzing the capture file for the needed result is like moving a mountain. Only option left for me was to run the .nasl script for this plugin and capture the traffic of it. So finally I meet the requirement to run a nasl script individually. I did searched on Google and found out how to do it on BT.<br />
+<br />
+For this we need to move to the directory where Nessus plugins are located which in case of Linux is<br />
+<br />
+opt/nessus/lib/nessus/plugins/<br />
+<br />
+From here we need to run the particular script which in this case is bigip_cookie.nasl<br />
+<br />
+I used the following command to run the script while being in the above mentioned directory<br />
+<br />
+/opt/nessus/bin/nasl -t x.x.x.62<br />
+<br />
+In result the script only displayed “successful”, nothing else. So I changed my focus to the data captured by wireshark. Through all the streams I was able to see nothing but similar data that I saw in the cookie. No Internal IP, no port and nothing. This was the time when I started getting annoyed, anxious and curious at the same time. (And also when my boss realised that the project will be delayed :P)<br />
+<br />
+So with all my frustration and curiosity I now opened the nasl script in editor and read the script. I observed that the script was trying to initiate a connection with the target and was capturing the cookie recieved in the response. Then the script parsed the cookie to find the string “BIGipServerpool” in order to confirm that cookie belongs to Big IP. From the contents of the cookie it was reading the encoded number format (940968458.20480.0000) which was supposed to be the IP. With some weird mathematics the script was able to decode the number and find out the Internal IP.<br />
+<br />
+I tried several techniques to decode the IP manually. I even tried using code part from the .nasl script but zero was all that I got in return.<br />
+<br />
+Now to understand what that script was doing exactly I read little bit about .nasl scripting. (Vijay Mukhi has written a small but very useful guide to start with nasl scripting). I kept putting a printing statement for every variable the script was using after every calculation. Then after I figured out (It took me nearly 3 hours) that from three partitions of the encoded string only first was containing entire IP and second was showing the encoded port number. For Example<br />
+<br />
+940968458	20480	0000<br />
+(Encoded IP)   	(Port)<br />
+<br />
+It was very relaxing when I saw the output and understood how exactly it all was happening. But all that relaxation vanished when I realized that its nearly five o clock and I will now have to stay in office till midnight or even more to finish the remaining work of mine.<br />
+<br />
+After all of this I realised one more thing that till now I don’t have anything in hand which I can give as PoC of manual testing to the client. Here was when my boss also got actively intrested in this stuff. I explained him what all I have done so far and then he came up with an idea. He just took the code from nasl script which was doing the decoding stuff. Then he made a ruby script to do same stuff. Take the IP and port as input, connect, capture and parse the cookie and decode the IP and port from it. Only difference being that the script was giving output which shows us the Internal IP and the port being used.<br />
+<br />
+I ran that script in konsole and took the screenshot of output and made a PoC of that. That’s it. I am giving below the small script<br />
+<br />
+-----------------------------------------------------------------------------------------------------------------------------<br />
+require 'net/http'<br />
+require 'net/https'<br />
+<br />
+#~ puts &quot;\n###############################################  #\n&quot;  <br />
+#~ puts &quot;F5 Big-IP Cookie information Disclosure\n&quot;<br />
+#~ puts &quot;################################################\  n\n&quot;<br />
+#~ puts &quot;\n&quot;<br />
+#~ puts &quot;Usage: bigip_cookie &lt;IP Address&gt; &lt;port&gt;\n&quot;<br />
+<br />
+rrr = ARGV[0]<br />
+ppp = ARGV[1]<br />
+#~ puts rrr<br />
+#~ puts ppp<br />
+http = Net::HTTP.new(&quot;#{ARGV[0]}&quot;, ARGV[1])<br />
+http.use_ssl = true<br />
+path = '/'<br />
+resp, data = http.get(path, nil)<br />
+cookie = resp.response['set-cookie']<br />
+IP_port = /BIGipServer([^=]+)=([0-9]+)\.([0-9]+)\.[0-9]+/<br />
+m = IP_port.match(cookie)<br />
+puts m[2]<br />
+<br />
+oct1 = (m[2].to_i &amp; 0x000000ff)<br />
+<br />
+oct2 = (m[2].to_i &amp; 0x0000ffff) &gt;&gt; 8<br />
+<br />
+oct3 = (m[2].to_i &amp; 0x00ffffff) &gt;&gt; 16<br />
+oct4 = m[2].to_i &gt;&gt; 24<br />
+port = (m[3].to_i &amp; 0x00ff) * 256 + (m[3].to_i &gt;&gt; 8)<br />
+puts &quot;Cookie:  #{cookie}&quot;<br />
+puts &quot;Internal IP is:  #{oct1}.#{oct2}.#{oct3}.#{oct4}&quot;<br />
+puts &quot;Port is:  #{port}&quot;<br />
+<br />
+-----------------------------------------------------------------------------------------------------------------------------<br />
+<br />
+As soon as I got the PoC one more thought caught my mind. As the load balancer depends upon the cookie for maintaining the session, what will happen if we change the value of port in the cookie? Will the load balancer try to connect to the new port that we have given? Is it possible to do an internal port scan on the target IP with this idea? <br />
+<br />
+As I had to finish the project in given time, I kept this thought aside and finished the project nearly at midnight.<br />
+<br />
+Now to try all those things I will first have to find the Big IP load balancer running in this blue nowhere. Till then this question will keep haunting my mind.<br />
+<br />
+</span></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">08-27-2010, 01:26 AM</div>
+		<span class="username">AnArKI</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">gr8 writeup mate.....goes on to prove 'Where there is a will, there is a way'</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">08-27-2010, 03:50 PM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">awesome :), keep more interesting stuffs coming :)  :cool: , and the internal Port scanning sounds like a great plan so please don't give up on that :)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">08-27-2010, 07:25 PM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">the_empty, that's a hackerish attempt!!! And you know, I am the happy most person reading your experience which you cared to share with all.<br />
+<br />
+Yesterday, 41.w4ri0r and fb1 have also done a great job by developing an exploit which earlier seemed impossible to make real. Soon they will share their experience as well.<br />
+<br />
+Sharing is Caring :)<br />
+<br />
+Great going guys!!!</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">08-27-2010, 08:49 PM</div>
+		<span class="username">prashant_uniyal</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">thanks!!! :) awesome..som uch to lean ;)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">02-15-2012, 01:55 AM</div>
+		<span class="username">monkey</span>
+	</div>
+	
+	
+		<div class="title">Not too impressive</div>
+	
+	<div class="content">
+		<blockquote class="restore">Just noticed this.  F5 published the algorithm years ago, did you bother to look?<br />
+<br />
+<a href="../external.html?link=http://support.f5.com/kb/en-us/solutions/public/6000/900/sol6917.html?sr=19342610" target="_blank">AskF5 | General Solution: SOL6917 - Overview of BIG-IP persistence cookie encoding</a><br />
+<br />
+and told you what to do about it<br />
+<br />
+<a href="../external.html?link=http://support.f5.com/kb/en-us/solutions/public/7000/700/sol7784.html?sr=14607726" target="_blank">AskF5 | General Solution: SOL7784 - Overview of cookie encryption</a><br />
+<br />
+now if you could break that you might have something.  By the way this solution works with any cookie, not just the persistence ones.  To you other question this feature is called &quot;cookie persistence&quot; and means you go to the same server you were initially load balanced to so changing the server data in the cookie is bad.  The designer sent you to that server for a reason (maybe it contains your shopping cart).  If you change the data the LTM will attempt to send you to the other server if that is a valid address but you will have an empty cart.  If the designer wants to protect against this they would encrypt the cookie (it take checking a box).  <br />
+<br />
+for beginners, watch this presentation by Joe McCray (no affiliation with me, but the guy rocks)<br />
+<br />
+<a href="../www.defcon.org/images/defcon-18/dc-18-presentations/McCray/DEFCON-18-McCray-Still-Got-Owned.pdf" target="_blank">https://www.defcon.org/images/defcon...-Got-Owned.pdf</a><br />
+<a href="../external.html?link=https://www.youtube.com/watch?v=tJsNu0VRKYY" target="_blank">https://www.youtube.com/watch?v=tJsNu0VRKYY</a></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_7">
+	<div class="header">
+		<div class="datetime">07-30-2012, 02:45 PM</div>
+		<span class="username">the_empty</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">@monkey,<br />
+<br />
+thank you for providing your views. I admit that I was not aware of the those posts when I posted above write-up. However, please note that I was not posting any *discovery* . As the title clearly mentions, it was an attempt to generate a &quot;konsole/shell&quot; based PoC of a already known vulnerability/configuration flaw which may help an attacker to obtain internal IP addresses of the system.<br />
+<br />
+In penetration tests You may observe that the solution provided by vendor is not implemented in most cases (not all but most) and to figure such anomalies is job of a security consultant. <br />
+<br />
+Though I wouldn't grace your last question with an answer, Just keep in mind that designer may do whatever they want but as a security professional, it is our job (and as hackers its our nature) to use what is designed in a way it is not designed to be used. I hope that's not too much to understand or accept.<br />
+<br />
+Regards,<br />
+the_empty</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_8">
+	<div class="header">
+		<div class="datetime">08-01-2012, 11:03 AM</div>
+		<span class="username">[s]</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">It was really good writing , i was imagining who you was tackling the system. I got some points while doing pentesting</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">04:15 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=281&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 13:21:46 GMT -->
+</html>

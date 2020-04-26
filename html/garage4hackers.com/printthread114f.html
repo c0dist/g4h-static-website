@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=3114&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:49:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Android HTTPS Connection Interception</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreada4a4.html?t=3114">Android HTTPS Connection Interception</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">12-12-2012, 04:27 PM</div>
+		<span class="username">dummywala</span>
+	</div>
+	
+	
+		<div class="title">Android HTTPS Connection Interception</div>
+	
+	<div class="content">
+		<blockquote class="restore"><font size="4"><b>Intercepting Android HTTPS connection<br />
+</b></font><br />
+<br />
+Setting up proxy and getting it work is very difficult task in android. Now here is the tutorial to set up proxy for android application.<br />
+Basically certificates can be kept in android trusted store or may be placed within the application to establish HTTPS connection<br />
+<br />
+<b>Prerequisites</b><br />
+Good idea on SSL ( create ssl certificate using openssl to understand)<br />
+Hands on Android emulator<br />
+<br />
+<b>Android trusted store for android versions</b><br />
+<br />
+Android trusted certificate store is kept in BKS (bouncycastle) format for android version &amp;lt; 4. So it we have to prepare BKS format certificate. Google it for creating BKS format for android version &amp;lt; 4 After creating BKS format certificate we need to push that into the emulator or device and override the present cacert.bks<br />
+Android version &amp;gt; 4 have option to install certificate. Go to settings-&amp;gt; security and select Install from sdcard option. You need to push certificate using<br />
+adb push &#8220;cert path.cer&#8221; /mnt/sdcard &amp;lt; create sdcard space using AVD&amp;gt;  <br />
+We can install our trusted certificate using that option (very easy in android version &amp;gt; 4)<br />
+<br />
+<b>Trusted certificate</b><br />
+<br />
+Every https android application will have either CA signed certificate or self signed certificate. If the application is CA signed certificate then we have to compromise Android Trusted store for intercepting SSL request.  If the application is self signed certificate then it may use android trusted store or may use its own local keystore for establishing https connection.<br />
+Tools<br />
+1)      Dex2jar   <br />
+2)      Apktool<br />
+3)      Bouncy castle for (BKS) format cert creation<br />
+4)      JD-Gui<br />
+5)      Burp suite<br />
+<br />
+<br />
+<b>Steps</b><br />
+·         This was done in emulator<br />
+·         Install the android sdk and related tools, may take some time<br />
+·         After installing everything launch AVD (android virtual device). Also use following command   &#8220;android avd&#8221; to launch<br />
+·         Create a virtual device and allocate some space in &#8220;sdcard&#8221; in given options<br />
+·         Emulator will be launched. You can check device connected by using &#8220;adb devices&#8221; command<br />
+·         After successfully connecting we need to install apk file that was given to us. Use following command &#8220;adb install &#8221;<br />
+·         Application will install. If any dependencies are missing then app will not install. Fix them<br />
+·         &#8220;Logcat&#8221; is the command used to check the logs the application is logging. In order to monitor the application and see its behaviour use following<br />
+Adb logcat | findstr    in windows<br />
+Adb logcat | grep &amp;lt; app specific keyword&amp;gt; in linux<br />
+App specific keyword can be its name or uniquely identified in logs<br />
+·         Run the application and verify the logs and its behaviour<br />
+·         Now we have to set the proxy for the emulator use following command<br />
+Emulator &#8211;avd &#8220;name of virtual device&#8221; &#8211;http-proxy <a href="../external.html?link=http://127.0.0.1:8080/" target="_blank">SiteGround Web Hosting Server Default Page</a><br />
+                Run burpsuite on port 8080.<br />
+·         Check the proxy by launching the android browser. It should be intercepted.<br />
+·         Again run logcat to view the behaviour of the application when it is proxied. If you encounter https connection then the application may not send request to server and it will throw error in the logs that can be verified<br />
+<br />
+<b>Certificate signing</b><br />
+<br />
+If the connection is intercepted then it is fine. If the https connection is not intercepted then the real challenge comes.<br />
+Let&#8217;s say we are making use of android version 4. Now we have to find out whether the application uses android trusted store to establish https connection or its local keystore.<br />
+Verify the URL it is that it is making use of to connect to server and access that URL using browser. By doing so we can know whether the certificate is self signed or CA signed, usually test sites are self signed.<br />
+1)      If CA signed<br />
+2)      If self signed<br />
+1)<br />
+If CA signed then it is quite easy to compromise the android certificate trusted store. Just follow this guide. Look upto installing certificate on emulator.<a href="../external.html?link=http://blog.opensecurityresearch.com/2012/07/proxying-android-40-ics-and-fs-cert.html" target="_blank">Open Security Research: Proxying Android 4.0 ICS and FS Cert Installer</a> . Install certificate. &amp;lt;Note: you will not see your installed certificate on trusted credentials -&amp;gt; user certificate&amp;gt;<br />
+2)<br />
+If self signed then again we have to follow some other things.<br />
+·         Find out the URL that uses to connect to server.<br />
+·         Set proxy to browser and use burp suite as proxy server (port as your wish usually 8080). Access the URL (<a href="../external.html?link=https://name.com/" target="_blank">https://name.com/</a>) in pc browser and intercept the connection using burp suite.<br />
+·          Browser will display error. Add the certificate to exception list. Then go to tools-&amp;gt;options-&amp;gt;Advanced-&amp;gt;encryption and view certificates button. Check for the portswigger certificate for that particular domain name (E.g . portswigger cert if google is intercepted, the portwigger google certificate).<br />
+·         Select the certificate and click on export. Appen (.cer) to the name of the file and save it. A certificate will be created on your desktop<br />
+<br />
+<br />
+<b>Find local keystore</b><br />
+<br />
+If we are lucky then we can find in logs the process that is making request to server and accepting response. Use (adb logcat | grep )<br />
+Follow steps to find local keystore<br />
+·         Use dex2jar application to decompile the application to jar file &#8220;d2j-dex2jar&amp;lt; filename.apk&amp;gt;&#8221;. locate the code which makes HTTPS connection  and fine  lines like these<br />
+<br />
+KeyStore localKeyStore = KeyStore.getInstance(&quot;BKS&quot;);<br />
+        InputStream localInputStream = this.context.getResources().openRawResource(R.raw.  Name _of_file.BKS);<br />
+        try<br />
+        {<br />
+          localKeyStore.load(localInputStream, &quot;pass&quot;.toCharArray());  <br />
+<br />
+·         if you find lines then application uses local keystore to create https connection.<br />
+·         Now we need to again decompile the application to smali files.<br />
+·         Use APKTOOL to decompile it. Use the following command &#8220;apktool d &#8221;.  output will be generated. Search for BKS format certificate. If you find it the its bingo. Now we have to replace the certificate with our burp suite public certificate<br />
+<br />
+<br />
+<b>BKS format certificate creation</b><br />
+<br />
+Google it for BKS format certificate creation. We have bunch of tutorials. While creating BKS format certificate the &#8220;store pass&#8221;  should be given as  the keyword specified in the following line (here as pass) &amp;lt;localKeyStore.load(localInputStream,&quot;pass&quot;.toC  harArray());&amp;gt;  <br />
+<br />
+<br />
+<b>Final steps</b><br />
+<br />
+The created BKS format certificate has to be replaced with our own created BKS certificate.<br />
+We have to build the application using apktool. Use following command<br />
+Apktool b &#8220;application directory&#8221;<br />
+Install the application on emulator using following command<br />
+&#8220;Adb install &#8221;<br />
+Again restart the emulator by setting the proxy ( emulator &#8211;avd &#8220;virtual device name&#8221; &#8211;http-proxy <a href="../external.html?link=http://127.0.0.1:8080/" target="_blank">SiteGround Web Hosting Server Default Page</a> )<br />
+Now start the application. BURP suite will definitely intercept the connection .......   J<br />
+<br />
+...HAPKING...</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:25 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=3114&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:49:05 GMT -->
+</html>

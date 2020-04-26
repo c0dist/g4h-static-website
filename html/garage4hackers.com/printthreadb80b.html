@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=2545&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:48:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Develop on device android console(shell) app</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadac8d.html?t=2545">Develop on device android console(shell) app</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">08-08-2012, 08:49 PM</div>
+		<span class="username">&quot;vinnu&quot;</span>
+	</div>
+	
+	
+		<div class="title">Develop on device android console(shell) app</div>
+	
+	<div class="content">
+		<blockquote class="restore">Namaste<br />
+An android device with development  environment is a great weapon for hacking. In this thread we'll develop our own console application to execute  the shell commands provided by android os<br />
+Search for AIDE app in google app store and install it. It is an ondevice IDE/compiler for android app development<br />
+ <br />
+Create a new project and into its MainActivity.java file paste the following code<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">package com.mycompany.myapp;<br />
+<br />
+import android.app.*;<br />
+import android.os.*;<br />
+import android.view.View;<br />
+import android.widget.*;<br />
+import android.widget.TextView;<br />
+import android.util.Log;<br />
+import android.widget.Button;<br />
+import android.widget.EditText;<br />
+import java.io.*;<br />
+import java.lang.Process;<br />
+import android.text.method.*;<br />
+import java.io.BufferedReader.*;<br />
+import java.io.BufferedWriter.*;<br />
+<br />
+public class MainActivity extends Activity implements View.OnClickListener<br />
+{<br />
+&nbsp; &nbsp; &nbsp; &nbsp; public String ver = &quot;Android Console v0.01\nDeveloper: \&quot;vinnu\&quot;\nTeam:\&quot;Legion Of Xtremers\&quot; &amp; secfence\nUrl:www.secfence.com\n&quot;;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; private TextView tvp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; private EditText et;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; private TextView tvout;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; private Process rprocc;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; private BufferedReader br;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; private BufferedWriter bw;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; /** Called when the activity is first created. */<br />
+&nbsp; &nbsp; @Override<br />
+&nbsp; &nbsp; public void onCreate(Bundle savedInstanceState)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; super.onCreate(savedInstanceState);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; setContentView(R.layout.main);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TextView tv = (TextView)findViewById(R.id.tver);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tv.setText(ver);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Button bt = (Button)findViewById(R.id.hello);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bt.setOnClickListener(this);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tvp = (TextView)findViewById(R.id.prompt);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; et = (EditText)findViewById(R.id.texf);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; et.setText(&quot;&quot;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tvout = (TextView)findViewById(R.id.out);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tvout.setMovementMethod(new ScrollingMovementMethod());<br />
+<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; public void onClick(View view)&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sheller();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; public void sheller()&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; StringBuffer output = new StringBuffer();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int read = 0;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; char[] buffer = new char[4096];<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; String [] cmd = {&quot;/system/bin/sh&quot;,&quot;-c&quot;, &quot;\&quot;&quot;+et.getText()+&quot;\&quot;\n&quot;};<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; try{<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; rprocc = Runtime.getRuntime().exec(cmd);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; br = new BufferedReader(new InputStreamReader(rprocc.getInputStream()));<br />
+//&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bw = new BufferedWriter(new OutputStreamWriter(rproc.getOutputStream()));<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; while((read = br.read(buffer)) &gt; 0)&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Log.d(&quot;DEBUGTAG&quot;,&quot;Reading output of command.&quot;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; output.append(buffer, 0, read);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tvout.setText(tvp.getText()+&quot;&quot;+et.getText()+&quot;\n&quot;+output+tvout.getText());<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } catch(IOException e)&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; throw new RuntimeException();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; et.setText(&quot;&quot;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+}</code><hr />
+</div></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">08-08-2012, 08:56 PM</div>
+		<span class="username">&quot;vinnu&quot;</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Save the file and now in ....../projectname/res/layout/main.xml file type in the folowing xml code:<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code"><br />
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;<br />
+&lt;TableLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;<br />
+&nbsp; &nbsp; android:layout_width=&quot;fill_parent&quot;<br />
+&nbsp; &nbsp; android:layout_height=&quot;fill_parent&quot;<br />
+&nbsp; &nbsp; android:orientation=&quot;vertical&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; android:stretchColumns=&quot;1&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; android:shrinkColumns=&quot;0&quot;<br />
+&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;TableRow&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;TextView<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:id=&quot;@+id/tver&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:layout_width=&quot;wrap_content&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:layout_height=&quot;wrap_content&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/TableRow&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;TableRow&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;TextView<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:id=&quot;@+id/prompt&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:layout_width=&quot;wrap_content&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:layout_height=&quot;wrap_content&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:text=&quot;127.0.0.1:~$&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;EditText<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:id=&quot;@+id/texf&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:layout_width=&quot;fill_parent&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:layout_height=&quot;wrap_content&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:singleLine=&quot;true&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:layout_span=&quot;3&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;Button<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:id=&quot;@+id/hello&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:layout_width=&quot;wrap_content&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:layout_height=&quot;wrap_content&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:text=&quot;Exec&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/TableRow&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;TableRow&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;TextView<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:id=&quot;@+id/out&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:layout_width=&quot;fill_parent&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:layout_height=&quot;wrap_content&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:scrollbars=&quot;vertical&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:maxLines=&quot;30&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; android:layout_span=&quot;4&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/TableRow&gt;<br />
+&lt;/TableLayout&gt;</code><hr />
+</div></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">08-08-2012, 09:00 PM</div>
+		<span class="username">&quot;vinnu&quot;</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">You need to select the &quot;Install apps from unknown source&quot; [like that] setting from ur device's settings menu before rrunning this app. Select Save and then Run from AIDE menu to install ur app and execute it.<br />
+<br />
+<br />
+...&quot;vinnu&quot;</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">08-08-2012, 10:50 PM</div>
+		<span class="username">Anant Shrivastava</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>&quot;vinnu&quot;</strong>
+				<a href="showthread013a.html?p=8360#post8360" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">You need to select the &quot;Install apps from unknown source&quot; [like that] setting from ur device's settings menu before rrunning this app. Select Save and then Run from AIDE menu to install ur app and execute it.<br />
+<br />
+<br />
+...&quot;vinnu&quot;</div>
+			
+		<hr />
+	</div>
+</div>Hi Vinnu,<br />
+<br />
+good exercise but why take so much effort when terminal emulator is directly available.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">08-09-2012, 10:24 AM</div>
+		<span class="username">&quot;vinnu&quot;</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Namaste<br />
+Yes, there are several, but  there is always a charm of deveoping own tools, this gives us more power and control as we can do whatever we wish. And the bliss comes when our tool works, but not when other's app did stuff for us....&quot;vinnu&quot;</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">02-05-2014, 10:19 PM</div>
+		<span class="username">PR4NK1</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Will this get me root access too? using 'su' command???</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:24 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=2545&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:48:03 GMT -->
+</html>

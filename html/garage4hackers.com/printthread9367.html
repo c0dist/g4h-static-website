@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=920&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:41:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> open mysql database advise please</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread111b.html?t=920">open mysql database advise please</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">05-16-2011, 02:12 PM</div>
+		<span class="username">keval_domadia</span>
+	</div>
+	
+	
+		<div class="title">open mysql database advise please</div>
+	
+	<div class="content">
+		<blockquote class="restore">Hello,<br />
+<br />
+I have a client who wants to create a database hub for people who do not want to use database on their system, more like database hosting...<br />
+<br />
+So far, it is complied with <br />
+--disable-information_schema<br />
+--disable-loadfile and LOCAL INFILE is disabled<br />
+--skip-show-database<br />
+<br />
+databases are created as:<br />
+GRANT SELECT, INSERT ON mydb.* TO 'user'@'thishost';<br />
+<br />
+host files have changed basic 'localhost' to &lt;randomtext&gt;<br />
+<br />
+Jailing and chrooting isn't necessary I believe because, site which creates the databases is remotely hosted..... but, if it is, let me know...<br />
+Remote 'root' is disabled and I am using another account with root privileges just to get rid of the name 'root' (if u remember about nullbyte string auth bypass exploit..) so i am not giving any chance of guessing admin account username (sounds lame ehhh! but, this myth is my logic)<br />
+<br />
+This dedi has just port 3306 open<br />
+SELinux configured to block any other tcp data ports<br />
+using simple ufw firewall (i got lazy :D )<br />
+<br />
+<br />
+So far, the above, if am missing something 'please' let me know or if u think, I have done something wrong and may hamper performance, please feel free to correct me...<br />
+<br />
+This is critical project for me and I cannot compromise between either - security and performance<br />
+<br />
+<br />
+Thanks in advance :)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">05-16-2011, 11:21 PM</div>
+		<span class="username">Punter</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">These two things are must for ur mysql if u dont want to get compromise on security.<br />
+<br />
+MySQL database must be executed in a chrooted environment<br />
+MySQL processes must run under a unique UID/GID and should not been used by any other system process.<br />
+use non standard port instead of 3306 change to 1337:) so that online bots will fail to bruteforce <br />
+<br />
+and make sure all ur passwords are strongly salted<br />
+<br />
+Note:chroot is required for ur project bcz db will be used by others clients too</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">05-19-2011, 12:14 PM</div>
+		<span class="username">the_empty</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">useful and informative.... thanks to both</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:17 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=920&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:41:00 GMT -->
+</html>

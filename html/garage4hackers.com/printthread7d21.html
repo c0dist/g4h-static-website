@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6963&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 11:35:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> mobile detectaion</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadfa69.html?t=6963">mobile detectaion</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">01-20-2017, 05:48 PM</div>
+		<span class="username">paraghack</span>
+	</div>
+	
+	
+		<div class="title">mobile detectaion</div>
+	
+	<div class="content">
+		<blockquote class="restore">Hello,<br />
+<br />
+Can anyone guide me? how to detect that, how many mobiles connected to wifi network/router in kali linux vm?<br />
+<br />
+pleas help.<br />
+<br />
+i am using kali linux 2016 vm.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">01-24-2017, 10:36 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Hi,<br />
+I am not updated with wifi stuff over years but pretty sure there would be easily available tools to do that. <br />
+Google for tools like <span style="font-family: arial">Aircrack-ng and Kismet.<br />
+<br />
+Cheers!</span></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">01-27-2017, 01:08 PM</div>
+		<span class="username">Hackuin</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>paraghack</strong>
+				<a href="showthread4b20.html?p=14838#post14838" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">Hello,<br />
+<br />
+Can anyone guide me? how to detect that, how many mobiles connected to wifi network/router in kali linux vm?<br />
+<br />
+pleas help.<br />
+<br />
+i am using kali linux 2016 vm.</div>
+			
+		<hr />
+	</div>
+</div>why not just check the connected devices to the router and have a Mac-lookup which may give you hints of the devices. As mac vendors have a excellent API, a simple script may do it:<br />
+Just copy the mac address to a file.<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">import requests<br />
+<br />
+url = 'http://api.macvendors.com/'<br />
+with open('your_mac_file.txt') as f:<br />
+&nbsp; &nbsp; for line in f:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; print requests.get(url + line).content</code><hr />
+</div></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">01-31-2017, 05:45 PM</div>
+		<span class="username">paraghack</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Hello,<br />
+<br />
+how to excute this code? is it possible and get mobile numbered output.<br />
+<br />
+i just want to see how many &amp; what mobiles are connected to my wifi.<br />
+<br />
+thanks,</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">01-31-2017, 07:00 PM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>paraghack</strong>
+				<a href="showthread5a8d.html?p=14854#post14854" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">Hello,<br />
+<br />
+how to excute this code? is it possible and get mobile numbered output.<br />
+<br />
+i just want to see how many &amp; what mobiles are connected to my wifi.<br />
+<br />
+thanks,</div>
+			
+		<hr />
+	</div>
+</div>Login into your wifi and you can see all the clients connected to it.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">02-01-2017, 01:53 PM</div>
+		<span class="username">paraghack</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">hello friend,<br />
+<br />
+i want know the exact how many mobiles are connected to my wifi and how can i stop them?<br />
+<br />
+thanks,</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">04:01 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6963&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 11:35:38 GMT -->
+</html>

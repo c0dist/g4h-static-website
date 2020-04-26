@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=2914&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:49:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Cracking The Pattern Lock Android</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadebe8.html?t=2914">Cracking The Pattern Lock Android</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">10-25-2012, 08:20 PM</div>
+		<span class="username">0x8BADF00D</span>
+	</div>
+	
+	
+		<div class="title">Cracking The Pattern Lock Android</div>
+	
+	<div class="content">
+		<blockquote class="restore">Hi there,<br />
+<br />
+I have a phone called samsung galaxy mini which is unrooted with usb debugging enabled.<br />
+I have looking for a way to crack/bypass the pattern lock without a  Riff-Box and an JIG-adapter.<br />
+I am looking for a solution in software manner.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">10-25-2012, 08:51 PM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Hi,<br />
+As far as I can read here -&gt; <a href="../external.html?link=http://forensics.spreitzenbarth.de/2012/02/28/cracking-pin-and-password-locks-on-android/" target="_blank">forensic blog » Blog Archive » Cracking PIN and Password Locks on Android</a>, there are two ways :<br />
+1. Rooted phone, which can be found here - <a href="../external.html?link=http://www.garage4hackers.com/f54/reset-android-pin-pattern-lock-using-flashable-zip-tested-gingerbread-2630.html" target="_blank"><br />
+Reset Android PIN/Pattern Lock Using Flashable ZIP (Tested on Gingerbread)</a><br />
+2. and JTAG interface.<br />
+<br />
+Since your phone has USB Debugging enabled, this might help you. <a href="../external.html?link=http://www.youtube.com/watch?v=X7McMB_Gbj8" target="_blank">Bypassing Android's Password Screen</a><br />
+<br />
+And above flashable zip will work with minor changes but as your phone is unrooted, you'll need to change the path<br />
+&quot;/sbin/busybox&quot; to &quot;/sbin/sh&quot;<br />
+and it may work. (not tested)<br />
+<br />
+Hope this may help. :)<br />
+Cheers.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">10-25-2012, 10:42 PM</div>
+		<span class="username">0x8BADF00D</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>RahulB</strong>
+				<a href="showthread5ad6.html?p=9234#post9234" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">And above flashable zip will work with minor changes but as your phone is unrooted, you'll need to change the path<br />
+&quot;/sbin/busybox&quot; to &quot;/sbin/sh&quot;<br />
+and it may work. (not tested)<br />
+<br />
+Hope this may help. :)<br />
+Cheers.</div>
+			
+		<hr />
+	</div>
+</div>I have tried these techouqe and it didnt work :(<br />
+In the android system recovery I  used in the second option - apply update from sdcard and entered my zip that I created and it's said that:<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			Opening update package..<br />
+Installing update...<br />
+E:Error in /tmp/sideload<br />
+package.zip<br />
+(status 2)<br />
+Installation aborted.
+			
+		<hr />
+	</div>
+</div><br />
+Do u know the problem?<br />
+thanks man</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">10-25-2012, 11:17 PM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Errr.. Not sure but the problem seem to be of corrupted zip. Follow all the instruction of the post. And make sure you edit the file in Notepad++ or Programmer's Notepad and save it in Unix Format. I'm not sure but this may be the problem.<br />
+And I'm sure that the youtube video that I shared in above post will. Just install adb and follow the instruction.<br />
+<br />
+Cheers.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">10-26-2012, 04:58 PM</div>
+		<span class="username">0x8BADF00D</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>RahulB</strong>
+				<a href="showthread8dee-2.html?p=9236#post9236" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">Errr.. Not sure but the problem seem to be of corrupted zip. Follow all the instruction of the post. And make sure you edit the file in Notepad++ or Programmer's Notepad and save it in Unix Format. I'm not sure but this may be the problem.<br />
+And I'm sure that the youtube video that I shared in above post will. Just install adb and follow the instruction.<br />
+<br />
+Cheers.</div>
+			
+		<hr />
+	</div>
+</div>I tried it, probably it's doesnt works with unrooted phone.<br />
+Edit by Notepad++ in UNIX mode, followed the instructions.<br />
+<br />
+Do u have another way to bypass/crack unrooted phone?</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">10-26-2012, 09:53 PM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">this <a href="../external.html?link=http://www.youtube.com/watch?v=X7McMB_Gbj8" target="_blank">Bypassing Android&amp;#39;s Password Screen - YouTube</a> ??</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_7">
+	<div class="header">
+		<div class="datetime">10-27-2012, 09:37 PM</div>
+		<span class="username">0x8BADF00D</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>RahulB</strong>
+				<a href="showthread8183.html?p=9240#post9240" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">this <a href="../external.html?link=http://www.youtube.com/watch?v=X7McMB_Gbj8" target="_blank">Bypassing Android's Password Screen - YouTube</a> ??</div>
+			
+		<hr />
+	</div>
+</div>it doesn`t works :(             <br />
+thank u anyway!</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:25 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=2914&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:49:19 GMT -->
+</html>

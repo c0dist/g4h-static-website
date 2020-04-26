@@ -1,0 +1,1241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en">
+
+<!-- Mirrored from garage4hackers.com/content.php?r=61-Penetration-Testing-Biometric-System-Part-II-Remotel-Attacks by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 10:45:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+		<meta name="keywords" content="Hacking biometrics,biometric systems,pen testing biometric," />
+		<meta name="description" content="Penetration Testing Biometric System: Part II:- Remotel Attacks" />
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="Penetration Testing Biometric System: Part II:- Remotel Attacks" />
+<meta property="og:url" content="content34b2.html?r=61-Penetration-Testing-Biometric-System-Part-II-Remotel-Attacks" />
+<meta property="og:type" content="article" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "vbcms";
+	var RELPATH = "content34b2.html?r=61-Penetration-Testing-Biometric-System-Part-II-Remotel-Attacks";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+    
+        <link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - CMS RSS Feed" href="externalbc09.php?do=rss&amp;type=newcontent&amp;sectionid=1&amp;days=120&amp;count=10" />
+    
+    <title>Garage4hackers Forum - Penetration Testing Biometric System: Part II:- Remotel Attacks</title>
+	
+		<link rel="stylesheet" type="text/css" href="css6862.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=widgets.css,vbcms.css,postbit-lite.css,postlist.css,lightbox.css,overlay.css,tagcloud.css," />
+	
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=vbcms-ie.css,postbit-lite-ie.css,postlist-ie.css" />
+    <![endif]-->
+    <!--[if lt IE 7]>
+	<script type="text/javascript">
+		window.LESS_THAN_IE7 = true;
+	</script>
+    <![endif]-->
+	<script type="text/javascript" src="clientscript/vbulletin_overlay6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_cms6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_ajax_htmlloader6719.js?v=421">
+    </script>
+    <link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body style="text-align:left">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id=""><a href="content5ee7.html?r=1-home">Home</a></li>
+						
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="content.html">Home</a></li>
+
+	<li class="navbit"><a href="contentfbb6.html?r=5-g4h-tutorial-and-research-papers">G4H Tutorial and Papers</a></li>
+
+		
+	<li class="navbit lastnavbit"><span>Penetration Testing Biometric System: Part II:- Remotel Attacks</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/content.php?r=61-Penetration-Testing-Biometric-System-Part-II-Remotel-Attacks by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 10:45:10 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+<div class="vbcms_content">
+<div id="doc3" class="yui-tvb-r3">
+	<div id="bd">
+		<div id="yui-main">
+			<div class="yui-b">
+				<div class="yui-gf">
+					<div class="yui-u first yui-panel">
+						<ul class="list_no_decoration widget_list" id="widgetlist_column1">
+<li><script type="text/javascript">
+<!--
+	var IMGDIR_MISC = "images/misc";
+	var vb_disable_ajax = parseInt("0", 10);
+
+        /* Start Sections Widget Configuration */
+        vbGlobal_SHOW_ALL_TREE_ELEMENTS_THRESHOLD = parseInt("5");
+        /* End Seections Widget Configuration */
+// -->
+</script>
+<script type="text/javascript">
+<!--
+	document.write('<script type="text/javascript" src="' + yuipath + '/treeview/treeview-min.js"></script>');
+	loadVbCss(yuipath + '/treeview/assets/skins/sam/treeview.css');
+//-->
+</script>
+<!-- end treeview css -->
+
+<!-- custom treeview styles defined at template: headinclude -->
+
+<!-- END VB Tree-Menu Implementation of YUI TreeView -->
+<div class="cms_widget">
+	<div class="block">
+		<div class="cms_widget_header">
+			<h3><img src="images/cms/sections.html" alt="" /> Menu</h3>
+		</div>
+		<div class="cms_widget_content widget_content">
+			<div class="vb-tree-menu">
+				<ul >
+<li><a href="contentfbb6.html?r=5-g4h-tutorial-and-research-papers" title="G4H Tutorial and Papers">G4H Tutorial and Papers</a>
+</li>
+<li><a href="content842d.html?r=4-g4h-tools-and-scripts" title="G4H Tools and Scripts">G4H Tools and Scripts</a>
+</li>
+<li><a href="content8f5d.html?r=2-garage4hackers-exploits" title="G4H Exploits">G4H Exploits</a>
+</li>
+<li><a href="content7820.html?r=107-ctf-amp-meet-writeups" title="CTF &amp; Meet Writeups">CTF &amp; Meet Writeups</a>
+</li>
+<li><a href="content0b4f.html?r=128-google-vulnerabilities" title="Google Hall of Fame">Google Hall of Fame</a>
+</li>
+<li><a href="contentf20a.html?r=134-teensy" title="Teensy">Teensy</a>
+</li>
+<li><a href="content93b9.html?r=136-webapp-exploits" title="Bug Bounty Listing">Bug Bounty Listing</a>
+</li>
+<li><a href="contentdb2e.html?r=151-web-application-security" title="Web Application Security">Web Application Security</a>
+</li>
+<li><a href="contentc520.html?r=163-exploitation-techniques" title="Exploitation Techniques">Exploitation Techniques</a>
+</li>
+<li><a href="content90cc.html?r=172-ranchoddas-webcast-recording" title="RWS Webcast Recording">RWS Webcast Recording</a>
+</li>
+<li><a href="contente989.html?r=179-blogs" title="Blogs">Blogs</a>
+</li></ul>
+ 
+			</div>
+				<noscript>
+					<div class="cms_widget_sectionnav">
+						<div class="cms_widget_sectionnav_page">
+							
+								
+									<div class="active_menuitem" style="text-indent:20px">
+								
+								<a href="contentfbb6.html?r=5-g4h-tutorial-and-research-papers">G4H Tutorial and Papers</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content842d.html?r=4-g4h-tools-and-scripts">G4H Tools and Scripts</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content8f5d.html?r=2-garage4hackers-exploits">G4H Exploits</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content7820.html?r=107-ctf-amp-meet-writeups">CTF &amp; Meet Writeups</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content0b4f.html?r=128-google-vulnerabilities">Google Hall of Fame</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="contentf20a.html?r=134-teensy">Teensy</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content93b9.html?r=136-webapp-exploits">Bug Bounty Listing</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="contentdb2e.html?r=151-web-application-security">Web Application Security</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="contentc520.html?r=163-exploitation-techniques">Exploitation Techniques</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content90cc.html?r=172-ranchoddas-webcast-recording">RWS Webcast Recording</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="contente989.html?r=179-blogs">Blogs</a></div>
+							
+						</div>
+					</div>
+				</noscript>			
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	initVbTreeMenus(false);
+</script></li>
+</ul>
+					</div>
+					<div class="yui-u yui-panel">
+						<ul class="list_no_decoration widget_list" id="widgetlist_column2">
+<li><!-- styles defined in template: headinclude -->
+
+
+
+<div class="article_width" id="article_content">
+	<div class="title">
+                <h1 class="article_title cms_article_title"><span>Penetration Testing Biometric System: Part II:- Remotel Attacks</span>
+                        
+		</h1>
+	</div>
+	<div class="article_author_date_comment_container">
+                
+		<div class="fullwidth">
+			
+				<div>
+<fb:like href="content34b2.html?r=61-Penetration-Testing-Biometric-System-Part-II-Remotel-Attacks" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like></div>
+			
+			
+				<div class="article_username_container">
+					by <div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="membere81f.html?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="membere81f.html?u=8" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9898.html?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatedce0.html?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="bloge81f.html?u=8" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<a href="index.html" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="list2c25.html?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				</div>
+			
+                        
+                                <div class="article_rating_container">
+                                        <div class="popupmenu cmsratingmenu" id="cmsrating">
+                                                <h6><a class="popupctrl" href="javascript://" id="cmsrating_current">Rate this article</a></h6>
+                                                <form action="../external.html?link=http://garage4hackers.com/content.php?61/rate" method="post" id='cms_cmsrate_form'>
+                                                        <ul class="popupbody popuphover">
+                                                                
+                                                                        <li><label for="r5"><span class="rating5 cmsrating right">
+                                                                                <input type="radio" name="vote" value="5" id="r5"  tabindex="1" /> Excellent
+                                                                        </span></label></li>
+                                                                        <li><label for="r4"><span class="rating4 cmsrating right">
+                                                                                <input type="radio" name="vote" value="4" id="r4"  tabindex="1" /> Good
+                                                                        </span></label></li>
+                                                                        <li><label for="r3"><span class="rating3 cmsrating right">
+                                                                                <input type="radio" name="vote" value="3" id="r3"  tabindex="1" /> Average
+                                                                        </span></label></li>
+                                                                        <li><label for="r2"><span class="rating2 cmsrating right">
+                                                                                <input type="radio" name="vote" value="2" id="r2"  tabindex="1" /> Bad
+                                                                        </span></label></li>
+                                                                        <li><label for="r1"><span class="rating1 cmsrating right">
+                                                                                <input type="radio" name="vote" value="1" id="r1"  tabindex="1" /> Terrible
+                                                                        </span></label></li>
+                                                                        <li class="formsubmit"><input type="submit" class="button" value="Vote Now" tabindex="1" /></li>
+                                                                
+                                                        </ul>
+                                                        <input type="hidden" name="s" value="" />
+                                                        <input type="hidden" name="securitytoken" value="guest" />
+                                                </form>
+                                                <script type="text/javascript" src="clientscript/cms_ajax_rate6719.html?v=421"></script>
+                                                <script type="text/javascript">
+                                                <!--
+                                                        var nodeid = 61;
+                                                        vB_AJAX_CMSRate_Init('cms_cmsrate_form');
+                                                //-->
+                                                </script>
+                                        </div>
+                                </div>
+                        
+                        <div class="cms_clear"></div>
+                        
+				<div class=" article_username_container ">
+					
+						
+							Published on 03-02-2011  01:59 PM
+						
+					
+					
+						&nbsp;
+						&nbsp;
+					
+					
+						&nbsp;Number of Views: 6137
+						&nbsp;
+					
+				</div>
+			
+                       
+                        <div class="article_rating_container">
+                            	<a href="content34b2.html?r=61-Penetration-Testing-Biometric-System-Part-II-Remotel-Attacks#comments"  rel="nofollow"><span id="comments_top_count">4</span> <span id="comments_top_text"> Comments</span></a>
+				<img src="images/misc/comment.html" alt="Comments" border="0" />
+                        </div>
+                       
+		</div>
+	</div>
+    
+    <div class="clear"></div>
+	<div class="article cms_clear restore postcontainer"><font size="2"><br />
+<b><font size="3"><a href="../external.html?link=http://www.garage4hackers.com/entry.php?103-Penetration-Testing-Biometric-System-Part-1-Local-Attacks" target="_blank">Continued from</a></font></b><br />
+<br />
+<br />
+<font size="4">Biometrics: The Technical part:</font><br />
+<br />
+<b>Remote Attack: The attack vectors. </b><br />
+<br />
+<img src="../farm6.static.flickr.com/5292/5490362445_344d946113_z.jpg" border="0" alt="" /><br />
+<br />
+This would be the basic architecture of an IP based remote management protocol of these systems. <br />
+<br />
+So here the attack points would be as follows,<br />
+1)    IP implementation for data transfer<br />
+2)    Biometric Management Servers<br />
+3)    Biometric Admin/Interface (Web Based and Desktop based )<br />
+4)    Back end Database<br />
+5)    Man In The Middle Attacks<br />
+<br />
+The attacks would be as follows:<br />
+<br />
+    <b><font size="3">IP implementation for data transfer:</font></b><br />
+<br />
+The following implementation on the MIPS is used for remotely administrating the biometric devices. An IP stack would be there in the MIPS that would allow users to query the biometric system and extract and add information on to device. A GUI program would be there in the back end that is authenticated to manage these devices. There would be a back end database also, that holds all the information’s about the employees including the salary there attendance and a lot other information. So another way of hacking the biometrics would be to hack these implementations.<br />
+<br />
+This is implemented on the Biometric hardware MIPS, most of the devices use UDP for remotely managing the devices. UDP itself makes it vulnerable for many attacks. <br />
+<br />
+<img src="../farm6.static.flickr.com/5211/5490957104_d9cc2b9b3f_z.jpg" border="0" alt="" /><br />
+<br />
+The remote administration capability of this device lets biometric servers to authenticate to it and manage remotely.  So our primary check should be on this authentication procedure. How the authentication is implemented on the MIPS device.<br />
+ We are completely unaware of the authentication mechanism used as the program is embedded in the Biometric MIPS device. Sniffing network traffic and analyzing the packets work, but the device communicates to the server only when initiated, and it would be weekly or monthly. So the chance of getting an output out of that is limited. <br />
+Solution: The admin application knows everything about the remote device so if we could get a copy of that application it will tell us everything we want.  We could analyze the authentication mechanism, database configuration, and the commands to communicate to these devices. Let’s move forward with a live example. <br />
+<br />
+<b>Scenario:</b> Attacking the remote management protocol of Biometric device.<br />
+<b>Situation:</b> The remote administration implementation is unknown.<br />
+<b>Foot printing:</b> The label on the Biometric device will reveal which company has marketed or build that product.<br />
+<br />
+<img src="../farm6.static.flickr.com/5214/5490957308_0ddef69264_z.jpg" border="0" alt="" /><br />
+<br />
+<b>My Attack Methodology:</b> Example Attack, “Basic for all systems”<br />
+<b>Information Gathering:</b> So a visit to the company’s website reveals that company sells biometric products and could find links to user manual. Site also provides link to the application that is used to manage the devices remotely. So download a copy of the application and we are done with phase one.<br />
+<br />
+<b>Reverse Engineering the Application to extract the commands:</b><br />
+<br />
+The current application is built in .Net C#, so ‘refelector’ would be the right choice for disassembling, we will have to deal with the same scenario in all the cases, languages will vary so as the dissemblers.<br />
+The preliminary analysis revealed the Port the device use to communicate and also information about the database settings and password files. A detailed analysis show the algorithm embedded in Biometric device. It is possible to retrieve the commands to interact with the system too.<br />
+<br />
+<b><br />
+TCP/IP communication details:</b><br />
+<br />
+<img src="../farm6.static.flickr.com/5091/5490957466_0ce98de2c1_z.jpg" border="0" alt="" /><br />
+<br />
+Now the communication methodology of the remote biometric device is clear from the above analysis. The system uses UDP for communication on port 4370.Further analysis on a COM object gave idea about the device communication commands and the import library which handles all the administrative tasks. We also could find information about the firmware and detection algorithm used on the hardware. <br />
+<br />
+<img src="../farm6.static.flickr.com/5213/5490957394_7f09057c9d_z.jpg" border="0" alt="" /><br />
+<b><br />
+Export Table of COM object.</b><br />
+<br />
+<img src="../farm6.static.flickr.com/5175/5490363377_eea86f5270_z.jpg" border="0" alt="" /><br />
+<br />
+Analyzing that Object gives all the list of all necessary commands needed to communicate with the Device. IDA was used for dissembling. These function calls very well explain the possibility of things that you could do on the remote device, functions include remotely shutting down the device to uploading a new user and finger print. So next step would be is to extract the commands. Once we have extracted enough information about the device it would be possible for us to recreate the communication and attack the device directly.  And example code is as follows.<br />
+<br />
+<b>Code to set the language on device was as follows: </b><br />
+<br />
+<img src="../farm6.static.flickr.com/5291/5490363935_731dd4088d_z.jpg" border="0" alt="" /><br />
+<br />
+Hence the device managing software’s would act as a RFC for the unknown protocol we are gone deal with.<br />
+<br />
+<b>Formatted command that were extracted from the application:</b><br />
+<br />
+<img src="../farm6.static.flickr.com/5095/5491262158_d5fd77ffc8_z.jpg" border="0" alt="" /><br />
+<b><br />
+Conclusion:</b><br />
+<br />
+1)    It’s possible to extract the data communication protocol and commands the remote devices use from the management software’s. <br />
+2)    The remote application act as an RFC to the unknown protocol providing with everything we want. <br />
+<br />
+<b><br />
+Auditing Back End Database</b><br />
+<br />
+As the Database is more critical and more vulnerable to attack, a check on these would also yield good output. It’s possible to get a lot of info about were the data base credentials are saved and all form the remote management software.  An analysis of the current product reveled the Managing server data base password file and the encryption key details.<br />
+Local database Password file and Encryption Key hard coded. <br />
+<br />
+<img src="../farm6.static.flickr.com/5171/5490364641_4afba930a2_z.jpg" border="0" alt="" /><br />
+<br />
+<br />
+<b>Conclusion:</b><br />
+<br />
+1)    And from every managing application we would be able to extract these information’s.<br />
+2)    Most of the times the database password would be left default only. <br />
+3)    Other database audit checks could also be done.<br />
+<br />
+<b>Biometric Admin/Interface (Web Based and Desktop based )</b><br />
+<br />
+Another possible point of attacks are on the admin interface, these are either desktop based or Web based. Desktop based applications are common and the possible chances to interact with them require local privileges on the Biometric server. But web based admin panels could be attacked form outside. So an application check on those modules could also get u those data. <br />
+<br />
+<b>Detecting Biometric Devices on Network:</b><br />
+<br />
+How to identify these devices?<br />
+ <br />
+We been discussing about the possible ways of hacking into Biometric device remotely, but the question would be how do we detect these on the network among the many other computers and devices. So only if we could spot the remote IP address of these devices, then only we could use the above mention attacks on them. That’s something to think about. In order to get past that issue I have built an Nmap script that could scan a subnet and spot Biometric MIPS. Currently it’s capable of spotting majority of the devices. The scanner has got an inbuilt list of finger print biometric systems and algorithms embedded so using this we would be able to spot the devices.  <br />
+<br />
+<b>Biometric_Scanner.nse Script Output:</b><br />
+<br />
+<img src="../farm6.static.flickr.com/5059/5490670539_47dfe24ceb_z.jpg" border="0" alt="" /><br />
+<br />
+<br />
+                                                              <br />
+<b>Attacking the Device</b><br />
+<br />
+Now as we know the device IP address Port used and communication commands we could try to build custom UDP packets and interact with the device as were not able to detect any authentication on the device. The device was program to any commands. So this vulnerability makes it’s possible for an attacker to connect to the device and retrieve any information and manipulate data. <br />
+Python Scapy was used to build custom UDP commands and successfully interacted with the device. <br />
+<br />
+<b>Scapy Interacting with Device:</b><br />
+<br />
+<img src="../farm6.static.flickr.com/5173/5491265858_8334223350_z.jpg" border="0" alt="" /><br />
+<br />
+<b>UDP PACKETS:</b><br />
+<img src="../farm6.static.flickr.com/5178/5491267088_dccb25cf95_z.jpg" border="0" alt="" /><br />
+<br />
+The attack worked and the device was responding to the command without any authentication. <br />
+<b>Sniffed data using Wireshark:</b><br />
+<br />
+<img src="../farm6.static.flickr.com/5098/5490673835_8a5e42a8f6_z.jpg" border="0" alt="" /><br />
+<br />
+The vulnerability allowed the attacker to Download, Upload new users and there Finger Prints. So it was possible for the attacker to add new users as a back door to the device.<br />
+Sniffed Traffic Showing Employee Details: <br />
+<br />
+<img src="../farm6.static.flickr.com/5251/5491269848_29457f84f1_z.jpg" border="0" alt="" /><br />
+<br />
+<br />
+<b>Conclusion: </b><br />
+The procedure to successfully Pen-Test a biometric device has been explained. The paper clearly explains the necessity to add Bio-metrics devices to the scope of a network audit and the necessary care that has to be ensured on such devices. </font><br />
+<br />
+<b>Videos: </b><br />
+<br />
+
+<iframe class="restrain" title="YouTube video player" width="640" height="390" src="../external.html?link=http://www.youtube.com/embed/VKa6nrT9HYI?wmode=opaque" frameborder="0"></iframe>
+</div>
+
+	
+
+	
+		<script type="text/javascript" src="clientscript/vbulletin_lightbox6719.html?v=421"></script>
+		<script type="text/javascript">
+		<!--
+		vBulletin.register_control("vB_Lightbox_Container", "article_content", 1);
+		//-->
+		</script>
+	
+
+	
+
+	
+		<sub class="article_promoted_text">
+			This article was originally published in blog:
+			<a href="bloge81f.html?u=8">Penetration Testing Biometric System: Part II:- Remotel Attacks</a>
+			started by
+			<a href="membere81f.html?u=8">fb1h2s</a>
+		</sub>
+	
+	<div class="cmslinks">
+
+		
+	
+	</div>
+
+    
+	<script type="text/javascript">
+	var THREADID = 792;
+	var THIS_URL = "content34b2.html?r=61-Penetration-Testing-Biometric-System-Part-II-Remotel-Attacks";
+	var MIN_CHARS = 30;
+	vbphrase['comment'] = "Comment";
+	vbphrase['comments'] = "Comments";
+</script>
+<div id="comments" class="cms_comments_page">
+	<a name="comments_start"></a>
+	<div id="node_comments_block">
+	<input type="hidden" value="1" id="allow_ajax_qr" />
+	<div id="comments_comment_count" class="comments_comment_count">
+		<img src="images/misc/comment.html" alt="Comments" border="0" /><span id="comments_block_count"> 4</span> <span id="comments_block_text">Comments</span>
+	</div>
+	<div id="node_comments" class="cms_none_comments">
+		<div id="comments_4245" class="cms_comments_mainbox postcontainer">
+	<ol>
+<li class="postbit postbit-lite" id="post_4245">
+<div class="postbit_pb_left">
+<a name="comment_4245"></a>
+	
+		
+			<a href="member4419.html?u=739" class="avatarlink"><img src="topece9d1.jpg?u=739&amp;dateline=1307815664&amp;type=thumb" width="80" height="70" alt="demank's Avatar" border="0" /></a>
+		
+	
+	</div>
+	<div class="postbit_pb_right">
+	<div class="comment_blockrow postbit_headers postbit_borders">
+		<div class="floatleft">
+			
+				<a href="member4419.html?u=739" class="username">demank</a>
+			
+			 - <span class="postdate">06-11-2011, <span class="time">11:43 PM</span></span>
+		</div>
+	
+	<div class="floatright">
+		<ul class="postcontrols">
+				
+				
+				
+				
+					<li>
+						<a href="newreply4d14.html?do=newreply&amp;p=4245&amp;return_node=61" class="reply" rel="nofollow"><img src="images/buttons/reply_40b.html" alt="" class="inlineimg" /> Reply</a>
+					</li>
+				
+				
+				
+				
+		</ul>
+	</div>
+	</div>
+	<div id="post_message_4245" class="comment_text">
+		<blockquote class="posttext restore restore_margin">
+			Great post, i'm so interest to try it in my office.<br />
+But i can't figure out exactly Biometric_Scanner.nse script, can you tell me?<br />
+thx... great job<img src="images/smilies/cool.html" border="0" alt="" title="Cool" class="inlineimg" />
+		</blockquote>
+	</div>
+</div> 
+
+</li></ol>
+	<div id="respond_4245"></div>
+</div><div id="comments_13451" class="cms_comments_mainbox postcontainer">
+	<ol>
+<li class="postbit postbit-lite" id="post_13451">
+<div class="postbit_pb_left">
+<a name="comment_13451"></a>
+	
+		
+			<a href="memberc21f.html?u=10286" class="avatarlink"><img src="images/misc/unknown.html" width="60" height="60" alt="dotcppfile's Avatar" border="0" /></a>
+		
+	
+	</div>
+	<div class="postbit_pb_right">
+	<div class="comment_blockrow postbit_headers postbit_borders">
+		<div class="floatleft">
+			
+				<a href="memberc21f.html?u=10286" class="username">dotcppfile</a>
+			
+			 - <span class="postdate">07-14-2014, <span class="time">05:49 PM</span></span>
+		</div>
+	
+	<div class="floatright">
+		<ul class="postcontrols">
+				
+				
+				
+				
+					<li>
+						<a href="newreply0af1.html?do=newreply&amp;p=13451&amp;return_node=61" class="reply" rel="nofollow"><img src="images/buttons/reply_40b.html" alt="" class="inlineimg" /> Reply</a>
+					</li>
+				
+				
+				
+				
+		</ul>
+	</div>
+	</div>
+	<div id="post_message_13451" class="comment_text">
+		<blockquote class="posttext restore restore_margin">
+			That's really and I like the fact that Scapy is being useful as always.
+		</blockquote>
+	</div>
+</div> 
+
+</li></ol>
+	<div id="respond_13451"></div>
+</div><div id="comments_13527" class="cms_comments_mainbox postcontainer">
+	<ol>
+<li class="postbit postbit-lite" id="post_13527">
+<div class="postbit_pb_left">
+<a name="comment_13527"></a>
+	
+		
+			<a href="member3e5e.html?u=8506" class="avatarlink"><img src="images/misc/unknown.html" width="60" height="60" alt="Th3Initiat3's Avatar" border="0" /></a>
+		
+	
+	</div>
+	<div class="postbit_pb_right">
+	<div class="comment_blockrow postbit_headers postbit_borders">
+		<div class="floatleft">
+			
+				<a href="member3e5e.html?u=8506" class="username">Th3Initiat3</a>
+			
+			 - <span class="postdate">09-01-2014, <span class="time">02:01 PM</span></span>
+		</div>
+	
+	<div class="floatright">
+		<ul class="postcontrols">
+				
+				
+				
+				
+					<li>
+						<a href="newreply6d5e.html?do=newreply&amp;p=13527&amp;return_node=61" class="reply" rel="nofollow"><img src="images/buttons/reply_40b.html" alt="" class="inlineimg" /> Reply</a>
+					</li>
+				
+				
+				
+				
+		</ul>
+	</div>
+	</div>
+	<div id="post_message_13527" class="comment_text">
+		<blockquote class="posttext restore restore_margin">
+			Great paper, I assume the main vulnerability to this is that there is not authentication mechanism to test the trust of packets and there origin, but even if we could check using mac address as verification mechanism they still can be spoofed with scapy. <br />
+<br />
+I was wondering weather you have any ideas on how to best protect your software from this on the protocol level ?
+		</blockquote>
+	</div>
+</div> 
+
+</li></ol>
+	<div id="respond_13527"></div>
+</div><div id="comments_13528" class="cms_comments_mainbox postcontainer">
+	<ol>
+<li class="postbit postbit-lite" id="post_13528">
+<div class="postbit_pb_left">
+<a name="comment_13528"></a>
+	
+		
+			<a href="member3e5e.html?u=8506" class="avatarlink"><img src="images/misc/unknown.html" width="60" height="60" alt="Th3Initiat3's Avatar" border="0" /></a>
+		
+	
+	</div>
+	<div class="postbit_pb_right">
+	<div class="comment_blockrow postbit_headers postbit_borders">
+		<div class="floatleft">
+			
+				<a href="member3e5e.html?u=8506" class="username">Th3Initiat3</a>
+			
+			 - <span class="postdate">09-01-2014, <span class="time">02:02 PM</span></span>
+		</div>
+	
+	<div class="floatright">
+		<ul class="postcontrols">
+				
+				
+				
+				
+					<li>
+						<a href="newreplye32e.html?do=newreply&amp;p=13528&amp;return_node=61" class="reply" rel="nofollow"><img src="images/buttons/reply_40b.html" alt="" class="inlineimg" /> Reply</a>
+					</li>
+				
+				
+				
+				
+		</ul>
+	</div>
+	</div>
+	<div id="post_message_13528" class="comment_text">
+		<blockquote class="posttext restore restore_margin">
+			Great paper, I assume the main vulnerability to this is that there is not authentication mechanism to test the trust of packets and there origin, but even if we could check using mac address as verification mechanism they still can be spoofed with scapy. <br />
+<br />
+I was wondering weather you have any ideas on how to best protect your software from this on the protocol level ?
+		</blockquote>
+	</div>
+</div> 
+
+</li></ol>
+	<div id="respond_13528"></div>
+</div>
+	</div>
+	<div id="pagenav" class="comments_page_nav_css fullwidth">
+		
+	</div>
+        <script type="text/javascript">
+	<!--
+		var ajax_last_post = '1409560373';
+		vB_XHTML_Ready.subscribe(function (e) {vB_AJAX_QuickEdit_Init('node_comments');})
+	//-->
+        </script>
+	<div id="ajax_post_errors" class="hidden">
+		<div class="block">
+			<div class="blockhead floatcontainer">
+				<span class="blockhead_info"><input type="button" class="button" value=" X " id="quick_edit_errors_hide" tabindex="50" /></span>
+				<h2>vBulletin Message</h2>
+			</div>
+			<div class="blockbody">
+				<div id="ajax_post_errors_message" class="blockrow">&nbsp;</div>
+			</div>
+			<div class="blockfoot">
+				<a href="#" id="quick_edit_errors_cancel" class="textcontrol">Cancel Changes</a>
+			</div>
+		</div>
+	</div>
+</div>
+	<script type="text/javascript" src="clientscript/vbulletin-editor6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_quick_edit6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.html?v=421"></script>
+	<div id="node_comments_hide"></div>
+	<!-- EDITOR IS BREAKING THE PAGE -->
+	
+</div>
+
+
+</div></li>
+</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="yui-b yui-sidebar">
+			<ul class="list_no_decoration widget_list" id="widgetlist_column3">
+<li><div class="cms_widget">
+	<div class="block">
+		<div class="cms_widget_header">
+		<h3><img src="images/site_icons/html.html" alt="" /> G4H Facebook</h3>
+		</div>
+		<div class="cms_widget_content widget_content">
+		<div class="fb-like-box" data-href="https://www.facebook.com/pages/Garage4Hackers/138904662794635" data-width="300" data-height="250" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+		</div>
+	</div>
+</div></li><li><div class="cms_widget">
+	<div class="block">
+		<div class="cms_widget_header">
+		<h3><img src="images/site_icons/html.html" alt="" /> G4H Twitter</h3>
+		</div>
+		<div class="cms_widget_content widget_content">
+		<a class="twitter-timeline"  href="../external.html?link=https://twitter.com/garage4hackers"  data-widget-id="387207513831010305">Tweets by @garage4hackers</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+	</div>
+</div></li>
+</ul>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="content34b2.html?r=61-Penetration-Testing-Biometric-System-Part-II-Remotel-Attacks#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">03:53 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	<img src="cronc87c.gif?rand=1584872637" alt="" width="1" height="1" border="0" />
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

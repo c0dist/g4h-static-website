@@ -1,0 +1,1441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=103&p=226 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:20:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="Garage4Hackers(G4H) is an open security community for Information Security enthusiasts, gurus and aspirants.Members of the team dedicate time and resources towards helping other information security aspirants, sharing knowledge,spreading security awareness and promoting research." />
+<meta property="og:url" content="showthread2be6.html?t=103" />
+<meta property="og:type" content="article" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthread3ff1.html?t=103&amp;p=226";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - Network Vulnerabiltity Assessment &amp; Penetration Testing - RSS Feed" href="externalec6c.php?type=RSS2&amp;forumids=10" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	<meta name="keywords" content="nmap, 192.168.0.1, option, disabling, scan, address, won’t, scanning, things, tutorial, string, tool, executed, reverse, running, it’s, “name”, great, servers, query, server, ‘-n’, resolutions, disables, don’t, requesting, generally, “-n”, avoid, attached, case, lookup, desperately, resolve, work, duration, result, suddenly, verbosity, ‘-v’, called, verbose, logs, attempts, station, resolution, workstation, scans, notice, doesn’t" />
+	<meta name="description" content="Nmap-Part 1 
+(Network Mapper) 
+Running on console/command prompt 
+ 
+First part of two tier tutorial. 
+Nmap is great security tool developed by “Fyodor”. Basically it was a *nix tool but now available on various platforms and with GUI as well. 
+This tutorial is for newbie’s and skiddies who would like to learn the proper way of using it. Geeks can use it to brush up the things. 
+I would opt the command line/console, as I love it. I won’t be going in great depth of NMap. For that you should read" />
+
+	<title> Nmap--step by step--by b0nd</title>
+	<link rel="canonical" href="showthread2be6.html?t=103" />
+	
+	<script type="text/javascript" src="clientscript/vbulletin_textedit6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.html?v=421"></script>
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="css8d9b.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=postlist.css,showthread.css,postbit.css,attachment.css,poll.css,lightbox.css" />
+	
+
+<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a href="search8427.html?do=getnew&amp;contenttype=vBForum_Post">New Posts</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_faq"><a href="faq.html">FAQ</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="calendar.html">Calendar</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Community</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_members"><a href="memberlist.html">Member List</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Forum Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a href="forum.html?do=markread&amp;markreadhash=guest">Mark Forums Read</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_qlinks">
+							<a href="javascript://" class="popupctrl">Quick Links</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbqlink_posts"><a href="search2791.html?do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+								
+									<li id="vbqlink_leaders"><a href="showgroups.html">View Site Leaders</a></li>
+								
+							</ul>
+						</li>
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="forum.html">Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplayfdc5.html?f=9">Hacking and Security Discussions</a></li>
+
+	<li class="navbit"><a href="forumdisplay15ca.html?f=10">Network Vulnerabiltity Assessment &amp; Penetration Testing</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> Nmap--step by step--by b0nd</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=103&p=226 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:20:47 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Results 1 to 3 of 3
+			</div>
+		</div>
+	</div>
+<div id="pagetitle" class="pagetitle">
+	<h1>
+		Thread: <span class="threadtitle"><a href="showthread2be6.html?t=103" title="Reload this Page">Nmap--step by step--by b0nd</a></span>
+
+<a class="a2a_dd" href="../external.html?link=http://www.addtoany.com/share_save"><img src="../static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share/Save - My123World.Com!"/></a><script type="text/javascript">a2a_show_title=1;a2a_num_services=14;</script><script type="text/javascript" src="../static.addtoany.com/menu/page.js"></script>
+
+		
+			
+<fb:like href="showthread2be6.html?t=103" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like>
+		
+	</h1>
+</div>
+	<div id="thread_controls" class="thread_controls">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread65c4.html?t=103&amp;pp=10&amp;page=1" accesskey="3" 
+						rel="nofollow">Show Printable Version</a></li>
+					<li><a href="sendmessagef09a.html?do=sendtofriend&amp;t=103"
+						rel="nofollow">Email this Page&hellip;</a></li>
+					<li>
+						
+							<a href="subscriptionff5e.html?do=addsubscription&amp;t=103" 
+								rel="nofollow">Subscribe to this Thread&hellip;</a>
+											
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+				<li class="popupmenu searchthread" id="searchthread">
+					<h6><a class="popupctrl" href="javascript://">Search Thread</a></h6>
+					<form action="../external.html?link=http://garage4hackers.com/search.php" method="post">
+						<ul class="popupbody popuphover">
+							<li>
+								<input type="text" name="query" class="searchbox" value="Search..." tabindex="13" />
+								<input type="submit" class="button" value="Search" tabindex="14" />
+							</li>
+							<li class="formsubmit">
+								<div><a class="advancedsearchlink" href="searchfc55.html?search_type=1&amp;searchthreadid=103&amp;contenttype=vBForum_Post">Advanced Search</a></div>
+							</li>
+						</ul>
+						<input type="hidden" name="s" value="" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="process" />
+						<input type="hidden" name="searchthreadid" value="103" />
+						<input type="hidden" name="search_type" value="1" />
+						<input type="hidden" name="contenttype" value="vBForum_Post" />
+
+					</form>
+				</li>
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Display</a></h6>
+					<ul class="popupbody popuphover">
+						<li><a href="showthreada05b.html?t=103&amp;p=226&amp;mode=linear#post226"> Switch to Linear Mode</a></li>
+						<li><a href="showthread5b26-2.html?t=103&amp;mode=hybrid"> Switch to Hybrid Mode</a></li>
+						<li><label>Threaded Mode</label></li>
+					</ul>
+				</li>
+			
+
+			
+		</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+		<script type="text/javascript">
+<!--
+var imgdir_statusicon = "images/statusicon";
+var imgdir_misc = "images/misc";
+var cleargifurl = "clear.gif";
+var guestphrase = "Guest";
+var morephrase = "More replies below current depth...";
+var highlightwords = "";
+//-->
+</script>
+
+<script type="text/javascript" src="clientscript/vbulletin_thrdpostlist6719.html?v=421"></script>
+
+<script type="text/javascript">
+<!--
+// initialize some variables
+var curpostid = 226;
+var quickreply = false;
+
+// cached posts (no page reload required to view)
+pd[216] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_216">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">07-08-2010,&nbsp;<span class="time">09:56 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post216" href="showthread.php?t=103&amp;p=216&amp;viewfull=1#post216" class="postcounter">#1</a><a id="postcount216" name="1"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=18" title="prashant_uniyal is offline"><strong>prashant_uniyal</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=18" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=18&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=18" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=18" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://hackingethics.wordpress.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/18-prashant_uniyal" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="prashant_uniyal is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Analyst\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_216_18" title="prashant_uniyal has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=18" title="prashant_uniyal is offline">\r\n				<img src="image.php?u=18&amp;dateline=1393305256" alt="prashant_uniyal\'s Avatar" title="prashant_uniyal\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>localhost</dd>\r\n					\r\n					<dt>Posts</dt> <dd>505</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=18">8</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n				<h2 class="title icon">\r\n					Nmap-' + '-step by step-' + '-by b0nd\r\n				</h2>\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_216">\r\n						<blockquote class="postcontent restore ">\r\n							Nmap-Part 1<br />\r\n(Network Mapper)<br />\r\nRunning on console/command prompt<br />\r\n<br />\r\nFirst part of two tier tutorial.<br />\r\nNmap is great security tool developed by “Fyodor”. Basically it was a *nix tool but now available on various platforms and with GUI as well.<br />\r\nThis tutorial is for newbie’s and skiddies who would like to learn the proper way of using it. Geeks can use it to brush up the things.<br />\r\nI would opt the command line/console, as I love it. I won’t be going in great depth of NMap. For that you should read some book on it. I’ll try to give examples in between.<br />\r\nI’m assuming that you are “root”. Normal user won’t be able to execute many of its powerful scanning techniques. So let’s start….<br />\r\n<br />\r\nLet the IP address to be scanned is 192.168.0.1. Simply it can be done as:<br />\r\n<br />\r\n# nmap 192.168.0.1<br />\r\n<br />\r\nFew default things have also been executed along with the above mentioned string. The actual string executed is:<br />\r\n<br />\r\n#nmap –R –sS 192.168.0.1<br />\r\n<br />\r\nLets deal with “-R” here, will see –sS later on.<br />\r\nIt’s a query to DNS server for reverse DNS name lookup i.e. requesting for some “name” attached with the specified IP address. It’s generally the case with servers. Hence if you don’t need the “name” desperately, avoid it using “-n” option.<br />\r\n<br />\r\n#nmap –n 192.168.0.1 or #nmap –n –sS 192.168.0.1 (both are same)<br />\r\n<br />\r\n‘-n’ disables Reverse DNS. Many DNS servers log name resolutions, so running an Nmap scan without disabling name resolution may cause Nmap station to appear in the DNS logs it attempts to resolve the name of every workstation it scans!<br />\r\nDisabling this option will speed up the scan manifold especially if you are scanning many machines simultaneously.<br />\r\n<br />\r\nNow you may notice that Nmap doesn’t do anything for a while and then suddenly it comes up with result. It actually does lot of work in that duration. To see all that you must use ‘-v’ option, called as verbose.<br />\r\n<br />\r\n#nmap –v –n 192.168.0.1<br />\r\n<br />\r\nFor more verbosity use ‘v’ twice<br />\r\n<br />\r\n#nmap –vv –n 192.168.0.1<br />\r\n<br />\r\nScanning more than one machine<br />\r\nOk, so up to here we were scanning one host only. What will you do to scan more than one host?<br />\r\nThere are various ways of doing this. Let’s consider few of them, rest you should be able to think of:<br />\r\nSuppose you have to scan 192.168.0.1, 192.168.0.2 and 192.168.0.3<br />\r\n<br />\r\n# nmap -vv –n 192.168.0.1,2,3 or<br />\r\n<br />\r\n# nmap –vv –n 192.168.0.1-3<br />\r\n<br />\r\ngeneralizing further<br />\r\n<br />\r\n#nmap –vv –n 192.168.0.1-3,6,12-20.<br />\r\nIt will scan 1,2,3,6 and 12 to 20.<br />\r\n<br />\r\nIf you have to scan all the 254 machines:<br />\r\n# nmap –vv –n 192.168.0.1-254 or<br />\r\n# nmap –vv –n 192.168.0.* or<br />\r\n# nmap –vv –n 192.168.0.1/24 (you should know subnetting for it)<br />\r\n<br />\r\n# nmap –vv –n 192.168.1-2.*. It will scan 192.168.1.0 to 192.168.2.255. It can also be written as<br />\r\n#nmap –vv –n 192.168.1,2.0-255<br />\r\nHope you have enough brain to get these things.<br />\r\n<br />\r\n<br />\r\n<br />\r\n<br />\r\nScanning specific ports:<br />\r\nSuppose you have to scan specific ports only and not the defaults ones. You should use ‘-p’ for that<br />\r\n<br />\r\n# nmap –vv –p 80 192.168.0.1. It will scan port 80<br />\r\n<br />\r\n# nmap –vv –p 21,23,25,80-100 192.168.0.1<br />\r\n. It will scan port number 21, 23, 23 and 80 to 100.<br />\r\n<br />\r\n# nmap –vv –n –p 21,23,25 192.168.1-2.*<br />\r\n• Verbose mode (for interactive mode)<br />\r\n• Disabled reverse DNS lookup (speed up and doesn’t let DNS server log anything)<br />\r\n• Scanning specific ports<br />\r\n• Scanning 192.168.1.0 to 192.168.2.254 machines.<br />\r\n<br />\r\n<br />\r\nVarious Scanning options:<br />\r\nThere are many scanning options available with Nmap. All have their advantages and disadvantages. You should use them according to your requirements.<br />\r\n<br />\r\n• -sS: SYN scanning<br />\r\nTCP SYN scan gather information about open ports without completing the TCP handshake process. When an open port is identified, the TCP handshake is reset before it can be completed. This technique is often referred to as “half open” scanning.<br />\r\nIt’s the default scanning technique if you are “root”. It’s the most common scan to use because it works on all networks, across all operating systems.<br />\r\n<br />\r\nADV:<br />\r\nThe TCP SYN scan never actually creates a TCP session so isn’t logged by the destination host’s applications. And hence it’s a quiet scan.<br />\r\nDISADV:<br />\r\nYou need privileged access to the system.<br />\r\n<br />\r\n# nmap –vv –n –sS 192.168.0.1<br />\r\n<br />\r\n• -sT: TCP connect scanning<br />\r\nIt performs the 3-way handshake.<br />\r\n<br />\r\nADV:<br />\r\nYou don’t need to have privileged access.<br />\r\nDISADV:<br />\r\nSince it completes a TCP connection so apparent when application connection logs are examined.<br />\r\nI would suggest you to never ever use this scan.<br />\r\n<br />\r\n# nmap –vv –n –sT 192.168.0.1<br />\r\n<br />\r\n• -sF, -sX, -sN: FIN scan, Xmas tree scan, NULL scan.<br />\r\nThese are called “stealth” scans. They send a single frame to a TCP port without any TCP handshaking or additional packet transfers. They are more “stealth” than SYN scan and must be used if the remote machine is not a Windows-based machine. I’ll tell you why.<br />\r\nThese scans operate by manipulating the bits of the TCP header. Nmap creates TCP headers that combine bit options that should never occur in the real world. These purposely mangled TCP header packets are thrown at a remote device, and nmap watches for the responses.<br />\r\nWindow-based systems will reply with a RST frame for all queries, regardless of the status of the specific port that was queried.<br />\r\n<br />\r\nADV:<br />\r\nSince no TCP sessions are established, they are quiet stealthy.<br />\r\n<br />\r\nDISADV:<br />\r\nCan’t be used against windows-based machine.<br />\r\n<br />\r\n# nmap –vv –n –sF 192.168.0.1<br />\r\n# nmap –vv –n –sX 192.168.0.1<br />\r\n# nmap –vv –n –sN 192.168.0.1<br />\r\n<br />\r\n• -sU: UDP scan.<br />\r\nThe only scan in the arsenal of Nmap to identify UDP ports.<br />\r\n<br />\r\n# nmap –vv –n –sU 192.168.0.1\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_216" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_216" class="newreply" href="newreply.php?do=newreply&amp;p=216" rel="nofollow" title="Reply With Quote"><img id="quoteimg_216" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[220] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_220">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">07-08-2010,&nbsp;<span class="time">09:58 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post220" href="showthread.php?t=103&amp;p=220&amp;viewfull=1#post220" class="postcounter">#2</a><a id="postcount220" name="2"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=18" title="prashant_uniyal is offline"><strong>prashant_uniyal</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=18" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=18&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=18" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=18" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://hackingethics.wordpress.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/18-prashant_uniyal" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="prashant_uniyal is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Analyst\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_220_18" title="prashant_uniyal has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=18" title="prashant_uniyal is offline">\r\n				<img src="image.php?u=18&amp;dateline=1393305256" alt="prashant_uniyal\'s Avatar" title="prashant_uniyal\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>localhost</dd>\r\n					\r\n					<dt>Posts</dt> <dd>505</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=18">8</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_220">\r\n						<blockquote class="postcontent restore ">\r\n							• -sO: Protocol scan<br />\r\nSometimes it has to be checked that what protocols the remote machine is running. It locates uncommon IP protocols that may be in use on the remote system. Hence it helps determining the type of remote device, i.e. is that router or printer or workstation etc.<br />\r\n<br />\r\nDISADV:<br />\r\nThis scan will appear on any network monitoring application that identifies the IP protocol types in use.<br />\r\n<br />\r\n# nmap –vv –n –sO 192.168.0.1.<br />\r\n<br />\r\n• -sR: RPC scan.<br />\r\nIt’s used to locate and identify RPC applications. It runs automatically during a version scan (-sV, explained later)<br />\r\n<br />\r\nDISADV:<br />\r\nRPC scan opens application sessions and hence it will be logged.<br />\r\n<br />\r\n# nmap –vv –sR 192.168.0.1<br />\r\n<br />\r\n• -sV: Version scan<br />\r\nThe scans which we have seen by now give you the status of the port and the service running on them. For exploiting the service you need the exact version number of the service. Version scan gives you this.<br />\r\n<br />\r\nDISADV:<br />\r\nIt opens sessions with the remote applications, which will often display in an application’s log file.<br />\r\n<br />\r\n# nmap –vv –sV 192.168.0.1<br />\r\n<br />\r\n• -sA: ACK scan<br />\r\nIts quiet useful when there is some packet filtering device or firewall. It never locates an open port. It does the job of identifying ports that are filtered through a firewall. It doesn’t open any application sessions and hence the conversation between nmap and the remote device is relatively simple.<br />\r\n<br />\r\nDISADV:<br />\r\nIt can only tell whether port is filtered or unfiltered. But can never definitively identify an open port.<br />\r\n<br />\r\n# nmap –vv –sA 192.168.0.1<br />\r\n<br />\r\n• -sI: Idle scan<br />\r\nIt’s the stealthy most scan you can have. Tough to launch because you need a zombie for it. It would not be justice with this great scan to be described in just few lines. I would recommend you to read it in detail.<br />\r\n<br />\r\nADV:<br />\r\nYou will never be caught.<br />\r\n<br />\r\nDISADV:<br />\r\nTough to launch as it’s not easy to find some zombie machin<br />\r\n<br />\r\n• -sP: Ping scan:<br />\r\nYou must have heard of Ping sweep. It’s Nmap’s ping sweep.<br />\r\n<br />\r\n# nmap –vv –sP 192.168.0.10<br />\r\nwill check whether this machine is up or not<br />\r\n<br />\r\n# nmap –vv –sP 192.168.0.*<br />\r\nwill check the whole subnet (254) machines and will tell you which are up.<br />\r\n<br />\r\nDISADV:<br />\r\nPing scan will not interoperate with any other type of scan.<br />\r\n<br />\r\n• -sW: Window scan<br />\r\nForget it. As the number of operating systems vulnerable to its methodology is dwindling as operating systems are upgraded and patched.<br />\r\n<br />\r\n• -sL: List scan<br />\r\nWould like to say only one line about it that you must use it if a separate application provides nmap with a list of IP addresses. Rest read yourself.<br />\r\n<br />\r\n<br />\r\nO/S fingerprinting and version detection<br />\r\n<br />\r\nOk, now you can use various scanning techniques to look for open/closed or filtered/unfiltered TCP as well as UDP ports. Don’t you want to know the remote operating system running???<br />\r\n<br />\r\n-O:<br />\r\nOperating system fingerprinting.<br />\r\n<br />\r\n# nmap –vv –O 192.168.0.1<br />\r\nIt will tell you or at least tries its best to tell you the remote operating system along with the version it’s using. It at least need one open and one close TCP port. In case it doesn’t, it won’t be able to give the accurate result. In that case you should use some third party tool.<br />\r\n<br />\r\nDISADV:<br />\r\nA trained eye will quickly identify that someone is watching the network.<br />\r\n<br />\r\n-sV:<br />\r\nVersion detection<br />\r\nAs has been explained it will help you know the version of the service running on the remote machine.<br />\r\n<br />\r\n# nmap –vv –sV 192.168.0.1<br />\r\n<br />\r\n<br />\r\n-A:<br />\r\nNamed as Additional, Advanced, and Aggressive option. Its comprises of both the operating system fingerprinting process (-O) and the version scanning process (-sV).<br />\r\ni.e following two are same:<br />\r\n<br />\r\n# nmap –vv –sV –O 192.168.0.1 and<br />\r\n# nmap –vv –A 192.168.01.<br />\r\n<br />\r\nIt’s assumed that you are root. Many options won’t work or better to say will switch to other kind of scans if you are not root. And sometimes it may even not give any warning before doing that. So beware!!! You may get logged.<br />\r\n<br />\r\nLet’s start it with various PING features available with Nmap.<br />\r\nPING is a necessary evil. I’ll explain it later on.<br />\r\n<br />\r\nNmap Ping Methods:<br />\r\n<br />\r\nFirst thing which should always be kept in mind is that Ping options are used to identify whether remote machine is up or not. Determining the open ports and services running on them is not the headache of Ping scan. Hence do your best using various Ping options to determine whether remote machine is up or down or being protected by some firewall.<br />\r\n<br />\r\nNote: If user doesn’t specifies a particular ping type, an ICMP Echo Request (-PE) followed by TCP ACK Ping (-PA) (by default on port 80 because most packet filters allow port 80) takes place. You can confirm it looking up the default ping options selected in the GUI Nmap.<br />\r\n<br />\r\nNmap provides various kinds of PING options and note that all of them start with the letter ‘P’. Various combinations of these Ping options can be used in order to increase the chances of getting across packet filters and firewalls.<br />\r\n<br />\r\n• -PE ICMP Echo Request<br />\r\nIt’s simply the ICMP Echo request and corresponding ICMP Echo reply packet and is best to determine the availability of machine. Drawback is that it’s the most common protocol filtered by firewalls/packet filters. If you get response to this ping, it’ll indicate that there is very less filtering between you and your destination.<br />\r\n<br />\r\n• -PA[port number] TCP ACK Ping<br />\r\nHelpful to determine filtered/unfiltered ports, hence useful when there is some firewall protecting the machine.<br />\r\n<br />\r\n#nmap –vv 192.168.0.1 –PA23,110<br />\r\n<br />\r\nHere in this example, NMap will ping port 23 and 110 of the remote machine with ACK packets. If the remote machine is up or unfiltered, it will respond with RST packet. But in case it’s down or ports are filtered, there will be no response and hence the scan will stop. Hence in order to get through firewall, try different ports.<br />\r\nIf no port is specified, port number 80 will be pinged (which is generally the best one to ping as most packet filters allow traffic to port number 80).<br />\r\n<br />\r\nThese two above specified Ping scans run by default when you don’t specify any kind of Ping scan.<br />\r\n<br />\r\n<br />\r\n• -PS[port number] TCP SYN Ping<br />\r\nIts functionality is same as SYN scan. Nmap machine sends SYN packet to remote machine. Open port will respond with ACK/SYN and closed will respond with RST. Hence can be used to determine whether remote machine is up or not. Ports can be specified, 80 is the default one.<br />\r\n<br />\r\n#nmap –vv –n 192.168.0.1 –PS (will ping port number 80)<br />\r\n#nmap –vv –n 192.168.0.1 –PS23,110 (will ping 23 and 110 number ports)<br />\r\n<br />\r\n• -PU[port number] TCP UDP Ping<br />\r\nBy default it sends UDP frames at port number 31338. UDP frames sent to closed ports responds with “ICMP port unreachable” message. If the remote port is open, it may or may not respond, because many UDP applications don’t send a response to any random incoming frame. Hence it should be tried to send the UDP frame to closed port. It heavily relies on ICMP packets, so if ICMP is filtered there may be no response to the UDP ping.<br />\r\n<br />\r\n#nmap –vv –n 192.168.0.1 –PU (default port is 31338)<br />\r\n#nmap –vv –n 192.168.0.1 –PU&lt;any port which you think would be closed&gt;<br />\r\n<br />\r\n• -PP ICMP Timestamp Ping<br />\r\nICMP Timestamp ping is used to allow two separate systems to coordinate their time-of-day clocks.<br />\r\nAvoid using it as NTP (Network Time Protocol) has replaced it. Hence Timestamp packets may raise eyebrows of trained eyes.<br />\r\nMoreover it doesn’t works properly when firewall is there as it relies heavily on ICMP.<br />\r\n<br />\r\n• -PM ICMP Address Mask Ping<br />\r\nIt operated by sending an ICMP address mask request to a remote device. Most modern operating systems and routers will not respond to this request, hence this ICMP ping type doesn’t work on most modern systems.<br />\r\nHence forget it.<br />\r\n<br />\r\nConclusion:<br />\r\nIf some firewall or packet filter is there on the remote device, better choice would be a non-ICMP based ping type.<br />\r\n<br />\r\n<br />\r\n• -PO Don’t Ping<br />\r\nIf you know that the remote machine is up and running, you can use this option to remain a bit stealthier. Hence direct scanning of the target will start without pinging the machine. It should be used when using Decoys, otherwise ping packets will reach target from your machine only and from none of the decoys. Hence the purpose of using Decoys will loose its essence.<br />\r\nBut as I told “Ping is a necessary evil”, Nmap gather some important timing information from the ping process, so disabling the ping process will put nmap at a disadvantage when the scan begins. Actually it determines the accurate round-trip-time during ping.<br />\r\n<br />\r\nSomething about operating system fingerprinting<br />\r\n<br />\r\nThe usage of –O has been discussed in the 1st part of this tutorial. It gives the information of the operating system running on the remote machine which is must before launching some kind of exploit.<br />\r\nFor this Nmap need at least one open and one closed port. If it doesn’t get, it may not give the correct results.\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_220" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_220" class="newreply" href="newreply.php?do=newreply&amp;p=220" rel="nofollow" title="Reply With Quote"><img id="quoteimg_220" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[226] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_226">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">07-08-2010,&nbsp;<span class="time">10:01 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post226" href="showthread.php?t=103&amp;p=226&amp;viewfull=1#post226" class="postcounter">#3</a><a id="postcount226" name="3"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=18" title="prashant_uniyal is offline"><strong>prashant_uniyal</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=18" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=18&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=18" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=18" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://hackingethics.wordpress.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/18-prashant_uniyal" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="prashant_uniyal is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Analyst\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_226_18" title="prashant_uniyal has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=18" title="prashant_uniyal is offline">\r\n				<img src="image.php?u=18&amp;dateline=1393305256" alt="prashant_uniyal\'s Avatar" title="prashant_uniyal\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>localhost</dd>\r\n					\r\n					<dt>Posts</dt> <dd>505</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=18">8</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_226">\r\n						<blockquote class="postcontent restore ">\r\n							• -' + '-osscan_limit<br />\r\nThis option will abort OS fingerprinting if both open and closed ports are not available, hence will save a hell lot of time instead of getting incorrect results.<br />\r\nI personally feel that third party tools should also be used to get the correct results about the remote machines operating system.<br />\r\n<br />\r\n<br />\r\n• -A (Additional, Advanced, and Aggressive)<br />\r\nIts combination of “-O” and “-sV” i.e. operating system fingerprinting and service version scan<br />\r\n<br />\r\n#nmap –vv –n 192.168.0.1 –O –sV<br />\r\nis same as<br />\r\n#nmap –vv –n 192.168.0.1 -A<br />\r\n<br />\r\n<br />\r\n<br />\r\n<br />\r\nInclusion and Exclusion of Hosts and Ports<br />\r\n<br />\r\nSometimes it may be the scenario that you don’t want to scan particular IP address or range of IP addresses. E.g. Government IP’s or IP’s of routers and switches of your network etc.<br />\r\nSo here we have few options for that:<br />\r\n<br />\r\n• Exclude Targets (-' + '-exclude &lt;host 1, host 2, host 3….&gt;)<br />\r\nThe IP addresses specified will not be scanned by Nmap.<br />\r\n<br />\r\n#nmap –vv –n –sS 192.168.0.1/24 -' + '-exclude 192.168.0.2-4, 192.168.0.7<br />\r\n<br />\r\nThis will scan the whole subnet except 192.168.0.2, 192.168.0.3, 192.168.0.4, and 192.168.0.7.<br />\r\n<br />\r\n<br />\r\n<br />\r\n• Exclude Targets in File (-' + '-excludefile &lt;file name&gt;)<br />\r\nHere instead of specified the IP addresses which must not be scanned, user has to maintain a file including the list of IP address, one IP address per line.<br />\r\n<br />\r\n#nmap –vv –n -sS 192.168.*.* -' + '-excludefile filename.txt<br />\r\n<br />\r\nContent of filename.txt could be as following:<br />\r\n192.168.0.1-4 (exclude 192.168.0.1 &#61664; 192.168.0.4)<br />\r\n192.168.3-5.* (exclude 192.168.3.0 &#61664; 192.168.5.255)<br />\r\n192.168.6.* (exclude 192.168.6.0 &#61664; 192.168.6.255)<br />\r\netc.<br />\r\n<br />\r\nThe benefit of –excludefile option is that a permanent exclusion file can be made including IP address of organizations/individuals whom you would never like to scan These IP address may not be the part of current scan, but it won’t harm making such a permanent exclusion file and upgrading it.<br />\r\n<br />\r\n-' + '-excludefile and –exclude options can’t be used on the same scan.<br />\r\n<br />\r\n<br />\r\n• Read Targets from File (-iL &lt;inputfilename&gt;)<br />\r\nInstead of supplying IP address at the command line of Nmap scan, a file can be maintained containing IP addresses separated by tabs, spaces, or by separate lines.<br />\r\n<br />\r\nWhen this option is used, any IP address specified on the command line will be ignored without any warning message.<br />\r\n<br />\r\n#nmap –vv –n –iL input.txt<br />\r\n#nmap –vv –n –iL input.txt 192.168.1.1 (Here 192.168.1.1 will be ignored)<br />\r\n<br />\r\nIf host exclusion options, -' + '-exclude or –excludefile, are used with –iL option, the excluded addresses will override any inclusions on the command line or file.<br />\r\n<br />\r\n<br />\r\n<br />\r\nScanning Random number of Targets<br />\r\n<br />\r\n• -iR &lt;number of hosts to be scanned&gt;<br />\r\n<br />\r\nYou may be looking for just web server’s or some other server’s world wide, i.e. Random machines running a particular service on a particular port only.<br />\r\nE.g. telent at port number 23<br />\r\nSMTP at port number 25<br />\r\nWeb server at port number 80 etc.<br />\r\n<br />\r\n#nmap –vv –n –iR 100 –p 80<br />\r\nscan 100 random machines for port number 80<br />\r\n<br />\r\n#nmap –vv –n –iR 0 –p 80 (that’s zero and not capital ‘O’)<br />\r\nScan “unlimited” number of machines for port number 80. So here you see, Nmap will scan thousands and thousands of machines. Scan won’t begin to report any result until 500 hosts are identified. Hence run this type of scan with one of Nmap’s logging option (will be discussed soon)<br />\r\n<br />\r\n#nmap –sS –PS80 –iR 0 –p 80<br />\r\nIt will run a TCP SYN scan using a SYN ping on port 80 to an unlimited number of random IP addresses. The SYN scan only scans port 80.<br />\r\n<br />\r\n-iL, -' + '-exclude, -' + '-excludefile, none of them can be used with –iR option.<br />\r\n<br />\r\n• -' + '-randomize_hosts<br />\r\n#nmap –vv –randomize_hosts –p 80 192.168.*.*<br />\r\n<br />\r\nAs its clear from the scan command, nmap will randomize the hosts to be scanned.<br />\r\n-iL, -' + '-exclude, and –excludefile can be used with this option.<br />\r\n<br />\r\nGroups of 2,048 hosts at a time are randomly chosen, and hence makes entire scan less conspicuous when examining traffic patterns.<br />\r\n<br />\r\n<br />\r\n<br />\r\nVarious Logging Options<br />\r\n<br />\r\nYou may want to store the output of Nmap. Reasons may be any of the following:<br />\r\n1. You are scanning hundreds of machines, so don’t want to stare at monitor for all the time.<br />\r\n2. You are starting the scan in night and would like to see the result in morning.<br />\r\n3. You may want to keep the records for future reference<br />\r\n4. You want to pause/stop Nmap and at later time would like to resume the scan.<br />\r\n…..and many more reasons could be there.<br />\r\n<br />\r\nSo here are the various logging options for NMap<br />\r\n<br />\r\n<br />\r\n• Normal Format:<br />\r\n-oN &lt;log file name&gt;<br />\r\n<br />\r\nIt saves a similar view of the output that’s displayed on the screen during an nmap scan. No need to assign any extension to the output file. It will have .nmap extension.<br />\r\n<br />\r\n• XML Format<br />\r\n-oX &lt;log file name&gt;<br />\r\n<br />\r\nIt presents the output of Nmap in very nice format in any browser. Actually Nmap includes an XSL file that translates the XML information into a viewable HTML format that can be displayed in any browser.<br />\r\nThe output file will have .xml extension.<br />\r\n<br />\r\n• Grepable Format<br />\r\n-oG &lt;log file name&gt;<br />\r\n<br />\r\nThe output file will have .gnmap extension.<br />\r\n<br />\r\n• All Formats<br />\r\n-oA &lt;base file name&gt;<br />\r\n<br />\r\nWill produce three output files, Normal, XML and Grepable.<br />\r\nSuppose the name of base file is target, so you will get the following three files:<br />\r\n1. target.nmap<br />\r\n2. target.xml<br />\r\n3. target.gnmap<br />\r\n<br />\r\n• Script Kiddie Format<br />\r\n-oS &lt;log file name&gt;<br />\r\n<br />\r\nOutput would be in script Kiddie language<br />\r\n<br />\r\nResuming the scan<br />\r\n<br />\r\nIt’s a good thing to do. You may be in the midst of a long scan when you have to turn off your computer or power failure etc. Can be interrupted using control-C key combination.<br />\r\nSuppose you are scanning a subnet of 100 machines and currently machine number 45 is getting scanned when you stop the scan. When you resume the scan next time, all the machines which were scanned before machine number 45 won’t be scanned again. But the scanning of machine 45 will start from scratch again as it was interrupted in between.<br />\r\nHence do not use resuming option when you are scanning only one machine.<br />\r\n<br />\r\n-' + '-resume &lt;log file name&gt;<br />\r\n<br />\r\nThis log file has to be either in Normal format (-oN) or Grepable (-oG) format. XML output won’t work with it.<br />\r\n<br />\r\nIf a scan is interrupted that used the –randomize_hosts option, nmap has no method to recreate the same randomness that was used in the initial scan. Hence it may repeat some scan and may skip some of the hosts. So don’t use it with –randomize_hosts option.<br />\r\n<br />\r\n<br />\r\nFew options which generally should always be included in all scans are:<br />\r\n-vv verbose mode<br />\r\n-n speeds up the scan and log is maintained on the DNS servers.<br />\r\n-oA to get output files so that scan can be resumed.<br />\r\n-' + '-excludefile It should be update with the most important IP addresses.<br />\r\n<br />\r\nI’m leaving the various options of packet tuning and timing options as they should be considered as advanced techniques and this tutorial is for beginners specially.<br />\r\n<br />\r\n<br />\r\nReference: Nmap man pages and “Secrets of Network Cartography” by James Messer\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_226" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_226" class="newreply" href="newreply.php?do=newreply&amp;p=226" rel="nofollow" title="Reply With Quote"><img id="quoteimg_226" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+
+// next/previous post info
+pn[216] = "226,220";
+pn[0] = ",216";
+pn[220] = "216,226";
+pn[226] = "220,216";
+
+// cached usernames
+pu[0] = guestphrase;
+pu[18] = "prashant_uniyal";
+
+// -->
+</script>
+
+
+<div id="threaded_view">
+	<h4>Threaded View</h4>
+
+	<div id="posttree">
+		<script type="text/javascript">
+		<!--
+			writeLink(216, 0, 0, 18, "", "Nmap-" + "-step by step-" + "-by b0nd", "07-08-2010", "09:56 PM", 0, "showthread77bb.html?t=103&amp;p=216#post216");
+  writeLink(220, 0, 0, 18, "T", "<i>• -sO: Protocol scan...</i>", "07-08-2010", "09:58 PM", 0, "showthreadc786-2.html?t=103&amp;p=220#post220");
+  writeLink(226, 0, 0, 18, "L", "<i>• -" + "-osscan_limit \nThis option...</i>", "07-08-2010", "10:01 PM", 0, "showthread3ff1.html?t=103&amp;p=226#post226");
+
+		//-->
+		</script>
+	</div>
+</div>
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_226">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">07-08-2010,&nbsp;<span class="time">10:01 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post226" href="showthreadc9a6-2.html?t=103&amp;p=226&amp;viewfull=1#post226" class="postcounter">#3</a><a id="postcount226" name="3"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberc1f0.html?u=18" title="prashant_uniyal is offline"><strong>prashant_uniyal</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberc1f0.html?u=18" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchae80.html?do=finduser&amp;userid=18&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privateb48e.html?do=newpm&amp;u=18" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogc1f0.html?u=18" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<a href="../external.html?link=http://hackingethics.wordpress.com/" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="list5954.html?r=author/18-prashant_uniyal" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="prashant_uniyal is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Security Analyst
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_226_18" title="prashant_uniyal has a spectacular aura about">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="memberc1f0.html?u=18" title="prashant_uniyal is offline">
+				<img src="parasf2b13.jpg?u=18&amp;dateline=1393305256" alt="prashant_uniyal's Avatar" title="prashant_uniyal's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>localhost</dd>
+					
+					<dt>Posts</dt> <dd>505</dd>	
+					<dt>Blog Entries</dt><dd><a href="blogc1f0.html?u=18">8</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_226">
+						<blockquote class="postcontent restore ">
+							• --osscan_limit<br />
+This option will abort OS fingerprinting if both open and closed ports are not available, hence will save a hell lot of time instead of getting incorrect results.<br />
+I personally feel that third party tools should also be used to get the correct results about the remote machines operating system.<br />
+<br />
+<br />
+• -A (Additional, Advanced, and Aggressive)<br />
+Its combination of “-O” and “-sV” i.e. operating system fingerprinting and service version scan<br />
+<br />
+#nmap –vv –n 192.168.0.1 –O –sV<br />
+is same as<br />
+#nmap –vv –n 192.168.0.1 -A<br />
+<br />
+<br />
+<br />
+<br />
+Inclusion and Exclusion of Hosts and Ports<br />
+<br />
+Sometimes it may be the scenario that you don’t want to scan particular IP address or range of IP addresses. E.g. Government IP’s or IP’s of routers and switches of your network etc.<br />
+So here we have few options for that:<br />
+<br />
+• Exclude Targets (--exclude &lt;host 1, host 2, host 3….&gt;)<br />
+The IP addresses specified will not be scanned by Nmap.<br />
+<br />
+#nmap –vv –n –sS 192.168.0.1/24 --exclude 192.168.0.2-4, 192.168.0.7<br />
+<br />
+This will scan the whole subnet except 192.168.0.2, 192.168.0.3, 192.168.0.4, and 192.168.0.7.<br />
+<br />
+<br />
+<br />
+• Exclude Targets in File (--excludefile &lt;file name&gt;)<br />
+Here instead of specified the IP addresses which must not be scanned, user has to maintain a file including the list of IP address, one IP address per line.<br />
+<br />
+#nmap –vv –n -sS 192.168.*.* --excludefile filename.txt<br />
+<br />
+Content of filename.txt could be as following:<br />
+192.168.0.1-4 (exclude 192.168.0.1 &#61664; 192.168.0.4)<br />
+192.168.3-5.* (exclude 192.168.3.0 &#61664; 192.168.5.255)<br />
+192.168.6.* (exclude 192.168.6.0 &#61664; 192.168.6.255)<br />
+etc.<br />
+<br />
+The benefit of –excludefile option is that a permanent exclusion file can be made including IP address of organizations/individuals whom you would never like to scan These IP address may not be the part of current scan, but it won’t harm making such a permanent exclusion file and upgrading it.<br />
+<br />
+--excludefile and –exclude options can’t be used on the same scan.<br />
+<br />
+<br />
+• Read Targets from File (-iL &lt;inputfilename&gt;)<br />
+Instead of supplying IP address at the command line of Nmap scan, a file can be maintained containing IP addresses separated by tabs, spaces, or by separate lines.<br />
+<br />
+When this option is used, any IP address specified on the command line will be ignored without any warning message.<br />
+<br />
+#nmap –vv –n –iL input.txt<br />
+#nmap –vv –n –iL input.txt 192.168.1.1 (Here 192.168.1.1 will be ignored)<br />
+<br />
+If host exclusion options, --exclude or –excludefile, are used with –iL option, the excluded addresses will override any inclusions on the command line or file.<br />
+<br />
+<br />
+<br />
+Scanning Random number of Targets<br />
+<br />
+• -iR &lt;number of hosts to be scanned&gt;<br />
+<br />
+You may be looking for just web server’s or some other server’s world wide, i.e. Random machines running a particular service on a particular port only.<br />
+E.g. telent at port number 23<br />
+SMTP at port number 25<br />
+Web server at port number 80 etc.<br />
+<br />
+#nmap –vv –n –iR 100 –p 80<br />
+scan 100 random machines for port number 80<br />
+<br />
+#nmap –vv –n –iR 0 –p 80 (that’s zero and not capital ‘O’)<br />
+Scan “unlimited” number of machines for port number 80. So here you see, Nmap will scan thousands and thousands of machines. Scan won’t begin to report any result until 500 hosts are identified. Hence run this type of scan with one of Nmap’s logging option (will be discussed soon)<br />
+<br />
+#nmap –sS –PS80 –iR 0 –p 80<br />
+It will run a TCP SYN scan using a SYN ping on port 80 to an unlimited number of random IP addresses. The SYN scan only scans port 80.<br />
+<br />
+-iL, --exclude, --excludefile, none of them can be used with –iR option.<br />
+<br />
+• --randomize_hosts<br />
+#nmap –vv –randomize_hosts –p 80 192.168.*.*<br />
+<br />
+As its clear from the scan command, nmap will randomize the hosts to be scanned.<br />
+-iL, --exclude, and –excludefile can be used with this option.<br />
+<br />
+Groups of 2,048 hosts at a time are randomly chosen, and hence makes entire scan less conspicuous when examining traffic patterns.<br />
+<br />
+<br />
+<br />
+Various Logging Options<br />
+<br />
+You may want to store the output of Nmap. Reasons may be any of the following:<br />
+1. You are scanning hundreds of machines, so don’t want to stare at monitor for all the time.<br />
+2. You are starting the scan in night and would like to see the result in morning.<br />
+3. You may want to keep the records for future reference<br />
+4. You want to pause/stop Nmap and at later time would like to resume the scan.<br />
+…..and many more reasons could be there.<br />
+<br />
+So here are the various logging options for NMap<br />
+<br />
+<br />
+• Normal Format:<br />
+-oN &lt;log file name&gt;<br />
+<br />
+It saves a similar view of the output that’s displayed on the screen during an nmap scan. No need to assign any extension to the output file. It will have .nmap extension.<br />
+<br />
+• XML Format<br />
+-oX &lt;log file name&gt;<br />
+<br />
+It presents the output of Nmap in very nice format in any browser. Actually Nmap includes an XSL file that translates the XML information into a viewable HTML format that can be displayed in any browser.<br />
+The output file will have .xml extension.<br />
+<br />
+• Grepable Format<br />
+-oG &lt;log file name&gt;<br />
+<br />
+The output file will have .gnmap extension.<br />
+<br />
+• All Formats<br />
+-oA &lt;base file name&gt;<br />
+<br />
+Will produce three output files, Normal, XML and Grepable.<br />
+Suppose the name of base file is target, so you will get the following three files:<br />
+1. target.nmap<br />
+2. target.xml<br />
+3. target.gnmap<br />
+<br />
+• Script Kiddie Format<br />
+-oS &lt;log file name&gt;<br />
+<br />
+Output would be in script Kiddie language<br />
+<br />
+Resuming the scan<br />
+<br />
+It’s a good thing to do. You may be in the midst of a long scan when you have to turn off your computer or power failure etc. Can be interrupted using control-C key combination.<br />
+Suppose you are scanning a subnet of 100 machines and currently machine number 45 is getting scanned when you stop the scan. When you resume the scan next time, all the machines which were scanned before machine number 45 won’t be scanned again. But the scanning of machine 45 will start from scratch again as it was interrupted in between.<br />
+Hence do not use resuming option when you are scanning only one machine.<br />
+<br />
+--resume &lt;log file name&gt;<br />
+<br />
+This log file has to be either in Normal format (-oN) or Grepable (-oG) format. XML output won’t work with it.<br />
+<br />
+If a scan is interrupted that used the –randomize_hosts option, nmap has no method to recreate the same randomness that was used in the initial scan. Hence it may repeat some scan and may skip some of the hosts. So don’t use it with –randomize_hosts option.<br />
+<br />
+<br />
+Few options which generally should always be included in all scans are:<br />
+-vv verbose mode<br />
+-n speeds up the scan and log is maintained on the DNS servers.<br />
+-oA to get output files so that scan can be resumed.<br />
+--excludefile It should be update with the most important IP addresses.<br />
+<br />
+I’m leaving the various options of packet tuning and timing options as they should be considered as advanced techniques and this tutorial is for beginners specially.<br />
+<br />
+<br />
+Reference: Nmap man pages and “Secrets of Network Cartography” by James Messer
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_226" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_226" class="newreply" href="newreplyb9f1.html?do=newreply&amp;p=226" rel="nofollow" title="Reply With Quote"><img id="quoteimg_226" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+		</ol>
+                <div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="showthread2be6.html?t=103" class="popupctrl"><span class="ctrlcontainer">Network Vulnerabiltity Assessment &amp; Penetration Testing</span></a>
+		<a href="showthread3ff1.html?t=103&amp;p=226#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.html">Settings</a></li>
+		<li><a href="private.html">Private Messages</a></li>
+		<li><a href="subscription.html">Subscriptions</a></li>
+		<li><a href="online.html">Who's Online</a></li>
+		<li><a href="search.html">Search Forums</a></li>
+		<li><a href="forum.html">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forumdisplay58da.html?f=1">Garage Network</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay12a3.html?f=2">Garage Announcements</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaye57d.html?f=58">Bravo - Null 2012</a></li>
+			
+		
+			
+				<li><a href="forumdisplay0756.html?f=59">Garage Local Chapter Meets</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay31e6.html?f=4">Garage Rules</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye774.html?f=5">Feedback &amp; Suggestions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayd42b.html?f=7">Introduce Your Self</a></li>
+			
+		
+			
+				<li><a href="forumdisplay2b89.html?f=38">Shout-box</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplaycf19.html?f=6">Garage Lounge</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay5579.html?f=30">Hacking for Beginners</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay6ac3.html?f=57">Did You Know?</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay957d.html?f=8">Security &amp; Hacking News Thread</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3215.html?f=36">Career in InfoSec</a></li>
+			
+		
+			
+				<li><a href="forumdisplay814c.html?f=29">Request Zone</a></li>
+			
+		
+			
+				<li><a href="forumdisplay13b6.html?f=27">Noobs Corner</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayfdc5.html?f=9">Hacking and Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplayfac0.html?f=55">Tip | Trick of the Day</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4a6.html?f=66">ICS / SCADA Security</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6111.html?f=67">Internet of Things - IoT</a></li>
+			
+		
+			
+				<li><a href="forumdisplay15ca.html?f=10">Network Vulnerabiltity Assessment &amp; Penetration Testing</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaya05c.html?f=56">Post Exploitation</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay8a83.html?f=11">Web Application Penetration Testing</a></li>
+			
+		
+			
+				<li><a href="forumdisplay01c9.html?f=12">Wireless and Bluetooth Hacking</a></li>
+			
+		
+			
+				<li><a href="forumdisplay48ab.html?f=17">Computer Forensics and Incident Handling</a></li>
+			
+		
+			
+				<li><a href="forumdisplay218b.html?f=19">Physical Security and Social Engineering</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb09f.html?f=15">General Security &amp; Best Practices</a></li>
+			
+		
+			
+				<li><a href="forumdisplay907f.html?f=42">Security and Hacking Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplay9e0d.html?f=54">Mobile Security</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay9780.html?f=14">General Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay9df8.html?f=31">Programming</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay65b9.html?f=35">Assembly</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4f1.html?f=32">C/C++</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb0a0.html?f=34">Perl</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb8c1.html?f=60">PHP</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6c4e.html?f=33">Python</a></li>
+			
+		
+			
+				<li><a href="forumdisplay208f.html?f=51">Linux Shell / Bash Programming</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3238.html?f=47">Windows Batch Programming</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayce40.html?f=28">BackTrack and Other Linux Distributions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf2fa.html?f=16">Networks &amp; Networking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya213.html?f=18">Cloud Computing</a></li>
+			
+		
+			
+				<li><a href="forumdisplaydfa4.html?f=39">Security Podcast and Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya3f5.html?f=40">Miscellanous Thread</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay30ac.html?f=49">Brush Up Your Skills</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayffeb.html?f=20">Experts Forum</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplaycdba.html?f=48">My Meanest Hacks</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf6ac.html?f=37">Hacking &amp; Security Books and Tutorials</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8011.html?f=23">Tools &amp; Scripts</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8941.html?f=22">Exploitation Techniques</a></li>
+			
+		
+			
+				<li><a href="forumdisplay345c.html?f=24">Reverse Engineering and Application Cracking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye8b3.html?f=25">Botnets, Malwares &amp; Rootkits Analysis</a></li>
+			
+		
+			
+				<li><a href="forumdisplay107e.html?f=43">Garage4hackers Exploits</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye5f3.html?f=64">Browser Fuzzing</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+<div class="navlinks">
+	
+	<strong>&laquo;</strong>
+	<a href="showthread443d.html?t=103&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+	|
+	<a href="showthreadfd2e-2.html?t=103&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+	<strong>&raquo;</strong>
+	
+</div>
+<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info">
+	
+	
+	
+	
+	<div class="options_block_container">
+		
+		<div class="options_block">
+			<h4 class="collapse">
+				<a class="collapse" id="collapse_posting_rules" href="showthread3ff1.html?t=103&amp;p=226#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				<span class="optiontitle">Posting Permissions</span>
+			</h4>
+			<div id="posting_rules" class="thread_info_block">
+				
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+		<li>&nbsp;</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="miscaff0.html?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc9712.html?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#videocode" target="_blank">[VIDEO]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="misc17ec.html?do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="showthread3ff1.html?t=103&amp;p=226#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">05:04 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

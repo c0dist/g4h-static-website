@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6846&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Problem regarding analysing android RAM using Volatility</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread741d.html?t=6846">Problem regarding analysing android RAM using Volatility</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">05-18-2016, 01:29 PM</div>
+		<span class="username">mariyamjohn</span>
+	</div>
+	
+	
+		<div class="title">Problem regarding analysing android RAM using Volatility</div>
+	
+	<div class="content">
+		<blockquote class="restore">Hi,<br />
+We have acquired RAM image of android phone using LiME &amp; trying to analyze with volatility framework. We have downloaded volatility &amp; now created a profile for our Android kernel.Till this it is working fine.But now we are stuck in the below command.Can some one please help<br />
+<br />
+python vol.py --profile=LinuxGT_S7582ARM -f /root/Desktop/space/ram.lime linux_psaux<br />
+<br />
+we are getting this o/p<br />
+Volatility Foundation Volatility Framework 2.5<br />
+Pid Uid Gid Arguments<br />
+No suitable address space mapping found<br />
+Tried to open image as:<br />
+MachOAddressSpace: mac: need base<br />
+LimeAddressSpace: lime: need base<br />
+WindowsHiberFileSpace32: No base Address Space<br />
+WindowsCrash*****pace64BitMap: No base Address Space<br />
+WindowsCrash*****pace64: No base Address Space<br />
+HPAKAddressSpace: No base Address Space<br />
+VirtualBoxCoreDumpElf64: No base Address Space<br />
+VMWareMetaAddressSpace: No base Address Space<br />
+VMWareAddressSpace: No base Address Space<br />
+QemuCoreDumpElf: No base Address Space<br />
+WindowsCrash*****pace32: No base Address Space<br />
+AMD64PagedMemory: No base Address Space<br />
+IA32PagedMemoryPae: No base Address Space<br />
+IA32PagedMemory: No base Address Space<br />
+OSXPmemELF: No base Address Space<br />
+MachOAddressSpace: MachO Header signature invalid<br />
+MachOAddressSpace: MachO Header signature invalid<br />
+LimeAddressSpace: Invalid Lime header signature<br />
+WindowsHiberFileSpace32: PO_MEMORY_IMAGE is not available in profile<br />
+WindowsCrash*****pace64BitMap: Header signature invalid<br />
+WindowsCrash*****pace64: Header signature invalid<br />
+HPAKAddressSpace: Invalid magic found<br />
+VirtualBoxCoreDumpElf64: ELF Header signature invalid<br />
+VMWareMetaAddressSpace: VMware metadata file is not available<br />
+VMWareAddressSpace: Invalid VMware signature: 0xc0002588<br />
+QemuCoreDumpElf: ELF Header signature invalid<br />
+WindowsCrash*****pace32: Header signature invalid<br />
+AMD64PagedMemory: Incompatible profile LinuxGT_S7582ARM selected<br />
+IA32PagedMemoryPae: Failed valid Address Space check<br />
+IA32PagedMemory: Failed valid Address Space check<br />
+OSXPmemELF: ELF Header signature invalid<br />
+FileAddressSpace: Must be first Address Space<br />
+ArmAddressSpace: Failed valid Address Space check<br />
+<br />
+We have also tried other commands <br />
+python vol.py --profile=LinuxGT_S7582ARM -f /root/Desktop/space/ram.lime linux_psscan<br />
+<br />
+but getting the error as below<br />
+<br />
+ERROR : volatility.debug : You must specify something to do (try -h)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">05-23-2016, 07:50 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Got no idea :) may be somebody else could help you.</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:48 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6846&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:50 GMT -->
+</html>

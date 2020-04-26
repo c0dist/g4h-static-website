@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=2562&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:54:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Analyzing traffic to router from network scenario</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreade082.html?t=2562">Analyzing traffic to router from network scenario</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">08-13-2012, 11:58 AM</div>
+		<span class="username">abhaythehero</span>
+	</div>
+	
+		<div class="attachments">2 Attachment(s)</div>
+	
+	
+		<div class="title">Analyzing traffic to router from network scenario</div>
+	
+	<div class="content">
+		<blockquote class="restore">Hi all,<br />
+<br />
+A few weeks back I was in a scenario in which I had to analyze the whole traffic of a network. Yes ! whole traffic of the network. All VLANs.<br />
+<br />
+Hmm. So the natural option was to analyze upstream traffic from all switches going to router. The added danger was that if I messed up anything in their data center, I would feel the wrath of a lot of people. <br />
+<br />
+So I am just enumerating some ways which I thought can be done in such scenario. (Note that I am not very good at networking :( ) <br />
+<br />
+<b>1.</b> The use of network taps <a href="../external.html?link=http://en.wikipedia.org/wiki/Network_tap" target="_blank">Network tap - Wikipedia, the free encyclopedia</a> comes in very handy in such scenarios. The hardware is specially made to duplicate traffic from a wire and monitoring node sees this traffic. So no hindrance to actual bandwidth and packets. Pretty cool ehh. But pricing is not very cool ...<br />
+<br />
+<a href="attachmente7c1.gif?attachmentid=458"  title="Name:  
+Views: 
+Size:  ">Attachment 458</a><br />
+<br />
+<b>2.</b> Port mirroring is the natural option that most would opt. The economical and most viable option. What is port mirroring &gt;&gt; <a href="../external.html?link=http://en.wikipedia.org/wiki/Port_mirroring" target="_blank">Port mirroring - Wikipedia, the free encyclopedia</a> Note, it can only be done on switch ports. (Correct me if I am wrong)<br />
+<br />
+There was a main switch which was handling all the rest of switches. There was a one LAN wire which was going from this main switch port to router port. Port mirroring can be enabled on this port to capture all the packets going upstream to router.<br />
+<br />
+Note that port mirroring is enabled by issuing extra commands on switch or by configuring through the web interface of switch.<br />
+<br />
+<b>3.</b> Many routers now come with NetFlow technology. <a href="../external.html?link=http://en.wikipedia.org/wiki/NetFlow" target="_blank">NetFlow - Wikipedia, the free encyclopedia</a> <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			Routers and switches that support NetFlow can collect IP traffic statistics on all interfaces where NetFlow is enabled, and later export those statistics as NetFlow records, toward at least one NetFlow collector - typically a server that does the actual traffic analysis.<br />
+<a href="attachment6227.jpg?attachmentid=459"  title="Name:  
+Views: 
+Size:  ">Attachment 459</a><br />
+			
+		<hr />
+	</div>
+</div>So basically Netflow can be enabled on routers on which it is supported and there are Netflow clients which can be used to analyze the data.The clients are very good and have excellent reporting mechanisms and algorithms. <br />
+<br />
+<b>4.</b> An idea also came as to put a machine with two NIC cards with linux between the connection. Put one interface for incoming connection and another interface for outgoing connection. Enable IP forwarding. Capture traffic on any interface. Could it be done :confused:<br />
+Didn't try this method as automatically it was evident that a single x86 machine could not handle all the traffic of the network and could collapse.<br />
+<br />
+------------------------------------------------------------<br />
+<br />
+Anyways, plz do share some more points if you can come with something w.r.t this scenario.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">08-18-2012, 05:03 PM</div>
+		<span class="username">Boris</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Proprietary Network Taps are costly, but if you have a decent soldering and PCB fabricating skills you can design your own Network tap. The Hak5 crew had one in their shop inventory for ages. They have open sourced their <a href="../greatscottgadgets.com/throwingstar/throwing-star-20110217.tar.gz" target="_blank">CAD designs</a> and Assembly instructions are <a href="../external.html?link=http://hakshop.myshopify.com/products/throwing-star-lan-tap" target="_blank">here</a>.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">08-18-2012, 07:35 PM</div>
+		<span class="username">AnArKI</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">If your objective is to just monitor the network traffic i.e the bandwidth statistics &amp; protocol statistics then netflow is the one to go....config is simple i.e set of commands to redirect traffic to a particular IP which has the netflow client to analyze the netflow statistics.<br />
+<br />
+If you objective is to collect all traffic data go with port mirroring....but you might experience latency and overheads in the network....it depends on the Core Switch HW config.<br />
+<br />
+The option of going with 2 NIC cards would be the least preferred in my opinion u will have packet loss</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">01-29-2013, 04:57 AM</div>
+		<span class="username">Alkapone</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">I agree with AnarKI <br />
+<br />
+If your analyzing  multiple systems and this is a Datacenter your talking about<br />
+<br />
+And your wanting to place a NIC card on 2 systems and one for Forwarding and one for outgoing<br />
+<br />
++ you have over 1000+ Systems forwarding all information at  once<br />
+<br />
+you could look at  Load balance  being slowed down and not only that  the systems might not be able to handle such information<br />
+<br />
+I dont think putting it on 2systems will do the job by reading about NetFlow  it seems like it would do the trick But then again your analyzing over 1000+ Systems <br />
+<br />
+The best thing to do  is make a  Network Script that  runs a  Tcpdump on all systems and forwards the data to a particular machine and run it  through a  network Analyzer software<br />
+<br />
+Tcpdump is very low and would not increase any system performance<br />
+<br />
+by putting Tcpdump script on  50 systems with a  25mb file each day lets say it fills it up 25mb each day forwarded to all other systems your looking at maybe a<br />
+<br />
+3gb+ file to analyze and spread across  a multiple tier system with higher power performance it would reduce the  performance greatly especially if it has Parallel Distribution</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:36 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=2562&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:54:37 GMT -->
+</html>

@@ -1,0 +1,2969 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/forumdisplay.php?f=64 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 10:36:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+		<meta name="keywords" content="Browser Fuzzing, ethical hacking,exploits,webapplication,penetration testing,wireless,information security,virus,exploit coding,vbulletin,forum,bbs,discussion,bulletin board,indian hackers" />
+		<meta name="description" content="Everything Related To Browser Fuzzing: Q&amp;A, POC, Analysis" />
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="Garage4Hackers(G4H) is an open security community for Information Security enthusiasts, gurus and aspirants.Members of the team dedicate time and resources towards helping other information security aspirants, sharing knowledge,spreading security awareness and promoting research." />
+<meta property="og:url" content="index.html" />
+<meta property="og:type" content="website" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "forumdisplay";
+	var RELPATH = "forumdisplaye5f3.html?f=64";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - Browser Fuzzing - RSS Feed" href="external23bf.php?type=RSS2&amp;forumids=64" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	<title>Browser Fuzzing</title>
+	
+	<script type="text/javascript" src="clientscript/vbulletin_read_marker6719.html?v=421"></script>
+	
+	
+		<link rel="stylesheet" type="text/css" href="css7ab3.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=toolsmenu.css,forumbits.css,forumdisplay.css,threadlist.css,options.css" />
+	
+
+	<!--[if lt IE 8]>
+	<script type="text/javascript" src="clientscript/vbulletin-threadlist-ie.js?v=421"></script>
+		<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=toolsmenu-ie.css,forumbits-ie.css,forumdisplay-ie.css,threadlist-ie.css,options-ie.css" />
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a href="search8427.html?do=getnew&amp;contenttype=vBForum_Post">New Posts</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_faq"><a href="faq.html">FAQ</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="calendar.html">Calendar</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Community</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_members"><a href="memberlist.html">Member List</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Forum Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a href="forum.html?do=markread&amp;markreadhash=guest">Mark Forums Read</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_qlinks">
+							<a href="javascript://" class="popupctrl">Quick Links</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbqlink_posts"><a href="search2791.html?do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+								
+									<li id="vbqlink_leaders"><a href="showgroups.html">View Site Leaders</a></li>
+								
+							</ul>
+						</li>
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="forum.html">Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplayffeb.html?f=20">Experts Forum</a></li>
+
+		
+	<li class="navbit lastnavbit"><span>Browser Fuzzing</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/forumdisplay.php?f=64 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 10:37:00 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+
+
+<div id="above_threadlist" class="above_threadlist">
+
+	
+	<div class="threadpagenav">
+		
+		<div id="threadpagestats" class="threadpagestats">Threads 1 to 14 of 14</div>
+	</div>
+	
+</div>
+<div id="pagetitle" class="pagetitle">
+	<h1>Forum: <span class="forumtitle">Browser Fuzzing</span></h1>
+	<p class="description">Everything Related To Browser Fuzzing: Q&amp;A, POC, Analysis</p>
+</div>
+
+	
+	<div id="above_threadlist_controls" class="above_threadlist_controls toolsmenu">
+		<div>
+		<ul class="popupgroup forumdisplaypopups" id="forumdisplaypopups">
+			<li class="popupmenu nohovermenu" id="forumtools">
+				<h6><a href="javascript://" class="popupctrl" rel="nofollow">Forum Tools</a></h6>
+				<ul class="popupbody popuphover">
+					
+						<li>
+							<a href="forumdisplayffeb.html?do=markread&amp;f=64&amp;markreadhash=guest" rel="nofollow" onclick="return mark_forum_and_threads_read(64);">
+								Mark This Forum Read
+							</a>
+						</li>
+						
+					<li><a href="forumdisplayffeb.html?f=20" rel="nofollow">View Parent Forum</a></li>
+				</ul>
+			</li>
+                        
+			<li class="popupmenu nohovermenu forumsearch menusearch" id="forumsearch">
+				<h6><a href="javascript://" class="popupctrl">Search Forum</a></h6>
+				<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="get">
+				<ul class="popupbody popuphover">
+					<li>
+						<input type="text" class="searchbox" name="q" value="Search..." />
+						<input type="submit" class="button" value="Search" />
+					</li>
+					<li class="formsubmit" id="popupsearch">
+						<div class="submitoptions">
+							<label><input type="radio" name="showposts" value="0" checked="checked" /> Show Threads</label>
+							<label><input type="radio" name="showposts" value="1" /> Show Posts</label>
+						</div>
+						<div class="advancedsearchlink"><a href="searchc76e.html?search_type=1&amp;contenttype=vBForum_Post&amp;forumchoice[]=64" rel="nofollow">Advanced Search</a></div>
+
+					</li>
+				</ul>
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<input type="hidden" name="contenttype" value="vBForum_Post" />
+				<input type="hidden" name="forumchoice[]" value="64" />
+				<input type="hidden" name="childforums" value="1" />
+				<input type="hidden" name="exactname" value="1" />
+				</form>
+			</li>
+			
+
+
+
+		</ul>
+			
+		</div>
+	</div>
+	
+
+
+
+
+
+
+<div id="threadlist" class="threadlist">
+	<form id="thread_inlinemod_form" action="../external.html?link=http://garage4hackers.com/inlinemod.php?forumid=64" method="post">
+		<h2 class="hidden">Threads in This Forum</h2>
+
+		<div>
+			<div class="threadlisthead table">
+				<div>
+				<span class="threadinfo">
+					<span class="threadtitle">
+						<a href="forumdisplay2d0a.html?f=64&amp;sort=title&amp;order=asc" rel="nofollow">Title</a> /
+						<a href="forumdisplay1d6c.html?f=64&amp;sort=postusername&amp;order=asc" rel="nofollow">Thread Starter</a>
+					</span>
+				</span>
+				
+
+					<span class="threadstats td"><a href="forumdisplay7a3a.html?f=64&amp;sort=replycount&amp;order=desc" rel="nofollow">Replies</a> / <a href="forumdisplaye535.html?f=64&amp;sort=views&amp;order=desc" rel="nofollow">Views</a></span>
+					<span class="threadlastpost td"><a href="forumdisplay745c.html?f=64&amp;sort=lastpost&amp;order=asc" rel="nofollow">Last Post By<img class="sortarrow" src="images/buttons/sortarrow-asc.html" alt="Reverse Sort Order" border="0" /></a></span>
+					
+				
+				</div>
+			</div>
+
+			
+				<ol id="stickies" class="stickies">
+					<li class="threadbit" id="cat1">
+<div class="icon0 nonsticky">
+<div class="inner">
+<p><b>&nbsp; Sticky Threads &nbsp;</b></p>
+</div>
+</div>
+</li><li class="threadbit hot" id="thread_5996">
+	<div class="rating0 sticky">
+		<div class="threadinfo" title="Hi All, 
+ 
+ 
+we got many queries on browser fuzzing and most of them were duplicate questions from multiple members so finally we decided to bring...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+                            <img src="images/icons/icon4.html" alt="Exclamation" border="0" />
+                    
+
+					
+					 	<img src="images/misc/sticky.html" alt="Sticky Thread" />
+					
+                                        
+ 					
+						<span id="thread_prefix_5996" class="prefix understate">
+							
+							Sticky: 
+							
+							
+						</span>
+					
+                	<a class="title" href="showthreadfa1f.html?t=5996" id="thread_title_5996">Rules For this Section</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member0612.html?u=16" class="username understate" title="Started by 41.w4r10r on 04-15-2014 04:09 PM">41.w4r10r</a>,&nbsp;04-15-2014&nbsp;04:09 PM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc18d9.html?do=whoposted&amp;t=5996" onclick="who(5996); return false;" class="understate">0</a></li>
+				<li>Views: 3,744</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member0612.html?u=16" title="41.w4r10r is offline"><strong>41.w4r10r</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member0612.html?u=16" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchbd13.html?do=finduser&amp;userid=16&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private4f8b.html?do=newpm&amp;u=16" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog0612.html?u=16" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list2370.html?r=author/16-41-w4r10r" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>04-15-2014, <span class="time">04:09 PM</span>
+			<a href="showthread4666.html?t=5996&amp;p=13356#post13356" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.html" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit" id="cat1">
+<div class="icon0 nonsticky">
+<div class="inner">
+<p><b>&nbsp; Normal Threads &nbsp;</b></p>
+</div>
+</div>
+</li>
+				</ol>
+			
+			
+				<ol id="threads" class="threads">
+					<li class="threadbit hot" id="thread_6243">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Hi, 
+ 
+Beginners could get  confused with what kind of architecture a fuzzing lab should comprise of?  
+Basically, there shall be something to...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthreaddeb2.html?t=6243" id="thread_title_6243">Architecture for fuzzing lab?</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member5626.html?u=2" class="username understate" title="Started by b0nd on 05-02-2015 01:29 AM">b0nd</a>,&nbsp;05-02-2015&nbsp;01:29 AM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="images/misc/tag.html" alt="&quot;apache configuration for concurrency&quot;, &quot;apache configuration for fuzzing&quot;, &quot;browser fuzzing lab&quot;, &quot;design fuzzing lab&quot;, &quot;fuzzing lab&quot;, &quot;fuzzing on linux&quot;, &quot;fuzzing on windows&quot;, &quot;how to fuzz&quot;, &quot;lab architecture for fuzzing&quot;, &quot;lab for fuzzing&quot;" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misce147.html?do=whoposted&amp;t=6243" onclick="who(6243); return false;" class="understate">1</a></li>
+				<li>Views: 26,797</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member5626.html?u=2" title="b0nd is offline"><strong>b0nd</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member5626.html?u=2" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9847.html?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatee111.html?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog5626.html?u=2" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listf90b.html?r=author/2-b0nd" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>06-20-2016, <span class="time">06:24 AM</span>
+			<a href="showthreadc12a.html?t=6243&amp;p=14630#post14630" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.html" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_6788">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Scenario: 
+1. Your entire code is in python but wish to read a .js file code in python 
+ 
+ 
+import PyV8 
+ 
+JSContext = PyV8.JSContext()...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread1bdc.html?t=6788" id="thread_title_6788">Read javascript variables or functions in python</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member5626.html?u=2" class="username understate" title="Started by b0nd on 01-07-2016 05:45 AM">b0nd</a>,&nbsp;01-07-2016&nbsp;05:45 AM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="images/misc/tag.html" alt="&quot;call javascript function from python&quot;, &quot;executing javascript from python&quot;, &quot;javascript parser in python&quot;, &quot;parse javascript in python&quot;, &quot;read javascript variables from a file with python&quot;" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="miscae4f.html?do=whoposted&amp;t=6788" onclick="who(6788); return false;" class="understate">1</a></li>
+				<li>Views: 4,659</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member5626.html?u=2" title="b0nd is offline"><strong>b0nd</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member5626.html?u=2" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9847.html?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatee111.html?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog5626.html?u=2" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listf90b.html?r=author/2-b0nd" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>06-17-2016, <span class="time">05:18 AM</span>
+			<a href="showthreadc1cf.html?t=6788&amp;p=14623#post14623" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.html" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_6832">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="&lt;html&gt; 
+ 
+&lt;head&gt; 
+    &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;IE=10&quot;&gt; 
+    &lt;title&gt;First PoC for MS15-106&lt;/title&gt; 
+&lt;/head&gt; 
+ 
+&lt;body&gt; 
+    &lt;script...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+                            <img src="images/icons/icon12.html" alt="Wink" border="0" />
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread8875.html?t=6832" id="thread_title_6832">Internet Explorer VBScript Filter Type Confusion Vulnerability (CVE-2015-6055)</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member5665.html?u=238" class="username understate" title="Started by [s] on 04-27-2016 11:33 AM">[s]</a>,&nbsp;04-27-2016&nbsp;11:33 AM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="images/misc/tag.html" alt="cve-2015-6055" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc7e66.html?do=whoposted&amp;t=6832" onclick="who(6832); return false;" class="understate">1</a></li>
+				<li>Views: 3,507</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member5626.html?u=2" title="b0nd is offline"><strong>b0nd</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member5626.html?u=2" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9847.html?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatee111.html?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog5626.html?u=2" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listf90b.html?r=author/2-b0nd" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>04-28-2016, <span class="time">12:49 PM</span>
+			<a href="showthread4470.html?t=6832&amp;p=14575#post14575" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.html" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_6786">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="&quot;python - load modules dynamically&quot; 
+ 
+Situation is:  
+1. You have got a directory where you've python modules. When your fuzzer runs, it shall...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthreadbed3.html?t=6786" id="thread_title_6786">importing module dynamically in python</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member5626.html?u=2" class="username understate" title="Started by b0nd on 01-07-2016 05:13 AM">b0nd</a>,&nbsp;01-07-2016&nbsp;05:13 AM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="images/misc/tag.html" alt="&quot;dynamically loading functions from python module&quot;, &quot;dynamically loading python modules from a directory&quot;, fuzzing browsers" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc5512.html?do=whoposted&amp;t=6786" onclick="who(6786); return false;" class="understate">2</a></li>
+				<li>Views: 6,103</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member5626.html?u=2" title="b0nd is offline"><strong>b0nd</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member5626.html?u=2" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9847.html?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatee111.html?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog5626.html?u=2" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listf90b.html?r=author/2-b0nd" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>01-11-2016, <span class="time">06:45 AM</span>
+			<a href="showthreada9dc.html?t=6786&amp;p=14498#post14498" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.html" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_6290">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="http://www.w3schools.com/cssref/css3_browsersupport.asp 
+https://msdn.microsoft.com/en-us/library/hh781508(v=vs.85).aspx">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthreadf097.html?t=6290" id="thread_title_6290">CSS Compatibility in Internet Explorer</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member5626.html?u=2" class="username understate" title="Started by b0nd on 06-12-2015 08:35 AM">b0nd</a>,&nbsp;06-12-2015&nbsp;08:35 AM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc00d7.html?do=whoposted&amp;t=6290" onclick="who(6290); return false;" class="understate">0</a></li>
+				<li>Views: 3,632</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member5626.html?u=2" title="b0nd is offline"><strong>b0nd</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member5626.html?u=2" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9847.html?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatee111.html?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog5626.html?u=2" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listf90b.html?r=author/2-b0nd" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>06-12-2015, <span class="time">08:35 AM</span>
+			<a href="showthreadabae.html?t=6290&amp;p=13928#post13928" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.html" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_6209">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Hi, 
+ 
+I'm new on this forum and this is my first post, so: hello. ;) 
+ 
+Back to the post: I have a lot (like 1k or sth) ***** from different crashes...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread9d38.html?t=6209" id="thread_title_6209">multiple bugs (IE)</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member62a5.html?u=25005" class="username understate" title="Started by blankcart on 03-08-2015 09:33 PM">blankcart</a>,&nbsp;03-08-2015&nbsp;09:33 PM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="miscd35f.html?do=whoposted&amp;t=6209" onclick="who(6209); return false;" class="understate">3</a></li>
+				<li>Views: 6,569</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member0612.html?u=16" title="41.w4r10r is offline"><strong>41.w4r10r</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member0612.html?u=16" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchbd13.html?do=finduser&amp;userid=16&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private4f8b.html?do=newpm&amp;u=16" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog0612.html?u=16" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list2370.html?r=author/16-41-w4r10r" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>03-12-2015, <span class="time">10:54 PM</span>
+			<a href="showthread4359.html?t=6209&amp;p=13785#post13785" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.html" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_6084">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="With the recent June-July 2014 M$ IE patches, things have changed a lot.  
+Less crashes, random stack trace, memory bogging &amp; delay in crash! 
+ 
+For...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread0b10.html?t=6084" id="thread_title_6084">Disabling Memory Protection for crash analysis</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member5626.html?u=2" class="username understate" title="Started by b0nd on 08-29-2014 01:24 PM">b0nd</a>,&nbsp;08-29-2014&nbsp;01:24 PM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="images/misc/tag.html" alt="&quot;browser fuzzing&quot;, &quot;bypass memory protection&quot;, &quot;fuzz browser&quot;, &quot;internet explorer fuzzing&quot;, &quot;memory protection&quot;, fuzzing" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="miscb222.html?do=whoposted&amp;t=6084" onclick="who(6084); return false;" class="understate">3</a></li>
+				<li>Views: 8,807</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member0612.html?u=16" title="41.w4r10r is offline"><strong>41.w4r10r</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member0612.html?u=16" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchbd13.html?do=finduser&amp;userid=16&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private4f8b.html?do=newpm&amp;u=16" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog0612.html?u=16" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list2370.html?r=author/16-41-w4r10r" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>02-23-2015, <span class="time">04:40 PM</span>
+			<a href="showthreade732.html?t=6084&amp;p=13771#post13771" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.html" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_5999">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Any Links/resource which can help me to learn browser fuzzing? 
+ 
+Ans: Yes there are lots of links,resources available on web you need to use google...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthreade7f2.html?t=5999" id="thread_title_5999">Any Links/resource which can help me to learn browser fuzzing?</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member0612.html?u=16" class="username understate" title="Started by 41.w4r10r on 04-15-2014 08:51 PM">41.w4r10r</a>,&nbsp;04-15-2014&nbsp;08:51 PM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc7aa7.html?do=whoposted&amp;t=5999" onclick="who(5999); return false;" class="understate">2</a></li>
+				<li>Views: 5,378</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member5626.html?u=2" title="b0nd is offline"><strong>b0nd</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member5626.html?u=2" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9847.html?do=finduser&amp;userid=2&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatee111.html?do=newpm&amp;u=2" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog5626.html?u=2" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listf90b.html?r=author/2-b0nd" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>08-28-2014, <span class="time">12:45 PM</span>
+			<a href="showthread0003.html?t=5999&amp;p=13522#post13522" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.html" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_6000">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Once I get crash reproducible what next? 
+ 
+Ans: This is very wide question and really depends on person to person. 3 things i know you can do is. 
+...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread99bd.html?t=6000" id="thread_title_6000">Once I get crash reproducible what next?</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member0612.html?u=16" class="username understate" title="Started by 41.w4r10r on 04-15-2014 08:55 PM">41.w4r10r</a>,&nbsp;04-15-2014&nbsp;08:55 PM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc8680.html?do=whoposted&amp;t=6000" onclick="who(6000); return false;" class="understate">0</a></li>
+				<li>Views: 4,278</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member0612.html?u=16" title="41.w4r10r is offline"><strong>41.w4r10r</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member0612.html?u=16" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchbd13.html?do=finduser&amp;userid=16&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private4f8b.html?do=newpm&amp;u=16" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog0612.html?u=16" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list2370.html?r=author/16-41-w4r10r" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>04-15-2014, <span class="time">08:55 PM</span>
+			<a href="showthreadbae4.html?t=6000&amp;p=13360#post13360" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.html" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_5998">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="What Basic Knowledge required for browser fuzzing? 
+ 
+Ans: First you need to understand how browsers works, what are the difference between multiple...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthreadcba1.html?t=5998" id="thread_title_5998">What Basic knowledge required for browser fuzzing?</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member0612.html?u=16" class="username understate" title="Started by 41.w4r10r on 04-15-2014 08:44 PM">41.w4r10r</a>,&nbsp;04-15-2014&nbsp;08:44 PM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc495b.html?do=whoposted&amp;t=5998" onclick="who(5998); return false;" class="understate">0</a></li>
+				<li>Views: 4,319</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member0612.html?u=16" title="41.w4r10r is offline"><strong>41.w4r10r</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member0612.html?u=16" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchbd13.html?do=finduser&amp;userid=16&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private4f8b.html?do=newpm&amp;u=16" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog0612.html?u=16" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list2370.html?r=author/16-41-w4r10r" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>04-15-2014, <span class="time">08:44 PM</span>
+			<a href="showthread6478.html?t=5998&amp;p=13358#post13358" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.html" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_5997">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="i am getting lots of email with this question: 
+ 
+ I am using nduja.html...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread5556.html?t=5997" id="thread_title_5997">I am Using nduja fuzzer but crash is not reproducable</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member0612.html?u=16" class="username understate" title="Started by 41.w4r10r on 04-15-2014 08:37 PM">41.w4r10r</a>,&nbsp;04-15-2014&nbsp;08:37 PM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misca12a.html?do=whoposted&amp;t=5997" onclick="who(5997); return false;" class="understate">0</a></li>
+				<li>Views: 6,131</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member0612.html?u=16" title="41.w4r10r is offline"><strong>41.w4r10r</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member0612.html?u=16" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchbd13.html?do=finduser&amp;userid=16&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private4f8b.html?do=newpm&amp;u=16" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog0612.html?u=16" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list2370.html?r=author/16-41-w4r10r" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>04-15-2014, <span class="time">08:37 PM</span>
+			<a href="showthread574f.html?t=5997&amp;p=13357#post13357" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.html" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_5263">
+	<div class="rating5 nonsticky">
+		<div class="threadinfo" title="Hi, 
+ 
+This is PoC affecting Chrome 29.0.1547.57 , Beta, Canary which got patched in last chrome update 
+reference :...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthread2b36.html?t=5263" id="thread_title_5263">Chrome 29.0.1547.57 NotifyInstanceWasDeleted Use After Free PoC</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="member0612.html?u=16" class="username understate" title="Started by 41.w4r10r on 10-17-2013 08:25 PM">41.w4r10r</a>,&nbsp;10-17-2013&nbsp;08:25 PM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="images/misc/tag.html" alt="chrome crash, chrome dos, chrome exploit, chrome use after free" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misc84e9.html?do=whoposted&amp;t=5263" onclick="who(5263); return false;" class="understate">4</a></li>
+				<li>Views: 9,908</li>
+			
+			<li class="hidden">Rating5 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="member604b.html?u=6896" title="1qaz2wsx is offline"><strong>1qaz2wsx</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="member604b.html?u=6896" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search8eeb.html?do=finduser&amp;userid=6896&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private827e.html?do=newpm&amp;u=6896" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blog604b.html?u=6896" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="listfb6a.html?r=author/6896-1qaz2wsx" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>12-25-2013, <span class="time">12:22 PM</span>
+			<a href="showthreaddc6a.html?t=5263&amp;p=12670#post12670" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.html" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_5114">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Namaste 
+ 
+The following is the CGenericElement exploit using mshelp:// protocol if Visual studio &lt;2010 is installed, 
+and is a good sample for...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthreadac2b.html?t=5114" id="thread_title_5114">Developers Holocaust with IE 8 CGenericElement win7...&quot;vinnu&quot;</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="memberf35f.html?u=61" class="username understate" title="Started by &quot;vinnu&quot; on 06-29-2013 01:23 PM">&quot;vinnu&quot;</a>,&nbsp;06-29-2013&nbsp;01:23 PM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="images/misc/tag.html" alt="aslr/dep bypass, cgenericelement ie8 exploit, ie8 developers haulocast, ie8 mshelp protocol exploit, ie8 remote code execution" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="miscd805.html?do=whoposted&amp;t=5114" onclick="who(5114); return false;" class="understate">0</a></li>
+				<li>Views: 7,434</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline"><strong>&quot;vinnu&quot;</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberf35f.html?u=61" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchea10.html?do=finduser&amp;userid=61&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatecde6.html?do=newpm&amp;u=61" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogf35f.html?u=61" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list3989.html?r=author/61-quot-vinnu-quot" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>06-29-2013, <span class="time">01:23 PM</span>
+			<a href="showthread79b6.html?t=5114&amp;p=12122#post12122" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.html" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li><li class="threadbit hot" id="thread_3287">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="There was a memory disclosure vulnerability in Firefox below 11 that could be used to bypass ASLR and DEP, this vuln can also be converted into code...">
+			<!--  status icon block -->
+			<a class="threadstatus" rel="vB::AJAX" ></a>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="showthreada333.html?t=3287" id="thread_title_3287">Firefox &lt;11.0 Memory disclosure</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							<span class="label">Started by&nbsp;<a href="memberf35f.html?u=61" class="username understate" title="Started by &quot;vinnu&quot; on 01-23-2013 04:38 PM">&quot;vinnu&quot;</a>,&nbsp;01-23-2013&nbsp;04:38 PM</span>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="images/misc/tag.html" alt="firefox memory disclosure, firefox memory leak" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Replies: <a href="misca772.html?do=whoposted&amp;t=3287" onclick="who(3287); return false;" class="understate">0</a></li>
+				<li>Views: 5,546</li>
+			
+			<li class="hidden">Rating0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Last Post By</dt>
+			<dd><div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline"><strong>&quot;vinnu&quot;</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberf35f.html?u=61" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchea10.html?do=finduser&amp;userid=61&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatecde6.html?do=newpm&amp;u=61" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogf35f.html?u=61" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list3989.html?r=author/61-quot-vinnu-quot" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div></dd>
+			<dd>01-23-2013, <span class="time">04:38 PM</span>
+			<a href="showthreadca0b.html?t=3287&amp;p=9899#post9899" class="lastpostdate understate" title="Go to last post"><img src="images/buttons/lastpost-right.html" alt="Go to last post" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+				</ol>
+			
+		</div>
+		<hr />
+
+		<div class="noinlinemod forumfoot">
+		
+		</div>
+
+		<input type="hidden" name="url" value="" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" name="forumid" value="64" />
+	</form>
+</div>
+
+
+
+<div id="below_threadlist" class="noinlinemod below_threadlist">
+	
+	<div class="threadpagenav">
+		
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="forumdisplay_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="forumdisplaye5f3.html?f=64" class="popupctrl"><span class="ctrlcontainer">Browser Fuzzing</span></a>
+		<a href="forumdisplaye5f3.html?f=64#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.html">Settings</a></li>
+		<li><a href="private.html">Private Messages</a></li>
+		<li><a href="subscription.html">Subscriptions</a></li>
+		<li><a href="online.html">Who's Online</a></li>
+		<li><a href="search.html">Search Forums</a></li>
+		<li><a href="forum.html">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forumdisplay58da.html?f=1">Garage Network</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay12a3.html?f=2">Garage Announcements</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaye57d.html?f=58">Bravo - Null 2012</a></li>
+			
+		
+			
+				<li><a href="forumdisplay0756.html?f=59">Garage Local Chapter Meets</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay31e6.html?f=4">Garage Rules</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye774.html?f=5">Feedback &amp; Suggestions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayd42b.html?f=7">Introduce Your Self</a></li>
+			
+		
+			
+				<li><a href="forumdisplay2b89.html?f=38">Shout-box</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplaycf19.html?f=6">Garage Lounge</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay5579.html?f=30">Hacking for Beginners</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay6ac3.html?f=57">Did You Know?</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay957d.html?f=8">Security &amp; Hacking News Thread</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3215.html?f=36">Career in InfoSec</a></li>
+			
+		
+			
+				<li><a href="forumdisplay814c.html?f=29">Request Zone</a></li>
+			
+		
+			
+				<li><a href="forumdisplay13b6.html?f=27">Noobs Corner</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayfdc5.html?f=9">Hacking and Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplayfac0.html?f=55">Tip | Trick of the Day</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4a6.html?f=66">ICS / SCADA Security</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6111.html?f=67">Internet of Things - IoT</a></li>
+			
+		
+			
+				<li><a href="forumdisplay15ca.html?f=10">Network Vulnerabiltity Assessment &amp; Penetration Testing</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaya05c.html?f=56">Post Exploitation</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay8a83.html?f=11">Web Application Penetration Testing</a></li>
+			
+		
+			
+				<li><a href="forumdisplay01c9.html?f=12">Wireless and Bluetooth Hacking</a></li>
+			
+		
+			
+				<li><a href="forumdisplay48ab.html?f=17">Computer Forensics and Incident Handling</a></li>
+			
+		
+			
+				<li><a href="forumdisplay218b.html?f=19">Physical Security and Social Engineering</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb09f.html?f=15">General Security &amp; Best Practices</a></li>
+			
+		
+			
+				<li><a href="forumdisplay907f.html?f=42">Security and Hacking Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplay9e0d.html?f=54">Mobile Security</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay9780.html?f=14">General Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay9df8.html?f=31">Programming</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay65b9.html?f=35">Assembly</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4f1.html?f=32">C/C++</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb0a0.html?f=34">Perl</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb8c1.html?f=60">PHP</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6c4e.html?f=33">Python</a></li>
+			
+		
+			
+				<li><a href="forumdisplay208f.html?f=51">Linux Shell / Bash Programming</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3238.html?f=47">Windows Batch Programming</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayce40.html?f=28">BackTrack and Other Linux Distributions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf2fa.html?f=16">Networks &amp; Networking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya213.html?f=18">Cloud Computing</a></li>
+			
+		
+			
+				<li><a href="forumdisplaydfa4.html?f=39">Security Podcast and Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya3f5.html?f=40">Miscellanous Thread</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay30ac.html?f=49">Brush Up Your Skills</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayffeb.html?f=20">Experts Forum</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplaycdba.html?f=48">My Meanest Hacks</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf6ac.html?f=37">Hacking &amp; Security Books and Tutorials</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8011.html?f=23">Tools &amp; Scripts</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8941.html?f=22">Exploitation Techniques</a></li>
+			
+		
+			
+				<li><a href="forumdisplay345c.html?f=24">Reverse Engineering and Application Cracking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye8b3.html?f=25">Botnets, Malwares &amp; Rootkits Analysis</a></li>
+			
+		
+			
+				<li><a href="forumdisplay107e.html?f=43">Garage4hackers Exploits</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye5f3.html?f=64">Browser Fuzzing</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+<div id="forum_info_options" class="forum_info block">
+	
+
+	 
+	
+
+	<div class="collapse">
+		<a class="collapse" id="collapse_forum_options" href="forumdisplaye5f3.html?f=64#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+		<h4 class="forumoptiontitle blockhead">Thread Display Options</h4>
+	</div>
+	<div id="forum_options" class="forum_info_form_block">
+		<form id="forum_display_options" action="../external.html?link=http://garage4hackers.com/forumdisplay.php" method="get" class="forum_info_form blockbody formcontrols floatcontainer">
+			<input type="hidden" name="s" value="" />
+			<input type="hidden" name="f" value="64" />
+			<input type="hidden" name="page" value="1" />
+			<input type="hidden" name="pp" value="20" />
+			<div>
+				<div class="options_input_block">
+					<label for="sel_daysprune">Show threads from the...</label>
+					<select class="primary" id="sel_daysprune" name="daysprune">
+						<option value="1" >Last Day</option>
+						<option value="2" >Last 2 Days</option>
+						<option value="7" >Last Week</option>
+						<option value="10" >Last 10 Days</option>
+						<option value="14" >Last 2 Weeks</option>
+						<option value="30" >Last Month</option>
+						<option value="45" >Last 45 Days</option>
+						<option value="60" >Last 2 Months</option>
+						<option value="75" >Last 75 Days</option>
+						<option value="100" >Last 100 Days</option>
+						<option value="365" >Last Year</option>
+						<option value="-1" selected="selected">Beginning</option>
+					</select>
+					<p class="description">Use this control to limit the display of threads to those newer than the specified time frame.</p>
+				</div>
+				<div class="options_input_block">
+					<label for="sel_sort">Sort threads by:</label>
+					<select class="primary" id="sel_sort" name="sort">
+						<option value="title" >Thread Title</option>
+						<option value="lastpost" selected="selected">Last Post Time</option>
+						<option value="dateline" >Thread Start Time</option>
+						<option value="replycount" >Number of Replies</option>
+						<option value="views" >Number of Views</option>
+						<option value="postusername" >Thread Starter</option>
+						<option value="voteavg" >Thread Rating</option>
+					</select>
+					<p class="description">Allows you to choose the data by which the thread list will be sorted.</p>
+				</div>
+				
+				<!-- Group of Radio Buttons -->
+				<div class="options_input_block">
+					<p class="label">Order threads in...</p>
+					<ul class="checkradio group">
+						<li><label for="radio_asc"><input type="radio" name="order" id="radio_asc" value="asc"  /> Ascending Order</label></li>
+						<li><label for="radio_dsc"><input type="radio" name="order" id="radio_dsc" value="desc" checked="checked" /> Descending Order</label></li>
+					</ul>
+					<p class="description">Note: when sorting by date, 'descending order' will show the newest results first.</p>
+				</div>
+				
+			</div>
+			<div class="options_input_wrapper">
+				<div class="options_input_block">
+					<div class="group">
+						<input type="submit" class="button" value="Show Threads" />
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<div class="options_block_container">
+	
+		<div class="options_block">
+		<div class="collapse options_correct">
+			<a class="collapse" id="collapse_forum_icon_legend" href="forumdisplaye5f3.html?f=64#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+			<h4 class="blockhead">Icon Legend</h4>
+		</div>
+		<div id="forum_icon_legend" class="forum_info_block blockbody formcontrols options_correct">
+			<dl id="icon_legends" class="forum_info_subblock icon_legends">
+				<dt><img src="images/statusicon/thread_new-16.html" alt="Contains unread posts" /></dt><dd>Contains unread posts</dd>
+				<dt><img src="images/statusicon/thread-16-right.html" alt="Contains no unread posts" /></dt><dd>Contains no unread posts</dd>
+				
+				<dt><img src="images/statusicon/thread_hot_new-16.html" alt="More than 15 replies or 150 views" /></dt><dd>Hot thread with unread posts</dd>
+				<dt><img src="images/statusicon/thread_hot-16.html" alt="More than 15 replies or 150 views" /></dt><dd>Hot thread with no unread posts</dd>
+				
+				<dt><img src="images/statusicon/thread_lock-16.html" alt="Closed Thread" /></dt><dd>Thread is closed</dd>
+				<dt><img src="images/statusicon/thread_dot-16-right.html" alt="Thread Contains a Message Written By You" /></dt><dd>You have posted in this thread</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="options_block2">
+		<div class="collapse options_correct">
+			<a class="collapse" id="collapse_posting_rules" href="forumdisplaye5f3.html?f=64#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+			<h4 class="blockhead">Posting Permissions</h4>
+		</div>
+		<div id="posting_rules" class="forum_info_block blockbody formcontrols floatcontainer options_correct">
+			
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+		<li>&nbsp;</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="miscaff0.html?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc9712.html?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#videocode" target="_blank">[VIDEO]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="misc17ec.html?do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+		</div>
+	</div>
+	
+	</div>
+</div>
+<script type="text/javascript">
+<!--
+vbphrase['doubleclick_forum_markread'] = "Double-click this icon to mark this forum and its contents as read";
+init_forum_readmarker_system();
+//-->
+</script>
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="forumdisplaye5f3.html?f=64#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">03:52 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	<img src="cron61be.gif?rand=1584872569" alt="" width="1" height="1" border="0" />
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

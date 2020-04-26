@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=1365&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:53:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Tips: Beware buying  NVIDIA Optimus™ technology Graphic Cards</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadbb18.html?t=1365">Tips: Beware buying  NVIDIA Optimus™ technology Graphic Cards</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">08-17-2011, 08:40 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+		<div class="title">Tips: Beware buying  NVIDIA Optimus™ technology Graphic Cards</div>
+	
+	<div class="content">
+		<blockquote class="restore">Folks,<br />
+<br />
+Last month I bought Asus N43 Series with Nvidia Geforce GT 540M 1Gb card. <br />
+For last three days I was struggling configuring Nvidia to make it work with cuda for WPA cracking.<br />
+The cracking thing worked, but the irony is I am not being able to use the card for X server. It simply fails and I need to switch back to built in Intel card.<br />
+<br />
+Digging further, I found the following:<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			The card should be ok as long as it works alone. But OP is screwed because his laptop (DELL XPS15)is Optimus enabled. With Optimus the Nvidia card becomes a kind of hybrid with a cheap onbroad Intel card so the Linux driver for the Nvidia card no longer works. As for Nvidia, not only does it not support Optimus in Linux, it doesn't give Linux users the option to NOT use it. With Optimius enabled, you simply cannot use the Nvidia card you pay for, period (unless your laptop has a BIOS switch to turn off Optimus and choose the discrete card,--Nviida) But even worse, the unusable Nvidia card would still be sitting there eating your battery so it is worse than an expensive paper weight.<br />
+			
+		<hr />
+	</div>
+</div>So the optimus is killing here. Anyone planning to buy something related to it, please make sure the compatibilities and all. Cracking is working fine with pyrit and cuda but can not use the nvidia card for x-server.<br />
+<br />
+<a href="../external.html?link=http://ubuntuforums.org/showthread.php?t=1699939" target="_blank">NVidia GeForce GT 540M</a><br />
+<br />
+<a href="../external.html?link=http://ubuntuforums.org/showthread.php?t=1712278" target="_blank">Group Effort Petition Nvidia about Optimus Linux drivers</a><br />
+<br />
+<a href="../external.html?link=http://ubuntuforums.org/showthread.php?t=1657660" target="_blank">nVidia Optimus and Ubuntu explained [UPDATED] <br />
+</a><br />
+<a href="../external.html?link=https://github.com/MrMEEE/bumblebee" target="_blank">bumblebee</a><br />
+<a href="../external.html?link=http://www.omgubuntu.co.uk/2011/05/bumbleebee-brings-nvidia-optimus-gpu-switching-to-linux-users/" target="_blank">Bumblebee brings nvidia optimus GPU switching to Linux users<br />
+</a><br />
+<br />
+b0nd<br />
+<br />
+PS: If anyone come across any solution for it, please do let me know.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">08-21-2011, 05:41 AM</div>
+		<span class="username">keval_domadia</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">I am using NVidia GeForce GT 540M on ubuntu and its working brill!<br />
+however, post update, you need to re-compile it and install it. Its a bit headache but, I hope it works out for you! :)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">08-22-2011, 06:37 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>keval_domadia</strong>
+				<a href="showthreadac5e.html?p=5391#post5391" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">I am using NVidia GeForce GT 540M on ubuntu and its working brill!<br />
+however, post update, you need to re-compile it and install it. Its a bit headache but, I hope it works out for you! :)</div>
+			
+		<hr />
+	</div>
+</div>Hey KD, that would be awesome if I could make it work.<br />
+What exactly did you do to make it work?<br />
+<br />
+Rgds</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:34 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=1365&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:53:46 GMT -->
+</html>

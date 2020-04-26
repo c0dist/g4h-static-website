@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6778&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:33:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Daws - New Release - 5/12/2015</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadbdc3.html?t=6778">Daws - New Release - 5/12/2015</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">12-06-2015, 09:26 PM</div>
+		<span class="username">dotcppfile</span>
+	</div>
+	
+	
+		<div class="title">Daws - New Release - 5/12/2015</div>
+	
+	<div class="content">
+		<blockquote class="restore"><a href="../camo.githubusercontent.com/49f20ccb72e47292a1b039ec71e2758b1b52230c/687474703a2f2f692e696d6775722e636f6d2f77784148396b4f2e6a7067.jpg" target="_blank">https://camo.githubusercontent.com/4...396b4f2e6a7067</a><br />
+<br />
+<ol class="decimal"><li style="">The shell now checks if it can CHMOD a directory(by comparing the values of the directory and the current process's owners) instead of just skipping one that doens't meat the requirements when looking for &quot;DAws's directory&quot;.</li><li style="">DAws now &quot;copies&quot; itself to &quot;DAws's Directory&quot; then drops the .htaccess and php.ini files, which are suppose to make life easier if suphp is installed, if that directory is within the web directory. It'll redirect the current user to that new copy of DAws. Because of all this DAws is much faster now since it is in its own directory, the right table doens't have to be full of crap that we don't care about and bypassing security systems if suphp is installed is now guaranteed.</li><li style="">Fixed some &quot;serious&quot; permission bugs in the File Manager which were causing &quot;Rename&quot; and &quot;Del&quot; to appear/disappear when they shouldn't be.</li><li style="">You can finally CHMOD a file/directory using the file manager. I am not sure why it took me so long to add this but who cares? It's here now, enjoy.</li><li style="">Added File Owner and User's Group to the File Manager. Having this information is needed and should've been here since the beginning because the permissions makes no sense without it and I kept pushing this update because it's not &quot;that&quot; important since DAws checks everything for you but again, who cares? It's here now, enjoy lol.</li><li style="">You can now &quot;Wipe&quot; a file instead of just Deleting it which makes it mostly impossible to get it recovered. DAws will simply replace the old file bytes with null ones, this isn't a very good &quot;wiper&quot; but it gets the job done pretty well.</li><li style="">DAws now supports PDO for the Sql Connector. This is useful and needed in case &quot;mysqli_connect&quot; was blocked.</li><li style="">You can now specify the &quot;Host&quot; when using the MySql Connector since the Host isn't always local and since a remote MySql server connection can be blocked unless it's coming from a specific client, so having this is obviously a  good thing.</li><li style="">You can now save the output of any Sql Query which is pretty useful if your MySql User had no file privileges.</li><li style="">You can now execute Python, Perl and Ruby code on Windows.</li><li style="">You can now chose the type of a Bind/Reverse shell instead of it being done automatically for you because why not? In some specific cases a coding language may fail because of some process restriction, for example, and DAws can't know that so this small change should solve that.</li><li style="">You can now chose whether you want a reverse/bind shell or some eval code to run in the background or not(threw nohup for linux or start for windows) instead of it being chosen automatically for you.</li><li style="">A dynamic fake 404 page has been finally added. (The code of the static one has been commented and is still at the top)</li><li style="">DAws now checks if the current server is vulnerable to Shellshock threw &quot;normal&quot; command execution, I know that this isn't beneficial for DAws but it's good and useful information and you can now see it on the left table. (Keep in mind that DAws already uses Shellshock threw 2 methods to bypass security systems but this is completely something else).</li><li style="">Removed a lot of extra lines that were holding nothing but a &quot;{&quot; for the sake of scrolling when reading the code...</li><li style="">Fixed a lot of small bugs that were causing stuff like: showing the wrong location of the dropped cgi shell, wrong data in the .htaccess file for suphp on windows, getting redirected to the main shell's directory when using something other than the file manager, etc...</li></ol><br />
+<br />
+Github: <a href="../external.html?link=https://github.com/dotcppfile/DAws" target="_blank">https://github.com/dotcppfile/DAws</a></blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:08 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6778&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:33:35 GMT -->
+</html>

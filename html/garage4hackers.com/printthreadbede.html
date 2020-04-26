@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=1363&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:40:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> C++ web app best practices</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread4d06.html?t=1363">C++ web app best practices</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">08-16-2011, 01:53 PM</div>
+		<span class="username">keval_domadia</span>
+	</div>
+	
+	
+		<div class="title">C++ web app best practices</div>
+	
+	<div class="content">
+		<blockquote class="restore">Hello,<br />
+<br />
+Due to lack of documentation and 'NO tuts available'-state of cpp for web apps, it is difficult for me to understand , per say, security aspects.<br />
+Facebook is using Hiphop PHP which has made it far more superior in handling so many requests, further after Google ditching python for cpp and Java(maybe a rumour but, very famous one) has created a drastic impact too.<br />
+There are client enquiries who ask me for the same flavour that Google is using... However, I need to know what are the consequences of using CPP for web app development?<br />
+So far by word of mouth I have heard / discussion with developers &quot;while using php, asp, jsp, if compromised, you loose a site and possibly the server... but, when on direct cpp to c compiler, u dont loose website, you loose the entire server.... php jsp = sqli, csrf, etc... cpp = bof because, php goes via and works on diff OSI layer whereas CPP is quicker because, it has complete access to all resources&quot; is this understanding correct?<br />
+I want to get into production with CPP for web apps. Hiphop is a good alternative however, people also suggest that it is comparatively not stable enough as cppCMS.<br />
+<br />
+Please advice.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">08-16-2011, 02:26 PM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">You would be interested in looking at ISAPI extension , <a href="../external.html?link=http://www.codeproject.com/KB/ISAPI/isapi_extensions.aspx" target="_blank">http://www.codeproject.com/KB/ISAPI/...xtensions.aspx</a><br />
+<br />
+Huge site like Ebay and all run on this [<a href="../external.html?link=https://scgi.ebay.in/ws/eBayISAPI.dll]" target="_blank">https://scgi.ebay.in/ws/eBayISAPI.dll]</a> , ISAPI had to deal with BOF kind of attacks before , I ain't heard of any latest bug in the following dll.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">08-16-2011, 04:56 PM</div>
+		<span class="username">keval_domadia</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Yes, this is what I concern was. The almighty Overflowing-tea-from-the-cup.<br />
+Will have a look ISAPI but, right now am not into .net (I presume it has got to do with .net)...<br />
+<br />
+So, you do agree that BOF may be a threat ?</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">08-17-2011, 08:43 AM</div>
+		<span class="username">&quot;vinnu&quot;</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">The major difference is the cgi (cpp will be compiled to executable and then executable will become the CGI) forms a process in the server under webserver, while php and other most counterparts are executed under a thread by their corresponding interpreter.<br />
+<br />
+The downfalls like bufferoverflow/formatstring...etc are the problems of developers, they should code properly, otherwise there are problems with other technologies also.<br />
+We should not criticize any technology, if it is developed then it might have some features. And there is none other higher level language with such a vast features and libraries as c/c++ have.<br />
+<br />
+...&quot;vinnu&quot;</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">08-17-2011, 11:14 AM</div>
+		<span class="username">Anant Shrivastava</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>&quot;vinnu&quot;</strong>
+				<a href="showthread4de4.html?p=5342#post5342" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">The major difference is the cgi (cpp will be compiled to executable and then executable will become the CGI) forms a process in the server under webserver, while php and other most counterparts are executed under a thread by their corresponding interpreter.<br />
+<br />
+The downfalls like bufferoverflow/formatstring...etc are the problems of developers, they should code properly, otherwise there are problems with other technologies also.<br />
+We should not criticize any technology, if it is developed then it might have some features. And there is none other higher level language with such a vast features and libraries as c/c++ have.<br />
+<br />
+...&quot;vinnu&quot;</div>
+			
+		<hr />
+	</div>
+</div>I agree with your point buddy,<br />
+<br />
+we should not be blaming technology.<br />
+<br />
+however at same point there should be a limit on using technology at correct places.<br />
+<br />
+C/C++ suffers bufferoverflow and pointer related issues coz they are primerily intended for low level / system level task's. java does'nt have pointers as it wanted to be a app language. however the whole point here is use the language which you think is good then don't make a fuss out of it.<br />
+<br />
+<br />
+also as far as web app in c, my personal opinion i would like to do that only if i have control over the whole server.<br />
+I.E. my app itself is acting as a port 80 listener too... ....</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">08-21-2011, 05:32 AM</div>
+		<span class="username">keval_domadia</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Thanks Vinnu and Anant. :-)<br />
+<br />
+However, my main point was about the &quot;best practices&quot;, as Vinnu said, it is developers fault and not technologies.<br />
+I agree to it, which is why I am seeking guidance from citizens of Garage to help me with &quot;best practices&quot; like, how to sanitize, what could be done to minimize processing time, whitespaces, etc...</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:17 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=1363&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:40:57 GMT -->
+</html>

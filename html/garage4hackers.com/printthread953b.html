@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6251&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:33:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> DAws - 22/5/2015</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread1630.html?t=6251">DAws - 22/5/2015</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">05-22-2015, 04:22 AM</div>
+		<span class="username">dotcppfile</span>
+	</div>
+	
+	
+		<div class="title">DAws - 22/5/2015</div>
+	
+	<div class="content">
+		<blockquote class="restore"><a href="../camo.githubusercontent.com/49f20ccb72e47292a1b039ec71e2758b1b52230c/687474703a2f2f692e696d6775722e636f6d2f77784148396b4f2e6a7067.jpg" target="_blank">https://camo.githubusercontent.com/4...396b4f2e6a7067</a><br />
+<br />
+<font color="#FF4500"><font size="3">About<b></b>:</font></font><br />
+<ul><li style="">Bypasses Security Systems using various methods.</li><li style="">Drops CGI Shells and communicate with them to bypass Security Systems.</li><li style="">Uses the SSH Authorized Keys method to bypass Security Systems.</li><li style="">Is completely Post Based and uses a XOR Encryption based on a random key that gets generated with every new session + private base64 functions to bypass Security Systems.</li><li style="">Supports Windows and Linux.</li><li style="">Find a writeable and readable directory and moves there if it's a web directory.</li><li style="">Drops a php.ini and a .htaccess file that clears all disablers incase &quot;suphp&quot; was installed.</li><li style="">Has an advanced File Manager</li><li style="">Mostly everything is done automatically (when it comes to command or script execution)</li><li style="">Open Source</li><li style="">and much more (check the source for more information; everything is well commented)</li></ul><br />
+<br />
+<font color="#FF4500"><font size="3">New Updates:</font></font><br />
+<ul><li style="">Full support for Windows.</li><li style="">DAws is now completely POST based.</li><li style="">SSH Method support has been applied but it is based on user's interaction. This method is based on creating a RSA key and adding the public key to the authorized_keys file that will allow the owner of that key to connect to ssh without using a password. Now for this to happen, DAws should find the user, the home directory, the ssh port, use about 4000 lines of codes to create a rsa key with openssh format and to ssh connect. Lets not forget that even if all this was presented the .ssh directory could simply be unreadable same for the authorized_keys file. So the success rate of all this is practically low unless the user helps out; in DAws, the user is supposed to find the ssh user and the home directory (by using DAws's file manager) and the ssh port (simple tcp scan) and upload the needed files manually (by using DAws's file manager) and this may take the user a minute while for DAws it may cause many problems specially if there's security systems, since a lot of functions will be used to retrieve all that information, which will instantly cose this whole thing to fail.</li><li style="">After DAws's finds its directory (a writeable and readable one), DAws will try to move to that directory if it's a web directory. Now that will be useful for one thing and that thing is based on dropping a php.ini and a .htaccess which will allow DAws to do anything but this will only work if suphp was installed.</li><li style="">If DAws failed to find its proper web directory then it will go searching randomly for anything else. Thanks to that, everthing in the shell will still work perfectly except for the CGI Shells.</li><li style="">Added the usage of call_user_func, call_user_func_array, ArrayIterator, register_tick_function, array_map, array_walk, array_filter and register_shutdown_function to bypass Suhosin.</li><li style="">Created multiple functions such as file_get_contents_extended, fopen_extended, etc to bypass Suhosin.</li><li style="">Added Sql Connect</li><li style="">Got rid of the 2 extra php xor encryption functions &quot;sh3ll_this&quot; and &quot;unsh3ll_this&quot; since the only difference was using the static key &quot;dotcppfile&quot;.</li><li style="">In some of these old functions, the usage of &quot;system&quot; and &quot;passthru&quot; wasn't possible since we couldn't store the output properly (using their<br />
+available &quot;output&quot; arguments was barely working thanks to PHP lol) so in this new function we used output buffering (ob_start, ob_get_contents, etc...) to get the output of these system commands.</li><li style="">Zipping a directory has been upgraded and well taken care of since we believe it's important. Anyways, if available and enabled, the class ZipArchive along with RecursiveIteratorIterator are being used get the job done, if not, we're using system commands; &quot;powershell&quot; or a vbs script for Windows and &quot;zip&quot; for Linux.</li><li style="">Uploading, Creating and Zipping functions now outputs in DAws's chosen directory, which should have been done a long time ago since the current directory could be non writable, anyways, it's here now.</li><li style="">We also added a recursive function based on &quot;glob&quot; to get that job done just in case the version of PHP is smaller than 5 because the first method is based on using &quot;RecursiveIteratorIterator&quot; which was added in PHP version 5.</li><li style="">Increased the check for disabled/blocked functions (file_get_contents, file_put_contents, fopen, etc...)</li><li style="">Aside of using &quot;function_exists&quot; and &quot;class_exists&quot; to check for installed libraries, we added the usage of output buffering (ob_start, ob_get_contents, etc...) incase &quot;functions_exists&quot; and &quot;class_exists&quot; were also disabled/blocked.</li><li style="">Increase the check for installed softwares (bitsadmin, wget, etc...) since they'll be used in the shell.</li><li style="">Fixed the code that was suppose to find a writeable/redable directory for DAws since it was a little bit buggy.</li><li style="">Incase &quot;RecursiveIteratorIterator&quot; and the recursive glob function failed for some reason, the chosen directory will be &quot;/tmp&quot; for Linux or &quot;C:/Users/&quot;.get_current_user().&quot;/AppData/Local/Temp&quot; for Windows.</li><li style="">All the functions that were suppose to execute a system command have been merged into one called &quot;execute_command&quot; that is also used to check for installed software.</li><li style="">The &quot;remove directory&quot; feature in the file manager has been modified; the old method was based on removing everything in the chosen directory<br />
+recursively but it was a bad method since permissions were making things worse so in this new update we simply decided to use system commands; &quot;rmdir /s&quot; for Windows and &quot;rm -r&quot; for Linux so let the OS deal with it lol.</li><li style="">Editing a file has been upgraded; we're not only using &quot;file_put_contents&quot; but also &quot;fopen&quot; in case &quot;file_put_contents&quot; was disabled/blocked.</li><li style="">Uploading a file via a direct link to the server has been also updated; we're using Curl with fopen or file_put_contents with file_get_contents or fopen with file_get_contents, if none worked then we're using system commands; &quot;bitsadmin&quot; or &quot;powershell&quot; for Windows and &quot;curl&quot; or &quot;wget&quot; for Linux.</li><li style="">Creating a simple file has also been updated; we added the usage of fopen and the echo system command in case file_put_contents wasn't useable.</li><li style="">All the javascript xor encryption functions has been merged together, this had to be done since using multiple ones is plain stupid but we were doing it because we never cared about the amount of code as much as we cared about it's effectiveness; if it works then it's good but beautiful and simple code costs money mates so here it is lol.</li><li style="">Some of the features in the file manager were available when they shouldn't have been and that's because we did some mistakes checking<br />
+permissions so it's been fixed now.</li><li style="">Reading a file has also been updated. In case file_get_contents was blocked/disabled fopen or system commands (&quot;type&quot; for Windows and &quot;cat&quot; for<br />
+Linux) go for it.</li><li style="">The GUI has been updated, there's 3 columns now; the first one is fixed and holds various information, the third one is also fixed and holds a file explorer for DAws's chosen directory and the second one holds what's left of DAws. We also fixed few HTML/CSS code and made things smoother and faster to load. Finally, we shoved hidden divs in the file manager that will show up whenever you chose to rename something.</li><li style="">Updated the CGI Batch shell since it wasn't working properly (apparently we were using a test version by mistake)</li><li style="">Added the support of https when retrieving the output of CGI Shell.</li><li style="">Updated the execution of PHP code; eval will also be used if not disabled by Suhosin.</li><li style="">Removed the Process Manager since it was based on system commands; &quot;tasklist&quot; and &quot;taskkill&quot; for Windows and &quot;ps aux&quot; and &quot;kill&quot; for Linux.</li><li style="">Removed the execution of C and C++ because they're useless in that part. The only reason people use the Eval part was to write some fast and situational scripts. C and C++ are mostly used to compile advanced code such as an exploit or a botnet.</li></ul><br />
+<br />
+<font color="#FF4500"><font size="3">Github:</font></font><br />
+<a href="../external.html?link=https://github.com/dotcppfile/DAws" target="_blank">https://github.com/dotcppfile/DAws</a></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">05-25-2015, 05:07 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Looks lovely. Thanks for sharing it here!</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:08 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6251&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:33:41 GMT -->
+</html>

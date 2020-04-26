@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=2625&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:49:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> GingerBread, Up and Running on Nokia N900</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread1283.html?t=2625">GingerBread, Up and Running on Nokia N900</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">08-30-2012, 01:58 AM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+		<div class="title">GingerBread, Up and Running on Nokia N900</div>
+	
+	<div class="content">
+		<blockquote class="restore">Pheww, so finally after messing badly with my friend's N900, I got gingerbread running. And after spending 3-4 nights w/ this phone, I must admit, I'm in love with it.. :D<br />
+It took me 3-4 days because all the info is scattered here and there, and some things work, some don't. Finally after messing and flashing N900 5-7 times, I got what I was looking for.. :)<br />
+<br />
+<font color="#FF0000"><font size="3">Disclaimer : I'm not responsible for any damage done to your phone or you. Use it at your own risk.</font></font><br />
+<br />
+If you wish to taste Android on N900 (I'm sure there's very few of you), I'd suggest you to try everything on a freshly installed N900. Just flash the eMMC and Firmware. Instructions are @ <a href="../external.html?link=http://wiki.maemo.org/Updating_the_tablet_firmware" target="_blank">Updating The Firmware</a>.<br />
+Then enable all the repositories - extras, extras-devel, and extras-testing by following instruction <a href="../external.html?link=http://www.nokiadistrict.com/repositories-extras-extras-devel-and-extras-testing-for-nokia-n900/" target="_blank">here</a>.<br />
+<br />
+Once you're done, just blindfold your eyes and follow the instructions given:<br />
+<br />
+1. Download rootsh from <a href="../external.html?link=http://maemo.org/downloads/product/Maemo5/rootsh/" target="_blank">here</a> and install it.<br />
+2. Download NITDroid 12 &quot;UMay&quot; from <a href="../downloads.nitdroid.com/e-yes/N12_UMay.tar.bz2" target="_blank">here</a> and kernel from <a href="../external.html?link=http://downloads.nitdroid.com/e-yes/nitdroid-kernel-2.6.28-07_6-rc6_armel.deb" target="_blank">here</a>.<br />
+3. Transfer the downloaded content to root of the N900 (Remember internal memory).<br />
+4. Open X-Terminal and enter following commands<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">root<br />
+apt-get update<br />
+apt-get install nitdroid-installer<br />
+y<br />
+y [again if it asks again.]</code><hr />
+</div>Remember though you've installed the installer,<font color="#FF0000">DO NOT RUN ANYTHING</font>.<br />
+Now execute these commands on terminal:<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">cd /home/user/MyDocs<br />
+bzip2 -d N12_UMay.tar.bz2<br />
+cd /home<br />
+mkdir /and<br />
+cd /<br />
+mount /home /and<br />
+cd /and<br />
+tar xvf /home/user/MyDocs/N12_UMay.tar.bz2<br />
+dpkg -i /home/user/MyDocs/nitdroid-kernel-2.6.28-07_6-rc6_armel.deb</code><hr />
+</div>Continued..</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">08-30-2012, 02:15 AM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+		<div class="attachments">1 Attachment(s)</div>
+	
+	
+		<div class="title">Continued..</div>
+	
+	<div class="content">
+		<blockquote class="restore">5. After this execute this command<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">vi /etc/multiboot.d/11[press tab to auto fill here]</code><hr />
+</div>go to insert mode and set<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">ITEM_DEVICE=mmcblk0p2</code><hr />
+</div>6. save and exit. Reboot the device w/ open keyboard.<br />
+7. When it boots, if you see something like this<br />
+<a href="attachmentd74a.jpg?attachmentid=485"  title="Name:  
+Views: 
+Size:  ">Attachment 485</a><br />
+Press 2 to boot into Android..<br />
+<br />
+If everything goes well, you'll be tasting Gingerbread, else I don't know. Flash and try again. :p<br />
+NOTE : While using Android, power button works as &quot;lock key&quot;, camera was not working for me (note: I'm using older version). Camera key was the &quot;back key&quot;.<br />
+<br />
+Resources :<br />
+Actually this whole procedure was on <a href="../external.html?link=http://www.mynokian900.com/2011/02/how-to-install-nitdroid-version-0-0-9" target="_blank">this</a>, <a href="../external.html?link=http://www.mynokian900.com/2011/05/upgrading-nitdroid-n11-vostok-to-n12-umay" target="_blank">this</a> and <a href="../external.html?link=http://www.mynokian900.com/2011/04/how-to-install-nitdroid-n11-vostok-on-n900" target="_blank">this</a>. I've just compiled it in a easy manner.<br />
+<br />
+Thanks.<br />
+Hope you'll enjoy.. :)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">08-30-2012, 11:16 AM</div>
+		<span class="username">the_empty</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">thanks for this elaborate explanation . It will be fun night for me now. I somehow managed to install GB on my samsung galaxy tab few days back. <br />
+<br />
+believe me, Windows 7 licensed version will give you all the possible trouble while working on these things, so used a pirated copy and it was done in firs shot. Need to dig more in this issue/behaviour of win7 (for those who are stuck with Windows)</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">08-30-2012, 05:16 PM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Well then I guess in that case, I'm lucky.. :)<br />
+I've never faced any such issues. The problems that I was facing was due to the fact that this project is bit ill-documented and scattered. so I had to try everything that I found and I finally, I found one.. :D<br />
+<br />
+p.s. - do all this after removing micro sd card, if any..<br />
+cheers.</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:25 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=2625&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:49:23 GMT -->
+</html>

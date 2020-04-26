@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6241&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:24:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Anti-debugging, Anti-evasion and Anti-vm tricks used by malware</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreadf44a.html?t=6241">Anti-debugging, Anti-evasion and Anti-vm tricks used by malware</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">04-30-2015, 11:43 AM</div>
+		<span class="username">abhaythehero</span>
+	</div>
+	
+	
+		<div class="title">Anti-debugging, Anti-evasion and Anti-vm tricks used by malware</div>
+	
+	<div class="content">
+		<blockquote class="restore">Starting this thread to discuss Anti-debugging, Anti-evasion and Anti-vm tricks used by malware and malcode. <br />
+<br />
+Starting with this nice usage of <b>rdtsc</b> instruction, I found on the malware sample I was working on recently. (still not clear whether it is the packer/protector or the malware sample itself, though I reckon it is the packer/protector)<br />
+<br />
+<a href="../s22.postimg.org/w0g6p52pt/Screen_Shot_2015_04_30_at_11_13_00_am.png" target="_blank">http://s22.postimg.org/w0g6p52pt/Scr...1_13_00_am.png</a><br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">00401&gt; 0F31&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RDTSC<br />
+00401&gt; 52&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PUSH EDX<br />
+00401&gt; 0F31&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RDTSC<br />
+00401&gt; 58&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; POP EAX<br />
+00401&gt; 33C2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; XOR EAX,EDX<br />
+00401&gt; 6A 04&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  PUSH 4<br />
+00401&gt; 68 00100000&nbsp; &nbsp; &nbsp;  PUSH 1000<br />
+00401&gt; 68 00100000&nbsp; &nbsp; &nbsp;  PUSH 1000<br />
+00401&gt; 50&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PUSH EAX<br />
+00401&gt; FF55 E4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  CALL DWORD PTR SS:[EBP-1C]&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ; kernel32.VirtualAlloc</code><hr />
+</div>The use of RDTSC instruction loads the current value of the processor's time-stamp counter into the EDX:EAX registers. The time-stamp counter is contained in a 64-bit MSR. The high-order 32 bits of the MSR are loaded into the EDX register, and the low-order 32 bits are loaded into the EAX register. <a href="../external.html?link=http://x86.renejeschke.de/html/file_module_x86_id_278.html" target="_blank">http://x86.renejeschke.de/html/file_...86_id_278.html</a><br />
+<br />
+The assembly uses the high-order 32 bits in EDX from the 1st RDTSC instruction and pushes it to stack. Then it pops it into EAX for XORing it to high-order 32 bits in EDX from the 2nd RDTSC instruction (XOR EAX,EDX)<br />
+<br />
+Now comes the trick. The result of this XOR operation stored in EAX, is used as lpAddress argument in VirtualAlloc <a href="../external.html?link=https://msdn.microsoft.com/en-us/library/windows/desktop/aa366887(v=vs.85).aspx" target="_blank">https://msdn.microsoft.com/en-us/lib...=vs.85%29.aspx</a> <br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">HTML Code:</div>
+	<hr /><code class="bbcode_code">lpAddress &#91;in, optional&#93;<br />
+The starting address of the region to allocate. If the memory is being reserved, the specified address is rounded down to the nearest multiple of the allocation granularity. If the memory is already reserved and is being committed, the address is rounded down to the next page boundary. To determine the size of a page and the allocation granularity on the host computer, use the GetSystemInfo function. If this parameter is NULL, the system determines where to allocate the region</code><hr />
+</div>Now if someone is single stepping the assembly code in debugger slowly, there would be considerable change in high-order 32 bits returned by RDTSC each time. Hence the XOR operation would not amount to Zero(as both values are different and not same). Hence the lpAddress argument would be something like 00000003 (or greater value)<br />
+<br />
+<a href="../s17.postimg.org/427o2jgvz/Screen_Shot_2015_04_30_at_11_36_00_am.png" target="_blank">http://s17.postimg.org/427o2jgvz/Scr...1_36_00_am.png</a><br />
+<br />
+Which would just fail the VirtualAlloc address and it will return NULL instead of some base address.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">HTML Code:</div>
+	<hr /><code class="bbcode_code">Return value<br />
+<br />
+If the function succeeds, the return value is the base address of the allocated region of pages.<br />
+If the function fails, the return value is NULL. To get extended error information, call GetLastError.</code><hr />
+</div>This return value is tested and execution is diverted to exit. <br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">00401&gt; FF55 E4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  CALL DWORD PTR SS:[EBP-1C]<br />
+00401&gt; 8945 90&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  MOV DWORD PTR SS:[EBP-70],EAX<br />
+00401&gt; 85C0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TEST EAX,EAX<br />
+00401&gt; 0F84 88030000&nbsp; &nbsp;  JE my.0040182C ; exit function</code><hr />
+</div></blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">05-01-2015, 12:13 AM</div>
+		<span class="username">b0nd</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Good one Abhay, keep them coming!</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">05-01-2015, 09:53 AM</div>
+		<span class="username">abhaythehero</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>b0nd</strong>
+				<a href="showthread4e2a.html?p=13853#post13853" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">Good one Abhay, keep them coming!</div>
+			
+		<hr />
+	</div>
+</div>Thanks ! And yep, more posts coming in this section :D</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">05-02-2015, 05:07 PM</div>
+		<span class="username">c0dist</span>
+	</div>
+	
+	
+		<div class="title">New Sandbox Evasion Technique in Dyre</div>
+	
+	<div class="content">
+		<blockquote class="restore">Just came across this post on Twitter - <a href="../external.html?link=http://www.seculert.com/blog/2015/04/new-dyre-version-evades-sandboxes.html" target="_blank">http://www.seculert.com/blog/2015/04...sandboxes.html</a><br />
+<br />
+The post outlines a technique used by Dyre banking malware, by detecting processor cores. If processor cores count == 1, it exits. <br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			This version of the Dyre malware is able to evade analysis by sandboxing solutions by checking how many processor cores the machine has. If the machine has only one core it immediately terminates. While this is not the only way to avoid sandboxes, the attackers behind Dyre decided to pick this specific known and openly available technique. As many sandboxes are configured with only one processor with one core as a way to save resources, the check (Figure 1) performed by Dyre is a good and effective way to avoid being analyzed. On the other hand, most of the machines (PCs) in use today have more than one core.
+			
+		<hr />
+	</div>
+</div>Nothing very 1337, but looks like it evaded most of the online sandboxes.<br />
+<br />
+Cheers.<br />
+<br />
+Regards,<br />
+c0dist</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">05-04-2015, 01:57 PM</div>
+		<span class="username">abhaythehero</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Ohh yeah. I was going to post that today but you beat me to it c0dist. Also note this excellent paper <a href="../www.exploit-db.com/docs/34591.html" target="_blank">https://www.exploit-db.com/docs/34591.pdf</a> by Sudeep Singh referenced in that article which discusses many such anti-vm, anti-debugging, etc tricks.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">05-04-2015, 05:16 PM</div>
+		<span class="username">abhaythehero</span>
+	</div>
+	
+	
+		<div class="title">Counter-measures (anti-debugs, . . . ) cheat sheet from Corkami project</div>
+	
+	<div class="content">
+		<blockquote class="restore">Nice cheat sheet of anti-debugging and anti-vm techniques (often used by malware)<br />
+ <br />
+<a href="../external.html?link=https://code.google.com/p/corkami/downloads/detail?name=cm.pdf&amp;can=2&amp;q=" target="_blank">https://code.google.com/p/corkami/do...m.pdf&amp;can=2&amp;q=</a><br />
+[Mirror] <a href="../www.gironsec.com/blog/wp-content/uploads/2013/12/cm.pdf" target="_blank">http://www.gironsec.com/blog/wp-cont...2013/12/cm.pdf</a></blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">04:07 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=6241&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:24:46 GMT -->
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=4845&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:27:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> UAF object poisoning</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthread2a01.html?t=4845">UAF object poisoning</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">06-01-2013, 11:54 PM</div>
+		<span class="username">labba</span>
+	</div>
+	
+	
+		<div class="title">UAF object poisoning</div>
+	
+	<div class="content">
+		<blockquote class="restore">Hi,<br />
+I have a question that bother me allot lately regarding to the UAF of aurora exploit (and in general to all UAF). <br />
+I have seen  slides  (<a href="../external.html?link=http://www.docstoc.com/docs/90003468/Operation-Aurora-Exploit-Analysis-Dino-Dai-Zovi-_ltddz_endgamesus" target="_blank">Operation Aurora Exploit Analysis Dino Dai Zovi _lt;ddz_endgames.us</a>) in WinXP with IE7 starting to fragment the heap with a loop of 128 times with creation of element &quot;param&quot;<br />
+<br />
+what i don't get is:<br />
+1. why 128 ? (in the IE6 in the same slides they use 200 also i don't understand why 200 ?)<br />
+<br />
+2. the flow we are doing is <br />
+    A. allocate 200 &quot;param&quot; object<br />
+    B. free the TreeNode object <br />
+    C. use the &quot;name&quot; attribute of &quot;param&quot; to allocate precised sized block like the one we freed.<br />
+the question is, why it would take 128 times of the same allocation to succeed poisoning the free object memory.<br />
+<br />
+3. does it matter (the loop amount) on what SP# is this as well ? due to changes in the memory manager in XP SP1,2,3 ?<br />
+<br />
+i have seen many articles about this and many examples but non of them explain it correctly and also many are doing it<br />
+differently. for example in fuzzySecurity web site (<a href="../external.html?link=http://www.fuzzysecurity.com/tutorials/expDev/11.html" target="_blank">FuzzySecurity | ExploitDev: Part 9</a>) he explain allot but nothing about this issues of how to inject with reliability just putted this loop regardless to the size of the object that was freed:<br />
+<br />
+for (var i=0;i&lt;1150;i++)<br />
+{<br />
+  objArray[i] = document.createElement('div');<br />
+  objArray[i].className = data += unescape(&quot;%u0c0c%u0c0c&quot;);<br />
+}<br />
+<br />
+i think this is wrong because this is just trusting the luck of the how the heap will get in to and not really doing it <br />
+the way it should be.<br />
+<br />
+i have seen also more examples that put holes without any good explanation of why this amount of loop<br />
+and why the holes help (i know that this technique is more related to heap overflow that we need object after an object etc)<br />
+exactly like showed in &quot;Writing Exploits with the Elderwood Kit (Part 2)&quot;.<br />
+<br />
+i know i have asked allot here but i have never found answers to those questions and i have read almost all there<br />
+is in this matter and still came up with nothing clear.<br />
+<br />
+i really want to understand the reliability issue and how one should do it correctly and not blindly and i hope that you could<br />
+help in clearing this thing up.<br />
+<br />
+Regards,<br />
+LaBBa.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">06-04-2013, 11:14 PM</div>
+		<span class="username">&quot;vinnu&quot;</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">You need a debugger and notepad. Try to change the numbers and start coding your own exploit from vulnerability trigger.<br />
+Play with the numbers and objects and analyse the changes in memory blocks sprays and sprayed block sizes. This is the only way to understand the behaviour of all browsers as every browser behaves differently and therefore we have to develop different sprayers for different versions.<br />
+<br />
+<br />
+...&quot;vinnu&quot;</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:50 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=4845&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:27:14 GMT -->
+</html>

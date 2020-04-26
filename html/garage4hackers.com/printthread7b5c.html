@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=824&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 17:54:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<base  /><!--[if IE]></base><![endif]-->
+	<meta name="generator" content="vBulletin 4.2.1" />
+
+	
+	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	
+
+
+
+	<title> Understanding the Stack --The assembly Language Perspective</title>
+	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+<body>
+
+<div class="above_body">
+<div id="header" class="floatcontainer">
+<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+</div>
+</div>
+<div class="body_wrapper">
+<div id="pagetitle">
+	<h1><a href="showthreade975.html?t=824">Understanding the Stack --The assembly Language Perspective</a></h1>
+	<p class="description">Printable View</p>
+</div>
+
+
+
+<ul id="postlist">
+	<li class="postbit blockbody" id="post_1">
+	<div class="header">
+		<div class="datetime">03-18-2011, 10:31 PM</div>
+		<span class="username">sebas_phoenix</span>
+	</div>
+	
+	
+		<div class="title">Understanding the Stack --The assembly Language Perspective</div>
+	
+	<div class="content">
+		<blockquote class="restore">Understanding the Stack --The assembly Language Perspective<br />
+<br />
+<br />
+                                            By Sebas Sujeen aka &quot;0x90&quot; and Sridhar aka &quot;phr3ak&quot; <br />
+                                            <br />
+For developing and understanding the exploit development process, it is imperative to understand the working of the stack from the assembly language perspective too. This article will make you understand how stack works from this perspective.  To get the most from this article, we would advise you to refer the Assembly Language Primer for Hackers by Vivek Ramachandran(<a href="../external.html?link=http://www.securitytube.net/" target="_blank">http://www.securitytube.net</a>) before reading this<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">An example C Program <br />
+<br />
+#include&lt;stdio.h&gt;<br />
+main()<br />
+{<br />
+int i;<br />
+for(i=0;i&lt;10;i++)<br />
+printf(&quot;Hello&quot;);<br />
+}</code><hr />
+</div>compile and create an assembly file using the '-S' switch in gcc<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">$gcc -mpreferred-stack-boundary=2 -fno-stack-protector -z execstack -o test.s test.c -S</code><hr />
+</div>Note we are giving the preferred stack boundary as 2^2 (2 refers to the power of 2 ie 4 bytes) to simplify the debug process. And if you are using latest versions of Linux, you can turn off stack-protector and also disable the NX(non executable stack) by using '-fno-stack-protector' and '-z execstack' respectively.<br />
+<br />
+Below is the listing of the test.s file..<br />
+Note that the instructions are numbered only for convenience for referring it further..<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">.LC0:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; .string&nbsp; &nbsp; &nbsp; &nbsp; &quot;Hello&quot; --&gt;defines a string &quot;Hello&quot; with label .LC0 similar to variable in C<br />
+.text&nbsp; &nbsp; &nbsp;  --&gt; This is the text section, actual code goes here. This section is read only and any attempt to write into this section will result in Segmentation fault&nbsp; <br />
+.globl main --&gt; start of the main function, in the Assembly Language primer this is given as _start: , since we are assembling and linking in the same&nbsp; step using gcc and since gcc recognizes only main, we give it as main <br />
+&nbsp; &nbsp; &nbsp; &nbsp; .type&nbsp; &nbsp; &nbsp; &nbsp; main, @function --&gt;defines that main is a function <br />
+main:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  --&gt; start of main function<br />
+&nbsp; &nbsp; &nbsp; &nbsp; pushl&nbsp; &nbsp; &nbsp; &nbsp; %ebp&nbsp; --&gt;1<br />
+&nbsp; &nbsp; &nbsp; &nbsp; movl&nbsp; &nbsp; &nbsp; &nbsp; %esp, %ebp --&gt;2<br />
+&nbsp; &nbsp; &nbsp; &nbsp; subl&nbsp; &nbsp; &nbsp; &nbsp; $8, %esp --&gt;3<br />
+&nbsp; &nbsp; &nbsp; &nbsp; movl&nbsp; &nbsp; &nbsp; &nbsp; $0, -4(%ebp) --&gt;4<br />
+&nbsp; &nbsp; &nbsp; &nbsp; jmp&nbsp; &nbsp; &nbsp; &nbsp; .L2&nbsp; --&gt;5<br />
+.L3:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; movl&nbsp; &nbsp; &nbsp; &nbsp; $.LC0, %eax --&gt;6<br />
+&nbsp; &nbsp; &nbsp; &nbsp; movl&nbsp; &nbsp; &nbsp; &nbsp; %eax, (%esp) --&gt;7<br />
+&nbsp; &nbsp; &nbsp; &nbsp; call&nbsp; &nbsp; &nbsp; &nbsp; printf&nbsp; --&gt;8<br />
+&nbsp; &nbsp; &nbsp; &nbsp; addl&nbsp; &nbsp; &nbsp; &nbsp; $1, -4(%ebp) --&gt;9<br />
+.L2:<br />
+&nbsp; &nbsp; &nbsp; &nbsp; cmpl&nbsp; &nbsp; &nbsp; &nbsp; $9, -4(%ebp) --&gt;10<br />
+&nbsp; &nbsp; &nbsp; &nbsp; jle&nbsp; &nbsp; &nbsp; &nbsp; .L3 --&gt;11<br />
+&nbsp; &nbsp; &nbsp; &nbsp; leave--&gt;12<br />
+&nbsp; &nbsp; &nbsp; &nbsp; ret --&gt;13</code><hr />
+</div>Ok, here we go!!! The code is explained here!!<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code"> <br />
+pushl %ebp&nbsp; &nbsp;  <br />
+movl %esp,%ebp<br />
+subl $8,%esp</code><hr />
+</div> These 3 statements constitute the function prologue.Refer the assembly language primer for more details about function prologue. But one interesting thing to note is that, if main is the first function to be executed , where is it returning to?? Keep that thought in mind, we will get to it when we debug the program. Also we subtract esp by 8 bytes to allocate space for the local variable 'i' and the address of &quot;Hello&quot; which printf() needs.<br />
+<br />
+Lets debug it by firing up gdb..<br />
+<br />
+before that , lets create the executable file <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">$gcc -o test test.s -ggdb</code><hr />
+</div>The '-ggdb' switch makes debugging symbols to be loaded into the executable for analysis by the debugger..<br />
+Then lets fire up gdb..<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">$gdb ./test -q</code><hr />
+</div>'-q' is for quiet mode...<br />
+list command is used to list the disassembled code <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code"> (gdb) list<br />
+1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .file&nbsp; &nbsp; &nbsp; &nbsp; &quot;first.c&quot;<br />
+2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .section&nbsp; &nbsp; &nbsp; &nbsp; .rodata<br />
+3&nbsp; &nbsp; &nbsp; &nbsp; .LC0:<br />
+4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .string&nbsp; &nbsp; &nbsp; &nbsp; &quot;Hello&quot;<br />
+5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .text<br />
+6&nbsp; &nbsp; &nbsp; &nbsp; .globl main<br />
+7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .type&nbsp; &nbsp; &nbsp; &nbsp; main, @function<br />
+8&nbsp; &nbsp; &nbsp; &nbsp; main:<br />
+9&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pushl&nbsp; &nbsp; &nbsp; &nbsp; %ebp<br />
+10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; movl&nbsp; &nbsp; &nbsp; &nbsp; %esp, %ebp<br />
+(gdb) <br />
+11&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; subl&nbsp; &nbsp; &nbsp; &nbsp; $8, %esp<br />
+12&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; movl&nbsp; &nbsp; &nbsp; &nbsp; $0, -4(%ebp)<br />
+13&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; jmp&nbsp; &nbsp; &nbsp; &nbsp; .L2<br />
+14&nbsp; &nbsp; &nbsp; &nbsp; .L3:<br />
+15&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; movl&nbsp; &nbsp; &nbsp; &nbsp; $.LC0, %eax<br />
+16&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; movl&nbsp; &nbsp; &nbsp; &nbsp; %eax, (%esp)<br />
+17&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; call&nbsp; &nbsp; &nbsp; &nbsp; printf<br />
+18&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; addl&nbsp; &nbsp; &nbsp; &nbsp; $1, -4(%ebp)<br />
+19&nbsp; &nbsp; &nbsp; &nbsp; .L2:<br />
+20&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cmpl&nbsp; &nbsp; &nbsp; &nbsp; $9, -4(%ebp)<br />
+(gdb) <br />
+21&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; jle&nbsp; &nbsp; &nbsp; &nbsp; .L3<br />
+22&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; leave<br />
+23&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ret<br />
+24&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .size&nbsp; &nbsp; &nbsp; &nbsp; main, .-main<br />
+25&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .ident&nbsp; &nbsp; &nbsp; &nbsp; &quot;GCC: (Ubuntu 4.4.3-4ubuntu5) 4.4.3&quot;<br />
+26&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .section&nbsp; &nbsp; &nbsp; &nbsp; .note.GNU-stack,&quot;&quot;,@progbits</code><hr />
+</div>set the break point at the appropriate location, lets set the break point at the first instruction after main function (ie) in this case line no 9<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">(gdb)break 9<br />
+&nbsp;This will set the break point at line no 9 and now if you run the program , the program will pause the execution at line no 9.<br />
+&nbsp;(gdb)run<br />
+&nbsp;this will run the program and the execution will halt at the break point<br />
+&nbsp;Analyse the esp register which points to the top of the stack<br />
+&nbsp;(gdb)i r esp <br />
+&nbsp;this will display the address &quot;pointed to&quot; by esp register<br />
+&nbsp;in our case ,&quot;0xbffff44c&quot;<br />
+&nbsp;(gdb)s<br />
+&nbsp;This will step the execution to the next instruction, so our instruction pushl %ebp is executed, now wat would have happened?? After a push instruction the stack pointer esp decrements by 4 bytes since the stack grows down in memory from higher to lower address ( 4 bytes since we use 32 bit processor)<br />
+&nbsp;(gdb)i r ebp<br />
+&nbsp;this will display the address &quot;pointed to&quot; by ebp , in our case &quot; 0xbffff4c8&quot;<br />
+&nbsp;(gdb) i r esp<br />
+&nbsp;this will display &quot;0xbffff448&quot; , note the decrement of 4 bytes from the previous value<br />
+&nbsp;(gdb)s<br />
+&nbsp;Now the current instruction is (2).. The implication of this instruction is to make the ebp to point to the new stack frame. <br />
+&nbsp;(gdb)i r esp<br />
+&nbsp;(gdb)i r ebp<br />
+&nbsp;both will display &quot;0xbffff448&quot;<br />
+&nbsp;(gdb)s<br />
+&nbsp;Now the instruction is (3), this will decrement the address &quot;pointed to&quot; by esp by 8 bytes to allocate space for local variable &quot;i&quot; and address to &quot;hello&quot; required by printf()<br />
+&nbsp;(gdb) i r esp<br />
+&nbsp;This will display &quot;0xbffff440&quot;<br />
+&nbsp;(gdb)s<br />
+&nbsp;The next instruction is (4)..Before that a few words, the ebp will be used to refer to the variables using an offset, now you can argue that why not use esp for the same purpose, but since esp's value changes with each push and pop it will require additional overhead to calculate the offset each time so we use ebp whose value doesnt change within a stack frame. Of the 8 bytes allocated , the first 4 bytes will be for &quot;i&quot; and the next 4 bytes to hold the address of &quot;Hello&quot;. movl $0,-4(%ebp) , this is the indirect addressing mode. the () acts as a dereferencing operator , similar to '*' used with pointers in C. so what this instruction will do is that, it will 0 to address pointed to by (ebp)-4. Using the debugger will make it clear..<br />
+&nbsp;(gdb)i r ebp<br />
+&nbsp;gives &quot;0xbffff448&quot;<br />
+&nbsp;(gdb)print $ebp-4<br />
+&nbsp;This means 'get the address &quot;pointed to&quot; by ebp and subtract 4 from the address'<br />
+&nbsp;ie 0xbffff444<br />
+&nbsp;Now there is a way to examine the memory using the 'x' in gdb.. Refer the assembly language primer to more knw about the examine command<br />
+&nbsp;(gdb)x/1xw $ebp-4<br />
+&nbsp;This will examine 1 word (in hex)&nbsp; &nbsp; &nbsp; &nbsp; at address 0xbffff444<br />
+&nbsp;this will return 0x00000000<br />
+&nbsp;(gdb)s<br />
+&nbsp;The next insruction is &quot;cmpl $9, -4(%ebp)&quot;<br />
+&nbsp;ie it will compare 0 with 9 , basically as 0-9 but wont reflect the result back to -4(%ebp). This will obviously return a negative value<br />
+&nbsp;You can check that by referring the EFLAGS register and you can see that the Sign Flag is set (this will be set only if the result of an arithmetic expression returns a negative value)<br />
+&nbsp;(gdb)i r eflags<br />
+&nbsp;[ CF AF SF IF ID ] --&gt; Note sign flag is set<br />
+&nbsp;(gdb)s<br />
+&nbsp;the next instruction is jle .L3.. this is the conditional jump statement. This will jump to .L3 if the result of the previous instruction is negative or zero(ie if the SF or ZF is set)<br />
+&nbsp;(gdb)s<br />
+&nbsp;the next instruction is &quot;movl $.LC0, %eax&quot;<br />
+&nbsp;This will move the address of &quot;Hello&quot; into eax register<br />
+&nbsp;(gdb)i r eax<br />
+&nbsp;this returns &quot;0x80484d0&quot;<br />
+&nbsp;Now examine the memory at this address<br />
+&nbsp;(gdb)x/1s 0x80484d0<br />
+&nbsp;This will return '0x80484d0:&nbsp; &nbsp; &nbsp; &nbsp;  &quot;Hello&quot;'<br />
+&nbsp;(gdb)s<br />
+&nbsp;the next instruction is call printf(obvious what it does!!)<br />
+&nbsp;There are some things to remember when you call a&nbsp; function within an assembly program.<br />
+&nbsp;Assume the function call in C is like this : fn(1,2)<br />
+&nbsp;This is interpreted like this in assembly language<br />
+&nbsp;pushl $2<br />
+&nbsp;pushl $1<br />
+&nbsp;call fn<br />
+&nbsp;Note the arguments are pushed in reverse order coz stack is a LIFO structure so the argument pushed last comes out first!!<br />
+&nbsp;(gdb)s<br />
+&nbsp;the next instruction is addl $1,-4(%ebp)<br />
+&nbsp;this will increment the value of i by 1<br />
+&nbsp;And the process gets repeated until i &lt;=9, thereby printing &quot;Hello&quot; ten times on the screen<br />
+&nbsp;Set a break point at line 22 (leave) and continue<br />
+&nbsp;(gdb)break 22<br />
+&nbsp;(gdb)cont<br />
+&nbsp;This will continue the execution till 'leave' instruction is encountered and pauses there<br />
+&nbsp;The leave instruction will clear up the space allocated for local vars and args to function..<br />
+&nbsp;This is equivalent to &quot;movl %ebp,%esp&quot;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;popl %ebp&quot; this will pop the saved frame pointer so that the function that &quot;called&quot; this function can resume<br />
+&nbsp;The last instruction &quot;ret&quot;&nbsp; will put the saved EIP value into the eip register so that the execution can resume from the function which &quot;called&quot; the main function<br />
+<br />
+&nbsp;Atlast after the ret instruction is executed, if u step with gdb<br />
+&nbsp;(gdb)s<br />
+&nbsp;you can see this , 0x00144bd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6<br />
+This means that main is called from __libc_start_main() and returns to that..</code><hr />
+</div>Hope it helps!!! Upcoming papers will be about exploit development!!(mainly Linux)..<br />
+ <br />
+Greetz : fb1h2s, Team SG and all g4h members!!!<br />
+<br />
+feedback is welcome , whatever it may be!!!<br />
+<br />
+References: Smashing the stack for fun and profit (Aleph1), Hacking the art of exploitation 2nd Edition, <a href="../external.html?link=http://www.securitytube.net/" target="_blank">http://www.securitytube.net</a><br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<hr /><code class="bbcode_code">Food for thought:<br />
+Try disassembling this and play with it!!!<br />
+#include&lt;stdio.h&gt;<br />
+int mul(int x,int y)<br />
+{<br />
+return x*y;<br />
+}<br />
+main()<br />
+{<br />
+int a,b,c;<br />
+scanf(&quot;%d %d&quot;,&amp;a,&amp;b);<br />
+c=mul(a,b);<br />
+}</code><hr />
+</div>his is a bit complicated considering the previous program!!But if you are able to understand the disassembled code...Then you have a greater clarity in understanding the stack...Gud Luck....Until next time..\m/ Peace Out</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_2">
+	<div class="header">
+		<div class="datetime">03-18-2011, 11:10 PM</div>
+		<span class="username">fb1h2s</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">Hey thanks for the share and good job, one suggestion would be if u could add a digram of the instructions in the stack that would make it better. Give it a better understanding for the readers.</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_3">
+	<div class="header">
+		<div class="datetime">03-19-2011, 01:39 AM</div>
+		<span class="username">sebas_phoenix</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>fb1h2s</strong>
+				<a href="showthread710a.html?p=3227#post3227" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">Hey thanks for the share and good job, one suggestion would be if u could add a digram of the instructions in the stack that would make it better. Give it a better understanding for the readers.</div>
+			
+		<hr />
+	</div>
+</div>Thankx man!! Yeah i will provide the diagrams with my next article...</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_4">
+	<div class="header">
+		<div class="datetime">07-30-2012, 04:23 AM</div>
+		<span class="username">carlos2000</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">thank u a lot i'm agree with friends diagrams can make it full:D</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_5">
+	<div class="header">
+		<div class="datetime">08-05-2012, 09:17 PM</div>
+		<span class="username">marc_kriss</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore">hello sebas..nice tut. I have a problem. When i try to access the memory address of ESI or EDI in a simple assembly program via GDB. GDB gives error:- &quot;value cant be converted to integer&quot;. can u help out in this?</blockquote>
+	</div>
+</li><li class="postbit blockbody" id="post_6">
+	<div class="header">
+		<div class="datetime">08-06-2012, 04:29 PM</div>
+		<span class="username">sebas_phoenix</span>
+	</div>
+	
+	
+	<div class="content">
+		<blockquote class="restore"><div class="bbcode_container">
+	<div class="bbcode_description">Quote:</div>
+	<div class="bbcode_quote printable">
+		<hr />
+		
+			<div>
+				Originally Posted by <strong>marc_kriss</strong>
+				<a href="showthread67f7-2.html?p=8337#post8337" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+			</div>
+			<div class="message">hello sebas..nice tut. I have a problem. When i try to access the memory address of ESI or EDI in a simple assembly program via GDB. GDB gives error:- &quot;value cant be converted to integer&quot;. can u help out in this?</div>
+			
+		<hr />
+	</div>
+</div>Can you please post your code?</blockquote>
+	</div>
+</li>
+</ul>
+
+
+</div>
+<div class="below_body">
+<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:46 PM</span>.</div>
+
+<div id="footer_copyright" class="footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	<!-- Do not remove this copyright notice -->	
+</div>
+<div id="footer_morecopyright" class="footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	Copyright 2010 - 2017, Garage4Hackers
+</div>
+ 
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker('UA-17311051-3');
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+<!-- Mirrored from garage4hackers.com/printthread.php?t=824&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 17:54:25 GMT -->
+</html>
