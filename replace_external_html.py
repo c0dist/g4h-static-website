@@ -35,7 +35,7 @@ def main(html_files_list, combined_list_file):
                 data = fh.read()
                 replacement_count = 0
                 for external_url in all_external_urls:
-                    url_part = external_url.replace('"../external.html?link=', '"')
+                    url_part = external_url.replace('../external.html?link=', '')
 
                     replacement_url = url_part
 
@@ -44,7 +44,7 @@ def main(html_files_list, combined_list_file):
                         continue
 
                     elif "glowhost.com/" in url_part:
-                        replacement_url = '"#"'
+                        replacement_url = '#'
 
                     data = data.replace(external_url, replacement_url)
                     replacement_count += 1
@@ -63,4 +63,4 @@ def main(html_files_list, combined_list_file):
 
 
 if __name__ == "__main__":
-    main("external_html_file_list.txt", "external_html.txt")
+    main("external_html_file_list2.txt", "external_html2.txt")
