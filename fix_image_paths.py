@@ -23,7 +23,7 @@ def fix_img_tags(html_content):
     for img_tag in all_img_tags:
         # Finding exisiting image src.
         img_src = img_tag.get("src")
-        print(f"\n[+] Processing {img_src}")
+        # print(f"\n[+] Processing {img_src}")
 
         if img_src:
             # A lot of image URLs have GET parameters, "attachment00bb.jpg?attachmentid=822&cid=18&thumb=1&stc=1".
@@ -38,7 +38,7 @@ def fix_img_tags(html_content):
                 if len(img_src_parts) == 2:
                     url_params = "?".join(img_src_parts[1:])
 
-                print(f"[+] Image path is {image_path}.")
+                # print(f"[+] Image path is {image_path}.")
                 # We separate file path and file extension.
                 path, ext = image_path.split(".", 1)
 
@@ -73,17 +73,20 @@ def fix_img_tags(html_content):
 
                         # Update the fixed source in <img> tag.
                         img_tag["src"] = fixed_img_src
-                        print(f'[+] Fixed image: {img_tag["src"]}')
+                        # print(f'[+] Fixed image: {img_tag["src"]}')
                 else:
-                    print("[-] No possible images found for this img in local system.")
+                    # print("[-] No possible images found for this img in local system.")
+                    pass
             else:
-                print(f"[+] {image_path}: path is possibly already correct.")
+                # print(f"[+] {image_path}: path is possibly already correct.")
+                pass
 
     # Returning the fixed HTML source in str form.
     return str(soup)
 
 
 def get_html_files():
+    # Generator for file names.
     for root, dirs, files in os.walk(BASE_DIR):
         for file in files:
             if file.endswith(".html"):
