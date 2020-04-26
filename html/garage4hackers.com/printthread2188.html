@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=6690&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:58 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6690&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:58 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Just another MS15-034-checker script on the Internet</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,80 +41,80 @@
 		<div class="title">Just another MS15-034-checker script on the Internet</div>
 	
 	<div class="content">
-		<blockquote class="restore">Hi.<br />
-<br />
-Sharing one of my scripts. Albeit this is a little late, but nevertheless here is it. This is a small Python script that checks (tries to check) if a target is vulnerable to MS-15-034 (CVE-2015-1635) i.e. &quot;remote code execution vulnerability in the HTTP protocol stack (HTTP.sys)&quot;. Here's a little description about this vulnerability from here (<a href="../external.html?link=https://ma.ttias.be/remote-code-execution-via-http-request-in-iis-on-windows/" target="_blank">https://ma.ttias.be/remote-code-exec...is-on-windows/</a>) - <br />
-<br />
+		<blockquote class="restore">Hi.<br/>
+<br/>
+Sharing one of my scripts. Albeit this is a little late, but nevertheless here is it. This is a small Python script that checks (tries to check) if a target is vulnerable to MS-15-034 (CVE-2015-1635) i.e. "remote code execution vulnerability in the HTTP protocol stack (HTTP.sys)". Here's a little description about this vulnerability from here (<a href="../external.html?link=https://ma.ttias.be/remote-code-execution-via-http-request-in-iis-on-windows/" target="_blank">https://ma.ttias.be/remote-code-exec...is-on-windows/</a>) - <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
-			A remote code execution vulnerability exists in the HTTP protocol stack (HTTP.sys) that is caused when HTTP.sys improperly parses specially crafted HTTP requests. An attacker who successfully exploited this vulnerability could execute arbitrary code in the context of the System account.<br />
-<br />
-To exploit this vulnerability, an attacker would have to send a specially crafted HTTP request to the affected system. The update addresses the vulnerability by modifying how the Windows HTTP stack handles requests.<br />
+			A remote code execution vulnerability exists in the HTTP protocol stack (HTTP.sys) that is caused when HTTP.sys improperly parses specially crafted HTTP requests. An attacker who successfully exploited this vulnerability could execute arbitrary code in the context of the System account.<br/>
+<br/>
+To exploit this vulnerability, an attacker would have to send a specially crafted HTTP request to the affected system. The update addresses the vulnerability by modifying how the Windows HTTP stack handles requests.<br/>
 - MS15-034
 			
-		<hr />
+		<hr/>
 	</div>
-</div>Please, understand that just because the script says so, doesn't mean that the target is vulnerable or vice versa. This is based on the things I have read in blogs and articles. Also, many similar scripts also exist, I just wanted to write one too. Enough talk, here's the script:<br />
-<br />
+</div>Please, understand that just because the script says so, doesn't mean that the target is vulnerable or vice versa. This is based on the things I have read in blogs and articles. Also, many similar scripts also exist, I just wanted to write one too. Enough talk, here's the script:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">#!/usr/bin/env python<br />
-<br />
-&quot;&quot;&quot; Just another MS15-034-checker script on the Internet. This can also be used <br />
-for masscanning by importing and calling &quot;scan()&quot; with target as an argument. Results might<br />
-be &quot;inclonclusive&quot;. Author takes no responsibility.<br />
-Details here - http://blog.beyondtrust.com/the-delicate-art-of-remote-checks-a-glance-into-ms15-034<br />
-and https://ma.ttias.be/remote-code-execution-via-http-request-in-iis-on-windows/<br />
-<br />
-Author - c0dist<br />
-&quot;&quot;&quot;<br />
-<br />
-import sys<br />
-import requests<br />
-<br />
-<br />
-def scan(target):<br />
-&nbsp; &nbsp; range_header = {&quot;Range&quot;:&quot;bytes=0-18446744073709551615&quot;}<br />
-&nbsp; &nbsp; try:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; head = requests.head(target)<br />
-&nbsp; &nbsp; &nbsp; &nbsp; if &quot;IIS&quot; in head.headers[&quot;server&quot;]:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print &quot;[+] Target is an IIS Server.&quot;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; response = requests.get(target, headers=range_header)<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if response.status_code == 416:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return &quot;Probable&quot;<br />
-&nbsp; &nbsp; except Exception as e:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; print &quot;[-] Error occured. %s&quot; % str(e)<br />
-&nbsp; &nbsp; <br />
-&nbsp; &nbsp; return False<br />
-<br />
-if __name__ == '__main__':<br />
-&nbsp; &nbsp; if len(sys.argv) != 2:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; print &quot;Usage: python %s &lt;target&gt;&quot; % sys.argv[0]<br />
-&nbsp; &nbsp; &nbsp; &nbsp; sys.exit(1)<br />
-&nbsp; &nbsp; &nbsp; &nbsp; <br />
-&nbsp; &nbsp; target = sys.argv[1]<br />
-&nbsp; &nbsp; print &quot;[+] Is target vulnerable? - %s&quot; % scan(target)</code><hr />
-</div>Is is fairly easy to use and can be used as a standalone script or by importing as a module. For using as a standalone script use this syntax:<br />
-<br />
+	<hr/><code class="bbcode_code">#!/usr/bin/env python<br/>
+<br/>
+""" Just another MS15-034-checker script on the Internet. This can also be used <br/>
+for masscanning by importing and calling "scan()" with target as an argument. Results might<br/>
+be "inclonclusive". Author takes no responsibility.<br/>
+Details here - http://blog.beyondtrust.com/the-delicate-art-of-remote-checks-a-glance-into-ms15-034<br/>
+and https://ma.ttias.be/remote-code-execution-via-http-request-in-iis-on-windows/<br/>
+<br/>
+Author - c0dist<br/>
+"""<br/>
+<br/>
+import sys<br/>
+import requests<br/>
+<br/>
+<br/>
+def scan(target):<br/>
+    range_header = {"Range":"bytes=0-18446744073709551615"}<br/>
+    try:<br/>
+        head = requests.head(target)<br/>
+        if "IIS" in head.headers["server"]:<br/>
+            print "[+] Target is an IIS Server."<br/>
+            response = requests.get(target, headers=range_header)<br/>
+            if response.status_code == 416:<br/>
+                return "Probable"<br/>
+    except Exception as e:<br/>
+        print "[-] Error occured. %s" % str(e)<br/>
+    <br/>
+    return False<br/>
+<br/>
+if __name__ == '__main__':<br/>
+    if len(sys.argv) != 2:<br/>
+        print "Usage: python %s &lt;target&gt;" % sys.argv[0]<br/>
+        sys.exit(1)<br/>
+        <br/>
+    target = sys.argv[1]<br/>
+    print "[+] Is target vulnerable? - %s" % scan(target)</code><hr/>
+</div>Is is fairly easy to use and can be used as a standalone script or by importing as a module. For using as a standalone script use this syntax:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">$ python MS15-034-checker.py &lt;target&gt;</code><hr />
-</div>While using as a module, it can used as <b>(assuming you save it as 'vulncheck.py')</b>:<br />
+	<hr/><code class="bbcode_code">$ python MS15-034-checker.py &lt;target&gt;</code><hr/>
+</div>While using as a module, it can used as <b>(assuming you save it as 'vulncheck.py')</b>:<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">import vulncheck<br />
-<br />
-target = &quot;example.com&quot;<br />
-print &quot;[+] Is target vulnerable? - %s&quot; % vulncheck.scan(target)</code><hr />
-</div><br />
-That's all folks. the script can be found on Github here - <a href="../external.html?link=https://github.com/RahulBinjve/scripts/blob/master/MS15-034-checker.py" target="_blank">https://github.com/RahulBinjve/scrip...034-checker.py</a><br />
-<br />
-Hope this helps.<br />
-<br />
-Cheers,<br />
+	<hr/><code class="bbcode_code">import vulncheck<br/>
+<br/>
+target = "example.com"<br/>
+print "[+] Is target vulnerable? - %s" % vulncheck.scan(target)</code><hr/>
+</div><br/>
+That's all folks. the script can be found on Github here - <a href="../external.html?link=https://github.com/RahulBinjve/scripts/blob/master/MS15-034-checker.py" target="_blank">https://github.com/RahulBinjve/scrip...034-checker.py</a><br/>
+<br/>
+Hope this helps.<br/>
+<br/>
+Cheers,<br/>
 c0dist</blockquote>
 	</div>
 </li>
@@ -126,14 +123,14 @@ c0dist</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:48 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:48 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -151,7 +148,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6690&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:58 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=6690&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:58 GMT --></html>

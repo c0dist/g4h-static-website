@@ -1,33 +1,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=5463&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:09:23 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=5463&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:09:23 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
-	<title> Your own Syslogd server...&quot;vinnu&quot;</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<title> Your own Syslogd server..."vinnu"</title>
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
 <div id="pagetitle">
-	<h1><a href="showthread6523.html?t=5463">Your own Syslogd server...&quot;vinnu&quot;</a></h1>
+	<h1><a href="showthread6523.html?t=5463">Your own Syslogd server..."vinnu"</a></h1>
 	<p class="description">Printable View</p>
 </div>
 
@@ -37,55 +34,55 @@
 	<li class="postbit blockbody" id="post_1">
 	<div class="header">
 		<div class="datetime">12-17-2013, 12:33 PM</div>
-		<span class="username">&quot;vinnu&quot;</span>
+		<span class="username">"vinnu"</span>
 	</div>
 	
 	
-		<div class="title">Your own Syslogd server...&quot;vinnu&quot;</div>
+		<div class="title">Your own Syslogd server..."vinnu"</div>
 	
 	<div class="content">
-		<blockquote class="restore">Namaste<br />
-<br />
-Administrators and researchers every now and then counter with a situation when they need a syslogd. Instead of downloading a 3rd party tool on internal/secure premises, it is always preferred to use indigenous softwares.<br />
-So here is a simple syslogd server that can handle multiple connections at a time, its simply a UDP socket server you xcan customize it according to your own needs.<br />
-<br />
+		<blockquote class="restore">Namaste<br/>
+<br/>
+Administrators and researchers every now and then counter with a situation when they need a syslogd. Instead of downloading a 3rd party tool on internal/secure premises, it is always preferred to use indigenous softwares.<br/>
+So here is a simple syslogd server that can handle multiple connections at a time, its simply a UDP socket server you xcan customize it according to your own needs.<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code"><br />
-###<br />
-&nbsp; * Developer : &quot;vinnu&quot;<br />
-&nbsp; * Team : &quot;Legion Of Xtremers&quot; &amp; G4H<br />
-&nbsp; * Tool : Syslogd<br />
-&nbsp; * Description : Logging server default works on UDP 514 port. It makes a single new logfile for every hour.<br />
-&nbsp; ###<br />
-import socket, os, time, datetime<br />
-<br />
-LOGPORT = 514&nbsp; &nbsp; &nbsp; &nbsp; # This is default port, you can set according to your own needs.<br />
-PACK_SIZE = 4096<br />
-EXT = &quot;.log&quot;<br />
-<br />
-utility = &quot;LogServer&quot;<br />
-os.system(&quot;title &quot;+utility)<br />
-<br />
-logdir = &quot;c:\\rlogs\\&quot;<br />
-<br />
-def serv():<br />
-&nbsp; &nbsp; print &quot;[+] &quot;+utility+&quot; : Started&quot;<br />
-&nbsp; &nbsp; sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)<br />
-&nbsp; &nbsp; server = (&quot;&quot;,LOGPORT)<br />
-&nbsp; &nbsp; sock.bind(server)<br />
-&nbsp; &nbsp; while 1==1 :<br />
-#&nbsp; &nbsp; &nbsp; &nbsp; print &quot;\twaiting to recieve : &quot;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; data, address = sock.recvfrom(PACK_SIZE)<br />
-#&nbsp; &nbsp; &nbsp; &nbsp; print &quot;Received %s bytes from %s&quot; % (len(data), address)<br />
-&nbsp; &nbsp; &nbsp; &nbsp; print &quot;[+] URL : &quot;+data<br />
-&nbsp; &nbsp; &nbsp; &nbsp; log = str(address[0])+'_'+str(datetime.datetime.now()).split(':')[0].replace('-','').replace(' ','')+EXT<br />
-&nbsp; &nbsp; &nbsp; &nbsp; <br />
-&nbsp; &nbsp; &nbsp; &nbsp; fp = open(logdir+log,&quot;a&quot;)<br />
-&nbsp; &nbsp; &nbsp; &nbsp; fp.write(data+'\n')<br />
-&nbsp; &nbsp; &nbsp; &nbsp; fp.close()<br />
-<br />
-serv()</code><hr />
+	<hr/><code class="bbcode_code"><br/>
+###<br/>
+  * Developer : "vinnu"<br/>
+  * Team : "Legion Of Xtremers" &amp; G4H<br/>
+  * Tool : Syslogd<br/>
+  * Description : Logging server default works on UDP 514 port. It makes a single new logfile for every hour.<br/>
+  ###<br/>
+import socket, os, time, datetime<br/>
+<br/>
+LOGPORT = 514        # This is default port, you can set according to your own needs.<br/>
+PACK_SIZE = 4096<br/>
+EXT = ".log"<br/>
+<br/>
+utility = "LogServer"<br/>
+os.system("title "+utility)<br/>
+<br/>
+logdir = "c:\\rlogs\\"<br/>
+<br/>
+def serv():<br/>
+    print "[+] "+utility+" : Started"<br/>
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)<br/>
+    server = ("",LOGPORT)<br/>
+    sock.bind(server)<br/>
+    while 1==1 :<br/>
+#        print "\twaiting to recieve : "<br/>
+        data, address = sock.recvfrom(PACK_SIZE)<br/>
+#        print "Received %s bytes from %s" % (len(data), address)<br/>
+        print "[+] URL : "+data<br/>
+        log = str(address[0])+'_'+str(datetime.datetime.now()).split(':')[0].replace('-','').replace(' ','')+EXT<br/>
+        <br/>
+        fp = open(logdir+log,"a")<br/>
+        fp.write(data+'\n')<br/>
+        fp.close()<br/>
+<br/>
+serv()</code><hr/>
 </div>...Thanx</blockquote>
 	</div>
 </li>
@@ -94,14 +91,14 @@ serv()</code><hr />
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:49 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:49 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -119,7 +116,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=5463&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:09:23 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=5463&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:09:23 GMT --></html>

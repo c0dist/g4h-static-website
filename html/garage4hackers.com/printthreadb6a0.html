@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=968&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:53:08 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=968&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:53:08 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Useful Linux commands when u have a shell</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,101 +41,101 @@
 		<div class="title">Useful Linux commands when u have a shell</div>
 	
 	<div class="content">
-		<blockquote class="restore"><b><u><i>(Originally posted by eberly in orkut community)</i> </u></b><br />
-<br />
-cat ./../mainfile.php - Config file.<br />
-<br />
-ls -la - Lists directory's.<br />
-<br />
-ifconfig {eth0 etc} - Ipconfig equiv.<br />
-<br />
-ps aux - Show running proccess's.<br />
-<br />
-gcc in_file -o out_file - Compile c file.<br />
-<br />
-cat /etc/passwd - List's accounts.<br />
-<br />
-sudo - Superuser Do run a command as root provided you have perms<br />
-in /etc/sudoers.<br />
-<br />
-id - Tells you what user your logged in as.<br />
-<br />
-which wget curl w3m lynx - Check's to see what downloaders are<br />
-present.<br />
-<br />
-uname -r - Shows all release info (or) cat /etc/release.<br />
-<br />
-uname -a - Shows all kernal info (or) cat /etc/issue<br />
-<br />
-last -30 - Last logged 30 ip's can change to desired number.<br />
-<br />
-useradd - Create new user account.<br />
-<br />
-usermod - Modify user account.<br />
-<br />
-w - See who is currently logged on.<br />
-<br />
-locate password.txt - Locates password.txt in current dur can use *.<br />
-<br />
-rm -rf / - Please be carefull with this command, i cannot stress this<br />
-enough.<br />
-<br />
-arp -a - Lists other machines are on the same subnet.<br />
-<br />
-lsattr -va - ls file attributes on linux second extended file system<br />
-<br />
-find / -type f -perm -04000 -ls - Finds suid files.<br />
-<br />
-find . -type f -perm -04000 -ls - Finds suid files in current dir.<br />
-<br />
-find / -type f -perm -02000 -ls - Finds all sgid files.<br />
-<br />
-find / -perm -2 -ls - Finds all writable files and folders.<br />
-<br />
-find . -perm -2 -ls - Finds all writable files and folders in current dir.<br />
-<br />
-find / -type f -name .bash_history - Finds bash history.<br />
-<br />
-netstat -an | grep -i listen - shows open ports.<br />
-<br />
-cut -d: -f1,2,3 /etc/passwd | grep :: - From memory show user<br />
-with no pass.<br />
-<br />
-find /etc/ -type f -perm -o+w 2&gt; /dev/null - Write in /etc/passwd?.<br />
-<br />
-cat /proc/version /proc/cpuinfo - Cpu info.<br />
-<br />
-locate gcc- Finds gcc if installed.<br />
-<br />
-set - Display system variables.<br />
-<br />
-echo $path- Echo current path.<br />
-<br />
-lsmod- ***** kernal modules.<br />
-<br />
-mount/df- Check mounted file system.<br />
-<br />
-rpm -qa- Check patch level for RedHat 7.0.<br />
-<br />
-dmesg- Check hardware ino.<br />
-<br />
-cat /etc/syslog.conf - Log file. <br />
-<br />
-uptime - Uptime check.<br />
-<br />
-cat /proc/meminfo - Memory check.<br />
-<br />
-find / -type f -perm -4 -print 2&gt; /dev/null- Find readble files.<br />
-<br />
-find / -type f -perm -2 -print 2&gt; /dev/null - Find writable files.<br />
-<br />
-chmod ### $folder - Chmod folder.<br />
-<br />
-ls -l -b - Verbosly list directory's<br />
-<br />
-<br />
-<br />
-<br />
+		<blockquote class="restore"><b><u><i>(Originally posted by eberly in orkut community)</i> </u></b><br/>
+<br/>
+cat ./../mainfile.php - Config file.<br/>
+<br/>
+ls -la - Lists directory's.<br/>
+<br/>
+ifconfig {eth0 etc} - Ipconfig equiv.<br/>
+<br/>
+ps aux - Show running proccess's.<br/>
+<br/>
+gcc in_file -o out_file - Compile c file.<br/>
+<br/>
+cat /etc/passwd - List's accounts.<br/>
+<br/>
+sudo - Superuser Do run a command as root provided you have perms<br/>
+in /etc/sudoers.<br/>
+<br/>
+id - Tells you what user your logged in as.<br/>
+<br/>
+which wget curl w3m lynx - Check's to see what downloaders are<br/>
+present.<br/>
+<br/>
+uname -r - Shows all release info (or) cat /etc/release.<br/>
+<br/>
+uname -a - Shows all kernal info (or) cat /etc/issue<br/>
+<br/>
+last -30 - Last logged 30 ip's can change to desired number.<br/>
+<br/>
+useradd - Create new user account.<br/>
+<br/>
+usermod - Modify user account.<br/>
+<br/>
+w - See who is currently logged on.<br/>
+<br/>
+locate password.txt - Locates password.txt in current dur can use *.<br/>
+<br/>
+rm -rf / - Please be carefull with this command, i cannot stress this<br/>
+enough.<br/>
+<br/>
+arp -a - Lists other machines are on the same subnet.<br/>
+<br/>
+lsattr -va - ls file attributes on linux second extended file system<br/>
+<br/>
+find / -type f -perm -04000 -ls - Finds suid files.<br/>
+<br/>
+find . -type f -perm -04000 -ls - Finds suid files in current dir.<br/>
+<br/>
+find / -type f -perm -02000 -ls - Finds all sgid files.<br/>
+<br/>
+find / -perm -2 -ls - Finds all writable files and folders.<br/>
+<br/>
+find . -perm -2 -ls - Finds all writable files and folders in current dir.<br/>
+<br/>
+find / -type f -name .bash_history - Finds bash history.<br/>
+<br/>
+netstat -an | grep -i listen - shows open ports.<br/>
+<br/>
+cut -d: -f1,2,3 /etc/passwd | grep :: - From memory show user<br/>
+with no pass.<br/>
+<br/>
+find /etc/ -type f -perm -o+w 2&gt; /dev/null - Write in /etc/passwd?.<br/>
+<br/>
+cat /proc/version /proc/cpuinfo - Cpu info.<br/>
+<br/>
+locate gcc- Finds gcc if installed.<br/>
+<br/>
+set - Display system variables.<br/>
+<br/>
+echo $path- Echo current path.<br/>
+<br/>
+lsmod- ***** kernal modules.<br/>
+<br/>
+mount/df- Check mounted file system.<br/>
+<br/>
+rpm -qa- Check patch level for RedHat 7.0.<br/>
+<br/>
+dmesg- Check hardware ino.<br/>
+<br/>
+cat /etc/syslog.conf - Log file. <br/>
+<br/>
+uptime - Uptime check.<br/>
+<br/>
+cat /proc/meminfo - Memory check.<br/>
+<br/>
+find / -type f -perm -4 -print 2&gt; /dev/null- Find readble files.<br/>
+<br/>
+find / -type f -perm -2 -print 2&gt; /dev/null - Find writable files.<br/>
+<br/>
+chmod ### $folder - Chmod folder.<br/>
+<br/>
+ls -l -b - Verbosly list directory's<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 Credits-maleficus</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -161,11 +158,11 @@ Credits-maleficus</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">can you plzz upload a document on the commands and their functions <br />
-<br />
-<br />
-thanks in advance<br />
-<br />
+		<blockquote class="restore">can you plzz upload a document on the commands and their functions <br/>
+<br/>
+<br/>
+thanks in advance<br/>
+<br/>
 **the commands must be usable in backtrack 5 r2</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_4">
@@ -179,23 +176,23 @@ thanks in advance<br />
 		<blockquote class="restore"><div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
 			<div>
 				Originally Posted by <strong>Jolt</strong>
-				<a href="showthreade861.html?p=7883#post7883" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+				<a href="showthreade861.html?p=7883#post7883" rel="nofollow"><img alt="View Post" class="inlineimg" src="images/buttons/viewpost.gif"/></a>
 			</div>
-			<div class="message">can you plzz upload a document on the commands and their functions <br />
-<br />
-<br />
-thanks in advance<br />
-<br />
+			<div class="message">can you plzz upload a document on the commands and their functions <br/>
+<br/>
+<br/>
+thanks in advance<br/>
+<br/>
 **the commands must be usable in backtrack 5 r2</div>
 			
-		<hr />
+		<hr/>
 	</div>
-</div>Hi Jolt. I fear nobody would that for you, blame the busy schedules. Rather it would be great if you could do that as you are already looking for commands and soon would have pile of them.<br />
-<br />
+</div>Hi Jolt. I fear nobody would that for you, blame the busy schedules. Rather it would be great if you could do that as you are already looking for commands and soon would have pile of them.<br/>
+<br/>
 Cheers!</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_5">
@@ -206,7 +203,7 @@ Cheers!</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">Get &quot;Linux in a Nutshell&quot; e-book.</blockquote>
+		<blockquote class="restore">Get "Linux in a Nutshell" e-book.</blockquote>
 	</div>
 </li>
 </ul>
@@ -214,14 +211,14 @@ Cheers!</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:33 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:33 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -239,7 +236,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=968&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:53:08 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=968&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:53:08 GMT --></html>

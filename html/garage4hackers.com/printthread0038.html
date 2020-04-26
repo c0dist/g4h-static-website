@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=4997&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:18:13 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=4997&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:18:13 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Directly viewing source in Chrome , without rendering html/js</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,20 +41,20 @@
 		<div class="title">Directly viewing source in Chrome , without rendering html/js</div>
 	
 	<div class="content">
-		<blockquote class="restore">Here is a neat trick (according to me) for people who are analyzing a suspected malicious website/watering hole attack. To fetch the source html/js code of the website, mostly we do wget and then read the code in a text editor. <br />
-<br />
-In chrome, by doing <br />
-<br />
+		<blockquote class="restore">Here is a neat trick (according to me) for people who are analyzing a suspected malicious website/watering hole attack. To fetch the source html/js code of the website, mostly we do wget and then read the code in a text editor. <br/>
+<br/>
+In chrome, by doing <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">view-source:URL</code><hr />
-</div> in the address bar, chrome will directly display the html/js source code of the website, and will <font color="#FF0000"><b>NOT render or run anything</b></font>. So no chance of anything getting executed and you being infected. <br />
-<br />
-Eg. I suspect google.com to be malicious. So initial forensics to view source code then and there in chrome browser :<br />
-<br />
+	<hr/><code class="bbcode_code">view-source:URL</code><hr/>
+</div> in the address bar, chrome will directly display the html/js source code of the website, and will <font color="#FF0000"><b>NOT render or run anything</b></font>. So no chance of anything getting executed and you being infected. <br/>
+<br/>
+Eg. I suspect google.com to be malicious. So initial forensics to view source code then and there in chrome browser :<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">view-source:http://www.google.com</code><hr />
+	<hr/><code class="bbcode_code">view-source:http://www.google.com</code><hr/>
 </div></blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -68,13 +65,13 @@ Eg. I suspect google.com to be malicious. So initial forensics to view source co
 	
 	
 	<div class="content">
-		<blockquote class="restore">This is not just chrome i started using it long back with firefox. when you used to view source in firefox it use to open new tab / window with this in url and so i started using it..<br />
-<br />
-another tip.<br />
-<br />
-if you are doing a pentest and want to get a shell running with minimal code. just let the shell echo the output without any html text enclosing it. then use the viewsource mode to view the shell output it will be autoprettified :P.<br />
-applicable for shell as well as file inclusion or file read / directory traversal'.<br />
-<br />
+		<blockquote class="restore">This is not just chrome i started using it long back with firefox. when you used to view source in firefox it use to open new tab / window with this in url and so i started using it..<br/>
+<br/>
+another tip.<br/>
+<br/>
+if you are doing a pentest and want to get a shell running with minimal code. just let the shell echo the output without any html text enclosing it. then use the viewsource mode to view the shell output it will be autoprettified :P.<br/>
+applicable for shell as well as file inclusion or file read / directory traversal'.<br/>
+<br/>
 also keep in mind the link are clickable and they will open view-source mode only.</blockquote>
 	</div>
 </li>
@@ -83,14 +80,14 @@ also keep in mind the link are clickable and they will open view-source mode onl
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:03 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:03 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -108,7 +105,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=4997&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:18:13 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=4997&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:18:13 GMT --></html>

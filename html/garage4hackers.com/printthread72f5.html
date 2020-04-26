@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=1567&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:36:34 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=1567&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:36:34 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Steganography - An Insight into Information Hiding</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,60 +41,60 @@
 		<div class="title">Steganography - An Insight into Information Hiding</div>
 	
 	<div class="content">
-		<blockquote class="restore">Hi All,<br />
-<br />
-I noticed that there were no topics related to Steganography on the forum. So, I decided to do a write up that explains Steganography right from the basics and also, the newer advanced applications of this art.<br />
-<br />
-I'll keep the definitions as short as possible, for more details you can look up the internet resources.<br />
-<br />
-<b>Steganography:</b> Derived from the greek words, steganos and graphien. Put together, it means cover writing. It's a branch of Information Hiding.<br />
-<br />
-Other techniques that are a form of Information Hiding, include Digital Watermarking.<br />
-<br />
-There was and is always a need to keep certain information private and restricted to the intended users. Hence, cryptography and steganography are arts and sciences that have existed since a long time. As the ways of communication between people changed over time so did the implementations of steganography.<br />
-<br />
-Steganography is the art of concealing the existence of the message in a cover medium. Cover medium is the carrier of the hidden message. It could be an image, audio, video or any other type of file.<br />
-<br />
-A lot of research has been done with the image format.<br />
-<br />
-<b>Goals:</b><br />
-<br />
-The primary goal of steganography is to hide as much information as possible inside the cover medium without damaging its functionality and without making it perceptible to the human observer.<br />
-<br />
-Different methods exist to implement it. A few are mentioned below:<br />
-<br />
-<b>Substitution Methods:</b> A lot of cover mediums are made of redundant bits. It's been observed that if these redundant bits are deleted, the functionality of the cover medium doesn't change.<br />
-<br />
-This fact is exploited. Now instead of deleting these redundant bits to compress the size. We can instead hide our information inside these redundant bit placeholders.<br />
-<br />
-<b>LSB Substitution:</b> Here the bits of hidden data are placed in the LSBs of the cover medium. It's an old technique and easy to detect today.<br />
-<br />
-<b>BPCS:</b> Bit Plane Complexity Segmentation. This technique applies to images. The bits corresponding to the color code of individual pixels are represented as separate bit planes. An imaginary matrix (8x8) on each plane is selected and the complexity is calculated.<br />
-<br />
-The idea is to hide the data within the complex areas of the bit planes.<br />
-<b><br />
-Transform Methods:</b> Unlike the substitution methods, where we hide the data within insignificant portions of the cover medium, here we try to hide data inside the significant portions.<br />
-<br />
-An example would be the JPEG lossy compression used in digital images. Here a forward Discrete Cosine Transform is applied to the subsampled color codes for an 8x8 image block.<br />
-<br />
-Data is hidden inside the DCT coefficients of the pixels.<br />
-<br />
-<b>Echo Hiding:</b> This method is used with audio files as a cover medium. Here the information is hidden inside the audio signal by introducing an echo in the discrete signal.<br />
-<br />
-There's a lot of research work done around this and you can find research papers online that discuss this algorithm in detail.<br />
-<br />
-It is more robust and has a lesser probability of detection when compared to other noise inducing methods of steganography.<br />
-<br />
-This method allows for higher data transmission rates too.<br />
-<br />
-<b>Spread Spectrum:</b> This method spreads the bits of hidden data all across the frequency spectrum of the cover medium (audio file). This method is similar to the substitution implementation (LSB Coding), in that it spreads the bits of secret data all over the bits of the cover medium.<br />
-<br />
-This method also allows for higher data transmission rates.<br />
-<br />
-There exist other methods of steganography implementations with static cover mediums such as images, audio and video files.<br />
-<br />
-In the next post, I will discuss more about methods which are more dynamic. <b>Network Steganography</b> where the data is not hidden inside the cover medium, instead the communication protocols that determine the path of cover medium are used to transmit the secret message.<br />
-<br />
+		<blockquote class="restore">Hi All,<br/>
+<br/>
+I noticed that there were no topics related to Steganography on the forum. So, I decided to do a write up that explains Steganography right from the basics and also, the newer advanced applications of this art.<br/>
+<br/>
+I'll keep the definitions as short as possible, for more details you can look up the internet resources.<br/>
+<br/>
+<b>Steganography:</b> Derived from the greek words, steganos and graphien. Put together, it means cover writing. It's a branch of Information Hiding.<br/>
+<br/>
+Other techniques that are a form of Information Hiding, include Digital Watermarking.<br/>
+<br/>
+There was and is always a need to keep certain information private and restricted to the intended users. Hence, cryptography and steganography are arts and sciences that have existed since a long time. As the ways of communication between people changed over time so did the implementations of steganography.<br/>
+<br/>
+Steganography is the art of concealing the existence of the message in a cover medium. Cover medium is the carrier of the hidden message. It could be an image, audio, video or any other type of file.<br/>
+<br/>
+A lot of research has been done with the image format.<br/>
+<br/>
+<b>Goals:</b><br/>
+<br/>
+The primary goal of steganography is to hide as much information as possible inside the cover medium without damaging its functionality and without making it perceptible to the human observer.<br/>
+<br/>
+Different methods exist to implement it. A few are mentioned below:<br/>
+<br/>
+<b>Substitution Methods:</b> A lot of cover mediums are made of redundant bits. It's been observed that if these redundant bits are deleted, the functionality of the cover medium doesn't change.<br/>
+<br/>
+This fact is exploited. Now instead of deleting these redundant bits to compress the size. We can instead hide our information inside these redundant bit placeholders.<br/>
+<br/>
+<b>LSB Substitution:</b> Here the bits of hidden data are placed in the LSBs of the cover medium. It's an old technique and easy to detect today.<br/>
+<br/>
+<b>BPCS:</b> Bit Plane Complexity Segmentation. This technique applies to images. The bits corresponding to the color code of individual pixels are represented as separate bit planes. An imaginary matrix (8x8) on each plane is selected and the complexity is calculated.<br/>
+<br/>
+The idea is to hide the data within the complex areas of the bit planes.<br/>
+<b><br/>
+Transform Methods:</b> Unlike the substitution methods, where we hide the data within insignificant portions of the cover medium, here we try to hide data inside the significant portions.<br/>
+<br/>
+An example would be the JPEG lossy compression used in digital images. Here a forward Discrete Cosine Transform is applied to the subsampled color codes for an 8x8 image block.<br/>
+<br/>
+Data is hidden inside the DCT coefficients of the pixels.<br/>
+<br/>
+<b>Echo Hiding:</b> This method is used with audio files as a cover medium. Here the information is hidden inside the audio signal by introducing an echo in the discrete signal.<br/>
+<br/>
+There's a lot of research work done around this and you can find research papers online that discuss this algorithm in detail.<br/>
+<br/>
+It is more robust and has a lesser probability of detection when compared to other noise inducing methods of steganography.<br/>
+<br/>
+This method allows for higher data transmission rates too.<br/>
+<br/>
+<b>Spread Spectrum:</b> This method spreads the bits of hidden data all across the frequency spectrum of the cover medium (audio file). This method is similar to the substitution implementation (LSB Coding), in that it spreads the bits of secret data all over the bits of the cover medium.<br/>
+<br/>
+This method also allows for higher data transmission rates.<br/>
+<br/>
+There exist other methods of steganography implementations with static cover mediums such as images, audio and video files.<br/>
+<br/>
+In the next post, I will discuss more about methods which are more dynamic. <b>Network Steganography</b> where the data is not hidden inside the cover medium, instead the communication protocols that determine the path of cover medium are used to transmit the secret message.<br/>
+<br/>
 The advantage here is capacity no longer depends on the cover medium. Instead it depends on the duration of communication. As long as the communication takes place, the secret data can be transmitted along with it.</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -126,14 +123,14 @@ The advantage here is capacity no longer depends on the cover medium. Instead it
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:13 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:13 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -151,7 +148,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=1567&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:36:34 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=1567&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:36:34 GMT --></html>

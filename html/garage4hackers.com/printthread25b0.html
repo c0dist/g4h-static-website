@@ -1,33 +1,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=6118&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:09:11 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6118&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:09:11 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
-	<title> [Release] Awrs – Advanced Client/Server Windows/Linux Python Reverse Shell</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<title> [Release] Awrs â€“ Advanced Client/Server Windows/Linux Python Reverse Shell</title>
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
 <div id="pagetitle">
-	<h1><a href="showthread383d.html?t=6118">[Release] Awrs – Advanced Client/Server Windows/Linux Python Reverse Shell</a></h1>
+	<h1><a href="showthread383d.html?t=6118">[Release] Awrs â€“ Advanced Client/Server Windows/Linux Python Reverse Shell</a></h1>
 	<p class="description">Printable View</p>
 </div>
 
@@ -41,43 +38,43 @@
 	</div>
 	
 	
-		<div class="title">[Release] Awrs – Advanced Client/Server Windows/Linux Python Reverse Shell</div>
+		<div class="title">[Release] Awrs â€“ Advanced Client/Server Windows/Linux Python Reverse Shell</div>
 	
 	<div class="content">
-		<blockquote class="restore">Hello everyone,<br />
-<br />
-Well, it’s been a while and I’ve decided to create <b><font color="#FF4500">Awrs</font></b>. I had bigger plans but sadly I have no time to get more into it so I’ll just leave it here.<br />
-<br />
-So we’ve seen Reverse Shells out there, some created with msfpayload or done threw netcat etc, and problems were just flowing out of these because dealing with reverse shells wasn’t that simple at all, many different problems were just flowing out of nowhere:<br />
-<br />
-<ol class="decimal"><li style="">Interactive programs makes you lose the shell, sadly.</li><li style="">Interactive programs makes you lose the shell, sadly.</li><li style="">Commands with no Outputs makes you lose the shell too.</li><li style="">The CD command is somehow ineffective in many scenarios.</li><li style="">Your handler can only handle 1 connection at a time.</li><li style="">You can’t edit/add functions to the shell.</li><li style="">Your executable is detected by AVs.</li><li style="">Your executable(Server/Client) may have some dependencies(Windows/Linux).</li></ol><br />
-etc… <br />
-<br />
-And because of all these things, I’ve decided to code my own Reverse Shell Client/Server in Python.<br />
-<br />
-The features are pretty much the opposite of everything mentioned before, anyways:<br />
-<font color="#FF4500"><b>Server:</b></font><br />
-<ol class="decimal"><li style="">Linux/Windows Version.</li><li style="">Multi Handler. Can handle multiple connections all at once.</li><li style="">Easy user interface.</li><li style="">Fast and Stable.</li></ol><br />
-<br />
-<font color="#FF4500"><b>Client:</b></font><br />
-<ol class="decimal"><li style="">Linux/Windows Version.</li><li style="">You’ll never lose your shell. (No Output, Wrong Commands and Interactive Programs won’t kill your shell)</li><li style="">Never closes and is always trying to connect to the Server.</li><li style="">Can handle any command properly, such as the cd command.</li><li style="">Always gets back a response. (Command Output or Simple Client response)</li><li style="">Fast and Stable</li></ol><br />
-<br />
-<font color="#FF4500"><b>Video:</b></font><br />
-<a href="../external.html?link=http://www.youtube.com/watch?v=xC_vuHEMJYA" target="_blank">http://www.youtube.com/watch?v=xC_vuHEMJYA</a><br />
-<br />
-<font color="#FF4500"><b><br />
-Downloads:</b></font><br />
-<i>Windows:</i><br />
-Client: <a href="../external.html?link=http://pastebin.com/hDWiCppd" target="_blank">http://pastebin.com/hDWiCppd</a><br />
-Server: <a href="../external.html?link=http://pastebin.com/KHErbESs" target="_blank">http://pastebin.com/KHErbESs</a><br />
-<br />
-<i>Linux:</i><br />
-Client: <a href="../external.html?link=http://pastebin.com/XHtAzM9j" target="_blank">http://pastebin.com/XHtAzM9j</a><br />
-Server: <a href="../external.html?link=http://pastebin.com/EmTjE1kx" target="_blank">http://pastebin.com/EmTjE1kx</a><br />
-<br />
-<font color="#FF4500"><b><br />
-Programmer:</b></font><br />
-Twitter: <a href="../external.html?link=https://twitter.com/dotcppfile" target="_blank">https://twitter.com/dotcppfile</a><br />
+		<blockquote class="restore">Hello everyone,<br/>
+<br/>
+Well, itâ€™s been a while and Iâ€™ve decided to create <b><font color="#FF4500">Awrs</font></b>. I had bigger plans but sadly I have no time to get more into it so Iâ€™ll just leave it here.<br/>
+<br/>
+So weâ€™ve seen Reverse Shells out there, some created with msfpayload or done threw netcat etc, and problems were just flowing out of these because dealing with reverse shells wasnâ€™t that simple at all, many different problems were just flowing out of nowhere:<br/>
+<br/>
+<ol class="decimal"><li style="">Interactive programs makes you lose the shell, sadly.</li><li style="">Interactive programs makes you lose the shell, sadly.</li><li style="">Commands with no Outputs makes you lose the shell too.</li><li style="">The CD command is somehow ineffective in many scenarios.</li><li style="">Your handler can only handle 1 connection at a time.</li><li style="">You canâ€™t edit/add functions to the shell.</li><li style="">Your executable is detected by AVs.</li><li style="">Your executable(Server/Client) may have some dependencies(Windows/Linux).</li></ol><br/>
+etcâ€¦ <br/>
+<br/>
+And because of all these things, Iâ€™ve decided to code my own Reverse Shell Client/Server in Python.<br/>
+<br/>
+The features are pretty much the opposite of everything mentioned before, anyways:<br/>
+<font color="#FF4500"><b>Server:</b></font><br/>
+<ol class="decimal"><li style="">Linux/Windows Version.</li><li style="">Multi Handler. Can handle multiple connections all at once.</li><li style="">Easy user interface.</li><li style="">Fast and Stable.</li></ol><br/>
+<br/>
+<font color="#FF4500"><b>Client:</b></font><br/>
+<ol class="decimal"><li style="">Linux/Windows Version.</li><li style="">Youâ€™ll never lose your shell. (No Output, Wrong Commands and Interactive Programs wonâ€™t kill your shell)</li><li style="">Never closes and is always trying to connect to the Server.</li><li style="">Can handle any command properly, such as the cd command.</li><li style="">Always gets back a response. (Command Output or Simple Client response)</li><li style="">Fast and Stable</li></ol><br/>
+<br/>
+<font color="#FF4500"><b>Video:</b></font><br/>
+<a href="../external.html?link=http://www.youtube.com/watch?v=xC_vuHEMJYA" target="_blank">http://www.youtube.com/watch?v=xC_vuHEMJYA</a><br/>
+<br/>
+<font color="#FF4500"><b><br/>
+Downloads:</b></font><br/>
+<i>Windows:</i><br/>
+Client: <a href="../external.html?link=http://pastebin.com/hDWiCppd" target="_blank">http://pastebin.com/hDWiCppd</a><br/>
+Server: <a href="../external.html?link=http://pastebin.com/KHErbESs" target="_blank">http://pastebin.com/KHErbESs</a><br/>
+<br/>
+<i>Linux:</i><br/>
+Client: <a href="../external.html?link=http://pastebin.com/XHtAzM9j" target="_blank">http://pastebin.com/XHtAzM9j</a><br/>
+Server: <a href="../external.html?link=http://pastebin.com/EmTjE1kx" target="_blank">http://pastebin.com/EmTjE1kx</a><br/>
+<br/>
+<font color="#FF4500"><b><br/>
+Programmer:</b></font><br/>
+Twitter: <a href="../external.html?link=https://twitter.com/dotcppfile" target="_blank">https://twitter.com/dotcppfile</a><br/>
 Blog: <a href="../external.html?link=http://dotcppfile.wordpress.com/" target="_blank">http://dotcppfile.wordpress.com</a></blockquote>
 	</div>
 </li>
@@ -86,14 +83,14 @@ Blog: <a href="../external.html?link=http://dotcppfile.wordpress.com/" target="_
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:48 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:48 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletinÂ®</a> Version 4.2.1 <br/>Copyright Â© 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -111,7 +108,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6118&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:09:11 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=6118&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:09:11 GMT --></html>

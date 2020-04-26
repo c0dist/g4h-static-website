@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=5914&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:35:05 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=5914&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:35:05 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Dcrack - distributed wireless password cracking</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,123 +41,123 @@
 		<div class="title">Dcrack - distributed wireless password cracking</div>
 	
 	<div class="content">
-		<blockquote class="restore"><div style="text-align: center;"><font color="#0000CD"><font size="3">Hello guys,<br />
-<br />
-With the New Update from Aircrack-Suite, its now possible to use others system for the processing power.<br />
-(i know that CPU cracking is an old school technique but this tool is really fun :P)<br />
-with the new tool introduced in the aircrack suite, dcrack has the ability to perform Wireless Password Cracking in a Distributed Computing Environment. Isn't its COOL !! :D<br />
-<br />
-ok then lets see how can we work on dcrack. (i just tired it now but i think its an AWESOME tool !! )<br />
-<br />
-<br />
-<br />
-Note: I did not test this in a Fully Functioning Lab, I did the testing on VMware Workstation with 4 OS Running ( 1 User, 1 Server, 2 Clients).<br />
-<br />
-<br />
-<br />
-</font></font><br />
-<font size="5"><font color="#FF8C00">STEP 1 - INSTALL AIRCRACK SUITE</font></font><br />
-<br />
-<font color="#0000CD"><font size="3">Just refer to the aircrack website </font></font>(<a href="../external.html?link=http://www.aircrack-ng.org/install.html" target="_blank">http://www.aircrack-ng.org/install.html</a>)<font color="#0000CD"><font size="3"> for this.</font></font><br />
-<br />
-<br />
-<font size="5"><font color="#FF8C00">STEP 2 - RUN DCRACK</font></font><br />
-<br />
-<font color="#0000CD"><font size="3">To run dcrack, you need to know the working of dcrack. </font></font><br />
-<br />
-<a href="../3.bp.blogspot.com/-W40rd3Yh4Zo/UeapM6tQBTI/AAAAAAAAAUA/JBHpgq9sYNk/s1600/dcrack.png" target="_blank">http://3.bp.blogspot.com/-W40rd3Yh4Z...600/dcrack.png</a><br />
-<br />
-<font color="#0000CD"><font size="3">As we know now that dcrack utilizes the concept of Distributed Computing, so dcrack need three things :</font></font><br />
-<br />
-<br />
-<font color="#FF8C00"><font size="4">A User</font></font><br />
-<br />
-<font color="#0000CD"><font size="3">The User requests the server to crack the wireless password for him/her. The user will send the &quot;.cap&quot; file and a dictionary file (wordlist) to the server for cracking.<br />
-</font></font><br />
-<br />
-<br />
-<font size="4"><font color="#FF8C00">A Server</font></font><br />
-<br />
-<font color="#0000CD"><font size="3">The server will be used as a Command Center. All the instructions, related to cracking will be given from here. The server will process the user's request for cracking and pass the instructions to the Clients.<br />
-</font></font><br />
-<br />
-<br />
-<font color="#FF8C00"><font size="4">Clients</font></font><br />
-<br />
-<font color="#0000CD"><font size="3">Clients are responsible for do the dirty work !!<br />
-they use their processing power to crack the password using the wordlist given by the User.<br />
-<br />
-<br />
-<br />
- To run dcrack, we need to go to the location where dcrack is located. so now in the terminal we'll go to :<br />
-<b>/pentest/wireless/aircrack-ng/scripts/</b><br />
-<br />
-First, the server needs to be start. Run the below given command to start the dcrack server. </font></font><br />
+		<blockquote class="restore"><div style="text-align: center;"><font color="#0000CD"><font size="3">Hello guys,<br/>
+<br/>
+With the New Update from Aircrack-Suite, its now possible to use others system for the processing power.<br/>
+(i know that CPU cracking is an old school technique but this tool is really fun :P)<br/>
+with the new tool introduced in the aircrack suite, dcrack has the ability to perform Wireless Password Cracking in a Distributed Computing Environment. Isn't its COOL !! :D<br/>
+<br/>
+ok then lets see how can we work on dcrack. (i just tired it now but i think its an AWESOME tool !! )<br/>
+<br/>
+<br/>
+<br/>
+Note: I did not test this in a Fully Functioning Lab, I did the testing on VMware Workstation with 4 OS Running ( 1 User, 1 Server, 2 Clients).<br/>
+<br/>
+<br/>
+<br/>
+</font></font><br/>
+<font size="5"><font color="#FF8C00">STEP 1 - INSTALL AIRCRACK SUITE</font></font><br/>
+<br/>
+<font color="#0000CD"><font size="3">Just refer to the aircrack website </font></font>(<a href="../external.html?link=http://www.aircrack-ng.org/install.html" target="_blank">http://www.aircrack-ng.org/install.html</a>)<font color="#0000CD"><font size="3"> for this.</font></font><br/>
+<br/>
+<br/>
+<font size="5"><font color="#FF8C00">STEP 2 - RUN DCRACK</font></font><br/>
+<br/>
+<font color="#0000CD"><font size="3">To run dcrack, you need to know the working of dcrack. </font></font><br/>
+<br/>
+<a href="../3.bp.blogspot.com/-W40rd3Yh4Zo/UeapM6tQBTI/AAAAAAAAAUA/JBHpgq9sYNk/s1600/dcrack.png" target="_blank">http://3.bp.blogspot.com/-W40rd3Yh4Z...600/dcrack.png</a><br/>
+<br/>
+<font color="#0000CD"><font size="3">As we know now that dcrack utilizes the concept of Distributed Computing, so dcrack need three things :</font></font><br/>
+<br/>
+<br/>
+<font color="#FF8C00"><font size="4">A User</font></font><br/>
+<br/>
+<font color="#0000CD"><font size="3">The User requests the server to crack the wireless password for him/her. The user will send the ".cap" file and a dictionary file (wordlist) to the server for cracking.<br/>
+</font></font><br/>
+<br/>
+<br/>
+<font size="4"><font color="#FF8C00">A Server</font></font><br/>
+<br/>
+<font color="#0000CD"><font size="3">The server will be used as a Command Center. All the instructions, related to cracking will be given from here. The server will process the user's request for cracking and pass the instructions to the Clients.<br/>
+</font></font><br/>
+<br/>
+<br/>
+<font color="#FF8C00"><font size="4">Clients</font></font><br/>
+<br/>
+<font color="#0000CD"><font size="3">Clients are responsible for do the dirty work !!<br/>
+they use their processing power to crack the password using the wordlist given by the User.<br/>
+<br/>
+<br/>
+<br/>
+ To run dcrack, we need to go to the location where dcrack is located. so now in the terminal we'll go to :<br/>
+<b>/pentest/wireless/aircrack-ng/scripts/</b><br/>
+<br/>
+First, the server needs to be start. Run the below given command to start the dcrack server. </font></font><br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">python dcrack.py server</code><hr />
-</div><a href="../4.bp.blogspot.com/-12a0Xz773_4/Ueaw2FibwCI/AAAAAAAAAUQ/t0mcCF3leWw/s1600/dcrack-server.png" target="_blank">http://4.bp.blogspot.com/-12a0Xz773_...ack-server.png</a><br />
-<br />
-<font color="#0000CD"><font size="3">-------------------------------------------------<br />
-<br />
-NOTE:<br />
-<br />
-<br />
-<br />
-DCRACK SERVER IP :   192.168.1.128<br />
-<br />
-CLIENT 1 IP:   192.168.1.131<br />
-CLIENT 2 IP:   192.168.1.133<br />
-USER IP :   192.168.1.132<br />
-MAC ADDR OF THE AP : 00:0d:93:eb:b0:8c<br />
------------------------------------------------------------</font></font><br />
-<br />
-<br />
-<br />
-<font color="#0000CD"><font size="3">Second, the user needs to send the .cap file and the wordlist for the cracking to the server.</font></font><br />
+	<hr/><code class="bbcode_code">python dcrack.py server</code><hr/>
+</div><a href="../4.bp.blogspot.com/-12a0Xz773_4/Ueaw2FibwCI/AAAAAAAAAUQ/t0mcCF3leWw/s1600/dcrack-server.png" target="_blank">http://4.bp.blogspot.com/-12a0Xz773_...ack-server.png</a><br/>
+<br/>
+<font color="#0000CD"><font size="3">-------------------------------------------------<br/>
+<br/>
+NOTE:<br/>
+<br/>
+<br/>
+<br/>
+DCRACK SERVER IP :   192.168.1.128<br/>
+<br/>
+CLIENT 1 IP:   192.168.1.131<br/>
+CLIENT 2 IP:   192.168.1.133<br/>
+USER IP :   192.168.1.132<br/>
+MAC ADDR OF THE AP : 00:0d:93:eb:b0:8c<br/>
+-----------------------------------------------------------</font></font><br/>
+<br/>
+<br/>
+<br/>
+<font color="#0000CD"><font size="3">Second, the user needs to send the .cap file and the wordlist for the cracking to the server.</font></font><br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">python dcrack.py cmd 192.168.1.128 cap /root/test.cap<br />
-python dcrack.py cmd 192.168.1.128 dict /root/password.lst</code><hr />
-</div><a href="../4.bp.blogspot.com/-n3L3eRVIinA/UebHTkGvzvI/AAAAAAAAAV8/DOlPOCe_TRE/s1600/dcrack-user.png" target="_blank">http://4.bp.blogspot.com/-n3L3eRVIin...crack-user.png</a><br />
-<br />
-<font color="#FF8C00"><font size="5">USER LOG ON SERVER (user sending the files to the server)<br />
-</font></font><br />
-<a href="../3.bp.blogspot.com/-y7--NV5aZRk/UebHR4qrGXI/AAAAAAAAAVo/6PeXcwsfKA4/s1600/dcrack-server-user.png" target="_blank">http://3.bp.blogspot.com/-y7--NV5aZR...erver-user.png</a><br />
-<br />
-<font color="#0000CD"><font size="3"><b>NOTE: </b>The wordlist and the .cap file are compressed first to reduce the size to send it over the network. <br />
-<br />
-Third, Both the clients  (CLIENT 1 and CLIENT 2) needs to tell the server that its available for cracking. </font></font><br />
+	<hr/><code class="bbcode_code">python dcrack.py cmd 192.168.1.128 cap /root/test.cap<br/>
+python dcrack.py cmd 192.168.1.128 dict /root/password.lst</code><hr/>
+</div><a href="../4.bp.blogspot.com/-n3L3eRVIinA/UebHTkGvzvI/AAAAAAAAAV8/DOlPOCe_TRE/s1600/dcrack-user.png" target="_blank">http://4.bp.blogspot.com/-n3L3eRVIin...crack-user.png</a><br/>
+<br/>
+<font color="#FF8C00"><font size="5">USER LOG ON SERVER (user sending the files to the server)<br/>
+</font></font><br/>
+<a href="../3.bp.blogspot.com/-y7--NV5aZRk/UebHR4qrGXI/AAAAAAAAAVo/6PeXcwsfKA4/s1600/dcrack-server-user.png" target="_blank">http://3.bp.blogspot.com/-y7--NV5aZR...erver-user.png</a><br/>
+<br/>
+<font color="#0000CD"><font size="3"><b>NOTE: </b>The wordlist and the .cap file are compressed first to reduce the size to send it over the network. <br/>
+<br/>
+Third, Both the clients  (CLIENT 1 and CLIENT 2) needs to tell the server that its available for cracking. </font></font><br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">python dcrack.py client 192.168.1.128</code><hr />
-</div><br />
-<font color="#FF8C00"><font size="5">CLIENT 1</font></font><br />
-<br />
-<a href="../4.bp.blogspot.com/-pyjoskyWAHI/UebHPOuO4oI/AAAAAAAAAU4/QJEFHn_RSwI/s1600/dcrack-server-client-1.png" target="_blank">http://4.bp.blogspot.com/-pyjoskyWAH...r-client-1.png</a><br />
-<br />
-<font color="#FF8C00"><font size="5">CLIENT 1 LOG ON SERVER</font></font><br />
-<br />
-<a href="../3.bp.blogspot.com/-302AUGnuEuE/UebHOZA-9HI/AAAAAAAAAUk/5BPnT8LMJig/s1600/dcrack-server-client-1-log.png" target="_blank">http://3.bp.blogspot.com/-302AUGnuEu...ient-1-log.png</a><br />
-<br />
-<font color="#FF8C00"><font size="5">CLIENT 2</font></font><br />
-<br />
-<a href="../2.bp.blogspot.com/-BVXzJD2Jsdo/UebHQp5HDPI/AAAAAAAAAVM/Agx2cC0SpNc/s1600/dcrack-server-client-2.png" target="_blank">http://2.bp.blogspot.com/-BVXzJD2Jsd...r-client-2.png</a><br />
-<br />
- <font color="#FF8C00"><font size="5">CLIENT 2 LOG ON SERVER</font></font><br />
-<br />
-<a href="../1.bp.blogspot.com/-SKlRJGYJw5E/UebHQrLCZyI/AAAAAAAAAVI/DUXck1oMAMQ/s1600/dcrack-server-client-2-log.png" target="_blank">http://1.bp.blogspot.com/-SKlRJGYJw5...ient-2-log.png</a><br />
-<br />
-<font color="#0000CD"><font size="3">Now, the user needs to send the cracking request to the server</font></font><br />
+	<hr/><code class="bbcode_code">python dcrack.py client 192.168.1.128</code><hr/>
+</div><br/>
+<font color="#FF8C00"><font size="5">CLIENT 1</font></font><br/>
+<br/>
+<a href="../4.bp.blogspot.com/-pyjoskyWAHI/UebHPOuO4oI/AAAAAAAAAU4/QJEFHn_RSwI/s1600/dcrack-server-client-1.png" target="_blank">http://4.bp.blogspot.com/-pyjoskyWAH...r-client-1.png</a><br/>
+<br/>
+<font color="#FF8C00"><font size="5">CLIENT 1 LOG ON SERVER</font></font><br/>
+<br/>
+<a href="../3.bp.blogspot.com/-302AUGnuEuE/UebHOZA-9HI/AAAAAAAAAUk/5BPnT8LMJig/s1600/dcrack-server-client-1-log.png" target="_blank">http://3.bp.blogspot.com/-302AUGnuEu...ient-1-log.png</a><br/>
+<br/>
+<font color="#FF8C00"><font size="5">CLIENT 2</font></font><br/>
+<br/>
+<a href="../2.bp.blogspot.com/-BVXzJD2Jsdo/UebHQp5HDPI/AAAAAAAAAVM/Agx2cC0SpNc/s1600/dcrack-server-client-2.png" target="_blank">http://2.bp.blogspot.com/-BVXzJD2Jsd...r-client-2.png</a><br/>
+<br/>
+ <font color="#FF8C00"><font size="5">CLIENT 2 LOG ON SERVER</font></font><br/>
+<br/>
+<a href="../1.bp.blogspot.com/-SKlRJGYJw5E/UebHQrLCZyI/AAAAAAAAAVI/DUXck1oMAMQ/s1600/dcrack-server-client-2-log.png" target="_blank">http://1.bp.blogspot.com/-SKlRJGYJw5...ient-2-log.png</a><br/>
+<br/>
+<font color="#0000CD"><font size="3">Now, the user needs to send the cracking request to the server</font></font><br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">python dcrack.py cmd 192.168.1.128 crack&nbsp; 00:0d:93:eb:b0:8c</code><hr />
-</div><font color="#FF8C00"><font size="5">USER LOG ON SERVER</font></font><br />
-<br />
-<a href="../1.bp.blogspot.com/-XT9-vYkCO-E/UebHR8LxHlI/AAAAAAAAAVg/TsnP6mONxSQ/s1600/dcrack-user-crack-log.png" target="_blank">http://1.bp.blogspot.com/-XT9-vYkCO-...-crack-log.png</a><br />
-<br />
-<font color="#0000CD"><font size="3">Once the user requests the server for cracking, the Clients will start downloading the wordlist and the .cap file from the server. Clients then uncompresses the files and then Splits the Wordlist in 2 parts (as we have 2 clients here) and then starts the cracking using their computing power.</font></font><br />
-<br />
+	<hr/><code class="bbcode_code">python dcrack.py cmd 192.168.1.128 crack  00:0d:93:eb:b0:8c</code><hr/>
+</div><font color="#FF8C00"><font size="5">USER LOG ON SERVER</font></font><br/>
+<br/>
+<a href="../1.bp.blogspot.com/-XT9-vYkCO-E/UebHR8LxHlI/AAAAAAAAAVg/TsnP6mONxSQ/s1600/dcrack-user-crack-log.png" target="_blank">http://1.bp.blogspot.com/-XT9-vYkCO-...-crack-log.png</a><br/>
+<br/>
+<font color="#0000CD"><font size="3">Once the user requests the server for cracking, the Clients will start downloading the wordlist and the .cap file from the server. Clients then uncompresses the files and then Splits the Wordlist in 2 parts (as we have 2 clients here) and then starts the cracking using their computing power.</font></font><br/>
+<br/>
 </div></blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -171,32 +168,32 @@ Third, Both the clients  (CLIENT 1 and CLIENT 2) needs to tell the server that i
 	
 	
 	<div class="content">
-		<blockquote class="restore"><font color="#FF8C00"><font size="5">CLIENT 1<br />
-</font></font><br />
-<a href="../1.bp.blogspot.com/-ZD3VNKIwqKk/UebHOzS0jOI/AAAAAAAAAUw/EazglpExrAM/s1600/dcrack-server-client-1-cracking.png" target="_blank">http://1.bp.blogspot.com/-ZD3VNKIwqK...1-cracking.png</a><br />
-<br />
-<font color="#FF8C00"><font size="5">CLIENT 2</font></font><br />
-<br />
-<a href="../4.bp.blogspot.com/-kTa-3hMOoSs/UebHPbuU-AI/AAAAAAAAAU8/nvfVKt9ogek/s1600/dcrack-server-client-2-cracking.png" target="_blank">http://4.bp.blogspot.com/-kTa-3hMOoS...2-cracking.png</a><br />
-<br />
-<font color="#FF8C00"><font size="5">CLIENT 1 LOG ON SERVER (Client sending the password to the server)<br />
-</font></font><br />
-<a href="../1.bp.blogspot.com/--zGnWxFHgf0/UebHShYBiZI/AAAAAAAAAVw/g7p7w7gfmAo/s1600/dcrack-user-status-log.png" target="_blank">http://1.bp.blogspot.com/--zGnWxFHgf...status-log.png</a><br />
-<br />
-<font color="#0000CD"><font size="3">as you all can see above, CLIENT 1 found the key from the wordlist.<br />
-<br />
-<br />
-The user can check the status of the cracking using the below command :</font></font><br />
-<br />
+		<blockquote class="restore"><font color="#FF8C00"><font size="5">CLIENT 1<br/>
+</font></font><br/>
+<a href="../1.bp.blogspot.com/-ZD3VNKIwqKk/UebHOzS0jOI/AAAAAAAAAUw/EazglpExrAM/s1600/dcrack-server-client-1-cracking.png" target="_blank">http://1.bp.blogspot.com/-ZD3VNKIwqK...1-cracking.png</a><br/>
+<br/>
+<font color="#FF8C00"><font size="5">CLIENT 2</font></font><br/>
+<br/>
+<a href="../4.bp.blogspot.com/-kTa-3hMOoSs/UebHPbuU-AI/AAAAAAAAAU8/nvfVKt9ogek/s1600/dcrack-server-client-2-cracking.png" target="_blank">http://4.bp.blogspot.com/-kTa-3hMOoS...2-cracking.png</a><br/>
+<br/>
+<font color="#FF8C00"><font size="5">CLIENT 1 LOG ON SERVER (Client sending the password to the server)<br/>
+</font></font><br/>
+<a href="../1.bp.blogspot.com/--zGnWxFHgf0/UebHShYBiZI/AAAAAAAAAVw/g7p7w7gfmAo/s1600/dcrack-user-status-log.png" target="_blank">http://1.bp.blogspot.com/--zGnWxFHgf...status-log.png</a><br/>
+<br/>
+<font color="#0000CD"><font size="3">as you all can see above, CLIENT 1 found the key from the wordlist.<br/>
+<br/>
+<br/>
+The user can check the status of the cracking using the below command :</font></font><br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">python dcrack.py cmd 192.168.1.128 status</code><hr />
-</div><a href="../1.bp.blogspot.com/-Bb4jfhtl-BM/UebHS0ZkZdI/AAAAAAAAAV0/6HD5Koygtvw/s1600/dcrack-user-status.png" target="_blank">http://1.bp.blogspot.com/-Bb4jfhtl-B...ser-status.png</a><br />
-<br />
-<br />
-<font color="#0000CD"><font size="3">Phew !!<br />
-Too Long ... ha ha :D<br />
-<br />
+	<hr/><code class="bbcode_code">python dcrack.py cmd 192.168.1.128 status</code><hr/>
+</div><a href="../1.bp.blogspot.com/-Bb4jfhtl-BM/UebHS0ZkZdI/AAAAAAAAAV0/6HD5Koygtvw/s1600/dcrack-user-status.png" target="_blank">http://1.bp.blogspot.com/-Bb4jfhtl-B...ser-status.png</a><br/>
+<br/>
+<br/>
+<font color="#0000CD"><font size="3">Phew !!<br/>
+Too Long ... ha ha :D<br/>
+<br/>
 That's all guys... i hope you like it.</font></font></blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_3">
@@ -225,14 +222,14 @@ That's all guys... i hope you like it.</font></font></blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:10 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:10 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -250,7 +247,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=5914&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:35:05 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=5914&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:35:05 GMT --></html>

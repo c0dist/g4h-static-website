@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=6036&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:36:12 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6036&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:36:12 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Alternative IsDebuggerPresent</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,82 +41,82 @@
 		<div class="title">Alternative IsDebuggerPresent</div>
 	
 	<div class="content">
-		<blockquote class="restore">My version of IsDebuggerPresent is working like the normal one but my version is able to detect emulation/debugging software with one little trick. At first I'm checking for the IsDebuggerPresent flag in the PEB block, then I compare it with the API call. If nothing is found I set the IsDebuggerPresent flag to TRUE. Then I compare again the flag in the PEB and the API result and compare them both, if there are differences then it's a (bad) emulation software.<br />
-<br />
-Source:<br />
+		<blockquote class="restore">My version of IsDebuggerPresent is working like the normal one but my version is able to detect emulation/debugging software with one little trick. At first I'm checking for the IsDebuggerPresent flag in the PEB block, then I compare it with the API call. If nothing is found I set the IsDebuggerPresent flag to TRUE. Then I compare again the flag in the PEB and the API result and compare them both, if there are differences then it's a (bad) emulation software.<br/>
+<br/>
+Source:<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">__declspec(naked) bool CheckIsDebuggerPresent()<br />
-{<br />
-&nbsp; &nbsp; &nbsp; &nbsp; __asm <br />
-&nbsp; &nbsp; &nbsp; &nbsp; {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // get debugger info from PEB<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mov eax, dword ptr fs:[0x18]<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mov eax, dword ptr [eax + 0x30]<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; movzx ebx, byte ptr [eax + 2]<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cmp ebx, TRUE<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; je _exit_found<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // save old PEB address<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; push eax<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // get debugger info from windows API<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; call dword ptr [IsDebuggerPresent]<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cmp eax, TRUE<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; je _exit_found<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // nothing found - ok now update our PEB.IsDebuggerPresent flag with TRUE<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // IsDebuggerPresent should return TRUE - if its not returning TRUE then you are emulated<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pop eax<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mov [eax + 2], TRUE<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; push eax<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; call dword ptr [IsDebuggerPresent]<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cmp eax, TRUE<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Debugger is still not enabled? Looks like emulation software<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; jne _exit_found<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // patch PEB.IsDebuggerPresent flag back to normal (FALSE)<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pop eax<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mov [eax + 2], FALSE<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mov eax, 0<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ret<br />
-<br />
-_exit_found:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // debugger found<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mov eax, 1<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ret<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-}<br />
-<br />
-int main(int argc, char* argv[])<br />
-{<br />
-&nbsp; &nbsp; &nbsp; &nbsp; if ( CheckIsDebuggerPresent() )<br />
-&nbsp; &nbsp; &nbsp; &nbsp; {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf( &quot;Debugger detected\n&quot; );<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; else<br />
-&nbsp; &nbsp; &nbsp; &nbsp; {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf( &quot;No debugger!\n&quot; );<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; return 0;<br />
-}</code><hr />
+	<hr/><code class="bbcode_code">__declspec(naked) bool CheckIsDebuggerPresent()<br/>
+{<br/>
+        __asm <br/>
+        {<br/>
+                //<br/>
+                // get debugger info from PEB<br/>
+                //<br/>
+                mov eax, dword ptr fs:[0x18]<br/>
+                mov eax, dword ptr [eax + 0x30]<br/>
+                movzx ebx, byte ptr [eax + 2]<br/>
+                cmp ebx, TRUE<br/>
+<br/>
+                je _exit_found<br/>
+<br/>
+                //<br/>
+                // save old PEB address<br/>
+                //<br/>
+                push eax<br/>
+<br/>
+                //<br/>
+                // get debugger info from windows API<br/>
+                //<br/>
+                call dword ptr [IsDebuggerPresent]<br/>
+                cmp eax, TRUE<br/>
+                je _exit_found<br/>
+<br/>
+                //<br/>
+                // nothing found - ok now update our PEB.IsDebuggerPresent flag with TRUE<br/>
+                // IsDebuggerPresent should return TRUE - if its not returning TRUE then you are emulated<br/>
+                //<br/>
+                pop eax<br/>
+                mov [eax + 2], TRUE<br/>
+                push eax<br/>
+                call dword ptr [IsDebuggerPresent]<br/>
+                cmp eax, TRUE<br/>
+<br/>
+                //<br/>
+                // Debugger is still not enabled? Looks like emulation software<br/>
+                //<br/>
+                jne _exit_found<br/>
+<br/>
+                //<br/>
+                // patch PEB.IsDebuggerPresent flag back to normal (FALSE)<br/>
+                //<br/>
+                pop eax<br/>
+                mov [eax + 2], FALSE<br/>
+                mov eax, 0<br/>
+                ret<br/>
+<br/>
+_exit_found:<br/>
+                //<br/>
+                // debugger found<br/>
+                //<br/>
+                mov eax, 1<br/>
+                ret<br/>
+        }<br/>
+}<br/>
+<br/>
+int main(int argc, char* argv[])<br/>
+{<br/>
+        if ( CheckIsDebuggerPresent() )<br/>
+        {<br/>
+                printf( "Debugger detected\n" );<br/>
+        }<br/>
+        else<br/>
+        {<br/>
+                printf( "No debugger!\n" );<br/>
+        }<br/>
+<br/>
+        return 0;<br/>
+}</code><hr/>
 </div>You can find the whole source solution here: <a href="../external.html?link=https://github.com/edix/AlternativeIsDebuggerPresent" target="_blank">https://github.com/edix/AlternativeIsDebuggerPresent</a></blockquote>
 	</div>
 </li>
@@ -128,14 +125,14 @@ int main(int argc, char* argv[])<br />
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:52 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:52 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -153,7 +150,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6036&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:36:12 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=6036&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:36:12 GMT --></html>

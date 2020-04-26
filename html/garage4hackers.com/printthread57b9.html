@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=7015&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:22:59 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=7015&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:22:59 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Finding Secret Key in the Assembly code</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,90 +41,90 @@
 		<div class="title">Finding Secret Key in the Assembly code</div>
 	
 	<div class="content">
-		<blockquote class="restore">So we have follow given assembly code and we need to find the secrete key out of it. The following method, I've used to extract secrete key. <br />
-<br />
-<br />
+		<blockquote class="restore">So we have follow given assembly code and we need to find the secrete key out of it. The following method, I've used to extract secrete key. <br/>
+<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">&gt;&gt;&gt; a=&quot;\x31\xC0\x50\x68\x23\x25\x24\x76\x68\x76\x79\x20\x25\x68\x23\x78\x25\x72\x68\x25\x74\x20\x20\x68\x72\x73\x25\x27\x68\x75\x78\x77\x79\x68\x22\x72\x75\x77\x68\x71\x25\x75\x71\x68\x24\x27\x23\x20\x68\x25\x24\x78\x23\x68\x77\x76\x71\x76\x68\x23\x24\x77\x75\x68\x74\x24\x78\x24\x68\x71\x73\x70\x27\x68\x77\x74\x74\x23\x68\x79\x77\x70\x22\x68\x75\x20\x23\x24\x68\x79\x20\x78\x79\x68\x20\x79\x75\x20\x68\x76\x75\x23\x78\x68\x70\x74\x23\x79\x68\x22\x71\x79\x77\x68\x22\x76\x25\x72\x68\x77\x74\x22\x74\x68\x75\x73\x78\x22\x68\x22\x72\x20\x77\x68\x27\x27\x20\x79\x68\x79\x22\x72\x76\x68\x24\x79\x24\x78\x68\x25\x73\x27\x27\x68\x24\x25\x73\x24\x68\x20\x77\x74\x71\x54\x5E\x8B\xFE\x8B\xD7\xFC\xB9\x80\x00\x00\x00\xBB\x41\x00\x00\x00\x31\xC0\x50\xAC\x33\xC3\xAA\xE2\xFA\x54\x5E\xCC&quot;</code><hr />
+	<hr/><code class="bbcode_code">&gt;&gt;&gt; a="\x31\xC0\x50\x68\x23\x25\x24\x76\x68\x76\x79\x20\x25\x68\x23\x78\x25\x72\x68\x25\x74\x20\x20\x68\x72\x73\x25\x27\x68\x75\x78\x77\x79\x68\x22\x72\x75\x77\x68\x71\x25\x75\x71\x68\x24\x27\x23\x20\x68\x25\x24\x78\x23\x68\x77\x76\x71\x76\x68\x23\x24\x77\x75\x68\x74\x24\x78\x24\x68\x71\x73\x70\x27\x68\x77\x74\x74\x23\x68\x79\x77\x70\x22\x68\x75\x20\x23\x24\x68\x79\x20\x78\x79\x68\x20\x79\x75\x20\x68\x76\x75\x23\x78\x68\x70\x74\x23\x79\x68\x22\x71\x79\x77\x68\x22\x76\x25\x72\x68\x77\x74\x22\x74\x68\x75\x73\x78\x22\x68\x22\x72\x20\x77\x68\x27\x27\x20\x79\x68\x79\x22\x72\x76\x68\x24\x79\x24\x78\x68\x25\x73\x27\x27\x68\x24\x25\x73\x24\x68\x20\x77\x74\x71\x54\x5E\x8B\xFE\x8B\xD7\xFC\xB9\x80\x00\x00\x00\xBB\x41\x00\x00\x00\x31\xC0\x50\xAC\x33\xC3\xAA\xE2\xFA\x54\x5E\xCC"</code><hr/>
 </div><div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">&gt;&gt;&gt; open(&quot;asdf.bin&quot;, &quot;wb&quot;).write(a)</code><hr />
+	<hr/><code class="bbcode_code">&gt;&gt;&gt; open("asdf.bin", "wb").write(a)</code><hr/>
 </div><div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">&gt;&gt;&gt; __import__(&quot;os&quot;).system(&quot;ndisasm -b32 asdf.bin&quot;)<br />
-00000000&nbsp; 31C0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; xor eax,eax<br />
-00000002&nbsp; 50&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; push eax<br />
-00000003&nbsp; 6823252476&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x76242523<br />
-00000008&nbsp; 6876792025&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x25207976<br />
-0000000D&nbsp; 6823782572&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x72257823<br />
-00000012&nbsp; 6825742020&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x20207425<br />
-00000017&nbsp; 6872732527&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x27257372<br />
-0000001C&nbsp; 6875787779&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x79777875<br />
-00000021&nbsp; 6822727577&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x77757222<br />
-00000026&nbsp; 6871257571&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x71752571<br />
-0000002B&nbsp; 6824272320&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x20232724<br />
-00000030&nbsp; 6825247823&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x23782425<br />
-00000035&nbsp; 6877767176&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x76717677<br />
-0000003A&nbsp; 6823247775&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x75772423<br />
-0000003F&nbsp; 6874247824&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x24782474<br />
-00000044&nbsp; 6871737027&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x27707371<br />
-00000049&nbsp; 6877747423&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x23747477<br />
-0000004E&nbsp; 6879777022&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x22707779<br />
-00000053&nbsp; 6875202324&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x24232075<br />
-00000058&nbsp; 6879207879&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x79782079<br />
-0000005D&nbsp; 6820797520&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x20757920<br />
-00000062&nbsp; 6876752378&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x78237576<br />
-00000067&nbsp; 6870742379&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x79237470<br />
-0000006C&nbsp; 6822717977&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x77797122<br />
-00000071&nbsp; 6822762572&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x72257622<br />
-00000076&nbsp; 6877742274&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x74227477<br />
-0000007B&nbsp; 6875737822&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x22787375<br />
-00000080&nbsp; 6822722077&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x77207222<br />
-00000085&nbsp; 6827272079&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x79202727<br />
-0000008A&nbsp; 6879227276&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x76722279<br />
-0000008F&nbsp; 6824792478&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x78247924<br />
-00000094&nbsp; 6825732727&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x27277325<br />
-00000099&nbsp; 6824257324&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x24732524<br />
-0000009E&nbsp; 6820777471&nbsp; &nbsp; &nbsp; &nbsp; push dword 0x71747720<br />
-000000A3&nbsp; 54&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; push esp<br />
-000000A4&nbsp; 5E&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pop esi<br />
-000000A5&nbsp; 8BFE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mov edi,esi<br />
-000000A7&nbsp; 8BD7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mov edx,edi<br />
-000000A9&nbsp; FC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cld<br />
-000000AA&nbsp; B980000000&nbsp; &nbsp; &nbsp; &nbsp; mov ecx,0x80<br />
-000000AF&nbsp; BB41000000&nbsp; &nbsp; &nbsp; &nbsp; mov ebx,0x41<br />
-000000B4&nbsp; 31C0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; xor eax,eax<br />
-000000B6&nbsp; 50&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; push eax<br />
-000000B7&nbsp; AC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lodsb<br />
-000000B8&nbsp; 33C3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; xor eax,ebx<br />
-000000BA&nbsp; AA&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; stosb<br />
-000000BB&nbsp; E2FA&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; loop 0xb7<br />
-000000BD&nbsp; 54&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; push esp<br />
-000000BE&nbsp; 5E&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pop esi<br />
-000000BF&nbsp; CC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int3</code><hr />
+	<hr/><code class="bbcode_code">&gt;&gt;&gt; __import__("os").system("ndisasm -b32 asdf.bin")<br/>
+00000000  31C0              xor eax,eax<br/>
+00000002  50                push eax<br/>
+00000003  6823252476        push dword 0x76242523<br/>
+00000008  6876792025        push dword 0x25207976<br/>
+0000000D  6823782572        push dword 0x72257823<br/>
+00000012  6825742020        push dword 0x20207425<br/>
+00000017  6872732527        push dword 0x27257372<br/>
+0000001C  6875787779        push dword 0x79777875<br/>
+00000021  6822727577        push dword 0x77757222<br/>
+00000026  6871257571        push dword 0x71752571<br/>
+0000002B  6824272320        push dword 0x20232724<br/>
+00000030  6825247823        push dword 0x23782425<br/>
+00000035  6877767176        push dword 0x76717677<br/>
+0000003A  6823247775        push dword 0x75772423<br/>
+0000003F  6874247824        push dword 0x24782474<br/>
+00000044  6871737027        push dword 0x27707371<br/>
+00000049  6877747423        push dword 0x23747477<br/>
+0000004E  6879777022        push dword 0x22707779<br/>
+00000053  6875202324        push dword 0x24232075<br/>
+00000058  6879207879        push dword 0x79782079<br/>
+0000005D  6820797520        push dword 0x20757920<br/>
+00000062  6876752378        push dword 0x78237576<br/>
+00000067  6870742379        push dword 0x79237470<br/>
+0000006C  6822717977        push dword 0x77797122<br/>
+00000071  6822762572        push dword 0x72257622<br/>
+00000076  6877742274        push dword 0x74227477<br/>
+0000007B  6875737822        push dword 0x22787375<br/>
+00000080  6822722077        push dword 0x77207222<br/>
+00000085  6827272079        push dword 0x79202727<br/>
+0000008A  6879227276        push dword 0x76722279<br/>
+0000008F  6824792478        push dword 0x78247924<br/>
+00000094  6825732727        push dword 0x27277325<br/>
+00000099  6824257324        push dword 0x24732524<br/>
+0000009E  6820777471        push dword 0x71747720<br/>
+000000A3  54                push esp<br/>
+000000A4  5E                pop esi<br/>
+000000A5  8BFE              mov edi,esi<br/>
+000000A7  8BD7              mov edx,edi<br/>
+000000A9  FC                cld<br/>
+000000AA  B980000000        mov ecx,0x80<br/>
+000000AF  BB41000000        mov ebx,0x41<br/>
+000000B4  31C0              xor eax,eax<br/>
+000000B6  50                push eax<br/>
+000000B7  AC                lodsb<br/>
+000000B8  33C3              xor eax,ebx<br/>
+000000BA  AA                stosb<br/>
+000000BB  E2FA              loop 0xb7<br/>
+000000BD  54                push esp<br/>
+000000BE  5E                pop esi<br/>
+000000BF  CC                int3</code><hr/>
 </div><div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">&gt;&gt;&gt; ab=bytearray(a)<br />
-&gt;&gt;&gt; enc = []<br />
-&gt;&gt;&gt; for i in range(3,0xa3):<br />
-...&nbsp;  if (i - 3) % 5 == 0:<br />
-...&nbsp; &nbsp;  continue<br />
-...&nbsp;  enc.append(ab[i])<br />
-... <br />
-&gt;&gt;&gt; enc<br />
-[35, 37, 36, 118, 118, 121, 32, 37, 35, 120, 37, 114, 37, 116, 32, 32, 114, 115, 37, 39, 117, 120, 119, 121, 34, 114, 117, 119, 113, 37, 117, 113, 36, 39, 35, 32, 37, 36, 120, 35, 119, 118, 113, 118, 35, 36, 119, 117, 116, 36, 120, 36, 113, 115, 112, 39, 119, 116, 116, 35, 121, 119, 112, 34, 117, 32, 35, 36, 121, 32, 120, 121, 32, 121, 117, 32, 118, 117, 35, 120, 112, 116, 35, 121, 34, 113, 121, 119, 34, 118, 37, 114, 119, 116, 34, 116, 117, 115, 120, 34, 34, 114, 32, 119, 39, 39, 32, 121, 121, 34, 114, 118, 36, 121, 36, 120, 37, 115, 39, 39, 36, 37, 115, 36, 32, 119, 116, 113]&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
-&gt;&gt;&gt; dec = ''.join([chr(x^0x41) for x in enc])</code><hr />
+	<hr/><code class="bbcode_code">&gt;&gt;&gt; ab=bytearray(a)<br/>
+&gt;&gt;&gt; enc = []<br/>
+&gt;&gt;&gt; for i in range(3,0xa3):<br/>
+...   if (i - 3) % 5 == 0:<br/>
+...     continue<br/>
+...   enc.append(ab[i])<br/>
+... <br/>
+&gt;&gt;&gt; enc<br/>
+[35, 37, 36, 118, 118, 121, 32, 37, 35, 120, 37, 114, 37, 116, 32, 32, 114, 115, 37, 39, 117, 120, 119, 121, 34, 114, 117, 119, 113, 37, 117, 113, 36, 39, 35, 32, 37, 36, 120, 35, 119, 118, 113, 118, 35, 36, 119, 117, 116, 36, 120, 36, 113, 115, 112, 39, 119, 116, 116, 35, 121, 119, 112, 34, 117, 32, 35, 36, 121, 32, 120, 121, 32, 121, 117, 32, 118, 117, 35, 120, 112, 116, 35, 121, 34, 113, 121, 119, 34, 118, 37, 114, 119, 116, 34, 116, 117, 115, 120, 34, 34, 114, 32, 119, 39, 39, 32, 121, 121, 34, 114, 118, 36, 121, 36, 120, 37, 115, 39, 39, 36, 37, 115, 36, 32, 119, 116, 113]                                                                                                <br/>
+&gt;&gt;&gt; dec = ''.join([chr(x^0x41) for x in enc])</code><hr/>
 </div><div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">&gt;&gt;&gt; dec<br />
-'bde778adb9d3d5aa32df4968c3460d40efbade9b6707be645e9e021f655b861c4abe8a98a84a74b915b8c086c7d365c5429cc3a6ffa88c37e8e9d2ffed2ea650'</code><hr />
-</div>The order was wrong, since push moves esp backwards; need to fix:<br />
+	<hr/><code class="bbcode_code">&gt;&gt;&gt; dec<br/>
+'bde778adb9d3d5aa32df4968c3460d40efbade9b6707be645e9e021f655b861c4abe8a98a84a74b915b8c086c7d365c5429cc3a6ffa88c37e8e9d2ffed2ea650'</code><hr/>
+</div>The order was wrong, since push moves esp backwards; need to fix:<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">&gt;&gt;&gt; ''.join([dec[i*4:(i+1)*4] for i in range(len(dec)/4)][::-1])<br />
-<br />
-'a650ed2ed2ffe8e98c37ffa8c3a6429c65c5c7d3c08615b874b9a84a8a984abe861c655b021f5e9ebe646707de9befba0d40c346496832dfd5aab9d378adbde7'</code><hr />
+	<hr/><code class="bbcode_code">&gt;&gt;&gt; ''.join([dec[i*4:(i+1)*4] for i in range(len(dec)/4)][::-1])<br/>
+<br/>
+'a650ed2ed2ffe8e98c37ffa8c3a6429c65c5c7d3c08615b874b9a84a8a984abe861c655b021f5e9ebe646707de9befba0d40c346496832dfd5aab9d378adbde7'</code><hr/>
 </div>Cheers</blockquote>
 	</div>
 </li>
@@ -136,14 +133,14 @@
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">04:07 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">04:07 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -161,7 +158,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=7015&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:22:59 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=7015&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:22:59 GMT --></html>

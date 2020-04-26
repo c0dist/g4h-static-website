@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=396&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:55:38 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=396&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:55:38 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Cloud Computing &amp; Architechture Advantages</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,128 +41,128 @@
 		<div class="title">Cloud Computing &amp; Architechture Advantages</div>
 	
 	<div class="content">
-		<blockquote class="restore"><b><u><span style="font-family: Arial Black">Introduction</span></u></b><br />
-<br />
-Cloud computing is a relatively new way of referring to the use of shared computing resources,<br />
-and it is an alternative to having local servers handle applications. Cloud computing groups<br />
-together large numbers of compute servers and other resources and typically offers their<br />
-combined capacity on an on-demand, pay-per-cycle basis. The end users of a cloud computing<br />
-network usually have no idea where the servers are physically locatedóthey just spin up their<br />
-application and start working.<br />
-Cloud computing is fully enabled by virtualization technology (hypervisors) and virtual<br />
-appliances. A virtual appliance is an application that is bundled with all the components that it<br />
-needs to run, along with a streamlined operating system. In a cloud computing environment, a<br />
-virtual appliance can be instantly provisioned and decommissioned as needed, without complex<br />
-configuration of the operating environment.<br />
-This flexibility is the key advantage to cloud computing, and what distinguishes it from other<br />
-forms of grid or utility computing and software as a service (SaaS). The ability to launch new<br />
-instances of an application with minimal labor and expense allows application providers to:<br />
-ï Scale up and down rapidly<br />
-ï Recover from a failure<br />
-ï Bring up development or test instances<br />
-ï Roll out new versions to the customer base<br />
-ï Efficiently load test an application<br />
-<br />
-<br />
-Architectural Considerations<br />
-Designing an application to run as a virtual appliance in a cloud computing environment is very<br />
-different than designing it for an on-premise or SaaS deployment. We discuss the following<br />
-considerations. To be successful in the cloud, your application must be designed to scale easily,<br />
-tolerate failures and include management tools.<br />
-Scale<br />
-Cloud computing offers the potential for nearly unlimited scalability, as long as the application<br />
-is designed to scale from the outset. The best way to ensure this is to follow some basic application<br />
-design guidelines:<br />
-<b>Start simple</b>: Avoid complex design and performance enhancements or optimizations in favor<br />
-of simplicity. Itís a good idea to start with the simplest application and rely on the scalability<br />
-of the cloud to provide enough servers to ensure good application performance. Once youíve<br />
-gotten some traction and demand has grown, then you can focus on improving the efficiency<br />
-of your application, which allows you to serve more users with the same number of servers<br />
-or to reduce the number of servers while maintaining performance. Some common design<br />
-techniques to improve performance include caching, server affinity, multi-threading and tight<br />
-sharing of data, but they all make it more difficult to distribute your application across many<br />
-servers. This is the reason you donít want to introduce them at the outset and only consider<br />
-them when you need to and can ensure that you are not breaking horizontal scalability.<br />
-<b>Split application functions and couple loosely</b>: Use separate systems for different pieces of application<br />
-functionality and avoid synchronous connections between them. Again, as demand<br />
-grows, you can scale each one independently instead of having to scale the entire application<br />
-when you hit a bottleneck. The separation and reusability of functions inherent in SOA make it<br />
-an ideal architecture for the cloud.<br />
-<br />
-<b>Network communication</b>: Design the application to use network-based interfaces and not interprocess<br />
-communication or file-based communication paradigms. This allows you to effectively<br />
-scale in the cloud because each piece of the application can be separated into distinct<br />
-systems.<br />
-<b>Consider the cluster</b>: Rather than scale a single system up to serve all users, consider splitting<br />
-your system into multiple smaller clusters, each serving a fraction of the application load. This<br />
-is often called ìshardingî and many web services can be split up along one dimension, often<br />
-users or account. Requests can then be directed to the appropriate cluster based on some<br />
-request attribute or users can be redirected to a specific cluster at login. To deploy a clustered<br />
-system, determine the right collection of servers that yield efficient application performance,<br />
-taking any needed functional redundancy into account; for example, 2 web, 4 application and<br />
-2 database servers. You can then scale the application by replicating the ideal cluster size and<br />
-splitting the system load across the servers in the clusters.<br />
-Youíll soon realize the advantages of cloud computing when it comes to scalability, such as:<br />
-ï <b>Inexpensive testing </b>- testing can be done against a test cluster without risking the performance<br />
-or integrity of the production system. You can also test the upper limits of the ideal<br />
-clusterís performance by using ìrobot usersî in the cloud to generate load.<br />
-ï <b>Reduced risk</b> - bring up a test instance of the cluster to prove a new code base, and roll out a<br />
-new version one cluster at a time. Fall back to an older version if the new version doesnít work,<br />
-without disrupting current users.<br />
-ï <b>Ability to segment the customer base </b>ñ use clusters to separate customers with varying demands,<br />
-such as a large customer who wants a private instance of the application, or one who<br />
-requires extensive customizations.<br />
-ï <b>Auto-scaling based on application load</b> ñ with the ready availability of resources, applications<br />
-can be built to recognize when they are reaching the limits of their current configuration and<br />
-automatically bring up new resources.<br />
-Fail<br />
-Inevitably, an application will fail, no matter what its environment. When you design an onpremise<br />
-or SaaS application, you typically consider several ìdoomsdayî scenarios. The same<br />
-must be true for designing an application that runs in the cloud.<br />
-Build-in resiliency and fault tolerance: To tolerate failure, applications must operate as a part of<br />
-a group, while not being too tightly coupled to their peers. Each piece of the application should<br />
-be able to continue to execute despite the loss of other functions. Asynchronous interfaces are<br />
-an ideal mechanism to help application components tolerate failures or momentary unavailability<br />
-of other components.<br />
-<b>Distribute the impact of failure</b>: With a distributed cloud application, a failure in any one application<br />
-cluster affects only a portion of the application and not the whole application. By<br />
-spreading the load across multiple clusters in the cloud, you can isolate the individual clusters<br />
-against failure in another cluster.<br />
-    <br />
-<b>Get back up quickly</b>: Automate the launching of new application clusters in order to recover<br />
-quickly. Application components must be able to come up in an automated fashion, configure<br />
-themselves and join the application cluster. Cloud computing provides the ideal environment<br />
-for this fast startup and recovery process.<br />
-Data considerations: When an application fails, data persistence and system state cannot be<br />
-taken for granted. To ensure data preservation, put all data on persistent storage and make<br />
-sure it is replicated and distributed. If system state is stored and then used in the recovery<br />
-process, treat it like data so the system can be restarted from the point of failure.<br />
-Test your ìdoomsdayî scenario: Cloud computing makes it easy to bring up an instance of your<br />
-application to test various failure scenarios. Because of the flexible nature of cloud computing,<br />
-it is possible to simulate many different failure scenarios at a very reasonable cost. Single<br />
-instances of a system can be taken off-line to see how the rest of the application will respond.<br />
-Likewise, multiple recovery scenarios can be planned and executed ahead of any real production<br />
-failure.<br />
-Be aware of the real cost of failure: Of course the ideal situation is avoiding any application<br />
-failure, but what is the cost to provide that assurance? A large internet company once said<br />
-that they could tolerate failure as long as the impact was small enough as to not be noticeable<br />
-to the overall customer base. This assertion came from an analysis of what it would cost<br />
-to ensure seven nines of application uptime versus the impact of a failure on a portion of the<br />
-customer base.<br />
-<b>Manage</b><br />
-Deploying cloud applications as virtual appliances makes management significantly easier. The<br />
-appliances should bring with them all of the software they need for their entire lifecycle in the<br />
-cloud. More important, they should be built in a systematic way, akin to an assembly line production<br />
-effort as opposed to a hand crafted approach. The reason for this systematic approach<br />
-is the consistency of creating and re-creating images. We have shown how effectively scaling<br />
-and failure recovery can be handled by rapid provisioning of new systems, but these benefits<br />
-cannot be achieved if the images to be provisioned are not consistent and repeatable.<br />
-When building appliances, it is obvious that they should contain the operating system and any<br />
-middleware components they need. Less obvious are the software packages that allow them<br />
-to automatically configure themselves, monitor and report their state back to a management<br />
-system, and update themselves in an automated fashion. Automating the appliance configuration<br />
-and updates means that as the application grows in the cloud, the management overhead<br />
-does not grow in proportion. In this way appliances can live inside the cloud for any length of<br />
+		<blockquote class="restore"><b><u><span style="font-family: Arial Black">Introduction</span></u></b><br/>
+<br/>
+Cloud computing is a relatively new way of referring to the use of shared computing resources,<br/>
+and it is an alternative to having local servers handle applications. Cloud computing groups<br/>
+together large numbers of compute servers and other resources and typically offers their<br/>
+combined capacity on an on-demand, pay-per-cycle basis. The end users of a cloud computing<br/>
+network usually have no idea where the servers are physically located‚Äîthey just spin up their<br/>
+application and start working.<br/>
+Cloud computing is fully enabled by virtualization technology (hypervisors) and virtual<br/>
+appliances. A virtual appliance is an application that is bundled with all the components that it<br/>
+needs to run, along with a streamlined operating system. In a cloud computing environment, a<br/>
+virtual appliance can be instantly provisioned and decommissioned as needed, without complex<br/>
+configuration of the operating environment.<br/>
+This flexibility is the key advantage to cloud computing, and what distinguishes it from other<br/>
+forms of grid or utility computing and software as a service (SaaS). The ability to launch new<br/>
+instances of an application with minimal labor and expense allows application providers to:<br/>
+‚Ä¢ Scale up and down rapidly<br/>
+‚Ä¢ Recover from a failure<br/>
+‚Ä¢ Bring up development or test instances<br/>
+‚Ä¢ Roll out new versions to the customer base<br/>
+‚Ä¢ Efficiently load test an application<br/>
+<br/>
+<br/>
+Architectural Considerations<br/>
+Designing an application to run as a virtual appliance in a cloud computing environment is very<br/>
+different than designing it for an on-premise or SaaS deployment. We discuss the following<br/>
+considerations. To be successful in the cloud, your application must be designed to scale easily,<br/>
+tolerate failures and include management tools.<br/>
+Scale<br/>
+Cloud computing offers the potential for nearly unlimited scalability, as long as the application<br/>
+is designed to scale from the outset. The best way to ensure this is to follow some basic application<br/>
+design guidelines:<br/>
+<b>Start simple</b>: Avoid complex design and performance enhancements or optimizations in favor<br/>
+of simplicity. It‚Äôs a good idea to start with the simplest application and rely on the scalability<br/>
+of the cloud to provide enough servers to ensure good application performance. Once you‚Äôve<br/>
+gotten some traction and demand has grown, then you can focus on improving the efficiency<br/>
+of your application, which allows you to serve more users with the same number of servers<br/>
+or to reduce the number of servers while maintaining performance. Some common design<br/>
+techniques to improve performance include caching, server affinity, multi-threading and tight<br/>
+sharing of data, but they all make it more difficult to distribute your application across many<br/>
+servers. This is the reason you don‚Äôt want to introduce them at the outset and only consider<br/>
+them when you need to and can ensure that you are not breaking horizontal scalability.<br/>
+<b>Split application functions and couple loosely</b>: Use separate systems for different pieces of application<br/>
+functionality and avoid synchronous connections between them. Again, as demand<br/>
+grows, you can scale each one independently instead of having to scale the entire application<br/>
+when you hit a bottleneck. The separation and reusability of functions inherent in SOA make it<br/>
+an ideal architecture for the cloud.<br/>
+<br/>
+<b>Network communication</b>: Design the application to use network-based interfaces and not interprocess<br/>
+communication or file-based communication paradigms. This allows you to effectively<br/>
+scale in the cloud because each piece of the application can be separated into distinct<br/>
+systems.<br/>
+<b>Consider the cluster</b>: Rather than scale a single system up to serve all users, consider splitting<br/>
+your system into multiple smaller clusters, each serving a fraction of the application load. This<br/>
+is often called ‚Äúsharding‚Äù and many web services can be split up along one dimension, often<br/>
+users or account. Requests can then be directed to the appropriate cluster based on some<br/>
+request attribute or users can be redirected to a specific cluster at login. To deploy a clustered<br/>
+system, determine the right collection of servers that yield efficient application performance,<br/>
+taking any needed functional redundancy into account; for example, 2 web, 4 application and<br/>
+2 database servers. You can then scale the application by replicating the ideal cluster size and<br/>
+splitting the system load across the servers in the clusters.<br/>
+You‚Äôll soon realize the advantages of cloud computing when it comes to scalability, such as:<br/>
+‚Ä¢ <b>Inexpensive testing </b>- testing can be done against a test cluster without risking the performance<br/>
+or integrity of the production system. You can also test the upper limits of the ideal<br/>
+cluster‚Äôs performance by using ‚Äúrobot users‚Äù in the cloud to generate load.<br/>
+‚Ä¢ <b>Reduced risk</b> - bring up a test instance of the cluster to prove a new code base, and roll out a<br/>
+new version one cluster at a time. Fall back to an older version if the new version doesn‚Äôt work,<br/>
+without disrupting current users.<br/>
+‚Ä¢ <b>Ability to segment the customer base </b>‚Äì use clusters to separate customers with varying demands,<br/>
+such as a large customer who wants a private instance of the application, or one who<br/>
+requires extensive customizations.<br/>
+‚Ä¢ <b>Auto-scaling based on application load</b> ‚Äì with the ready availability of resources, applications<br/>
+can be built to recognize when they are reaching the limits of their current configuration and<br/>
+automatically bring up new resources.<br/>
+Fail<br/>
+Inevitably, an application will fail, no matter what its environment. When you design an onpremise<br/>
+or SaaS application, you typically consider several ‚Äúdoomsday‚Äù scenarios. The same<br/>
+must be true for designing an application that runs in the cloud.<br/>
+Build-in resiliency and fault tolerance: To tolerate failure, applications must operate as a part of<br/>
+a group, while not being too tightly coupled to their peers. Each piece of the application should<br/>
+be able to continue to execute despite the loss of other functions. Asynchronous interfaces are<br/>
+an ideal mechanism to help application components tolerate failures or momentary unavailability<br/>
+of other components.<br/>
+<b>Distribute the impact of failure</b>: With a distributed cloud application, a failure in any one application<br/>
+cluster affects only a portion of the application and not the whole application. By<br/>
+spreading the load across multiple clusters in the cloud, you can isolate the individual clusters<br/>
+against failure in another cluster.<br/>
+    <br/>
+<b>Get back up quickly</b>: Automate the launching of new application clusters in order to recover<br/>
+quickly. Application components must be able to come up in an automated fashion, configure<br/>
+themselves and join the application cluster. Cloud computing provides the ideal environment<br/>
+for this fast startup and recovery process.<br/>
+Data considerations: When an application fails, data persistence and system state cannot be<br/>
+taken for granted. To ensure data preservation, put all data on persistent storage and make<br/>
+sure it is replicated and distributed. If system state is stored and then used in the recovery<br/>
+process, treat it like data so the system can be restarted from the point of failure.<br/>
+Test your ‚Äúdoomsday‚Äù scenario: Cloud computing makes it easy to bring up an instance of your<br/>
+application to test various failure scenarios. Because of the flexible nature of cloud computing,<br/>
+it is possible to simulate many different failure scenarios at a very reasonable cost. Single<br/>
+instances of a system can be taken off-line to see how the rest of the application will respond.<br/>
+Likewise, multiple recovery scenarios can be planned and executed ahead of any real production<br/>
+failure.<br/>
+Be aware of the real cost of failure: Of course the ideal situation is avoiding any application<br/>
+failure, but what is the cost to provide that assurance? A large internet company once said<br/>
+that they could tolerate failure as long as the impact was small enough as to not be noticeable<br/>
+to the overall customer base. This assertion came from an analysis of what it would cost<br/>
+to ensure seven nines of application uptime versus the impact of a failure on a portion of the<br/>
+customer base.<br/>
+<b>Manage</b><br/>
+Deploying cloud applications as virtual appliances makes management significantly easier. The<br/>
+appliances should bring with them all of the software they need for their entire lifecycle in the<br/>
+cloud. More important, they should be built in a systematic way, akin to an assembly line production<br/>
+effort as opposed to a hand crafted approach. The reason for this systematic approach<br/>
+is the consistency of creating and re-creating images. We have shown how effectively scaling<br/>
+and failure recovery can be handled by rapid provisioning of new systems, but these benefits<br/>
+cannot be achieved if the images to be provisioned are not consistent and repeatable.<br/>
+When building appliances, it is obvious that they should contain the operating system and any<br/>
+middleware components they need. Less obvious are the software packages that allow them<br/>
+to automatically configure themselves, monitor and report their state back to a management<br/>
+system, and update themselves in an automated fashion. Automating the appliance configuration<br/>
+and updates means that as the application grows in the cloud, the management overhead<br/>
+does not grow in proportion. In this way appliances can live inside the cloud for any length of<br/>
 time with minimal management overhead.</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -218,8 +215,8 @@ time with minimal management overhead.</blockquote>
 		<div class="title">Cloud Computing &amp; Architechture Advantages</div>
 	
 	<div class="content">
-		<blockquote class="restore">&quot;This is very informative. You have shared us such an instructive, useful and helpful to us.<br />
-&quot;</blockquote>
+		<blockquote class="restore">"This is very informative. You have shared us such an instructive, useful and helpful to us.<br/>
+"</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_7">
 	<div class="header">
@@ -229,7 +226,7 @@ time with minimal management overhead.</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">The term &quot;cloud&quot; is used as a metaphor for the Internet, based on the cloud drawing used to represent the Internet in computer network diagrams.</blockquote>
+		<blockquote class="restore">The term "cloud" is used as a metaphor for the Internet, based on the cloud drawing used to represent the Internet in computer network diagrams.</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_8">
 	<div class="header">
@@ -239,7 +236,7 @@ time with minimal management overhead.</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">You have really explained the term &quot;Cloud Computing&quot; and its advantages. I think one don't need to go any where else. Every thing is covered in this small post. Thanks for posting.</blockquote>
+		<blockquote class="restore">You have really explained the term "Cloud Computing" and its advantages. I think one don't need to go any where else. Every thing is covered in this small post. Thanks for posting.</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_9">
 	<div class="header">
@@ -249,9 +246,9 @@ time with minimal management overhead.</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">You have a very clear explanation of cloud computing. All of my questions are answers just by reading you post.<br />
-<br />
-____________________________________<br />
+		<blockquote class="restore">You have a very clear explanation of cloud computing. All of my questions are answers just by reading you post.<br/>
+<br/>
+____________________________________<br/>
 <a href="../external.html?link=http://www.atscloud.com/solutions-and-services/private-cloud/" target="_blank">Private Cloud Hosting</a></blockquote>
 	</div>
 </li>
@@ -260,14 +257,14 @@ ____________________________________<br />
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:37 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:37 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin¬Æ</a> Version 4.2.1 <br/>Copyright ¬© 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -285,7 +282,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=396&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:55:38 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=396&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:55:38 GMT --></html>

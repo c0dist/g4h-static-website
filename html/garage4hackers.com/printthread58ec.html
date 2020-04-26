@@ -1,33 +1,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=6123&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:59 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6123&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:59 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
-	<title> Check Alexa Ranking of a Domain - &quot;alexa.py&quot;</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<title> Check Alexa Ranking of a Domain - "alexa.py"</title>
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
 <div id="pagetitle">
-	<h1><a href="showthreadd73a.html?t=6123">Check Alexa Ranking of a Domain - &quot;alexa.py&quot;</a></h1>
+	<h1><a href="showthreadd73a.html?t=6123">Check Alexa Ranking of a Domain - "alexa.py"</a></h1>
 	<p class="description">Printable View</p>
 </div>
 
@@ -41,68 +38,68 @@
 	</div>
 	
 	
-		<div class="title">Check Alexa Ranking of a Domain - &quot;alexa.py&quot;</div>
+		<div class="title">Check Alexa Ranking of a Domain - "alexa.py"</div>
 	
 	<div class="content">
-		<blockquote class="restore">Hello,<br />
-<br />
-I just wrote a quick and dirty solution to check Alexa ranking of a domain. So, I thought would share the script with you guys. Might help someone. :)<br />
-<br />
-<b>Note:</b> This script uses BeautifulSoup to parse the webpage for extracting ranks. This script might stop working in future if structure of Alexa's website is changed. Also, you should have BeautifulSoup 4 and Requests libraries. And, this script prints the global ranking and single county rank, without changing anything from wepage. Might not work as expected and may cause Gotham to fall into clutches of Joker (I would hate that though.). Well If you still insist, here's the code: <br />
-<br />
+		<blockquote class="restore">Hello,<br/>
+<br/>
+I just wrote a quick and dirty solution to check Alexa ranking of a domain. So, I thought would share the script with you guys. Might help someone. :)<br/>
+<br/>
+<b>Note:</b> This script uses BeautifulSoup to parse the webpage for extracting ranks. This script might stop working in future if structure of Alexa's website is changed. Also, you should have BeautifulSoup 4 and Requests libraries. And, this script prints the global ranking and single county rank, without changing anything from wepage. Might not work as expected and may cause Gotham to fall into clutches of Joker (I would hate that though.). Well If you still insist, here's the code: <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">#!/usr/bin/env python<br />
-# Description: A quick script to check a domain's Alexa rank.<br />
-# Author: c0dist<br />
-# Usage: python alexa.py &lt;domain_to_query&gt;<br />
-<br />
-import sys<br />
-import requests<br />
-from bs4 import BeautifulSoup as bs<br />
-<br />
-def get_rank(domain_to_query):<br />
-&nbsp; &nbsp; result = {'Global':''}<br />
-&nbsp; &nbsp; url = &quot;http://www.alexa.com/siteinfo/&quot; + domain_to_query<br />
-&nbsp; &nbsp; page = requests.get(url).text<br />
-&nbsp; &nbsp; soup = bs(page)<br />
-&nbsp; &nbsp; for span in soup.find_all('span'):<br />
-&nbsp; &nbsp; &nbsp; &nbsp; if span.has_attr(&quot;class&quot;):<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if &quot;globleRank&quot; in span[&quot;class&quot;]:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for strong in span.find_all(&quot;strong&quot;):<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if strong.has_attr(&quot;class&quot;):<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if &quot;metrics-data&quot; in strong[&quot;class&quot;]:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; result['Global'] = strong.text<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Extracting CountryRank<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if &quot;countryRank&quot; in span[&quot;class&quot;]:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; image = span.find_all(&quot;img&quot;)<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for img in image:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if img.has_attr(&quot;title&quot;):<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; country = img[&quot;title&quot;]<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for strong in span.find_all(&quot;strong&quot;):<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if strong.has_attr(&quot;class&quot;):<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if &quot;metrics-data&quot; in strong[&quot;class&quot;]:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; result[country] = strong.text<br />
-&nbsp; &nbsp; return result<br />
-<br />
-if __name__ == '__main__':<br />
-&nbsp; &nbsp; print get_rank(sys.argv[1])</code><hr />
-</div><br />
-<b>Usage:</b><br />
+	<hr/><code class="bbcode_code">#!/usr/bin/env python<br/>
+# Description: A quick script to check a domain's Alexa rank.<br/>
+# Author: c0dist<br/>
+# Usage: python alexa.py &lt;domain_to_query&gt;<br/>
+<br/>
+import sys<br/>
+import requests<br/>
+from bs4 import BeautifulSoup as bs<br/>
+<br/>
+def get_rank(domain_to_query):<br/>
+    result = {'Global':''}<br/>
+    url = "http://www.alexa.com/siteinfo/" + domain_to_query<br/>
+    page = requests.get(url).text<br/>
+    soup = bs(page)<br/>
+    for span in soup.find_all('span'):<br/>
+        if span.has_attr("class"):<br/>
+            if "globleRank" in span["class"]:<br/>
+                for strong in span.find_all("strong"):<br/>
+                    if strong.has_attr("class"):<br/>
+                        if "metrics-data" in strong["class"]:<br/>
+                            result['Global'] = strong.text<br/>
+            # Extracting CountryRank<br/>
+            if "countryRank" in span["class"]:<br/>
+                image = span.find_all("img")<br/>
+                for img in image:<br/>
+                    if img.has_attr("title"):<br/>
+                        country = img["title"]<br/>
+                for strong in span.find_all("strong"):<br/>
+                    if strong.has_attr("class"):<br/>
+                        if "metrics-data" in strong["class"]:<br/>
+                            result[country] = strong.text<br/>
+    return result<br/>
+<br/>
+if __name__ == '__main__':<br/>
+    print get_rank(sys.argv[1])</code><hr/>
+</div><br/>
+<b>Usage:</b><br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">batman@gothamcity ~ $ python alexa.py google.com<br />
-{'Global': u'1', 'United States Flag': u'1'}</code><hr />
-</div><b>Using inside another python script:</b><br />
+	<hr/><code class="bbcode_code">batman@gothamcity ~ $ python alexa.py google.com<br/>
+{'Global': u'1', 'United States Flag': u'1'}</code><hr/>
+</div><b>Using inside another python script:</b><br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">#!/usr/bin/env python<br />
-import alexa<br />
-<br />
-print alexa.get_rank(&quot;garage4hackers.com&quot;) # Yup, just like this. ;) Returns a dictionary. You can parse accordingly.</code><hr />
-</div>Share your suggestions and comments (if any) :D<br />
-<br />
-Regards,<br />
+	<hr/><code class="bbcode_code">#!/usr/bin/env python<br/>
+import alexa<br/>
+<br/>
+print alexa.get_rank("garage4hackers.com") # Yup, just like this. ;) Returns a dictionary. You can parse accordingly.</code><hr/>
+</div>Share your suggestions and comments (if any) :D<br/>
+<br/>
+Regards,<br/>
 c0dist</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -113,8 +110,8 @@ c0dist</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">Also, while browsing forum, came across this Perl script by silentph33r which does the same work plus reverse IP lookup. Though haven't tested the script.<br />
-<br />
+		<blockquote class="restore">Also, while browsing forum, came across this Perl script by silentph33r which does the same work plus reverse IP lookup. Though haven't tested the script.<br/>
+<br/>
 POst link - <a href="content6b4e.html?r=81-perl-Reverse-IP-and-Alexa-Rank-Checker" target="_blank">http://garage4hackers.com/content.ph...a-Rank-Checker</a></blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_3">
@@ -125,8 +122,8 @@ POst link - <a href="content6b4e.html?r=81-perl-Reverse-IP-and-Alexa-Rank-Checke
 	
 	
 	<div class="content">
-		<blockquote class="restore">Thanks for sharing it! Open source is always welcome!<br />
-<br />
+		<blockquote class="restore">Thanks for sharing it! Open source is always welcome!<br/>
+<br/>
 Cheers!</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_4">
@@ -145,14 +142,14 @@ Cheers!</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:48 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:48 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -170,7 +167,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6123&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:59 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=6123&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:08:59 GMT --></html>

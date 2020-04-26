@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=1591&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:36:28 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=1591&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:36:28 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Forensics Basic terms</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,73 +41,73 @@
 		<div class="title">Forensics Basic terms</div>
 	
 	<div class="content">
-		<blockquote class="restore">Hi <br />
-<br />
-This article is absolutely for beginners , just to give a basic idea of what exactly the term means .please correct me if i am wrong . this collection i prepared for one basic presentation thought sharing would be good.<br />
-<br />
-<b>What is Acquisition?</b><br />
-Acquisition is a process of copying bit by bit of data from a disk to an image / another disk.<br />
-<br />
-<b> Laymen Term:</b><br />
-Acquisition is a process of copying digital data from a source to an image or another sterilized Hard disk which can be utilized for analysis<br />
-<br />
-<b>Why Acquisition is needed?</b><br />
-<br />
-To avoid Data Loss<br />
-To retrieve evidences <br />
-To analyze the Acquired image, it may lead to the evidence where we can find the root cause for the crime <br />
-<br />
-<b>Cloning:</b><br />
-To Copy the contents of a Hard disk to another disk. Hard disk drives are ten cloned for batch installation on other computers, particularly those on a network, or for use as backups. <br />
-<br />
-<b>Imaging:</b><br />
-To copy or replicate the entire contents of a hard disk drive to an image for use as of backups, analysis and more. <br />
-<br />
-<b>File Slack</b><br />
-The space between the end of a file and the end of the disk cluster it is stored in. Also called &quot;file slack,&quot; it occurs naturally because data rarely fill fixed storage locations exactly, and residual data occur when a smaller file is written into the same cluster as a previous larger file. In computer forensics, slack space is examined because it may contain meaningful data.<br />
-<br />
-<b>Carving</b><br />
-A process of extracting data out of undifferentiated blocks, <br />
-Ex: Searching an input for files or other kinds of objects based on content<br />
-<br />
-<b>Orphan</b><br />
-A file that was once associated with a program that still remains on the computer even after the program has been uninstalled. This often occurs when a program is deleted and not uninstalled or when the uninstall portion of the program does not properly uninstall all associated files.<br />
-<br />
-<b>Cluster:</b><br />
-	Space allocated to store files, each cluster consists of 1 to 64 sectors, Depending on the size and type of the disk. A cluster is the smallest unit of disk space that can be allocated for use by files.<br />
-<br />
-<b>Ambient Data:</b><br />
-	It generally describes the data which is stored in File Slack, windows Swap file and unallocated space.<br />
-<br />
-<b>Unallocated space:</b><br />
-	This is one of the most important place for a forensics investigator where they can get the data of deleted files, and orphan files.<br />
-<br />
-Unallocated space is simply defined as the area or space on the hard drive of the computer that is available to write data to. <br />
-<br />
-	Unallocated space can contain deleted files or partially deleted files.  When a file is deleted, the pointers to the file are removed, but the data remains in unallocated space until such time as the operating system stores another file in the same space.<br />
-<br />
-<b>Steganography:</b><br />
-	It is a technique of hiding a secret message with in as ordinary message and extracting it at the destination.<br />
-<br />
-My friend explained it more clearly in the earlier posts<br />
-<br />
-	<br />
-<b>Types of images:<br />
-<br />
-</b> Some of the file types which we can use for analysis / recovery is <br />
-RAW, DD, SMART, E01, img, gho<br />
-Mostly we use dd to make images and its the commonly used application in Acquisition packages like TSK Guymager etc...<br />
-RAW or DD images just contain the data from the original source, and nothing else. Any hash data etc. is usually stored in a separate log file that is generally stored with the image file.<br />
-<br />
-SMART can store disk images as pure bit streams (compressed or uncompressed). <br />
-Encase image(E01) format includes a separate hash for each segment, and the hash file and certain information about the image - including information entered by the examiner is stored inside the image files themselves. Hence an E01 is more than just the image, it also contains meta data relating to the image file.<br />
-<br />
-<br />
-to be continued ....<br />
-<br />
-<br />
-Regards<br />
-----<br />
+		<blockquote class="restore">Hi <br/>
+<br/>
+This article is absolutely for beginners , just to give a basic idea of what exactly the term means .please correct me if i am wrong . this collection i prepared for one basic presentation thought sharing would be good.<br/>
+<br/>
+<b>What is Acquisition?</b><br/>
+Acquisition is a process of copying bit by bit of data from a disk to an image / another disk.<br/>
+<br/>
+<b> Laymen Term:</b><br/>
+Acquisition is a process of copying digital data from a source to an image or another sterilized Hard disk which can be utilized for analysis<br/>
+<br/>
+<b>Why Acquisition is needed?</b><br/>
+<br/>
+To avoid Data Loss<br/>
+To retrieve evidences <br/>
+To analyze the Acquired image, it may lead to the evidence where we can find the root cause for the crime <br/>
+<br/>
+<b>Cloning:</b><br/>
+To Copy the contents of a Hard disk to another disk. Hard disk drives are ten cloned for batch installation on other computers, particularly those on a network, or for use as backups. <br/>
+<br/>
+<b>Imaging:</b><br/>
+To copy or replicate the entire contents of a hard disk drive to an image for use as of backups, analysis and more. <br/>
+<br/>
+<b>File Slack</b><br/>
+The space between the end of a file and the end of the disk cluster it is stored in. Also called "file slack," it occurs naturally because data rarely fill fixed storage locations exactly, and residual data occur when a smaller file is written into the same cluster as a previous larger file. In computer forensics, slack space is examined because it may contain meaningful data.<br/>
+<br/>
+<b>Carving</b><br/>
+A process of extracting data out of undifferentiated blocks, <br/>
+Ex: Searching an input for files or other kinds of objects based on content<br/>
+<br/>
+<b>Orphan</b><br/>
+A file that was once associated with a program that still remains on the computer even after the program has been uninstalled. This often occurs when a program is deleted and not uninstalled or when the uninstall portion of the program does not properly uninstall all associated files.<br/>
+<br/>
+<b>Cluster:</b><br/>
+	Space allocated to store files, each cluster consists of 1 to 64 sectors, Depending on the size and type of the disk. A cluster is the smallest unit of disk space that can be allocated for use by files.<br/>
+<br/>
+<b>Ambient Data:</b><br/>
+	It generally describes the data which is stored in File Slack, windows Swap file and unallocated space.<br/>
+<br/>
+<b>Unallocated space:</b><br/>
+	This is one of the most important place for a forensics investigator where they can get the data of deleted files, and orphan files.<br/>
+<br/>
+Unallocated space is simply defined as the area or space on the hard drive of the computer that is available to write data to. <br/>
+<br/>
+	Unallocated space can contain deleted files or partially deleted files.  When a file is deleted, the pointers to the file are removed, but the data remains in unallocated space until such time as the operating system stores another file in the same space.<br/>
+<br/>
+<b>Steganography:</b><br/>
+	It is a technique of hiding a secret message with in as ordinary message and extracting it at the destination.<br/>
+<br/>
+My friend explained it more clearly in the earlier posts<br/>
+<br/>
+	<br/>
+<b>Types of images:<br/>
+<br/>
+</b> Some of the file types which we can use for analysis / recovery is <br/>
+RAW, DD, SMART, E01, img, gho<br/>
+Mostly we use dd to make images and its the commonly used application in Acquisition packages like TSK Guymager etc...<br/>
+RAW or DD images just contain the data from the original source, and nothing else. Any hash data etc. is usually stored in a separate log file that is generally stored with the image file.<br/>
+<br/>
+SMART can store disk images as pure bit streams (compressed or uncompressed). <br/>
+Encase image(E01) format includes a separate hash for each segment, and the hash file and certain information about the image - including information entered by the examiner is stored inside the image files themselves. Hence an E01 is more than just the image, it also contains meta data relating to the image file.<br/>
+<br/>
+<br/>
+to be continued ....<br/>
+<br/>
+<br/>
+Regards<br/>
+----<br/>
 babloo</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -129,14 +126,14 @@ babloo</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:12 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:12 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -154,7 +151,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=1591&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:36:28 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=1591&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:36:28 GMT --></html>

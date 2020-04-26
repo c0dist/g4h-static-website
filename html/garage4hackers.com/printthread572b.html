@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=6746&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:33:38 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6746&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:33:38 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Reporting vulnerabilities</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,21 +41,21 @@
 		<div class="title">Reporting vulnerabilities</div>
 	
 	<div class="content">
-		<blockquote class="restore">Respected members,<br />
-<br />
-Recently I came across a situation where I found an issue but I cannot exploit it. I am in dilemma whether I should report it or not.<br />
-<br />
-The issue is XEE: XML Entity Expansion. XML entities have been expanding as part of an error message. Content of error message is truncated after 4 entities. So I can expand up to only 4 entities. <br />
-<br />
-Now my questions are:<br />
-<br />
-1) Is this really a qualified XEE case?<br />
-2) Would you report it or not? If you decide to report, would you name it as &quot;Potential XEE&quot; or just &quot;XEE&quot;?<br />
-3) How should we report in cases of asynchronous vulnerabilities like Blind Second Order SQL Injection, Blind XSS etc?<br />
-<br />
-Please share your valuable thoughts.<br />
-<br />
-Regards,<br />
+		<blockquote class="restore">Respected members,<br/>
+<br/>
+Recently I came across a situation where I found an issue but I cannot exploit it. I am in dilemma whether I should report it or not.<br/>
+<br/>
+The issue is XEE: XML Entity Expansion. XML entities have been expanding as part of an error message. Content of error message is truncated after 4 entities. So I can expand up to only 4 entities. <br/>
+<br/>
+Now my questions are:<br/>
+<br/>
+1) Is this really a qualified XEE case?<br/>
+2) Would you report it or not? If you decide to report, would you name it as "Potential XEE" or just "XEE"?<br/>
+3) How should we report in cases of asynchronous vulnerabilities like Blind Second Order SQL Injection, Blind XSS etc?<br/>
+<br/>
+Please share your valuable thoughts.<br/>
+<br/>
+Regards,<br/>
 Nagpradis</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -72,53 +69,53 @@ Nagpradis</blockquote>
 		<blockquote class="restore"><div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
 			The issue is XEE: XML Entity Expansion. XML entities have been expanding as part of an error message. Content of error message is truncated after 4 entities. So I can expand up to only 4 entities.
 			
-		<hr />
+		<hr/>
 	</div>
-</div>If I'm not wrong your talking about XXE. And could you please share output to get more clear picture. You can send me PM for that.   <br />
-<br />
-Now my questions are:<br />
-<br />
+</div>If I'm not wrong your talking about XXE. And could you please share output to get more clear picture. You can send me PM for that.   <br/>
+<br/>
+Now my questions are:<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
 			1) Is this really a qualified XEE case?
 			
-		<hr />
+		<hr/>
 	</div>
-</div>You able to execute commands using XML External Entity (XXE) ?  How you validating this is an XXE ? <br />
-<br />
+</div>You able to execute commands using XML External Entity (XXE) ?  How you validating this is an XXE ? <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
-			2) Would you report it or not? If you decide to report, would you name it as &quot;Potential XEE&quot; or just &quot;XEE&quot;?
+			2) Would you report it or not? If you decide to report, would you name it as "Potential XEE" or just "XEE"?
 			
-		<hr />
+		<hr/>
 	</div>
-</div>I would like to suggest not to report before you have something potential working exploit or at-least one proof of concept. <br />
-<br />
-for the reference you can look at <a href="../external.html?link=https://blog.bugcrowd.com/advice-from-a-researcher-xxe/" target="_blank">https://blog.bugcrowd.com/advice-from-a-researcher-xxe/</a><br />
-<br />
+</div>I would like to suggest not to report before you have something potential working exploit or at-least one proof of concept. <br/>
+<br/>
+for the reference you can look at <a href="../external.html?link=https://blog.bugcrowd.com/advice-from-a-researcher-xxe/" target="_blank">https://blog.bugcrowd.com/advice-from-a-researcher-xxe/</a><br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
 			3) How should we report in cases of asynchronous vulnerabilities like Blind Second Order SQL Injection, Blind XSS etc?
 			
-		<hr />
+		<hr/>
 	</div>
-</div>Simple<br />
-<br />
-Amol already posted about SQL injection testing here <a href="showthread3c37.html?t=1990" target="_blank">http://garage4hackers.com/showthread.php?t=1990</a><br />
-<br />
+</div>Simple<br/>
+<br/>
+Amol already posted about SQL injection testing here <a href="showthread3c37.html?t=1990" target="_blank">http://garage4hackers.com/showthread.php?t=1990</a><br/>
+<br/>
 I hope this would help you.</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_3">
@@ -129,14 +126,14 @@ I hope this would help you.</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">As per XEE description (<a href="../external.html?link=http://projects.webappsec.org/w/page/13247002/XML Entity Expansion" target="_blank">http://projects.webappsec.org/w/page...ty%20Expansion</a>), this vulnerability results in the DoS which consumes all server resources. From your response it doesn't look like you are able to perform DoS as it's only expanding till 4 entities. Here are my responses for your query:<br />
-1) Is this really a qualified XEE case?<br />
--- IMO the vulnerability is not valid unless the impact is proven. In this case, it's not.<br />
-2) Would you report it or not? If you decide to report, would you name it as &quot;Potential XEE&quot; or just &quot;XEE&quot;?<br />
--- It totally depends where you found this. If this app is under a professional test or internal assessment, you might want to report it as potential XEE as in future it might turn into real DoS if anything changed. If this is under bug bounty, you may want to report is as above not expecting any reward or HoF as this is not actually a bug ATM<br />
-3) How should we report in cases of asynchronous vulnerabilities like Blind Second Order SQL Injection, Blind XSS etc?<br />
--- I didn't get this question and I don't want to answer it based on assumptions. If you could provide more info on this, it'll be great.<br />
-<br />
+		<blockquote class="restore">As per XEE description (<a href="../external.html?link=http://projects.webappsec.org/w/page/13247002/XML Entity Expansion" target="_blank">http://projects.webappsec.org/w/page...ty%20Expansion</a>), this vulnerability results in the DoS which consumes all server resources. From your response it doesn't look like you are able to perform DoS as it's only expanding till 4 entities. Here are my responses for your query:<br/>
+1) Is this really a qualified XEE case?<br/>
+-- IMO the vulnerability is not valid unless the impact is proven. In this case, it's not.<br/>
+2) Would you report it or not? If you decide to report, would you name it as "Potential XEE" or just "XEE"?<br/>
+-- It totally depends where you found this. If this app is under a professional test or internal assessment, you might want to report it as potential XEE as in future it might turn into real DoS if anything changed. If this is under bug bounty, you may want to report is as above not expecting any reward or HoF as this is not actually a bug ATM<br/>
+3) How should we report in cases of asynchronous vulnerabilities like Blind Second Order SQL Injection, Blind XSS etc?<br/>
+-- I didn't get this question and I don't want to answer it based on assumptions. If you could provide more info on this, it'll be great.<br/>
+<br/>
 AMol NAik</blockquote>
 	</div>
 </li>
@@ -145,14 +142,14 @@ AMol NAik</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:08 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:08 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -170,7 +167,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6746&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:33:38 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=6746&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:33:38 GMT --></html>

@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=6943&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:35:45 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6943&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:35:45 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Finding some string in executables and dlls</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,15 +41,15 @@
 		<div class="title">Finding some string in executables and dlls</div>
 	
 	<div class="content">
-		<blockquote class="restore">Scenario:<br />
-You see an application popping some text on you and you wish to find which among the many dlls and executable that string is coming from.<br />
-Surely many ways would be there.<br />
-Today a friend of mine suggested use of 010 Editor for it.<br />
-<br />
-010 Editor -&gt; Search -&gt; Find in Files<br />
-<br />
-Put the directory path where you would like the editor to search dlls and exe for your string. Choose among the various formats like ASCII/Unicode/ANSI for the string and go ahead. <br />
-<br />
+		<blockquote class="restore">Scenario:<br/>
+You see an application popping some text on you and you wish to find which among the many dlls and executable that string is coming from.<br/>
+Surely many ways would be there.<br/>
+Today a friend of mine suggested use of 010 Editor for it.<br/>
+<br/>
+010 Editor -&gt; Search -&gt; Find in Files<br/>
+<br/>
+Put the directory path where you would like the editor to search dlls and exe for your string. Choose among the various formats like ASCII/Unicode/ANSI for the string and go ahead. <br/>
+<br/>
 It helped me; might help you some day. Cheers!</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -67,25 +64,25 @@ It helped me; might help you some day. Cheers!</blockquote>
 	<div class="content">
 		<blockquote class="restore"><div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code"><br />
-import re<br />
-import os<br />
-from sys import argv<br />
-<br />
-try:<br />
-&nbsp; &nbsp; my_script, folder, my_sting = argv<br />
-except ValueError:<br />
-&nbsp; &nbsp; print (&quot;Usage(): python path_0f_folder your_string&quot;)<br />
-&nbsp; &nbsp; exit()<br />
-<br />
-os.chdir(folder)<br />
-crawl = os.listdir(folder)<br />
-<br />
-for files in crawl:<br />
-&nbsp; &nbsp; with open(files, 'rU') as f:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; string = set(re.findall(&quot;[\x1f-\x7e]{4,}&quot;, f.read()))<br />
-&nbsp; &nbsp; &nbsp; &nbsp; if my_sting in string:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print my_sting + ' Exists in ' + files</code><hr />
+	<hr/><code class="bbcode_code"><br/>
+import re<br/>
+import os<br/>
+from sys import argv<br/>
+<br/>
+try:<br/>
+    my_script, folder, my_sting = argv<br/>
+except ValueError:<br/>
+    print ("Usage(): python path_0f_folder your_string")<br/>
+    exit()<br/>
+<br/>
+os.chdir(folder)<br/>
+crawl = os.listdir(folder)<br/>
+<br/>
+for files in crawl:<br/>
+    with open(files, 'rU') as f:<br/>
+        string = set(re.findall("[\x1f-\x7e]{4,}", f.read()))<br/>
+        if my_sting in string:<br/>
+            print my_sting + ' Exists in ' + files</code><hr/>
 </div></blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_3">
@@ -98,8 +95,8 @@ for files in crawl:<br />
 		<div class="title">Are there any tools for finding events(function code)</div>
 	
 	<div class="content">
-		<blockquote class="restore">Hi bond,<br />
-<br />
+		<blockquote class="restore">Hi bond,<br/>
+<br/>
       Do u know any tools for finding the events functions in a stripped binary like onClick,onOk events as such.</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_4">
@@ -113,20 +110,20 @@ for files in crawl:<br />
 		<blockquote class="restore"><div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
 			<div>
 				Originally Posted by <strong>avidengineer</strong>
-				<a href="showthread21b8.html?p=14880#post14880" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+				<a href="showthread21b8.html?p=14880#post14880" rel="nofollow"><img alt="View Post" class="inlineimg" src="images/buttons/viewpost.gif"/></a>
 			</div>
-			<div class="message">Hi bond,<br />
-<br />
+			<div class="message">Hi bond,<br/>
+<br/>
       Do u know any tools for finding the events functions in a stripped binary like onClick,onOk events as such.</div>
 			
-		<hr />
+		<hr/>
 	</div>
-</div>Hey sorry I got no clue on that.<br />
-<br />
+</div>Hey sorry I got no clue on that.<br/>
+<br/>
 Cheers!</blockquote>
 	</div>
 </li>
@@ -135,14 +132,14 @@ Cheers!</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:51 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:51 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -160,7 +157,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6943&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:35:45 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=6943&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 18:35:45 GMT --></html>

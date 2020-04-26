@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=4498&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:18:11 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=4498&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:18:11 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Using Beautiful Soup Library for Parsing HTML in python</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -46,28 +43,28 @@
 		<div class="title">Using Beautiful Soup Library for Parsing HTML in python</div>
 	
 	<div class="content">
-		<blockquote class="restore">This is a code which downloads a html page and then parses a table from it to display output . Without Beautiful Soup it would require a lot of work and a lot of exception handling but  Beautiful  Soup makes the work lot<br />
-<br />
+		<blockquote class="restore">This is a code which downloads a html page and then parses a table from it to display output . Without Beautiful Soup it would require a lot of work and a lot of exception handling but  Beautiful  Soup makes the work lot<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">#!/usr/bin/python<br />
-<br />
-# D4rk-Parser-- A small code for parsing HTML tables in python using Beautiful Soup <br />
-# Coded By D4rk357[2013]<br />
-<br />
-<br />
-import os , sys, urllib2 ,re<br />
-from bs4 import BeautifulSoup<br />
-response = urllib2.urlopen('https://urlquery.net/report.php?id=2602506')<br />
-html1 = response.read()<br />
-<br />
-soup = BeautifulSoup(html1)<br />
-<br />
-table = soup.find(lambda tag: tag.name=='table' ) <br />
-rows = table.findAll('tr')<br />
-<br />
-for x in rows:<br />
-&nbsp;print '|'.join(x.stripped_strings) # important thing to note is the usage of stripped_strings function . This function is important in cases where there are some other HTML tags inside the table like &lt;b&gt; etc . In that case normal strip functions won't function properly . It is true in this particular case as well</code><hr />
+	<hr/><code class="bbcode_code">#!/usr/bin/python<br/>
+<br/>
+# D4rk-Parser-- A small code for parsing HTML tables in python using Beautiful Soup <br/>
+# Coded By D4rk357[2013]<br/>
+<br/>
+<br/>
+import os , sys, urllib2 ,re<br/>
+from bs4 import BeautifulSoup<br/>
+response = urllib2.urlopen('https://urlquery.net/report.php?id=2602506')<br/>
+html1 = response.read()<br/>
+<br/>
+soup = BeautifulSoup(html1)<br/>
+<br/>
+table = soup.find(lambda tag: tag.name=='table' ) <br/>
+rows = table.findAll('tr')<br/>
+<br/>
+for x in rows:<br/>
+ print '|'.join(x.stripped_strings) # important thing to note is the usage of stripped_strings function . This function is important in cases where there are some other HTML tags inside the table like &lt;b&gt; etc . In that case normal strip functions won't function properly . It is true in this particular case as well</code><hr/>
 </div>Output</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -78,12 +75,12 @@ for x in rows:<br />
 	
 	
 	<div class="content">
-		<blockquote class="restore">Hi D4rk357,<br />
-<br />
-Nice work. :)<br />
-Though I didn't get the chance to actually use it 'coz it was asking for external parser in my case. Will install lxml/ html5lib later.<br />
-You might want to check the code I wrote sometime ago to un-shorten the shortened URLs using BeautifulSoup -&gt; <a href="../external.html?link=http://infosecnall.blogspot.in/2013/03/python-url-un-shorten-er.html" target="_blank">RahulB's Blog | InfoSec n' All: [Python] URL Un-shorten-er</a> .<br />
-<br />
+		<blockquote class="restore">Hi D4rk357,<br/>
+<br/>
+Nice work. :)<br/>
+Though I didn't get the chance to actually use it 'coz it was asking for external parser in my case. Will install lxml/ html5lib later.<br/>
+You might want to check the code I wrote sometime ago to un-shorten the shortened URLs using BeautifulSoup -&gt; <a href="../external.html?link=http://infosecnall.blogspot.in/2013/03/python-url-un-shorten-er.html" target="_blank">RahulB's Blog | InfoSec n' All: [Python] URL Un-shorten-er</a> .<br/>
+<br/>
 Cheers.</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_3">
@@ -107,15 +104,15 @@ Cheers.</blockquote>
 		<blockquote class="restore"><div class="bbcode_container">
 	<div class="bbcode_description">Quote:</div>
 	<div class="bbcode_quote printable">
-		<hr />
+		<hr/>
 		
 			<div>
 				Originally Posted by <strong>jimmy</strong>
-				<a href="showthread35a8.html?p=12181#post12181" rel="nofollow"><img class="inlineimg" src="images/buttons/viewpost.html" alt="View Post" /></a>
+				<a href="showthread35a8.html?p=12181#post12181" rel="nofollow"><img alt="View Post" class="inlineimg" src="images/buttons/viewpost.gif"/></a>
 			</div>
 			<div class="message">thanks, whether it can be used to create a word list?</div>
 			
-		<hr />
+		<hr/>
 	</div>
 </div>What kind of Word list ?? This is a HTML parsing library .</blockquote>
 	</div>
@@ -125,14 +122,14 @@ Cheers.</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:03 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:03 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -150,7 +147,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=4498&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:18:11 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=4498&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:18:11 GMT --></html>

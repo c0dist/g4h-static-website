@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=1970&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:54:58 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=1970&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:54:58 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> Bluetooth Dial Up Networking on Linux</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,130 +41,130 @@
 		<div class="title">Bluetooth Dial Up Networking on Linux</div>
 	
 	<div class="content">
-		<blockquote class="restore">Hello Hackers;<br />
-<br />
-I am just documenting this topic because I tend to forget it all the time.<br />
-On this same laptop I have banged my head everytime after a fresh linux installation.<br />
-The GUI tools for this given with any linux distro never worked for me. I always had to go the old Linux way.<br />
-<br />
-So finally, I am documenting it here.<br />
-Might follow it if you need to do the same.<br />
-<br />
-<br />
-<br />
-You would need bluez package and wvdial package. Bluez for bluetooth connectivity and wvdial for dialing to a network.<br />
-<br />
-For example on a Gnome Ubuntu box: <br />
-<br />
-# apt-get install  bluez-utils bluez-gnome wvdial<br />
-<br />
-<br />
-<br />
-Now you need to pair up your machine and your phone device. When done, we can proceed with binding.<br />
-<br />
-First scan for devices<br />
-<br />
-# hcitool scan<br />
-<br />
-Would get result something like this<br />
-<br />
-    Scanning &#8230;<br />
-    xx:xx:xx:xx:xx:xx Austin (xx:xx:xx:xx:xx:xx is your devices bluetooth ID)<br />
-<br />
-<br />
-Now just check if that device supports DUN or not<br />
-<br />
-# sdptool search dun xx:xx:xx:xx:xx:xx<br />
-<br />
-This should give output something like following<br />
-<br />
-Inquiring ...<br />
-Searching for dun on  xx:xx:xx:xx:xx:xx ...<br />
-Service Name: Dial-Up Networking<br />
-Service RecHandle: 0x10005<br />
-Service Class ID List:<br />
-  &quot;Dialup Networking&quot; (0x1103)<br />
-  &quot;Generic Networking&quot; (0x1201)<br />
-Protocol Descriptor List:<br />
-  &quot;L2CAP&quot; (0x0100)<br />
-  &quot;RFCOMM&quot; (0x0003)<br />
-    Channel: 1<br />
-Profile Descriptor List:<br />
-  &quot;Dialup Networking&quot; (0x1103)<br />
-    Version: 0x0100<br />
-<br />
-<br />
-I see that my device supports L2CAP protocol and on top of that RFCOMM is available. I see that the service may be accessed via channel 1.<br />
-This should be the thing with most of of devices today.<br />
-<br />
-<br />
-Now lets just bind them up:<br />
-<br />
-# rfcomm bind &lt;rfcomm interface&gt; &lt;Target BT addr&gt; &lt;channel&gt;<br />
-<br />
-In my case:<br />
-<br />
-# rfcomm bind 0 xx:xx:xx:xx:xx:xx 1<br />
-<br />
-Now check if it worked.<br />
-<br />
-# rfcomm <br />
-<br />
-If it does show a clean report like this, then it worked !<br />
-<br />
-rfcomm0: xx:xx:xx:xx:xx:xx channel 1 clean<br />
-<br />
-Now rfcomm config has to be changed accordingly.<br />
-The config normally is placed at /etc/bluetooth/rfcomm.conf<br />
-<br />
-Just make it look like this:<br />
-<br />
-# RFCOMM configuration file.<br />
-<br />
-    rfcomm0 {<br />
-    bind yes;<br />
-    device 00:xx:xx:xx:xx:xx:xx;<br />
-    channel 1;<br />
-    comment &#8220;My_BT_device&#8220;;<br />
-}<br />
-<br />
-#End of config<br />
-<br />
-Now restart the bluetooth service:<br />
-<br />
-# /etc/init.d/bluetooth restart<br />
-<br />
-Now you are done with your bluetooh stuff.<br />
-<br />
-Going to Dial Up stuff:<br />
-<br />
-You will have to check for specific settings for your service provider.<br />
-Here is the config file for Idea Internet:<br />
-<br />
-#Start<br />
-<br />
-[Dialer Defaults]<br />
-Modem = /dev/rfcomm0<br />
-Baud = 30720000<br />
-Dial Command = ATDT<br />
-Init1 = ATE1<br />
-Init2 = AT+CGDCONT=1,&quot;IP&quot;,&quot;Internet&quot;,&quot;&quot;,0,0<br />
-FlowControl = CRTSCTS<br />
-Init3 = ATM0<br />
-Phone = *99***1#<br />
-Username = (empty)<br />
-Password = (empty)<br />
-Stupid Mode = 1<br />
-<br />
-#End<br />
-<br />
-<br />
-<br />
-Hope it helps you and saves me from banging head again !<br />
-<br />
-<br />
---<br />
-<br />
+		<blockquote class="restore">Hello Hackers;<br/>
+<br/>
+I am just documenting this topic because I tend to forget it all the time.<br/>
+On this same laptop I have banged my head everytime after a fresh linux installation.<br/>
+The GUI tools for this given with any linux distro never worked for me. I always had to go the old Linux way.<br/>
+<br/>
+So finally, I am documenting it here.<br/>
+Might follow it if you need to do the same.<br/>
+<br/>
+<br/>
+<br/>
+You would need bluez package and wvdial package. Bluez for bluetooth connectivity and wvdial for dialing to a network.<br/>
+<br/>
+For example on a Gnome Ubuntu box: <br/>
+<br/>
+# apt-get install  bluez-utils bluez-gnome wvdial<br/>
+<br/>
+<br/>
+<br/>
+Now you need to pair up your machine and your phone device. When done, we can proceed with binding.<br/>
+<br/>
+First scan for devices<br/>
+<br/>
+# hcitool scan<br/>
+<br/>
+Would get result something like this<br/>
+<br/>
+    Scanning …<br/>
+    xx:xx:xx:xx:xx:xx Austin (xx:xx:xx:xx:xx:xx is your devices bluetooth ID)<br/>
+<br/>
+<br/>
+Now just check if that device supports DUN or not<br/>
+<br/>
+# sdptool search dun xx:xx:xx:xx:xx:xx<br/>
+<br/>
+This should give output something like following<br/>
+<br/>
+Inquiring ...<br/>
+Searching for dun on  xx:xx:xx:xx:xx:xx ...<br/>
+Service Name: Dial-Up Networking<br/>
+Service RecHandle: 0x10005<br/>
+Service Class ID List:<br/>
+  "Dialup Networking" (0x1103)<br/>
+  "Generic Networking" (0x1201)<br/>
+Protocol Descriptor List:<br/>
+  "L2CAP" (0x0100)<br/>
+  "RFCOMM" (0x0003)<br/>
+    Channel: 1<br/>
+Profile Descriptor List:<br/>
+  "Dialup Networking" (0x1103)<br/>
+    Version: 0x0100<br/>
+<br/>
+<br/>
+I see that my device supports L2CAP protocol and on top of that RFCOMM is available. I see that the service may be accessed via channel 1.<br/>
+This should be the thing with most of of devices today.<br/>
+<br/>
+<br/>
+Now lets just bind them up:<br/>
+<br/>
+# rfcomm bind &lt;rfcomm interface&gt; &lt;Target BT addr&gt; &lt;channel&gt;<br/>
+<br/>
+In my case:<br/>
+<br/>
+# rfcomm bind 0 xx:xx:xx:xx:xx:xx 1<br/>
+<br/>
+Now check if it worked.<br/>
+<br/>
+# rfcomm <br/>
+<br/>
+If it does show a clean report like this, then it worked !<br/>
+<br/>
+rfcomm0: xx:xx:xx:xx:xx:xx channel 1 clean<br/>
+<br/>
+Now rfcomm config has to be changed accordingly.<br/>
+The config normally is placed at /etc/bluetooth/rfcomm.conf<br/>
+<br/>
+Just make it look like this:<br/>
+<br/>
+# RFCOMM configuration file.<br/>
+<br/>
+    rfcomm0 {<br/>
+    bind yes;<br/>
+    device 00:xx:xx:xx:xx:xx:xx;<br/>
+    channel 1;<br/>
+    comment “My_BT_device“;<br/>
+}<br/>
+<br/>
+#End of config<br/>
+<br/>
+Now restart the bluetooth service:<br/>
+<br/>
+# /etc/init.d/bluetooth restart<br/>
+<br/>
+Now you are done with your bluetooh stuff.<br/>
+<br/>
+Going to Dial Up stuff:<br/>
+<br/>
+You will have to check for specific settings for your service provider.<br/>
+Here is the config file for Idea Internet:<br/>
+<br/>
+#Start<br/>
+<br/>
+[Dialer Defaults]<br/>
+Modem = /dev/rfcomm0<br/>
+Baud = 30720000<br/>
+Dial Command = ATDT<br/>
+Init1 = ATE1<br/>
+Init2 = AT+CGDCONT=1,"IP","Internet","",0,0<br/>
+FlowControl = CRTSCTS<br/>
+Init3 = ATM0<br/>
+Phone = *99***1#<br/>
+Username = (empty)<br/>
+Password = (empty)<br/>
+Stupid Mode = 1<br/>
+<br/>
+#End<br/>
+<br/>
+<br/>
+<br/>
+Hope it helps you and saves me from banging head again !<br/>
+<br/>
+<br/>
+--<br/>
+<br/>
 Godwin Austin</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -178,11 +175,11 @@ Godwin Austin</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">Nice article Austin.<br />
-<br />
-Do you/anybody used USB internet modem like Tata Photon+ on ubuntu? <br />
-Wanted to check how to configure it and issues faced.<br />
-<br />
+		<blockquote class="restore">Nice article Austin.<br/>
+<br/>
+Do you/anybody used USB internet modem like Tata Photon+ on ubuntu? <br/>
+Wanted to check how to configure it and issues faced.<br/>
+<br/>
 AMol NAik</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_3">
@@ -193,19 +190,19 @@ AMol NAik</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">Actually for USB modems too wvdial should work.<br />
-Instead of Modem =  /dev/rfcomm0 in above configuration you could use /dev/ttyACM0 or  /dev/ttyUSB0.<br />
-Check for device name in your /dev/ after connecting the device to your machine.<br />
-<br />
-Change the 'internet' in Init2 of config to your APN. For idea, the APN is internet.<br />
-<br />
-You have your username and password for it. Normally its the phone number. Replace username, password feild accordingly.<br />
-You should be good to go.<br />
-<br />
-<br />
-Might even try to run command 'wvdialconf' after connecting your modem. The command autoconfigures for your modem.<br />
-Then you will just have to add the APN, username and password.<br />
-<br />
+		<blockquote class="restore">Actually for USB modems too wvdial should work.<br/>
+Instead of Modem =  /dev/rfcomm0 in above configuration you could use /dev/ttyACM0 or  /dev/ttyUSB0.<br/>
+Check for device name in your /dev/ after connecting the device to your machine.<br/>
+<br/>
+Change the 'internet' in Init2 of config to your APN. For idea, the APN is internet.<br/>
+<br/>
+You have your username and password for it. Normally its the phone number. Replace username, password feild accordingly.<br/>
+You should be good to go.<br/>
+<br/>
+<br/>
+Might even try to run command 'wvdialconf' after connecting your modem. The command autoconfigures for your modem.<br/>
+Then you will just have to add the APN, username and password.<br/>
+<br/>
 Hope that helps :)</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_4">
@@ -216,17 +213,17 @@ Hope that helps :)</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">Above things should generally work. However, if you are facing a problem such as the device is being detected as mass storage device and not as modem, do not install that package mentioned in most of the solution post regarding this (forgot the name) directly. be careful as it might not allow installing anything after that. I lost my BT instance once because of that.<br />
-<br />
-<br />
-<br />
-<br />
-old-------------before noticing austin's post----------<br />
-what version of ubuntu and the Photon card ur using Amol. I might come of some help maybe .. done it quite a lot of times. <br />
-<br />
-However I am in love with bt5 now because it takes all the pain and lets us configure these devices easily<br />
-<br />
-Regards,<br />
+		<blockquote class="restore">Above things should generally work. However, if you are facing a problem such as the device is being detected as mass storage device and not as modem, do not install that package mentioned in most of the solution post regarding this (forgot the name) directly. be careful as it might not allow installing anything after that. I lost my BT instance once because of that.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+old-------------before noticing austin's post----------<br/>
+what version of ubuntu and the Photon card ur using Amol. I might come of some help maybe .. done it quite a lot of times. <br/>
+<br/>
+However I am in love with bt5 now because it takes all the pain and lets us configure these devices easily<br/>
+<br/>
+Regards,<br/>
 the_empty</blockquote>
 	</div>
 </li>
@@ -235,14 +232,14 @@ the_empty</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:36 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:36 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -260,7 +257,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=1970&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:54:58 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=1970&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:54:58 GMT --></html>

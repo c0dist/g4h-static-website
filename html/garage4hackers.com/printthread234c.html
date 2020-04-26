@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=6786&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:17:54 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6786&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:17:54 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> importing module dynamically in python</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,48 +41,48 @@
 		<div class="title">importing module dynamically in python</div>
 	
 	<div class="content">
-		<blockquote class="restore">&quot;python - load modules dynamically&quot;<br />
-<br />
-Situation is: <br />
-1. You have got a directory where you've python modules. When your fuzzer runs, it shall on-the-fly import modules randomly from that directory and use the fuction(s) existing within them.<br />
-<br />
-Here you've got two problems:<br />
-1. You do not want to be statically bound to edit your main code everytime you add a new module in directory.<br />
-2. You don't know the functions existing inside your python modules because you don't know the name of randomly picked modules at the first place.<br />
-<br />
-Requirement:<br />
-Pick any random number of modules from directory and utilize there function to code something as your test cases.<br />
-<br />
-Solution:<br />
+		<blockquote class="restore">"python - load modules dynamically"<br/>
+<br/>
+Situation is: <br/>
+1. You have got a directory where you've python modules. When your fuzzer runs, it shall on-the-fly import modules randomly from that directory and use the fuction(s) existing within them.<br/>
+<br/>
+Here you've got two problems:<br/>
+1. You do not want to be statically bound to edit your main code everytime you add a new module in directory.<br/>
+2. You don't know the functions existing inside your python modules because you don't know the name of randomly picked modules at the first place.<br/>
+<br/>
+Requirement:<br/>
+Pick any random number of modules from directory and utilize there function to code something as your test cases.<br/>
+<br/>
+Solution:<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">import os<br />
-import glob<br />
-import sys<br />
-import inspect<br />
-import copy<br />
-sys.path.append('modules_fuzz')&nbsp; &nbsp; <br />
-<br />
-&nbsp; &nbsp; jsCode = &quot;&quot;<br />
-<br />
-<br />
-&nbsp; &nbsp; __file__ = os.path.join(executablePath, fuzzModulesDir + '/')&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
-<br />
-<br />
-&nbsp; &nbsp; allModulesList = []<br />
-<br />
-<br />
-&nbsp; &nbsp; for f in glob.glob(os.path.dirname(__file__)+&quot;/*.py&quot;):&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ## it finds all .py fuzz modules present in fuzzModulesDir directory<br />
-&nbsp; &nbsp; &nbsp; &nbsp; if os.path.isfile(f) and not os.path.basename(f).startswith('_'):<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; allModulesList.append(os.path.basename(f)[:-3])&nbsp; &nbsp; &nbsp; &nbsp; ## allModulesList: ['module1', 'module2', 'module3', ......, 'upto-all-modules']<br />
-<br />
-<br />
-&nbsp; &nbsp; &nbsp; &nbsp; <br />
-&nbsp; &nbsp; for module in allModulesList:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; new_module = __import__(module)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ## here module is getting imported without specifying actual name<br />
-&nbsp; &nbsp; &nbsp; &nbsp; functionFromModule = inspect.getmembers(new_module, inspect.isfunction)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ## list of all functions from current module<br />
-&nbsp; &nbsp; &nbsp; &nbsp; jsCode += getattr(new_module, functionFromModule[0][0])(argument_to_function)&nbsp; &nbsp; ## doing operation on function passing it some argument<br />
-&nbsp; &nbsp; &nbsp; &nbsp; i += 1</code><hr />
+	<hr/><code class="bbcode_code">import os<br/>
+import glob<br/>
+import sys<br/>
+import inspect<br/>
+import copy<br/>
+sys.path.append('modules_fuzz')    <br/>
+<br/>
+    jsCode = ""<br/>
+<br/>
+<br/>
+    __file__ = os.path.join(executablePath, fuzzModulesDir + '/')                        <br/>
+<br/>
+<br/>
+    allModulesList = []<br/>
+<br/>
+<br/>
+    for f in glob.glob(os.path.dirname(__file__)+"/*.py"):                       ## it finds all .py fuzz modules present in fuzzModulesDir directory<br/>
+        if os.path.isfile(f) and not os.path.basename(f).startswith('_'):<br/>
+            allModulesList.append(os.path.basename(f)[:-3])        ## allModulesList: ['module1', 'module2', 'module3', ......, 'upto-all-modules']<br/>
+<br/>
+<br/>
+        <br/>
+    for module in allModulesList:<br/>
+        new_module = __import__(module)                    ## here module is getting imported without specifying actual name<br/>
+        functionFromModule = inspect.getmembers(new_module, inspect.isfunction)            ## list of all functions from current module<br/>
+        jsCode += getattr(new_module, functionFromModule[0][0])(argument_to_function)    ## doing operation on function passing it some argument<br/>
+        i += 1</code><hr/>
 </div></blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -96,41 +93,41 @@ sys.path.append('modules_fuzz')&nbsp; &nbsp; <br />
 	
 	
 	<div class="content">
-		<blockquote class="restore">Similar can also be achieved using the <a href="../external.html?link=https://pymotw.com/2/imp/" target="_blank">&quot;imp&quot;</a> module. I have seen this being used in <a href="../external.html?link=https://github.com/omriher/CapTipper" target="_blank">CapTipper</a>. Here's the simple code to load the modules from a directory &quot;modules&quot;.<br />
-<br />
+		<blockquote class="restore">Similar can also be achieved using the <a href="../external.html?link=https://pymotw.com/2/imp/" target="_blank">"imp"</a> module. I have seen this being used in <a href="../external.html?link=https://github.com/omriher/CapTipper" target="_blank">CapTipper</a>. Here's the simple code to load the modules from a directory "modules".<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">#!/usr/bin/env python<br />
-<br />
-&quot;&quot;&quot; <br />
-This trick is inspired/taken from CapTipper - https://github.com/omriher/CapTipper/blob/master/CTPlugin.py<br />
-&quot;&quot;&quot;<br />
-<br />
-import glob<br />
-import os<br />
-import imp<br />
-<br />
-module_files = glob.glob(&quot;modules/*.py&quot;)<br />
-for module in module_files:<br />
-&nbsp; &nbsp; full_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), module)<br />
-&nbsp; &nbsp; print &quot;[+] Importing the module - %s&quot; % full_path<br />
-&nbsp; &nbsp; (path, name) = os.path.split(full_path)<br />
-&nbsp; &nbsp; (name, ext) = os.path.splitext(name)<br />
-<br />
-&nbsp; &nbsp; (p_file, filename, data) = imp.find_module(name, [path])<br />
-&nbsp; &nbsp; try:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; mod = imp.load_module(name, p_file, filename, data)<br />
-&nbsp; &nbsp; except ImportError:<br />
-&nbsp; &nbsp; &nbsp; &nbsp; print &quot;[-] Couldn't import module. Exiting!&quot;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; sys.exit(1)<br />
-<br />
-&nbsp; &nbsp; # After the module is loaded, you can run the desired function. For ex.<br />
-&nbsp; &nbsp; mod.run()</code><hr />
-</div>Using the above trick, you can load the whole module in a variable, lets say &quot;module1&quot; and then it can be used like you would use a module, for ex. module1.function_name( arguments ), module1.variable_name, etc.<br />
-<br />
-Hope this helps. Cheers.<br />
-<br />
-Regards,<br />
+	<hr/><code class="bbcode_code">#!/usr/bin/env python<br/>
+<br/>
+""" <br/>
+This trick is inspired/taken from CapTipper - https://github.com/omriher/CapTipper/blob/master/CTPlugin.py<br/>
+"""<br/>
+<br/>
+import glob<br/>
+import os<br/>
+import imp<br/>
+<br/>
+module_files = glob.glob("modules/*.py")<br/>
+for module in module_files:<br/>
+    full_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), module)<br/>
+    print "[+] Importing the module - %s" % full_path<br/>
+    (path, name) = os.path.split(full_path)<br/>
+    (name, ext) = os.path.splitext(name)<br/>
+<br/>
+    (p_file, filename, data) = imp.find_module(name, [path])<br/>
+    try:<br/>
+        mod = imp.load_module(name, p_file, filename, data)<br/>
+    except ImportError:<br/>
+        print "[-] Couldn't import module. Exiting!"<br/>
+        sys.exit(1)<br/>
+<br/>
+    # After the module is loaded, you can run the desired function. For ex.<br/>
+    mod.run()</code><hr/>
+</div>Using the above trick, you can load the whole module in a variable, lets say "module1" and then it can be used like you would use a module, for ex. module1.function_name( arguments ), module1.variable_name, etc.<br/>
+<br/>
+Hope this helps. Cheers.<br/>
+<br/>
+Regards,<br/>
 c0dist</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_3">
@@ -141,8 +138,8 @@ c0dist</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">Thanks for that c0dist. I'll try this out in my next code (who wants to mess with current working code :cool:)<br />
-<br />
+		<blockquote class="restore">Thanks for that c0dist. I'll try this out in my next code (who wants to mess with current working code :cool:)<br/>
+<br/>
 Cheers!</blockquote>
 	</div>
 </li>
@@ -151,14 +148,14 @@ Cheers!</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:02 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:02 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -176,7 +173,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=6786&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:17:54 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=6786&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:17:54 GMT --></html>

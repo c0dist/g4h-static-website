@@ -1,28 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" id="vbulletin_html">
+<html dir="ltr" id="vbulletin_html" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"><!-- Mirrored from garage4hackers.com/printthread.php?t=589&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:41:00 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=589&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:41:00 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<base  /><!--[if IE]></base><![endif]-->
-	<meta name="generator" content="vBulletin 4.2.1" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<base/><!--[if IE]></base><![endif]-->
+	<meta content="vBulletin 4.2.1" name="generator"/>
 
 	
-	<link rel="stylesheet" type="text/css" href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" />
+	<link href="cssddc9.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=bbcode.css,popupmenu.css,printthread.css,vbulletin.css,vbulletin-chrome.css" rel="stylesheet" type="text/css"/>
 	
 
 
 
 	<title> PHP OOP over-ride resulting in memory choke up</title>
-	<link rel="stylesheet" type="text/css" href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" />
+	<link href="css657d.css?styleid=1&amp;langid=1&amp;d=1410988287&amp;td=ltr&amp;sheet=additional.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
 
 <div class="above_body">
-<div id="header" class="floatcontainer">
-<div><a name="top" href="forum.html" class="logo-image"><img src="images/misc/vbulletin4_logo.html" alt="Garage4hackers Forum" /></a></div>
+<div class="floatcontainer" id="header">
+<div><a class="logo-image" href="forum.html" name="top"><img alt="Garage4hackers Forum" src="images/misc/vbulletin4_logo.png"/></a></div>
 </div>
 </div>
 <div class="body_wrapper">
@@ -44,69 +41,69 @@
 		<div class="title">PHP OOP over-ride resulting in memory choke up</div>
 	
 	<div class="content">
-		<blockquote class="restore">Hi Guys,<br />
-<br />
-It is interesting to write about real life stories that you come across when machines act as if they are machines with no intelligence :P<br />
-<br />
-here is mine.<br />
-<br />
-I was playing around with object oriented programming and was also studying about the infinite loops which causes denial of service or system crashes.<br />
-<br />
-I tried to create an infinite loop in php using simple object oriented functions<br />
-<br />
-A waits for B<br />
-B waits for A<br />
-and memory keeps increasing till it is exhausted.<br />
-<br />
-Fatal error eh!<br />
-<br />
-<br />
-here is a code snippet:<br />
-<br />
-I have 3 files:<br />
-index.php - to instantiate the objects of the classes<br />
-class1.php - which inherits class2<br />
-class2.php - which inherits class1<br />
-<br />
-class1 and class2 are created to create the forever loop and index to initialize that loop.<br />
-<br />
-index.php<br />
-<br />
+		<blockquote class="restore">Hi Guys,<br/>
+<br/>
+It is interesting to write about real life stories that you come across when machines act as if they are machines with no intelligence :P<br/>
+<br/>
+here is mine.<br/>
+<br/>
+I was playing around with object oriented programming and was also studying about the infinite loops which causes denial of service or system crashes.<br/>
+<br/>
+I tried to create an infinite loop in php using simple object oriented functions<br/>
+<br/>
+A waits for B<br/>
+B waits for A<br/>
+and memory keeps increasing till it is exhausted.<br/>
+<br/>
+Fatal error eh!<br/>
+<br/>
+<br/>
+here is a code snippet:<br/>
+<br/>
+I have 3 files:<br/>
+index.php - to instantiate the objects of the classes<br/>
+class1.php - which inherits class2<br/>
+class2.php - which inherits class1<br/>
+<br/>
+class1 and class2 are created to create the forever loop and index to initialize that loop.<br/>
+<br/>
+index.php<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">PHP Code:</div>
-	<hr /><code class="bbcode_code"><code><span style="color: #000000">
-<span style="color: #0000BB">&lt;?php<br /></span><span style="color: #FF8000">/*<br /><br />*/<br /></span><span style="color: #0000BB">$var&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">class1</span><span style="color: #007700">();<br /></span><span style="color: #0000BB">$var2&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">class2</span><span style="color: #007700">();<br /></span><span style="color: #0000BB">?&gt;</span>
+	<hr/><code class="bbcode_code"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br/></span><span style="color: #FF8000">/*<br/><br/>*/<br/></span><span style="color: #0000BB">$var </span><span style="color: #007700">= new </span><span style="color: #0000BB">class1</span><span style="color: #007700">();<br/></span><span style="color: #0000BB">$var2 </span><span style="color: #007700">= new </span><span style="color: #0000BB">class2</span><span style="color: #007700">();<br/></span><span style="color: #0000BB">?&gt;</span>
 </span>
-</code></code><hr />
-</div><br />
-<br />
-<br />
-<br />
-<br />
-class1.php<br />
-<br />
+</code></code><hr/>
+</div><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+class1.php<br/>
+<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">PHP Code:</div>
-	<hr /><code class="bbcode_code"><code><span style="color: #000000">
-<span style="color: #0000BB">&lt;?php<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">include&nbsp;</span><span style="color: #DD0000">'class2.php'</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;</span><span style="color: #0000BB">class1&nbsp;</span><span style="color: #007700">extends&nbsp;</span><span style="color: #0000BB">class2<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000BB">__construct</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">__construct</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br /></span><span style="color: #0000BB">?&gt;</span>
+	<hr/><code class="bbcode_code"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br/>    </span><span style="color: #007700">include </span><span style="color: #DD0000">'class2.php'</span><span style="color: #007700">;<br/>    class </span><span style="color: #0000BB">class1 </span><span style="color: #007700">extends </span><span style="color: #0000BB">class2<br/>    </span><span style="color: #007700">{<br/>        public function </span><span style="color: #0000BB">__construct</span><span style="color: #007700">()<br/>        {<br/>            return </span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">__construct</span><span style="color: #007700">();<br/>        }<br/>    }<br/></span><span style="color: #0000BB">?&gt;</span>
 </span>
-</code></code><hr />
-</div><br />
-<br />
-<br />
-class2.php<br />
+</code></code><hr/>
+</div><br/>
+<br/>
+<br/>
+class2.php<br/>
 <div class="bbcode_container">
 	<div class="bbcode_description">PHP Code:</div>
-	<hr /><code class="bbcode_code"><code><span style="color: #000000">
-<span style="color: #0000BB">&lt;?php<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">include&nbsp;</span><span style="color: #DD0000">'class1.php'</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;</span><span style="color: #0000BB">class2&nbsp;</span><span style="color: #007700">extends&nbsp;</span><span style="color: #0000BB">class1<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000BB">__construct</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">__construct</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br /></span><span style="color: #0000BB">?&gt;</span>
+	<hr/><code class="bbcode_code"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br/>    </span><span style="color: #007700">include </span><span style="color: #DD0000">'class1.php'</span><span style="color: #007700">;<br/>    class </span><span style="color: #0000BB">class2 </span><span style="color: #007700">extends </span><span style="color: #0000BB">class1<br/>    </span><span style="color: #007700">{<br/>        public function </span><span style="color: #0000BB">__construct</span><span style="color: #007700">()<br/>        {<br/>            return </span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">__construct</span><span style="color: #007700">();<br/>        }<br/>    }<br/></span><span style="color: #0000BB">?&gt;</span>
 </span>
-</code></code><hr />
-</div><br />
-Do not do dirty, if you are shared server, respect others business.<br />
-<br />
-This is intended just for information.<br />
-<br />
-<br />
+</code></code><hr/>
+</div><br/>
+Do not do dirty, if you are shared server, respect others business.<br/>
+<br/>
+This is intended just for information.<br/>
+<br/>
+<br/>
 Thanks to fb1h2s and b0nd for writing few articles recently that - fired my butt to write something here :D</blockquote>
 	</div>
 </li><li class="postbit blockbody" id="post_2">
@@ -167,10 +164,10 @@ Thanks to fb1h2s and b0nd for writing few articles recently that - fired my butt
 	
 	
 	<div class="content">
-		<blockquote class="restore">Yes sandeep, I tried it on dollar2host provider and because of the first 3 lines (which I chucked off from here), it worked wonder...<br />
-However, I also reported this to php.net and so far, there is no patch for it... hopefully, very soon :)<br />
-<br />
-&quot;virtual host has a limited resource and when you exceed it you would be cut off&quot;<br />
+		<blockquote class="restore">Yes sandeep, I tried it on dollar2host provider and because of the first 3 lines (which I chucked off from here), it worked wonder...<br/>
+However, I also reported this to php.net and so far, there is no patch for it... hopefully, very soon :)<br/>
+<br/>
+"virtual host has a limited resource and when you exceed it you would be cut off"<br/>
 Yep, thats the whole point... :) U cannot allocate resources based on every single account, it is for ENTIRE apache :)</blockquote>
 	</div>
 </li>
@@ -179,14 +176,14 @@ Yep, thats the whole point... :) U cannot allocate resources based on every sing
 
 </div>
 <div class="below_body">
-<div id="footer_time" class="footer_time">All times are GMT +5.5. The time now is <span class="time">05:17 PM</span>.</div>
+<div class="footer_time" id="footer_time">All times are GMT +5.5. The time now is <span class="time">05:17 PM</span>.</div>
 
-<div id="footer_copyright" class="footer_copyright">
+<div class="footer_copyright" id="footer_copyright">
 	<!-- Do not remove this copyright notice -->
-	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin&reg;</a> Version 4.2.1 <br />Copyright &copy; 2020 vBulletin Solutions, Inc. All rights reserved. 
+	Powered by <a href="../external.html?link=https://www.vbulletin.com/" id="vbulletinlink">vBulletin®</a> Version 4.2.1 <br/>Copyright © 2020 vBulletin Solutions, Inc. All rights reserved. 
 	<!-- Do not remove this copyright notice -->	
 </div>
-<div id="footer_morecopyright" class="footer_morecopyright">
+<div class="footer_morecopyright" id="footer_morecopyright">
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
 	
 	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
@@ -204,7 +201,7 @@ try{
 var pageTracker = _gat._getTracker('UA-17311051-3');
 pageTracker._trackPageview();
 } catch(err) {}</script>
-</body>
 
-<!-- Mirrored from garage4hackers.com/printthread.php?t=589&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:41:00 GMT -->
-</html>
+
+
+</body><!-- Mirrored from garage4hackers.com/printthread.php?t=589&pp=10&page=1 by HTTraQt Website Copier/1.x [Karbofos 2012-2017] Sun, 22 Mar 2020 16:41:00 GMT --></html>
