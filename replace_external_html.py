@@ -44,12 +44,14 @@ def main(html_files_list, combined_list_file):
                         continue
 
                     elif "glowhost.com/" in url_part:
-                        replacement_url = "#"
+                        replacement_url = '"#"'
 
-                    data = data.replace(url_part, replacement_url)
+                    data = data.replace(external_url, replacement_url)
 
                 with open(full_path, "w") as out:
                     out.write(data)
+
+            break
 
     print(g4h_urls)
 
